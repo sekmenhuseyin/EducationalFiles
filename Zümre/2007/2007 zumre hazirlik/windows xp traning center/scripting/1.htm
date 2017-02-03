@@ -1,0 +1,75 @@
+<!doctype html public "-//IETF//DTD HTML//EN">
+<HTML>
+<HEAD>
+<TITLE>Windows XP: The Complete Reference: Automating Tasks with the Windows Script Host</TITLE>
+<META NAME="GENERATOR" CONTENT="Web-O-Matic Deluxe 4.1">
+<META NAME="AUTHOR" CONTENT="John R. Levine, Margaret Levine Young">
+<META NAME="COPYRIGHT" CONTENTS="Copyright 2001 by The McGraw-Hill Companies. All rights reserved.">
+</HEAD>
+<BODY BACKGROUND="../images/background.png">
+<BLOCKQUOTE>
+<SCRIPT LANGUAGE="JavaScript">
+function whomp(i, file)
+{
+	i.src = "../images/" + file + ".png";
+}
+</SCRIPT>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarered3x3.png" HEIGHT=3 WIDTH=3></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=2>
+Chapter 40: Automating Tasks with the Windows Script Host
+</FONT></TD>
+</TR>
+</TABLE>
+<BR>
+<A HREF="0.htm"  OnMouseOver='whomp(prev, "sprev");' OnMouseOut='whomp(prev, "wprev");'
+ title="Previous Section"><IMG NAME=prev SRC="../images/wprev.png" ALT="Previous" HEIGHT=20 WIDTH=82 BORDER=0></A><!--
+--><A HREF="index.htm" OnMouseOver='whomp(chap, "schap");' OnMouseOut='whomp(chap, "wchap");'
+title="Chapter Overview"><IMG SRC="../images/wchap.png" ALT="Chapter" NAME=chap HEIGHT=20 WIDTH=100 BORDER=0></A><A
+HREF="../index.htm" OnMouseOver='whomp(toc, "sbook");' OnMouseOut='whomp(toc, "wbook");' 
+title="Table of Contents"><IMG SRC="../images/wbook.png" ALT="Contents" NAME=toc HEIGHT=20 WIDTH=94 BORDER=0></A><A
+HREF="../glossary/index.htm" OnMouseOver='whomp(glos, "sglos");' OnMouseOut='whomp(glos, "wglos");' 
+title="Glossary"><IMG SRC="../images/wglos.png" ALT="Glossary" NAME=glos HEIGHT=20 WIDTH=94 BORDER=0></A><!--
+--><A HREF="2.htm"  OnMouseOver='whomp(next, "snext");' OnMouseOut='whomp(next, "wnext");'
+ title="Next Section"><IMG NAME=next SRC="../images/wnext.png" ALT="Next" HEIGHT=20 WIDTH=82 BORDER=0></A>
+<BR>
+<A NAME="1">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarered10x10.png" HEIGHT=10 WIDTH=10></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=4><B>What Is the Windows Script Host?</B></FONT>
+</TD>
+</TR>
+</TABLE></A>
+<P>
+Windows XP, like previous desktop versions of Windows, comes with the Windows Script Host (WSH), a program that can run scripts from either DOS or Windows. A <A HREF="../security/2.htm#2"><I>script</I></A> is a file containing a series of commands, like a batch file that you can use to automate tasks that you repeat often. Administrators of large Windows installations find scripts invaluable for creating and maintaining standard Windows configurations.
+<P>
+For example, if you administer a large Windows installation, you can write a script that logs onto your organization's LAN, connects to various servers, and runs other housekeeping programs. You can use Scheduled Tasks and WSH to <A HREF="../running/7.htm#1">run the script on a schedule</A>. Alternatively, you can configure Windows to run WSH and the script automatically <A HREF="../running/2.htm#10">when Windows starts up</A>.
+<P>
+WSH can run scripts written in a variety of languages, including <A HREF="../security/2.htm#2">VBScript</A> (the scripting language used by Internet Explorer) and <A HREF="../security/2.htm#2">JavaScript</A> (what Microsoft calls JScript). The makers of other scripting languages may also provide programs that will allow WSH to run scripts in their languages (Microsoft hopes that they do). Scripts are stored in text files that you can look at using <A HREF="../docs/1.htm#1">Notepad</A> or <A HREF="../docs/2.htm#1">WordPad</A>.
+<P>
+This chapter doesn't describe the VBScript or JavaScript languages; we suggest that you buy a book about the programming language you choose. Instead, this chapter describes how to use WSH to run scripts after you've written them.
+<P>
+For more information about WSH, visit its Web sites at <A HREF="http://www.microsoft.com/windows2000/en/professional/help/wsh_overview.htm"><B>http://www.microsoft.com/windows2000/en/professional/help/wsh_overview.htm</B></A> and <A HREF="http://msdn.microsoft.com/scripting"><B>http://msdn.microsoft.com/scripting</B></A>.
+<P>
+<TABLE><TR><TD VALIGN="TOP"><IMG SRC="../images/caution.png" ALT="caution" WIDTH=95 HEIGHT=29></TD>
+<TD VALIGN="TOP">WSH can run scripts that are more powerful than batch files and can do a lot of damage. Viruses like the notorious ILOVEYOU virus use WSH as part of their system of infection and propagation. Checking the source and trustworthiness of the scripts you run is vitally important.
+
+</TD></TR></TABLE>
+<P>
+<A HREF="0.htm"  OnMouseOver='whomp(prevb, "sprev");' OnMouseOut='whomp(prevb, "wprev");'
+ title="Previous Section"><IMG NAME=prevb SRC="../images/wprev.png" ALT="Previous" HEIGHT=20 WIDTH=82 BORDER=0></A><!--
+--><A HREF="index.htm" OnMouseOver='whomp(chapb, "schap");' OnMouseOut='whomp(chapb, "wchap");'
+title="Chapter Overview"><IMG SRC="../images/wchap.png" ALT="Chapter" NAME=chapb HEIGHT=20 WIDTH=100 BORDER=0></A><A
+HREF="../index.htm" OnMouseOver='whomp(tocb, "sbook");' OnMouseOut='whomp(tocb, "wbook");' 
+title="Table of Contents"><IMG SRC="../images/wbook.png" ALT="Contents" NAME=tocb HEIGHT=20 WIDTH=94 BORDER=0></A><A
+HREF="../glossary/index.htm" OnMouseOver='whomp(glosb, "sglos");' OnMouseOut='whomp(glosb, "wglos");' 
+title="Glossary"><IMG SRC="../images/wglos.png" ALT="Glossary" NAME=glosb HEIGHT=20 WIDTH=94 BORDER=0></A><!--
+--><A HREF="2.htm"  OnMouseOver='whomp(nextb, "snext");' OnMouseOut='whomp(nextb, "wnext");'
+ title="Next Section"><IMG NAME=nextb SRC="../images/wnext.png" ALT="Next" HEIGHT=20 WIDTH=82 BORDER=0></A>
+<BR>
+</BLOCKQUOTE>
+</BODY>
+</HTML>

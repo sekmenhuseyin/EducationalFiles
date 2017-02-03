@@ -1,0 +1,131 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>eggCannon</title>
+</head>
+<body bgcolor="#cccccc">
+<!--url's used in the movie-->
+<!--text used in the movie-->
+<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,0,0" width="550" height="400" id="eggCannon" align="middle">
+<param name="allowScriptAccess" value="sameDomain" />
+<param name="movie" value="eggCannon.swf" />
+<param name="quality" value="high" />
+<param name="bgcolor" value="#ffffff" />
+<embed src="eggCannon.swf" quality="high" bgcolor="#ffffff" width="550" height="400" name="eggCannon" align="middle" allowScriptAccess="sameDomain" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" />
+</object>
+<h3>Code in frame 1 layer 1</h3>
+<pre>
+//egg cannon
+//eggCannon.fla
+//By Andy Harris, Dummies Guide to Game Programming in Flash
+
+init();
+
+function init(){
+  gravity = .5;
+  gun.dir = 0;
+  gun.charge = 0;
+  egg.dir = 0;
+  egg.speed = 0;
+  egg.onGround = false;
+  //randomly position nest
+  nest._x = Math.random() * Stage.width;
+  nest._y = Math.random() * Stage.height;
+} // end init
+
+_root.onEnterFrame = function(){
+  checkKeys();
+  move(egg);
+  checkLanding();
+} // end enterFrame
+
+function checkKeys(){
+  if (Key.isDown(Key.LEFT)){
+    gun.dir--;
+    gun._rotation = gun.dir;
+  } // end if
+
+  if (Key.isDown(Key.RIGHT)){
+    gun.dir++;
+    gun._rotation = gun.dir;
+  } // end if
+
+  if (Key.isDown(Key.UP)){
+    gun.charge++;
+  } // end if
+
+  if (Key.isDown(Key.DOWN)){
+    gun.charge--;
+  } // end if
+
+  if (Key.isDown(Key.SPACE)){
+    egg._x = gun._x;
+    egg._y = gun._y;
+    egg.speed = gun.charge;
+    egg.dir = gun.dir;
+    turn(egg);
+  } // end if
+
+} // end checkKeys
+
+function turn(sprite){
+  //use vector projection to get DX and DY
+
+  //offset the angle
+  degrees = sprite.dir -90;
+
+  //convert to radians
+  radians = degrees / 180 * Math.PI;
+
+  //get DX and DY (normalized: length is one)
+  sprite.dx = Math.cos(radians);
+  sprite.dy = Math.sin(radians);
+
+  //compensate for speed
+  sprite.dx *= sprite.speed;
+  sprite.dy *= sprite.speed;
+} // end turn;  
+
+function move(sprite){
+  //moves an object.  Kills it if it moves off stage
+
+  //compensate for gravity
+  sprite.dy += gravity;
+
+  if (egg.onGround == false){
+    sprite._x += sprite.dx;
+    sprite._y += sprite.dy;
+  } // end if
+
+  if ((sprite._x > Stage.width) ||
+      (sprite._x < 0) ||
+      (sprite._y > Stage.height) ||
+      (sprite._7 < 0)){
+    //stop sprite and move it off stage
+    sprite._x = -100;
+    sprite._y = -100;
+    sprite._speed = 0;
+  } //end if
+} // end move
+
+function checkLanding(){
+  //checks to see if egg has landed safely in nest
+  if (egg.hitTest(nest)){
+    if (egg.dy > 0){
+      if (egg.dy  < 5){
+        if (egg.dx > -5){
+          if (egg.dx < 5){
+            trace ("good landing");
+            egg.dx = 0;
+            egg.dy = 0;
+            egg.onGround = true;
+          } // end if
+        } // end if
+      } // end if
+    } // end if
+  } // end if
+} // end checkLanding
+</pre>
+</body>
+</html>

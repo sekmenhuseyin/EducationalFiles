@@ -1,0 +1,25 @@
+Tanitim:
+CrazyTalk programi ile resimlerinizi ses dosyalari ile birlestirerek konusturabilirsiniz.
+
+Resimler üzerinde mimikleri ayarlayabilir, ses dosyalarindaki alçalma ve yükselmeleri mimiklere uyarlayabilirsiniz.
+
+Özellikleri:
+# Ses dosyalari üzerinde düzenlemeler yapabilirsiniz.
+# Resimleriniz üzerinde düzenlemeler yapabilirsiniz.
+# Harici bir kaynaktan ses kaydi yapabilirsiniz.
+# Ses analizi yapabilir.
+# Yazdiginiz yazilari seslendirebilir.
+# Arkaplana müzik ekleyebilirsiniz.
+# Gelismis yüz seçenekleri (Agiz, göz vb)
+# Maskeleme özelligi
+# Arkaplana resim ekleyebilirsiniz.
+# Flash programinda oldugu gibi zaman çizgisi üzerinde çalisabilirsiniz.
+# Tek tiklama ile önizleme özelligi
+# DVD olarak kaydetme özelligi
+# Animasyonlu GIF olusturabilme özelligi
+# WMV, AVI ve RM biçimlerinde kayit yapabilme
+# MP3, WMA ve WAV dosyalari ile çalisabilme
+# Otomatik olarak ActiveX denetimi ekleyebilme
+# SWF (Flash) olarak kaydedebilme
+# Cep telefonlari için 3gp biçiminde video olusturabilme
+# E-kart olusturabilme ve gönderebilme 

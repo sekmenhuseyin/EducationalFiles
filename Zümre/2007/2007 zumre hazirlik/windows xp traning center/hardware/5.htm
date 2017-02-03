@@ -1,0 +1,209 @@
+<!doctype html public "-//IETF//DTD HTML//EN">
+<HTML>
+<HEAD>
+<TITLE>Windows XP: The Complete Reference: Adding and Removing Hardware</TITLE>
+<META NAME="GENERATOR" CONTENT="Web-O-Matic Deluxe 4.1">
+<META NAME="AUTHOR" CONTENT="John R. Levine, Margaret Levine Young">
+<META NAME="COPYRIGHT" CONTENTS="Copyright 2001 by The McGraw-Hill Companies. All rights reserved.">
+</HEAD>
+<BODY BACKGROUND="../images/background.png">
+<BLOCKQUOTE>
+<SCRIPT LANGUAGE="JavaScript">
+function whomp(i, file)
+{
+	i.src = "../images/" + file + ".png";
+}
+</SCRIPT>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarered3x3.png" HEIGHT=3 WIDTH=3></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=2>
+Chapter 13: Adding and Removing Hardware
+</FONT></TD>
+</TR>
+</TABLE>
+<BR>
+<A HREF="4.htm"  OnMouseOver='whomp(prev, "sprev");' OnMouseOut='whomp(prev, "wprev");'
+ title="Previous Section"><IMG NAME=prev SRC="../images/wprev.png" ALT="Previous" HEIGHT=20 WIDTH=82 BORDER=0></A><!--
+--><A HREF="index.htm" OnMouseOver='whomp(chap, "schap");' OnMouseOut='whomp(chap, "wchap");'
+title="Chapter Overview"><IMG SRC="../images/wchap.png" ALT="Chapter" NAME=chap HEIGHT=20 WIDTH=100 BORDER=0></A><A
+HREF="../index.htm" OnMouseOver='whomp(toc, "sbook");' OnMouseOut='whomp(toc, "wbook");' 
+title="Table of Contents"><IMG SRC="../images/wbook.png" ALT="Contents" NAME=toc HEIGHT=20 WIDTH=94 BORDER=0></A><A
+HREF="../glossary/index.htm" OnMouseOver='whomp(glos, "sglos");' OnMouseOut='whomp(glos, "wglos");' 
+title="Glossary"><IMG SRC="../images/wglos.png" ALT="Glossary" NAME=glos HEIGHT=20 WIDTH=94 BORDER=0></A><!--
+--><A HREF="6.htm"  OnMouseOver='whomp(next, "snext");' OnMouseOut='whomp(next, "wnext");'
+ title="Next Section"><IMG NAME=next SRC="../images/wnext.png" ALT="Next" HEIGHT=20 WIDTH=82 BORDER=0></A>
+<BR>
+<A NAME="1">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarered10x10.png" HEIGHT=10 WIDTH=10></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=4><B>Configuring Windows for New Hardware</B></FONT>
+</TD>
+</TR>
+</TABLE></A>
+<P>
+<A HREF="../hardware/2.htm#1">Plug and Play</A> helps Windows XP automatically detect and configure itself for a wider range of hardware devices. Follow these steps to install new hardware and configure Windows to use it (see the next section if you are installing a PC card):
+<OL>
+<LI  VALUE=1>
+Install your new hardware. This can involve opening up the computer and installing a card, inserting a card into a <A HREF="../hardware/4.htm#14">PC card</A> slot, or just plugging a new external device into a <A HREF="../hardware/4.htm#4">serial port</A>, <A HREF="../hardware/4.htm#7">parallel port</A>, <A HREF="../hardware/4.htm#26">SCSI</A> adapter, <A HREF="../hardware/4.htm#11">USB</A> port, or <A HREF="../hardware/4.htm#12">FireWire</A> port. Follow the directions that come with the new hardware. (For USB and FireWire devices, you don't even have to turn off the computer before plugging them in.)
+<LI  VALUE=2>
+Turn on the device (if external), and turn on and start up your computer. <A HREF="../hardware/4.htm#16">PCI</A> and SCSI devices usually have a BIOS setup routine that you have to enter when you turn on the computer and run one time to do low-level configuration of your new device.
+<LI  VALUE=3>
+If you're lucky, Windows notices the new device as it starts and automatically configures it for you.
+<LI  VALUE=4>
+If you're less lucky, Windows just starts up. Run the Add New Hardware Wizard, described in the <A HREF="../hardware/5.htm#3">next section</A>.
+<LI  VALUE=5>
+If the new device came with a CD, put the CD-ROM into the CD drive and see what happens. If an installation program starts, follow its instructions to install the drivers and other software that the new device needs.
+<LI  VALUE=6>
+If you're unlucky, Windows doesn't start at all, or starts up in <A HREF="../hardware/6.htm#3">Safe Mode</A>, and you have to <A HREF="../hardware/6.htm#1">figure out what's wrong</A>.
+</OL>
+<A NAME="2">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Installing and Uninstalling PC Cards and Other Hot-Swappable Devices</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+You can install or uninstall PC cards without turning off your computer. For example, if you have a PC card from your digital camera with memory containing the photos you have taken, you can insert the PC card into the PC card slot of your computer at any time. Windows notices the new device within a few seconds, and you can begin using it. When one or more PC cards are installed, a Safely Remove Hardware icon appears in the notification area of your taskbar. 
+<P>
+Before you remove the device, though, you should tell Windows that you are going to do so. Click the Safely Remove Hardware icon on the taskbar to see a list of the devices you can remove. Choose the one you are about to remove. Alternatively, right-click the icon to display the Safely Remove Hardware dialog box, as shown in Figure 13-4. Choose a device and click the Stop button. If you want to see the properties of a PC card, click the Properties button.
+<TABLE BORDER=2><TR><TD ALIGN=CENTER>
+<IMG SRC="hardware.pccard.png" WIDTH=423 HEIGHT=430 ALT="[figure]">
+</TD></TR><TR BGCOLOR="#00ffff"><TD><I>Figure 13-4:  Checking the status of your PC cards and other hot-swappable devices</I></TD></TR></TABLE>
+<P>
+If a device doesn't appear in the Unplug Or Eject Hardware dialog box, don't disconnect it without first shutting down Windows and turning off your computer.
+<P>
+<TABLE><TR><TD VALIGN="TOP"><IMG SRC="../images/note.png" ALT="note" WIDTH=95 HEIGHT=29></TD>
+<TD VALIGN="TOP">USB and FireWire peripherals don't require turning off the PC before installing or uninstalling. Your hardware vendor's driver software may impose limitations, though.
+
+</TD></TR></TABLE>
+<A NAME="3">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Using the Add Hardware Wizard</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+The Windows Add Hardware<I> </I>Wizard does a good job handling the details of installing new device drivers. After you've installed a new device, if Windows doesn't detect it, run the Wizard by following these steps.
+<OL>
+<LI  VALUE=1>
+Choose Start | Control Panel, click Printers And Other Hardware, and click Add Hardware (it's under See Also in the Task pane to the left). The Add Hardware Wizard starts. 
+<LI  VALUE=2>
+The first thing the Wizard does after you click Next is search for new <A HREF="../hardware/2.htm#1">Plug and Play</A> devices, devices that can communicate with Windows to provide their own configuration information. Even if you know you don't have any new Plug and Play devices, you have to wait while Windows checks for them. If the Wizard finds new devices (or old but unused devices), it shows you a list, as in Figure 13-5.  If there are no new devices to be added, you see a list of all installed hardware.
+</OL>
+<TABLE BORDER=2><TR><TD ALIGN=CENTER>
+<IMG SRC="hardware.pnp.png" WIDTH=503 HEIGHT=392 ALT="[figure]">
+</TD></TR><TR BGCOLOR="#00ffff"><TD><I>Figure 13-5:  The Add Hardware Wizard finds a new Plug and Play device to install.</I></TD></TR></TABLE>
+<OL>
+<LI  VALUE=3>
+If Windows finds a Plug and Play device and installed and configures it, you are done--click Finish.
+<LI  VALUE=4>
+If one of the devices in the list is the one you want to install, check Yes, click the correct device, and then click Next.
+<LI  VALUE=5>
+If Windows doesn't find your new device, click the Add A New Hardware Device item at the top of the list and click Next to proceed to the next screen. Windows then offers to search for non-Plug and Play devices, which it refers to as Other Hardware. Searching for non-Plug and Play is slower and riskier than searching for Plug and Play, and it sometimes crashes the computer. If you know what you just installed, you can select Install The Hardware That I Manually Select From A List (Advanced) and select the driver yourself. If you take the automated route, Windows attempts to find any new devices, which takes a while. When it finishes, click the Next button to see a list of device categories that you can choose from (Figure 13-6).
+</OL>
+<TABLE BORDER=2><TR><TD ALIGN=CENTER>
+<IMG SRC="hardware.categorylist.png" WIDTH=503 HEIGHT=392 ALT="[figure]">
+</TD></TR><TR BGCOLOR="#00ffff"><TD><I>Figure 13-6:  Adding non-Plug and Play devices</I></TD></TR></TABLE>
+<OL>
+<LI  VALUE=6>
+Select the hardware type from the list and click Next to see a list of manufacturers and models (Figure 13-7). Sometimes it's difficult to guess which category a device falls into, so you might have to pick one category, look there, and then click Back and try another category or two before you find your device.
+</OL>
+<TABLE BORDER=2><TR><TD ALIGN=CENTER>
+<IMG SRC="hardware.model.png" WIDTH=503 HEIGHT=392 ALT="[figure]">
+</TD></TR><TR BGCOLOR="#00ffff"><TD><I>Figure 13-7:  Choosing the manufacturer and model of the new device</I></TD></TR></TABLE>
+<OL>
+<LI  VALUE=7>
+Choose the manufacturer and the model of your device. If your device came with a <A HREF="../hardware/4.htm#28">driver</A> on a floppy disk and you want to use that driver, click Have Disk and tell Windows which drive contains the disk, which usually is drive A. If you downloaded the driver from the manufacturer's Web site, browse the files you downloaded.
+</OL>
+<P>
+<TABLE><TR><TD VALIGN="TOP"><IMG SRC="../images/tip.png" ALT="tip" WIDTH=95 HEIGHT=29></TD>
+<TD VALIGN="TOP">Windows contains up-to-date drivers for an enormous number of devices (at least, up-to-date as of when Windows XP came out). When Windows asks for a driver, insert the floppy disk or CD-ROM that came with the hardware. Windows checks the Windows XP CD-ROM  for a newer version and installs the one it thinks looks best. When in doubt, check the Web site of the hardware manufacturer for the latest driver. Look for drivers designed for use with Windows XP or 2000.
+
+</TD></TR></TABLE>
+<OL>
+<LI  VALUE=8>
+Click Next, and Windows finishes installing your device. You might have to insert your Windows XP CD-ROM if the device needs drivers that haven't been used before, and you might have to reboot Windows.
+</OL>
+<P>
+At this point, unless Windows has reported a configuration problem, your device should be ready to use.
+<A NAME="4">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Installing Modems</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+Originally, all modems connected to regular phone lines, but with the advent of high-speed Internet access, you may use one of three types of modems:
+<UL>
+<LI >
+<A NAME="dddialupmodem"><B>Dial-up modem</B></A>  Connects to normal voice-grade analog phone lines. Dial-up modems may be internal (adapter cards that install inside the computer) or external (boxes that connect to the serial port).
+<LI >
+<A HREF="../prepnet/5.htm#1"><B>DSL modem</B></A>  Connects to a high-speed DSL phone line. DSL modems may be internal or external, and external DSL modems may connect either to a network adapter or to a USB port.
+<LI >
+<A HREF="../connecting/1.htm#6"><B>Cable modem</B></A>  Connects to a cable TV line. Cable modems connect to either a network adapter or a USB port in your computer.
+</UL>
+<A NAME="5">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squaregreen6x6.png" HEIGHT=6 WIDTH=6></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Installing Dial-Up Modems</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+When Windows detects that you have installed a new dial-up modem (the kind you connect to a regular phone line), it runs the Install New Modem Wizard. This Wizard also runs when you open the Modems icon in the Control Panel if Windows isn't configured to use your modem.
+<P>
+The Wizard asks whether the modem is a <A HREF="../hardware/4.htm#14">PC card (PCMCIA)</A> modem (which can pop in or out of a laptop) or another type of modem (an internal modem that mounts permanently inside the computer, or an external modem that connects to the computer by a serial cable). The Install New Modem Wizard may call the <A HREF="../hardware/5.htm#3">Add Hardware Wizard</A> described in the preceding section to find the modem, or you can choose the modem manufacturer and model from a menu.
+<P>
+Once Windows has installed the driver for your modem, it asks for the country and area code in which you are located, any digits you need to dial to get an outside line, and whether your telephone system uses tone or pulse dialing. Windows stores this information in your default <A HREF="../prepnet/2.htm#1">dialing location</A>.
+<A NAME="6">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squaregreen6x6.png" HEIGHT=6 WIDTH=6></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Installing DSL and Cable Modems</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+DSL and cable modems are installed by telephone company or cable company installers. Once the equipment is in place, see sections "<A HREF="../prepnet/5.htm#1">Connecting to a DSL Line</A>" and "<A HREF="../prepnet/6.htm#1">Connecting to a Cable Modem</A>" in Chapter 21
+<P><TABLE BORDER=2 CELLPADDING=10><TR>
+<TD BGCOLOR="#00ffff" WIDTH=2></TD><TD>
+<A NAME="7">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Windows Installation Glitch</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+<A HREF="../wininst/index.htm">Windows installation files</A> are stored in a compressed format in <A NAME="ddcab"><I>CAB</I></A> or <A NAME="ddcabinetfiles"><I>cabinet files</I></A> (with extension .cab) on your Windows XP CD-ROM. When you install Windows, it may copy these CAB files to your hard disk, including standard hardware drivers.
+<P>
+Sometimes, Windows can't find the component file that it is trying to install. When this happens, Windows says that it can't find the file where it is looking and asks for another location where the file might be. You need to find which CAB file Windows needs and tell it where to look for it.
+<P>
+To find the missing file, click the Details button in the dialog box that appears and find the name of the CAB file that contains the file that Windows is looking for. Then search your hard disk (or your Windows XP CD-ROM) for this CAB by choosing Start | Search. For example, if Windows is looking for a file named Winsock.dll that is supposed to be in Net4.cab, search your hard disk or the CD for files with the filename *.cab. Then tell Windows to look in that folder for the CAB file.
+</TD></TR></TABLE>
+<P>
+<A HREF="4.htm"  OnMouseOver='whomp(prevb, "sprev");' OnMouseOut='whomp(prevb, "wprev");'
+ title="Previous Section"><IMG NAME=prevb SRC="../images/wprev.png" ALT="Previous" HEIGHT=20 WIDTH=82 BORDER=0></A><!--
+--><A HREF="index.htm" OnMouseOver='whomp(chapb, "schap");' OnMouseOut='whomp(chapb, "wchap");'
+title="Chapter Overview"><IMG SRC="../images/wchap.png" ALT="Chapter" NAME=chapb HEIGHT=20 WIDTH=100 BORDER=0></A><A
+HREF="../index.htm" OnMouseOver='whomp(tocb, "sbook");' OnMouseOut='whomp(tocb, "wbook");' 
+title="Table of Contents"><IMG SRC="../images/wbook.png" ALT="Contents" NAME=tocb HEIGHT=20 WIDTH=94 BORDER=0></A><A
+HREF="../glossary/index.htm" OnMouseOver='whomp(glosb, "sglos");' OnMouseOut='whomp(glosb, "wglos");' 
+title="Glossary"><IMG SRC="../images/wglos.png" ALT="Glossary" NAME=glosb HEIGHT=20 WIDTH=94 BORDER=0></A><!--
+--><A HREF="6.htm"  OnMouseOver='whomp(nextb, "snext");' OnMouseOut='whomp(nextb, "wnext");'
+ title="Next Section"><IMG NAME=nextb SRC="../images/wnext.png" ALT="Next" HEIGHT=20 WIDTH=82 BORDER=0></A>
+<BR>
+</BLOCKQUOTE>
+</BODY>
+</HTML>

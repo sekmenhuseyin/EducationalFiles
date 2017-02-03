@@ -1,0 +1,86 @@
+<!doctype html public "-//IETF//DTD HTML//EN">
+<HTML>
+<HEAD>
+<TITLE>Windows XP: The Complete Reference: Connecting Your LAN to the Internet</TITLE>
+<META NAME="GENERATOR" CONTENT="Web-O-Matic Deluxe 4.1">
+<META NAME="AUTHOR" CONTENT="John R. Levine, Margaret Levine Young">
+<META NAME="COPYRIGHT" CONTENTS="Copyright 2001 by The McGraw-Hill Companies. All rights reserved.">
+</HEAD>
+<BODY BACKGROUND="../images/background.png">
+<BLOCKQUOTE>
+<SCRIPT LANGUAGE="JavaScript">
+function whomp(i, file)
+{
+	i.src = "../images/" + file + ".png";
+}
+</SCRIPT>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarered3x3.png" HEIGHT=3 WIDTH=3></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=2>
+Chapter 30: Connecting Your LAN to the Internet
+</FONT></TD>
+</TR>
+</TABLE>
+<BR>
+<A HREF="1.htm"  OnMouseOver='whomp(prev, "sprev");' OnMouseOut='whomp(prev, "wprev");'
+ title="Previous Section"><IMG NAME=prev SRC="../images/wprev.png" ALT="Previous" HEIGHT=20 WIDTH=82 BORDER=0></A><!--
+--><A HREF="index.htm" OnMouseOver='whomp(chap, "schap");' OnMouseOut='whomp(chap, "wchap");'
+title="Chapter Overview"><IMG SRC="../images/wchap.png" ALT="Chapter" NAME=chap HEIGHT=20 WIDTH=100 BORDER=0></A><A
+HREF="../index.htm" OnMouseOver='whomp(toc, "sbook");' OnMouseOut='whomp(toc, "wbook");' 
+title="Table of Contents"><IMG SRC="../images/wbook.png" ALT="Contents" NAME=toc HEIGHT=20 WIDTH=94 BORDER=0></A><A
+HREF="../glossary/index.htm" OnMouseOver='whomp(glos, "sglos");' OnMouseOut='whomp(glos, "wglos");' 
+title="Glossary"><IMG SRC="../images/wglos.png" ALT="Glossary" NAME=glos HEIGHT=20 WIDTH=94 BORDER=0></A><!--
+--><A HREF="3.htm"  OnMouseOver='whomp(next, "snext");' OnMouseOut='whomp(next, "wnext");'
+ title="Next Section"><IMG NAME=next SRC="../images/wnext.png" ALT="Next" HEIGHT=20 WIDTH=82 BORDER=0></A>
+<BR>
+<A NAME="1">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarered10x10.png" HEIGHT=10 WIDTH=10></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=4><B>What Is Internet Connection Sharing?</B></FONT>
+</TD>
+</TR>
+</TABLE></A>
+<P>
+Windows XP's Internet Connection Sharing (or ICS) is a NAT program, and doesn't provide caching or logging. ICS allows one computer--the <A NAME="ddicsserver"><I>ICS server</I></A>--to provide an Internet connection for all the computers on a LAN. The ICS host runs the ICS server program. The other computers--the <A NAME="ddicsclients"><I>ICS clients</I></A>--on the LAN can run Windows Me, 9x, 2000, NT, older Windows versions, or other operating systems, as long as they support TCP/IP.
+<P>
+ICS uses private IP addresses in the format 192.168.0.<I>xxx</I>. You can't use static IP addressing (Microsoft claims that there's a way, but we haven't had any luck). ICS includes a <A HREF="../peer2peer/1.htm#3">DHCP (Dynamic Host Configuration Protocol) server</A>, which runs on the ICS server and assigns IP addresses to the rest of the computers on your LAN automatically. DHCP assigns the address 192.168.0.1 to the ICS server itself.
+<P>
+Figure 30-1 shows a LAN with five computers, including the ICS server computer, with private IP addresses from 192.168.0.1 to 192.168.0.5. The ICS server has a separate IP address for communicating with the Internet over a DSL line; this address is assigned by the ISP (in the figure, it has the address 245.62.168.33).
+<TABLE BORDER=2><TR><TD ALIGN=CENTER>
+<IMG SRC="ics.ics.png" WIDTH=732 HEIGHT=642 ALT="[figure]">
+</TD></TR><TR BGCOLOR="#00ffff"><TD><I>Figure 30-1:  A LAN with Internet Connection Sharing</I></TD></TR></TABLE>
+<P>
+ICS includes these components:
+<UL>
+<LI >
+<B>DHCP Allocator</B>  Assigns IP addresses to ICS client computers on the LAN
+<LI >
+<B>DNS Proxy</B>  Translates between IP addresses and Internet host names (like www.yahoo.com), using your ISP's DNS server
+<LI >
+<B>Network Address Translation (NAT)</B>  When passing packets of information between the LAN and the Internet, replaces the private IP address with the ICS server's IP address, and vice versa
+</UL>
+<P>
+The <A HREF="../ics/3.htm#1">next section</A> describes how to install ICS on the ICS server and how to configure the rest of the computers on the LAN to share the connection.
+<P>
+<TABLE><TR><TD VALIGN="TOP"><IMG SRC="../images/tip.png" ALT="tip" WIDTH=95 HEIGHT=29></TD>
+<TD VALIGN="TOP">Windows also comes with an <A HREF="../security/4.htm#1">Internet Connection Firewall</A> to provide security for any Internet connection, whether shared or not.
+
+</TD></TR></TABLE>
+<P>
+<A HREF="1.htm"  OnMouseOver='whomp(prevb, "sprev");' OnMouseOut='whomp(prevb, "wprev");'
+ title="Previous Section"><IMG NAME=prevb SRC="../images/wprev.png" ALT="Previous" HEIGHT=20 WIDTH=82 BORDER=0></A><!--
+--><A HREF="index.htm" OnMouseOver='whomp(chapb, "schap");' OnMouseOut='whomp(chapb, "wchap");'
+title="Chapter Overview"><IMG SRC="../images/wchap.png" ALT="Chapter" NAME=chapb HEIGHT=20 WIDTH=100 BORDER=0></A><A
+HREF="../index.htm" OnMouseOver='whomp(tocb, "sbook");' OnMouseOut='whomp(tocb, "wbook");' 
+title="Table of Contents"><IMG SRC="../images/wbook.png" ALT="Contents" NAME=tocb HEIGHT=20 WIDTH=94 BORDER=0></A><A
+HREF="../glossary/index.htm" OnMouseOver='whomp(glosb, "sglos");' OnMouseOut='whomp(glosb, "wglos");' 
+title="Glossary"><IMG SRC="../images/wglos.png" ALT="Glossary" NAME=glosb HEIGHT=20 WIDTH=94 BORDER=0></A><!--
+--><A HREF="3.htm"  OnMouseOver='whomp(nextb, "snext");' OnMouseOut='whomp(nextb, "wnext");'
+ title="Next Section"><IMG NAME=nextb SRC="../images/wnext.png" ALT="Next" HEIGHT=20 WIDTH=82 BORDER=0></A>
+<BR>
+</BLOCKQUOTE>
+</BODY>
+</HTML>

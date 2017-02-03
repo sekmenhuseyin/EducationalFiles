@@ -1,0 +1,19 @@
+<applet code="AdvertiserApplet.class" width=400 height=200>
+<param name=AUTHOR value="Sondre Skaug Bjoernebekk, sondre@mobilpost.com">
+<param name=NUMBEROFADS value=3>
+<param name=DELAY value=3>
+
+<param name=IMG1 value="test1.gif">
+<param name=TXT1 value="Link Adi1">
+<param name=URL1 value="http://home.sol.no/~sbjorneb/">
+
+<param name=IMG2 value="test2.gif">
+<param name=TXT2 value="Link Adi2">
+<param name=URL2 value="http://home.sol.no/~sbjorneb/">
+
+<param name=IMG3 value="test3.gif">
+<param name=TXT3 value="Link Adi 3">
+<param name=URL3 value="http://home.sol.no/~sbjorneb/">
+
+If your browser supported Java, you'd see an AdvertiserApplet here.
+</applet>

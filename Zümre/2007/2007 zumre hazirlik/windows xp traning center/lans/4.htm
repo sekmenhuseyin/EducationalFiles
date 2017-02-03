@@ -1,0 +1,129 @@
+<!doctype html public "-//IETF//DTD HTML//EN">
+<HTML>
+<HEAD>
+<TITLE>Windows XP: The Complete Reference: Designing a Windows-Based Local Area Network</TITLE>
+<META NAME="GENERATOR" CONTENT="Web-O-Matic Deluxe 4.1">
+<META NAME="AUTHOR" CONTENT="John R. Levine, Margaret Levine Young">
+<META NAME="COPYRIGHT" CONTENTS="Copyright 2001 by The McGraw-Hill Companies. All rights reserved.">
+</HEAD>
+<BODY BACKGROUND="../images/background.png">
+<BLOCKQUOTE>
+<SCRIPT LANGUAGE="JavaScript">
+function whomp(i, file)
+{
+	i.src = "../images/" + file + ".png";
+}
+</SCRIPT>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarered3x3.png" HEIGHT=3 WIDTH=3></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=2>
+Chapter 27: Designing a Windows-Based Local Area Network
+</FONT></TD>
+</TR>
+</TABLE>
+<BR>
+<A HREF="3.htm"  OnMouseOver='whomp(prev, "sprev");' OnMouseOut='whomp(prev, "wprev");'
+ title="Previous Section"><IMG NAME=prev SRC="../images/wprev.png" ALT="Previous" HEIGHT=20 WIDTH=82 BORDER=0></A><!--
+--><A HREF="index.htm" OnMouseOver='whomp(chap, "schap");' OnMouseOut='whomp(chap, "wchap");'
+title="Chapter Overview"><IMG SRC="../images/wchap.png" ALT="Chapter" NAME=chap HEIGHT=20 WIDTH=100 BORDER=0></A><A
+HREF="../index.htm" OnMouseOver='whomp(toc, "sbook");' OnMouseOut='whomp(toc, "wbook");' 
+title="Table of Contents"><IMG SRC="../images/wbook.png" ALT="Contents" NAME=toc HEIGHT=20 WIDTH=94 BORDER=0></A><A
+HREF="../glossary/index.htm" OnMouseOver='whomp(glos, "sglos");' OnMouseOut='whomp(glos, "wglos");' 
+title="Glossary"><IMG SRC="../images/wglos.png" ALT="Glossary" NAME=glos HEIGHT=20 WIDTH=94 BORDER=0></A><!--
+--><A HREF="5.htm"  OnMouseOver='whomp(next, "snext");' OnMouseOut='whomp(next, "wnext");'
+ title="Next Section"><IMG NAME=next SRC="../images/wnext.png" ALT="Next" HEIGHT=20 WIDTH=82 BORDER=0></A>
+<BR>
+<A NAME="1">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarered10x10.png" HEIGHT=10 WIDTH=10></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=4><B>Choosing Between Cabled and Wireless LANs</B></FONT>
+</TD>
+</TR>
+</TABLE></A>
+<P>
+Before you buy hardware for your network, you need to decide how to connect the computers on your network. Almost all new cabled networks use <A NAME="ddethernet"><I>Ethernet</I></A> cards and cabling. Although there are topologies other than Ethernet (such as IBM Token Ring), the majority of new LAN installations are some form of Ethernet because the components are widely available and cheap. Because it's so widely used, Ethernet network interface boards are relatively cheap and are also available as PC Cards that fit most laptops.
+<P>
+If you are setting up a new network, you need to choose between  regular Ethernet cabling and Ethernet-based wireless equipment.
+<A NAME="2">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Ethernet Cable and NICs</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+There are two speeds of Ethernet. Original Ethernet has a speed of 10 Mbps (megabits/second). <A NAME="ddfastethernet"><I>Fast Ethernet</I></A> has a speed of 100 Mbps. An even faster version, <A NAME="ddgigabitethernet"><I>Gigabit Ethernet</I></A>, is available and is can transmit data at a maximum speed of 1 Gbps (gigabits/second), or ten times the Fast Ethernet standard.
+<P>
+The <A NAME="ddtopology"><I>topology</I></A> of a network determines the pattern of cabling you use to connect the computers. In a <A NAME="ddstartopology"><I>star topology</I></A> network, each computer is connected by a cable to a <A NAME="ddhub"><I>hub</I></A>, the computer in the center of the star. One end of the cable plugs into a computer's network interface card, and the other end plugs into the hub, which provides a central connection point for the network cabling. Hubs vary in size (with different numbers of ports), and more advanced hubs can correct signal errors and amplify signals.
+<P>
+Figure 27-1 shows a diagram of a network using star topology.
+<TABLE BORDER=2><TR><TD ALIGN=CENTER>
+<IMG SRC="lans.star.png" WIDTH=480 HEIGHT=472 ALT="[figure]">
+</TD></TR><TR BGCOLOR="#00ffff"><TD><I>Figure 27-1:  Star topology (with twisted-pair cable)</I></TD></TR></TABLE>
+<P>
+In the past, you chose from star and bus topology (see the "Bus Topology" sidebar in this chapter). However, most new peer-to-peer networks use star topology. This configuration uses more cable and more hardware than a bus topology network, but it's easier to manage and less likely to fail. Star topology is easy to set up, and the network is easier to troubleshoot than a bus network because a damaged cable affects only one computer.
+<P>
+The cable used in Ethernet star topology is usually <A NAME="ddunshieldedtwistedpair"><I>unshielded twisted-pair</I></A> (also called <A NAME="ddcategory5"><I>Category-5</I></A> or <A NAME="ddcat5"><I>Cat-5</I></A>). The connectors on the ends of the cables are <A NAME="ddrj45connectors"><I>RJ-45 connectors</I></A>, which look like large phone connectors.
+<A NAME="3">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Wireless LANs</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+In a <A NAME="ddwirelesslan"><I>wireless LAN</I></A> there are no wires dedicated to network traffic. Each computer has a wireless network adapter, allowing the computers to communicate via radio waves, infrared, over the AC power wires in your walls, or over phone wires. Wireless LAN adapters enable you to put computers as far as 300 feet away from each other, depending on what walls and furniture are between them. The adapters include scrambling or encryption to prevent other computers from listening in on your data transmissions or adding themselves to your LAN.
+<P>
+A wireless LAN generally looks like a star topology LAN, but without the cable. The LAN includes one <A NAME="ddaccesspoint"><I>access point</I></A> as the hub of the star. The access point connects to one computer on the LAN and contains a radio transceiver, hardware and software for communications and encryption, and a cable connection that lets you connect it to a cabled LAN, if you have one. The rest of the computers on the LAN have wireless LAN adapters that contain a radio transceiver, which communicates with the access point.
+<P>
+Two standards for wireless LANS--<A NAME="ddieee80211b"><I>IEEE 802.11b</I></A> and <A NAME="ddwifi"><I>Wi-Fi</I></A>--exist to ensure that wireless adapters from different manufacturers can communicate with each other. IEEE 802.11b networks can communicate at 11 Mbps, as fast as slower cabled networks. For more information about these standards, see <A HREF="http://www.wirelessethernet.com"><B>http://www.wirelessethernet.com</B></A>. <A NAME="ddhomerf"><I>HomeRF</I></A> is another standard based on IEEE 802.11b, but it is limited to home rather than business networks (see <A HREF="http://www.homerf.org"><B>http://www.homerf.org</B></A>).
+<P>
+Some wireless network adapters actually do use wires--they send data over the power wires in the walls of your house. These are still slower than cabled networks, though, and may be harder to troubleshoot than cabled networks. However, if you can live with the slower speeds, wireless networks can be very useful and easy to install in hard-to-cable buildings
+<A NAME="4">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Making the Choice</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+The cabling technology you choose determines the hardware you buy. Each standard has advantages and disadvantages. However, if you are starting a network from scratch, choose the cheaper and more common Fast Ethernet. If cabling would be a problem (for example, people using laptops will be moving around the building, or the architecture of the building would make cabling expensive), consider a wireless LAN.
+<P>
+From here on, this chapter discusses setting up an Ethernet network. However, the steps outlined here don't differ much for setting up a wireless network--instead of buying NICs, cabling, and a hub, you buy wireless LAN adapters and a wireless access point.
+<P><TABLE BORDER=2 CELLPADDING=10><TR>
+<TD BGCOLOR="#00ffff" WIDTH=2></TD><TD>
+<A NAME="5">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Bus Topology</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+Older networks used the <A NAME="ddbustopology"><I>bus topology</I></A>, in which the <I>bus</I> is the main cable to which all the other computers are attached. (Communication within a computer also happens along a bus.) A <A NAME="ddcoaxialcable"><I>coaxial cable</I></A> (or <A NAME="ddcoax"><I>coax</I></A>) cable is connected from one computer to the next, in a long line, until all computers are connected. A network using bus topology looks like this:<B></B>
+<BR><IMG ALIGN=TOP SRC="lans.bus.png" WIDTH=748 HEIGHT=494 ALT="[image]">
+<P>
+Unless you're adding computers to an existing small bus topology network, we recommend you use a star topology. Network interface cards with coaxial cable connectors are becoming hard to find.
+</TD></TR></TABLE>
+<P>
+<A HREF="3.htm"  OnMouseOver='whomp(prevb, "sprev");' OnMouseOut='whomp(prevb, "wprev");'
+ title="Previous Section"><IMG NAME=prevb SRC="../images/wprev.png" ALT="Previous" HEIGHT=20 WIDTH=82 BORDER=0></A><!--
+--><A HREF="index.htm" OnMouseOver='whomp(chapb, "schap");' OnMouseOut='whomp(chapb, "wchap");'
+title="Chapter Overview"><IMG SRC="../images/wchap.png" ALT="Chapter" NAME=chapb HEIGHT=20 WIDTH=100 BORDER=0></A><A
+HREF="../index.htm" OnMouseOver='whomp(tocb, "sbook");' OnMouseOut='whomp(tocb, "wbook");' 
+title="Table of Contents"><IMG SRC="../images/wbook.png" ALT="Contents" NAME=tocb HEIGHT=20 WIDTH=94 BORDER=0></A><A
+HREF="../glossary/index.htm" OnMouseOver='whomp(glosb, "sglos");' OnMouseOut='whomp(glosb, "wglos");' 
+title="Glossary"><IMG SRC="../images/wglos.png" ALT="Glossary" NAME=glosb HEIGHT=20 WIDTH=94 BORDER=0></A><!--
+--><A HREF="5.htm"  OnMouseOver='whomp(nextb, "snext");' OnMouseOut='whomp(nextb, "wnext");'
+ title="Next Section"><IMG NAME=nextb SRC="../images/wnext.png" ALT="Next" HEIGHT=20 WIDTH=82 BORDER=0></A>
+<BR>
+</BLOCKQUOTE>
+</BODY>
+</HTML>

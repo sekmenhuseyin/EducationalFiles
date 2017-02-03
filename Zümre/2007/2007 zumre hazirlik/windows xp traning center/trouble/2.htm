@@ -1,0 +1,87 @@
+<!doctype html public "-//IETF//DTD HTML//EN">
+<HTML>
+<HEAD>
+<TITLE>Windows XP: The Complete Reference: Troubleshooting Windows XP</TITLE>
+<META NAME="GENERATOR" CONTENT="Web-O-Matic Deluxe 4.1">
+<META NAME="AUTHOR" CONTENT="John R. Levine, Margaret Levine Young">
+<META NAME="COPYRIGHT" CONTENTS="Copyright 2001 by The McGraw-Hill Companies. All rights reserved.">
+</HEAD>
+<BODY BACKGROUND="../images/background.png">
+<BLOCKQUOTE>
+<SCRIPT LANGUAGE="JavaScript">
+function whomp(i, file)
+{
+	i.src = "../images/" + file + ".png";
+}
+</SCRIPT>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarered3x3.png" HEIGHT=3 WIDTH=3></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=2>
+Chapter 35: Troubleshooting Windows XP
+</FONT></TD>
+</TR>
+</TABLE>
+<BR>
+<A HREF="1.htm"  OnMouseOver='whomp(prev, "sprev");' OnMouseOut='whomp(prev, "wprev");'
+ title="Previous Section"><IMG NAME=prev SRC="../images/wprev.png" ALT="Previous" HEIGHT=20 WIDTH=82 BORDER=0></A><!--
+--><A HREF="index.htm" OnMouseOver='whomp(chap, "schap");' OnMouseOut='whomp(chap, "wchap");'
+title="Chapter Overview"><IMG SRC="../images/wchap.png" ALT="Chapter" NAME=chap HEIGHT=20 WIDTH=100 BORDER=0></A><A
+HREF="../index.htm" OnMouseOver='whomp(toc, "sbook");' OnMouseOut='whomp(toc, "wbook");' 
+title="Table of Contents"><IMG SRC="../images/wbook.png" ALT="Contents" NAME=toc HEIGHT=20 WIDTH=94 BORDER=0></A><A
+HREF="../glossary/index.htm" OnMouseOver='whomp(glos, "sglos");' OnMouseOut='whomp(glos, "wglos");' 
+title="Glossary"><IMG SRC="../images/wglos.png" ALT="Glossary" NAME=glos HEIGHT=20 WIDTH=94 BORDER=0></A><!--
+--><A HREF="3.htm"  OnMouseOver='whomp(next, "snext");' OnMouseOut='whomp(next, "wnext");'
+ title="Next Section"><IMG NAME=next SRC="../images/wnext.png" ALT="Next" HEIGHT=20 WIDTH=82 BORDER=0></A>
+<BR>
+<A NAME="1">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarered10x10.png" HEIGHT=10 WIDTH=10></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=4><B>Dealing with Hung or Crashed Programs</B></FONT>
+</TD>
+</TR>
+</TABLE></A>
+<P>
+Despite all the testing that software vendors do, Windows and the applications you run under it have bugs and sometimes <A NAME="ddhang"><I>hang</I></A> (stop responding) or <A NAME="ddcrash"><I>crash</I></A> (fail altogether). When an application crashes, Windows displays a box telling you about it. There's not much you can do at that point, other than click OK. You may want to restart Windows if you're concerned that the program may have damaged files or Windows' internal operations.
+<P>
+If a program hangs, you generally can force Windows to stop the hung program. Press C<SMALL>TRL</SMALL>-A<SMALL>LT</SMALL>-D<SMALL>EL</SMALL> to open the <A HREF="../performance/2.htm#3">Windows Task Manager</A> dialog box, shown here:<BR><IMG ALIGN=TOP SRC="trouble.closeprog.png" WIDTH=404 HEIGHT=455 ALT="[image]">
+<P>
+On the Applications tab of the Windows Task Manager, a hung program usually has the notation "Not responding" in the Status column. (Healthy programs are designated as "Running.") Select the name of the program and click End Task. Normally the program then exits.
+<P>
+If all else fails, press C<SMALL>TRL</SMALL>-A<SMALL>LT</SMALL>-D<SMALL>EL</SMALL> to display the Windows Task Manager and then choose Shut Down | Restart from the menu bar: Windows should restart. If the hang was particularly nasty, Windows runs <A HREF="../disksafe/1.htm#1">ChkDsk</A> so that disk errors can be repaired.<P>
+For more information about the Windows Task Manager, see <A HREF="../performance/2.htm#3">Chapter 34</A>.
+<P><TABLE BORDER=2 CELLPADDING=10><TR>
+<TD BGCOLOR="#00ffff" WIDTH=2></TD><TD>
+<A NAME="2">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Windows Error Reporting</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+Windows XP can call home when it has a problem. That is, if you have an Internet connection, when a program crashes, Windows can send an error report back to Microsoft. Microsoft promises to send you an automatic notification when they receive the error report (although this hasn't happened during Windows XP testing, it might begin when the program is released). By collecting hang and crash information, Microsoft can fix problems with Windows more effectively.
+<P>
+When a program crashes or hangs, you see a dialog box asking whether to send a report. Microsoft promises that the information in the error report doesn't contain any personal information about you, just system configuration information about your computer. However, you also have the option of turning Windows Error Reporting off. Click Start, right-click My Computer, and choose Properties from the menu that appears. On the System Properties dialog box, click the Advanced tab. Click the Error Reporting button to display the Error Reporting dialog box:
+<BR><IMG ALIGN=TOP SRC="trouble.reporting.png" WIDTH=323 HEIGHT=313 ALT="[image]">
+<P>
+You can choose whether to do any error reporting, and whether to send reports only about Windows errors or about application program errors as well.
+</TD></TR></TABLE>
+<P>
+<A HREF="1.htm"  OnMouseOver='whomp(prevb, "sprev");' OnMouseOut='whomp(prevb, "wprev");'
+ title="Previous Section"><IMG NAME=prevb SRC="../images/wprev.png" ALT="Previous" HEIGHT=20 WIDTH=82 BORDER=0></A><!--
+--><A HREF="index.htm" OnMouseOver='whomp(chapb, "schap");' OnMouseOut='whomp(chapb, "wchap");'
+title="Chapter Overview"><IMG SRC="../images/wchap.png" ALT="Chapter" NAME=chapb HEIGHT=20 WIDTH=100 BORDER=0></A><A
+HREF="../index.htm" OnMouseOver='whomp(tocb, "sbook");' OnMouseOut='whomp(tocb, "wbook");' 
+title="Table of Contents"><IMG SRC="../images/wbook.png" ALT="Contents" NAME=tocb HEIGHT=20 WIDTH=94 BORDER=0></A><A
+HREF="../glossary/index.htm" OnMouseOver='whomp(glosb, "sglos");' OnMouseOut='whomp(glosb, "wglos");' 
+title="Glossary"><IMG SRC="../images/wglos.png" ALT="Glossary" NAME=glosb HEIGHT=20 WIDTH=94 BORDER=0></A><!--
+--><A HREF="3.htm"  OnMouseOver='whomp(nextb, "snext");' OnMouseOut='whomp(nextb, "wnext");'
+ title="Next Section"><IMG NAME=nextb SRC="../images/wnext.png" ALT="Next" HEIGHT=20 WIDTH=82 BORDER=0></A>
+<BR>
+</BLOCKQUOTE>
+</BODY>
+</HTML>

@@ -1,0 +1,654 @@
+<!doctype html public "-//IETF//DTD HTML//EN">
+<HTML>
+<HEAD>
+<TITLE>Windows XP: The Complete Reference: Running DOS Programs and Commands</TITLE>
+<META NAME="GENERATOR" CONTENT="Web-O-Matic Deluxe 4.1">
+<META NAME="AUTHOR" CONTENT="John R. Levine, Margaret Levine Young">
+<META NAME="COPYRIGHT" CONTENTS="Copyright 2001 by The McGraw-Hill Companies. All rights reserved.">
+</HEAD>
+<BODY BACKGROUND="../images/background.png">
+<BLOCKQUOTE>
+<SCRIPT LANGUAGE="JavaScript">
+function whomp(i, file)
+{
+	i.src = "../images/" + file + ".png";
+}
+</SCRIPT>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarered3x3.png" HEIGHT=3 WIDTH=3></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=2>
+Chapter 39: Running DOS Programs and Commands
+</FONT></TD>
+</TR>
+</TABLE>
+<BR>
+<A HREF="3.htm"  OnMouseOver='whomp(prev, "sprev");' OnMouseOut='whomp(prev, "wprev");'
+ title="Previous Section"><IMG NAME=prev SRC="../images/wprev.png" ALT="Previous" HEIGHT=20 WIDTH=82 BORDER=0></A><!--
+--><A HREF="index.htm" OnMouseOver='whomp(chap, "schap");' OnMouseOut='whomp(chap, "wchap");'
+title="Chapter Overview"><IMG SRC="../images/wchap.png" ALT="Chapter" NAME=chap HEIGHT=20 WIDTH=100 BORDER=0></A><A
+HREF="../index.htm" OnMouseOver='whomp(toc, "sbook");' OnMouseOut='whomp(toc, "wbook");' 
+title="Table of Contents"><IMG SRC="../images/wbook.png" ALT="Contents" NAME=toc HEIGHT=20 WIDTH=94 BORDER=0></A><A
+HREF="../glossary/index.htm" OnMouseOver='whomp(glos, "sglos");' OnMouseOut='whomp(glos, "wglos");' 
+title="Glossary"><IMG SRC="../images/wglos.png" ALT="Glossary" NAME=glos HEIGHT=20 WIDTH=94 BORDER=0></A><!--
+--><A HREF="5.htm"  OnMouseOver='whomp(next, "snext");' OnMouseOut='whomp(next, "wnext");'
+ title="Next Section"><IMG NAME=next SRC="../images/wnext.png" ALT="Next" HEIGHT=20 WIDTH=82 BORDER=0></A>
+<BR>
+<A NAME="1">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarered10x10.png" HEIGHT=10 WIDTH=10></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=4><B>Configuring the DOS Environment</B></FONT>
+</TD>
+</TR>
+</TABLE></A>
+<P>
+Windows provides a long list of settings for customizing the environment for the Command Prompt window or for a DOS program. Nearly all the settings are parameters you can tweak to help a recalcitrant DOS program run in the Windows environment. More often than not, adjusting these settings won't be necessary.
+<P>
+Earlier versions of Windows put the settings for DOS programs into separate <A NAME="ddpiffiles"><I>PIF files</I></A> (program information files), and some programs still use them. Windows XP stores the settings in DOS initialization files, in Command Prompt properties, and in program properties.
+<P>
+<TABLE><TR><TD VALIGN="TOP"><IMG SRC="../images/note.png" ALT="note" WIDTH=95 HEIGHT=29></TD>
+<TD VALIGN="TOP">Although you can edit a program's properties while the program is running, most changes do not take effect until you close the program and run it again. (The main exception is changing fonts.)
+
+</TD></TR></TABLE>
+<A NAME="2">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>DOS Initialization Files</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+Windows XP enables you to create a Config file to load drivers and an Autoexec file to run DOS commands before the program runs. Windows XP provides default versions of these DOS initialization files, called Config.nt and Autoexec.nt, which are located in the C:\Windows\System32 folder (assuming that Windows is installed in C:\Windows).
+<P>
+The Config file contains DOS VM configuration commands, as well as commands to load real-mode device drivers. Autoexec contains regular DOS commands to be run as soon as DOS has finished starting up. Although any DOS command is valid, the only command commonly used is SET, which defines environment variables used by some programs and drivers. Config.nt is read during the DOS startup process. Windows runs the commands from Autoexec.nt after processing Config.nt. These files can now be located anywhere, which improves DOS backward compatibility by allowing you to have several different versions of the files and selecting the one that best suits the program you want to run.
+<P>
+The Autoexec and Config files are text files, which you can edit with Notepad. Microsoft recommends that you leave the original Config.nt and Autoexec.nt unchanged, and create edited copies with other names, like Config.games and Autoexec.pcfile, for your various applications. See "<A HREF="../dos/5.htm#1">Installing and Configuring DOS Programs</A>" later in this chapter for how to create your own versions of the files for the DOS program you want to configure.
+<P>
+<TABLE><TR><TD VALIGN="TOP"><IMG SRC="../images/tip.png" ALT="tip" WIDTH=95 HEIGHT=29></TD>
+<TD VALIGN="TOP">Read the Autoexec.nt and Config.nt files to start learning about how they work. They are both copiously commented.
+
+</TD></TR></TABLE>
+<A NAME="3">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Setting Command Prompt Window Properties</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+When a Command Prompt window is open, you can see and set its settings by clicking the System Menu button in its upper-left corner and choosing Properties. The settings on the various tabs of the <A HREF="../dos/4.htm#1">Command Prompt Properties dialog box</A>, shown in Figure 39-2, control the appearance and some operational aspects of a DOS program. Table 39-1 lists the settings by tab (left to right).
+<TABLE BORDER=2><TR><TD ALIGN=CENTER>
+<IMG SRC="dos.cmdprops-options.png" WIDTH=376 HEIGHT=468 ALT="[figure]">
+</TD></TR><TR BGCOLOR="#00ffff"><TD><I>Figure 39-2:  The Options tab of the Command Prompt Properties dialog box</I></TD></TR></TABLE>
+<P>
+<TABLE><TR><TD VALIGN="TOP"><IMG SRC="../images/note.png" ALT="note" WIDTH=95 HEIGHT=29></TD>
+<TD VALIGN="TOP">Depending on whether you start the Command Prompt from the Start menu (by choosing Start | All Programs | Accessories | Command Prompt) or from the Run command (by choosing Start | Run, typing <B>cmd</B>, and pressing E<SMALL>NTER</SMALL>), you see a different Properties dialog box. Changing the settings for one does not affect the other.
+</TD></TR></TABLE>
+<BLOCKQUOTE><TABLE BORDER=2><TR><TD>
+<TABLE>
+<TR>
+<TD>
+<B>Tab</B>
+</TD>
+<TD>
+<B>Setting</B>
+</TD>
+<TD>
+<B>Description</B>
+</TD>
+</TR>
+<TR>
+<TD>
+Options
+</TD>
+<TD>
+Cursor Size
+</TD>
+<TD>
+Specifies the size of the cursor, the flashing marker that draws attention to where your typing will appear. Small appears as a line. Medium appears as a thick line. Large is a block.
+</TD>
+</TR>
+<TR>
+<TD>
+Options
+</TD>
+<TD>
+Command History Buffer Size, Number of Buffers, Discard Old Duplicates
+</TD>
+<TD>
+Every time you type a command, Windows stores it in a buffer. Use the U<SMALL>P</SMALL>-A<SMALL>RROW</SMALL> and D<SMALL>OWN</SMALL>-A<SMALL>RROW</SMALL> keys on your keyboard to cycle through commands. The Buffer Size setting specifies the number of command lines stored. Number of Buffers controls how many different Command Prompt windows have buffers simultaneously. Discard Old Duplicates deletes duplicate commands from the buffer.</TD>
+</TR>
+<TR>
+<TD>
+Options
+</TD>
+<TD>
+Display Options
+</TD>
+<TD>
+Specifies the default window size: Windowed or Full Screen.
+</TD>
+</TR>
+<TR>
+<TD>
+Options
+</TD>
+<TD>
+Edit Options
+</TD>
+<TD>
+Selects either QuickEdit mode (in which you use the mouse pointer to select text and move the cursor) or Insert mode (in which you can place additional text wherever the cursor is instead of overwriting what's already there).
+</TD>
+</TR>
+<TR>
+<TD>
+Font
+</TD>
+<TD>
+Size
+</TD>
+<TD>
+Specifies the font size in pixels (dots).
+</TD>
+</TR>
+<TR>
+<TD>
+Font
+</TD>
+<TD>
+Font
+</TD>
+<TD>
+Specifies the font.
+</TD>
+</TR>
+<TR>
+<TD>
+Font
+</TD>
+<TD>
+Bold Fonts
+</TD>
+<TD>
+Displays the selected font in boldface.
+</TD>
+</TR>
+<TR>
+<TD>
+Layout
+</TD>
+<TD>
+Screen Buffer Size
+</TD>
+<TD>
+Specifies the virtual size of the window.
+</TD>
+</TR>
+<TR>
+<TD>
+Layout
+</TD>
+<TD>
+Window Size
+</TD>
+<TD>
+Specifies the physical size of the Command Prompt window. If the Screen Buffer Size is larger, scrollbars appear to allow you access to the information that doesn't fit in the window.
+</TD>
+</TR>
+<TR>
+<TD>
+Layout
+</TD>
+<TD>
+Window Position
+</TD>
+<TD>
+Specifies the position of the window on the screen. Let System Position Window enables Windows to choose the position. If you want the Command Prompt window to appear in the same place every time it opens, deselect the check box and set the coordinates of the upper-left corner of the window; 0 indicates the left or top edge of the screen. The limits are determined by what resolution you have your display set to.
+</TD>
+</TR>
+<TR>
+<TD>
+Colors
+</TD>
+<TD>
+Screen Text, Screen Background, Popup Text, Popup Background
+</TD>
+<TD>
+Allows you to select which settings appear in the Selected Color Values section and the color bar.
+</TD>
+</TR>
+<TR>
+<TD>
+Colors
+</TD>
+<TD>
+Select Color Values
+</TD>
+<TD>
+Specifies the color of the selected item (see the previous setting). The row of colors below this setting do the same thing.
+</TD>
+</TR>
+</TABLE></BLOCKQUOTE>
+<TR BGCOLOR="#00ffff"><TD>
+<I>Table 1:  Settings in the Command Prompt Properties Dialog Box</I>
+</TD></TR></TABLE></BLOCKQUOTE>
+<A NAME="4">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squaregreen6x6.png" HEIGHT=6 WIDTH=6></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Choosing DOS Program Fonts</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+On the Font tab, shown in Figure 39-3, the Window Preview box shows you how big your window will be relative to the Windows screen, and the Selected Font box shows what the text in the window will look like. First, choose a font from the Font box, then choose from the sizes that are available for that font.
+<TABLE BORDER=2><TR><TD ALIGN=CENTER>
+<IMG SRC="dos.cmdprops-font.png" WIDTH=376 HEIGHT=468 ALT="[figure]">
+</TD></TR><TR BGCOLOR="#00ffff"><TD><I>Figure 39-3:  Setting the font for the Command Prompt window</I></TD></TR></TABLE>
+<A NAME="5">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squaregreen6x6.png" HEIGHT=6 WIDTH=6></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Controlling DOS Program Window Settings</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+On the Layout tab, shown in Figure 39-4, you can set the virtual and actual sizes of the window. The virtual size (set using the Screen Buffer Size setting) controls the amount of text that Windows stores for the window. The Window Size setting controls the actual size of the widow on the screen. If the Screen Buffer Size is larger than the Windows Size (the default is for it to be several times taller, but the same width), you can scroll up and down the buffer using the window's scrollbars.
+<TABLE BORDER=2><TR><TD ALIGN=CENTER>
+<IMG SRC="dos.cmdprops-layout.png" WIDTH=376 HEIGHT=468 ALT="[figure]">
+</TD></TR><TR BGCOLOR="#00ffff"><TD><I>Figure 39-4:  Specifying the Command Prompt window size and position</I></TD></TR></TABLE>
+<A NAME="6">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squaregreen6x6.png" HEIGHT=6 WIDTH=6></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Setting DOS Program Colors</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+The Colors tab of the <A HREF="../dos/4.htm#1">Command Prompt Properties dialog box</A>, shown in Figure 39-5, controls the foreground and background colors of the text in the window. Select the item for which you want to set the color (Screen Text, Screen Background, Popup Text, or Popup Background) and then select a color for it from the bar of colors running across the middle of the dialog box. Your choices appear in the preview panes below. If you don't like the colors listed, you can adjust the Selected Color Values boxes to get the colors you like.
+<TABLE BORDER=2><TR><TD ALIGN=CENTER>
+<IMG SRC="dos.cmdprops-colors.png" WIDTH=376 HEIGHT=468 ALT="[figure]">
+</TD></TR><TR BGCOLOR="#00ffff"><TD><I>Figure 39-5:  Setting the text and background colors</I></TD></TR></TABLE>
+<A NAME="7">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Setting Executable and Shortcut Properties</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+Additional options for DOS programs are set in the program's Properties dialog box. To set them, find either the executable (.exe or .com) file for the program or a shortcut to the executable file (you may need to choose Start | Search to find it). Many DOS applications, especially games, come with more than one executable file. Along with the executable file that runs the program, other executable files may uninstall or configure the program. Once you've located the executable file that runs the program (or a shortcut to it), right-click the file or shortcut and choose Properties to see its Properties dialog box. Figure 39-6 shows the Memory tab of the dialog box.
+<TABLE BORDER=2><TR><TD ALIGN=CENTER>
+<IMG SRC="dos.memory.png" WIDTH=367 HEIGHT=486 ALT="[figure]">
+</TD></TR><TR BGCOLOR="#00ffff"><TD><I>Figure 39-6:  The memory options for a DOS program</I></TD></TR></TABLE>
+<P>
+Table 39-2 lists settings in the dialog box, except for those on the Font tab, which is similar to the Font tab in the Command Prompt Properties dialog box, described in Table 39-1. The Properties dialog box for a shortcut also includes a Summary tab, which isn't used for configuring programs.
+<BLOCKQUOTE><TABLE BORDER=2><TR><TD>
+<TABLE>
+<TR>
+<TD>
+<B>Tab</B>
+</TD>
+<TD>
+<B>Setting</B>
+</TD>
+<TD>
+<B>Description</B>
+</TD>
+</TR>
+<TR>
+<TD>
+General
+</TD>
+<TD>
+Attributes: Read-only, Hidden, Archive
+</TD>
+<TD>
+Specifies the <A HREF="../exploring/3.htm#1">file attributes</A>.
+</TD>
+</TR>
+<TR>
+<TD>
+Program
+</TD>
+<TD>
+Cmd Line
+</TD>
+<TD>
+Specifies the <A HREF="../dos/1.htm#1">command line</A> that you would type at the command prompt. The first thing on the command line must be the filename of the program. Many programs let you put parameters, switches, and filenames in the command line as well. If you type a space followed by a question mark in this box, Windows prompts you for command-line data when you start the program and replaces the question mark with the data you type.
+</TD>
+</TR>
+<TR>
+<TD>
+Program
+</TD>
+<TD>
+Working
+</TD>
+<TD>
+Specifies the name of the folder to use as the program's <A NAME="ddworkingfolder"><I>working folder</I></A>. The program reads and writes its files from this folder unless the program specifically names a different folder.
+</TD>
+</TR>
+<TR>
+<TD>
+Program
+</TD>
+<TD>
+Batch File
+</TD>
+<TD>
+Specifies the name of a DOS <A HREF="../dos/3.htm#11">batch file</A> to run before the program starts. This is rarely used.
+</TD>
+</TR>
+<TR>
+<TD>
+Program
+</TD>
+<TD>
+Shortcut Key
+</TD>
+<TD>
+Specifies the <A HREF="../running/2.htm#7">key combination</A> to start or activate the program. You can specify the C<SMALL>TRL</SMALL> or A<SMALL>LT</SMALL> key in combination with another key, or a plain function key. Any combination you specify as a shortcut can no longer be used as input by any other program running on your computer, so choose a combination that isn't commonly used.</TD>
+</TR>
+<TR>
+<TD>
+Program
+</TD>
+<TD>
+Run
+</TD>
+<TD>
+Specifies whether Windows starts the program in a <A HREF="../running/3.htm#1">normal, minimized, or maximized window</A>. Most DOS programs can't handle a maximized window.
+</TD>
+</TR>
+<TR>
+<TD>
+Program
+</TD>
+<TD>
+Close on Exit
+</TD>
+<TD>
+Specifies whether Windows closes the window in which the program appears when the program exits.
+</TD>
+</TR>
+<TR>
+<TD>
+Memory
+</TD>
+<TD>
+Conventional Memory: Total, Initial Environment
+</TD>
+<TD>
+Specifies the amount of memory (RAM) in kilobytes available to the program, up to DOS's limit of 640KB. For programs run in Windows 95 compatibility mode, the Initial Environment setting specifies the amount of memory reserved for the command-interpreter part of DOS itself. For most programs, leave these set to Auto.
+</TD>
+</TR>
+<TR>
+<TD>
+Memory
+</TD>
+<TD>
+Protected
+</TD>
+<TD>
+Protects Windows' system memory from accidental modification by the DOS program and can keep a DOS program failure from crashing Windows. We recommend selecting this check box.
+</TD>
+</TR>
+<TR>
+<TD>
+Memory
+</TD>
+<TD>
+Expanded (EMS) Memory, Extended (XMS) Memory, MS-DOS Protected-Mode (DPMI) Memory
+</TD>
+<TD>
+Specifies the amount of memory in kilobytes that Windows allocates as expanded, extended, or DPMI memory (three systems that DOS programs use to access more than 640KB).
+</TD>
+</TR>
+<TR>
+<TD>
+Screen
+</TD>
+<TD>
+Usage: Full-screen, Window, Initial Size
+</TD>
+<TD>
+Specifies whether the program starts full-screen or in a window. For some programs, you can select 25, 43, or 50 text lines on the screen by setting the Initial Size box. (If you select more than 25, be sure that the program can handle the size you select.) The program may override these settings.
+</TD>
+</TR>
+<TR>
+<TD>
+Screen
+</TD>
+<TD>
+Restore Settings at Startup
+</TD>
+<TD>
+Specifies whether Windows remembers changes that the program makes to the screen setup from one run of the program to another. 
+</TD>
+</TR>
+<TR>
+<TD>
+Screen
+</TD>
+<TD>
+Fast ROM Emulation
+</TD>
+<TD>
+Specifies whether the display driver provides video functions. Select this check box unless the screen display looks wrong.
+</TD>
+</TR>
+<TR>
+<TD>
+Screen
+</TD>
+<TD>
+Dynamic Memory Allocation
+</TD>
+<TD>
+Maximizes the amount of memory available to other programs while this program is running.
+</TD>
+</TR>
+<TR>
+<TD>
+Misc
+</TD>
+<TD>
+Allow Screen Saver
+</TD>
+<TD>
+Enables the Windows screen saver, even when this program is running.
+</TD>
+</TR>
+<TR>
+<TD>
+Misc
+</TD>
+<TD>
+QuickEdit
+</TD>
+<TD>
+Causes any use of the mouse to mark text as though you had chosen the Mark command from the System Menu first. Check this box if your program makes no use of the mouse (though often Windows is able to automatically detect if the program can use a mouse or not and will disable the option appropriately).
+</TD>
+</TR>
+<TR>
+<TD>
+Misc
+</TD>
+<TD>
+Exclusive Mode
+</TD>
+<TD>
+Dedicates the mouse to this program. Not recommended, since it makes the mouse unusable as the Windows pointer until the program exits. If you select it, switch the Command Prompt window to full-screen mode instead (by pressing A<SMALL>LT</SMALL>-E<SMALL>NTER</SMALL>), which makes the Windows mouse pointer vanish.</TD>
+</TR>
+<TR>
+<TD>
+Misc
+</TD>
+<TD>
+Always Suspend
+</TD>
+<TD>
+Suspends this program whenever it's not the active window. Leave this box checked, unless the program does useful background activity.
+</TD>
+</TR>
+<TR>
+<TD>
+Misc
+</TD>
+<TD>
+Warn If Still Active
+</TD>
+<TD>
+Specifies that Windows pop up a warning box if you try to close this program before it exits.
+</TD>
+</TR>
+<TR>
+<TD>
+Misc
+</TD>
+<TD>
+Idle Sensitivity
+</TD>
+<TD>
+Specifies that Windows attempt to detect when an active DOS program is idle and waiting for keyboard input, so that Windows can give more processor time to other applications. High sensitivity makes Windows give more time to other applications. Leave this alone unless keyboard response to the program is sluggish, in which case, make the sensitivity lower.
+</TD>
+</TR>
+<TR>
+<TD>
+Misc
+</TD>
+<TD>
+Fast Pasting
+</TD>
+<TD>
+Uses an optimized technique for pasting text into a Command Prompt window that fails with a few programs. If pasting doesn't work, turn this off.
+</TD>
+</TR>
+<TR>
+<TD>
+Misc
+</TD>
+<TD>
+Windows Shortcut Keys
+</TD>
+<TD>
+Specifies which of the key combinations listed in this box perform Windows functions, even when Windows is running a DOS program. If your DOS application needs to use any of these combinations itself, uncheck the ones it needs.
+</TD>
+</TR>
+<TR>
+<TD>
+Compatibility
+</TD>
+<TD>
+Run This Program in Compatibility Mode For
+</TD>
+<TD>
+Specifies whether to use compatibility mode. When selected, choose from Windows 95, Windows 98, Windows NT 4, and Windows 2000. 
+</TD>
+</TR>
+<TR>
+<TD>
+Compatibility
+</TD>
+<TD>
+Run in 256 Colors
+</TD>
+<TD>
+Sets the window to use 8-bit color.
+</TD>
+</TR>
+<TR>
+<TD>
+Compatibility
+</TD>
+<TD>
+Run in 640 0xd7 480 Screen Resolution
+</TD>
+<TD>
+Sets the window to use 640 0xd7 480 (VGA) screen resolution.
+</TD>
+</TR>
+<TR>
+<TD>
+Compatibility
+</TD>
+<TD>
+Disable Visual Themes
+</TD>
+<TD>
+Disables the <A HREF="../desktop/2.htm#1">Windows XP desktop theme</A> for the window.
+</TD>
+</TR>
+</TABLE></BLOCKQUOTE>
+<TR BGCOLOR="#00ffff"><TD>
+<I>Table 2:  Settings in the Properties Dialog Box for a Program or Shortcut</I>
+</TD></TR></TABLE></BLOCKQUOTE>
+<A NAME="8">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squaregreen6x6.png" HEIGHT=6 WIDTH=6></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Controlling the Amount of Memory the Program Can Use</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+The Memory tab of the program's Properties dialog box (shown in Figure 39-6) controls how much memory is available to a program using each of the DOS addressing schemes. In nearly all cases, Windows automatically allocates an appropriate amount of each kind of memory to the program when it runs the program. A few programs fail if given as much memory as Windows makes available (at the time many DOS programs were written, most people never imagined that anyone would ever put as much as 4MB in a single PC). If this is a problem, determine the kind of memory that the program uses--expanded (EMS), extended (XMS), or MS-DOS Protected-Mode (DPMI)--and try limiting it to 8,192KB (the program's documentation or help files may specify what types of memory the program can use and the maximum amount of memory that the program can handle).
+<P>
+<TABLE><TR><TD VALIGN="TOP"><IMG SRC="../images/tip.png" ALT="tip" WIDTH=95 HEIGHT=29></TD>
+<TD VALIGN="TOP">Be sure to select the Protected check box, to prevent the DOS program from inadvertently changing the part of memory used by Windows itself.
+
+</TD></TR></TABLE>
+<A NAME="9">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squaregreen6x6.png" HEIGHT=6 WIDTH=6></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Setting the Compatibility Mode</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+New to Windows XP is the <A HREF="../running/8.htm#1">compatibility mode</A>, which attempts to present an environment for software that expects to be run in a particular version of Windows. For example, Ignition (the classic racing game from Unique Development Studios) refuses to install on Windows XP without the Windows 95 compatibility mode. You set the program's compatibility mode on the Compatibility tab of the Properties dialog box for the executable file or shortcut, as shown in Figure 39-7.
+<TABLE BORDER=2><TR><TD ALIGN=CENTER>
+<IMG SRC="dos.compat.png" WIDTH=367 HEIGHT=486 ALT="[figure]">
+</TD></TR><TR BGCOLOR="#00ffff"><TD><I>Figure 39-7:  Configuring a program to run in compatibility mode</I></TD></TR></TABLE>
+<P>
+<TABLE><TR><TD VALIGN="TOP"><IMG SRC="../images/note.png" ALT="note" WIDTH=95 HEIGHT=29></TD>
+<TD VALIGN="TOP">You often must set the compatibility mode of both the installation program and the actual program for them to work properly. First, set the compatibility mode for the installation program and run it. Once the program is installed, find the installed executable program and give it the same compatibility mode. If it doesn't work the first time, try another mode.
+
+</TD></TR></TABLE>
+<P><TABLE BORDER=2 CELLPADDING=10><TR>
+<TD BGCOLOR="#00ffff" WIDTH=2></TD><TD>
+<A NAME="10">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>DOS Programs vs. the Luna Desktop Theme</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+Applications written specifically for Windows XP use something called a <A NAME="ddmanifest"><I>manifest</I></A> to work with the Luna (Windows XP) theme. A manifest is a file that describes how the application is to appear while using the Luna interface. Most recent applications that comply closely with the Win32 API (Application Programming Interface--a set of tools that define how applications work with Windows) typically work fine without a manifest, but some do not. If an application behaves unexpectedly or does not appear correctly, try selecting the Disable Visual Themes check box on the Compatibility tab of the Properties dialog box for the program. For example, Macromedia's Dreamweaver 4.0 Web site authoring program has custom toolbars that do not work well with Luna (some buttons are covered by the swoopy new interface).
+</TD></TR></TABLE>
+<P>
+<A HREF="3.htm"  OnMouseOver='whomp(prevb, "sprev");' OnMouseOut='whomp(prevb, "wprev");'
+ title="Previous Section"><IMG NAME=prevb SRC="../images/wprev.png" ALT="Previous" HEIGHT=20 WIDTH=82 BORDER=0></A><!--
+--><A HREF="index.htm" OnMouseOver='whomp(chapb, "schap");' OnMouseOut='whomp(chapb, "wchap");'
+title="Chapter Overview"><IMG SRC="../images/wchap.png" ALT="Chapter" NAME=chapb HEIGHT=20 WIDTH=100 BORDER=0></A><A
+HREF="../index.htm" OnMouseOver='whomp(tocb, "sbook");' OnMouseOut='whomp(tocb, "wbook");' 
+title="Table of Contents"><IMG SRC="../images/wbook.png" ALT="Contents" NAME=tocb HEIGHT=20 WIDTH=94 BORDER=0></A><A
+HREF="../glossary/index.htm" OnMouseOver='whomp(glosb, "sglos");' OnMouseOut='whomp(glosb, "wglos");' 
+title="Glossary"><IMG SRC="../images/wglos.png" ALT="Glossary" NAME=glosb HEIGHT=20 WIDTH=94 BORDER=0></A><!--
+--><A HREF="5.htm"  OnMouseOver='whomp(nextb, "snext");' OnMouseOut='whomp(nextb, "wnext");'
+ title="Next Section"><IMG NAME=nextb SRC="../images/wnext.png" ALT="Next" HEIGHT=20 WIDTH=82 BORDER=0></A>
+<BR>
+</BLOCKQUOTE>
+</BODY>
+</HTML>

@@ -1,0 +1,16 @@
+<p align="center">
+<applet code="ETextMenu.class" width="200" height="200" align="center">
+<param name="fgcolor" value="000000">
+<param name="bgcolor_sel" value="000000">
+<param name="fgcolor_sel" value="ff0000">
+<param name="title_bgcolor" value="00ff00">
+<param name="title_fgcolor" value="000000">
+<param name="EmptyColor" value="000000">
+<param name="style" value="3">
+<param name="frequency" value="2">
+<param name="amplitude" value="20">
+<param name="bgcolor" value="#000080">
+<param name="repaint_delay" value="100">
+<param name="items" value="Startseite {haupt.html}|Info about this site  	{http://}|info about this page	{http://}|E-Mail Me   {http://}|%Java Applets [With source code!]{http://}|Purchasing Information [Buy my Applets!] {http://}|3D Plane [This is a test link] {http://}|Active Scroll [This is a test link] {http://}|Active Menu [This is a test link] {http://}|Ad Banner [This is a test link] {http://}|Agress Text [This is a test link] {http://}|%Enjoy your stay! [Come back soon!]{http://}| ">
+</applet>
+</p>

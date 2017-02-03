@@ -1,0 +1,229 @@
+<!doctype html public "-//IETF//DTD HTML//EN">
+<HTML>
+<HEAD>
+<TITLE>Windows XP: The Complete Reference: Running DOS Programs and Commands</TITLE>
+<META NAME="GENERATOR" CONTENT="Web-O-Matic Deluxe 4.1">
+<META NAME="AUTHOR" CONTENT="John R. Levine, Margaret Levine Young">
+<META NAME="COPYRIGHT" CONTENTS="Copyright 2001 by The McGraw-Hill Companies. All rights reserved.">
+</HEAD>
+<BODY BACKGROUND="../images/background.png">
+<BLOCKQUOTE>
+<SCRIPT LANGUAGE="JavaScript">
+function whomp(i, file)
+{
+	i.src = "../images/" + file + ".png";
+}
+</SCRIPT>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarered3x3.png" HEIGHT=3 WIDTH=3></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=2>
+Chapter 39: Running DOS Programs and Commands
+</FONT></TD>
+</TR>
+</TABLE>
+<BR>
+<A HREF="2.htm"  OnMouseOver='whomp(prev, "sprev");' OnMouseOut='whomp(prev, "wprev");'
+ title="Previous Section"><IMG NAME=prev SRC="../images/wprev.png" ALT="Previous" HEIGHT=20 WIDTH=82 BORDER=0></A><!--
+--><A HREF="index.htm" OnMouseOver='whomp(chap, "schap");' OnMouseOut='whomp(chap, "wchap");'
+title="Chapter Overview"><IMG SRC="../images/wchap.png" ALT="Chapter" NAME=chap HEIGHT=20 WIDTH=100 BORDER=0></A><A
+HREF="../index.htm" OnMouseOver='whomp(toc, "sbook");' OnMouseOut='whomp(toc, "wbook");' 
+title="Table of Contents"><IMG SRC="../images/wbook.png" ALT="Contents" NAME=toc HEIGHT=20 WIDTH=94 BORDER=0></A><A
+HREF="../glossary/index.htm" OnMouseOver='whomp(glos, "sglos");' OnMouseOut='whomp(glos, "wglos");' 
+title="Glossary"><IMG SRC="../images/wglos.png" ALT="Glossary" NAME=glos HEIGHT=20 WIDTH=94 BORDER=0></A><!--
+--><A HREF="4.htm"  OnMouseOver='whomp(next, "snext");' OnMouseOut='whomp(next, "wnext");'
+ title="Next Section"><IMG NAME=next SRC="../images/wnext.png" ALT="Next" HEIGHT=20 WIDTH=82 BORDER=0></A>
+<BR>
+<A NAME="1">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarered10x10.png" HEIGHT=10 WIDTH=10></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=4><B>Running DOS Programs</B></FONT>
+</TD>
+</TR>
+</TABLE></A>
+<P>
+Once you <A HREF="../dos/3.htm#2">run</A> a DOS program, you can do your work and then <A HREF="../dos/3.htm#3">exit</A>. You can also <A HREF="../dos/3.htm#4">adjust the way it looks on the screen</A>, <A HREF="../dos/3.htm#6">copy-and-paste</A> material to and from the Windows Clipboard, <A HREF="../dos/3.htm#8">print</A>, and <A HREF="../dos/3.htm#11">run batch files</A>.
+<A NAME="2">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Starting DOS Programs</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+You run a DOS program the same way you run a Windows program: by clicking or double-clicking its icon or filename in the Windows Explorer window or the Start menu, or by choosing Start | Run and typing its name into the Run dialog box. For some DOS commands, you can type arguments or switches on the command line after the program name, separated by spaces. An <A NAME="ddargument"><I>argument</I></A> provides additional information (for example, the DOS COPY command accepts arguments that tell it what files to copy). A <A NAME="ddswitch"><I>switch</I></A> specifies a program option and usually consists of a slash (/) and a letter.
+<P>
+You can also type DOS commands at a DOS prompt by selecting Start | All Programs | Accessories | Command Prompt (or by choosing Start | Run and typing <B>cmd</B>). You see the <A HREF="../running/2.htm#9">Command Prompt window</A> (Figure 39-1). In this window, you can type DOS commands--such as DIR, CHDIR, MKDIR, and DELETE--as well as run programs. Just type the command (possibly followed by arguments or switches) and press E<SMALL>NTER</SMALL>.<P>
+<TABLE><TR><TD VALIGN="TOP"><IMG SRC="../images/note.png" ALT="note" WIDTH=95 HEIGHT=29></TD>
+<TD VALIGN="TOP">Windows XP comes with two programs that display a Command Prompt window: Command.exe and Cmd.exe. Command.exe displays a Command Prompt window that cannot handle long filenames (that is, filenames longer than eight characters and extensions longer than three characters). Cmd.exe's window handles filenames the same way that Windows does. There's no reason to use Command.exe rather than Cmd.exe.
+
+</TD></TR></TABLE>
+<P>
+If you run a specific program to open the window, the program name appears in the title bar. If you choose the Start | All Programs | Accessories | Command Prompt command, the window is named Command Prompt.
+<P>
+While the vast majority of DOS commands work, not all do, and most will not operate as expected. For a mostly complete list of commands accepted by the Command Prompt, type <B>help </B>and press E<SMALL>NTER</SMALL>.<P>
+To get help with a particular DOS command, type the command followed by <B>/?</B>. For example, type <B>copy /?</B> to get help with the DOS COPY command. To stop the help text from scrolling off the top of the Command Prompt window, add <B>| more</B> to the end of the command line, like this:
+<P><PRE>
+copy /? | more
+</PRE>
+<P>
+<TABLE><TR><TD VALIGN="TOP"><IMG SRC="../images/tip.png" ALT="tip" WIDTH=95 HEIGHT=29></TD>
+<TD VALIGN="TOP">If you can open a file by clicking or double-clicking it in Windows Explorer, you can open the file from the DOS prompt. Type <B>start</B> followed by a space and the pathname (address) of the file. If the pathname contains spaces, enclose it in double-quotation marks. The Start program opens the file (or folder) using the Windows <A HREF="../installing/3.htm#1">file association</A>.
+
+</TD></TR></TABLE>
+<A NAME="3">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Exiting DOS Programs</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+Every DOS program has its own command to exit. Some use a function key, some use a text command (like "quit" or "exit"), and some use a menu command starting with a slash or another character. You can also force Windows to close a Command Prompt window by clicking the Close button while the program is running. Windows may warn you that closing the program will lose unsaved information, but if you click End Now, Windows stops the program and closes the window anyway.
+<A NAME="4">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Adjusting the Screen</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+Windows normally starts each Command Prompt window as a 25 0xd7 80 character window, choosing a font to make the window fit your screen. You can select a different font from the Command Prompt Properties dialog box's <A HREF="../dos/4.htm#4">Font tab</A>.
+<P>
+To switch between running in a window and using the full screen, press A<SMALL>LT</SMALL>-E<SMALL>NTER</SMALL>. Once in a full screen, A<SMALL>LT</SMALL>-E<SMALL>NTER</SMALL> is the only way, short of exiting and restarting the program, to return the program to running in a window.<A NAME="5">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Using the Mouse and Clipboard</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+Early versions of DOS provided no mouse support at all. Even in later versions, DOS provided only low-level mouse support, leaving it entirely up to each application which (if any) mouse features to provide. As a result, most DOS programs provide no mouse support, so the primary use of the mouse is to cut-and-paste material to the <A HREF="../sharedata/1.htm#1">Windows Clipboard</A>.
+<A NAME="6">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squaregreen6x6.png" HEIGHT=6 WIDTH=6></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Using the Windows Clipboard</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+You can copy material from a Command Prompt window to the Clipboard. To do so, first click the System Menu button (with the C:\ icon) in the upper-left corner of the window and select Edit | Mark from the System menu that appears. Then use the mouse to highlight the area to copy and press E<SMALL>NTER</SMALL> to copy the selected area to the Clipboard.<P>
+<TABLE><TR><TD VALIGN="TOP"><IMG SRC="../images/note.png" ALT="note" WIDTH=95 HEIGHT=29></TD>
+<TD VALIGN="TOP">DOS programs can place the screen (or the virtual screen emulated in a Command Prompt window) into either <A NAME="ddtextmode"><I>text mode</I></A> (which can display only text) or <A NAME="ddgraphicsmode"><I>graphics mode</I></A> (which can display any pattern of dots, including text). Windows copies the marked area as text if the screen is in text mode and as a bitmap if the screen is in graphics mode. Some programs, such as word processors, often use graphics mode to display text so that they can show font changes. Tell the DOS program to switch back to text mode before copying, to get text on the Clipboard.
+
+</TD></TR></TABLE>
+<P>
+Windows lets you paste text from the Clipboard into DOS applications, too. The text is entered as though you had typed it on the keyboard. To paste, select Edit | Paste from the System menu.
+<A NAME="7">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squaregreen6x6.png" HEIGHT=6 WIDTH=6></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Using the Mouse in DOS Programs</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+In those DOS programs that do provide mouse support, using the mouse in a Command Prompt window can be difficult. Since DOS provides no high-level mouse support, each application displays its own mouse pointer. In some <A HREF="../dos/2.htm#1">Windows-aware</A> applications, the DOS mouse pointer is synchronized with the Windows mouse pointer, but more often than not, it isn't. In the latter case, the best solution usually is to press A<SMALL>LT</SMALL>-E<SMALL>NTER</SMALL> to switch to full-screen mode, so there's no Windows mouse pointer at all.<A NAME="8">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Printing from DOS Programs</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+Windows provides very limited support for printing from DOS programs. It offers a pass-through scheme that receives output from DOS programs and sends it directly to the printer. DOS programs have no access to Windows printer drivers, so each DOS application must have its own driver for any printer that it prints to.
+<P>
+Windows intercepts the DOS output and <A HREF="../printing/2.htm#1">spools</A> the output as it does printer output from Windows applications (that is, Windows stores the output and then sends it to the printer). This provides more flexibility in printer management and avoids the possibility that a DOS program will interfere with an active print job from another program.
+<A NAME="9">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squaregreen6x6.png" HEIGHT=6 WIDTH=6></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Determining the Printer Port</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+DOS programs identify your printer according to the port to which the printer is attached (LPT1, LPT2, LPT3, COM1, COM2, COM3, or COM4). To find out what port a printer is attached to, follow these steps:
+<OL>
+<LI  VALUE=1>
+Select Start | Printers and Faxes (or Start | Control Panel | Printers and Other Hardware | Printers and Faxes) to open the <A HREF="../printing/7.htm#1">Printers and Faxes window</A>.
+<LI  VALUE=2>
+Right-click the desired printer and select Properties to open the printer's Properties dialog box.
+<LI  VALUE=3>
+Click the Ports tab to see a list of the ports, and look down the list for the first one whose check box is selected. If the dialog box has no Ports tab, look on all the tabs--the contents of the dialog box depend on the printer driver.
+<LI  VALUE=4>
+Click OK to close the printer Properties dialog box.
+</OL>
+<A NAME="10">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squaregreen6x6.png" HEIGHT=6 WIDTH=6></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Printing to a Network Printer</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+DOS programs can also print to network printers. Windows captures the output from a simulated printer port and then spools the printer output through the network in the same way that printer output is spooled from Windows programs.
+<P>
+<TABLE><TR><TD VALIGN="TOP"><IMG SRC="../images/caution.png" ALT="caution" WIDTH=95 HEIGHT=29></TD>
+<TD VALIGN="TOP">All printers are not created equal. Their capabilities depend both on the printer hardware and on the printer driver software. You may notice anywhere from subtle to enormous differences between the printer-related dialog boxes you see in this book and those you see on your computer. If you don't see a feature we mention here, your printer probably doesn't have it. Check your printer's manual to prevent yourself from wasting a lot of time on something that will simply not work.
+
+</TD></TR></TABLE>
+<P>
+To print from a DOS program to a network printer, follow these steps:
+<OL>
+<LI  VALUE=1>
+Determine the pathname of the printer by displaying its Properties dialog box (as described in the previous section). If you see a Ports tab, look on that tab at the bottom of the list of ports for the pathname (you may need to drag the Port column divider to the right to make the entire name visible). The pathname is in the format \\<I>computername</I>\<I>printername</I>, where <I>computername</I> is the <A HREF="../peer2peer/1.htm#4">computer's name on the LAN</A>, and <I>printername</I> is the printer's share name.
+<LI  VALUE=2>
+Close the printer's Properties dialog box.
+<LI  VALUE=3>
+Choose Start | All Programs | Accessories | Command Prompt to open a <A HREF="../dos/2.htm#1">Command Prompt window</A>.
+<LI  VALUE=4>
+Type the following command and press E<SMALL>NTER</SMALL> key. Replace <I>n</I> with the LPT number you want to use (if you already have a printer on LPT1, use LPT2), and \\<I>computername</I>\<I>printername</I> with the printer's pathname.</OL>
+<P><PRE>
+net use lpt<I>n</I>: \\<I>computername</I>\<I>printername</I> /persistent:yes
+</PRE>
+<OL>
+<LI  VALUE=5>
+Now you can print from your DOS program to the LPT port you specified. When you are finished printing, type this command in the Command Prompt window:
+</OL>
+<P><PRE>
+net use lpt<I>n</I>: /delete
+</PRE>
+<P>
+When you print from a DOS program to a spooled printer, either local or networked, Windows has no reliable way to tell when the DOS program is finished printing. If your program doesn't print anything for several seconds, Windows assumes that it's finished. This occasionally causes problems when an application prints part of a report, computes for a while, and then resumes printing, because Windows can interpret the pause in printing as the end of the print job. If this is a problem, use a locally connected printer and do <I>not</I> configure the printer to spool DOS print jobs.
+<A NAME="11">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Running Batch Files</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+DOS provides <A NAME="ddbatchfiles"><I>batch files</I></A>, which are text files that contain a sequence of commands to be run as though they were typed at the DOS prompt. Batch files have the filename extension .bat. Windows treats a batch file as a DOS program and opens a Command Prompt window to run the batch file and any programs that the batch file runs. Since the Windows version of DOS lets you run any DOS or Windows program from the DOS prompt, you can use batch files as a low-budget scripting language, listing a sequence of programs you want to run.
+<P>
+For example, you can use a batch file as quick-and-dirty backup scheme for making copies of a few files on a Zip or other removable disk. Write a batch file that copies the files from their current location to the Zip disk. Then use the Windows <A HREF="../running/7.htm#1">Scheduled Tasks</A> program to run the batch file every night, and remember to leave a Zip disk in your Zip drive.
+<P>
+<A HREF="2.htm"  OnMouseOver='whomp(prevb, "sprev");' OnMouseOut='whomp(prevb, "wprev");'
+ title="Previous Section"><IMG NAME=prevb SRC="../images/wprev.png" ALT="Previous" HEIGHT=20 WIDTH=82 BORDER=0></A><!--
+--><A HREF="index.htm" OnMouseOver='whomp(chapb, "schap");' OnMouseOut='whomp(chapb, "wchap");'
+title="Chapter Overview"><IMG SRC="../images/wchap.png" ALT="Chapter" NAME=chapb HEIGHT=20 WIDTH=100 BORDER=0></A><A
+HREF="../index.htm" OnMouseOver='whomp(tocb, "sbook");' OnMouseOut='whomp(tocb, "wbook");' 
+title="Table of Contents"><IMG SRC="../images/wbook.png" ALT="Contents" NAME=tocb HEIGHT=20 WIDTH=94 BORDER=0></A><A
+HREF="../glossary/index.htm" OnMouseOver='whomp(glosb, "sglos");' OnMouseOut='whomp(glosb, "wglos");' 
+title="Glossary"><IMG SRC="../images/wglos.png" ALT="Glossary" NAME=glosb HEIGHT=20 WIDTH=94 BORDER=0></A><!--
+--><A HREF="4.htm"  OnMouseOver='whomp(nextb, "snext");' OnMouseOut='whomp(nextb, "wnext");'
+ title="Next Section"><IMG NAME=nextb SRC="../images/wnext.png" ALT="Next" HEIGHT=20 WIDTH=82 BORDER=0></A>
+<BR>
+</BLOCKQUOTE>
+</BODY>
+</HTML>

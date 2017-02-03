@@ -1,0 +1,129 @@
+<!doctype html public "-//IETF//DTD HTML//EN">
+<HTML>
+<HEAD>
+<TITLE>Windows XP: The Complete Reference: Formatting and Partitioning Disks</TITLE>
+<META NAME="GENERATOR" CONTENT="Web-O-Matic Deluxe 4.1">
+<META NAME="AUTHOR" CONTENT="John R. Levine, Margaret Levine Young">
+<META NAME="COPYRIGHT" CONTENTS="Copyright 2001 by The McGraw-Hill Companies. All rights reserved.">
+</HEAD>
+<BODY BACKGROUND="../images/background.png">
+<BLOCKQUOTE>
+<SCRIPT LANGUAGE="JavaScript">
+function whomp(i, file)
+{
+	i.src = "../images/" + file + ".png";
+}
+</SCRIPT>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarered3x3.png" HEIGHT=3 WIDTH=3></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=2>
+Chapter 32: Formatting and Partitioning Disks
+</FONT></TD>
+</TR>
+</TABLE>
+<BR>
+<A HREF="3.htm"  OnMouseOver='whomp(prev, "sprev");' OnMouseOut='whomp(prev, "wprev");'
+ title="Previous Section"><IMG NAME=prev SRC="../images/wprev.png" ALT="Previous" HEIGHT=20 WIDTH=82 BORDER=0></A><!--
+--><A HREF="index.htm" OnMouseOver='whomp(chap, "schap");' OnMouseOut='whomp(chap, "wchap");'
+title="Chapter Overview"><IMG SRC="../images/wchap.png" ALT="Chapter" NAME=chap HEIGHT=20 WIDTH=100 BORDER=0></A><A
+HREF="../index.htm" OnMouseOver='whomp(toc, "sbook");' OnMouseOut='whomp(toc, "wbook");' 
+title="Table of Contents"><IMG SRC="../images/wbook.png" ALT="Contents" NAME=toc HEIGHT=20 WIDTH=94 BORDER=0></A><A
+HREF="../glossary/index.htm" OnMouseOver='whomp(glos, "sglos");' OnMouseOut='whomp(glos, "wglos");' 
+title="Glossary"><IMG SRC="../images/wglos.png" ALT="Glossary" NAME=glos HEIGHT=20 WIDTH=94 BORDER=0></A><!--
+--><A HREF="5.htm"  OnMouseOver='whomp(next, "snext");' OnMouseOut='whomp(next, "wnext");'
+ title="Next Section"><IMG NAME=next SRC="../images/wnext.png" ALT="Next" HEIGHT=20 WIDTH=82 BORDER=0></A>
+<BR>
+<A NAME="1">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarered10x10.png" HEIGHT=10 WIDTH=10></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=4><B>Formatting a Disk</B></FONT>
+</TD>
+</TR>
+</TABLE></A>
+<P>
+Every disk, including hard disks and floppies, must be formatted before you can use it. Formatting a disk writes the <A HREF="../harddisks/1.htm#6">file system</A>, the low-level structure information needed to track where files and folders will be located on the disk. When you buy a new computer, the hard disk is typically formatted at the factory. Generally, you need to format disks only when you want to clean off a floppy disk or other removable disk (like a Zip or Jaz disk) for reuse, if you repartition your hard disk and create a new partition, or if you have a disaster with Windows and want to reinstall it from scratch.
+<P>
+<TABLE><TR><TD VALIGN="TOP"><IMG SRC="../images/caution.png" ALT="caution" WIDTH=95 HEIGHT=29></TD>
+<TD VALIGN="TOP">Formatting a disk--hard disk or removable--deletes <I>all</I> the information from the disk, so proceed with care!
+
+</TD></TR></TABLE>
+<A NAME="2">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Formatting a Hard Disk</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+Before formatting your hard disk (or one partition on a hard disk), be sure you make a <A HREF="../backup/index.htm">backup copy</A> of any files you want to keep. To format a hard disk, follow these steps:
+<OL>
+<LI  VALUE=1>
+Open My Computer and locate the drive you want to format.
+<LI  VALUE=2>
+Right-click the icon for the drive and choose Format in the menu that pops up. You see the Format dialog box shown in Figure 32-7. Almost none of the fields in the window, except for the volume label, apply to hard disks--leave them with their default settings.
+</OL>
+<TABLE BORDER=2><TR><TD ALIGN=CENTER>
+<IMG SRC="harddisks.diskformat.png" WIDTH=257 HEIGHT=401 ALT="[figure]">
+</TD></TR><TR BGCOLOR="#00ffff"><TD><I>Figure 32-7:  The Format dialog box</I></TD></TR></TABLE>
+<OL>
+<LI  VALUE=3>
+Type a drive label in the Volume Label box (if the box is blank or if you want to change the existing label) and click the Start button in the Format dialog box.
+<LI  VALUE=4>
+If the drive contains files or folders, Windows asks whether you really want to reformat the disk because existing files will be lost. Assuming you want to format the disk, choose Yes to do so. Formatting can take several minutes--the process involves reading the entire disk to check for bad spots.
+</OL>
+<P>
+<TABLE><TR><TD VALIGN="TOP"><IMG SRC="../images/note.png" ALT="note" WIDTH=95 HEIGHT=29></TD>
+<TD VALIGN="TOP">You can't format the disk from which you are running Windows; Windows displays an error message saying the disk contains files Windows is using. You can't format a CD-ROM either.
+
+</TD></TR></TABLE>
+<A NAME="3">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Formatting a Removable Disk</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+Formatting a removable disk (like a floppy disk, Zip disk, or Jaz disk) is like formatting a hard disk, except more format options are available. If you only want to erase the files on a previously formatted disk without rechecking for bad spots, select Quick Format or Quick (Erase) on the Format dialog box shown in Figure 32-4. Then click the Start button in the Format dialog box.
+<P>
+When you format a disk, Windows may report bad sectors on the disk. Windows marks the sectors as unusable, to prevent programs from trying to write information there. If a floppy disk has any bad sectors, throw it away and use a new one--floppy disks are too cheap for you to fool around with the possibility of losing data.
+<P>
+<TABLE><TR><TD VALIGN="TOP"><IMG SRC="../images/tip.png" ALT="tip" WIDTH=95 HEIGHT=29></TD>
+<TD VALIGN="TOP">To make a <A HREF="../trouble/1.htm#6">boot floppy disk</A> (a floppy disk from which you can start the computer, in the event that the hard disk is corrupted), choose the Create An MS-DOS Startup Disk check box.
+
+</TD></TR></TABLE>
+<A NAME="4">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Copying a Floppy Disk</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+To copy a floppy disk (that is, to copy all the information from one floppy to another while erasing the previous contents of the disk you are copying into), right-click the floppy disk in an Explorer window and choose Copy Disk from the shortcut menu that appears. Click Start and follow the prompts to insert first the original disk and then the disk onto which you want to copy.
+<P>
+<TABLE><TR><TD VALIGN="TOP"><IMG SRC="../images/tip.png" ALT="tip" WIDTH=95 HEIGHT=29></TD>
+<TD VALIGN="TOP">If you copy floppy disks often, create an icon on your desktop for the Copy Disk command. Right-click a blank space on the desktop and choose New | Shortcut from the shortcut menu that appears. In the Type The Location Of The Item box on the Create Shortcut dialog box that appears, type <B>diskcopy a: a:</B> (the DOS command that copies a floppy). Click Next. In the Type A Name For This Shortcut box, type a name like <B>Copy Floppy</B>. Click Next, choose an icon, and click Finish.
+
+</TD></TR></TABLE>
+<P>
+<A HREF="3.htm"  OnMouseOver='whomp(prevb, "sprev");' OnMouseOut='whomp(prevb, "wprev");'
+ title="Previous Section"><IMG NAME=prevb SRC="../images/wprev.png" ALT="Previous" HEIGHT=20 WIDTH=82 BORDER=0></A><!--
+--><A HREF="index.htm" OnMouseOver='whomp(chapb, "schap");' OnMouseOut='whomp(chapb, "wchap");'
+title="Chapter Overview"><IMG SRC="../images/wchap.png" ALT="Chapter" NAME=chapb HEIGHT=20 WIDTH=100 BORDER=0></A><A
+HREF="../index.htm" OnMouseOver='whomp(tocb, "sbook");' OnMouseOut='whomp(tocb, "wbook");' 
+title="Table of Contents"><IMG SRC="../images/wbook.png" ALT="Contents" NAME=tocb HEIGHT=20 WIDTH=94 BORDER=0></A><A
+HREF="../glossary/index.htm" OnMouseOver='whomp(glosb, "sglos");' OnMouseOut='whomp(glosb, "wglos");' 
+title="Glossary"><IMG SRC="../images/wglos.png" ALT="Glossary" NAME=glosb HEIGHT=20 WIDTH=94 BORDER=0></A><!--
+--><A HREF="5.htm"  OnMouseOver='whomp(nextb, "snext");' OnMouseOut='whomp(nextb, "wnext");'
+ title="Next Section"><IMG NAME=nextb SRC="../images/wnext.png" ALT="Next" HEIGHT=20 WIDTH=82 BORDER=0></A>
+<BR>
+</BLOCKQUOTE>
+</BODY>
+</HTML>

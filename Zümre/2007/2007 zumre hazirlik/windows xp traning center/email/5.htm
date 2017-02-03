@@ -1,0 +1,792 @@
+<!doctype html public "-//IETF//DTD HTML//EN">
+<HTML>
+<HEAD>
+<TITLE>Windows XP: The Complete Reference: E-Mail and Newsgroups Using Outlook Express</TITLE>
+<META NAME="GENERATOR" CONTENT="Web-O-Matic Deluxe 4.1">
+<META NAME="AUTHOR" CONTENT="John R. Levine, Margaret Levine Young">
+<META NAME="COPYRIGHT" CONTENTS="Copyright 2001 by The McGraw-Hill Companies. All rights reserved.">
+</HEAD>
+<BODY BACKGROUND="../images/background.png">
+<BLOCKQUOTE>
+<SCRIPT LANGUAGE="JavaScript">
+function whomp(i, file)
+{
+	i.src = "../images/" + file + ".png";
+}
+</SCRIPT>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarered3x3.png" HEIGHT=3 WIDTH=3></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=2>
+Chapter 23: E-Mail and Newsgroups Using Outlook Express
+</FONT></TD>
+</TR>
+</TABLE>
+<BR>
+<A HREF="4.htm"  OnMouseOver='whomp(prev, "sprev");' OnMouseOut='whomp(prev, "wprev");'
+ title="Previous Section"><IMG NAME=prev SRC="../images/wprev.png" ALT="Previous" HEIGHT=20 WIDTH=82 BORDER=0></A><!--
+--><A HREF="index.htm" OnMouseOver='whomp(chap, "schap");' OnMouseOut='whomp(chap, "wchap");'
+title="Chapter Overview"><IMG SRC="../images/wchap.png" ALT="Chapter" NAME=chap HEIGHT=20 WIDTH=100 BORDER=0></A><A
+HREF="../index.htm" OnMouseOver='whomp(toc, "sbook");' OnMouseOut='whomp(toc, "wbook");' 
+title="Table of Contents"><IMG SRC="../images/wbook.png" ALT="Contents" NAME=toc HEIGHT=20 WIDTH=94 BORDER=0></A><A
+HREF="../glossary/index.htm" OnMouseOver='whomp(glos, "sglos");' OnMouseOut='whomp(glos, "wglos");' 
+title="Glossary"><IMG SRC="../images/wglos.png" ALT="Glossary" NAME=glos HEIGHT=20 WIDTH=94 BORDER=0></A><!--
+--><A HREF="6.htm"  OnMouseOver='whomp(next, "snext");' OnMouseOut='whomp(next, "wnext");'
+ title="Next Section"><IMG NAME=next SRC="../images/wnext.png" ALT="Next" HEIGHT=20 WIDTH=82 BORDER=0></A>
+<BR>
+<A NAME="1">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarered10x10.png" HEIGHT=10 WIDTH=10></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=4><B>Sending and Receiving E-Mail</B></FONT>
+</TD>
+</TR>
+</TABLE></A>
+<P>
+After you <A HREF="../email/4.htm#3">set up one or more mail accounts</A>, you can check your mail by clicking the Send And Receive button on the toolbar or choosing Tools | Send And Receive | Send and Receive All or pressing <TT>F5</TT>. After you have clicked Send And Receive, Outlook Express goes through the following process automatically.
+<OL>
+<LI  VALUE=1>
+Connects to your mail servers. If you are on a local area network, this part of the process may happen so quickly that it is almost invisible to you. If you connect to the Internet over a modem, however, and are not already online, Outlook Express uses your default dial-up connection to dial up your ISP. Once an Internet connection is established, Outlook Express contacts your mail servers over the Internet.
+<LI  VALUE=2>
+Sends all the messages in your Outbox.<B> </B>Messages you aren't ready to send should be stored in the Draft folder, not in the Outbox.
+<LI  VALUE=3>
+Downloads all the incoming messages from the server into your Inbox (or into other folders if you have defined <A HREF="../email/7.htm#6">message rules</A> that sort your incoming correspondence).
+</OL>
+<P>
+By default, the Send And Receive button sends all queued messages and checks for mail in all of the e-mail accounts it knows about. If you want to be more selective, click the down arrow next to the Send and Receive button. A drop-down menu offers you the following choices:
+<UL>
+<LI >
+<B>Send and Receive All  </B>The default.
+<LI >
+<B>Receive All  </B>Checks for incoming mail in all known accounts, but doesn't send queued messages.
+<LI >
+<B>Send All  </B>Sends all queued messages, but doesn't check for incoming mail.
+<LI >
+<B>Individual Listings Of Your E-Mail Accounts</B>  Choosing an account sends and receives for that account only.
+</UL>
+<P>
+The same choices are available from the Tools | Send And Receive menu.
+<P>
+While messages are downloading, a dialog box appears. You may click the Hang Up When Finished box if you want Outlook Express to close the Internet connection when it is done.
+<P>
+Table 23-1 shows some of the most important configuration options for sending and receiving messages. (We omit those that are self-explanatory.) Choose Tools | Options to display the Options dialog box that shows these settings. (See Table 23-2 for settings that control how messages are composed and sent, and the section "<A HREF="../email/8.htm#1"> Reading and Posting to Newsgroups</A>" later in this chapter for settings that affect reading newsgroups.)<B></B>
+<BLOCKQUOTE><TABLE BORDER=2><TR><TD>
+<TABLE>
+<TR>
+<TD>
+<B>Tab</B>
+</TD>
+<TD>
+<B>Setting</B>
+</TD>
+<TD>
+<B>Description</B>
+</TD>
+</TR>
+<TR>
+<TD>
+General
+</TD>
+<TD>
+Send and receive messages at startup
+</TD>
+<TD>
+When you start Outlook Express, sends messages in your Outbox and downloads messages from your incoming mail server.
+</TD>
+</TR>
+<TR>
+<TD>
+General
+</TD>
+<TD>
+Check for new messages every <I>xx</I> minutes
+</TD>
+<TD>
+Specifies how often Outlook Express connects automatically to the mail servers to download incoming messages and upload outgoing messages.
+</TD>
+</TR>
+<TR>
+<TD>
+General
+</TD>
+<TD>
+If my computer is not connected at this time
+</TD>
+<TD>
+Specifies what to do if your computer is not connected to the Internet when Outlook Express tries to check for new messages. Your options are Do Not Connect, Connect Only When Not Working Offline, and Connect Even When Working Offline.
+</TD>
+</TR>
+<TR>
+<TD>
+Read
+</TD>
+<TD>
+Mark message read after displaying for <I>xx</I> seconds
+</TD>
+<TD>
+Specifies that Outlook Express mark a message as read after displaying it in the preview pane for the specified time.
+</TD>
+</TR>
+<TR>
+<TD>
+Read
+</TD>
+<TD>
+Fonts button
+</TD>
+<TD>
+Enables you to set the fonts in which Outlook Express displays unformatted messages.
+</TD>
+</TR>
+<TR>
+<TD>
+Receipts
+</TD>
+<TD>
+Returning Read Receipts
+</TD>
+<TD>
+Specifies how to process <A NAME="ddreturnreceiptrequests"><I>return receipt requests</I></A> (tags attached to e-mail messages that request a receipt so that the sender knows that you've seen the message). Not all ISPs and e-mail programs support return receipts.
+</TD>
+</TR>
+<TR>
+<TD>
+Send
+</TD>
+<TD>
+Save copy of sent messages in the `Sent Items' folder
+</TD>
+<TD>
+Specifies that Outlook Express keep copies of your outgoing messages. You can move them from the Sent Items folder to another folder after the message is sent.
+</TD>
+</TR>
+<TR>
+<TD>
+Send
+</TD>
+<TD>
+Send messages immediately 
+</TD>
+<TD>
+Specifies that Outlook Express connect to your outgoing mail server and <A HREF="../email/5.htm#19">send messages whenever a message is in your Outbox</A>.
+</TD>
+</TR>
+<TR>
+<TD>
+Security
+</TD>
+<TD>
+Select the Internet Explorer security zone to use
+</TD>
+<TD>
+Specifies which <A HREF="../security/2.htm#3"> security zone</A> to use when deciding whether or not to let ActiveX controls and other potentially dangerous scripts and programs run.
+</TD>
+</TR>
+<TR>
+<TD>
+Security 
+</TD>
+<TD>
+Warn me when other applications try to send mail as me
+</TD>
+<TD>
+Stops a virus program from spreading itself via e-mail without your knowledge.
+</TD>
+</TR>
+<TR>
+<TD>
+Security
+</TD>
+<TD>
+Do not allow attachments to be saved or opened that could potentially be a virus
+</TD>
+<TD>
+Refuses to open or save file attachments in formats used by most e-mail viruses.
+</TD>
+</TR>
+<TR>
+<TD>
+Connection
+</TD>
+<TD>
+Ask before switching dial-up connections
+</TD>
+<TD>
+Should Outlook Express break an existing dial-up connection to use its default connection, or should it ask you what to do?
+</TD>
+</TR>
+<TR>
+<TD>
+Connection
+</TD>
+<TD>
+Hang up after sending and receiving
+</TD>
+<TD>
+Specifies that after sending and receiving messages, Outlook Express disconnect from the Internet.
+</TD>
+</TR>
+</TABLE></BLOCKQUOTE>
+<TR BGCOLOR="#00ffff"><TD>
+<I>Table 1:  Send/Receive Settings of the Options Dialog Box</I>
+</TD></TR></TABLE></BLOCKQUOTE>
+<A NAME="2">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Receiving Mail</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+New mail accumulates in your Inbox and stays there until you  delete it or <A HREF="../email/7.htm#1">move it to another folder</A>. To see your new mail, click Inbox in the folder list of the Outlook Express window. The window has three panes, as it does when you look at any mail folder: the folder list, the message list, and the selected message. (In order to call attention to the parts of the window relevant to receiving mail, we've chosen not to display the Contacts, Status Bar, Folder Bar, and Outlook Bar in Figure 23-3.) You can drag the boundaries of these three panes to reallocate the space occupied by each. The three panes are the following:<B></B>
+<TABLE BORDER=2><TR><TD ALIGN=CENTER>
+<IMG SRC="email.inbox.png" WIDTH=707 HEIGHT=464 ALT="[figure]">
+</TD></TR><TR BGCOLOR="#00ffff"><TD><I>Figure 23-3:  The folder list, the list of messages in your Inbox, and the Outlook Express welcome message</I></TD></TR></TABLE>
+<UL>
+<LI >
+<B>The folder list view in the left pane  </B>The selected folder is highlighted. In Figure 23-3, Inbox is the selected folder.<B></B>
+<LI >
+<B>The selected folder's message list in the upper-right pane  </B>Each message receives one line in the list. The line tells who is the author of the message, what the subject line says, and when the message was received (or sent, if the message is outgoing). If the author rated the message as Urgent, an exclamation point (!) appears on the left side of its entry on the list. If the message has an <A HREF="../email/2.htm#3">attachment</A> (a file attached to the message), a paper clip appears to the left of its entry. The currently selected message is highlighted. Unread messages have a closed-envelope icon next to them; read messages have an open-envelope icon.<B></B>
+<LI >
+<B>A preview of the selected message in the lower-right pane  </B>The bar at the top of the lower-right pane lists the sender and receiver of the message, together with the subject line. Below this bar is a scrollable window containing the full text of the message.<B></B>
+</UL>
+<A NAME="3">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squaregreen6x6.png" HEIGHT=6 WIDTH=6></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Customizing the Message List</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+To choose what columns are displayed in the message list, right-click the row of column headings and choose Columns from the shortcut menu. The Columns dialog box appears, listing the possible columns Outlook Express can display. Check the columns you want. You may also use this dialog box to rearrange the columns by selecting a column name and clicking the Move Up or Move Down button. You can switch the order of the columns by dragging the header left or right. You can use the Columns dialog box to fix the widths of the columns in the message list as well, but dragging the boundaries between the columns in the message list itself is simpler.
+<A NAME="4">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squaregreen6x6.png" HEIGHT=6 WIDTH=6></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Sorting the Messages in a Folder</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+You can sort the messages in a folder according to any of the columns in the message list--just click the label above any of the columns. Click once to sort in ascending order, twice for descending order.
+<P>
+For example, clicking the From column label sorts the messages according to sender. The various senders appear in alphabetical order, but the program is not smart enough to recognize first names and last names, so it is alphabetical by the name as it is displayed. (Abe Zachary would come before Smith John.) Click From again to sort in reverse alphabetical order.
+<A NAME="5">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squaregreen6x6.png" HEIGHT=6 WIDTH=6></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Reading the Messages in a Folder</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+To read the messages in any folder:
+<OL>
+<LI  VALUE=1>
+Click the name of the folder in the folder list of the Outlook Express window. If the folder you want is not visible, it has either scrolled off the edge of the folder list or it's contained in another folder. Use the left pane scroll bar to look up or down in the folder list. Click the plus box next to a folder's name to see the list of folders contained inside it.
+<LI  VALUE=2>
+Find the message you want to read in the message list in the upper-right pane.
+<LI  VALUE=3>
+Double-click to read the message in its own window, or single-click to read the message in the preview pane of the Outlook Express window.
+</OL>
+<A NAME="6">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squaregreen6x6.png" HEIGHT=6 WIDTH=6></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Opening Attached Files</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+Messages with attached files are denoted with a paper clip icon in the message list of the Outlook Express window. When the message is selected, a larger paper clip icon appears in the title bar of the preview pane. When the message is opened, attached files appear as icons just below the subject line. Images from attached image files are appended to the bottom of the message automatically; you don't have to decide to open them.
+<P>
+Clicking the large paper clip icon produces a list of the attached files; selecting one of the files from this list opens the file. Similarly, selecting an attached-file icon from the bottom of the message window opens the file.
+<P>
+<TABLE><TR><TD VALIGN="TOP"><IMG SRC="../images/caution.png" ALT="caution" WIDTH=95 HEIGHT=29></TD>
+<TD VALIGN="TOP">Attached files are a major source of e-mail viruses. Don't open an attachment unless you know what it is.
+
+</TD></TR></TABLE>
+<A NAME="7">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Protecting Yourself from E-Mail Viruses</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+Because Outlook and Outlook Express are so widely used, they are the most popular targets for the hackers who create e-mail viruses. Outlook Express 6 contains two new features for decreasing your vulnerability to e-mail viruses: restricting attachments and warning you if any other program attempts to send e-mail from your computer using your identity. In addition, you have a choice of whether Outlook Express uses the rules of <A HREF="../security/2.htm#3">Internet Explorer's Internet zone, or the much safer Restricted Sites zone</A> (which we recommend).
+<P>
+These features and options are far from a panacea. The file types that are blocked are the most popular ones for e-mail viruses, but far from the only ones. And blocking HTML attachments does nothing to protect you from viruses that may be embedded in e-mail messages written in HTML. Whether you use these features or not, we recommend that you continue to be cautious: Do not open unexpected attachments from strangers, or even from friends if the accompanying message does not convince you that they are genuine.
+<A NAME="8">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squaregreen6x6.png" HEIGHT=6 WIDTH=6></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Restricting Attachments</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+When you open a file attached to an e-mail message, the file is opened by the application appropriate to its file type, not by Outlook Express. In other words, if you don't know the file type of an attachment, you can't be sure what program will run when you open it. If the attachment is itself a program, opening the attachment turns the program loose to do whatever it was designed to do. Some types of files are more dangerous to open than others, because the applications that run them have the power to make fundamental changes to your system. In particular, executable (.exe) files, scripting files (such as .vbs for Visual Basic or .js for JavaScript), or files that contain links to other files that could contain executable code (like .htm or .url).
+<P>
+<TABLE><TR><TD VALIGN="TOP"><IMG SRC="../images/caution.png" ALT="caution" WIDTH=95 HEIGHT=29></TD>
+<TD VALIGN="TOP">Some viruses try to disguise the file type of their attachments by giving the files two extensions (for example, Loveletter.doc.vbs). If Windows is configured not to display all extensions, you might be fooled by the filename, which would appear without the last extension (for example, you'd just see the filename Loveletter.doc). To display all extensions, choose Start | My Computer, choose Tools | Folder options from the menu bar, click the View tab, and deselect the Hide Extensions For Known File Types check box.
+
+</TD></TR></TABLE>
+<P>
+Outlook Express allows you to block attachments that it judges to be of a dangerous file type. To do this:
+<OL>
+<LI  VALUE=1>
+Select Tools | Options from the menu bar. The Options dialog box opens.
+<LI  VALUE=2>
+Click the Security tab.
+<LI  VALUE=3>
+Check the Do Not Allow Attachments To Be Saved Or Opened That Could Potentially Be A Virus check box.
+<LI  VALUE=4>
+Click OK.
+</OL>
+<P>
+To unblock all attachments, repeat these steps but uncheck the box in step 3.
+<P>
+When the Do Not Allow Attachments To Be Saved Or Opened That Could Potentially Be A Virus box is checked, the paper clip icon still appears to tell you when a message has attachments. Clicking the icon reveals a list of attachments, but any attachments that are blocked appear dimmed, so that they cannot be selected. If you decide that you want to open or save these attachments, go back to the Security tab of the Options dialog box and uncheck the Do Not Allow Attachments To Be Saved Or Opened That Could Potentially Be A Virus box. You can then open or save attachments normally.
+<P>
+<TABLE><TR><TD VALIGN="TOP"><IMG SRC="../images/note.png" ALT="note" WIDTH=95 HEIGHT=29></TD>
+<TD VALIGN="TOP">Even if you are blocking some attachments, image file attachments still get through and are displayed appended to the end of the message they are attached to.
+
+</TD></TR></TABLE>
+<A NAME="9">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squaregreen6x6.png" HEIGHT=6 WIDTH=6></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Preventing Other Programs from Sending E-Mail as You</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+By default, Outlook Express is set up to allow other programs to use it to send e-mail automatically. A virus program could use this feature to send itself to other people. You can alter this behavior so that Outlook Express will block such e-mail until you have confirmed that you want to send the message. Make this change as follows:
+<OL>
+<LI  VALUE=1>
+Select Tools | Options from the menu bar. The Options dialog box opens.
+<LI  VALUE=2>
+Click the Security tab.
+<LI  VALUE=3>
+Check the Warn Me When Other Applications Try To Send Mail As Me check box.
+<LI  VALUE=4>
+Click OK.
+</OL>
+<P>
+To undo this change, repeat these steps but uncheck the box in step 3.
+<A NAME="10">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squaregreen6x6.png" HEIGHT=6 WIDTH=6></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Choosing Your Security Zone</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+Outlooks Express borrows its security zones from Internet Explorer. See the section "<A HREF="../security/2.htm#3">What Are Internet Explorer's Zones?</A>" in Chapter 31 for more details about security zones and how to change the rules that apply to them. Outlook Express offers you a choice between the two most conservative zones: the Internet zone and the Restricted Sites zone. The Restricted Sites zone is more conservative and we recommend it.
+<P>
+To choose your security zone:
+<OL>
+<LI  VALUE=1>
+Select Tools | Options from the Outlook Express' menu. The Options dialog box appears.
+<LI  VALUE=2>
+Click the Security tab of the Options dialog box.
+<LI  VALUE=3>
+Select the radio button of the security zone you want, and then click OK.
+</OL>
+<A NAME="11">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Composing Messages to Send</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+You create messages in three ways:
+<UL>
+<LI >
+<B>Compose a new message from scratch  </B>Click the Create Mail button on the Outlook Express toolbar.
+<LI >
+<B>Reply to a message you have received  </B>Select a message from an Outlook Express folder (such as Inbox) and click either the Reply button or the Reply All button on the Outlook Express toolbar.
+<LI >
+<B>Forward a message you have received  </B>Select a message from an Outlook Express folder and click the Forward button on the Outlook Express toolbar.
+</UL>
+<P>
+Any of these three actions opens a message window, like this:
+<BR><IMG ALIGN=TOP SRC="email.message.png" WIDTH=682 HEIGHT=335 ALT="[image]">
+<P>
+The message window has two main parts: a header and a body. The body is the window into which you enter the text of your message. Use it as you would use a word processor. If you are composing a plain text message, you are limited (naturally) to plain text, but if you are composing in HTML you can use different fonts, inserted images, and other fancy formatting. (If you use HTML, make sure your recipients use mail programs that can read HTML; otherwise they may a mixture of text and HTML codes.) If you are composing a message from scratch, the body of the message window has nothing in it other than what you type. If you are forwarding a message, the text of the original message is included automatically. If you are replying, Outlook Express can be <A HREF="../email/5.htm#13">set up</A> to either include or not include the original text.
+<P>
+<TABLE><TR><TD VALIGN="TOP"><IMG SRC="../images/note.png" ALT="note" WIDTH=95 HEIGHT=29></TD>
+<TD VALIGN="TOP">When you reply to a message that has an attachment, the attachment is not included in the reply (because presumably the person doesn't want another copy of the file). When you forward a message with an attachment, the forwarded message includes the attachment.
+
+</TD></TR></TABLE>
+<P>
+Table 23-2 shows the most important settings in the Options dialog box for composing messages. (Table 23-1 earlier in this chapter listed other settings.) Choose Tools | Options to display the Options dialog box.
+<BLOCKQUOTE><TABLE BORDER=2><TR><TD>
+<TABLE>
+<TR>
+<TD>
+<B>Tab</B>
+</TD>
+<TD>
+<B>Setting</B>
+</TD>
+<TD>
+<B>Description</B>
+</TD>
+</TR>
+<TR>
+<TD>
+Receipts
+</TD>
+<TD>
+Request a Read Receipt for all sent messages
+</TD>
+<TD>
+Specifies that your outgoing messages include return receipt requests so you know when the person opened the message. Not all e-mail programs respond to return receipt requests, and not all ISPs process them.
+</TD>
+</TR>
+<TR>
+<TD>
+Receipts
+</TD>
+<TD>
+Secure Receipts
+</TD>
+<TD>
+Opens the Secure Receipts Options dialog box, from which you can specify whether your outgoing messages include a request for a <A NAME="ddsecurereceipt"><I>secure receipt</I></A> (return receipt for a <A HREF="../security/5.htm#1">digitally signed message</A>) and how to respond to requests for secure receipts.
+</TD>
+</TR>
+<TR>
+<TD>
+Send
+</TD>
+<TD>
+Automatically put people I reply to in my Address Book
+</TD>
+<TD>
+Adds entries to your <A HREF="../email/6.htm#1">Address Book</A> for each person to whom you send a reply. If you reply to many messages from strangers to whom you are unlikely to write again, deselect this check box.
+</TD>
+</TR>
+<TR>
+<TD>
+Send
+</TD>
+<TD>
+Include message in reply
+</TD>
+<TD>
+Specifies that <A HREF="../email/5.htm#13">replies</A> contain the text of the original message in a quoted format. Be sure to edit out the irrelevant parts of the original message.
+</TD>
+</TR>
+<TR>
+<TD>
+Send
+</TD>
+<TD>
+Reply to messages using the format in which they were sent
+</TD>
+<TD>
+Composes replies to <A HREF="../email/9.htm#2">HTML formatted messages</A> using HTML formatting, and composes replies to plain text messages using plain text.
+</TD>
+</TR>
+<TR>
+<TD>
+Send
+</TD>
+<TD>
+Mail Sending Format: HTML/Plain Text
+</TD>
+<TD>
+Specifies whether your e-mail messages are sent as <A HREF="../email/9.htm#2">HTML</A> or as plain text.
+</TD>
+</TR>
+<TR>
+<TD>
+Compose
+</TD>
+<TD>
+Compose Font: Mail
+</TD>
+<TD>
+Specifies how unformatted messages appear on your screen when you are composing them.
+</TD>
+</TR>
+<TR>
+<TD>
+Compose
+</TD>
+<TD>
+Stationery: Mail
+</TD>
+<TD>
+Specifies what stationery (standard formatting) your new messages will use. Rather than specifying mail stationery here, turn it on only for occasional messages (by choosing Format | Apply Stationery when composing a message).
+</TD>
+</TR>
+<TR>
+<TD>
+Compose
+</TD>
+<TD>
+Business Cards: Mail
+</TD>
+<TD>
+Specifies that your <A HREF="../email/6.htm#8">virtual business card</A> (vCard) be included when you compose new messages.
+</TD>
+</TR>
+<TR>
+<TD>
+Signatures
+</TD>
+<TD>
+Signatures
+</TD>
+<TD>
+Enables you to create one or more <A NAME="ddsignatures"><I>signatures</I></A>--a few lines of text that are appended to messages you send. Your signatures should contain your name and e-mail address, and should be no more than four lines long. Click New to create a signature, then type the text in the Edit Signature box.
+</TD>
+</TR>
+<TR>
+<TD>
+Spelling
+</TD>
+<TD>
+Always check spelling before sending
+</TD>
+<TD>
+Specifies that Outlook Express automatically run its spell checker when you send each message (this option is available only if you have a compatible spell-checker installed, such as the ones used by Microsoft Works or Microsoft Office). Other settings on this tab control whether it suggests correct spellings and which words to skip.
+</TD>
+</TR>
+<TR>
+<TD>
+Security
+</TD>
+<TD>
+Digitally sign all outgoing messages
+</TD>
+<TD>
+Adds a digital signature to all messages that proves that you sent the messages. Click Advanced Settings to specify the type of digital signature.
+</TD>
+</TR>
+<TR>
+<TD>
+Security
+</TD>
+<TD>
+Encrypt contents and attachments for all outgoing messages
+</TD>
+<TD>
+Encrypts (encodes) all outgoing messages so that they cannot be read unless the recipient has the encryption key. Click Advanced Settings to specify the type of encryption.
+</TD>
+</TR>
+</TABLE></BLOCKQUOTE>
+<TR BGCOLOR="#00ffff"><TD>
+<I>Table 2:  Message Composition Settings of the Options Dialog Box</I>
+</TD></TR></TABLE></BLOCKQUOTE>
+<A NAME="12">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squaregreen6x6.png" HEIGHT=6 WIDTH=6></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Completing the Header</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+The header section of the message window consists of four lines (though Bcc may not appear unless View | All Headers is checked):
+<UL>
+<LI >
+<B>To  </B>Type the e-mail addresses of the primary recipient(s) of your message. If there is more than one recipient, separate the e-mail addresses with commas. Click the open book icon to look up addresses in the <A HREF="../email/6.htm#1">Address Book.</A> This is the only line of the header that cannot be left blank (unless you enter addresses in the Cc or Bcc lines). If you generate the message window by choosing Reply, Outlook Express puts the address of the author of the original message on this line. If you use Reply All, Outlook Express lists the addresses of the author and the other recipients of the original message. You may add more addresses or delete some of them if you want to.
+<LI >
+<B><A NAME="ddcc">Cc</A> (Carbon Copy)</B>  Type the e-mail addresses of secondary recipients (if any). If you opened this message window by clicking the Reply All button, Outlook Express uses the same Cc list as the original message. You may add to or delete from the list if you want to.
+<LI >
+<B><A NAME="ddbcc">Bcc</A> (Blind Carbon Copy)</B>  Type the e-mail addresses of other secondary recipients, if any. The recipients listed in the To and Cc boxes can see the list of other recipients listed in the To and Cc boxes, but not those listed in the Bcc box. If one of the To or Cc recipients replies to your message with Reply All, the recipients on your Bcc list will not receive the reply.
+<LI >
+<B>Subject  </B>Enter a word or short phrase to describe the subject of your message. The subject line helps both you and your recipients to keep track of the message in your files. If you are replying to another message, Outlook Express automatically uses the original subject line, preceded by Re. If you are forwarding, Outlook Express uses the original subject line, preceded by Fw.
+</UL>
+<A NAME="13">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squaregreen6x6.png" HEIGHT=6 WIDTH=6></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Including the Original Message in Your Reply</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+One advantage e-mail has over paper mail is that you can indicate exactly what part of an e-mail message you are responding to. To make Outlook Express automatically include the original message in any reply:
+<OL>
+<LI  VALUE=1>
+Select Tools | Options to open the Options dialog box.
+<LI  VALUE=2>
+Select the Send tab.
+<LI  VALUE=3>
+Check the Include Message In Reply check box and click OK.
+</OL>
+<P>
+By doing this, whenever you click the Reply or Reply All buttons, the body of the message window contains a divider, with the original message below the divider. The text of the original message is indented, with a &amp;ra; at the beginning of each line.
+<P>
+To remove the indentation or change the indentation character:
+<OL>
+<LI  VALUE=1>
+Open the Send tab of the Options dialog box, as just explained.
+<LI  VALUE=2>
+If Plain Text is selected as the Mail Sending Format, click the Plain Text Settings button to open the Plain Text Settings dialog box. (If HTML is selected, see "<A HREF="../email/9.htm#1">Composing HTML Messages</A>" later in this chapter.)
+<LI  VALUE=3>
+Check the Indent The Original Text With check box at the bottom of the Plain Text Settings dialog box to indent the original text. The drop-down list next to the Indent The Original Text With check box lets you choose a different indentation character.
+</OL>
+<P>
+You can use the original text in two ways. You can either type your message at the beginning of the message, leaving the original message at the end for reference. Or, you can edit the original message, deleting the parts irrelevant to your reply, and then type your reply in parts (each part immediately below the portions of the message to which you are responding). If don't want to include any of the original text for a particular message in your reply (but don't want to change the option), just press C<SMALL>TRL</SMALL>-A to select all the text in the message body window and then either press D<SMALL>ELETE</SMALL> or just start typing your message.<A NAME="14">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squaregreen6x6.png" HEIGHT=6 WIDTH=6></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Inserting Text Files into a Message</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+If what you want to say is already contained in a text file, you don't have to retype the text or even cut-and-paste the text out of the file. Just follow these steps to incorporate the text into your message:
+<OL>
+<LI  VALUE=1>
+Move the cursor to the place in the text of your message that you want the text file inserted.
+<LI  VALUE=2>
+Select Insert | Text From File.
+<LI  VALUE=3>
+When the Insert Text File window opens, browse to find the text file you want.
+<LI  VALUE=4>
+Click Open.
+</OL>
+<P>
+The complete text of the text file is now inserted into the spot where the insertion point is located.
+<A NAME="15">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squaregreen6x6.png" HEIGHT=6 WIDTH=6></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Attaching a File to a Message</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+You can use e-mail to send more than just text. Any file--a picture, a spreadsheet, a formatted text document--can be sent along with your message as an <A HREF="../email/2.htm#3">attachment</A>. To attach a file to a message, click the Attach button on the message window toolbar or select Insert | File Attachment. When the Insert Attachment window appears, browse to find the file you want to attach, and click OK.
+<P>
+When sending plain text messages, Outlook Express encodes file attachments using <A NAME="ddmime"><I>MIME</I></A> (<I>Multipurpose Internet Mail Extensions</I>), the most widely used method of attaching files to messages. Most e-mail programs, including Netscape, Eudora, and AOL's mail program, can deal with MIME attachments. However, some e-mail programs can't do this, especially LAN e-mail programs that weren't originally designed to work with the Internet. You can switch to a different encoding method called <A NAME="dduuencode"><I>uuencode</I></A>: Select Tools | Options and click the Plain Text Settings button on the Send tab of the Options dialog box. Now click the Uuencode radio button in the Plain Text Settings dialog box.
+<P>
+When Outlook Express is set up to send HTML messages, the situation is reversed: Uuencode is the default, and you can switch to MIME using the HTML Settings button in the Options dialog box.
+<P>
+<TABLE><TR><TD VALIGN="TOP"><IMG SRC="../images/tip.png" ALT="tip" WIDTH=95 HEIGHT=29></TD>
+<TD VALIGN="TOP">If you are attaching a large file or several small ones, create a <A HREF="../exploring/4.htm#1">compressed folder (ZIP file)</A> that contains the file(s) and attach the compressed folder instead.
+
+</TD></TR></TABLE>
+<A NAME="16">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Saving and Deleting Messages</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+Outlook Express keeps the messages that you send and receive until you tell it to delete them. Messages that you receive are stored in your Inbox folder. Under the default settings, messages that you send wind up in your Sent Items folder and remain there until you either delete them or <A HREF="../email/7.htm#1">move them to another folder</A>.
+<A NAME="17">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squaregreen6x6.png" HEIGHT=6 WIDTH=6></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Saving Messages</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+Even though Outlook Express saves your messages automatically, you need to be aware of four issues:
+<UL>
+<LI >
+<B>Outlook Express folders and the messages in them are separate from the overall filing system of your computer. </B>You may have a folder called Mom in Outlook Express, but no Mom folder exists on the folder tree you see in Windows Explorer. If you want a message to be a file in your computer's filing system, you have to save that message as a file. You can drag a message out of the Outlook Express window and drop it onto the desktop or into an Explorer window. Or, you can select the message in the Outlook Express message list window, and select File | Save As, and give the new file a name. Either way the message is saved in a text file with the extension .eml. To read these files on a system that doesn't have Outlook Express, use Notepad.
+<LI >
+<B>Unfinished messages are lost when you close Outlook Express unless you save them. </B>You don't have to start and finish a message in one sitting. If you want to put the message away and work on it later, select File | Save to save the message in your Drafts folder. If you want the unfinished message to be in an Outlook Express folder other than Drafts, save it to Drafts first, and then drag it to another folder.<B></B>
+<LI >
+<B>Your mail files should be backed up as often as (or perhaps more often than) any other files on your system. </B>The simplest method is to back up the entire folder in which you told Outlook Express to store your messages. The default folder is called Outlook Express and lies inside the C:\Windows\Application Data\Identities\<I>user name</I>\Microsoft folder (<I>user name</I> is your user account name, as described in Chapter 6).
+<LI >
+<B>You can prevent Outlook Express from automatically saving your outgoing messages.</B><I> </I>Select Tools | Options to open the Options dialog box. Go to the Send tab and uncheck the Save Copy Of Sent Messages In The `Sent Items' Folder check box.
+</UL>
+<A NAME="18">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squaregreen6x6.png" HEIGHT=6 WIDTH=6></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Deleting and Recovering Messages</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+Delete a message by clicking it in the message list and pressing D<SMALL>ELETE</SMALL>. The message is sent to the Deleted Items folder, which functions within the Outlook Express filing system as a kind of Recycle Bin.<P>
+You can still examine messages from the Deleted Items folder by opening them, and you can move them to another folder if you change your mind about deleting them. However, if you delete an item from the Deleted Items folder, it is gone permanently.
+<P>
+Outlook Express can be set up to empty the Deleted Items folder automatically when you exit the program:
+<OL>
+<LI  VALUE=1>
+Select Tools | Options. The Options dialog box appears.
+<LI  VALUE=2>
+Click the Maintenance tab and check Empty Messages From The `Deleted Items' Folder On Exit.
+<LI  VALUE=3>
+Click OK.
+</OL>
+<P>
+You can stop deleting messages this way by unchecking the Empty Messages From The `Deleted Items' Folder On Exit check box.
+<A NAME="19">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Sending Messages</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+Once you are satisfied with the message you've composed, click the Send button in its message window. One of the following two things then happens:
+<UL>
+<LI >
+Outlook Express connects to your ISP, finds your outgoing mail server, and sends the message.
+<LI >
+The message is placed in your Outbox and is not sent until you press the Send and Receive button.
+</UL>
+<P>
+To tell Outlook Express whether to send messages immediately:
+<OL>
+<LI  VALUE=1>
+Open the Options dialog box by selecting Tools | Options.
+<LI  VALUE=2>
+Select the Send tab.
+<LI  VALUE=3>
+Select or deselect the Send Messages Immediately check box.
+<LI  VALUE=4>
+Click OK.
+</OL>
+<P>
+You can undo this decision at any time by returning to the Send tab of the Options dialog box and changing the Send Messages Immediately setting.
+<P>
+Even if Send Messages Immediately is selected, you can move a message to your Outbox without sending it immediately to your outgoing mail server by selecting File | Send Later. This option is handy if you are temporarily unable to connect to the Internet--if you are travelling, for example, and your computer is not currently online.
+<P>
+As long as the message is sitting in your Outbox, you can still intercept it:
+<OL>
+<LI  VALUE=1>
+Select the Outbox folder from the folder list of the Outlook Express window.
+<LI  VALUE=2>
+Select the message from the Outbox message list.
+<LI  VALUE=3>
+Press D<SMALL>ELETE</SMALL> or select Edit | Delete to get rid of the message completely. To put the message away to edit later, drag-and-drop the message from the upper-right pane into the Drafts folder in the folder list, or select Edit | Move To Folder and choose a folder in which to move the message. Alternatively, you can right-click the message and select Move To Folder from the shortcut menu.</OL>
+<P>
+<A HREF="4.htm"  OnMouseOver='whomp(prevb, "sprev");' OnMouseOut='whomp(prevb, "wprev");'
+ title="Previous Section"><IMG NAME=prevb SRC="../images/wprev.png" ALT="Previous" HEIGHT=20 WIDTH=82 BORDER=0></A><!--
+--><A HREF="index.htm" OnMouseOver='whomp(chapb, "schap");' OnMouseOut='whomp(chapb, "wchap");'
+title="Chapter Overview"><IMG SRC="../images/wchap.png" ALT="Chapter" NAME=chapb HEIGHT=20 WIDTH=100 BORDER=0></A><A
+HREF="../index.htm" OnMouseOver='whomp(tocb, "sbook");' OnMouseOut='whomp(tocb, "wbook");' 
+title="Table of Contents"><IMG SRC="../images/wbook.png" ALT="Contents" NAME=tocb HEIGHT=20 WIDTH=94 BORDER=0></A><A
+HREF="../glossary/index.htm" OnMouseOver='whomp(glosb, "sglos");' OnMouseOut='whomp(glosb, "wglos");' 
+title="Glossary"><IMG SRC="../images/wglos.png" ALT="Glossary" NAME=glosb HEIGHT=20 WIDTH=94 BORDER=0></A><!--
+--><A HREF="6.htm"  OnMouseOver='whomp(nextb, "snext");' OnMouseOut='whomp(nextb, "wnext");'
+ title="Next Section"><IMG NAME=nextb SRC="../images/wnext.png" ALT="Next" HEIGHT=20 WIDTH=82 BORDER=0></A>
+<BR>
+</BLOCKQUOTE>
+</BODY>
+</HTML>

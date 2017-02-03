@@ -1,0 +1,115 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Math</title>
+</head>
+<body bgcolor="#cccccc">
+<!--url's used in the movie-->
+<!--text used in the movie-->
+<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,0,0" width="550" height="400" id="Math" align="middle">
+<param name="allowScriptAccess" value="sameDomain" />
+<param name="movie" value="Math.swf" />
+<param name="quality" value="high" />
+<param name="bgcolor" value="#66cccc" />
+<embed src="Math.swf" quality="high" bgcolor="#66cccc" width="550" height="400" name="Math" align="middle" allowScriptAccess="sameDomain" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" />
+</object>
+<h3>Code in <i>choose</i> frame</h3>
+<pre>
+// Math Game
+// Generates Random Math Problems
+// Illustrates text fields, conditions
+// basic math
+// Andy Harris, 12/04
+
+stop();
+
+btnAdd.onRelease = function(){
+  op = "+";
+  _root.gotoAndStop("solve");
+} // end add
+
+btnSub.onRelease = function(){
+  op = "-";
+  _root.gotoAndStop("solve");
+} // end sub
+
+btnMult.onRelease = function(){
+  op = "*";
+  _root.gotoAndStop("solve");
+} // end add
+
+btnDiv.onRelease = function(){
+  op = "/";
+  _root.gotoAndStop("solve");
+} // end add
+</pre>
+
+<h3>Code in <i>solve</i> frame</h3>
+<pre>
+btnCheck.onRelease = function(){
+  _root.gotoAndStop("report");
+} // end check release
+
+
+//check operation
+switch(op){
+  case "+":
+    X = Math.ceil(Math.random() * 10);
+    Y = Math.ceil(Math.random() * 10);
+    correct = X + Y;
+    trace(correct);
+  break;
+  case "-":
+    Y = Math.ceil(Math.random() * 10);
+    correct = Math.ceil(Math.random() * 10);
+    X = correct + Y;
+    trace(correct);
+  break;
+  case "*":
+    X = Math.ceil(Math.random() * 10);
+    Y = Math.ceil(Math.random() * 10);
+    correct = X * Y;
+    trace(correct);
+  break;
+  case "/":
+    Y = Math.ceil(Math.random() * 10);
+    correct = Math.ceil(Math.random() * 10);
+    X = correct * Y;
+    trace(correct);
+  break;
+  default:
+    trace("There's a problem here");
+  break;
+} // end switch
+</pre>
+
+<h3>Code in <i>report</i> frame</h3>
+<pre>
+btnBack.onRelease = function(){
+  if (numTries < 5){
+    //create another problem in the same set
+    _root.gotoAndStop("solve");
+  } else {
+    //let user start over
+    numRight = 0;
+    numTries = 0;
+    _root.gotoAndStop("choose");
+  } // end if
+} // end back release
+
+//check to see if user is right
+if (guess == correct){
+  result = "Great Job!";
+  numRight++;
+} else {
+  result =  X + " + " + Y + " = " + correct; 
+} // end if
+
+//update score
+numTries++;
+percRight = numRight/numTries * 100;
+</pre>
+
+</body>
+</html>

@@ -1,0 +1,183 @@
+<!doctype html public "-//IETF//DTD HTML//EN">
+<HTML>
+<HEAD>
+<TITLE>Windows XP: The Complete Reference: Working with Sound</TITLE>
+<META NAME="GENERATOR" CONTENT="Web-O-Matic Deluxe 4.1">
+<META NAME="AUTHOR" CONTENT="John R. Levine, Margaret Levine Young">
+<META NAME="COPYRIGHT" CONTENTS="Copyright 2001 by The McGraw-Hill Companies. All rights reserved.">
+</HEAD>
+<BODY BACKGROUND="../images/background.png">
+<BLOCKQUOTE>
+<SCRIPT LANGUAGE="JavaScript">
+function whomp(i, file)
+{
+	i.src = "../images/" + file + ".png";
+}
+</SCRIPT>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarered3x3.png" HEIGHT=3 WIDTH=3></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=2>
+Chapter 19: Working with Sound
+</FONT></TD>
+</TR>
+</TABLE>
+<BR>
+<A HREF="0.htm"  OnMouseOver='whomp(prev, "sprev");' OnMouseOut='whomp(prev, "wprev");'
+ title="Previous Section"><IMG NAME=prev SRC="../images/wprev.png" ALT="Previous" HEIGHT=20 WIDTH=82 BORDER=0></A><!--
+--><A HREF="index.htm" OnMouseOver='whomp(chap, "schap");' OnMouseOut='whomp(chap, "wchap");'
+title="Chapter Overview"><IMG SRC="../images/wchap.png" ALT="Chapter" NAME=chap HEIGHT=20 WIDTH=100 BORDER=0></A><A
+HREF="../index.htm" OnMouseOver='whomp(toc, "sbook");' OnMouseOut='whomp(toc, "wbook");' 
+title="Table of Contents"><IMG SRC="../images/wbook.png" ALT="Contents" NAME=toc HEIGHT=20 WIDTH=94 BORDER=0></A><A
+HREF="../glossary/index.htm" OnMouseOver='whomp(glos, "sglos");' OnMouseOut='whomp(glos, "wglos");' 
+title="Glossary"><IMG SRC="../images/wglos.png" ALT="Glossary" NAME=glos HEIGHT=20 WIDTH=94 BORDER=0></A><!--
+--><A HREF="2.htm"  OnMouseOver='whomp(next, "snext");' OnMouseOut='whomp(next, "wnext");'
+ title="Next Section"><IMG NAME=next SRC="../images/wnext.png" ALT="Next" HEIGHT=20 WIDTH=82 BORDER=0></A>
+<BR>
+<A NAME="1">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarered10x10.png" HEIGHT=10 WIDTH=10></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=4><B>How Does Windows Work with Sound?</B></FONT>
+</TD>
+</TR>
+</TABLE></A>
+<P>
+Almost all new computers come with a <A NAME="ddsoundboard"><I>sound board</I></A>, an adapter board inside the computer that lets you connect a microphone and either speakers or headphones to your computer for audio input and output or similar functions already on the computer's system board. Many programs use sound to alert you to events, like the musical snippets that you may hear when Windows starts or shuts down. You need sound capabilities to participate in Internet phone and voice chats and to listen to sound clips on the Web.
+<P>
+Windows plays sounds when certain events occur. You can <A HREF="../audio/2.htm#5">associate a sound with a new event</A>, or change the kind of sounds Windows plays, as described in the next few sections of this chapter. You can also <A HREF="../audio/3.htm#1">play and record sounds</A> by using the <A HREF="../audio/3.htm#1">Sound Recorder</A> or <A HREF="../audio/4.htm#1">Media Player</A> programs and play an audio CD in your CD-ROM by using the <A HREF="../audio/4.htm#6">CD Player</A> component of Windows Media Player.
+<A NAME="2">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>What Are Common Sound File Formats?</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+For Windows to be able to save, edit, or play sound, it must be able to store audio information in files. Table 19-1 lists the most commonly used file formats for audio data.
+<BLOCKQUOTE><TABLE BORDER=2><TR><TD>
+<TABLE>
+<TR>
+<TD>
+Medium
+</TD>
+<TD>
+<B>Input Device</B>
+</TD>
+<TD>
+<B>Output Device</B>
+</TD>
+<TD>
+<B>File Extensions for Popular Formats</B>
+</TD>
+</TR>
+<TR>
+<TD>
+<A HREF="../audio/2.htm#1">Audio</A>
+</TD>
+<TD>
+Microphone, MIDI keyboard, synthesizers, line input
+</TD>
+<TD>
+Speakers, headphones
+</TD>
+<TD>
+.wav, .mp3, .m3u, .asx, .wax, and .wvx
+</TD>
+</TR>
+<TR>
+<TD>
+<A HREF="../audio/4.htm#8">Streaming audio</A>
+</TD>
+<TD>
+Microphone, MIDI keyboard, synthesizers, line input, usually downloaded from the Internet
+</TD>
+<TD>
+Speakers, headphones
+</TD>
+<TD>
+.ram, .ra (for RealAudio files), .asf, and .asx (for Advanced Streaming Format files)
+</TD>
+</TR>
+<TR>
+<TD>
+<A HREF="../audio/1.htm#5">MIDI</A>
+</TD>
+<TD>
+MIDI-compatible instrument
+</TD>
+<TD>
+MIDI-compatible instrument, speakers, headphones
+</TD>
+<TD>
+.mid, .midi, or .rmi
+</TD>
+</TR>
+</TABLE></BLOCKQUOTE>
+<TR BGCOLOR="#00ffff"><TD>
+<I>Table 1:  Audio Devices and File Formats</I>
+</TD></TR></TABLE></BLOCKQUOTE>
+<P>
+To see the properties of any audio file, right-click the filename and choose Properties from the menu that appears. You see a Properties dialog box like the one shown in Figure 19-1.
+<TABLE BORDER=2><TR><TD ALIGN=CENTER>
+<IMG SRC="audio.wavprops.png" WIDTH=367 HEIGHT=509 ALT="[figure]">
+</TD></TR><TR BGCOLOR="#00ffff"><TD><I>Figure 19-1:  The properties of an audio file</I></TD></TR></TABLE>
+<P>
+The information on the General tab parallels that provided for almost any file: type, size, and attributes. The Summary tab displays the bit rate, audio sample size, and other formatting information.
+<A NAME="3">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>What Is the My Music Folder?</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+Windows XP comes with a folder called My Music in your My Documents folder. The idea is for you to store your music files there for reply with Windows Media Player. The folder can contain subfolders for different types of music--Windows Media Player automatically creates new folders when you copy sound files from audio CDs. When you display the My Music folder in an Explorer window, the Task pane includes two links just for sound files:
+<UL>
+<LI >
+<B>Play All</B>  Plays all the music in the folder (or just the selected files).
+<LI >
+<B>Shop For Music Online</B>  Displays the shopping section of Microsoft's WindowsMedia.com Web site in Internet Explorer. The site contains links to selected music e-tailer's Web sites.
+</UL>
+<A NAME="4">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>What Is Streaming Audio?</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+<A NAME="ddstreamingaudio"><I>Streaming audio</I></A> is audio stored in a format for use over the Internet. When you want to play a streaming audio file over the Internet, your computer can start playing the file after downloading only the beginning of the file, and can continue to play the audio while the rest of the file downloads--optimally, downloading stays a step ahead of the player (the audio yet to be played is stored in a <A NAME="ddbuffer"><I>buffer</I></A>. To play streaming audio files from the Internet, run <A HREF="../audio/4.htm#1">Windows Media Player</A>. For instructions for playing video files, see the <A HREF="../video/index.htm">next chapter</A>.
+<P>
+The most popular streaming audio format is RealAudio (with either the .ra or .rm file extension). You can download the RealPlayer program for free from the Real.com Web site at <A HREF="http://www.real.com"><B>http://www.real.com</B></A>; this program works with your Web browser to play both RealAudio and <A HREF="../video/2.htm#3">RealVideo</A> files from the Internet. Microsoft has its own streaming format, called Advanced Streaming Format (ASF), which Windows Media Player can play.
+<A NAME="5">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>What Is MIDI?</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+A specialized type of audio data is called <A NAME="ddmidi"><I>MIDI</I></A> (Musical Instrument Digital Interface), a format for transmitting and storing musical notes. MIDI devices are musical instruments or recording devices that have digital inputs and outputs and can transmit, store, and play music using the MIDI language. For example, if you connect a MIDI keyboard to your computer, you can view the music you play on the MIDI keyboard on your computer screen and hear it on your speakers. Data from MIDI devices is stored in MIDI files. Windows includes software that can "play" MIDI files; that is, software that can translate the musical notes in the files into sound that can be played through speakers or headphones.
+<P>
+Windows Media Player can play MIDI files. You need additional MIDI software to edit and mix MIDI inputs.
+<P>
+<A HREF="0.htm"  OnMouseOver='whomp(prevb, "sprev");' OnMouseOut='whomp(prevb, "wprev");'
+ title="Previous Section"><IMG NAME=prevb SRC="../images/wprev.png" ALT="Previous" HEIGHT=20 WIDTH=82 BORDER=0></A><!--
+--><A HREF="index.htm" OnMouseOver='whomp(chapb, "schap");' OnMouseOut='whomp(chapb, "wchap");'
+title="Chapter Overview"><IMG SRC="../images/wchap.png" ALT="Chapter" NAME=chapb HEIGHT=20 WIDTH=100 BORDER=0></A><A
+HREF="../index.htm" OnMouseOver='whomp(tocb, "sbook");' OnMouseOut='whomp(tocb, "wbook");' 
+title="Table of Contents"><IMG SRC="../images/wbook.png" ALT="Contents" NAME=tocb HEIGHT=20 WIDTH=94 BORDER=0></A><A
+HREF="../glossary/index.htm" OnMouseOver='whomp(glosb, "sglos");' OnMouseOut='whomp(glosb, "wglos");' 
+title="Glossary"><IMG SRC="../images/wglos.png" ALT="Glossary" NAME=glosb HEIGHT=20 WIDTH=94 BORDER=0></A><!--
+--><A HREF="2.htm"  OnMouseOver='whomp(nextb, "snext");' OnMouseOut='whomp(nextb, "wnext");'
+ title="Next Section"><IMG NAME=nextb SRC="../images/wnext.png" ALT="Next" HEIGHT=20 WIDTH=82 BORDER=0></A>
+<BR>
+</BLOCKQUOTE>
+</BODY>
+</HTML>

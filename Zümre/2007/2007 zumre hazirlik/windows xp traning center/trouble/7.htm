@@ -1,0 +1,74 @@
+<!doctype html public "-//IETF//DTD HTML//EN">
+<HTML>
+<HEAD>
+<TITLE>Windows XP: The Complete Reference: Troubleshooting Windows XP</TITLE>
+<META NAME="GENERATOR" CONTENT="Web-O-Matic Deluxe 4.1">
+<META NAME="AUTHOR" CONTENT="John R. Levine, Margaret Levine Young">
+<META NAME="COPYRIGHT" CONTENTS="Copyright 2001 by The McGraw-Hill Companies. All rights reserved.">
+</HEAD>
+<BODY BACKGROUND="../images/background.png">
+<BLOCKQUOTE>
+<SCRIPT LANGUAGE="JavaScript">
+function whomp(i, file)
+{
+	i.src = "../images/" + file + ".png";
+}
+</SCRIPT>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarered3x3.png" HEIGHT=3 WIDTH=3></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=2>
+Chapter 35: Troubleshooting Windows XP
+</FONT></TD>
+</TR>
+</TABLE>
+<BR>
+<A HREF="6.htm"  OnMouseOver='whomp(prev, "sprev");' OnMouseOut='whomp(prev, "wprev");'
+ title="Previous Section"><IMG NAME=prev SRC="../images/wprev.png" ALT="Previous" HEIGHT=20 WIDTH=82 BORDER=0></A><!--
+--><A HREF="index.htm" OnMouseOver='whomp(chap, "schap");' OnMouseOut='whomp(chap, "wchap");'
+title="Chapter Overview"><IMG SRC="../images/wchap.png" ALT="Chapter" NAME=chap HEIGHT=20 WIDTH=100 BORDER=0></A><A
+HREF="../index.htm" OnMouseOver='whomp(toc, "sbook");' OnMouseOut='whomp(toc, "wbook");' 
+title="Table of Contents"><IMG SRC="../images/wbook.png" ALT="Contents" NAME=toc HEIGHT=20 WIDTH=94 BORDER=0></A><A
+HREF="../glossary/index.htm" OnMouseOver='whomp(glos, "sglos");' OnMouseOut='whomp(glos, "wglos");' 
+title="Glossary"><IMG SRC="../images/wglos.png" ALT="Glossary" NAME=glos HEIGHT=20 WIDTH=94 BORDER=0></A><!--
+--><IMG SRC="../images/bnext.png" ALT="Next" HEIGHT=20 WIDTH=82 BORDER=0>
+<BR>
+<A NAME="1">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarered10x10.png" HEIGHT=10 WIDTH=10></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=4><B>Reporting Problems with Dr. Watson</B></FONT>
+</TD>
+</TR>
+</TABLE></A>
+<P>
+Dr. Watson is a program that takes a "snapshot" of the system's state, including RAM usage, what tasks were running, and what programs loaded at startup. After a program fails (crashes or hangs), you can take a snapshot that the program's support department can use to figure out what went wrong. If you are having trouble with a program (including Windows itself), start Dr. Watson, and then run the troublesome program. When the program fails, immediately take a snapshot to document the current state of Windows and your programs, to aid in diagnosing the problem.
+<P>
+To use Dr. Watson, choose Start | Run, type <B>drwatson</B>, and press E<SMALL>NTER</SMALL>. The program doesn't open a window, but adds a small icon to the taskbar. When a program fails, immediately double-click the Dr. Watson button on the taskbar or click it and choose Dr. Watson from the menu that appears. (If Dr. Watson detected the crash, it may appear onscreen automatically.) Dr. Watson creates a snapshot of the state of your system, reporting its progress as it does so. It then opens a report window in which it lists any possible trouble spots it noted and lets you enter a sentence or two describing what you were doing when the program crashed. If you want to make a note of what you were doing when the problem occurred, click in the lower box and type a description.<P>
+To save the information you've gathered, choose File | Save and save the report to a file. Dr. Watson creates a log file with the extension .wlg. When you contact your software vendor about the problem, they may ask you either to open the saved report and read them some of the saved information or, more likely, e-mail or upload the entire log file to them.
+<P>
+<TABLE><TR><TD VALIGN="TOP"><IMG SRC="../images/tip.png" ALT="tip" WIDTH=95 HEIGHT=29></TD>
+<TD VALIGN="TOP">You can use the information from Dr. Watson's report to research the problem yourself. Look in the first few lines of the log file for the names of the program(s) that caused the problem. Go to the Microsoft Support Web site at <A HREF="http://support.microsoft.com"><B>http://support.microsoft.com</B></A> and search for those names. Microsoft may have articles about the problem programs in the Microsoft Knowledge Base.
+
+</TD></TR></TABLE>
+<P>
+You can open a saved log file later by running Dr. Watson and choosing File | Open Log File from the menu (or open the .wlg file--Windows runs Dr. Watson automatically).
+<P>
+If you want all the information possible about what your system was doing when the program failed, choose View | Advanced from the Dr. Watson menu bar. Tabs appear along the top of the Dr. Watson window--so many that you need to click the right-arrow button at the right side of the window to see the rest of the tabs. (You can drag the right side of the Dr. Watson window toward the right to make the window wider.)
+<P>
+You can change how Dr. Watson works by choosing View | Options from the Dr. Watson menu bar or clicking the Dr. Watson button on the taskbar and choosing Options from the menu that appears. You can specify how many log files to save, where to store them, and whether Dr. Watson opens in standard or advanced view.
+<P>
+<A HREF="6.htm"  OnMouseOver='whomp(prevb, "sprev");' OnMouseOut='whomp(prevb, "wprev");'
+ title="Previous Section"><IMG NAME=prevb SRC="../images/wprev.png" ALT="Previous" HEIGHT=20 WIDTH=82 BORDER=0></A><!--
+--><A HREF="index.htm" OnMouseOver='whomp(chapb, "schap");' OnMouseOut='whomp(chapb, "wchap");'
+title="Chapter Overview"><IMG SRC="../images/wchap.png" ALT="Chapter" NAME=chapb HEIGHT=20 WIDTH=100 BORDER=0></A><A
+HREF="../index.htm" OnMouseOver='whomp(tocb, "sbook");' OnMouseOut='whomp(tocb, "wbook");' 
+title="Table of Contents"><IMG SRC="../images/wbook.png" ALT="Contents" NAME=tocb HEIGHT=20 WIDTH=94 BORDER=0></A><A
+HREF="../glossary/index.htm" OnMouseOver='whomp(glosb, "sglos");' OnMouseOut='whomp(glosb, "wglos");' 
+title="Glossary"><IMG SRC="../images/wglos.png" ALT="Glossary" NAME=glosb HEIGHT=20 WIDTH=94 BORDER=0></A><!--
+--><IMG SRC="../images/bnext.png" ALT="Next" HEIGHT=20 WIDTH=82 BORDER=0>
+<BR>
+</BLOCKQUOTE>
+</BODY>
+</HTML>

@@ -1,0 +1,129 @@
+<!doctype html public "-//IETF//DTD HTML//EN">
+<HTML>
+<HEAD>
+<TITLE>Windows XP: The Complete Reference: Managing Files and Folders</TITLE>
+<META NAME="GENERATOR" CONTENT="Web-O-Matic Deluxe 4.1">
+<META NAME="AUTHOR" CONTENT="John R. Levine, Margaret Levine Young">
+<META NAME="COPYRIGHT" CONTENTS="Copyright 2001 by The McGraw-Hill Companies. All rights reserved.">
+</HEAD>
+<BODY BACKGROUND="../images/background.png">
+<BLOCKQUOTE>
+<SCRIPT LANGUAGE="JavaScript">
+function whomp(i, file)
+{
+	i.src = "../images/" + file + ".png";
+}
+</SCRIPT>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarered3x3.png" HEIGHT=3 WIDTH=3></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=2>
+Chapter 8: Managing Files and Folders
+</FONT></TD>
+</TR>
+</TABLE>
+<BR>
+<A HREF="9.htm"  OnMouseOver='whomp(prev, "sprev");' OnMouseOut='whomp(prev, "wprev");'
+ title="Previous Section"><IMG NAME=prev SRC="../images/wprev.png" ALT="Previous" HEIGHT=20 WIDTH=82 BORDER=0></A><!--
+--><A HREF="index.htm" OnMouseOver='whomp(chap, "schap");' OnMouseOut='whomp(chap, "wchap");'
+title="Chapter Overview"><IMG SRC="../images/wchap.png" ALT="Chapter" NAME=chap HEIGHT=20 WIDTH=100 BORDER=0></A><A
+HREF="../index.htm" OnMouseOver='whomp(toc, "sbook");' OnMouseOut='whomp(toc, "wbook");' 
+title="Table of Contents"><IMG SRC="../images/wbook.png" ALT="Contents" NAME=toc HEIGHT=20 WIDTH=94 BORDER=0></A><A
+HREF="../glossary/index.htm" OnMouseOver='whomp(glos, "sglos");' OnMouseOut='whomp(glos, "wglos");' 
+title="Glossary"><IMG SRC="../images/wglos.png" ALT="Glossary" NAME=glos HEIGHT=20 WIDTH=94 BORDER=0></A><!--
+--><A HREF="11.htm"  OnMouseOver='whomp(next, "snext");' OnMouseOut='whomp(next, "wnext");'
+ title="Next Section"><IMG NAME=next SRC="../images/wnext.png" ALT="Next" HEIGHT=20 WIDTH=82 BORDER=0></A>
+<BR>
+<A NAME="1">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarered10x10.png" HEIGHT=10 WIDTH=10></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=4><B>Working with Compressed Folders</B></FONT>
+</TD>
+</TR>
+</TABLE></A>
+<P>
+Everyone who has packed a suitcase knows the basic idea of a compressed folder--it's a trick for getting the same quantity of information to fit in a smaller space on a disk. Windows 98 and earlier versions of Windows required that  you have a third-party application such as WinZip or ZipMagic to work with compressed folders (which everyone who doesn't work for Microsoft calls <A NAME="ddzipfiles"><I>ZIP files</I></A>).In many ways, these applications are still more useful and convenient than the Compressed Folders utility in Windows Explorer. If you are going to work with ZIP files every day, you probably want to acquire ZipMagic or some similar program; for occasional use, the Compressed Folders utility in Windows Explorer works just fine.
+<A NAME="2">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Creating a Compressed Folder</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+To create a compressed folder on the desktop, right-click an empty space and choose New | Compressed Folder from the shortcut menu. To create a compressed folder inside another folder, open or select the folder and choose File | New | Compressed folder.
+<P>
+Either of these techniques creates a compressed folder called New Compressed Folder.zip (or New Compressed Folder if Explorer is set to hide file extensions). You may rename it as you would any other folder, though (as usual) you probably don't want to change the file extension.
+<P>
+To create a compressed folder with a specific file or files already inside it, select the files you want to include, right-click one of the selected files, and then choose Send To | Compressed Folder from the shortcut menu. The selected files remain unchanged, and a copy of them is created inside the compressed folder. The name and location of the folder is the same as the file you right-clicked. The name of the new compressed folder is the same name as the last of the selected files.
+<A NAME="3">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Working with Files in a Compressed Folder</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+To add a file to a compressed folder, drag the file onto the folder's icon or into its open window, and then drop it. The file remains in its original location and a copy is created inside the compressed folder. To move the file without leaving the original behind, drag-and-drop it with the right mouse button, and then choose Move Here from the shortcut menu.
+<P>
+To many applications, a compressed folder appears to be simply a file of a type that the application doesn't know how to open properly. You can't, for example, use the File | Open command in Word to open a Word file that lives inside a compressed folder.
+<P>
+You can open a file in a compressed folder by double-clicking it, but the file usually lacks its full functionality. Windows uncompresses the file into a temporary location, and then runs the program that handles the file. A Word file in a compressed folder, for example, opens in read-only mode. To regain functionality, you need to <A NAME="ddextract"><I>extract</I></A> the file. The extracting process creates an uncompressed copy of the file outside the compressed folder.
+<P>
+To extract a file from a compressed folder, drag it from the compressed folder and drop it onto the desktop or into an uncompressed folder. One copy of the file is left behind in the compressed folder and a new, uncompressed copy appears in the new location. To extract the file without leaving a copy in the compressed folder, drag-and-drop with the right mouse button and choose Move Here from the shortcut menu.
+<P>
+To extract all the files in a compressed folder at once, select File | Extract All from the menu if the file is open, or right-click the folder's icon and choose Extract All from the shortcut menu. The Extract Wizard guides you in selecting a destination folder for the extracted files.
+<P>
+In many respects, the compressed folder and its files behave just as other folders and files. You can arrange and view the files within the folder in the usual ways, for example. However, Microsoft didn't completely integrate compressed folders into its filing system. Here is a short list of things Microsoft might want to fix:
+<UL>
+<LI >
+Compressed folders don't appear on the Folder Explorer bar.
+<LI >
+Compressed folders don't show up in Browse windows. So, for example, you can't save a Word document into a compressed folder by choosing File | Save As from the Word menu bar. Most programs can't open a file that's stored in a compressed folder.
+<LI >
+You can't customize a compressed folder.
+<LI >
+The columns in Details view are different for a compressed folder because there is more to know about a compressed file: the size of the compressed file, the size of the extracted file, the ratio between the sizes, whether the file is encrypted, and the method of compression.
+<LI >
+You can't drag-and-drop or cut-and-paste a file from one compressed folder to another unless one of the folders contains the other.
+</UL>
+<A NAME="4">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Encrypting and Decrypting Compressed Folders</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+You can attach a password to a compressed folder so that Windows will ask for the password before opening or extracting any of the files in the folder. This technique encrypts the entire folder. If you want to encrypt some of the files in a compressed folder, but not other files, create a new compressed folder, move the files you want to encrypt to the new folder, and encrypt that folder. The password scheme used in compressed folders can be broken by a determined attacker and isn't a substitute for a serious encryption program, but it's adequate to deter casual snooping.
+<P>
+To encrypt a compressed folder, right-click its icon and select Encrypt from the shortcut menu. Or, you can open the folder and select File | Encrypt. When the Encrypt dialog box appears, type a password into the Password box, and then retype the same password into the Confirm Password box. (This retyping is to make sure you didn't mistype the password the first time, thereby creating a password that even you don't know.) Click OK to make the dialog box go away and close the folder (if it was open). The folder is encrypted.
+<P>
+<TABLE><TR><TD VALIGN="TOP"><IMG SRC="../images/tip.png" ALT="tip" WIDTH=95 HEIGHT=29></TD>
+<TD VALIGN="TOP">Anyone can open an encrypted folder and look at the list of files. Windows doesn't ask for a password until you try to <I>open</I> or <I>extract </I>one of the files. In Details view, someone could learn the sizes and dates of the files without knowing the password. If you want even this information to be secret, put your files in another folder <I>inside</I> an encrypted folder. Then the password of the outer folder is required to open the inner folder.
+
+</TD></TR></TABLE>
+<P>
+Opening and extracting files from encrypted compressed folders works exactly the same as opening and extracting files from ordinary compressed folders, except you have to type the password into the Password dialog box.
+<P>
+To decrypt an encrypted folder so that a password is no longer needed to access its files, right-click the folder's icon and select Decrypt from the shortcut menu, and then type the password into the Password dialog box.
+<P>
+<A HREF="9.htm"  OnMouseOver='whomp(prevb, "sprev");' OnMouseOut='whomp(prevb, "wprev");'
+ title="Previous Section"><IMG NAME=prevb SRC="../images/wprev.png" ALT="Previous" HEIGHT=20 WIDTH=82 BORDER=0></A><!--
+--><A HREF="index.htm" OnMouseOver='whomp(chapb, "schap");' OnMouseOut='whomp(chapb, "wchap");'
+title="Chapter Overview"><IMG SRC="../images/wchap.png" ALT="Chapter" NAME=chapb HEIGHT=20 WIDTH=100 BORDER=0></A><A
+HREF="../index.htm" OnMouseOver='whomp(tocb, "sbook");' OnMouseOut='whomp(tocb, "wbook");' 
+title="Table of Contents"><IMG SRC="../images/wbook.png" ALT="Contents" NAME=tocb HEIGHT=20 WIDTH=94 BORDER=0></A><A
+HREF="../glossary/index.htm" OnMouseOver='whomp(glosb, "sglos");' OnMouseOut='whomp(glosb, "wglos");' 
+title="Glossary"><IMG SRC="../images/wglos.png" ALT="Glossary" NAME=glosb HEIGHT=20 WIDTH=94 BORDER=0></A><!--
+--><A HREF="11.htm"  OnMouseOver='whomp(nextb, "snext");' OnMouseOut='whomp(nextb, "wnext");'
+ title="Next Section"><IMG NAME=nextb SRC="../images/wnext.png" ALT="Next" HEIGHT=20 WIDTH=82 BORDER=0></A>
+<BR>
+</BLOCKQUOTE>
+</BODY>
+</HTML>

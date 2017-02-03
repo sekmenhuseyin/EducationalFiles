@@ -1,0 +1,361 @@
+<!doctype html public "-//IETF//DTD HTML//EN">
+<HTML>
+<HEAD>
+<TITLE>Windows XP: The Complete Reference: Configuring Windows to Work with Your Modem</TITLE>
+<META NAME="GENERATOR" CONTENT="Web-O-Matic Deluxe 4.1">
+<META NAME="AUTHOR" CONTENT="John R. Levine, Margaret Levine Young">
+<META NAME="COPYRIGHT" CONTENTS="Copyright 2001 by The McGraw-Hill Companies. All rights reserved.">
+</HEAD>
+<BODY BACKGROUND="../images/background.png">
+<BLOCKQUOTE>
+<SCRIPT LANGUAGE="JavaScript">
+function whomp(i, file)
+{
+	i.src = "../images/" + file + ".png";
+}
+</SCRIPT>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarered3x3.png" HEIGHT=3 WIDTH=3></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=2>
+Chapter 21: Configuring Windows to Work with Your Modem
+</FONT></TD>
+</TR>
+</TABLE>
+<BR>
+<A HREF="0.htm"  OnMouseOver='whomp(prev, "sprev");' OnMouseOut='whomp(prev, "wprev");'
+ title="Previous Section"><IMG NAME=prev SRC="../images/wprev.png" ALT="Previous" HEIGHT=20 WIDTH=82 BORDER=0></A><!--
+--><A HREF="index.htm" OnMouseOver='whomp(chap, "schap");' OnMouseOut='whomp(chap, "wchap");'
+title="Chapter Overview"><IMG SRC="../images/wchap.png" ALT="Chapter" NAME=chap HEIGHT=20 WIDTH=100 BORDER=0></A><A
+HREF="../index.htm" OnMouseOver='whomp(toc, "sbook");' OnMouseOut='whomp(toc, "wbook");' 
+title="Table of Contents"><IMG SRC="../images/wbook.png" ALT="Contents" NAME=toc HEIGHT=20 WIDTH=94 BORDER=0></A><A
+HREF="../glossary/index.htm" OnMouseOver='whomp(glos, "sglos");' OnMouseOut='whomp(glos, "wglos");' 
+title="Glossary"><IMG SRC="../images/wglos.png" ALT="Glossary" NAME=glos HEIGHT=20 WIDTH=94 BORDER=0></A><!--
+--><A HREF="2.htm"  OnMouseOver='whomp(next, "snext");' OnMouseOut='whomp(next, "wnext");'
+ title="Next Section"><IMG NAME=next SRC="../images/wnext.png" ALT="Next" HEIGHT=20 WIDTH=82 BORDER=0></A>
+<BR>
+<A NAME="1">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarered10x10.png" HEIGHT=10 WIDTH=10></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=4><B>Configuring Windows to Use Your Dial-Up Modem</B></FONT>
+</TD>
+</TR>
+</TABLE></A>
+<P>
+Since the 1990s, the most common way to connect to the Internet has been via a dial-up modem that attaches to a regular phone line (or via a local area network, for computers in large organizations). Windows needs to know exactly which make of dial-up modem you have, so it can send the appropriate commands. You can also tell Windows from which area code you usually dial, from what other locations you make calls (if you have a portable computer), and to which calling cards you want to charge your calls.
+<A NAME="2">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>What Does Windows Know About Your Modem?</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+When you <A HREF="../hardware/5.htm#4">install a modem</A>, Windows either determines what kind of modem it is, or it asks you. Windows installs a <A NAME="ddmodemdriver"><I>modem driver</I></A>, a small program that usually comes with the modem (Windows comes with modem drivers for many popular modems).
+<P>
+You can look at or change your modem configuration settings by choosing Start | Control Panel, clicking Printers And Other Hardware, and then clicking Phone And Modems Options. (If Windows doesn't know you have a modem, the Add New Hardware Wizard runs. If your modem is external, make sure it is turned on, and then follow the Wizard's instructions to set up the modem.)
+<P>
+You see the Phone And Modem Options dialog box. Click the Modems tab to see a list of the installed modems, as shown in Figure 21-1. Select the appropriate modem from the list, and then click the Properties button to see the Properties dialog box for the modem, shown in Figure 21-2. (The exact appearance of the dialog box depends on which modem driver you select.) To find out which modem driver Windows uses for your modem, click the Driver tab in the modem's Properties dialog box.
+<TABLE BORDER=2><TR><TD ALIGN=CENTER>
+<IMG SRC="prepnet.pamo.png" WIDTH=404 HEIGHT=455 ALT="[figure]">
+</TD></TR><TR BGCOLOR="#00ffff"><TD><I>Figure 21-1:  The Phone And Modem Options dialog box</I></TD></TR></TABLE>
+<TABLE BORDER=2><TR><TD ALIGN=CENTER>
+<IMG SRC="prepnet.modprops.png" WIDTH=404 HEIGHT=455 ALT="[figure]">
+</TD></TR><TR BGCOLOR="#00ffff"><TD><I>Figure 21-2:  The Properties dialog box for a modem</I></TD></TR></TABLE>
+<P>
+Table 21-1 lists the modem properties that appear in the Properties dialog box for most modems. Table 21-2 shows additional settings that appear on the Default Preferences dialog box for the modem, which you display by clicking the Advanced tab on the modem's Properties dialog box, and then clicking the Change Default Preferences button. Except where noted, don't change these settings unless you are sure your modem is configured incorrectly. Most people never have to change these settings except in consultation with their modem manufacturer, communications software publisher, or Internet service provider.
+<BLOCKQUOTE><TABLE BORDER=2><TR><TD>
+<TABLE>
+<TR>
+<TD>
+<B>Dialog Box Tab</B>
+</TD>
+<TD>
+<B>Setting</B>
+</TD>
+<TD>
+<B>Description</B>
+</TD>
+</TR>
+<TR>
+<TD>
+General
+</TD>
+<TD>
+Device usage
+</TD>
+<TD>
+Enables or disables the modem. For example, if your computer's built-in modem is broken, you can disable it and use an external modem.
+</TD>
+</TR>
+<TR>
+<TD>
+Modem
+</TD>
+<TD>
+Port
+</TD>
+<TD>
+Specifies how your modem is connected to your computer. PCs have <A HREF="../hardware/4.htm#4">serial communications ports</A> named COM1, COM2, COM3, and COM4 (most PCs come with only COM1 and COM2), or your modem may connect to a USB or FireWire port. Even if your modem is <A HREF="../hardware/4.htm#6">internal</A> (installed inside the computer), it is assigned a port.
+</TD>
+</TR>
+<TR>
+<TD>
+Modem
+</TD>
+<TD>
+Speaker volume
+</TD>
+<TD>
+Specifies how loud the modem's speaker is set, or how loud the system speaker plays modem sounds.
+</TD>
+</TR>
+<TR>
+<TD>
+Modem
+</TD>
+<TD>
+Maximum Port Speed
+</TD>
+<TD>
+Specifies the maximum speed at which your modem can communicate over the cable to your computer (not over the phone to another modem), in <A NAME="ddbps"><I>bps</I></A> (<I>bits per second</I>) (usually 115200bps).
+</TD>
+</TR>
+<TR>
+<TD>
+Modem
+</TD>
+<TD>
+Wait for dial tone before dialing
+</TD>
+<TD>
+Specifies whether to wait for the modem to detect a dial tone before sending commands to dial; if the modem can't detect a dial tone, this should be deselected. Outside North America, many modems require this to be deselected.
+</TD>
+</TR>
+<TR>
+<TD>
+Diagnostics
+</TD>
+<TD>
+Modem Information
+</TD>
+<TD>
+Displays identifying information about your modem, such as its serial number. Click Query Modem to see the responses to standard modem commands (refer to your modem's manual for the meanings of the commands and responses).
+</TD>
+</TR>
+<TR>
+<TD>
+Diagnostics
+</TD>
+<TD>
+Append to Log
+</TD>
+<TD>
+Specifies whether to store information sent to and from the modem in a log file--usually in C:\Windows\Modemlog_<I>modemname</I>.txt. The log file is useful for troubleshooting; to see the log file, click View Log.
+</TD>
+</TR>
+<TR>
+<TD>
+Advanced
+</TD>
+<TD>
+Extra initialization commands
+</TD>
+<TD>
+Lists additional commands to send to your modem after Windows sends the standard initialization commands. Consult your modem's manual for a list of commands your modem understands.
+</TD>
+</TR>
+<TR>
+<TD>
+Driver
+</TD>
+<TD>
+Driver Provider, Driver Date, Driver Version, Digital Signer
+</TD>
+<TD>
+Displays information about the software driver for the modem. Click Driver Details for more information, including the names and locations of the driver files. Click Update Driver to install a new driver. Click Roll Back Driver to reinstall a previously installed driver. Click Uninstall to remove the driver.
+</TD>
+</TR>
+</TABLE></BLOCKQUOTE>
+<TR BGCOLOR="#00ffff"><TD>
+<I>Table 1:  Modem Properties on the Properties Dialog Box</I>
+</TD></TR></TABLE></BLOCKQUOTE>
+<BLOCKQUOTE><TABLE BORDER=2><TR><TD>
+<TABLE>
+<TR>
+<TD>
+<B>Dialog Box Tab</B>
+</TD>
+<TD>
+<B>Setting</B>
+</TD>
+<TD>
+<B>Description</B>
+</TD>
+</TR>
+<TR>
+<TD>
+General
+</TD>
+<TD>
+Disconnect a call if idle for more than <I>xx</I> mins
+</TD>
+<TD>
+Specifies whether to hang up the phone connection if no data is transmitted for a specified number of minutes (usually not selected). Choose this setting if you want to avoid leaving the phone off the hook when you remain online by accident.
+</TD>
+</TR>
+<TR>
+<TD>
+General
+</TD>
+<TD>
+Cancel the call if not connected within <I>xx</I> secs
+</TD>
+<TD>
+Specifies whether to time-out after this number of seconds if no connection occurs (usually selected, with a time-out period of 60 seconds).
+</TD>
+</TR>
+<TR>
+<TD>
+General
+</TD>
+<TD>
+Port speed
+</TD>
+<TD>
+Same as the Maximum Port Speed in the modem Properties dialog box (see Table 21-1).
+</TD>
+</TR>
+<TR>
+<TD>
+General
+</TD>
+<TD>
+Data Protocol
+</TD>
+<TD>
+Specifies what type of error correction to use. Removing error correction may allow modems to make a connection, but may make the connection less reliable.
+</TD>
+</TR>
+<TR>
+<TD>
+General
+</TD>
+<TD>
+Compression
+</TD>
+<TD>
+Specifies whether to compress data before transmitting it (usually enabled). Not all modems support data compression, and the modem to which it is communicating must also support it.
+</TD>
+</TR>
+<TR>
+<TD>
+General
+</TD>
+<TD>
+Flow control
+</TD>
+<TD>
+Specifies whether to use a system of <A NAME="ddflowcontrol"><I>flow control</I></A> to control the flow of data between your modem and your computer. If selected, you have two options: Xon/Xoff or Hardware (preferred).
+</TD>
+</TR>
+<TR>
+<TD>
+Advanced
+</TD>
+<TD>
+Data bits
+</TD>
+<TD>
+Specifies the number of <A NAME="dddatabits"><I>data bits</I></A>, the number of bits of information included in each byte sent (must be 8 bits).
+</TD>
+</TR>
+<TR>
+<TD>
+Advanced
+</TD>
+<TD>
+Parity
+</TD>
+<TD>
+Specifies whether the modem uses <A NAME="ddparity"><I>parity</I></A>, which means the modem sends an error-detection bit as the eighth bit of each byte; and, if so, which type of parity (usually None).
+</TD>
+</TR>
+<TR>
+<TD>
+Advanced
+</TD>
+<TD>
+Stop bits
+</TD>
+<TD>
+Specifies how many extra <A NAME="ddstopbits"><I>stop bits</I></A> are sent after each byte (must be 1 bit).
+</TD>
+</TR>
+<TR>
+<TD>
+Advanced
+</TD>
+<TD>
+Modulation
+</TD>
+<TD>
+Specifies the <A NAME="ddmodulation"><I>modulation</I></A>, which is how your modem converts the digital information from your computer into analog "sound" information for transmission over the phone.
+</TD>
+</TR>
+</TABLE></BLOCKQUOTE>
+<TR BGCOLOR="#00ffff"><TD>
+<I>Table 2:  Modem Properties in the Default Preferences Dialog Box</I>
+</TD></TR></TABLE></BLOCKQUOTE>
+<P>
+<TABLE><TR><TD VALIGN="TOP"><IMG SRC="../images/tip.png" ALT="tip" WIDTH=95 HEIGHT=29></TD>
+<TD VALIGN="TOP">You can also display your modem's Properties dialog box from the <A HREF="../hardware/3.htm#1">Device Manager</A>: select the modem and click the Properties button on the toolbar.
+
+</TD></TR></TABLE>
+<P>
+Windows displays another dialog box about your modem--the <A HREF="../connecting/5.htm#1">Modem Configuration dialog box</A>--when you click the Configure button from the Properties dialog box of a dial-up connection. The settings on the Modem Configuration dialog box control how the modem works when used for that dial-up connection.
+<A NAME="3">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Troubleshooting Your Modem</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+If you have trouble getting your modem to connect, here are some things to check:
+<UL>
+<LI >
+<B>Make sure the correct modem driver is installed.  </B>Look on the Modems tab of the Phone And Modems Options dialog box to make sure the correct modem is listed. Remove any modems that are no longer installed. If the wrong modem is listed, click Add to run the Add New Hardware Wizard and install the correct driver.
+<LI >
+<B>Make sure the modem driver is enabled.  </B>Choose Start, right-click My Computer, choose Manage, and choose <A HREF="../hardware/3.htm#1">Device Manager</A> from the list at the left side of the Computer Management window. Choose View | Devices By Type, and then click the plus (+) sign next to the Modems entry on the list of devices. Your modem should appear in the list: if it appears with an exclamation point or <I>X</I> on it, something is wrong. Click it and click the Properties button to display the Properties dialog box for the modem. On the General tab, make sure that Device Usage is set to Use This Device (Enabled).
+<LI >
+<B>Make sure the modem is connected to the correct port.  </B>Display the properties dialog box for the modem as described in the preceding paragraph. On the Modem or General tab, check that you see the <A HREF="../hardware/4.htm#3">port</A> to which the modem is connected.
+<LI >
+<B>Make sure the modem speed is right.  </B>On the Modem tab in the Properties dialog box for the modem, check the Maximum Port Speed setting. Choosing a lower speed may solve your connection problem.
+</UL>
+<P>
+You can also use the Windows XP Modem Troubleshooter to help pinpoint the problem. To start the troubleshooter, click the General tab in the modem's Properties dialog box, and then click the Troubleshoot button. Follow the instructions in the Help And Support Center window that appears.
+<P>
+<TABLE><TR><TD VALIGN="TOP"><IMG SRC="../images/tip.png" ALT="tip" WIDTH=95 HEIGHT=29></TD>
+<TD VALIGN="TOP">If you have an external modem, be sure the modem is turned on.
+
+</TD></TR></TABLE>
+<P>
+<A HREF="0.htm"  OnMouseOver='whomp(prevb, "sprev");' OnMouseOut='whomp(prevb, "wprev");'
+ title="Previous Section"><IMG NAME=prevb SRC="../images/wprev.png" ALT="Previous" HEIGHT=20 WIDTH=82 BORDER=0></A><!--
+--><A HREF="index.htm" OnMouseOver='whomp(chapb, "schap");' OnMouseOut='whomp(chapb, "wchap");'
+title="Chapter Overview"><IMG SRC="../images/wchap.png" ALT="Chapter" NAME=chapb HEIGHT=20 WIDTH=100 BORDER=0></A><A
+HREF="../index.htm" OnMouseOver='whomp(tocb, "sbook");' OnMouseOut='whomp(tocb, "wbook");' 
+title="Table of Contents"><IMG SRC="../images/wbook.png" ALT="Contents" NAME=tocb HEIGHT=20 WIDTH=94 BORDER=0></A><A
+HREF="../glossary/index.htm" OnMouseOver='whomp(glosb, "sglos");' OnMouseOut='whomp(glosb, "wglos");' 
+title="Glossary"><IMG SRC="../images/wglos.png" ALT="Glossary" NAME=glosb HEIGHT=20 WIDTH=94 BORDER=0></A><!--
+--><A HREF="2.htm"  OnMouseOver='whomp(nextb, "snext");' OnMouseOut='whomp(nextb, "wnext");'
+ title="Next Section"><IMG NAME=nextb SRC="../images/wnext.png" ALT="Next" HEIGHT=20 WIDTH=82 BORDER=0></A>
+<BR>
+</BLOCKQUOTE>
+</BODY>
+</HTML>

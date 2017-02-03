@@ -1,0 +1,75 @@
+<!doctype html public "-//IETF//DTD HTML//EN">
+<HTML>
+<HEAD>
+<TITLE>Windows XP: The Complete Reference: Managing Files and Folders</TITLE>
+<META NAME="GENERATOR" CONTENT="Web-O-Matic Deluxe 4.1">
+<META NAME="AUTHOR" CONTENT="John R. Levine, Margaret Levine Young">
+<META NAME="COPYRIGHT" CONTENTS="Copyright 2001 by The McGraw-Hill Companies. All rights reserved.">
+</HEAD>
+<BODY BACKGROUND="../images/background.png">
+<BLOCKQUOTE>
+<SCRIPT LANGUAGE="JavaScript">
+function whomp(i, file)
+{
+	i.src = "../images/" + file + ".png";
+}
+</SCRIPT>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarered3x3.png" HEIGHT=3 WIDTH=3></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=2>
+Chapter 8: Managing Files and Folders
+</FONT></TD>
+</TR>
+</TABLE>
+<BR>
+<A HREF="3.htm"  OnMouseOver='whomp(prev, "sprev");' OnMouseOut='whomp(prev, "wprev");'
+ title="Previous Section"><IMG NAME=prev SRC="../images/wprev.png" ALT="Previous" HEIGHT=20 WIDTH=82 BORDER=0></A><!--
+--><A HREF="index.htm" OnMouseOver='whomp(chap, "schap");' OnMouseOut='whomp(chap, "wchap");'
+title="Chapter Overview"><IMG SRC="../images/wchap.png" ALT="Chapter" NAME=chap HEIGHT=20 WIDTH=100 BORDER=0></A><A
+HREF="../index.htm" OnMouseOver='whomp(toc, "sbook");' OnMouseOut='whomp(toc, "wbook");' 
+title="Table of Contents"><IMG SRC="../images/wbook.png" ALT="Contents" NAME=toc HEIGHT=20 WIDTH=94 BORDER=0></A><A
+HREF="../glossary/index.htm" OnMouseOver='whomp(glos, "sglos");' OnMouseOut='whomp(glos, "wglos");' 
+title="Glossary"><IMG SRC="../images/wglos.png" ALT="Glossary" NAME=glos HEIGHT=20 WIDTH=94 BORDER=0></A><!--
+--><A HREF="5.htm"  OnMouseOver='whomp(next, "snext");' OnMouseOut='whomp(next, "wnext");'
+ title="Next Section"><IMG NAME=next SRC="../images/wnext.png" ALT="Next" HEIGHT=20 WIDTH=82 BORDER=0></A>
+<BR>
+<A NAME="1">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarered10x10.png" HEIGHT=10 WIDTH=10></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=4><B>What Are Compressed Folders?</B></FONT>
+</TD>
+</TR>
+</TABLE></A>
+<P>
+<A NAME="ddcompressedfolders"><I>Compressed</I> <I>folders</I></A> are folders whose contents are stored in such a way as to conserve disk space. The amount of disk space you can save by storing a file in a compressed folder varies depending on the kind of file it is; a Word document of 100K, for example, might only take up 40K in a compressed folder, while an Acrobat document of 100K might still take up 80K in a compressed folder.
+<P>
+Windows XP actually has two types of compressed folders: <A NAME="ddntfscompressedfolders"><I>NTFS compressed folders</I></A> and <A NAME="ddzipcompressedfolders"><I>ZIP compressed folders</I></A>. NTFS compression, which is available for both files and folders, works only on NTFS partitions, and is completely invisible in operation. You compress or uncompress an NTFS compressed folder (or file) by changing its Compress Contents To Save Disk Space attribute on the Advanced Attributes dialog box (right-click the folder or file, choose Properties from the menu that appears, click the General tab, and click the Advanced button to see this attribute). A ZIP compressed folder, unlike an ordinary folder, is actually a file--in this case, a ZIP file (with the extension .zip). All the files in this type of compressed folder are actually stored in the ZIP file. ZIP compressed folders are "virtual folders"--files that masquerade as folders in Windows Explorer. Most other programs see ZIP compressed folders as single files, though, and can't read or write the files contained in compressed folders.
+<P>
+The icon representing a ZIP compressed folder is a folder icon with a zipper on it:
+<BR><IMG ALIGN=TOP SRC="exploring.compfold.png" WIDTH=60 HEIGHT=60 ALT="[image]">
+<P>
+You pay a price for compression: files in ZIP compressed folders are harder to work with. They take longer to open than an identical uncompressed file, and most applications can't open them directly. If you open a document by single- or double-clicking its filename in an Explorer window, Windows makes an uncompressed copy of the file and runs the program associated with that type of file, but the copy is opened as a read-only file. Most applications can't save files in ZIP compressed folders at all. If you want to edit the document and save your changes, you must give the file a new name and save it in an ordinary folder. You can move the file into the ZIP compressed folder later, using Windows Explorer.
+<P>
+Given their virtues and vices, ZIP compressed folders are best for archiving information that you don't access or change often. ZIP compressed folders are also useful for sharing information with other people; being smaller than normal folders, they take less time to transmit and occupy less disk space. (For example, large files that you download from the Internet are frequently in .zip format.) The recipients can read the files, though, only if they have Windows XP, Windows Me, or a third-party utility like WinZip. If you want ZIP files to look like folders in Explorer windows, including opening and saving directly from ZIP files (compressed folders), get ZipMagic (<A HREF="http://www.ontrack.com/zipmagic"><B>http://www.ontrack.com/zipmagic</B></A>), which combines the power of WinZip and the convenience of Windows compressed folders.
+<P>
+A more detailed description of the techniques for working with ZIP compressed folders is given <A HREF="../exploring/10.htm#1">later in this chapter</A>. Windows XP refers to both NTFS and ZIP compressed folders as compressed folders, and in the rest of this chapter, when we talk about compressed folders, we mean ZIP compressed folders.
+<P>
+Compressed folders can also be encrypted (stored in a secret code). You can attach a password to the folder so no one else can open any of the files in the folder without knowing the password.
+<P>
+<A HREF="3.htm"  OnMouseOver='whomp(prevb, "sprev");' OnMouseOut='whomp(prevb, "wprev");'
+ title="Previous Section"><IMG NAME=prevb SRC="../images/wprev.png" ALT="Previous" HEIGHT=20 WIDTH=82 BORDER=0></A><!--
+--><A HREF="index.htm" OnMouseOver='whomp(chapb, "schap");' OnMouseOut='whomp(chapb, "wchap");'
+title="Chapter Overview"><IMG SRC="../images/wchap.png" ALT="Chapter" NAME=chapb HEIGHT=20 WIDTH=100 BORDER=0></A><A
+HREF="../index.htm" OnMouseOver='whomp(tocb, "sbook");' OnMouseOut='whomp(tocb, "wbook");' 
+title="Table of Contents"><IMG SRC="../images/wbook.png" ALT="Contents" NAME=tocb HEIGHT=20 WIDTH=94 BORDER=0></A><A
+HREF="../glossary/index.htm" OnMouseOver='whomp(glosb, "sglos");' OnMouseOut='whomp(glosb, "wglos");' 
+title="Glossary"><IMG SRC="../images/wglos.png" ALT="Glossary" NAME=glosb HEIGHT=20 WIDTH=94 BORDER=0></A><!--
+--><A HREF="5.htm"  OnMouseOver='whomp(nextb, "snext");' OnMouseOut='whomp(nextb, "wnext");'
+ title="Next Section"><IMG NAME=nextb SRC="../images/wnext.png" ALT="Next" HEIGHT=20 WIDTH=82 BORDER=0></A>
+<BR>
+</BLOCKQUOTE>
+</BODY>
+</HTML>

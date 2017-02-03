@@ -1,0 +1,212 @@
+<!doctype html public "-//IETF//DTD HTML//EN">
+<HTML>
+<HEAD>
+<TITLE>Windows XP: The Complete Reference: Installing or Upgrading to Windows XP</TITLE>
+<META NAME="GENERATOR" CONTENT="Web-O-Matic Deluxe 4.1">
+<META NAME="AUTHOR" CONTENT="John R. Levine, Margaret Levine Young">
+<META NAME="COPYRIGHT" CONTENTS="Copyright 2001 by The McGraw-Hill Companies. All rights reserved.">
+</HEAD>
+<BODY BACKGROUND="../images/background.png">
+<BLOCKQUOTE>
+<SCRIPT LANGUAGE="JavaScript">
+function whomp(i, file)
+{
+	i.src = "../images/" + file + ".png";
+}
+</SCRIPT>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarered3x3.png" HEIGHT=3 WIDTH=3></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=2>
+Appendix A: Installing or Upgrading to Windows XP
+</FONT></TD>
+</TR>
+</TABLE>
+<BR>
+<A HREF="11.htm"  OnMouseOver='whomp(prev, "sprev");' OnMouseOut='whomp(prev, "wprev");'
+ title="Previous Section"><IMG NAME=prev SRC="../images/wprev.png" ALT="Previous" HEIGHT=20 WIDTH=82 BORDER=0></A><!--
+--><A HREF="index.htm" OnMouseOver='whomp(chap, "schap");' OnMouseOut='whomp(chap, "wchap");'
+title="Chapter Overview"><IMG SRC="../images/wchap.png" ALT="Chapter" NAME=chap HEIGHT=20 WIDTH=100 BORDER=0></A><A
+HREF="../index.htm" OnMouseOver='whomp(toc, "sbook");' OnMouseOut='whomp(toc, "wbook");' 
+title="Table of Contents"><IMG SRC="../images/wbook.png" ALT="Contents" NAME=toc HEIGHT=20 WIDTH=94 BORDER=0></A><A
+HREF="../glossary/index.htm" OnMouseOver='whomp(glos, "sglos");' OnMouseOut='whomp(glos, "wglos");' 
+title="Glossary"><IMG SRC="../images/wglos.png" ALT="Glossary" NAME=glos HEIGHT=20 WIDTH=94 BORDER=0></A><!--
+--><A HREF="13.htm"  OnMouseOver='whomp(next, "snext");' OnMouseOut='whomp(next, "wnext");'
+ title="Next Section"><IMG NAME=next SRC="../images/wnext.png" ALT="Next" HEIGHT=20 WIDTH=82 BORDER=0></A>
+<BR>
+<A NAME="1">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarered10x10.png" HEIGHT=10 WIDTH=10></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=4><B>Setting Boot Options</B></FONT>
+</TD>
+</TR>
+</TABLE></A>
+<P>
+Windows XP includes support for multiple partitions and multiple operating systems (it inherits this ability from Windows NT/2000). The boot program (Ntldr) is stored in the root folder of the first partition on the first disk. Ntldr reads the Boot.ini file, which is stored in the same folder, to find out which partitions you might want to boot from, which partition to use as the default, what to display in the boot menu, and how long to wait before loading the operating system from the default partition. If the boot menu contains only one option, you won't see it--Ntldr simply boots from that partition.
+<P>
+<TABLE><TR><TD VALIGN="TOP"><IMG SRC="../images/tip.png" ALT="tip" WIDTH=95 HEIGHT=29></TD>
+<TD VALIGN="TOP">Ntldr and Boot.ini are hidden, protected system files. To see them in an Explorer window, choose Tools | Folder Options, click the View tab, and deselect the Hide Protected Operating System Files check box. Also choose Show Hidden Files and Folders.
+
+</TD></TR></TABLE>
+<A NAME="2">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Understanding the the Boot.ini File</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+A typical Boot.ini file looks like this:
+<P><PRE>
+[boot loader]<BR>
+timeout=30<BR>
+default=multi(0)disk(0)rdisk(0)partition(2)\WINDOWS<BR>
+[operating systems]<BR>
+multi(0)disk(0)rdisk(0)partition(2)\WINDOWS=<BR>
+"Microsoft Windows XP Professional" /fastdetect<BR>
+C:\="Microsoft Windows"
+</PRE>
+<P>
+The [boot loader] section lists the timeout (the number of seconds that it waits before loading from the default partition) and the default (which partition is the default). The [operating systems] section lists all of the partitions that contain operating systems from which you can boot.
+<P>
+Lines that specify partitions tell the boot program (Ntldr) exactly where to find the Windows system folder for any version of Windows, like this:
+<P><PRE>
+multi(0)disk(0)rdisk(<I>r</I>)partition(<I>p</I>)\<I>windowsfolder</I>
+</PRE>
+<P>
+The "multi" in this line means that Ntldr relies on the computer's BIOS to load the system files. <I>R</I> is the number of the disk attached to the hard disk adapter (0 for the first disk, 1 for the second disk, and so forth). <I>P</I> is the number of the partition on that hard disk (1 for the first partition, 2 for the second partition, and so forth). Partitions are numbered starting with primary partitions, then logical partitions. Unused space and MS-DOS Extended partitions (which you are unlikely to have) are omitted.
+<P>
+If you have a <A HREF="../hardware/4.htm#24">SCSI disk</A>, the line looks like this:
+<P><PRE>
+scsi(<I>a</I>)disk(<I>s</I>)rdisk(<I>lun</I>)partition(<I>p</I>)\<I>windowsfolder</I>
+</PRE>
+<P>
+<I>A</I> is the number of the SCSI adapter, <I>s</I> is the SCSI ID of the disk, <I>lun</I> is the logical unit number of the disk (usually 0), and <I>p</I> is the partition number on that list. (For more information about booting from SCSI disks, see article Q102873 in the Microsoft Knowledge Base at <A HREF="http://support.microsoft.com"><B>http://support.microsoft.com</B></A>.)
+<P>
+In the [operating systems] section, each partition is followed by an equal sign and the string (text) that will appear in the boot menu. Previous versions usually appear simply as "Microsoft Windows," but you can edit this to specify the version of Windows or other information about the partition. For example, you might have "Windows XP Pro Test" and "Windows XP Pro Daily Use."
+<P>
+You can add a few switches to the end of partition lines in the [operating systems] section. (In the example in this section, one of the lines includes the /FASTDETECT switch.) The following are some of the switches that you can use for Windows XP, 2000, and NT 4.0 partitions:
+<UL>
+<LI >
+<B>/BASEVIDEO</B>  Starts up in <A HREF="../trouble/1.htm#2">Enable VGA Mode</A>, which is useful for diagnosing video driver problems.
+<LI >
+<B>/MAXMEM:</B><B><I>n</I></B>  Allows Windows to use only a maximum of <I>n</I> kilobytes of RAM, which is useful if you suspect memory problems.
+<LI >
+<B>/FASTDETECT</B>  Skips checking of parallel and series communications devices.
+</UL>
+<P>
+<TABLE><TR><TD VALIGN="TOP"><IMG SRC="../images/tip.png" ALT="tip" WIDTH=95 HEIGHT=29></TD>
+<TD VALIGN="TOP">In the [boot loader] section, set the timeout to 0 if you don't want Ntldr to display the menu. Set it to -1 if you want Ntldr to wait forever.
+
+</TD></TR></TABLE>
+<A NAME="3">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Editing Boot.ini</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+You can edit the Boot.ini file by using one of three Windows programs: The System Properties dialog box (which provides fewer choices), the System Configuration Utility (which displays the whole file for editing), or Notepad.
+<A NAME="4">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squaregreen6x6.png" HEIGHT=6 WIDTH=6></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Editing Boot.ini from the System Properties Dialog Box</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+To display the System Properties dialog box, click Start, right-click My Computer, and choose Properties from the menu that appears. In the System Properties dialog box, click the Advanced tab. Click the Settings button in the Startup And Recovery section. You see the Startup And Recovery dialog box, shown in Figure A-4.
+<TABLE BORDER=2><TR><TD ALIGN=CENTER>
+<IMG SRC="wininst.bootini.png" WIDTH=384 HEIGHT=482 ALT="[figure]">
+</TD></TR><TR BGCOLOR="#00ffff"><TD><I>Figure A-4:  You can edit the Boot.ini file by changing settings in the System Startup section.</I></TD></TR></TABLE>
+<P>
+The settings in the System Startup section of the dialog box control part of the contents of the Boot.ini file. You can change the default operating system and the timeout by changing the first two settings. Don't deselect these check boxes, or you won't have time to make a selection from the boot menu. You can also click the Edit button to display and edit the Boot.ini file in Notepad--but proceed with care!
+<P>
+<TABLE><TR><TD VALIGN="TOP"><IMG SRC="../images/note.png" ALT="note" WIDTH=95 HEIGHT=29></TD>
+<TD VALIGN="TOP">The third setting in the System Startup section of the Startup And Recovery dialog box controls how long you have to choose to use the Recovery Console in the event that Windows won't start, if you have previously installed the Recovery Console. See <A HREF="../trouble/1.htm#5">Chapter35</A> for details on the Recovery Console.
+
+</TD></TR></TABLE>
+<A NAME="5">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squaregreen6x6.png" HEIGHT=6 WIDTH=6></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Editing Boot.ini from the System Configuration Utility</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+To see more of your Boot.ini options, run the <A HREF="../internals/2.htm#1">System Configuration Utility</A> by choosing Start | Run, typing <B>msconfig</B>, and pressing E<SMALL>NTER</SMALL>. Then click the BOOT.INI tab, as shown in Figure A-5.<TABLE BORDER=2><TR><TD ALIGN=CENTER>
+<IMG SRC="wininst.bini.png" WIDTH=575 HEIGHT=385 ALT="[figure]">
+</TD></TR><TR BGCOLOR="#00ffff"><TD><I>Figure A-5:  Editing your Boot.ini file</I></TD></TR></TABLE>
+<P>
+The BOOT.INI tab is divided into two parts. The top part shows the actual contents of the current Boot.ini file. The lower part offers options that you can use to change the file. The options that appear in the lower part of the window enable you to start up in various <A HREF="../trouble/1.htm#2">startup modes</A>. The options work as follows:
+<UL>
+<LI >
+<B>/SAFEBOOT  </B>Boots in one of Windows startup modes. When you select the /SAFEBOOT check box, you can choose from Minimal to start in Safe Mode, Network to start in Safe Mode With Network, DSRepair to start in Domain Server Repair mode (not used with Windows XP Professional or Home Edition), or Minimal (Alternateshell) to start in Safe Mode With Command Line.
+<LI >
+<B>/NOGUIBOOT  </B>Boots into Windows XP without displaying the XP splash screen.
+<LI >
+<B>/BOOTLOG  </B>Enables the verbose boot logging feature, which displays messages that can help you track down deeply embedded glitches.
+<LI >
+<B>/BASEVIDEO  </B>Boots in the standard VGA Mode, which can operate with 99 percent of the video cards on the market.
+<LI >
+<B>/SOS  </B>Displays all drivers and services that are loading as they load. This can be helpful if you can't finish booting.
+<LI >
+<B>Timeout</B>   Indicates how long the menu appears before automatically selecting the default item.
+</UL>
+<P>
+You can click the Advanced Options button to display the BOOT.INI Advanced Options dialog box, with these additional settings:
+<UL>
+<LI >
+<B>/MAXMEM  </B>Enables you to limit the amount of RAM that the system sees on startup.
+<LI >
+<B>/NUMPROC  </B>Enables you to define a finite number of processors that are recognized by the system. This setting works only on multiprocessor machines.
+<LI >
+<B>/PCILOCK  </B>Locks assigned PCI resources to already installed hardware to assist in avoiding conflicts.
+<LI >
+<B>/DEBUG  </B>For programmers only, provides debugging features. This option offers no benefit to even the most advanced user.
+</UL>
+<P>
+Most of these options should never be used without direction from a qualified technician, if you plan on retaining a stable XP installation.
+<A NAME="6">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Checking Your Boot.ini Entries</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+If you reinstall Windows or other operating systems, or copy or delete partitions, you may end up with Boot.ini entries for partitions that aren't really there. The <A HREF="../internals/2.htm#1">System Configuration Utility</A> can check the entries in your Boot.ini file and delete those that no longer refer to an installed operating system. Follow these steps to check your Boot.ini file:
+<OL>
+<LI  VALUE=1>
+Choose Start | Run, type <B>msconfig</B>, and press E<SMALL>NTER</SMALL>.<LI  VALUE=2>
+Click the BOOT.INI tab.
+<LI  VALUE=3>
+Click Check All Boot Paths.
+<LI  VALUE=4>
+If an entry no longer refers to the location of a valid operating system, Windows displays a message asking whether to delete the line from Boot.ini.
+<LI  VALUE=5>
+Click Yes to remove the line (so the operating system won't appear on your boot menu) or No to leave it.
+</OL>
+<P>
+<A HREF="11.htm"  OnMouseOver='whomp(prevb, "sprev");' OnMouseOut='whomp(prevb, "wprev");'
+ title="Previous Section"><IMG NAME=prevb SRC="../images/wprev.png" ALT="Previous" HEIGHT=20 WIDTH=82 BORDER=0></A><!--
+--><A HREF="index.htm" OnMouseOver='whomp(chapb, "schap");' OnMouseOut='whomp(chapb, "wchap");'
+title="Chapter Overview"><IMG SRC="../images/wchap.png" ALT="Chapter" NAME=chapb HEIGHT=20 WIDTH=100 BORDER=0></A><A
+HREF="../index.htm" OnMouseOver='whomp(tocb, "sbook");' OnMouseOut='whomp(tocb, "wbook");' 
+title="Table of Contents"><IMG SRC="../images/wbook.png" ALT="Contents" NAME=tocb HEIGHT=20 WIDTH=94 BORDER=0></A><A
+HREF="../glossary/index.htm" OnMouseOver='whomp(glosb, "sglos");' OnMouseOut='whomp(glosb, "wglos");' 
+title="Glossary"><IMG SRC="../images/wglos.png" ALT="Glossary" NAME=glosb HEIGHT=20 WIDTH=94 BORDER=0></A><!--
+--><A HREF="13.htm"  OnMouseOver='whomp(nextb, "snext");' OnMouseOut='whomp(nextb, "wnext");'
+ title="Next Section"><IMG NAME=nextb SRC="../images/wnext.png" ALT="Next" HEIGHT=20 WIDTH=82 BORDER=0></A>
+<BR>
+</BLOCKQUOTE>
+</BODY>
+</HTML>

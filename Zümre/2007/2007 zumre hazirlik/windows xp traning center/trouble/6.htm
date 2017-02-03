@@ -1,0 +1,234 @@
+<!doctype html public "-//IETF//DTD HTML//EN">
+<HTML>
+<HEAD>
+<TITLE>Windows XP: The Complete Reference: Troubleshooting Windows XP</TITLE>
+<META NAME="GENERATOR" CONTENT="Web-O-Matic Deluxe 4.1">
+<META NAME="AUTHOR" CONTENT="John R. Levine, Margaret Levine Young">
+<META NAME="COPYRIGHT" CONTENTS="Copyright 2001 by The McGraw-Hill Companies. All rights reserved.">
+</HEAD>
+<BODY BACKGROUND="../images/background.png">
+<BLOCKQUOTE>
+<SCRIPT LANGUAGE="JavaScript">
+function whomp(i, file)
+{
+	i.src = "../images/" + file + ".png";
+}
+</SCRIPT>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarered3x3.png" HEIGHT=3 WIDTH=3></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=2>
+Chapter 35: Troubleshooting Windows XP
+</FONT></TD>
+</TR>
+</TABLE>
+<BR>
+<A HREF="5.htm"  OnMouseOver='whomp(prev, "sprev");' OnMouseOut='whomp(prev, "wprev");'
+ title="Previous Section"><IMG NAME=prev SRC="../images/wprev.png" ALT="Previous" HEIGHT=20 WIDTH=82 BORDER=0></A><!--
+--><A HREF="index.htm" OnMouseOver='whomp(chap, "schap");' OnMouseOut='whomp(chap, "wchap");'
+title="Chapter Overview"><IMG SRC="../images/wchap.png" ALT="Chapter" NAME=chap HEIGHT=20 WIDTH=100 BORDER=0></A><A
+HREF="../index.htm" OnMouseOver='whomp(toc, "sbook");' OnMouseOut='whomp(toc, "wbook");' 
+title="Table of Contents"><IMG SRC="../images/wbook.png" ALT="Contents" NAME=toc HEIGHT=20 WIDTH=94 BORDER=0></A><A
+HREF="../glossary/index.htm" OnMouseOver='whomp(glos, "sglos");' OnMouseOut='whomp(glos, "wglos");' 
+title="Glossary"><IMG SRC="../images/wglos.png" ALT="Glossary" NAME=glos HEIGHT=20 WIDTH=94 BORDER=0></A><!--
+--><A HREF="7.htm"  OnMouseOver='whomp(next, "snext");' OnMouseOut='whomp(next, "wnext");'
+ title="Next Section"><IMG NAME=next SRC="../images/wnext.png" ALT="Next" HEIGHT=20 WIDTH=82 BORDER=0></A>
+<BR>
+<A NAME="1">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarered10x10.png" HEIGHT=10 WIDTH=10></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=4><B>Returning Your System to a Predefined State with System Restore</B></FONT>
+</TD>
+</TR>
+</TABLE></A>
+<P>
+Many people run into trouble with Windows right after they install a new program, upgrade a program to a newer version, or upgrade to a new version of Windows itself. When new program files interfere with the operation of other programs, you may wish that you could undo the installation and put your system back the way it was. Another common occurrence is that Windows' operation and performance degrades over time, and you may wish that you could return it to the way it ran a few weeks or months ago.
+<P>
+Windows XP contains a utility called System Restore, introduced in Windows Me. This program watches your system as you work, noting when program files are installed, changed, or deleted. It keeps a log of these changes for the last one to three weeks (depending on how many changes you make). You can also tell it to take a "snapshot"--a <A NAME="ddrestorepoint"><I>restore point</I></A>--of the state of the system and store it away. For example, you might want to take a snapshot right after you have installed Windows from scratch, along with all the applications you rely on. Later, if you decide that an installation or some other fault has irreparably damaged your computer's stability, you can tell System Restore that you'd rather return your system to the way it was when you took the restore point snapshot.
+<P>
+When you tell System Restore to create a restore point, it makes copies of the critical files that define how the system works and what applications it is registered to use (the Registry, Windows program files, and other program files). It stores these copies, which are used later to restore the system to that state, in another location on your hard drive.
+<P>
+<TABLE><TR><TD VALIGN="TOP"><IMG SRC="../images/caution.png" ALT="caution" WIDTH=95 HEIGHT=29></TD>
+<TD VALIGN="TOP">Not <I>all</I> files are copied, only program files. Your documents aren't stored--System Restore does <I>not</I> take the place of regular backups of the files you create and edit. System Restore does not take your computer back in time, as a product called GoBack from Adaptec (<A HREF="http://www.adaptec.com"><B>http://www.adaptec.com</B></A>) claims to do. Under System Restore, all of the nonsystem changes and additions you make will still be there. Even an offending application will still have all of its files available. The important thing is that the system files, including most of the <A HREF="../registry/index.htm">Registry</A>, the central repository for all configuration settings in Windows, are returned to a state prior to the bad change.
+
+</TD></TR></TABLE>
+<P>
+System Restore restores programs, not documents. It doesn't restore Word documents, Excel spreadsheets, Access databases, text files, Web pages, or files in the My Documents folder.
+<P>
+<TABLE><TR><TD VALIGN="TOP"><IMG SRC="../images/tip.png" ALT="tip" WIDTH=95 HEIGHT=29></TD>
+<TD VALIGN="TOP">If you want to make sure that restoring from a restore point won't affect a file, move the file to the My Documents folder.
+
+</TD></TR></TABLE>
+<P>
+To protect against major damage to your files, be sure to make regular backups. If you use Windows XP Professional, also consider making a <A HREF="../backup/8.htm#1">Automated System Recovery</A> floppy disk, which can help in restoring your hard disk if Windows is too damaged to run System Restore.
+<A NAME="2">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Automatic Restore Points</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+System Restore creates a number of restore points automatically:
+<UL>
+<LI >
+<B>Initial system checkpoint</B>  Created the first time you start your computer after installing Windows XP.
+<LI >
+<B>System checkpoints</B>  Created every 10 hours that Windows is running or every 24 hours (or as soon thereafter as you run Windows again).
+<LI >
+<B>Program installation checkpoints</B>  Created when you install a new program, it records the state of the system just <I>before</I> the installation.
+<LI >
+<B>Windows automatic update restore points</B>  Created when you install an update to Windows, it records the state of the system just <I>before</I> the installation.
+</UL>
+<P>
+In addition, you can create a restore point whenever you like, as described in the next two sections.
+<A NAME="3">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Running System Restore</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+System Restore is installed and running behind the scenes by default all the time that Windows is running. You can do only two things with it directly:
+<UL>
+<LI >
+Create a restore point for the current state of your system
+<LI >
+Return your system to a previously recorded restore point
+</UL>
+<P>
+To run the System Restore program, choose Start | All Programs | Accessories | Systems Tools | System Restore. You can also run it by choosing Start | Help And Support and clicking Undo Changes To Your Computer With System Restore in the right column (under Pick A Task). If you happen to have the <A HREF="../trouble/1.htm#7">System Information window</A> open (as shown in Figure 35-1), choose Tools | System Restore. No matter how you start it, you see the System Restore window, with two options: Restore My Computer To An Earlier Time and Create A Restore Point. If you've restored your system to a restore point recently, a third option also appears: Undo My Last Restoration.
+<A NAME="4">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Configuring System Restore</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+Although System Restore is running all the time by default, you can turn it off. To do so, to make sure that it's turned on, or to change its configuration, follow these steps:
+<OL>
+<LI  VALUE=1>
+Click Start, right-click My Computer, and choose Properties from the menu that appears. You see the System Properties window.
+<LI  VALUE=2>
+Click the System Restore tab, as shown in Figure 35-4.
+</OL>
+<TABLE BORDER=2><TR><TD ALIGN=CENTER>
+<IMG SRC="trouble.srtab.png" WIDTH=419 HEIGHT=486 ALT="[figure]">
+</TD></TR><TR BGCOLOR="#00ffff"><TD><I>Figure 35-4:  Configuring System Restore</I></TD></TR></TABLE>
+<OL>
+<LI  VALUE=3>
+2.Click the Turn Off System Restore On All Drives check box until it contains a check mark if you <I>don't</I> want to be able to use System Restore. Click it until it is empty if you want System Restore runs in the background all the time, creating restore points to which you can return. (We recommend that you leave it running--leave the check box blank.)
+<LI  VALUE=4>
+You can control how much space System Restore uses for its restore points. Click a drive in the Available Drives box and click the Settings button to display the Disk Space Usage slider for that drive. Move the slider to specify how much of your hard disk (the disk on which the Windows program file is stored, if you have more than one) may be used to store restore points.
+</OL>
+<P>
+<TABLE><TR><TD VALIGN="TOP"><IMG SRC="../images/tip.png" ALT="tip" WIDTH=95 HEIGHT=29></TD>
+<TD VALIGN="TOP">If you have a dual-boot computer and one disk or partition is used only for the program files of another version of Windows, turn off System Restore for that disk or partition. When you are running Windows XP, you shouldn't be changing the files on that disk or partition.
+
+</TD></TR></TABLE>
+<OL>
+<LI  VALUE=5>
+Click OK on both dialog boxes to save any changes.
+</OL>
+<P>
+<TABLE><TR><TD VALIGN="TOP"><IMG SRC="../images/note.png" ALT="note" WIDTH=95 HEIGHT=29></TD>
+<TD VALIGN="TOP">System Restore won't run if you have less than 200MB free on your hard disk (the hard disk that contains the Windows system folder, if you have more than one hard disk). It notifies you of the problem and offers to run Disk Cleanup.
+
+</TD></TR></TABLE>
+<A NAME="5">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Creating a Restore Point</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+You can create a restore point any time you think you are about to make a change to the system that might be risky. It's a good idea to create a restore point when everything is working fine, so you can get your Windows system back to that state again later. A restore point you create is called a <A NAME="ddmanualcheckpoint"><I>manual checkpoint</I></A>. To create a restore point of your own, follow these steps:
+<OL>
+<LI  VALUE=1>
+Choose Start | All Programs | Accessories | Systems Tools | System Restore.
+<LI  VALUE=2>
+Select Create A Restore Point and click Next.
+<LI  VALUE=3>
+Enter a description of the save point for future reference. If you are installing software immediately after creating the save point, make note of it.
+<LI  VALUE=4>
+Click Next. System Restore creates the restore point and asks you to confirm the information about it.
+<LI  VALUE=5>
+Read the description to make sure you haven't missed anything. Click Back if you want to change the description you entered. Click OK.
+</OL>
+<P>
+That's it. You've finished. If you need to access System Restore when there's a serious problem that prevents you from restarting your computer normally, reboot into <A HREF="../hardware/6.htm#3">Safe Mode</A>.
+<A NAME="6">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Restoring Your System to a Restore Point</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+If your system starts acting strangely, if you get a virus, or if you delete a program file by accident, you can return the program files on your system to the way they were when System Restore created a restore point. Follow these steps:
+<OL>
+<LI  VALUE=1>
+Choose Start | All Programs | Accessories | Systems Tools | System Restore.
+<LI  VALUE=2>
+Select Restore My Computer To An Earlier Time and click Next.
+<LI  VALUE=3>
+You see a calendar of the current month. Days for which there is a restore point appear highlighted. Click a date to see a list of the restore points created on that day (as shown in Figure 35-5).
+</OL>
+<TABLE BORDER=2><TR><TD ALIGN=CENTER>
+<IMG SRC="trouble.srcalendar.png" WIDTH=776 HEIGHT=572 ALT="[figure]">
+</TD></TR><TR BGCOLOR="#00ffff"><TD><I>Figure 35-5:  System Restore shows the restore points you can choose from.</I></TD></TR></TABLE>
+<OL>
+<LI  VALUE=4>
+Click the restore point to which you want to return your system and click Next.
+<LI  VALUE=5>
+System Restore reminds you to close all other programs before continuing. Do so and click OK.
+<LI  VALUE=6>
+System Restore shows the date, time, and description of the restore point you chose for your confirmation. Click Next. The restoration may take a few minutes and includes restarting Windows. When Windows is running again, you see the System Restore window, reporting whether the restore was successful.
+<LI  VALUE=7>
+Click OK.
+</OL>
+<P>
+Another way to return your system to a restore point is by starting your computer in <A HREF="../trouble/1.htm#3">Safe Mode</A>. After you log in and before you see the Windows desktop, Windows asks whether you want to run System Restore.
+<A NAME="7">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Undoing a Restoration</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+If you return your system to a restore point and it doesn't solve the problem you were facing, you can undo the restoration by following these steps:
+<OL>
+<LI  VALUE=1>
+Choose Start | All Programs | Accessories | Systems Tools | System Restore.
+<LI  VALUE=2>
+Choose Undo My Last Restoration and click Next.
+<LI  VALUE=3>
+System Restore prompts you to close all other programs and confirm the operation that you want to undo. In the process of undoing the restoration, it restarts Windows.
+</OL>
+<P>
+<A HREF="5.htm"  OnMouseOver='whomp(prevb, "sprev");' OnMouseOut='whomp(prevb, "wprev");'
+ title="Previous Section"><IMG NAME=prevb SRC="../images/wprev.png" ALT="Previous" HEIGHT=20 WIDTH=82 BORDER=0></A><!--
+--><A HREF="index.htm" OnMouseOver='whomp(chapb, "schap");' OnMouseOut='whomp(chapb, "wchap");'
+title="Chapter Overview"><IMG SRC="../images/wchap.png" ALT="Chapter" NAME=chapb HEIGHT=20 WIDTH=100 BORDER=0></A><A
+HREF="../index.htm" OnMouseOver='whomp(tocb, "sbook");' OnMouseOut='whomp(tocb, "wbook");' 
+title="Table of Contents"><IMG SRC="../images/wbook.png" ALT="Contents" NAME=tocb HEIGHT=20 WIDTH=94 BORDER=0></A><A
+HREF="../glossary/index.htm" OnMouseOver='whomp(glosb, "sglos");' OnMouseOut='whomp(glosb, "wglos");' 
+title="Glossary"><IMG SRC="../images/wglos.png" ALT="Glossary" NAME=glosb HEIGHT=20 WIDTH=94 BORDER=0></A><!--
+--><A HREF="7.htm"  OnMouseOver='whomp(nextb, "snext");' OnMouseOut='whomp(nextb, "wnext");'
+ title="Next Section"><IMG NAME=nextb SRC="../images/wnext.png" ALT="Next" HEIGHT=20 WIDTH=82 BORDER=0></A>
+<BR>
+</BLOCKQUOTE>
+</BODY>
+</HTML>

@@ -1,0 +1,10 @@
+{var dz=document;dz.writeln("<script language=\"javascript\">");
+dz.writeln("var width='120';");
+dz.writeln("var height='600';");
+dz.writeln("var swf_path='http://cdn.fastclick.net/fastclick.net/cid35795/duck_hunter120x600.swf';");
+dz.writeln("var img_path='http://cdn.fastclick.net/fastclick.net/cid35795/duck_hunter120x600.gif';");
+dz.writeln("var click_url='http://cmedia3.an.sb.fastclick.net/w/click.here?cid=37856&mid=79112&sid=19203&m=3&c=0';");
+dz.writeln("var click_url2='http://cmedia3.an.sb.fastclick.net/w/click.here?cid=37856&mid=79112&sid=19203&m=3&c=0';");
+dz.writeln("var bcolor='#ffffff';");
+dz.writeln("<\/script>");
+dz.writeln("<script src=\"http://cdn.fastclick.net/fastclick.net/v4flash.js\"><\/script>");}

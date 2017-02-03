@@ -1,0 +1,113 @@
+<!doctype html public "-//IETF//DTD HTML//EN">
+<HTML>
+<HEAD>
+<TITLE>Windows XP: The Complete Reference: Printing and Faxing</TITLE>
+<META NAME="GENERATOR" CONTENT="Web-O-Matic Deluxe 4.1">
+<META NAME="AUTHOR" CONTENT="John R. Levine, Margaret Levine Young">
+<META NAME="COPYRIGHT" CONTENTS="Copyright 2001 by The McGraw-Hill Companies. All rights reserved.">
+</HEAD>
+<BODY BACKGROUND="../images/background.png">
+<BLOCKQUOTE>
+<SCRIPT LANGUAGE="JavaScript">
+function whomp(i, file)
+{
+	i.src = "../images/" + file + ".png";
+}
+</SCRIPT>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarered3x3.png" HEIGHT=3 WIDTH=3></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=2>
+Chapter 14: Printing and Faxing
+</FONT></TD>
+</TR>
+</TABLE>
+<BR>
+<A HREF="2.htm"  OnMouseOver='whomp(prev, "sprev");' OnMouseOut='whomp(prev, "wprev");'
+ title="Previous Section"><IMG NAME=prev SRC="../images/wprev.png" ALT="Previous" HEIGHT=20 WIDTH=82 BORDER=0></A><!--
+--><A HREF="index.htm" OnMouseOver='whomp(chap, "schap");' OnMouseOut='whomp(chap, "wchap");'
+title="Chapter Overview"><IMG SRC="../images/wchap.png" ALT="Chapter" NAME=chap HEIGHT=20 WIDTH=100 BORDER=0></A><A
+HREF="../index.htm" OnMouseOver='whomp(toc, "sbook");' OnMouseOut='whomp(toc, "wbook");' 
+title="Table of Contents"><IMG SRC="../images/wbook.png" ALT="Contents" NAME=toc HEIGHT=20 WIDTH=94 BORDER=0></A><A
+HREF="../glossary/index.htm" OnMouseOver='whomp(glos, "sglos");' OnMouseOut='whomp(glos, "wglos");' 
+title="Glossary"><IMG SRC="../images/wglos.png" ALT="Glossary" NAME=glos HEIGHT=20 WIDTH=94 BORDER=0></A><!--
+--><A HREF="4.htm"  OnMouseOver='whomp(next, "snext");' OnMouseOut='whomp(next, "wnext");'
+ title="Next Section"><IMG NAME=next SRC="../images/wnext.png" ALT="Next" HEIGHT=20 WIDTH=82 BORDER=0></A>
+<BR>
+<A NAME="1">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarered10x10.png" HEIGHT=10 WIDTH=10></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=4><B>What Are Fonts?</B></FONT>
+</TD>
+</TR>
+</TABLE></A>
+<P>
+Modern computer screens and printers can display text in a variety of <A NAME="ddtypefaces"><I>typefaces</I></A> and sizes, as illustrated here:
+<BR><IMG ALIGN=TOP SRC="printing.samples.png" WIDTH=365 HEIGHT=87 ALT="[image]">
+<P>
+In <A NAME="ddfixedpitch"><I>fixed-pitch</I></A> typefaces, all the characters are the same width, as on a typewriter. In <A NAME="ddproportionallyspaced"><I>proportionally spaced</I></A> typefaces, different characters are different widths. (The relative widths vary from one typeface to another.) Most typefaces are available in different sizes, with the sizes measured in printer's points, 1/72 inch. The most common sizes are 10-point and 12-point, roughly corresponding to sizes of elite and pica typewriter type. Fonts are often provided in several variations, such as normal, bold, italic, and bold-italic.
+<P>
+Typographers use the terms <I>font</I> and <I>typeface</I> with a bit more exactness than computer people. To typographers, a <I>typeface</I> refers to the underlying design of the characters, while a <A NAME="ddfont"><I>font</I></A><I> </I>is the collection of all the characters in a typeface of a given size and variation. For example, Arial is a typeface and Arial italic 12-point is a font. This precision usually gets lost in computer discussions, where <I>font</I> and <I>typeface</I> are used interchangeably. Windows refers to Arial as a font, and (having noted our objections) we will do the same.
+<P>
+Windows comes with a small but adequate set of fonts, but many programs and printer drivers include fonts of their own. Once a font is installed, any program can use it, no matter where the font came from. Thus, a typical Windows installation may have 50 to 100 fonts available, each in a wide variety of sizes.
+<P>
+<TABLE><TR><TD VALIGN="TOP"><IMG SRC="../images/note.png" ALT="note" WIDTH=95 HEIGHT=29></TD>
+<TD VALIGN="TOP">In addition to fonts that contain letters and numbers, Windows comes with several fonts of special characters. You can use the <A HREF="../docs/4.htm#1">Character Map</A> program to look at them and add them to your documents.
+
+</TD></TR></TABLE>
+<A NAME="2">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>What Is TrueType?</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+Computer printers and screens print and display characters by printing or displaying patterns of black-and-white (or colored) dots. The size of the dots depends on the resolution of the device, ranging from 72 to 100 dots per inch (dpi) on screens, to 300, 600, or even 1,200 dpi on laser printers. In early versions of Windows, each typeface was provided as a <A NAME="ddbitmap"><I>bitmap</I></A> (dot picture) of the actual black and white dots for each character, with separate bitmaps for each size. The bitmaps were available only in a small variety of sizes, such as Courier 10-, 12-, and 18-point.
+<P>
+This scheme does not produce very good-looking documents, because the dot resolution of printers is rarely the same as that for a screen. In the process of printing, Windows had to rescale each character's bitmap to the printer's resolution, producing odd-looking characters with unattractive jagged corners. Even worse, if you used a font in a size other than one of the sizes provided, the system had to do a second level of rescaling, producing even worselooking characters.
+<P>
+<A NAME="ddtruetype"><I>TrueType</I></A> solves both of these problems by storing each typeface not as a set of bitmaps, but essentially as a set of formulas the system can use to <I>render </I>(draw) each character at any desired size and resolution. This means that TrueType fonts look consistent on all devices, and that you can use them in any size.
+<P>
+<TABLE><TR><TD VALIGN="TOP"><IMG SRC="../images/tip.png" ALT="tip" WIDTH=95 HEIGHT=29></TD>
+<TD VALIGN="TOP">Use <I>only</I> TrueType fonts in documents that you plan to print, to make your documents look their best.
+
+</TD></TR></TABLE>
+<A NAME="3">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>How Do Printers Handle Fonts?</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+Older printers had one or two fonts built in, and when you printed a document, those were the fonts you got. Modern printers can print any image that the resolution of the printer permits, so they can print all the fonts that are installed on your system.
+<P>
+Most printers have a reasonable set of built-in, general-purpose fonts, and some printers can accept font cartridges with added fonts. Occasionally, you may want to print a document that contains fonts your printer doesn't know, and then one of the following three things happens:
+<UL>
+<LI >
+Windows reverts to printing graphics, in effect turning your document into a full-page bitmap image that Windows can send (slowly) to the printer.
+<LI >
+If your printer is smart enough (most laser printers that use PostScript and PCL5 are), Windows can send the printer all the fonts that a particular document needs. This delays the start of the print job a little, but as soon as the printing starts it proceeds at a normal speed.
+<LI >
+To speed up printing, Windows uses <A NAME="ddfontsubstitution"><I>font substitution</I></A>, using built-in printer fonts where possible for similar TrueType fonts. For example, Microsoft's Arial font is nearly identical to the Helvetica font found in PostScript printers, so when Windows prints Arial text, it tells the printer to use Helvetica instead. This process of font substitution normally works smoothly, although occasionally on clone printers, the built-in fonts aren't exactly what Windows expects and the results can look a little off. (You can tell Windows to turn off font substitution if you suspect that's a problem.)
+</UL>
+<P>
+<A HREF="2.htm"  OnMouseOver='whomp(prevb, "sprev");' OnMouseOut='whomp(prevb, "wprev");'
+ title="Previous Section"><IMG NAME=prevb SRC="../images/wprev.png" ALT="Previous" HEIGHT=20 WIDTH=82 BORDER=0></A><!--
+--><A HREF="index.htm" OnMouseOver='whomp(chapb, "schap");' OnMouseOut='whomp(chapb, "wchap");'
+title="Chapter Overview"><IMG SRC="../images/wchap.png" ALT="Chapter" NAME=chapb HEIGHT=20 WIDTH=100 BORDER=0></A><A
+HREF="../index.htm" OnMouseOver='whomp(tocb, "sbook");' OnMouseOut='whomp(tocb, "wbook");' 
+title="Table of Contents"><IMG SRC="../images/wbook.png" ALT="Contents" NAME=tocb HEIGHT=20 WIDTH=94 BORDER=0></A><A
+HREF="../glossary/index.htm" OnMouseOver='whomp(glosb, "sglos");' OnMouseOut='whomp(glosb, "wglos");' 
+title="Glossary"><IMG SRC="../images/wglos.png" ALT="Glossary" NAME=glosb HEIGHT=20 WIDTH=94 BORDER=0></A><!--
+--><A HREF="4.htm"  OnMouseOver='whomp(nextb, "snext");' OnMouseOut='whomp(nextb, "wnext");'
+ title="Next Section"><IMG NAME=nextb SRC="../images/wnext.png" ALT="Next" HEIGHT=20 WIDTH=82 BORDER=0></A>
+<BR>
+</BLOCKQUOTE>
+</BODY>
+</HTML>

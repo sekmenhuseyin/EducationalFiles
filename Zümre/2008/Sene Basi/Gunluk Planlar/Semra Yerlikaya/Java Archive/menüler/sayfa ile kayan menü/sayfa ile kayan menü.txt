@@ -1,0 +1,64 @@
+<span id="staticcombo" style="position:absolute;left:500;top:0;visibility:hidden" align="center">
+<form name="jumpy">
+<p><select name="example" size="1">
+<option value="index.htm">AnaSayfa</option>
+<option value="linkler.htm">Linkler</option>
+<option value="grafik.htm">Grafikler</option>
+<option value="http://www.designertr.gen.ms">Designer-Tr Toplist</option>
+</select>
+
+<script language="javascript">
+<!--
+
+/*Always-visible combo box credit:
+Website Abstraction (www.wsabstract.com)
+Bu JavaScript http://www.javasayfasi.com sitesinden alinmistir
+Türkçe JavaScript Arsiviniz ::: JavaSayfasi.com
+*/
+
+function gone()
+{
+location=document.jumpy.example.options[document.jumpy.example.selectedIndex].value
+}
+//-->
+</script>
+
+<input type="button" name="test" value="< Sayfaya Git! >"
+onClick="gone()">
+</p>
+<br>
+</form>
+</span>
+
+
+<script language="JavaScript1.2">
+var combowidth=''
+var comboheight=''
+
+function initialize(){
+if (document.all){
+combowidth=staticcombo.offsetWidth
+comboheight=staticcombo.offsetHeight
+setInterval("staticit_ie()",50)
+staticcombo.style.visibility="visible"
+}
+else if (document.layers){
+combowidth=document.staticcombo.document.width
+comboheight=document.staticcombo.document.height
+setInterval("staticit_ns()",50)
+document.staticcombo.visibility="show"
+}
+}
+
+function staticit_ie(){
+staticcombo.style.pixelLeft=document.body.scrollLeft+document.body.clientWidth-combowidth-30
+staticcombo.style.pixelTop=document.body.scrollTop+document.body.clientHeight-comboheight
+}
+
+function staticit_ns(){
+document.staticcombo.left=pageXOffset+window.innerWidth-combowidth-30
+document.staticcombo.top=pageYOffset+window.innerHeight-comboheight
+}
+
+window.onload=initialize
+</script>

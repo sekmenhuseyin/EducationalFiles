@@ -1,0 +1,142 @@
+<!doctype html public "-//IETF//DTD HTML//EN">
+<HTML>
+<HEAD>
+<TITLE>Windows XP: The Complete Reference: Tuning Windows XP for Maximum Performance</TITLE>
+<META NAME="GENERATOR" CONTENT="Web-O-Matic Deluxe 4.1">
+<META NAME="AUTHOR" CONTENT="John R. Levine, Margaret Levine Young">
+<META NAME="COPYRIGHT" CONTENTS="Copyright 2001 by The McGraw-Hill Companies. All rights reserved.">
+</HEAD>
+<BODY BACKGROUND="../images/background.png">
+<BLOCKQUOTE>
+<SCRIPT LANGUAGE="JavaScript">
+function whomp(i, file)
+{
+	i.src = "../images/" + file + ".png";
+}
+</SCRIPT>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarered3x3.png" HEIGHT=3 WIDTH=3></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=2>
+Chapter 34: Tuning Windows XP for Maximum Performance
+</FONT></TD>
+</TR>
+</TABLE>
+<BR>
+<A HREF="0.htm"  OnMouseOver='whomp(prev, "sprev");' OnMouseOut='whomp(prev, "wprev");'
+ title="Previous Section"><IMG NAME=prev SRC="../images/wprev.png" ALT="Previous" HEIGHT=20 WIDTH=82 BORDER=0></A><!--
+--><A HREF="index.htm" OnMouseOver='whomp(chap, "schap");' OnMouseOut='whomp(chap, "wchap");'
+title="Chapter Overview"><IMG SRC="../images/wchap.png" ALT="Chapter" NAME=chap HEIGHT=20 WIDTH=100 BORDER=0></A><A
+HREF="../index.htm" OnMouseOver='whomp(toc, "sbook");' OnMouseOut='whomp(toc, "wbook");' 
+title="Table of Contents"><IMG SRC="../images/wbook.png" ALT="Contents" NAME=toc HEIGHT=20 WIDTH=94 BORDER=0></A><A
+HREF="../glossary/index.htm" OnMouseOver='whomp(glos, "sglos");' OnMouseOut='whomp(glos, "wglos");' 
+title="Glossary"><IMG SRC="../images/wglos.png" ALT="Glossary" NAME=glos HEIGHT=20 WIDTH=94 BORDER=0></A><!--
+--><A HREF="2.htm"  OnMouseOver='whomp(next, "snext");' OnMouseOut='whomp(next, "wnext");'
+ title="Next Section"><IMG NAME=next SRC="../images/wnext.png" ALT="Next" HEIGHT=20 WIDTH=82 BORDER=0></A>
+<BR>
+<A NAME="1">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarered10x10.png" HEIGHT=10 WIDTH=10></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=4><B>Tuning Your Computer's Performance with the Performance Options Dialog Box</B></FONT>
+</TD>
+</TR>
+</TABLE></A>
+<P>
+Things have changed drastically in the migration from Windows Me/9x to Windows 2000. Even the differences between Windows 2000 and Windows XP are significant. Most of the changes and additions to performance tuning are oriented towards the new interface (the Windows XP desktop theme). For slower computers and for people who like to fiddle with the details of system configuration, this is a great thing. For the rest of us, it means a lot of options that control minor aspects of the interface, such as whether a drop shadow appears under menus or whether the taskbar buttons slide instead of just appearing and disappearing.
+<P>
+To look at and change settings that affect Windows performance, you use the Performance Options dialog box. Click Start, right-click My Computer, and choose Properties to display the System Properties dialog box, which contains information about many aspects of your computer system. Click the Advanced tab (shown in Figure 34-1) and then click the Settings button in the Performance section (the top part). You see the Performance Options dialog box (shown in Figure 34-2).
+<TABLE BORDER=2><TR><TD ALIGN=CENTER>
+<IMG SRC="performance.sysprop.png" WIDTH=419 HEIGHT=486 ALT="[figure]">
+</TD></TR><TR BGCOLOR="#00ffff"><TD><I>Figure 34-1:  The Advanced tab of the System Properties dialog box</I></TD></TR></TABLE>
+<TABLE BORDER=2><TR><TD ALIGN=CENTER>
+<IMG SRC="performance.perfopts-vistab.png" WIDTH=367 HEIGHT=463 ALT="[figure]">
+</TD></TR><TR BGCOLOR="#00ffff"><TD><I>Figure 34-2:  The Visual Effects tab of the Performance Options dialog box</I></TD></TR></TABLE>
+<A NAME="2">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Tuning Your Display Settings</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+The Visual Effects tab of the Performance Options dialog box lists about a dozen effects that make your screen display look snazzy but that also require processing power almost every time your computer updates the screen. The top part of the dialog box shows four options:
+<UL>
+<LI >
+<B>Let Windows Choose What's Best For My Computer</B><B>  </B>Windows decides which effects to make active (or inactive) based on the system resources you have available. Newer, faster systems have most, if not all, effects selected.
+<LI >
+<B>Adjust For Best Appearance</B>  Turns all effects on.
+<LI >
+<B>Adjust For Best Performance</B>  Turns all effects off.
+<LI >
+<B>Custom</B>  Enables you to select which effects you want active.
+</UL>
+<P>
+The list of screen effects appears in the lower part of the dialog box with check boxes to show which effects are active. If you select Custom, you can override Windows settings. Most of the effects do exactly what their names say they do, but two names defy comprehension:
+<UL>
+<LI >
+<B>Use Common Tasks In Folders</B>  Toggles on and off the Task pane that appears by default in all Explorer windows. (We find it particularly useful.)
+<LI >
+<B>Use Visual Styles On Windows And Buttons</B>  Toggles on and off the default Windows XP appearance. If you use a utility like WindowBlinds (<A HREF="http://www.windowblinds.net"><B>http://www.windowblinds.net</B></A>) from Stardock Corporation , be sure to uncheck this item or else the Windows XP appearance will conflict with your WindowBlinds skins.
+</UL>
+<A NAME="3">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Tuning Your Processor and Memory Settings</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+A few settings affect how Windows allocates its resources. These settings appear on the Advanced tab of the Performance Options dialog box (see Figure 34-3).<B></B>
+<TABLE BORDER=2><TR><TD ALIGN=CENTER>
+<IMG SRC="performance.perfopts-advtab.png" WIDTH=367 HEIGHT=463 ALT="[figure]">
+</TD></TR><TR BGCOLOR="#00ffff"><TD><I>Figure 34-3:  The Performance Options dialog box showing the Advanced tab</I></TD></TR></TABLE>
+<UL>
+<LI >
+<B>Processor Scheduling</B><B>  </B>Controls how Windows allocates processor time to processes. You can elect to favor either Programs (applications) or Background Services (processes that Windows runs behind the scenes). If your computer provides file, printing, or Internet connection services for other computers on a network, you may wish to select Background Services to give requests from other computers higher priority. Otherwise, leave it at Programs. You can use the computer even if Background Services is selected, though your programs may run slowly.
+<LI >
+<B>Memory Usage</B><B>  </B>This setting, which controls how Windows allocates your computer's memory, is interesting. Normally, leave this setting at its default, Programs, to give your programs as much memory as they need. However, if you tend to load a few applications and then run them without loading other applications, you may be better served by selecting the System Cache option. Specifically designed for Web and network servers, this setting can also assist users who frequently access large files. The System Cache has priority over the disc cache, and is faster.
+</UL>
+<A NAME="4">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Tuning Your Swap File Size</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+Windows automatically manages program storage by using <A NAME="ddvirtualmemory"><I>virtual memory</I></A>, which moves chunks of program and data storage between disk and memory automatically, so individual programs don't have to do all their own memory management.
+<P>
+Normally, Windows manages virtual memory automatically but in a few cases, you may want to change its parameters. Click the Change button in the Virtual Memory part of the Advanced tab of the Performance Options dialog box to see the Virtual Memory dialog box, as shown in Figure 34-4. You can specify the disk drive on which Windows stores its <A NAME="ddswapfile"><I>swap file</I></A> (the file to which virtual memory is copied), along with the minimum and maximum sizes of the swap file. Click a drive to see the settings for any swap file stored on it.
+<TABLE BORDER=2><TR><TD ALIGN=CENTER>
+<IMG SRC="performance.vm.png" WIDTH=344 HEIGHT=438 ALT="[figure]">
+</TD></TR><TR BGCOLOR="#00ffff"><TD><I>Figure 34-4:  Virtual Memory settings</I></TD></TR></TABLE>
+<P>
+You might want to set your own virtual memory settings in two cases:
+<UL>
+<LI >
+If you have more than one disk, Windows normally puts the swap file on the <A HREF="../harddisks/1.htm#3">boot partition</A> (the partition or drive from which Windows loads). If you have another partition or drive that is larger or faster, you might want to tell Windows to store the swap file there, instead.
+<LI >
+If you are extremely short of disk space, you can decrease the amount of virtual memory and, hence, the disk space that Windows allocates. If you decrease virtual memory too far, programs may fail as they run out of memory. Generally, there's no advantage to increasing the amount of virtual memory beyond the default because extra virtual memory doesn't make the system run any faster.
+</UL>
+<P>
+You can also disable virtual memory altogether, which is usually a bad idea unless you have an enormous amount of RAM.
+<P>
+<A HREF="0.htm"  OnMouseOver='whomp(prevb, "sprev");' OnMouseOut='whomp(prevb, "wprev");'
+ title="Previous Section"><IMG NAME=prevb SRC="../images/wprev.png" ALT="Previous" HEIGHT=20 WIDTH=82 BORDER=0></A><!--
+--><A HREF="index.htm" OnMouseOver='whomp(chapb, "schap");' OnMouseOut='whomp(chapb, "wchap");'
+title="Chapter Overview"><IMG SRC="../images/wchap.png" ALT="Chapter" NAME=chapb HEIGHT=20 WIDTH=100 BORDER=0></A><A
+HREF="../index.htm" OnMouseOver='whomp(tocb, "sbook");' OnMouseOut='whomp(tocb, "wbook");' 
+title="Table of Contents"><IMG SRC="../images/wbook.png" ALT="Contents" NAME=tocb HEIGHT=20 WIDTH=94 BORDER=0></A><A
+HREF="../glossary/index.htm" OnMouseOver='whomp(glosb, "sglos");' OnMouseOut='whomp(glosb, "wglos");' 
+title="Glossary"><IMG SRC="../images/wglos.png" ALT="Glossary" NAME=glosb HEIGHT=20 WIDTH=94 BORDER=0></A><!--
+--><A HREF="2.htm"  OnMouseOver='whomp(nextb, "snext");' OnMouseOut='whomp(nextb, "wnext");'
+ title="Next Section"><IMG NAME=nextb SRC="../images/wnext.png" ALT="Next" HEIGHT=20 WIDTH=82 BORDER=0></A>
+<BR>
+</BLOCKQUOTE>
+</BODY>
+</HTML>

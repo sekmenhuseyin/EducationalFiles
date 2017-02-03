@@ -1,0 +1,112 @@
+<!doctype html public "-//IETF//DTD HTML//EN">
+<HTML>
+<HEAD>
+<TITLE>Windows XP: The Complete Reference: Tuning Windows XP for Maximum Performance</TITLE>
+<META NAME="GENERATOR" CONTENT="Web-O-Matic Deluxe 4.1">
+<META NAME="AUTHOR" CONTENT="John R. Levine, Margaret Levine Young">
+<META NAME="COPYRIGHT" CONTENTS="Copyright 2001 by The McGraw-Hill Companies. All rights reserved.">
+</HEAD>
+<BODY BACKGROUND="../images/background.png">
+<BLOCKQUOTE>
+<SCRIPT LANGUAGE="JavaScript">
+function whomp(i, file)
+{
+	i.src = "../images/" + file + ".png";
+}
+</SCRIPT>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarered3x3.png" HEIGHT=3 WIDTH=3></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=2>
+Chapter 34: Tuning Windows XP for Maximum Performance
+</FONT></TD>
+</TR>
+</TABLE>
+<BR>
+<A HREF="1.htm"  OnMouseOver='whomp(prev, "sprev");' OnMouseOut='whomp(prev, "wprev");'
+ title="Previous Section"><IMG NAME=prev SRC="../images/wprev.png" ALT="Previous" HEIGHT=20 WIDTH=82 BORDER=0></A><!--
+--><A HREF="index.htm" OnMouseOver='whomp(chap, "schap");' OnMouseOut='whomp(chap, "wchap");'
+title="Chapter Overview"><IMG SRC="../images/wchap.png" ALT="Chapter" NAME=chap HEIGHT=20 WIDTH=100 BORDER=0></A><A
+HREF="../index.htm" OnMouseOver='whomp(toc, "sbook");' OnMouseOut='whomp(toc, "wbook");' 
+title="Table of Contents"><IMG SRC="../images/wbook.png" ALT="Contents" NAME=toc HEIGHT=20 WIDTH=94 BORDER=0></A><A
+HREF="../glossary/index.htm" OnMouseOver='whomp(glos, "sglos");' OnMouseOut='whomp(glos, "wglos");' 
+title="Glossary"><IMG SRC="../images/wglos.png" ALT="Glossary" NAME=glos HEIGHT=20 WIDTH=94 BORDER=0></A><!--
+--><A HREF="3.htm"  OnMouseOver='whomp(next, "snext");' OnMouseOut='whomp(next, "wnext");'
+ title="Next Section"><IMG NAME=next SRC="../images/wnext.png" ALT="Next" HEIGHT=20 WIDTH=82 BORDER=0></A>
+<BR>
+<A NAME="1">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarered10x10.png" HEIGHT=10 WIDTH=10></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=4><B>Tracking System Resources</B></FONT>
+</TD>
+</TR>
+</TABLE></A>
+<P>
+To keep Windows running smoothly, it helps to know when your system resources are running low.
+<A NAME="2">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>What Are System Resources?</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+Windows XP deals with <A NAME="ddsystemresources"><I>system resources</I></A>--memory used by Windows applications--on a much more sophisticated level than Windows Me/9x. Because it is based on Windows 2000/NT, Windows XP inherits its foreparents' technological edge in memory management and does not succumb to the same resource limitations as Windows Me/9x.
+<P>
+Windows XP runs each application in its own protected memory space. If a program crashes, XP is far more likely to be responsive than Windows Me was, because other programs and Windows itself are not affected by the crash. The protected memory space also allows you to restart a crashed application safely, which rarely worked in Windows Me/9x. Of course, Windows XP has its own liabilities.
+<P>
+If you push Windows XP to the limit of its resources--by running too many programs at the same time--it behaves unreliably, just as Windows Me/9x did. This is because Windows XP requires access to global system resources just like all other versions of Windows, so the benefits of protected memory do not apply in the event of a general system overload. If you only have a 64MB system but have 256MB appetites, your system will operate unreliably, if at all. The best thing to do is to monitor your system to see where your computer's cycles are going. (A <A NAME="ddcycle"><I>cycle</I></A> is a process in which the CPU completes one string of instructions.)
+<A NAME="3">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Monitoring System Use with the Task Manager</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+Windows, like any computer system, can monitor many aspects of its own operation, including CPU use, the software disk cache, disk operations, serial port operations, and network operations. Sometimes, when system performance is unacceptable, you can monitor key aspects and determine where the bottleneck is occurring. This helps determine whether the most effective improvements would be through software reconfiguration or a hardware upgrade, such as adding more memory. The Task Manager is a small utility that comes with Windows and displays performance data, running applications, system-level processes, and network operability (see Figure 34-5).
+<TABLE BORDER=2><TR><TD ALIGN=CENTER>
+<IMG SRC="performance.taskman-proc.png" WIDTH=404 HEIGHT=455 ALT="[figure]">
+</TD></TR><TR BGCOLOR="#00ffff"><TD><I>Figure 34-5:  The Task Manager</I></TD></TR></TABLE>
+<P>
+You can run the Task Manager by right-clicking the taskbar and selecting Task Manager, or by pressing C<SMALL>TRL</SMALL>-A<SMALL>LT</SMALL>-D<SMALL>EL</SMALL>. The Task Manager loads a small icon in the notification area of the task bar, with bars that indicates at what percentage the CPU is being used.<P>
+The Processes tab lists all the processes that are currently running. If you want to see only your applications programs, rather than all the Windows-related background processes that take up most of the processes list, click the Application tab. The Networking tab displays information about your network connection, if any (see <A HREF="../peer2peer/index.htm">Chapter 28</A>). The Users tab (which doesn't appear if Fast User Switching is disabled) shows what user accounts are in use (see <A HREF="../users/index.htm">Chapter6</A>).
+<P>
+The Performance tab, as shown in Figure 34-6, reveals a plethora of technical information, the same as the equivalent tab in Windows 2000.
+<TABLE BORDER=2><TR><TD ALIGN=CENTER>
+<IMG SRC="performance.taskman-perf.png" WIDTH=404 HEIGHT=455 ALT="[figure]">
+</TD></TR><TR BGCOLOR="#00ffff"><TD><I>Figure 34-6:  The Performance tab of the Task Manager</I></TD></TR></TABLE>
+<P>
+What does this mean to the average user? Nothing. The important item to note is the CPU Usage bar graph in the top left corner. Even when the computer is idle (meaning that no applications are doing anything significant), you still see some activity. However, if the meter spikes and mouse movement is sluggish, a culprit application is probably causing havoc. Switch to the Processes tab (as shown in Figure 34-5) and look in the CPU column. (You can click a column heading to sort by the values in that column--click the CPU heading twice to list the highest CPU values at the top of the list.) The System Idle Process item should have a number from 0 to 99 in the CPU column. If a process is using a lot of CPU cycles, try closing the program that created it. You can also end (kill) a process by selecting it and clicking End Process. If that doesn't work, you may be forced to shut down and restart the computer to stop the rogue process.
+<A NAME="4">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Viewing Graphs in the System Monitor</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+Older versions of Windows came with a program called System Monitor, which graphed various measures of system performance. Windows XP also has this program--its version is shown in Figure 34-7. You can run it by choosing Start | Control Panel | Performance And Maintenance | Administrative Tools and running the Performance icon. The meanings of the items on the graph are listed below the graph. You can use the toolbar buttons to change the format of the graph and add data to it.
+<TABLE BORDER=2><TR><TD ALIGN=CENTER>
+<IMG SRC="performance.sysmon.png" WIDTH=641 HEIGHT=453 ALT="[figure]">
+</TD></TR><TR BGCOLOR="#00ffff"><TD><I>Figure 34-7:  The System Monitor</I></TD></TR></TABLE>
+<P>
+<A HREF="1.htm"  OnMouseOver='whomp(prevb, "sprev");' OnMouseOut='whomp(prevb, "wprev");'
+ title="Previous Section"><IMG NAME=prevb SRC="../images/wprev.png" ALT="Previous" HEIGHT=20 WIDTH=82 BORDER=0></A><!--
+--><A HREF="index.htm" OnMouseOver='whomp(chapb, "schap");' OnMouseOut='whomp(chapb, "wchap");'
+title="Chapter Overview"><IMG SRC="../images/wchap.png" ALT="Chapter" NAME=chapb HEIGHT=20 WIDTH=100 BORDER=0></A><A
+HREF="../index.htm" OnMouseOver='whomp(tocb, "sbook");' OnMouseOut='whomp(tocb, "wbook");' 
+title="Table of Contents"><IMG SRC="../images/wbook.png" ALT="Contents" NAME=tocb HEIGHT=20 WIDTH=94 BORDER=0></A><A
+HREF="../glossary/index.htm" OnMouseOver='whomp(glosb, "sglos");' OnMouseOut='whomp(glosb, "wglos");' 
+title="Glossary"><IMG SRC="../images/wglos.png" ALT="Glossary" NAME=glosb HEIGHT=20 WIDTH=94 BORDER=0></A><!--
+--><A HREF="3.htm"  OnMouseOver='whomp(nextb, "snext");' OnMouseOut='whomp(nextb, "wnext");'
+ title="Next Section"><IMG NAME=nextb SRC="../images/wnext.png" ALT="Next" HEIGHT=20 WIDTH=82 BORDER=0></A>
+<BR>
+</BLOCKQUOTE>
+</BODY>
+</HTML>

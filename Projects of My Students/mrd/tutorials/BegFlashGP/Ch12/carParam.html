@@ -1,0 +1,145 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>carParam</title>
+</head>
+<body bgcolor="#cccccc">
+<!--url's used in the movie-->
+<!--text used in the movie-->
+<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,0,0" width="550" height="400" id="carParam" align="middle">
+<param name="allowScriptAccess" value="sameDomain" />
+<param name="movie" value="carParam.swf" />
+<param name="quality" value="high" />
+<param name="bgcolor" value="#ffffff" />
+<embed src="carParam.swf" quality="high" bgcolor="#ffffff" width="550" height="400" name="carParam" align="middle" allowScriptAccess="sameDomain" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" />
+</object>
+<h3>Code in frame 1 layer 1</h3>
+<pre>
+//carVector
+//use vector projection to go any speed, any direction
+
+init();
+function init(){
+  car.speed = 0;
+  //direction is now in degrees
+  car.dir = 0;
+  car.dAngle = 0;
+
+  //getting values from screen
+  //would normally be initialized here
+  //car properties
+  //car.drag = .65;
+  //car.power = 3;
+  //car.turnRate = 5;
+  //car.brakes = 1;
+  car.speed = 0;
+  car.dx = 0;
+  car.dy = 0;
+ 
+}
+
+car.onEnterFrame = function(){
+  car.getNumbers();
+  car.checkKeys();
+  car.turn();
+  car.move();
+} // end enterFrame
+
+car.getNumbers = function(){
+  //converts all text input to numbers
+  //otherwise actionScript gets confused
+  car.drag = parseFloat(car.drag);
+  car.power = parseFloat(car.power);
+  car.turnRate = parseFloat(car.turnRate);
+  car.brakes = parseFloat(car.brakes);
+  
+} // end getNumbers
+
+car.turn = function(){
+  //use vector projection to get DX and DY
+
+  //offset the angle
+  degrees = this.dir -90;
+
+  //convert to radians
+  radians = degrees / 180 * Math.PI;
+
+  //get DX and DY (normalized: length is one)
+  this.dx = Math.cos(radians);
+  this.dy = Math.sin(radians);
+
+  //incorporate drag
+  this.speed *= car.drag;
+
+  //compensate for speed
+  this.dx *= this.speed;
+  this.dy *= this.speed;
+
+} // end turn;
+
+car.move = function(){
+  //moves any sprite, wrapping around boundaries
+
+  //move
+  this._x += this.dx
+  this._y += this.dy;
+
+  this._rotation = this.dir;
+  
+  //check boundaries - wrap all directions
+  if (this._x > Stage.width){
+    this._x = 0;
+  } // end if
+
+  if (this._x < 0){
+    this._x = Stage.width;
+  } // end if
+
+  if (this._y > Stage.height){
+    this._y = 0;
+  } // end if
+
+  if (this._y < 0){
+    this._y = Stage.height;
+  } // end if
+
+  //stop at really slow speeds
+  if ((this.speed > -0.5) &&
+      (this.speed < 0.5)){
+    this.speed = 0;
+  } // end if
+
+
+} // end move
+ 
+car.checkKeys = function(){
+  //check keyboard to move car
+  if (Key.isDown(Key.UP)){
+    car.speed+= car.power;
+  } // end if
+
+  if (Key.isDown(Key.DOWN)){
+    if (car.speed > -3){
+      car.speed -= car.brakes;
+    } // end if
+  } // end if
+
+  if (Key.isDown(Key.RIGHT)){
+    car.dir += car.turnRate;
+        if (car.dir > 360){
+      car.dir = car.turnRate;
+    } // end if
+  } // end if
+
+  if (Key.isDown(Key.LEFT)){
+    car.dir -= car.turnRate;
+    if (car.dir < 0){
+      car.dir = 360 - car.turnRate;
+    } // end if
+  } // end if
+
+} // end checkKeys
+</pre>
+</body>
+</html>

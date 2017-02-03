@@ -1,0 +1,138 @@
+P {
+	COLOR: #333333; FONT-FAMILY: verdana, sans-serif; FONT-SIZE: 12px; LINE-HEIGHT: 18px
+}
+.bodyText {
+	COLOR: #333333; FONT-FAMILY: verdana, sans-serif; FONT-SIZE: 12px; LINE-HEIGHT: 18px
+}
+.text10 {
+	COLOR: #333333; FONT-FAMILY: verdana, sans-serif; FONT-SIZE: 10px
+}
+.subHead {
+	COLOR: #943131; FONT-FAMILY: verdana, sans-serif; FONT-SIZE: 12px; FONT-WEIGHT: bold
+}
+.latestNews {
+	COLOR: #ffffff; FONT-FAMILY: verdana, sans-serif; FONT-SIZE: 12px; FONT-WEIGHT: bold
+}
+.bulletHead {
+	COLOR: #ffffff; FONT-FAMILY: arial, sans-serif; FONT-SIZE: 11px; FONT-WEIGHT: bold
+}
+.underBullet {
+	COLOR: #ffffff; FONT-FAMILY: arial, sans-serif; FONT-SIZE: 10px
+}
+.smallblack {
+	COLOR: #000000; FONT-FAMILY: arial, sans-serif; FONT-SIZE: 10px
+}
+UL {
+	COLOR: #943131; FONT-FAMILY: verdana, sans-serif; FONT-SIZE: 12px; LINE-HEIGHT: 18px; LIST-STYLE: square
+}
+OL {
+	FONT-FAMILY: verdana, sans-serif; FONT-SIZE: 12px; LINE-HEIGHT: 18px
+}
+H1 {
+	COLOR: #943131; FONT-FAMILY: verdana, sans-serif
+}
+H2 {
+	COLOR: #943131; FONT-FAMILY: verdana, sans-serif
+}
+H3 {
+	COLOR: #943131; FONT-FAMILY: verdana, sans-serif
+}
+H4 {
+	COLOR: #943131; FONT-FAMILY: verdana, sans-serif
+}
+H5 {
+	COLOR: #943131; FONT-FAMILY: verdana, sans-serif
+}
+H6 {
+	COLOR: #943131; FONT-FAMILY: verdana, sans-serif
+}
+H7 {
+	COLOR: #943131; FONT-FAMILY: verdana, sans-serif
+}
+BODY {
+	BACKGROUND-IMAGE: url(/images/bckgrnd.jpg); BACKGROUND-REPEAT: no-repeat
+}
+.blueBG {
+	BACKGROUND-IMAGE: url(/images/bckgrnd.jpg); BACKGROUND-REPEAT: no-repeat
+}
+A:link {
+	COLOR: #943131; TEXT-DECORATION: none
+}
+A:visited {
+	COLOR: #943131; TEXT-DECORATION: none
+}
+A:active {
+	COLOR: #943131; TEXT-DECORATION: none
+}
+A:hover {
+	COLOR: #943131; TEXT-DECORATION: underline
+}
+A.underBullet:link {
+	COLOR: #ffffff; TEXT-DECORATION: underline
+}
+A.underBullet:visited {
+	COLOR: #ffffff; TEXT-DECORATION: underline
+}
+A.underBullet:active {
+	COLOR: #ffffff; TEXT-DECORATION: underline
+}
+A.underBullet:hover {
+	COLOR: #943131; TEXT-DECORATION: underline
+}
+A.linkses:visited {
+	COLOR: #dfd796; FONT-FAMILY: verdana, sans-serif; FONT-SIZE: 10px; TEXT-DECORATION: none
+}
+A.linkses:active {
+	COLOR: #dfd796; FONT-FAMILY: verdana, sans-serif; FONT-SIZE: 10px; TEXT-DECORATION: none
+}
+A.linkses:link {
+	COLOR: #dfd796; FONT-FAMILY: verdana, sans-serif; FONT-SIZE: 10px; TEXT-DECORATION: none
+}
+A.linkses:hover {
+	COLOR: #ffffff; FONT-FAMILY: verdana, sans-serif; FONT-SIZE: 10px; TEXT-DECORATION: underline
+}
+.mbrlink {
+	FONT-FAMILY: verdana, sans-serif; FONT-SIZE: 10px
+}
+A.mbrlink:visited {
+	COLOR: #943131; FONT-FAMILY: verdana, sans-serif; FONT-SIZE: 10px; TEXT-DECORATION: none
+}
+A.mbrlink:active {
+	COLOR: #943131; FONT-FAMILY: verdana, sans-serif; FONT-SIZE: 10px; TEXT-DECORATION: none
+}
+A.mbrlink:link {
+	COLOR: #943131; FONT-FAMILY: verdana, sans-serif; FONT-SIZE: 10px; TEXT-DECORATION: none
+}
+A.mbrlink:hover {
+	COLOR: #943131; FONT-FAMILY: verdana, sans-serif; FONT-SIZE: 10px; TEXT-DECORATION: underline
+}
+.mbrlinklike {
+	COLOR: #943131; FONT-FAMILY: verdana, sans-serif; FONT-SIZE: 10px; TEXT-DECORATION: none
+}
+.linklike {
+	COLOR: #dfd796; FONT-FAMILY: verdana, sans-serif; FONT-SIZE: 10px
+}
+A.linklike:visited {
+	COLOR: #dfd796; TEXT-DECORATION: none
+}
+A.linklike:active {
+	COLOR: #dfd796; TEXT-DECORATION: none
+}
+A.linklike:link {
+	COLOR: #dfd796; TEXT-DECORATION: none
+}
+A.linklike:hover {
+	COLOR: #ffffff; TEXT-DECORATION: underline
+}
+A.linkson:visited {
+	COLOR: #ffffff; FONT-FAMILY: verdana, sans-serif; FONT-SIZE: 10px; TEXT-DECORATION: underline
+}
+A.linkson:active {
+	COLOR: #ffffff; FONT-FAMILY: verdana, sans-serif; FONT-SIZE: 10px
+}
+A.linkson:link {
+	COLOR: #ffffff; FONT-FAMILY: verdana, sans-serif; FONT-SIZE: 10px
+}
+A.linkson:hover {
+	COLOR: #ffffff; FONT-FAMILY: verdana, sans-serif; FONT-SIZE: 10px; TEXT-DECORATION: underline
+}

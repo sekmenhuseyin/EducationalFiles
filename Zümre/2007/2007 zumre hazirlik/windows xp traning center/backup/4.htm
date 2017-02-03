@@ -1,0 +1,119 @@
+<!doctype html public "-//IETF//DTD HTML//EN">
+<HTML>
+<HEAD>
+<TITLE>Windows XP: The Complete Reference: Backing Up Your Files with the Backup Utility</TITLE>
+<META NAME="GENERATOR" CONTENT="Web-O-Matic Deluxe 4.1">
+<META NAME="AUTHOR" CONTENT="John R. Levine, Margaret Levine Young">
+<META NAME="COPYRIGHT" CONTENTS="Copyright 2001 by The McGraw-Hill Companies. All rights reserved.">
+</HEAD>
+<BODY BACKGROUND="../images/background.png">
+<BLOCKQUOTE>
+<SCRIPT LANGUAGE="JavaScript">
+function whomp(i, file)
+{
+	i.src = "../images/" + file + ".png";
+}
+</SCRIPT>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarered3x3.png" HEIGHT=3 WIDTH=3></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=2>
+Chapter 9: Backing Up Your Files with the Backup Utility
+</FONT></TD>
+</TR>
+</TABLE>
+<BR>
+<A HREF="3.htm"  OnMouseOver='whomp(prev, "sprev");' OnMouseOut='whomp(prev, "wprev");'
+ title="Previous Section"><IMG NAME=prev SRC="../images/wprev.png" ALT="Previous" HEIGHT=20 WIDTH=82 BORDER=0></A><!--
+--><A HREF="index.htm" OnMouseOver='whomp(chap, "schap");' OnMouseOut='whomp(chap, "wchap");'
+title="Chapter Overview"><IMG SRC="../images/wchap.png" ALT="Chapter" NAME=chap HEIGHT=20 WIDTH=100 BORDER=0></A><A
+HREF="../index.htm" OnMouseOver='whomp(toc, "sbook");' OnMouseOut='whomp(toc, "wbook");' 
+title="Table of Contents"><IMG SRC="../images/wbook.png" ALT="Contents" NAME=toc HEIGHT=20 WIDTH=94 BORDER=0></A><A
+HREF="../glossary/index.htm" OnMouseOver='whomp(glos, "sglos");' OnMouseOut='whomp(glos, "wglos");' 
+title="Glossary"><IMG SRC="../images/wglos.png" ALT="Glossary" NAME=glos HEIGHT=20 WIDTH=94 BORDER=0></A><!--
+--><A HREF="5.htm"  OnMouseOver='whomp(next, "snext");' OnMouseOut='whomp(next, "wnext");'
+ title="Next Section"><IMG NAME=next SRC="../images/wnext.png" ALT="Next" HEIGHT=20 WIDTH=82 BORDER=0></A>
+<BR>
+<A NAME="1">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarered10x10.png" HEIGHT=10 WIDTH=10></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=4><B>Running the Backup Utility</B></FONT>
+</TD>
+</TR>
+</TABLE></A>
+<P>
+The Backup Utility has several advantages over a more informal system of copying key files onto floppies or other storage media:
+<UL>
+<LI >
+It can copy files in a compressed form, so that they take up less disk space.
+<LI >
+It can spread a single backup job over several floppies or removable disks. This feature makes it possible to back up larger jobs.
+<LI >
+When you define a backup job, you decide once and for all what folders you want the job to back up. You don't have to go through the decision process every time you do a backup.
+<LI >
+It is automated. Once the job starts, all you need to do is feed it a new disk if it asks for one. If you are backing up onto a tape drive or some other medium with sufficient size, you don't need to do anything at all.
+<LI >
+Backup can also create an <A HREF="../backup/8.htm#1">Automated System Recovery</A> floppy disk that you can use to restart your computer in the event of a disaster.
+<LI >
+It can back up files that are open. The Backup Utility takes a volume shadow copy--that is, what the files contain at the moment that the backup occurs.
+</UL>
+<A NAME="2">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Installing the Backup Utility</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+If you don't find Backup on the Start | All Programs | Accessories | System Tools menu, follow these steps:
+<OL>
+<LI  VALUE=1>
+With the Windows XP CD-ROM in your CD-ROM drive, display the folder D:\Valueadd\Msft\NTBackup in an Explorer window; substitute your CD-ROM's drive letter for D: if it's not drive D:. (If the Windows XP installation window appears, click Perform Additional Tasks, then click Browse This CD to see an Explorer window showing the files on the CD.) The folder contains two files: NTBackup.msi (the Backup installation program) and Readme.txt.
+<LI  VALUE=2>
+Run NTBackup.msi. Follow the instructions on the screen to install the Backup Utility files in your C:\Windows\System32 folder. The filename of the program is Ntbackup.exe.
+<LI  VALUE=3>
+Make a shortcut for the program. Right-click the desktop, choose New | Shortcut from the menu that appears, and type <B>C:\Windows\System32\Ntbackup</B> into the box that appears. (Replace C: with the drive letter in which Windows is installed.) After you click Next, type any name for the shortcut (such as <B>Backup</B>). Click Finish, and the shortcut appears.
+</OL>
+<A NAME="3">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Running the Backup Utility</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+Run the Backup Utility by selecting Start | All Programs | Accessories | System Tools | Backup (if you have Windows XP Professional) or by running the shortcut you just created (if you have Windows XP Home Edition). In Windows XP Professional, all users can also start the Backup Utility in one of these ways:
+<UL>
+<LI >
+choose Start | Run and type <B>ntbackup</B> in the Open box; or
+<LI >
+right-click a disk drive in an Explorer window, choose Properties to display the drive's Properties , click the Tools tab, and click the Backup Now button.
+</UL>
+<P>
+Remember that you must be logged on as an <A HREF="../users/index.htm">administrative user</A> (or with a user account that is a member of the Backup Operators group) to be able to back up or restore files.
+<P>
+The first time you run the Backup Utility, it checks your system for devices onto which you can copy files (backup devices). Then it runs the Backup Or Restore Wizard, which steps you through backing up files or restoring from a previous backup. If you'd rather not use the wizard, clear the Always Start In Wizard Mode check box on its first dialog box, and click the Advanced Mode link.
+<P>
+<TABLE><TR><TD VALIGN="TOP"><IMG SRC="../images/caution.png" ALT="caution" WIDTH=95 HEIGHT=29></TD>
+<TD VALIGN="TOP">Believe it or not, you can run three wizards from the Backup Utility: the Backup Or Restore Wizard, the Backup Wizard, and the Restore Wizard. You might think that running the Backup Or Restore Wizard and choosing Back Up Files And Settings would run the Backup Wizard, but it doesn't--the backup part of the Backup Or Restore Wizard is similar to the Backup Wizard, but it provides a few additional options. You can tell which wizard you are running by the name in the title bar of its window. We recommend using the Backup Or Restore Wizard if you must use a wizard at all--choose Tools | Switch To Wizard Mode form the Backup Utility's menu bar.
+
+</TD></TR></TABLE>
+<P>
+<A HREF="3.htm"  OnMouseOver='whomp(prevb, "sprev");' OnMouseOut='whomp(prevb, "wprev");'
+ title="Previous Section"><IMG NAME=prevb SRC="../images/wprev.png" ALT="Previous" HEIGHT=20 WIDTH=82 BORDER=0></A><!--
+--><A HREF="index.htm" OnMouseOver='whomp(chapb, "schap");' OnMouseOut='whomp(chapb, "wchap");'
+title="Chapter Overview"><IMG SRC="../images/wchap.png" ALT="Chapter" NAME=chapb HEIGHT=20 WIDTH=100 BORDER=0></A><A
+HREF="../index.htm" OnMouseOver='whomp(tocb, "sbook");' OnMouseOut='whomp(tocb, "wbook");' 
+title="Table of Contents"><IMG SRC="../images/wbook.png" ALT="Contents" NAME=tocb HEIGHT=20 WIDTH=94 BORDER=0></A><A
+HREF="../glossary/index.htm" OnMouseOver='whomp(glosb, "sglos");' OnMouseOut='whomp(glosb, "wglos");' 
+title="Glossary"><IMG SRC="../images/wglos.png" ALT="Glossary" NAME=glosb HEIGHT=20 WIDTH=94 BORDER=0></A><!--
+--><A HREF="5.htm"  OnMouseOver='whomp(nextb, "snext");' OnMouseOut='whomp(nextb, "wnext");'
+ title="Next Section"><IMG NAME=nextb SRC="../images/wnext.png" ALT="Next" HEIGHT=20 WIDTH=82 BORDER=0></A>
+<BR>
+</BLOCKQUOTE>
+</BODY>
+</HTML>

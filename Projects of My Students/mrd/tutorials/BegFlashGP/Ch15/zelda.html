@@ -1,0 +1,103 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>zelda</title>
+</head>
+<body bgcolor="#cccccc">
+<!--url's used in the movie-->
+<!--text used in the movie-->
+<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,0,0" width="550" height="400" id="zelda" align="middle">
+<param name="allowScriptAccess" value="sameDomain" />
+<param name="movie" value="zelda.swf" />
+<param name="quality" value="high" />
+<param name="bgcolor" value="#cccccc" />
+<embed src="zelda.swf" quality="high" bgcolor="#cccccc" width="550" height="400" name="zelda" align="middle" allowScriptAccess="sameDomain" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" />
+</object>
+<h3>Code in frame 1 layer 1</h3>
+<pre>
+//zelda-style game
+//zelda.fla
+//By Andy Harris, Dummies Guide to Game Programming in Flash
+
+stop();
+init();
+
+function init(){
+  player.dx = 0;
+  player.dy = 0;
+  player.speed = 5;
+} // end init
+
+//manage player control through keyboard
+player.onEnterFrame = function(){
+  player.checkKeys();
+  player.move();
+  player.checkCollisions();
+} // end enterFrame
+
+player.checkKeys = function(){
+  player.dx = 0;
+  player.dy = 0;
+
+  if (Key.isDown(Key.UP)){
+    player.dy = - player.speed;
+  } // end if
+  if (Key.isDown(Key.DOWN)){
+    player.dy = + player.speed;
+  } // end if
+  if (Key.isDown(Key.LEFT)){
+    player.dx = - player.speed;
+  } // end if
+  if (Key.isDown(Key.RIGHT)){
+    player.dx = + player.speed;
+  } // end if
+} // end checkKeys
+
+player.move = function(){
+  //calculate what position will happen next
+  newX = player._x + player.dx;
+  newY = player._y + player.dy;
+
+  //check to see if this position will hit a building
+  if (blockSW.hitTest(newX, newY, true)){
+   //do nothing, because this motion will make you crash into a building 
+   //trace ("hitting building");
+  } else {
+    //it won't be a building hit, so go for it.
+    player._x = newX;
+    player._y = newY;
+  } // end if
+
+} // end move
+
+player.checkCollisions = function(){
+  //checks for collisions with anything but buildings
+
+  //check for collision with friend
+  if (player.hitTest(friend)){
+    //make warning visible
+    warning._x = Stage.width/2;
+    warning._y = Stage.height/2;
+    warning.onRelease = function(){
+      //move warning and friend off of screen
+      warning._x = - 500;
+      warning._y = -500;
+      friend._x = -100;
+      friend._y = -100;
+    } // end warning
+  } // end friend if
+
+  //check 'doorways' to other screens
+  if (player.hitTest(toW)){
+    _root.gotoAndStop("W");
+  } // end if
+
+  if (player.hitTest(toS)){
+    _root.gotoAndStop("S");
+  } // end if
+  
+} // end checkCollisions
+</pre>
+</body>
+</html>

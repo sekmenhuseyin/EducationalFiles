@@ -1,0 +1,717 @@
+<!doctype html public "-//IETF//DTD HTML//EN">
+<HTML>
+<HEAD>
+<TITLE>Windows XP: The Complete Reference: Backing Up Your Files with the Backup Utility</TITLE>
+<META NAME="GENERATOR" CONTENT="Web-O-Matic Deluxe 4.1">
+<META NAME="AUTHOR" CONTENT="John R. Levine, Margaret Levine Young">
+<META NAME="COPYRIGHT" CONTENTS="Copyright 2001 by The McGraw-Hill Companies. All rights reserved.">
+</HEAD>
+<BODY BACKGROUND="../images/background.png">
+<BLOCKQUOTE>
+<SCRIPT LANGUAGE="JavaScript">
+function whomp(i, file)
+{
+	i.src = "../images/" + file + ".png";
+}
+</SCRIPT>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarered3x3.png" HEIGHT=3 WIDTH=3></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=2>
+Chapter 9: Backing Up Your Files with the Backup Utility
+</FONT></TD>
+</TR>
+</TABLE>
+<BR>
+<A HREF="4.htm"  OnMouseOver='whomp(prev, "sprev");' OnMouseOut='whomp(prev, "wprev");'
+ title="Previous Section"><IMG NAME=prev SRC="../images/wprev.png" ALT="Previous" HEIGHT=20 WIDTH=82 BORDER=0></A><!--
+--><A HREF="index.htm" OnMouseOver='whomp(chap, "schap");' OnMouseOut='whomp(chap, "wchap");'
+title="Chapter Overview"><IMG SRC="../images/wchap.png" ALT="Chapter" NAME=chap HEIGHT=20 WIDTH=100 BORDER=0></A><A
+HREF="../index.htm" OnMouseOver='whomp(toc, "sbook");' OnMouseOut='whomp(toc, "wbook");' 
+title="Table of Contents"><IMG SRC="../images/wbook.png" ALT="Contents" NAME=toc HEIGHT=20 WIDTH=94 BORDER=0></A><A
+HREF="../glossary/index.htm" OnMouseOver='whomp(glos, "sglos");' OnMouseOut='whomp(glos, "wglos");' 
+title="Glossary"><IMG SRC="../images/wglos.png" ALT="Glossary" NAME=glos HEIGHT=20 WIDTH=94 BORDER=0></A><!--
+--><A HREF="6.htm"  OnMouseOver='whomp(next, "snext");' OnMouseOut='whomp(next, "wnext");'
+ title="Next Section"><IMG NAME=next SRC="../images/wnext.png" ALT="Next" HEIGHT=20 WIDTH=82 BORDER=0></A>
+<BR>
+<A NAME="1">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarered10x10.png" HEIGHT=10 WIDTH=10></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=4><B>Backing Up Files with the Backup Utility</B></FONT>
+</TD>
+</TR>
+</TABLE></A>
+<P>
+Backing up files is something you should do regularly, so it's worth taking some time to create backup jobs for the files that are the most important to you and to schedule them to run daily (or at least weekly). You can create a backup job with a wizard or from the Backup Utility window, and you can run backup jobs you've already created.
+<A NAME="2">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Creating a Backup Job with the Backup Or Restore Wizard</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+The Backup Or Restore Wizard may run automatically when you start the Backup Utility. Otherwise, choose Tools | Switch To Wizard Mode from the menu bar in the Backup Utility window When the program runs, choose Back Up Files And Settings from the wizard's dialog box. Click Next to move from dialog box to dialog box, and click the Advanced button when it appears so that you have access to all the wizard's settings. You need to make the following decisions to create a new backup job (these decisions are described in more detail in the following sections):
+<UL>
+<LI >
+Whether to back up or <A HREF="../backup/6.htm#1">restore files</A>
+<LI >
+Which files to back up (see Figure 9-1)
+</UL>
+<TABLE BORDER=2><TR><TD ALIGN=CENTER>
+<IMG SRC="backup.backupwiz.png" WIDTH=506 HEIGHT=392 ALT="[figure]">
+</TD></TR><TR BGCOLOR="#00ffff"><TD><I>Figure 9-1:  The Backup Or Restore Wizard</I></TD></TR></TABLE>
+<UL>
+<LI >
+Whether to back up only your files, the files of all the user accounts on the computer, or the files that you specify
+<LI >
+Whether to back up all the selected files or just the ones that have changed since the previous backup
+<LI >
+Where to store the backup data, and whether to replace backup jobs that are already there
+<LI >
+Whether to verify the backup
+<LI >
+Whether to use compression to make the backup file smaller
+<LI >
+When to run the backup job--now, or at a later scheduled time
+</UL>
+<P>
+When you click the wizard's Finish button, if you chose to back up now, the program begins copying files. You see a Backup Progress dialog box that shows how many files will be copied, and how many have been copied so far.
+<TABLE BORDER=2><TR><TD ALIGN=CENTER>
+<IMG SRC="backup.progress.png" WIDTH=347 HEIGHT=393 ALT="[figure]">
+</TD></TR><TR BGCOLOR="#00ffff"><TD><I>Figure 9-2:  Tracking the progress of the backup</I></TD></TR></TABLE>
+<P>
+When the backup is done, you can click the Report button to see a log of the files that were copied.
+<P>
+The following sections provide you with more detail about the choices you have to make when setting up a backup job.
+<A NAME="3">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squaregreen6x6.png" HEIGHT=6 WIDTH=6></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Selecting Files to Back Up</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+The first decision you need to make is whether this backup job should be a complete backup or a backup only of selected files. You have four options:
+<UL>
+<LI >
+<B>My Documents And Settings</B>  Includes the files in your Documents And Settings folder (usually C:\Documents And Settings\<I>username</I>, where <I>username</I> is your user account name). This folder including your desktop and Start menu settings, your My Documents folder, your Favorites, and other configuration settings. If you store all your data files in your My Documents folder and its subfolders, this option is an efficient way to back up your own files--program files can always be restored from CDs.
+<LI >
+<B>Everyone's Documents And Settings</B>  Includes the Documents And Settings folders for all the <A HREF="../users/index.htm">user accounts</A> defined on your computer.
+<LI >
+<B>All Information On This Computer</B>  Includes all the files from all the drives on your computer. This option backs up Windows itself and all your application programs and data. If you are running Windows XP Professional, it also creates a <A HREF="../backup/8.htm#1">automated system recovery (ASR) disk</A>--a floppy disk from which you can start your computer and restore files from the backup in case of a complete hard disk failure.
+<LI >
+<B>Let Me Choose What To Back Up</B>  Displays a folder tree from which you can choose the files and folders you want to include.
+</UL>
+<P>
+If you choose the last option, you see a window (as shown in Figure 9-3) that works much like an <A HREF="../files/3.htm#1">Explorer window</A>. When a folder in the left pane is selected, its contents appear in the right pane. The boxes with plus or minus signs denote whether a folder is expanded. Click a plus box to see the next level of the folder tree under a given folder. Click the My Computer plus box to see the disk drives on your system.
+<TABLE BORDER=2><TR><TD ALIGN=CENTER>
+<IMG SRC="backup.foldertree.png" WIDTH=506 HEIGHT=392 ALT="[figure]">
+</TD></TR><TR BGCOLOR="#00ffff"><TD><I>Figure 9-3:  Choosing disks, folders, and files to back up</I></TD></TR></TABLE>
+<P>
+The difference between this window and an Explorer window is that each folder has a check box next to it. Clicking one of these puts a blue check mark in the box, indicating that the entire folder (and all its subfolders) has been added to the list of files and folders to be backed up. For example, clicking the check box next to the C drive icon adds the entire contents of the C drive to the backup job.
+<P>
+If you want to back up some of the files on a drive, but not all of them, click the plus box next to the drive icon to expand the folder tree underneath that drive. This gives you an opportunity to decide exactly which folders to back up. Select only those files and folders that you want to be part of this backup job. A gray check mark appears in the box next to a folder from which you have chosen to back up some, but not all, of its contents.
+<P>
+<TABLE><TR><TD VALIGN="TOP"><IMG SRC="../images/tip.png" ALT="tip" WIDTH=95 HEIGHT=29></TD>
+<TD VALIGN="TOP">To back up the <A HREF="../registry/index.htm">Registry</A>, boot files, and other system files, choose System State from the Items To Back Up list, which appears as the last item under My Computer.
+
+</TD></TR></TABLE>
+<A NAME="4">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squaregreen6x6.png" HEIGHT=6 WIDTH=6></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Choosing a Destination for the Backup File</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+The next screen of the Backup Or Restore Wizard asks where to store the backup files. The options you see depend on how you set the first setting, Select The Backup Type. You can set this to File or to a backup device--a tape drive or other mass storage device.
+<P>
+If you choose File, Backup combines the entire backup into one compressed backup file stored on the disk that you indicate. Backup files have the extension .bkf. When you restore one or more files from the backup file, the Backup Utility extracts the files you want from the backup file. When you choose File, you see these two settings, as shown in Figure 9-4:
+<TABLE BORDER=2><TR><TD ALIGN=CENTER>
+<IMG SRC="backup.type.png" WIDTH=506 HEIGHT=392 ALT="[figure]">
+</TD></TR><TR BGCOLOR="#00ffff"><TD><I>Figure 9-4:  Choosing where to store the backup</I></TD></TR></TABLE>
+<UL>
+<LI >
+<B>Choose A Place To Save Your Backup</B>  Select the drive on which to store the backup file. The drop-down box shows a list of your removable disk drives, including your floppy disk drive. (Floppy disks are convenient only when you are backing up only a few files.) You can also store a backup file on a fixed hard disk--set the box to Let Me Choose A Location Not Listed Here and click the Browse button to see your hard disks and choose a folder. (We found that you have to put a formatted floppy disk in drive A: at this point, even if you don't plan to store your backup file on the floppy.) For example, if you want to make daily backups of a few important data files, you can store the files in a Backup folder on your hard disk. However, if your hard disk dies, all your backup files will be lost. In future, the pathname you choose appears on drop-down the list of places.
+<LI >
+<B>Type A Name For This Backup</B>  This is the name of the backup file (you don't have to type the .bkf extension). The default name is Backup.bkf (the Backup Utility adds the .bkf extension).
+</UL>
+<P>
+If your computer has a tape drive, you can choose it from the Select The Backup Type drop-down menu, which includes an option for the type of backup tape you use (for example, miniQIC or Travan). Then, you have only one other option to set: Choose The Tape You Want To Use. Set this to New to use a tape that has not been catalogued by the <A HREF="../backup/2.htm#1">Removable Storage</A> program, or choose the name of an existing tape.
+<P>
+<TABLE><TR><TD VALIGN="TOP"><IMG SRC="../images/tip.png" ALT="tip" WIDTH=95 HEIGHT=29></TD>
+<TD VALIGN="TOP">The Backup Utility doesn't work directly with CD-R or CD-RW drives. If you want to back up to a CD-R or CD-RW disk, back up to a file first, and then burn the file onto the CD. This limitation prevents the Backup Utility from creating a backup that spans several CDs. One CD-R or CD-RW can hold up to about 650MB, so if your backup file is no larger than this, you can burn it onto a CD. For larger backup files, use a CD-burning utility that can split files over multiple CDs.
+
+</TD></TR></TABLE>
+<A NAME="5">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squaregreen6x6.png" HEIGHT=6 WIDTH=6></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Choosing a Baseline or an Incremental Backup</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+After you have chosen which files to back up and where to store them, the wizard displays the Completing The Backup Or Restore Wizard dialog box, confirming the information you have specified so far. But you're not done yet--click the Advanced button to see some other settings.
+<P>
+The Type Of Backup setting controls whether to back up all the files you selected, or only files that are new or changed since the previous backup. (Windows tracks which files have been created or changed since your last backup.) You have five options for this setting:
+<UL>
+<LI >
+<B>Normal</B>  Copies all the files you selected, and marks them as backed up.<B></B>
+<LI >
+<B>Copy</B>  Copies all the files, but doesn't mark them as backed up.<B></B>
+<LI >
+<B>Incremental</B>  Copies only files that were created or changed since the last backup, and marks them as backed up.<B></B>
+<LI >
+<B>Differential</B>  Copies only files that were created or changed since the last backup, but doesn't mark them as backed up.<B></B>
+<LI >
+<B>Daily</B>  Copies only files that were created or changed today.<B></B>
+</UL>
+<P>
+If this is the first time you are backing up files, choose Normal. If you have recently backed up files, choose Incremental to copy only the files that weren't included in your last backup.
+<A NAME="6">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squaregreen6x6.png" HEIGHT=6 WIDTH=6></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Choosing How to Back Up</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+Next, you see the How To Back Up settings, which consist of these check boxes:
+<UL>
+<LI >
+<B>Verify Data After Backup</B>  After completing the backup, the Backup Utility reads the backup and compares it to the files it backed up, to make sure that they match. This step lengthens the backup time, but it may be worth it. Verifying that the backup was successful takes only a little less time than the backup itself and may seem unnecessary, but remember: Paranoia is what backing up is all about. If you had faith that such things would always work properly, you wouldn't be backing up at all.<B></B>
+<LI >
+<B>Use Hardware Compression If Available</B>  Some backup devices can compress the backup information as it stores it. This check box is grayed out if your backup device doesn't support this feature. (Most tape drives do.)<B></B>
+<LI >
+<B>Disable Volume Snapshot</B>  The Backup Utility can include files that are open--files that programs are updating. If you don't want open files to be included, deselect this check box.<B></B>
+</UL>
+<P>
+The next screen of the Backup Or Restore Wizard asks whether to Append This Backup To The Existing Backups or Replace The Existing Backups. For backups to tape, this setting determines what happens to the previous backup information that is already on the tape. Another option controls whether the backup is accessibly only to administrative users or to all users.
+<P>
+If you are backing up to a new tape, the next screen of the wizard suggests labels to use for the tape. This label is stored on the tape and appears in the Backup window on the list of available backups. You may want to write the same information on a paper label and stick it to the tape.
+<A NAME="7">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squaregreen6x6.png" HEIGHT=6 WIDTH=6></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Choose When to Back Up</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+Finally, the Backup Or Restore wizard asks whether to run the backup job Now or Later. If you choose Later, you specify the name of the backup job and when to run it, as shown in Figure 9-5. You can run the backup job once, or you can <A HREF="../running/7.htm#1">schedule it</A> to run daily, weekly, monthly, or another schedule.
+<TABLE BORDER=2><TR><TD ALIGN=CENTER>
+<IMG SRC="backup.schedule.png" WIDTH=406 HEIGHT=455 ALT="[figure]">
+</TD></TR><TR BGCOLOR="#00ffff"><TD><I>Figure 9-5:  Specifying when to run the backup job</I></TD></TR></TABLE>
+<P>
+This is the last information that the Backup Or Restore Wizard asks for. When you click Next, you see the Completing The Backup Or Restore Wizard dialog box again, with a summary window of all your settings (as shown in Figure 9-6). Click Finish to create the backup job and run it (now or whenever you specified).
+<TABLE BORDER=2><TR><TD ALIGN=CENTER>
+<IMG SRC="backup.completing.png" WIDTH=506 HEIGHT=392 ALT="[figure]">
+</TD></TR><TR BGCOLOR="#00ffff"><TD><I>Figure 9-6:  Backup displays the settings for your backup</I></TD></TR></TABLE>
+<P>
+If you are using a tape, you may see messages from the Removable storage program as it mounts the tape. When the backup job is finished, Backup exits.
+<P>
+<TABLE><TR><TD VALIGN="TOP"><IMG SRC="../images/tip.png" ALT="tip" WIDTH=95 HEIGHT=29></TD>
+<TD VALIGN="TOP">If you plan to reuse these backup specifications--the files to include, the backup type, where to store the backup, and other settings--tell Backup to run the backup Later. This choice causes Backup to store the backup job so you can run it again.
+
+</TD></TR></TABLE>
+<A NAME="8">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Creating a Backup Job by Using the Backup Tab</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+You don't have to use a wizard to create a backup job. Instead, you run the Backup Utility and click the Advanced Mode link on its opening screen. You see the main window of Backup Utility, as shown in Figure 9-7. The Backup Wizard and Restore Wizard buttons run limited versions of the Backup Or Restore Wizard that we describe in this chapter (we recommend that you run the Backup Or Restore Wizard instead, by choosing Tools | Switch To Wizard Mode from the menu bar).
+<P>
+<TABLE><TR><TD VALIGN="TOP"><IMG SRC="../images/tip.png" ALT="tip" WIDTH=95 HEIGHT=29></TD>
+<TD VALIGN="TOP">If you rarely want to use the Backup Or Restore Wizard, deselect the Always Start In Wizard Mode check box on the wizard's opening screen.
+
+</TD></TR></TABLE>
+<TABLE BORDER=2><TR><TD ALIGN=CENTER>
+<IMG SRC="backup.control.png" WIDTH=641 HEIGHT=478 ALT="[figure]">
+</TD></TR><TR BGCOLOR="#00ffff"><TD><I>Figure 9-7:  The Backup Utility's main window</I></TD></TR></TABLE>
+<P>
+To create a backup job, click the Backup tab just below the menu bar. You see the window shown in Figure 9-8. The upper part of the window enables you to choose the files to include. The settings in the lower left corner allow you to specify <A HREF="../backup/5.htm#4">where to store the backup</A>. The rest of the options that the Backup Or Restore Wizard offeres appear after you click the Start Backup button.
+<TABLE BORDER=2><TR><TD ALIGN=CENTER>
+<IMG SRC="backup.backuptab.png" WIDTH=641 HEIGHT=478 ALT="[figure]">
+</TD></TR><TR BGCOLOR="#00ffff"><TD><I>Figure 9-8:  The Backup tab of the Backup Utility window</I></TD></TR></TABLE>
+<P>
+When you click the Start Backup button, you see the Backup Job Information window, shown here:
+<BR><IMG ALIGN=TOP SRC="backup.startbackup.png" WIDTH=410 HEIGHT=263 ALT="[image]">
+<P>
+This window contains the rest of your backup options, as described in the "<A HREF="../backup/5.htm#2">Creating a Backup Job with the Backup Or Restore Wizard</A>" section earlier in this chapter.
+<P>
+To schedule the job to run at a specified time (or on a schedule), click the Schedule button. The Backup Utility prompts you to save your settings as a backup job, and lets you specify a name. If your user account has a password, it prompts you for the password (you have to type it twice). Then you see the <A HREF="../backup/5.htm#7">Scheduled Job Options dialog box</A>, as shown in Figure 9-5.
+<P>
+For other options, click the Advanced button to display the Advanced Backup Options dialog box, shown here:
+<BR><IMG ALIGN=TOP SRC="backup.advancedbackup.png" WIDTH=345 HEIGHT=316 ALT="[image]">
+<P>
+In addition to the options described in the section "<A HREF="../backup/5.htm#6">Choosing How to Back Up</A>," you see these other settings:
+<UL>
+<LI >
+<B>Back Up Data That Is In Remote Storage</B>  Includes files that are stored in a <A NAME="ddremotestorage"><I>remote storage</I></A>, a special storage device that stores infrequentlyused files.
+<LI >
+<B>Automatically Backup System Protected Files With The System State</B>  Includes the files in your C:\Windows folder (or whatever folder Windows is installed in). Choosing this option adds over 200MB to your backup job.
+</UL>
+<P>
+When you return to the Backup Job Information dialog box and click Start Backup, your backup job runs (or is stored to be run later).
+<A NAME="9">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Running a Backup Job</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+Once you have created and named a backup job, you can run it without going through the Backup Or Restore Wizard (in fact, the wizard doesn't include a way to rerun and existing backup job). The backup job is stored as a .bks file that you can re-open and rerun.
+<A NAME="10">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squaregreen6x6.png" HEIGHT=6 WIDTH=6></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Running a Backup Job from the Backup Utility Window</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+To run an existing backup job, follow these steps:
+<OL>
+<LI  VALUE=1>
+Run the Backup Utility. If the Backup Or Restore Wizard runs, click the Advanced Mode link on its opening window. You see the Backup Utility main window, as shown in Figure 9-7.
+<LI  VALUE=2>
+Click the Backup tab (shown in Figure 9-8).
+<LI  VALUE=3>
+Choose Job | Load Selections from the menu bar. You see the Open dialog box showing the default location of .bks files.
+<LI  VALUE=4>
+Choose a backup job and click Open. If you've already selected some files, Backup asks whether it's okay to clear the current file selections and use the ones from the backup job instead. Click Yes. Backup shows the selected drives, folders, and files on the Backup tab.
+<LI  VALUE=5>
+Follow the instructions for <A HREF="../backup/5.htm#8">creating a backup job</A> from the main window in the preceding section.
+</OL>
+<A NAME="11">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squaregreen6x6.png" HEIGHT=6 WIDTH=6></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Running a Backup Job on a Schedule</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+When you create a backup job, you can schedule it to run daily, weekly, monthly, or on some other schedule. The Backup Utility uses the Windows <A HREF="../running/7.htm#1">Scheduled Tasks</A> feature to handle the scheduling.
+<P>
+When you create a job using the Backup tab of the Backup Utility window, after you click the Start Backup button, click the Schedule button on the Backup Job Information dialog box to display the <A HREF="../backup/5.htm#7">Scheduled Job Options dialog box</A> (see Figure 9-5).
+<P>
+You can check the schedule of a backup job by clicking the Schedule Jobs tab in the Backup Utility window (as shown in Figure 9-9). Click a backup icon on a day on the calendar to see the Scheduled Job Options dialog box for that backup job. To change the schedule for the backup job, click the Properties button on the Schedule Data tab to see the Schedule Job dialog box, and click the Schedule tab. You can <A HREF="../running/7.htm#4">change the frequency, time, and day of the backups</A>, as well as other settings. However, there's no easy way to change the files that are included--instead, open and rerun the job as described in the <A HREF="../backup/5.htm#9">previous section</A>.
+<TABLE BORDER=2><TR><TD ALIGN=CENTER>
+<IMG SRC="backup.schedjobs.png" WIDTH=641 HEIGHT=478 ALT="[figure]">
+</TD></TR><TR BGCOLOR="#00ffff"><TD><I>Figure 9-9:  The schedule of backup jobs</I></TD></TR></TABLE>
+<A NAME="12">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Excluding Files from Backups</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+Some types of files don't need to be backed up, such as temporary files and files in a cache (temporary storage area). You can tell the Backup Utility not to include specific types of files by choosing Tools | Options from the Backup Utility's main window and clicking the Exclude Files tab (as shown in Figure 9-10). You can specify files that are in certain folders, files that have certain extensions, or both, and you can specify whether to exclude these files for backups made by all users, or only backups made by the current user.
+<TABLE BORDER=2><TR><TD ALIGN=CENTER>
+<IMG SRC="backup.exclude.png" WIDTH=386 HEIGHT=416 ALT="[figure]">
+</TD></TR><TR BGCOLOR="#00ffff"><TD><I>Figure 9-10:  The Exclude Files tab of the Options dialog box</I></TD></TR></TABLE>
+<P>
+The Backup Utility is preconfigured to ignore many temporary Windows files when making backups for any user. You can add files and folders to its exclusion lists by clicking the Add New button--choose the one below the Files Excluded For All Users or the Files Excluded For User <I>username</I> box. You can choose a file type (based on filename extension) or type in an extension, and you can type or browse to the folder to which the exclusion applies.
+<A NAME="13">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Setting Other Backup Options</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+The Backup Utility has a number of configuration options that you can set by choosing Tools | Options from the menu bar in its main window (shown in Figure 9-6). Table 9-1 lists the configuration settings and what they do.
+<BLOCKQUOTE><TABLE BORDER=2><TR><TD>
+<TABLE>
+<TR>
+<TD>
+<B>Tab</B>
+</TD>
+<TD>
+<B>Setting</B>
+</TD>
+<TD>
+<B>Description</B>
+</TD>
+</TR>
+<TR>
+<TD>
+General
+</TD>
+<TD>
+Compute selection information before backup and restore operations
+</TD>
+<TD>
+Displays the estimated total number of files and total bytes to be backed up before the backup begins (ditto for restoring).
+</TD>
+</TR>
+<TR>
+<TD>
+General
+</TD>
+<TD>
+Use the catalogs on the media to speed up building restore catalogs on disk
+</TD>
+<TD>
+When restoring from tapes, use the file catalogs that are stored on the tapes when creating the list of files in the entire backup. This is faster than Backup scanning the tapes for files and creating a new catalog. However, if a tape is missing or damaged, its catalog may not be available, and you may need to turn this setting off to restore files from the remaining tapes.
+</TD>
+</TR>
+<TR>
+<TD>
+General
+</TD>
+<TD>
+Verify data after the backup completes
+</TD>
+<TD>
+Specifies that after backing up the files, Backup compares the backup copies to the original files. Files that are in use and being updated during the backup may have changed between backup and verification, so not all verification errors indicate a problem.
+</TD>
+</TR>
+<TR>
+<TD>
+General
+</TD>
+<TD>
+Back up the contents of mounted drives
+</TD>
+<TD>
+For <A HREF="../harddisks/3.htm#3">mounted drives</A>, includes the contents of the drive. If deselected, Backup includes only the pathname of the mounted drive, and not its contents.
+</TD>
+</TR>
+<TR>
+<TD>
+General
+</TD>
+<TD>
+Show alert message when I start the Backup Utility and Removable Storage is not running
+</TD>
+<TD>
+For backups to and restores from tape, displays a warning if the Removable Storage system isn't running. Backup can then start Removable Storage so you can use the tapes or other media that it manages. Select this setting if you back up to tapes. For backups to file or to removable disks (like floppies and Zip disks), this setting doesn't matter.
+</TD>
+</TR>
+<TR>
+<TD>
+General
+</TD>
+<TD>
+Show alert message when I start the Backup Utility and there is recognizable media available
+</TD>
+<TD>
+For backups to and restores from tape, lets you know when new tapes are available. If you back up to tape, select this setting. Doesn't apply to backups to file or to removable disks.
+</TD>
+</TR>
+<TR>
+<TD>
+General
+</TD>
+<TD>
+Show alert message when new media is inserted
+</TD>
+<TD>
+For backups to and restores from tape, lets you know when you insert a new tape. If you back up to tape, select this setting. Doesn't apply to backups to file or to removable disks.
+</TD>
+</TR>
+<TR>
+<TD>
+General
+</TD>
+<TD>
+Always allow use of recognizable media without prompting
+</TD>
+<TD>
+For backups to tape, automatically moved a new uncataloged tape in the tape drive into the Backup media pool and then uses it for backup.
+</TD>
+</TR>
+<TR>
+<TD>
+Restore
+</TD>
+<TD>
+Do not replace the file on my computer (recommended), Replace the file on disk only if the file on disk is older, Always replace the file on my computer
+</TD>
+<TD>
+Specifies what Backup Utility does when restoring a file that already exists on your computer.
+</TD>
+</TR>
+<TR>
+<TD>
+Backup Type
+</TD>
+<TD>
+Default Backup Type
+</TD>
+<TD>
+Specifies what <A HREF="../backup/5.htm#5">type of backup</A> appears as the default when creating new backup jobs.
+</TD>
+</TR>
+<TR>
+<TD>
+Backup Log
+</TD>
+<TD>
+Detailed, Summary, None
+</TD>
+<TD>
+Specifies how much information to store in the log file for backups.
+</TD>
+</TR>
+<TR>
+<TD>
+Exclude Files
+</TD>
+<TD>
+Files excluded for all users
+</TD>
+<TD>
+For all user accounts, specifies the list of file types to skip when backing up (for example, temporary and backup files, with extensions .tmp and .bak). Click Add to add a file type to the list.
+</TD>
+</TR>
+<TR>
+<TD>
+Exclude Files
+</TD>
+<TD>
+Files excluded for user <I>username</I>
+</TD>
+<TD>
+Ditto, for the user who is currently logged in.
+</TD>
+</TR>
+</TABLE></BLOCKQUOTE>
+<TR BGCOLOR="#00ffff"><TD>
+<I>Table 1:  Backup Utility Configuration Options</I>
+</TD></TR></TABLE></BLOCKQUOTE>
+<A NAME="14">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Running the Backup Utility from the Command Line</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+When you schedule a backup job, the Backup Utility creates a <A HREF="../dos/index.htm">command line</A> that runs the job with your settings--where to store the backup, what to call it, and other settings. You can see the command line for a scheduled backup job by clicking the Schedule Jobs tab, clicking the icon for a backup job, and clicking the Properties button on the Scheduled Job Options dialog box that appears. You see the <A HREF="../running/7.htm#4">Schedule Job dialog box</A>. The Run box on the Task tab shows the command line, which is something like this:
+<P><PRE>
+C:\WINDOWS\system32\ntbackup.exe backup "@C:\Documents and Settings\Margy\Local Settings\Application Data\Microsoft\Windows NT\NTBackup\data\OE Data.bks" /a /d "Set created 7/5/2002 at 4:12 PM" /v:no /r:no /rs:no /hc:off /m normal /j "OE Data" /l:s /f "D:\Data\Backup OE Data.bkf"
+</PRE>
+<P>
+To run the backup Utility from the command line (the Start | Run box, a Command Prompt window, or a shortcut), you type:
+<P>
+<B>ntbackup backup </B>[<B>systemstate</B>]<B> </B><B><I>backupjob</I></B><B> </B><B><I>switches</I></B>
+<P>
+The systemstate switch is optional (don't type the brackets if you choose to include it). Replace <I>backupjob</I> with the name of the .bks file that contains the specifications for the backup job. Replace <I>switches</I> with the appropriate switches from Table 9-2. If you are backing up to tape (or any medium that is controlled by the Removable Storage service), also use the switches described in Table 9-3.
+<BLOCKQUOTE><TABLE BORDER=2><TR><TD>
+<TABLE>
+<TR>
+<TD>
+<B>Switch</B>
+</TD>
+<TD>
+<B>Description</B>
+</TD>
+</TR>
+<TR>
+<TD>
+Backup
+</TD>
+<TD>
+Specifies that you are performing a backup rather than a restore.
+</TD>
+</TR>
+<TR>
+<TD>
+Systemstate
+</TD>
+<TD>
+Backs up the system state (Registry, boot files, and other system information). Omit this switch to avoid backing up the system state.
+</TD>
+</TR>
+<TR>
+<TD>
+<I>Backupjob</I>
+</TD>
+<TD>
+Specifies the pathname of the .bks file that contains the backup job specifications.
+</TD>
+</TR>
+<TR>
+<TD>
+/D "<I>label</I>"
+</TD>
+<TD>
+Specifies a label for the backup set. Type the quotes around the label.
+</TD>
+</TR>
+<TR>
+<TD>
+/F "<I>filename</I>"
+</TD>
+<TD>
+Specifies the pathname of the backup file. Don't use this with the /G, /P, or /T switches when backing up to tape. Type the quotes around the filename.
+</TD>
+</TR>
+<TR>
+<TD>
+/J "<I>name</I>"
+</TD>
+<TD>
+Specifies the backup job name, which appears as the Backup Identification Label on the Restore And Manage Media tab of the Backup Utility window. It also appears in the log file for the backup. Type the quotes around the backup job name.
+</TD>
+</TR>
+<TR>
+<TD>
+/L:f or /L:s or /L:n
+</TD>
+<TD>
+If "f," creates a full log file. If "s," creates a summary log file. If "n," doesn't create a log file.
+</TD>
+</TR>
+<TR>
+<TD>
+/M <I>backuptype</I>
+</TD>
+<TD>
+Specifies the <A HREF="../backup/5.htm#5">backup type</A>: "normal," "copy," "differential," "incremental," or "daily."
+</TD>
+</TR>
+<TR>
+<TD>
+/SNAP:on or /SNAP:off
+</TD>
+<TD>
+If "on," includes open files, making a volume shadow copy (which used to be called a snapshot).
+</TD>
+</TR>
+<TR>
+<TD>
+/V:yes or /V:no
+</TD>
+<TD>
+If "yes," verifies the backup after it's finished.
+</TD>
+</TR>
+</TABLE></BLOCKQUOTE>
+<TR BGCOLOR="#00ffff"><TD>
+<I>Table 2:  NTBackup Command Line Switches for All Backups</I>
+</TD></TR></TABLE></BLOCKQUOTE>
+<BLOCKQUOTE><TABLE BORDER=2><TR><TD>
+<TABLE>
+<TR>
+<TD>
+Switch
+</TD>
+<TD>
+Description
+</TD>
+</TR>
+<TR>
+<TD>
+/A
+</TD>
+<TD>
+Appends the backup to the end of the tape, rather than erasing what's already on the tape. Use with /G or /T, not with /P.
+</TD>
+</TR>
+<TR>
+<TD>
+/G "<I>guidname</I>"
+</TD>
+<TD>
+Specifies the tape by its GUID (globally unique identifier), and overwrites or appends to this tape. Do not use this switch in conjunction with /P. Type the quotes around the GUID.
+</TD>
+</TR>
+<TR>
+<TD>
+/HC:on or /HC:off
+</TD>
+<TD>
+If "on" and the tape drive supports hardware compression, uses hardware compressing when backing up. If "off," doesn't use hardware compression.
+</TD>
+</TR>
+<TR>
+<TD>
+/N "<I>newtapename</I>"
+</TD>
+<TD>
+Specifies the name to give to the new tape used for the backup. Don't use with /A. Type the quotes around the tape name.
+</TD>
+</TR>
+<TR>
+<TD>
+/P "<I>poolname</I>"
+</TD>
+<TD>
+Specifies the media pool from which the tape comes. Backup uses any available tape from this pool, so you can't use /P with /A, /G, /F, or /T. Type the quotes around the media pool name.
+</TD>
+</TR>
+<TR>
+<TD>
+/R:yes or /R:no
+</TD>
+<TD>
+If "yes," only the user who created the tape, or administrative users, can use this tape.
+</TD>
+</TR>
+<TR>
+<TD>
+/RS:yes or /RS:no
+</TD>
+<TD>
+If "yes," includes the Removable Storage database in the backup. If "no," omits the database from the backup.
+</TD>
+</TR>
+<TR>
+<TD>
+/T "<I>tapename</I>"
+</TD>
+<TD>
+Specifies the name of the tape onto which to back up. Don't use with /P. Type the quotes around the tape name.
+</TD>
+</TR>
+<TR>
+<TD>
+/UM
+</TD>
+<TD>
+Backs up to the first available tape in the media pool that you specified with /P. Formats the tape before the backup.
+</TD>
+</TR>
+</TABLE></BLOCKQUOTE>
+<TR BGCOLOR="#00ffff"><TD>
+<I>Table 3:  NTBackup Command Line Switches for Backups to Tape</I>
+</TD></TR></TABLE></BLOCKQUOTE>
+<P>
+You can run the Backup Utility from the Command Prompt window or in the Start | Run dialog box: type or copy the ntbackup command followed by the command line switches. Or create a shortcut that contains the command line: right-click the Windows desktop, choose New | Shortcut from the menu that appears, and type or copy the ntbackup command line in the Type The Location Of The Item box. Once you've made a shortcut for the ntbackup command, you can leave it on the desktop or <A HREF="../starttask/5.htm#2">copy it onto the Start menu</A>.
+<P>
+<A HREF="4.htm"  OnMouseOver='whomp(prevb, "sprev");' OnMouseOut='whomp(prevb, "wprev");'
+ title="Previous Section"><IMG NAME=prevb SRC="../images/wprev.png" ALT="Previous" HEIGHT=20 WIDTH=82 BORDER=0></A><!--
+--><A HREF="index.htm" OnMouseOver='whomp(chapb, "schap");' OnMouseOut='whomp(chapb, "wchap");'
+title="Chapter Overview"><IMG SRC="../images/wchap.png" ALT="Chapter" NAME=chapb HEIGHT=20 WIDTH=100 BORDER=0></A><A
+HREF="../index.htm" OnMouseOver='whomp(tocb, "sbook");' OnMouseOut='whomp(tocb, "wbook");' 
+title="Table of Contents"><IMG SRC="../images/wbook.png" ALT="Contents" NAME=tocb HEIGHT=20 WIDTH=94 BORDER=0></A><A
+HREF="../glossary/index.htm" OnMouseOver='whomp(glosb, "sglos");' OnMouseOut='whomp(glosb, "wglos");' 
+title="Glossary"><IMG SRC="../images/wglos.png" ALT="Glossary" NAME=glosb HEIGHT=20 WIDTH=94 BORDER=0></A><!--
+--><A HREF="6.htm"  OnMouseOver='whomp(nextb, "snext");' OnMouseOut='whomp(nextb, "wnext");'
+ title="Next Section"><IMG NAME=nextb SRC="../images/wnext.png" ALT="Next" HEIGHT=20 WIDTH=82 BORDER=0></A>
+<BR>
+</BLOCKQUOTE>
+</BODY>
+</HTML>

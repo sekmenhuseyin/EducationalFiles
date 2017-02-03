@@ -1,0 +1,623 @@
+<!doctype html public "-//IETF//DTD HTML//EN">
+<HTML>
+<HEAD>
+<TITLE>Windows XP: The Complete Reference: Designing a Windows-Based Local Area Network</TITLE>
+<META NAME="GENERATOR" CONTENT="Web-O-Matic Deluxe 4.1">
+<META NAME="AUTHOR" CONTENT="John R. Levine, Margaret Levine Young">
+<META NAME="COPYRIGHT" CONTENTS="Copyright 2001 by The McGraw-Hill Companies. All rights reserved.">
+</HEAD>
+<BODY BACKGROUND="../images/background.png">
+<BLOCKQUOTE>
+<SCRIPT LANGUAGE="JavaScript">
+function whomp(i, file)
+{
+	i.src = "../images/" + file + ".png";
+}
+</SCRIPT>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarered3x3.png" HEIGHT=3 WIDTH=3></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=2>
+Chapter 27: Designing a Windows-Based Local Area Network
+</FONT></TD>
+</TR>
+</TABLE>
+<BR>
+<A HREF="6.htm"  OnMouseOver='whomp(prev, "sprev");' OnMouseOut='whomp(prev, "wprev");'
+ title="Previous Section"><IMG NAME=prev SRC="../images/wprev.png" ALT="Previous" HEIGHT=20 WIDTH=82 BORDER=0></A><!--
+--><A HREF="index.htm" OnMouseOver='whomp(chap, "schap");' OnMouseOut='whomp(chap, "wchap");'
+title="Chapter Overview"><IMG SRC="../images/wchap.png" ALT="Chapter" NAME=chap HEIGHT=20 WIDTH=100 BORDER=0></A><A
+HREF="../index.htm" OnMouseOver='whomp(toc, "sbook");' OnMouseOut='whomp(toc, "wbook");' 
+title="Table of Contents"><IMG SRC="../images/wbook.png" ALT="Contents" NAME=toc HEIGHT=20 WIDTH=94 BORDER=0></A><A
+HREF="../glossary/index.htm" OnMouseOver='whomp(glos, "sglos");' OnMouseOut='whomp(glos, "wglos");' 
+title="Glossary"><IMG SRC="../images/wglos.png" ALT="Glossary" NAME=glos HEIGHT=20 WIDTH=94 BORDER=0></A><!--
+--><IMG SRC="../images/bnext.png" ALT="Next" HEIGHT=20 WIDTH=82 BORDER=0>
+<BR>
+<A NAME="1">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarered10x10.png" HEIGHT=10 WIDTH=10></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=4><B>Connecting Computers Without a LAN</B></FONT>
+</TD>
+</TR>
+</TABLE></A>
+<P>
+While a LAN is the best way to use resources on another computer, you may find yourself in a situation where you want to share resources, but you don't have a LAN or the network card and cable needed to connect to one. Or you may be physically distant from the computer you want to connect to. If you don't have a LAN, but need to connect two computers you have two options:
+<UL>
+<LI >
+<A HREF="../lans/index.htm"><B>Direct network connection</B></A> If you are in close proximity to the computer you want to connect to, Windows allows you to connect computers using a serial or parallel cable or infrared ports.
+<LI >
+<A HREF="../lans/7.htm#12"><B>Dial-up connection</B></A> You can dial into one computer from another using a regular phone line.
+<LI >
+<A HREF="../lans/7.htm#16"><B>Virtual Private Networking (VPN)</B></A><B> </B>If you are away from the other computer, you can connect using modems and phone lines (dial-up connection), using the Internet (VPN).
+</UL>
+<P>
+These options are accessed though the New Connection Wizard, which you can display by clicking Create A New Connection in the Task pane of the <A HREF="../connecting/2.htm#1">Network Connections window</A>. See the sidebar "<A HREF="../lans/7.htm#2">Displaying the Network Connections Window</A>" for how to display it.
+<P>
+All three of these ways of connecting two computers require you to set up one computer to accept a connection from the other computer, by creating an <A NAME="ddincomingconnection"><I>incoming connection</I></A> in the Network Connections window. An incoming connection tells Windows how the other computer can connect (by phone, by cable, or over the Internet) and who is authorized to connect (which user accounts can log in using the connection).
+<P><TABLE BORDER=2 CELLPADDING=10><TR>
+<TD BGCOLOR="#00ffff" WIDTH=2></TD><TD>
+<A NAME="2">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Displaying the Network Connections Window</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+Because you'll be using the Network Connections window frequently if you use any of the connection options in this chapter, we recommend that you add the Connect To command to the Start menu, if it isn't there already. Follow these steps:
+<OL>
+<LI  VALUE=1>
+Right-click the Start menu and choose Properties to display the Start Menu tab of the Taskbar And Start Menu Properties dialog box.
+<LI  VALUE=2>
+Click the Customize button to display the Customize Start Menu dialog box.
+<LI  VALUE=3>
+Click the Advanced tab. 
+<LI  VALUE=4>
+Scroll down in the Start Menu Items box until you see Network Connections. Choose either Display As Connect To Menu or Link To Network Connections Folder. Either of these options will make it easy to open the Network Connections window from the Start menu.
+<LI  VALUE=5>
+Click OK to close the two dialog boxes.
+</OL>
+<P>
+Now you can choose Start | Network Connections or Start | Connect To | Show All Connections to display the Network Connections window, depending on which option you chose in step 4. 
+<P>
+If you choose not to add the Connect To command to the Start menu, you can open the Network Connections folder in one of the following ways:
+<UL>
+<LI >
+Choose Start, right-click My Network Places, and choose Properties from the shortcut menu.
+<LI >
+Open the Control Panel, click Network And Internet Connections, then click Network Connection.
+<LI >
+Open My Network Places and click View Network Connections. (My Network Places is one of the options in the task pane on most Explorer windows.)
+</UL>
+</TD></TR></TABLE>
+<A NAME="3">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Connecting Two Computers with Direct Network Connection</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+A <A NAME="dddirectnetworkconnection"><I>direct network connection</I></A> (called a <I>direct cable connection</I> in previous versions of Windows) enables you to create a slow, but usable, network between two computers by using a serial cable or a parallel cable. You don't need a network card; all you need is the Windows XP or an earlier version of Windows that supports direct network connection. If both computers have infrared ports, you don't even need a cable.
+<P>
+If you need a continuous connection, you should invest in the hardware and time needed to set up a LAN as explained earlier in this chapter--the hardware isn't expensive, the setup isn't that onerous, and the performance and reliability are far better than a direct network connection. Although a direct network connection isn't a good long-term solution to your network needs, it can be extremely useful when you need to transfer files between two computers. One particularly convenient use of a direct network connection is to hook up a laptop without a CD-ROM drive to a desktop machine to install new software using the desktop computer's CD-ROM drive, or to copy files to or from the laptop. Direct network connections are also useful with palmtop computers. A direct network connection can even enable you to access the network to which the host computer is attached.
+<P>
+When you attach two computers by using direct network connection, one computer is the <A NAME="ddhostcomputer"><I>host computer</I></A>, the computer with the resources you want to use (usually a desktop computer). The other computer is the <A NAME="ddguestcomputer"><I>guest computer</I></A>, the computer that needs to make use of the resources (such as reading from the CD-ROM drive or printing to the printer). The guest computer is frequently a laptop. A direct network connection is one-way: The guest computer can see and use any shared resources on the host computer, and it can access any shared network resources the host can access. However, the host computer cannot see the guest computer.
+<P>
+<TABLE><TR><TD VALIGN="TOP"><IMG SRC="../images/caution.png" ALT="caution" WIDTH=95 HEIGHT=29></TD>
+<TD VALIGN="TOP">We had trouble getting direct network connections to work, but other Windows users have had better luck. If you can't get one working, consider a LAN.
+
+</TD></TR></TABLE>
+<A NAME="4">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squaregreen6x6.png" HEIGHT=6 WIDTH=6></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Getting and Connecting Your Cable</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+The only piece of hardware you need for a direct network connection is a cable (direct network connection using modems is covered in the next section) however, you need the right kind of cable with the right kind of connectors on the ends. (If both computers have infrared ports, you don't need any cable.) The cable should be called a <A NAME="ddnullmodemcable"><I>null-modem cable</I></A>, LapLink cable, Serial PC-to-PC File Transfer cable, or InterLink cable. Before you go shopping, check for available ports on the two computers you want to connect. You can use parallel ports, but serial ports are preferable--they are probably labeled Serial, Com1, or Com2. (Serial ports are usually used for a mouse or modem; parallel ports are usually used for a printer.) If you're using parallel ports, look for a DirectParallel cable.
+<P>
+<A HREF="../hardware/4.htm#4">Serial ports</A> come in 9-pin and 25-pin varieties--see what you have available on the computers you want to connect and get the cable with the appropriate connectors. If you're connecting a 25-pin serial port and a 9-pin serial port, try to get a cable with a 25-pin plug on one end and a 9-pin plug on the other. If you think you may create a direct network connection often--and with different computers--try to find an "octopus" cable with both kinds of plugs on both ends. Also check whether pins are on the port (male), in which case you need a female plug on the cable, or whether the plug on the cable needs to have pins (male). You can buy gender changers for the plugs, if necessary.
+<P>
+It's safer, but not absolutely required, to turn off both computers before connecting the cables. Note to which port the cable is attached--you need to know when you configure the connection. If you're using the parallel port, you must use the parallel port on both computers. If you're using serial ports, you can use either serial port: COM1 on one computer and COM2 on the other works fine.
+<P>
+When the cable is firmly connected to both ends, power up the two computers.
+<P>
+<TABLE><TR><TD VALIGN="TOP"><IMG SRC="../images/note.png" ALT="note" WIDTH=95 HEIGHT=29></TD>
+<TD VALIGN="TOP">Both computers need to be members of the same workgroup. Click Start, right-click My Computer, choose Properties, and click the Computer Name tab in the System Properties dialog box to see the name of the workgroup that your computer belongs to. Click Change to change the workgroup name.
+
+</TD></TR></TABLE>
+<A NAME="5">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squaregreen6x6.png" HEIGHT=6 WIDTH=6></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Configuring the Host Computer</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+The host computer needs a direct incoming connection, which you can create by following these steps:
+<OL>
+<LI  VALUE=1>
+Open the <A HREF="../lans/7.htm#2">Network Connections window</A>.
+<LI  VALUE=2>
+Click Create A New Connection from the task pane to start the New Connection Wizard. Click Next to move from window to window. You see the options shown in Figure 27-2.
+</OL>
+<TABLE BORDER=2><TR><TD ALIGN=CENTER>
+<IMG SRC="lans.newconnect.png" WIDTH=503 HEIGHT=392 ALT="[figure]">
+</TD></TR><TR BGCOLOR="#00ffff"><TD><I>Figure 27-2:  Options for creating a new network connection</I></TD></TR></TABLE>
+<OL>
+<LI  VALUE=3>
+Choose Set Up An Advanced Connection and click Next.
+<LI  VALUE=4>
+Choose Connect Directly To Another Computer (yes, even though this is the host) and click Next.
+<LI  VALUE=5>
+Choose Host and click Next.
+<LI  VALUE=6>
+Choose the port to which the cable is connected (or select your infrared port) and click Next.
+<LI  VALUE=7>
+Select users who will be allowed to connect by clicking to display a check mark next to their user name, as shown in Figure 27-3. Click Next.
+</OL>
+<TABLE BORDER=2><TR><TD ALIGN=CENTER>
+<IMG SRC="lans.users.png" WIDTH=503 HEIGHT=392 ALT="[figure]">
+</TD></TR><TR BGCOLOR="#00ffff"><TD><I>Figure 27-3:  Selecting which user accounts can use this incoming connection</I></TD></TR></TABLE>
+<OL>
+<LI  VALUE=8>
+Click Finish to create the connection definition. An Incoming Connections icon appears in the Incoming section of the Network Connections window.
+</OL>
+<P>
+<TABLE><TR><TD VALIGN="TOP"><IMG SRC="../images/note.png" ALT="note" WIDTH=95 HEIGHT=29></TD>
+<TD VALIGN="TOP">To create a direct network connection on the host computer, you must be logged on as Administrator or be a member of the Administrators group.
+
+</TD></TR></TABLE>
+<A NAME="6">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squaregreen6x6.png" HEIGHT=6 WIDTH=6></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Configuring the Guest Computer</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+To configure the guest computer, you create a direct network connection by following these steps:
+<OL>
+<LI  VALUE=1>
+Open the <A HREF="../lans/7.htm#2">Network Connections window</A>.
+<LI  VALUE=2>
+Click Create A New Connection in the task pane to start the New Connection Wizard. Click Next to move from window to window. You see the options shown in Figure 27-2.
+<LI  VALUE=3>
+Choose Set Up An Advanced Connection and click Next.
+<LI  VALUE=4>
+Choose Connect Directly To Another Computer and click Next.
+<LI  VALUE=5>
+Choose Guest and click Next.
+<LI  VALUE=6>
+Type a name for the connection and click Next.
+<LI  VALUE=7>
+Choose the port to which the cable is connected (or select your infrared port) and click Next.
+<LI  VALUE=8>
+If you want an icon on the desktop for this connection, click that option. Click Finish to create the connection definition. A new connection icon appears in the Direct section of the Network Connections window.
+</OL>
+<A NAME="7">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squaregreen6x6.png" HEIGHT=6 WIDTH=6></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Using a Direct Network Connection</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+Once you have created connections on both the guest and the host computers, follow these steps to connect the two computers:
+<OL>
+<LI  VALUE=1>
+On the guest computer, open the <A HREF="../lans/7.htm#2">Network Connections window</A>.
+<LI  VALUE=2>
+Open the icon for the cable connection.
+<LI  VALUE=3>
+Login using a user name and password that you selected when you created the incoming connection on the host computer. Click Connect.
+</OL>
+<P>
+When the connection is established, the icon for the connection on the guest computer says "Connected." On the host machine, the Incoming Connection icon changes to show the user name. (We've also seen it change to say "Unauthenticated User," but the connection still works.)
+<A NAME="8">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squaregreen6x6.png" HEIGHT=6 WIDTH=6></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Using the Host Computer's Resources from the Guest Computer</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+A direct network connection is one-way: The guest computer can see and use any shared resources on the host computer, but the host computer cannot see the guest computer. If you need to copy files from or to the host computer, do it while you're sitting at the guest computer.
+<P>
+To access the shared resources on the host computer from the guest computer, open the My Network Places folder. (Choose Start | My Network Places, or click the My Network Places icon in an Explorer window). Open the icon for the host computer to see available resources (to find out how to share resources and use shared resources, see <A HREF="../sharehw/index.htm">Chapter 29</A>).
+<P>
+<TABLE><TR><TD VALIGN="TOP"><IMG SRC="../images/note.png" ALT="note" WIDTH=95 HEIGHT=29></TD>
+<TD VALIGN="TOP">If you have a direct network connection but don't see the host computer in My Network Places, try choosing Start | Run and typing \\<I>hostcomputername</I>. Alternatively, you can type \\<I>hostIPaddress</I>. That command opens a window showing the shared resources on the host computer.
+
+</TD></TR></TABLE>
+<A NAME="9">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squaregreen6x6.png" HEIGHT=6 WIDTH=6></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Closing a Direct Network Connection</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+To close the connection, right-click the connection icon in the Network Connections window or in the notification area of the taskbar and choose Disconnect.
+<A NAME="10">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squaregreen6x6.png" HEIGHT=6 WIDTH=6></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Changing Connection Properties</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+You can change the properties for the connection by opening the Properties dialog box for the connection (right-click the connection icon in the Network Connections window and choose Properties).
+<A NAME="11">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squaregreen6x6.png" HEIGHT=6 WIDTH=6></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Troubleshooting Direct Network Connections</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+Although a direct network connection should work if you follow the steps in this chapter, we have found the following useful to complete a successful connection:
+<UL>
+<LI >
+Check that the cable is securely attached to both computers.
+<LI >
+Check that each computer has a unique computer name and the same workgroup name. To change either, click Start, right-click My Computer, choose Properties, click the Computer Name tab, and click Change.
+<LI >
+Check that each communications port used has the same settings (bits/second, data bits, parity, stop bits, flow control). The baud rate should be 115,200 to maximize the speed of transfers.
+<LI >
+Install an additional protocol on both computers, such as IPX/SPX.
+<LI >
+Log in to both computers using the same user name.
+<LI >
+If connecting using parallel ports, check that the BIOS parallel port settings are the same on both computers.
+</UL>
+<P>
+<TABLE><TR><TD VALIGN="TOP"><IMG SRC="../images/note.png" ALT="note" WIDTH=95 HEIGHT=29></TD>
+<TD VALIGN="TOP">If you set up a direct network connection frequently between the same two computers, please build yourself a LAN: It's slightly more expensive in the short run, but more reliable, easier to work with, and much faster in the long run. You can also use a LAN to <A HREF="../ics/index.htm">share an Internet connection</A>.
+
+</TD></TR></TABLE>
+<A NAME="12">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Connecting Two Computers by Using a Dial-Up Connection</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+Dial-up connections are most frequently used to <A HREF="../connecting/2.htm#1">connect computers to the Internet</A>. However, you can also create one to connect your computer to another Windows computer through a modem. For example:
+<UL>
+<LI >
+If you have a desktop computer and a laptop computer, both with modems, you can use a dial-up connection to call your desktop from your laptop. (You need two phone lines.) Your laptop can share the resources (hard disks and printers) on your desktop.
+<LI >
+If you have a laptop computer that is usually connected to a <A HREF="../lans/index.htm">LAN</A> at your office, and another computer on the LAN has a modem, you can use a dial-up connection when you're away from your office to call that computer from your laptop and use facilities on the LAN. A dial-up connection is a slow way to access a LAN's resources but, in some cases, it is exactly what you need.
+</UL>
+<P>
+<TABLE><TR><TD VALIGN="TOP"><IMG SRC="../images/note.png" ALT="note" WIDTH=95 HEIGHT=29></TD>
+<TD VALIGN="TOP">See <A HREF="../prepnet/index.htm">Chapter 21</A> for information on setting up your modem. <A HREF="../connecting/index.htm">Chapter 22</A> has more information about dial-up connections.
+
+</TD></TR></TABLE>
+<P>
+The computer you call using a dial-up connection is called the <A NAME="ddremoteaccessserver"><I>remote access server</I></A>. The remote access server is usually a desktop computer back at the office. It has resources, such as files or a printer, that you want to use from the client computer, which is usually a laptop. Those resources must be shared. <A HREF="../sharehw/index.htm">Chapter 29</A> discusses sharing disks and printers over a network. You cannot configure the resources for sharing from a remote location, so make sure you've shared all the necessary resources before you hit the road. You might even want to spend a day working on the laptop to discover what resources you might need to have configured for sharing while you're on the road.
+<P>
+When the remote access server computer is attached to a LAN, the client computer dialing in becomes a <A NAME="ddremotenode"><I>remote node</I></A> on the network, meaning the client computer's connection to the network works exactly as it would if you were in the building and attached to the LAN--from the client computer, you can use resources on the network, and other computers on the network can see the shared resources on your computer. Of course, access from a remote node through phone lines is much slower than access from a computer that is connected to the network using cables.
+<P>
+Both the server and client computers must have a modem attached to a phone line (and, yes, you do need two different phone lines). Neither computer needs a network card. See <A HREF="../prepnet/index.htm">Chapter 13</A> for instructions on how to configure Windows to work with your modem.
+<P>
+<TABLE><TR><TD VALIGN="TOP"><IMG SRC="../images/tip.png" ALT="tip" WIDTH=95 HEIGHT=29></TD>
+<TD VALIGN="TOP">If both computers are on the Internet, you can use the <A HREF="../mobile/3.htm#1">Remote Desktop</A> feature of Windows XP to communicate between the two computers.
+
+</TD></TR></TABLE>
+<A NAME="13">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squaregreen6x6.png" HEIGHT=6 WIDTH=6></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Configuring a Dial-Up Connection on the Client Computer</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+The client computer makes the call, using a dial-up connection. Follow these steps to create the dial-up connection:
+<OL>
+<LI  VALUE=1>
+Open the <A HREF="../lans/7.htm#2">Network Connections window</A>.
+<LI  VALUE=2>
+Click Create A New Connection in the task pane to start the New Connection Wizard. Click Next to move from window to window.
+<LI  VALUE=3>
+Select Connect To The Network At My Workplace and click Next.
+<LI  VALUE=4>
+Select Dial-up Connection and click Next.
+<LI  VALUE=5>
+Type a name for the connection and click Next.
+<LI  VALUE=6>
+Enter the phone number for the host computer and click Next. Dashes and parentheses are not necessary, but you can use them if you wish.
+<LI  VALUE=7>
+Choose whether you want an icon for this connection on the desktop and click Finish. You se a new icon for the connection in the Dial-up section of the Network Connections window.
+</OL>
+<P>
+When you double-click the connection, Windows dials the phone, and if the host computer answers, you are asked to log in.
+<P>
+If you plan to call more than one remote access server, you can create additional dial-up connections by repeating these steps. If you need to change the phone number or modem, right-click the dial-up connection icon in the Network Connections window and choose Properties from the shortcut menu.
+<A NAME="14">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squaregreen6x6.png" HEIGHT=6 WIDTH=6></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Configuring the Incoming Connection on the Dial-Up Server Computer</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+The remote access server must have a dial-up incoming connection, which tells Windows XP to answer the phone. Follow these steps:
+<OL>
+<LI  VALUE=1>
+ Open the <A HREF="../lans/7.htm#2">Network Connections window<A HREF="../lans/7.htm#2">.
+<LI  VALUE=2>
+Click Create a New Connection to start the New Connection Wizard. Click Next to move from window to window.
+<LI  VALUE=3>
+Select Set Up An Advanced Connection and click Next.
+<LI  VALUE=4>
+Select Accept Incoming Connections and click Next. You see the Devices For Incoming Connections window, as shown in Figure 27-4
+</OL>
+<TABLE BORDER=2><TR><TD ALIGN=CENTER>
+<IMG SRC="lans.indial.png" WIDTH=503 HEIGHT=392 ALT="[figure]">
+</TD></TR><TR BGCOLOR="#00ffff"><TD><I>Figure 27-4:  Creating an incoming dial-up connection</I></TD></TR></TABLE>
+<OL>
+<LI  VALUE=5>
+Choose the modem as the device for incoming calls. You can select more than one device, if you have more than one modem. Click Next. You see the Incoming Virtual Private Network (<A HREF="../lans/7.htm#16">VPN</A>) Connection window.
+<LI  VALUE=6>
+For accepting dial-up connections, it doesn't matter if you choose to allow virtual private connections or not. Click Next.
+<LI  VALUE=7>
+Select the users you want to allow to connect, as shown in Figure 27-3. Click Next.
+<LI  VALUE=8>
+You see a list of the network components that Microsoft suggests (see <A HREF="../peer2peer/index.htm">Chapter 28</A> for explanations of these components). Deselect any components that you don't want used. Generally, no change to this page is necessary. Click Next.
+<LI  VALUE=9>
+Click Finish. An icon called Incoming Connections is created in the Incoming section of your Network Connections window. If you already have an Incoming Connections icon, its properties are edited to allow dial-in access.
+</OL>
+<P>
+Once you configure a computer as a remote access server, be sure to read the section "<A HREF="../lans/7.htm#20">Network Security Issues</A>" later in this chapter.
+<P>
+<TABLE><TR><TD VALIGN="TOP"><IMG SRC="../images/tip.png" ALT="tip" WIDTH=95 HEIGHT=29></TD>
+<TD VALIGN="TOP">Before you leave your remote access server computer, make sure it picks up the phone when the client computer calls in. Because this seemingly small glitch can totally ruin your plans to access network resources remotely, you might want to make a trial run before you go very far, following the steps in the next section.
+
+</TD></TR></TABLE>
+<A NAME="15">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squaregreen6x6.png" HEIGHT=6 WIDTH=6></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Connecting Via a Dial-Up Connection</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+Once you configure both the client and the server computers, you can use the dial-up connection to connect the two computers. You can establish a dial-up connection by following these steps on the client computer:
+<OL>
+<LI  VALUE=1>
+Open the <A HREF="../lans/7.htm#2">Network Connections window</A>.
+<LI  VALUE=2>
+Open the dial-up connection icon you created. You see the Connect To dialog box, shown in Figure 27-5.
+</OL>
+<TABLE BORDER=2><TR><TD ALIGN=CENTER>
+<IMG SRC="lans.connect.png" WIDTH=348 HEIGHT=429 ALT="[figure]">
+</TD></TR><TR BGCOLOR="#00ffff"><TD><I>Figure 27-5:  You see the Connect dialog box when you open your new Dial-Up Networking connection.</I></TD></TR></TABLE>
+<P>
+<TABLE><TR><TD VALIGN="TOP"><IMG SRC="../images/note.png" ALT="note" WIDTH=95 HEIGHT=29></TD>
+<TD VALIGN="TOP">Click the Dial Properties button to display the <A HREF="../prepnet/2.htm#1">Dialing Properties dialog box</A>. You can use this dialog box to set properties for the different places from which you dial in.
+
+</TD></TR></TABLE>
+<OL>
+<LI  VALUE=3>
+Type the password needed to access the dial-up server in the Password box.
+<LI  VALUE=4>
+Click Dial to make the connection to the dial-up server. Establishing the connection takes a few seconds. When the connection is made, you see a dialog box telling you that you are connected.
+</OL>
+<P>
+<TABLE><TR><TD VALIGN="TOP"><IMG SRC="../images/note.png" ALT="note" WIDTH=95 HEIGHT=29></TD>
+<TD VALIGN="TOP">When you want to close the connection, click the Disconnect button on the dialog box.
+
+</TD></TR></TABLE>
+<P>
+Once you establish the connection, you can use My Network Places on the client computer to use resources on the dial-up server.
+<A NAME="16">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Connecting Computers with Virtual Private Networking</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+When you're away from your office, you may find that a dial-up connection (described in the previous section) using a regular phone line runs up large long-distance bills. You may also think that because you're connected to the Internet, and because the computer you want to access is connected to the Internet, you ought to be able to figure out a way to access resources using the Internet as your network. You are right!
+<P>
+<A NAME="ddvirtualprivatenetworking"><I>Virtual Private Networking</I></A> (<A NAME="ddvpn"><I>VPN</I></A>) provides a way for an authorized computer on the Internet to <A NAME="ddtunnel"><I>tunnel</I></A> through the firewall and connect to a LAN. A VPN can allow you to connect to a single computer, or to a LAN connected to the Internet.
+<P>
+When you are connecting to a LAN with a firewall, the firewall must support <A NAME="ddpointtopointtunnelingprotocol"><I>Point-to-Point Tunneling Protocol</I></A> (<A NAME="ddpptp"><I>PPTP</I></A>). PPTP lets VPN connect you through the firewall. Your organization's LAN administrator must have set up the firewall and a <A NAME="ddvpnserver"><I>VPN server</I></A>, the program that provides PPTP. Both the <A NAME="ddvpnclient"><I>VPN client</I></A> (the computer making the connection) and the VPN server must have Internet connections.
+<P>
+To connect to an existing VPN server, you don't have to worry about configuring the server. Contact your organization's system administrator to find out the host name or numeric IP address of the VPN server. However, if you are creating both the VPN client and the server, then you need to complete the steps in both of the following sections.
+<P>
+<TABLE><TR><TD VALIGN="TOP"><IMG SRC="../images/note.png" ALT="note" WIDTH=95 HEIGHT=29></TD>
+<TD VALIGN="TOP">The VPN server must have a routable IP address--that is, it must be directly on the Internet. If the computer you want to connect to shares an Internet connection, it is not accessible using VPN. Computers inside a firewall on a company LAN and those otherwise sharing an Internet connection (using ICS, for instance) do not have routable IP addresses.
+
+</TD></TR></TABLE>
+<A NAME="17">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squaregreen6x6.png" HEIGHT=6 WIDTH=6></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Configuring the VPN Client</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+Follow these steps for creating a VPN connection on the client computer over the Internet:
+<OL>
+<LI  VALUE=1>
+Connect to the Internet.
+<LI  VALUE=2>
+Open the <A HREF="../lans/7.htm#2">Network Connections window</A>.
+<LI  VALUE=3>
+Click Create A New Connection in the Network Tasks part of the Task pane to run the New Connection Wizard. Click Next to move from window to window.
+<LI  VALUE=4>
+Select Connect To The Network At My Workplace. Click Next.
+<LI  VALUE=5>
+Select Virtual Private Network Connection. Click Next.
+<LI  VALUE=6>
+Type a name for the connection in the Company Name box (like "VPN" or the name of your organization or the location of the VPN server). Click Next.
+<LI  VALUE=7>
+In the Public Network window, specify which Internet connection to use to connect to the Internet. If you'd prefer to make the Internet connection yourself, rather than allowing the VPN connection to initiate a connection, choose Do Not Dial The Initial Connection. Click Next.
+<LI  VALUE=8>
+In the VPN Server Selection window, shown in Figure 27-6, type the host name or numeric IP address of the VPN server (for example, <B>pptp.microsoft.com</B>). If you are connecting to an organization, get this information from your organization's system administrator.
+</OL>
+<TABLE BORDER=2><TR><TD ALIGN=CENTER>
+<IMG SRC="ics.vpnserver.png" WIDTH=503 HEIGHT=392 ALT="[figure]">
+</TD></TR><TR BGCOLOR="#00ffff"><TD><I>Figure 27-6:  Specifying the name of your VPN server</I></TD></TR></TABLE>
+<P>
+<TABLE><TR><TD VALIGN="TOP"><IMG SRC="../images/note.png" ALT="note" WIDTH=95 HEIGHT=29></TD>
+<TD VALIGN="TOP">To find out a computer's IP address, right-click the Internet connection in the Network Connections window, choose Status from the shortcut menu, and click the Details tab. The following blocks of IP addresses are reserved and not used on the Internet, so a computer with one of these numbers cannot be used in VPN: 10.0.0.0 through 10.255.255.255, 172.16.0.0 through 172.31.255.255, and 192.168.0.0 through 192.168.255.255.
+
+</TD></TR></TABLE>
+<OL>
+<LI  VALUE=9>
+You see a window confirming that you have created a VPN connection. Choose whether you want to add a shortcut for the connection to the desktop. Click Finish.
+</OL>
+<P>
+The VPN connection appears in a new Virtual Private Network section of the Network Connections window.
+<P>
+Now, when you want to connect to your VPN, open the VPN connection you just created. It connects to the Internet through the connection you specified in step 7 (unless you told it you wanted to make the connection yourself), and then connects to the VPN through the Internet.
+<P>
+<TABLE><TR><TD VALIGN="TOP"><IMG SRC="../images/note.png" ALT="note" WIDTH=95 HEIGHT=29></TD>
+<TD VALIGN="TOP">If your VPN server has a dial-in connection to the Internet, it may be issued a new IP address each session by its ISP. If so, you'll have to adjust the address on the VPN properties dialog box of the client computer before each connection.
+
+</TD></TR></TABLE>
+<A NAME="18">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squaregreen6x6.png" HEIGHT=6 WIDTH=6></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Configuring the VPN Server</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+To configure a computer to accept VPN connections, you must have an Incoming Connections icon in the Network Connections folder. If you already have this icon, double-click it to display the Incoming Connections Properties dialog box. Check that the Virtual Private Network option is selected (Allow Others To Make Private Connections To My Computer By Tunneling Through The Internet Or Other Network).
+<P>
+<TABLE><TR><TD VALIGN="TOP"><IMG SRC="../images/note.png" ALT="note" WIDTH=95 HEIGHT=29></TD>
+<TD VALIGN="TOP">Windows XP includes VPN server software that can accept only one incoming connection at a time. If you need more than one simultaneous VPN connection to your server, upgrade to Windows .NET Server.
+
+</TD></TR></TABLE>
+<P>
+If you do not have the Incoming Connections icon, follow these steps to create it and configure your computer to accept incoming VPN connections.
+<OL>
+<LI  VALUE=1>
+Open the <A HREF="../lans/7.htm#2">Network Connections window</A>.
+<LI  VALUE=2>
+Click Create a New Connection to start the New Connection Wizard. Click Next to move from window to window.
+<LI  VALUE=3>
+Select Set Up An Advanced Connection and click Next.
+<LI  VALUE=4>
+Select Accept Incoming Connections and click Next.
+<LI  VALUE=5>
+The Devices For Incoming Connections doesn't include an option for the Internet, which is the actual device you'll be using. Deselect all modems and ports and click Next.
+<LI  VALUE=6>
+Select Allow Virtual Private Connections. Click Next.
+<LI  VALUE=7>
+Select the users you want to allow to connect. Click Next.
+<LI  VALUE=8>
+Deselect any protocols that you don't want used. Generally, no change to this page is necessary as long as TCP/IP is one of the selected protocols. Click Next.
+<LI  VALUE=9>
+Click Finish. An icon called Incoming Connections is created in your Network Connections window. If you already have an Incoming Connections icon, its properties are changed to support VPN.
+</OL>
+<P>
+Once you configure a computer as a VPN server, be sure to read the section "<A HREF="../lans/7.htm#20">Networking Security Issues</A>" later in this chapter.
+<A NAME="19">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Configuring a VPN Connection</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+You can display and change the settings for your VPN or incoming connection. In the Network Connections window, right-click the VPN or incoming connection and choose Properties from the menu that appears. The properties for clients and servers are different--the Properties dialog box for a VPN client connection is shown in Figure 27-7.
+<TABLE BORDER=2><TR><TD ALIGN=CENTER>
+<IMG SRC="lans.vpnprops.png" WIDTH=367 HEIGHT=450 ALT="[figure]">
+</TD></TR><TR BGCOLOR="#00ffff"><TD><I>Figure 27-7:  The properties of a VPN client connection</I></TD></TR></TABLE>
+<P>
+On the General tab, you can change the host name or IP address of your company's VPN server or the Internet connection to use. The Advanced tab allows you to enable the Internet Connection Firewall, and to share the VPN connection.
+<P>
+The properties for the VPN server allow you to make changes to the options you selected with the New Connection Wizard. You can turn VPN on or off, display an icon in the notification area of the taskbar, and add and remove allowed users.
+<A NAME="20">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Networking Security Issues</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+When a computer is configured as a server that accepts dial-in or VPN connections, it is open to abuse by unauthorized users. Damage can include reading and destroying files on shared drives, as well as introducing viruses.
+<P>
+Be sure to disable Incoming Connections when you don't expect any. Here's how:
+<OL>
+<LI  VALUE=1>
+Open the <A HREF="../lans/7.htm#2">Network Connections window</A>.
+<LI  VALUE=2>
+Double-click the Incoming Connections icon to display the Incoming Connections Properties dialog box.
+<LI  VALUE=3>
+Deselect the modem in the Devices box to disable dial-up networking, and deselect the Virtual Private Network option to disable VPN.
+<LI  VALUE=4>
+Click OK.
+</OL>
+<P>
+Repeat the same steps, but select the modem, to turn dial-up networking and VPN back on when you plan to use your computer as a server. Because networking does you no good when it's turned off, take some additional prudent security measures for the times you need it enabled:
+<UL>
+<LI >
+Keep your modem's phone number a closely guarded secret.
+<LI >
+Use passwords and change them regularly.
+<LI >
+Consider using the callback feature.
+</UL>
+<P>
+If your computer is a remote access server, you have the option of enabling <A NAME="ddcallback"><I>callback</I></A>. When callback is enabled, the caller logs in. Then, if login is accepted, the server disconnects and calls the client back.
+<P>
+Enable the callback feature by following these steps:
+<OL>
+<LI  VALUE=1>
+In the Network Connections window, open the Incoming Connections icon to display the Incoming Connections Properties dialog box.
+<LI  VALUE=2>
+Click the Users tab.
+<LI  VALUE=3>
+Select the user for whom you want to enable callback. Click Properties.
+<LI  VALUE=4>
+Click the Callback tab.
+<LI  VALUE=5>
+Choose either to Allow The Caller To Set The Callback Number, or to Always Use The Following Callback Number (and enter the number with any additional digits such as 9 to get an outside line).
+<LI  VALUE=6>
+Click OK.
+</OL>
+<P>
+<A HREF="6.htm"  OnMouseOver='whomp(prevb, "sprev");' OnMouseOut='whomp(prevb, "wprev");'
+ title="Previous Section"><IMG NAME=prevb SRC="../images/wprev.png" ALT="Previous" HEIGHT=20 WIDTH=82 BORDER=0></A><!--
+--><A HREF="index.htm" OnMouseOver='whomp(chapb, "schap");' OnMouseOut='whomp(chapb, "wchap");'
+title="Chapter Overview"><IMG SRC="../images/wchap.png" ALT="Chapter" NAME=chapb HEIGHT=20 WIDTH=100 BORDER=0></A><A
+HREF="../index.htm" OnMouseOver='whomp(tocb, "sbook");' OnMouseOut='whomp(tocb, "wbook");' 
+title="Table of Contents"><IMG SRC="../images/wbook.png" ALT="Contents" NAME=tocb HEIGHT=20 WIDTH=94 BORDER=0></A><A
+HREF="../glossary/index.htm" OnMouseOver='whomp(glosb, "sglos");' OnMouseOut='whomp(glosb, "wglos");' 
+title="Glossary"><IMG SRC="../images/wglos.png" ALT="Glossary" NAME=glosb HEIGHT=20 WIDTH=94 BORDER=0></A><!--
+--><IMG SRC="../images/bnext.png" ALT="Next" HEIGHT=20 WIDTH=82 BORDER=0>
+<BR>
+</BLOCKQUOTE>
+</BODY>
+</HTML>

@@ -1,0 +1,6 @@
+Ayarlamalar : 
+<param name=NUMBEROFADS value=3> satirinda value=".." araligina kaç resim gösterecegimizi yazariz.
+Daha sonra;
+<param name=IMG1 value="test1.gif"> ile baslayan her üç satirda resmin adresini, o resim görünümdeyken menüde çikacak seçenegi ve o seçenegin tiklanmasiyla gidilecek adresi(URL) yi ayarliyoruz..
+Eger link sayisini azaltmak veya artirmak istiyorsaniz ;
+<param name=IMG1 .. gibi olan satirlar var. Mesela IMG1 demek, 1. Resim oldugunu anlatiyor. IMG2 olsa 2. Resim olacakti. IMG3, IMG4, gibi bu sira gidiyor yani.. Kolay gelsin.. 

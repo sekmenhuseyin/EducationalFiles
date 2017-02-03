@@ -1,0 +1,247 @@
+<!doctype html public "-//IETF//DTD HTML//EN">
+<HTML>
+<HEAD>
+<TITLE>Windows XP: The Complete Reference: Troubleshooting Windows XP</TITLE>
+<META NAME="GENERATOR" CONTENT="Web-O-Matic Deluxe 4.1">
+<META NAME="AUTHOR" CONTENT="John R. Levine, Margaret Levine Young">
+<META NAME="COPYRIGHT" CONTENTS="Copyright 2001 by The McGraw-Hill Companies. All rights reserved.">
+</HEAD>
+<BODY BACKGROUND="../images/background.png">
+<BLOCKQUOTE>
+<SCRIPT LANGUAGE="JavaScript">
+function whomp(i, file)
+{
+	i.src = "../images/" + file + ".png";
+}
+</SCRIPT>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarered3x3.png" HEIGHT=3 WIDTH=3></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=2>
+Chapter 35: Troubleshooting Windows XP
+</FONT></TD>
+</TR>
+</TABLE>
+<BR>
+<A HREF="0.htm"  OnMouseOver='whomp(prev, "sprev");' OnMouseOut='whomp(prev, "wprev");'
+ title="Previous Section"><IMG NAME=prev SRC="../images/wprev.png" ALT="Previous" HEIGHT=20 WIDTH=82 BORDER=0></A><!--
+--><A HREF="index.htm" OnMouseOver='whomp(chap, "schap");' OnMouseOut='whomp(chap, "wchap");'
+title="Chapter Overview"><IMG SRC="../images/wchap.png" ALT="Chapter" NAME=chap HEIGHT=20 WIDTH=100 BORDER=0></A><A
+HREF="../index.htm" OnMouseOver='whomp(toc, "sbook");' OnMouseOut='whomp(toc, "wbook");' 
+title="Table of Contents"><IMG SRC="../images/wbook.png" ALT="Contents" NAME=toc HEIGHT=20 WIDTH=94 BORDER=0></A><A
+HREF="../glossary/index.htm" OnMouseOver='whomp(glos, "sglos");' OnMouseOut='whomp(glos, "wglos");' 
+title="Glossary"><IMG SRC="../images/wglos.png" ALT="Glossary" NAME=glos HEIGHT=20 WIDTH=94 BORDER=0></A><!--
+--><A HREF="2.htm"  OnMouseOver='whomp(next, "snext");' OnMouseOut='whomp(next, "wnext");'
+ title="Next Section"><IMG NAME=next SRC="../images/wnext.png" ALT="Next" HEIGHT=20 WIDTH=82 BORDER=0></A>
+<BR>
+<A NAME="1">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarered10x10.png" HEIGHT=10 WIDTH=10></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=4><B>What Diagnostic Tools Does Windows XP Provide?</B></FONT>
+</TD>
+</TR>
+</TABLE></A>
+<P>
+Windows provides a wide range of diagnostic tools that you can use for different kinds of problems. In addition to the tools listed here, see "<A HREF="../internals/2.htm#1">Configuring Windows Using the System Configuration Utility</A>" in Chapter 37.
+<A NAME="2">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Startup Modes</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+The worst problems prevent Windows from starting up at all. If the Windows installation on your hard disk is intact, you can start Windows in one of several special <A NAME="ddstartupmodes"><I>startup modes</I></A> that provide limited function and help diagnose problems. Windows XP, however, brings its legacy from Windows 2000 and Windows NT, decidedly more complicated operating systems than Windows 98 and Me. Because of this sophisticated lineage, Windows XP has a number of more challenging options than Windows 98/Me. Nearly every mode has a purpose and the added options give you more recourse when disaster strikes.
+<P>
+Press <TT>F8</TT> during Windows startup (when you see the boot menu, if you have a dual-boot system) to see a menu of startup modes:
+<UL>
+<LI >
+<B><A HREF="../trouble/1.htm#3">Safe Mode</A>  </B>Windows starts by using the simplest possible set of drivers and hardware devices. If Windows still doesn't start, try Safe Mode With Command Prompt or the Recovery Console.
+<LI >
+<B><A HREF="../trouble/1.htm#4">Safe Mode With Networking</A>  </B>Windows starts by using the simplest possible set of drivers and hardware devices but also includes simple networking components. If Safe Mode works and you need information from a network, try this mode.
+<LI >
+<B><A HREF="../trouble/1.htm#5">Safe Mode With Command Prompt</A>  </B>Windows starts by using the simplest possible set of drivers and hardware devices. It further reduces the overhead by not loading the Graphical User Interface--you communicate with it by typing DOS-style commands. This mode works the same way as the Recovery Console.
+<LI >
+<B>Enable <A NAME="ddbootlogging">Boot Logging</A>  </B>Windows starts normally but logs all the drivers it loads in the file Ntbtlog.txt (usually stored in C:\Windows). Use this mode if you think that a device driver might be the problem.
+<LI >
+<B>Enable VGA Mode  </B>Windows loads the standard, super-compatible Microsoft VGA driver, which can often assist in reducing conflicts until you can fix the problem. Use this mode if your video driver isn't working.<B></B>
+<LI >
+<B>Last Known Good Configuration  </B>Windows starts using the last configuration that did <I>not</I> to have any known problems. It uses backup copies of your <A HREF="../registry/index.htm">Registry</A> and device driver files.
+<LI >
+<B>Directory Services Restore Mode  </B>This mode is not used in either Windows XP Home Edition or Professional: it is used on Windows servers.
+<LI >
+<B>Debugging Mode</B>  Windows starts normally but sends debugging information through a serial cable to another computer (rarely used except by Windows system programmers).
+<LI >
+<B>Selective Startup</B>  This mode isn't displayed on the Windows startup menu that appears when you press <TT>F8</TT>. Instead, you enable it by using the <A HREF="../trouble/3.htm#1">System Configuration Utility</A>. Windows prompts before loading or running each driver or program.
+<LI >
+<A NAME="ddnormalmode"><B>Normal Mode</B></A><B>  </B>Windows starts normally.
+</UL>
+<P>
+<TABLE><TR><TD VALIGN="TOP"><IMG SRC="../images/note.png" ALT="note" WIDTH=95 HEIGHT=29></TD>
+<TD VALIGN="TOP">Windows XP does not support DOS, with the exception of a DOS Virtual Machine, to run legacy applications. Because of this, Windows can not start up in DOS mode. Of course, you can still start up <A HREF="../dos/index.htm">DOS</A> from a floppy disk, Zip drive (if your BIOS supports it), or bootable CD-ROM. When running DOS, you can't read disks formatted with NTFS.
+
+</TD></TR></TABLE>
+<A NAME="3">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squaregreen6x6.png" HEIGHT=6 WIDTH=6></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Safe Mode</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+Safe Mode is a limited operating mode used to diagnose problems. All of Windows' basic functions are available, but the screen runs in basic VGA mode (640 &times; 480, 16 colors) and no devices are available beyond the screen, keyboard, and disks. See "<A HREF="../hardware/6.htm#3">Booting in Safe Mode</A>" in Chapter 13 for more information.
+<A NAME="4">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Safe Mode With Networking</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+<I>Safe Mode With Networking </I>is the same as Safe Mode, but with some simple networking components installed. This mode is helpful if you have an immediate need to access files over a network <I>before</I> you can fix your computer, if the tools you need to fix your computer are located on a remote machine, or you would like to be able to take advantage of the new <A HREF="../help/4.htm#1">Remote Assistance</A> feature.
+<A NAME="5">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Safe Mode With Command Prompt or Recovery Console</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+Safe Mode With Command Prompt is nothing like the modes described in the previous two sections. Instead of emerging into a pygmy version of the Windows desktop, this mode ejects you into a dark world with no comforting menus or OK buttons. This place is called the <A NAME="ddcommandprompt"><I>Command Prompt</I></A> or <A NAME="ddcommandlineinterface"><I>Command Line Interface</I></A> (<A NAME="ddcli"><I>CLI</I></A>). In order to issue commands you must know an arcane language that consists of only words and some symbols. Most DOS commands will work here, but this is not DOS.
+<P>
+<TABLE><TR><TD VALIGN="TOP"><IMG SRC="../images/note.png" ALT="note" WIDTH=95 HEIGHT=29></TD>
+<TD VALIGN="TOP">The Command Prompt also doubles as the <A NAME="ddrecoveryconsole">Recovery Console</A> that you can start from the Windows XP CD-ROM. All of these commands apply there as well. You can enter the Recover Console by booting from the Windows XP CD-ROM (as described in section "<A HREF="../wininst/6.htm#2">Booting off the Windows XP CD-ROM</A>" in the Appendix), and pressing <TT>R</TT> when the text mode part of the setup begins. You can install the Recovery Console as a startup option by putting the Windows XP CD-ROM in the CD drive, choosing Start | Run, typing <B>d:\i386\winnt32.exe /cmdcons</B> (replacing <I>d:</I> with your CD drive letter if it's not D:) and clicking OK. Recovery Console appears as an option on the <A HREF="../wininst/6.htm#4">boot menu that Windows XP uses for dual-boot systems</A>, which is described in the Appendix.
+
+</TD></TR></TABLE>
+<P>
+The Safe Mode With Command Prompt asks you to enter your Administrator password. If you didn't enter one when you installed Windows, you don't need one here. If you wrote down any names of files that were indicated as being corrupted or the cause of your systems recent demise, that's good. Its even better if you note any files that may be causing your system not to start up properly. Using the command prompt you can often go in and fish out these culprit files, though it's best to do this with a qualified technician (or at least the proven local nerd).
+<P>
+<TABLE><TR><TD VALIGN="TOP"><IMG SRC="../images/tip.png" ALT="tip" WIDTH=95 HEIGHT=29></TD>
+<TD VALIGN="TOP">To get a listing of all commands in the Recovery Console, simply type HELP at the prompt and press E<SMALL>NTER</SMALL>.
+</TD></TR></TABLE>
+<UL>
+<LI >
+When you see the command prompt (usually C:&amp;ra;), type a command and press E<SMALL>NTER</SMALL>. Here are a few useful commands:<B>DIR</B> (Directory)  Displays a listing of the files in the directory you are currently in. Items that have a &amp;la;DIR&amp;ra; legend next to them are directories (folders). Type <B>DIR</B> <B>/P</B> to tell Windows to pause if there are more than a screenful of items. Type <B>DIR /W</B> to cause the listing to be shown in several columns. Better yet, type <B>DIR /P/W</B> for a multicolumn listing that pauses before scrolling.</UL>
+<P>
+You can use an asterisk to represent part of the filename. For example, to list all text files, type this:
+<P><PRE>
+DIR *.txt
+</PRE>
+<P>
+<B>CD (Change Directory)  </B>To move to a different directory (folder), type CD and a space and the name of the folder. For example, to move to the Windows folder that is contained in the current folder, type:
+<P><PRE>
+CD windows
+</PRE>
+<P>
+If you want to go deeper in one go, you add directory names, like so:
+<P><PRE>
+CD windows\system32
+</PRE>
+<P>
+If you want to back out of a directory and return to what is called the "parent" directory of the one you are in, type the following:
+<P><PRE>
+CD ..
+</PRE>
+<P>
+The two periods indicate one level up.
+<UL>
+<LI >
+<B>DEL  </B>Deletes the indicated file or files. Type <B>DEL</B> followed by a space and the name of the file to delete. You must indicate a file by name and extension. This can be dangerous, so be very cautious and always triple-check whatever it is you plan on deleting. For example:
+</UL>
+<P><PRE>
+DEL filename.txt
+</PRE>
+<P>
+You can use an asterisk to represent part of the filename. For example, to delete all Word documents, type this:
+<P><PRE>
+DEL *.doc
+</PRE>
+<UL>
+<LI >
+<B>CHKDSK  </B>The Microsoft Check Disk utility has been upstaged by ScanDisk since Windows 95 first shipped, but no more. CHKDSK is far more capable these days and can even work with NTFS-based systems. To get basic info and run a simple test, type CHKDSK and press E<SMALL>NTER</SMALL>. Windows checks the integrity of the current partition and lists the current space usage. In order for the utility to do <I>all</I> of its magic, however, it must do so before Windows starts. Type this:</UL>
+<P><PRE>
+CHKDSK /F
+</PRE>
+<P>
+First, CHKDSK displays an error, and then it asks whether you'd like to run it the next time Windows restarts. Press <TT>Y</TT> and E<SMALL>NTER</SMALL>. CHKDSK will run when you next boot up Windows.<A NAME="6">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>The Boot Floppy Disk</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+Historically, one of the steps in the Windows installation process created a startup floppy disk, or <A NAME="ddbootfloppydisk"><I>boot floppy disk</I></A>. The general idea was that if the file system on your hard disk was damaged, you could often start your computer from the startup floppy disk and repair the damage enough to make the hard disk bootable.
+<P>
+You can still make a boot floppy in Windows XP, but Windows now includes <A HREF="../trouble/6.htm#1">System Restore</A>, a sort of time traveling utility that can take your Windows machine back in time to when it actually worked.
+<P>
+To make a boot floppy in Windows XP, you need a single 1.44MB floppy disk. Follow these steps:
+<OL>
+<LI  VALUE=1>
+Write-enable the disk and put it in the disk drive.
+<LI  VALUE=2>
+Choose Start | My Computer.
+<LI  VALUE=3>
+Right-click the 3 1/2 Floppy (A:) icon and choose Format from the shortcut menu that appears. You see the Format 3 1/2 Floppy (A:) dialog box.
+<LI  VALUE=4>
+Select the Create An MS-DOS Startup Disk check box.
+<LI  VALUE=5>
+Click Start. Windows creates a bootable startup disk.
+<LI  VALUE=6>
+Remove the disk from the drive, write-protect it, label it, and put it in a safe place.
+</OL>
+<P>
+If you use this floppy disk to start your system, you see the DOS command prompt, described in <A HREF="../dos/index.htm">Chapter 39</A>. No drivers are loaded, so you can't use your CD-ROM or other hardware, and you can't see your <A HREF="../harddisks/1.htm#7">NTFS disks</A>, only disks formatted as FAT or FAT32.
+<A NAME="7">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>System Information</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+You can display the System Information window by choosing Start | All Programs | Accessories | System Tools | System Information. This window (shown in Figure 35-1) displays detailed information about all the devices and hardware drivers configured into your copy of Windows, and is a good place to check to see whether system components are correctly are configured. We find it more efficient than poking around the various dialog boxes that the Control Panel displays. Its Tools menu lists a number of other useful diagnostic programs you can run.
+<TABLE BORDER=2><TR><TD ALIGN=CENTER>
+<IMG SRC="trouble.sysinfo.png" WIDTH=600 HEIGHT=400 ALT="[figure]">
+</TD></TR><TR BGCOLOR="#00ffff"><TD><I>Figure 35-1:  The System Information window displays the state of your hardware and software.</I></TD></TR></TABLE>
+<A NAME="8">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>The Windows XP Setup Wizard</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+The Windows XP Setup Wizard may be able to repair a corrupted Windows XP installation. Follow these steps:
+<OL>
+<LI  VALUE=1>
+Start the Setup Wizard from the Windows XP CD-ROM by putting the CD-ROM into your CD drive and choosing Install Windows XP). After the first reboot, <A HREF="../wininst/7.htm#1">the Setup Wizard</A> should find the existing installation of Windows XP and ask whether you want repair it.
+<LI  VALUE=2>
+Press <TT>R</TT> to attempt the repair. The Setup Wizard tries to repair the installation, and then prompts you to reboot.
+<LI  VALUE=3>
+Press <TT>F3</TT> to restart. After you reboot back into the Windows XP Setup, you can quit the Setup Wizard without reinstalling Windows by pressing <TT>F3</TT>.
+</OL>
+<P>
+<A HREF="0.htm"  OnMouseOver='whomp(prevb, "sprev");' OnMouseOut='whomp(prevb, "wprev");'
+ title="Previous Section"><IMG NAME=prevb SRC="../images/wprev.png" ALT="Previous" HEIGHT=20 WIDTH=82 BORDER=0></A><!--
+--><A HREF="index.htm" OnMouseOver='whomp(chapb, "schap");' OnMouseOut='whomp(chapb, "wchap");'
+title="Chapter Overview"><IMG SRC="../images/wchap.png" ALT="Chapter" NAME=chapb HEIGHT=20 WIDTH=100 BORDER=0></A><A
+HREF="../index.htm" OnMouseOver='whomp(tocb, "sbook");' OnMouseOut='whomp(tocb, "wbook");' 
+title="Table of Contents"><IMG SRC="../images/wbook.png" ALT="Contents" NAME=tocb HEIGHT=20 WIDTH=94 BORDER=0></A><A
+HREF="../glossary/index.htm" OnMouseOver='whomp(glosb, "sglos");' OnMouseOut='whomp(glosb, "wglos");' 
+title="Glossary"><IMG SRC="../images/wglos.png" ALT="Glossary" NAME=glosb HEIGHT=20 WIDTH=94 BORDER=0></A><!--
+--><A HREF="2.htm"  OnMouseOver='whomp(nextb, "snext");' OnMouseOut='whomp(nextb, "wnext");'
+ title="Next Section"><IMG NAME=nextb SRC="../images/wnext.png" ALT="Next" HEIGHT=20 WIDTH=82 BORDER=0></A>
+<BR>
+</BLOCKQUOTE>
+</BODY>
+</HTML>

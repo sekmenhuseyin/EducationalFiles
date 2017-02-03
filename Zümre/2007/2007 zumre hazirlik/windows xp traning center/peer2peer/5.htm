@@ -1,0 +1,79 @@
+<!doctype html public "-//IETF//DTD HTML//EN">
+<HTML>
+<HEAD>
+<TITLE>Windows XP: The Complete Reference: Configuring Windows for a LAN</TITLE>
+<META NAME="GENERATOR" CONTENT="Web-O-Matic Deluxe 4.1">
+<META NAME="AUTHOR" CONTENT="John R. Levine, Margaret Levine Young">
+<META NAME="COPYRIGHT" CONTENTS="Copyright 2001 by The McGraw-Hill Companies. All rights reserved.">
+</HEAD>
+<BODY BACKGROUND="../images/background.png">
+<BLOCKQUOTE>
+<SCRIPT LANGUAGE="JavaScript">
+function whomp(i, file)
+{
+	i.src = "../images/" + file + ".png";
+}
+</SCRIPT>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarered3x3.png" HEIGHT=3 WIDTH=3></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=2>
+Chapter 28: Configuring Windows for a LAN
+</FONT></TD>
+</TR>
+</TABLE>
+<BR>
+<A HREF="4.htm"  OnMouseOver='whomp(prev, "sprev");' OnMouseOut='whomp(prev, "wprev");'
+ title="Previous Section"><IMG NAME=prev SRC="../images/wprev.png" ALT="Previous" HEIGHT=20 WIDTH=82 BORDER=0></A><!--
+--><A HREF="index.htm" OnMouseOver='whomp(chap, "schap");' OnMouseOut='whomp(chap, "wchap");'
+title="Chapter Overview"><IMG SRC="../images/wchap.png" ALT="Chapter" NAME=chap HEIGHT=20 WIDTH=100 BORDER=0></A><A
+HREF="../index.htm" OnMouseOver='whomp(toc, "sbook");' OnMouseOut='whomp(toc, "wbook");' 
+title="Table of Contents"><IMG SRC="../images/wbook.png" ALT="Contents" NAME=toc HEIGHT=20 WIDTH=94 BORDER=0></A><A
+HREF="../glossary/index.htm" OnMouseOver='whomp(glos, "sglos");' OnMouseOut='whomp(glos, "wglos");' 
+title="Glossary"><IMG SRC="../images/wglos.png" ALT="Glossary" NAME=glos HEIGHT=20 WIDTH=94 BORDER=0></A><!--
+--><IMG SRC="../images/bnext.png" ALT="Next" HEIGHT=20 WIDTH=82 BORDER=0>
+<BR>
+<A NAME="1">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarered10x10.png" HEIGHT=10 WIDTH=10></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=4><B>Troubleshooting Your Network</B></FONT>
+</TD>
+</TR>
+</TABLE></A>
+<P>
+Although Windows networking generally works well, you may have trouble with one computer or all of the computers on the network, especially when you first set up the network. This section recommends some steps to take to solve your problems.
+<P>
+If you have trouble with the IP addresses on the LAN, use the Networking (TCP/IP) Troubleshooter. Choose Start | Help And Support, click Fixing A Problem in the Pick A Help Topic list, click Networking Problems, and click Home And Small Office Networking Troubleshooter. Another useful program is Network Diagnostics. To use it, type <B>Network Diagnostics</B> in the Help and Support Center window's Search box and press E<SMALL>NTER</SMALL>.<P>
+The solutions to some common problems and solutions follow:
+<UL>
+<LI >
+<B>The "Local Area Network: A Network Cable Is Unplugged" message appears</B>  If you see this message in a pop-up window from the notification bar of the taskbar, the message is probably right--the cable from your computer to the LAN hub is unplugged or damaged. When you fix the connection, the message goes away.<B></B>
+<LI >
+<B>Computer can't log onto a domain</B>  You can't log onto a domain-based LAN if you use Windows XP Home Edition; only Windows XP Professional can log on to a domain.
+<LI >
+<B>Computers do not appear in My Network Places</B>  If a computer doesn't appear in your My Network Places window when you click View Workgroup Computers, it may have a loose cable connection, a bad cable, or a network interface card that isn't working properly. Check all of the cable connections. Occasionally, cables become damaged, so you might want to try replacing a suspect length of cable with one you know is good. Use <A HREF="../connecting/8.htm#3">Ping</A> to see if the computer can communicate.
+<LI >
+<B>Shared folders don't appear in My Network Places</B>  The My Network Places window contains shortcuts to shared folders on the LAN, but these shortcuts can be deleted. If a shared folder you need doesn't appear in My Network Places, click <A HREF="../sharehw/2.htm#2">Add A Network Place</A> in the Task pane. Try searching for the computer name by choosing Start | Search and choosing Computers Or People at the What Do You Want To Search For prompt (if you don't see that prompt, click More Advanced Options and then Other Search Options).
+<LI >
+<B>Bad or missing protocol</B>  A protocol may be missing or incorrectly configured. Check to see that your computer is speaking the same language as all the others. If the other computers are using NetBEUI and you are using TCP/IP, you will not be able to communicate with them. Open the Network Connections window, right-click the Local Area Connection icon, and choose Repair from the menu that appears. Windows will try to reinstall any missing components. Also, check which protocols the other computers are using to communicate, and install that protocol on the computer that is incommunicado.
+<LI >
+<B>Network interface card problem</B>  You may have a hardware conflict. Use the <A HREF="../hardware/3.htm#1">Device Manager</A> to see whether there's a problem with the network interface card. If the network interface card appears with a yellow exclamation point, the card isn't working properly. Check the installation instructions for your card.
+<LI >
+<B>Password problems</B>  If Windows asks for a password when you try to use a shared folder or printer, you may need to find out the password for that resource or have your user account name added to the list of users who can address the resource. See <A HREF="../sharehw/index.htm">Chapter 29</A> for more information on sharing resources.
+</UL>
+<P>
+<A HREF="4.htm"  OnMouseOver='whomp(prevb, "sprev");' OnMouseOut='whomp(prevb, "wprev");'
+ title="Previous Section"><IMG NAME=prevb SRC="../images/wprev.png" ALT="Previous" HEIGHT=20 WIDTH=82 BORDER=0></A><!--
+--><A HREF="index.htm" OnMouseOver='whomp(chapb, "schap");' OnMouseOut='whomp(chapb, "wchap");'
+title="Chapter Overview"><IMG SRC="../images/wchap.png" ALT="Chapter" NAME=chapb HEIGHT=20 WIDTH=100 BORDER=0></A><A
+HREF="../index.htm" OnMouseOver='whomp(tocb, "sbook");' OnMouseOut='whomp(tocb, "wbook");' 
+title="Table of Contents"><IMG SRC="../images/wbook.png" ALT="Contents" NAME=tocb HEIGHT=20 WIDTH=94 BORDER=0></A><A
+HREF="../glossary/index.htm" OnMouseOver='whomp(glosb, "sglos");' OnMouseOut='whomp(glosb, "wglos");' 
+title="Glossary"><IMG SRC="../images/wglos.png" ALT="Glossary" NAME=glosb HEIGHT=20 WIDTH=94 BORDER=0></A><!--
+--><IMG SRC="../images/bnext.png" ALT="Next" HEIGHT=20 WIDTH=82 BORDER=0>
+<BR>
+</BLOCKQUOTE>
+</BODY>
+</HTML>

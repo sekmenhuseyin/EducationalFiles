@@ -1,0 +1,115 @@
+<!doctype html public "-//IETF//DTD HTML//EN">
+<HTML>
+<HEAD>
+<TITLE>Windows XP: The Complete Reference: Running Windows XP on Laptops</TITLE>
+<META NAME="GENERATOR" CONTENT="Web-O-Matic Deluxe 4.1">
+<META NAME="AUTHOR" CONTENT="John R. Levine, Margaret Levine Young">
+<META NAME="COPYRIGHT" CONTENTS="Copyright 2001 by The McGraw-Hill Companies. All rights reserved.">
+</HEAD>
+<BODY BACKGROUND="../images/background.png">
+<BLOCKQUOTE>
+<SCRIPT LANGUAGE="JavaScript">
+function whomp(i, file)
+{
+	i.src = "../images/" + file + ".png";
+}
+</SCRIPT>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarered3x3.png" HEIGHT=3 WIDTH=3></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=2>
+Chapter 15: Running Windows XP on Laptops
+</FONT></TD>
+</TR>
+</TABLE>
+<BR>
+<A HREF="3.htm"  OnMouseOver='whomp(prev, "sprev");' OnMouseOut='whomp(prev, "wprev");'
+ title="Previous Section"><IMG NAME=prev SRC="../images/wprev.png" ALT="Previous" HEIGHT=20 WIDTH=82 BORDER=0></A><!--
+--><A HREF="index.htm" OnMouseOver='whomp(chap, "schap");' OnMouseOut='whomp(chap, "wchap");'
+title="Chapter Overview"><IMG SRC="../images/wchap.png" ALT="Chapter" NAME=chap HEIGHT=20 WIDTH=100 BORDER=0></A><A
+HREF="../index.htm" OnMouseOver='whomp(toc, "sbook");' OnMouseOut='whomp(toc, "wbook");' 
+title="Table of Contents"><IMG SRC="../images/wbook.png" ALT="Contents" NAME=toc HEIGHT=20 WIDTH=94 BORDER=0></A><A
+HREF="../glossary/index.htm" OnMouseOver='whomp(glos, "sglos");' OnMouseOut='whomp(glos, "wglos");' 
+title="Glossary"><IMG SRC="../images/wglos.png" ALT="Glossary" NAME=glos HEIGHT=20 WIDTH=94 BORDER=0></A><!--
+--><A HREF="5.htm"  OnMouseOver='whomp(next, "snext");' OnMouseOut='whomp(next, "wnext");'
+ title="Next Section"><IMG NAME=next SRC="../images/wnext.png" ALT="Next" HEIGHT=20 WIDTH=82 BORDER=0></A>
+<BR>
+<A NAME="1">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarered10x10.png" HEIGHT=10 WIDTH=10></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=4><B>Managing Your Computer's Power</B></FONT>
+</TD>
+</TR>
+</TABLE></A>
+<P>
+If you often use your laptop when it isn't plugged in, you probably have had a battery die before  you finished your work. Windows and some applications support power management, which eases this problem without actually solving it. Windows supports two power management standards: <A NAME="ddadvancedpowermanagement"><I>Advanced Power Management</I></A> (<I>APM</I>) and <A NAME="ddadvancedconfigurationandpowerinterface"><I>Advanced Configuration and Power Interface</I></A> (<I>ACPI</I>). To take advantage of Windows power management features, however, you must have a computer with hardware that supports one of these standards. (The computer needn't be a laptop).
+<P>
+<TABLE><TR><TD VALIGN="TOP"><IMG SRC="../images/tip.png" ALT="tip" WIDTH=95 HEIGHT=29></TD>
+<TD VALIGN="TOP">The most power-hungry component of your computer system is the monitor. Turning off the monitor when you won't be using it for several hours saves energy, in exchange for the relatively minor inconvenience of waiting a few seconds for it to come on again when you're ready to go back to work.
+
+</TD></TR></TABLE>
+<P>
+Most laptops support <A HREF="../basics/7.htm#1">Standby Mode</A>, in which the disks stop spinning, the screen goes blank, but the memory and CPU continue to run, using much less power than full operation. To switch to Standby Mode, choose Start | Turn Off Computer, and then choose Stand By.
+<P>
+Many laptops (and some desktops) also support <A HREF="../basics/5.htm#1">hibernation</A>, in which the computer stores the contents of its memory in a temporary file on your hard disk and then shuts itself down completely, so it stops using power. When you reopen the laptop, click  the computer's power button and press keys or move the mouse.The computer wakes up again, restoring the contents of its memory from the temporary file. If your computer supports Hibernate Mode, the Power Options Properties dialog box includes a Hibernate tab. Click it and select the Enable Hibernation Support check box. The dialog box shows how much disk space will be required to store the contents of your computer's memory during hibernation, as well as the amount of free disk space currently available. When hibernation is enabled, an additional choice--Hibernate--appears when you choose Start | Shut Down.
+<P>
+Your computer can switch to Standby or Hibernate Mode automatically after a specified number of minutes of inactivity. Power management is handled from the Power Options Properties dialog box, displayed in Figure 15-10. To display the Power Options Properties dialog box, open the Performance And Maintenance icon on the Control Panel, then click Power Options. The options displayed on your Power Options Properties dialog box depend on what type of power management your hardware supports.
+<TABLE BORDER=2><TR><TD ALIGN=CENTER>
+<IMG SRC="mobile.pm.png" WIDTH=404 HEIGHT=455 ALT="[figure]">
+</TD></TR><TR BGCOLOR="#00ffff"><TD><I>Figure 15-10:  Manage how your laptop (or desktop) uses power by using these settings.</I></TD></TR></TABLE>
+<P>
+<TABLE><TR><TD VALIGN="TOP"><IMG SRC="../images/tip.png" ALT="tip" WIDTH=95 HEIGHT=29></TD>
+<TD VALIGN="TOP">Many laptop manufacturers add extra power management drivers to take advantage of special power-saving features--such as running the CPU slower when the computer is working on batteries than when it's plugged in, or turning off serial and parallel ports when you're not planning to use them. Consult your laptop's documentation to see whether your computer has any extra features you can enable.
+
+</TD></TR></TABLE>
+<P>
+You can choose a <A NAME="ddpowerscheme"><I>power scheme</I></A>, which is a group of settings that define when and if Windows should turn off the power to parts of your computer, or switch to Standby or Hibernate Mode. Power schemes enable you to create and use different power management profiles for use under different circumstances.
+<P>
+Click the Power Schemes tab in the Power Options Properties dialog box and then click the Power Schemes drop-down list (the topmost setting). Choose the power scheme that reflects the type of hardware you're using:
+<UL>
+<LI >
+<B>Home/Office Desk</B>  Turns off the monitor after 20 minutes. On battery, goes into power saving mode in less than half an hour.
+<LI >
+<B>Portable/Laptop</B>  Goes into power-saving mode fairly quickly whether plugged in or on battery.
+<LI >
+<B>Presentation</B>  Monitor never turns off. Goes into power-saving mode when running on battery without turning off monitor.
+<LI >
+<B>Always On</B>  Turns off monitor and hard drives (when on battery) but never goes into Standby or Hibernate.
+</UL>
+<UL>
+<LI >
+<B>Minimal Power Management</B>  Similar to Home/Office Desk, but takes much longer to hibernate.
+<LI >
+<B>Max Battery</B>  Goes into power-saving modes very quickly, especially when running on the battery.
+</UL>
+<P>
+You can see the specifics by selecting the power scheme. Once you've chosen the scheme that most closely matches your needs, you can edit the power management settings. If you've made changes you can save the settings as a new power scheme by clicking the Save As button, typing a new name for the power scheme, and clicking OK.
+<P>
+<TABLE><TR><TD VALIGN="TOP"><IMG SRC="../images/note.png" ALT="note" WIDTH=95 HEIGHT=29></TD>
+<TD VALIGN="TOP">The Advanced tab may have some additional settings for laptop power management.
+
+</TD></TR></TABLE>
+<P>
+To see the status of an individual battery in your computer, click the Power Meter tab in the Power Options Properties dialog box, make sure the Show Details For Each Battery check box is selected, and click the battery icon. You can also set alarms to beep when your battery charge drops to a preset level: click the Alarms tab on the Power Options Properties dialog box to set alarms.
+<P>
+<TABLE><TR><TD VALIGN="TOP"><IMG SRC="../images/tip.png" ALT="tip" WIDTH=95 HEIGHT=29></TD>
+<TD VALIGN="TOP">You can display the Power Meter in the notification area of the Windows taskbar. Click the Advanced tab on the Power Options Properties dialog box and select the Always Show Icon On The Taskbar check box. The Power Meter shows whether the computer is connected to AC power or is running on batteries. Double-clicking the Power Meter in the notification area displays the Power Meter dialog box, which shows the status of your batteries.
+
+</TD></TR></TABLE>
+<P>
+<A HREF="3.htm"  OnMouseOver='whomp(prevb, "sprev");' OnMouseOut='whomp(prevb, "wprev");'
+ title="Previous Section"><IMG NAME=prevb SRC="../images/wprev.png" ALT="Previous" HEIGHT=20 WIDTH=82 BORDER=0></A><!--
+--><A HREF="index.htm" OnMouseOver='whomp(chapb, "schap");' OnMouseOut='whomp(chapb, "wchap");'
+title="Chapter Overview"><IMG SRC="../images/wchap.png" ALT="Chapter" NAME=chapb HEIGHT=20 WIDTH=100 BORDER=0></A><A
+HREF="../index.htm" OnMouseOver='whomp(tocb, "sbook");' OnMouseOut='whomp(tocb, "wbook");' 
+title="Table of Contents"><IMG SRC="../images/wbook.png" ALT="Contents" NAME=tocb HEIGHT=20 WIDTH=94 BORDER=0></A><A
+HREF="../glossary/index.htm" OnMouseOver='whomp(glosb, "sglos");' OnMouseOut='whomp(glosb, "wglos");' 
+title="Glossary"><IMG SRC="../images/wglos.png" ALT="Glossary" NAME=glosb HEIGHT=20 WIDTH=94 BORDER=0></A><!--
+--><A HREF="5.htm"  OnMouseOver='whomp(nextb, "snext");' OnMouseOut='whomp(nextb, "wnext");'
+ title="Next Section"><IMG NAME=nextb SRC="../images/wnext.png" ALT="Next" HEIGHT=20 WIDTH=82 BORDER=0></A>
+<BR>
+</BLOCKQUOTE>
+</BODY>
+</HTML>

@@ -1,0 +1,1154 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0114)http://msdn.microsoft.com/asp.net/using/building/web/default.aspx?pull=/library/en-us/dnaspp/html/CustomErrors.asp -->
+<HTML><HEAD><TITLE>Web Applications: Rich Custom Error Handling with ASP.NET (ASP.NET Technical Articles)</TITLE><!--Enter title and description-->
+<META content=en-us name=ms.locale>
+<META content="text/html; charset=utf-8" http-equiv=Content-Type>
+<META 
+content="On this page, find links to articles and other resources for building Web applications using ASP.NET.Adding your own custom error handling to your ASP.NET Web applications can ease debugging and improve customer satisfaction.  " 
+name=Description>
+<META content="noindex, nofollow" name=robots><LINK 
+href="Web Applications Rich Custom Error Handling with ASP_NET (ASP_NET Technical Articles)_files/css.aspx" 
+rel=Stylesheet type=text/css>
+<SCRIPT language=Javascript 
+src="Web Applications Rich Custom Error Handling with ASP_NET (ASP_NET Technical Articles)_files/menujs" 
+type=text/javascript></SCRIPT>
+<LINK 
+href="Web Applications Rich Custom Error Handling with ASP_NET (ASP_NET Technical Articles)_files/dc2e.css" 
+rel=Stylesheet type=text/css><LINK 
+href="Web Applications Rich Custom Error Handling with ASP_NET (ASP_NET Technical Articles)_files/msdn-mnp25-eyebrow.css" 
+rel=Stylesheet type=text/css><LINK 
+href="E:\netten\Web Applications Rich Custom Error Handling with ASP_NET (ASP_NET Technical Articles)_files\css(1).aspx" 
+rel=stylesheet type=text/css>
+<SCRIPT language=JavaScript>var doImage = doImage;
+var TType = TType;
+
+function mhHover(tbl, idx, cls)
+{
+	var t, d;
+	if (document.getElementById)
+		t = document.getElementById(tbl);
+	else
+		t = document.all(tbl);
+	if (t == null) return;
+	if (t.getElementsByTagName)
+		d = t.getElementsByTagName("TD");
+	else
+		d = t.all.tags("TD");
+	if (d == null) return;
+	if (d.length <= idx) return;
+	d[idx].className = cls;
+}
+
+function setMSResearch() {
+  var time = new Date();
+  if( document.cookie.indexOf( 'msresearch=1 ') == -1 ) {
+    document.cookie = 'msresearch=' + time.getTime() + ':' + escape( document.location) + ':' + escape( document.referrer) + '; path=/; domain=.microsoft.com; ';
+  }
+}
+
+function footerjs(doc)
+{
+	if (doImage == null)
+	{
+		var tt = TType == null ? "PV" : TType;
+		doc.write('<layer visibility="hide"><div style="display:none"><img src="http://c.microsoft.com/trans_pixel.asp?source=msdn&TYPE=' + tt + '&p=asp.net_using_building_web&r=http%3a%2f%2fmsdn.microsoft.com%2f" width=0 height=0 hspace=0 vspace=0 border=0 /></div></layer>');
+	}
+
+	if( ( document.cookie.indexOf( 'msresearch=1 ') == -1 ) 
+	 && ( document.cookie.indexOf( 'msresearch=')   != -1 ) ) {
+	  setInterval( "setMSResearch()", 1000 );
+	}
+}</SCRIPT>
+
+<META content="MSHTML 5.00.2920.0" name=GENERATOR></HEAD>
+<BODY><A name=top></A>
+<SCRIPT language=Javascript>
+				if (self.name == "MNPMainFrame")
+					top.location.href = self.location.href;
+			</SCRIPT>
+
+<DIV id=msviMasthead 
+xmlns:Utility="http://www.microsoft.com/MSCOM/VisualIdentity/Utility">
+<TABLE border=0 cellPadding=0 cellSpacing=0 width="100%">
+  <TBODY>
+  <TR>
+    <TD width="100%">
+      <TABLE border=0 cellPadding=0 cellSpacing=0 height=22 width="100%">
+        <TBODY>
+        <TR>
+          <TD bgColor=#ffffff id=msviRegionIdGraphic></TD>
+          <TD bgColor=#3568cc width="100%"><IMG alt=* height=22 
+            src="Web Applications Rich Custom Error Handling with ASP_NET (ASP_NET Technical Articles)_files/gradient.jpg" 
+            title="" width=250></TD></TR></TBODY></TABLE></TD>
+    <TD align=left bgColor=#3568cc dir=ltr height=22 id=msviGlobalToolbar 
+noWrap>
+      <TABLE border=0 cellPadding=0 cellSpacing=0>
+        <TBODY>
+        <TR>
+          <TD class=gt0 noWrap 
+          onmouseout="mhHover('msviGlobalToolbar', 0, 'gt0')" 
+          onmouseover="mhHover('msviGlobalToolbar', 0, 'gt1')"><A 
+            href="http://www.microsoft.com/">Microsoft.com Home</A></TD>
+          <TD class=gtsep>|</TD>
+          <TD class=gt0 noWrap 
+          onmouseout="mhHover('msviGlobalToolbar', 2, 'gt0')" 
+          onmouseover="mhHover('msviGlobalToolbar', 2, 'gt1')"><A 
+            href="http://msdn.microsoft.com/library/toolbar/3.0/sitemap/en-us.mspx">Site 
+            Map</A></TD></TR></TBODY></TABLE></TD></TR>
+  <TR vAlign=top>
+    <TD width="100%">
+      <TABLE border=0 cellPadding=0 cellSpacing=0 height=42 width="100%">
+        <TBODY>
+        <TR vAlign=top>
+          <TD bgColor=#ffffff id=msviBrandBanner><A 
+            href="http://www.microsoft.com/msdn"><IMG alt=MSDN border=0 
+            height=42 
+            src="Web Applications Rich Custom Error Handling with ASP_NET (ASP_NET Technical Articles)_files/msdn_masthead_ltr.gif" 
+            title="" width=225></A></TD>
+          <TD bgColor=#6799ff width="100%"><IMG alt=* height=42 
+            src="E:\netten\Web Applications Rich Custom Error Handling with ASP_NET (ASP_NET Technical Articles)_files\gradient(1).jpg" 
+            title="" width=250></TD></TR></TBODY></TABLE></TD>
+    <TD bgColor=#6799ff id=msviGlobalSearch>
+      <DIV id=msviNoSearch></DIV></TD></TR></TBODY></TABLE>
+<DIV id=msviLocalToolbar>
+<TABLE border=0 cellPadding=0 cellSpacing=0 height=19 width="100%">
+  <TBODY>
+  <TR>
+    <TD id=msviHomePageLink noWrap><A href="http://msdn.microsoft.com/">MSDN 
+      Home</A></TD>
+    <TD><SPAN class=ltsep>|</SPAN></TD>
+    <TD class=lt0 noWrap onmouseout="mhHover('msviLocalToolbar', 2, 'lt0')" 
+    onmouseover="mhHover('msviLocalToolbar', 2, 'lt1')"><A 
+      href="http://msdn.microsoft.com/developercenters/">Developer 
+Centers</A></TD>
+    <TD><SPAN class=ltsep>|</SPAN></TD>
+    <TD class=lt0 noWrap onmouseout="mhHover('msviLocalToolbar', 4, 'lt0')" 
+    onmouseover="mhHover('msviLocalToolbar', 4, 'lt1')"><A 
+      href="http://msdn.microsoft.com/library/default.asp">Library</A></TD>
+    <TD><SPAN class=ltsep>|</SPAN></TD>
+    <TD class=lt0 noWrap onmouseout="mhHover('msviLocalToolbar', 6, 'lt0')" 
+    onmouseover="mhHover('msviLocalToolbar', 6, 'lt1')"><A 
+      href="http://msdn.microsoft.com/downloads/">Downloads</A></TD>
+    <TD><SPAN class=ltsep>|</SPAN></TD>
+    <TD class=lt0 noWrap onmouseout="mhHover('msviLocalToolbar', 8, 'lt0')" 
+    onmouseover="mhHover('msviLocalToolbar', 8, 'lt1')"><A 
+      href="http://msdn.microsoft.com/code/">Code Center</A></TD>
+    <TD><SPAN class=ltsep>|</SPAN></TD>
+    <TD class=lt0 noWrap onmouseout="mhHover('msviLocalToolbar', 10, 'lt0')" 
+    onmouseover="mhHover('msviLocalToolbar', 10, 'lt1')"><A 
+      href="http://msdn.microsoft.com/subscriptions/">Subscriptions</A></TD>
+    <TD><SPAN class=ltsep>|</SPAN></TD>
+    <TD class=lt0 noWrap onmouseout="mhHover('msviLocalToolbar', 12, 'lt0')" 
+    onmouseover="mhHover('msviLocalToolbar', 12, 'lt1')"><A 
+      href="http://msdn.microsoft.com/worldwide.aspx">MSDN Worldwide</A></TD>
+    <TD width="100%"></TD></TR></TBODY></TABLE></DIV></DIV>
+<TABLE border=0 cellPadding=0 cellSpacing=0 dir=ltr width="100%">
+  <TBODY>
+  <TR vAlign=top>
+    <TD height="100%" style="OVERFLOW-X: hidden" width=181>
+      <TABLE border=0 cellPadding=0 cellSpacing=0 width="100%">
+        <TBODY>
+        <TR>
+          <TD class=mnpQuickSearch dir=ltr 
+          style="BACKGROUND: #cccccc; COLOR: #000000">
+            <FORM action=/msdn-online/shared/components/mscomsearch30.aspx 
+            style="MARGIN: 0px"><NOBR><FONT color=#000000>Search 
+            for</FONT><BR><INPUT class=mnpSearchBox id=qu maxLength=255 name=qu 
+            style="WIDTH: 165px"><BR>
+            <TABLE border=0 cellPadding=0 cellSpacing=0 style="MARGIN-TOP: 2px" 
+            width="100%">
+              <TBODY>
+              <TR>
+                <TD class=mnpQuickSearch 
+                style="PADDING-BOTTOM: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px" 
+                width="100%"><SELECT class=mnpSearchScopes name=SearchScope 
+                  style="WIDTH: 137px"><OPTION selected value=1>All 
+                    MSDN</OPTION><OPTION value=2>All Library</OPTION><OPTION 
+                    value=3>Code &amp; Downloads</OPTION><OPTION value=4>Product 
+                    Information</OPTION><OPTION value=5>Knowledge 
+                  Base</OPTION></SELECT></TD>
+                <TD><INPUT class=mnpSearchButton type=submit value=Go><BR></TD></TR></TBODY></TABLE><A 
+            href="http://search.microsoft.com/search/search.aspx?View=msdn&amp;st=a&amp;c=0&amp;s=1" 
+            onmouseout="style.color='#000000';" 
+            onmouseover="style.color='#0033CC';" style="COLOR: #000000">Advanced 
+            Search</A></NOBR></FORM></TD></TR></TBODY></TABLE>
+      <DIV class=mnpMenuTop dir=ltr id=mnpMenuTop 
+      style="OVERFLOW-X: hidden; WIDTH: 181px" 
+      parent="/asp.net/using/building/default.aspx" 
+      url="/asp.net/using/building/web/default.aspx">
+      <DIV class=mnpInherit>
+      <DIV class=mnpMenuRow 
+      style="BACKGROUND: #f1f1f1; BORDER-BOTTOM-COLOR: #f1f1f1; BORDER-LEFT-COLOR: #f1f1f1; BORDER-RIGHT-COLOR: #f1f1f1; BORDER-TOP-COLOR: #f1f1f1; OVERFLOW-X: hidden; WIDTH: 176px"><IMG 
+      alt=* border=0 class=mnpMenuArrow height=7 
+      src="Web Applications Rich Custom Error Handling with ASP_NET (ASP_NET Technical Articles)_files/arrowLTR.gif" 
+      style="LEFT: 166px; VISIBILITY: hidden" title="" width=4><A 
+      href="http://msdn.microsoft.com/asp.net/">ASP.NET Home</A></DIV>
+      <DIV class=mnpMenuRow 
+      style="BACKGROUND: #f1f1f1; BORDER-BOTTOM-COLOR: #f1f1f1; BORDER-LEFT-COLOR: #f1f1f1; BORDER-RIGHT-COLOR: #f1f1f1; BORDER-TOP-COLOR: #f1f1f1; OVERFLOW-X: hidden; WIDTH: 176px" 
+      menu="m4f92b61c2ce041329b6b8d371bf81404"><IMG alt=* border=0 
+      class=mnpMenuArrow height=7 
+      src="Web Applications Rich Custom Error Handling with ASP_NET (ASP_NET Technical Articles)_files/arrowLTR.gif" 
+      style="LEFT: 166px; VISIBILITY: hidden" title="" width=4><A 
+      href="http://msdn.microsoft.com/asp.net/technologyinfo/default.aspx">Technology 
+      Information</A></DIV>
+      <DIV class=mnpMenuRow 
+      style="BACKGROUND: #f1f1f1; BORDER-BOTTOM-COLOR: #f1f1f1; BORDER-LEFT-COLOR: #f1f1f1; BORDER-RIGHT-COLOR: #f1f1f1; BORDER-TOP-COLOR: #f1f1f1; OVERFLOW-X: hidden; WIDTH: 176px" 
+      menu="mefcf65503bc3467b81dd5c6497f67cdb"><IMG alt=* border=0 
+      class=mnpMenuArrow height=7 
+      src="Web Applications Rich Custom Error Handling with ASP_NET (ASP_NET Technical Articles)_files/arrowLTR.gif" 
+      style="LEFT: 166px; VISIBILITY: hidden" title="" width=4><A 
+      href="http://msdn.microsoft.com/asp.net/using/default.aspx">Using 
+      ASP.NET</A></DIV>
+      <DIV class=mnpMenuRow 
+      style="BACKGROUND: #f1f1f1; BORDER-BOTTOM-COLOR: #f1f1f1; BORDER-LEFT-COLOR: #f1f1f1; BORDER-RIGHT-COLOR: #f1f1f1; BORDER-TOP-COLOR: #f1f1f1; OVERFLOW-X: hidden; WIDTH: 176px" 
+      menu="mcd7f007dd241479ab6ae15eea9b62365"><IMG alt=* border=0 
+      class=mnpMenuArrow height=7 
+      src="Web Applications Rich Custom Error Handling with ASP_NET (ASP_NET Technical Articles)_files/arrowLTR.gif" 
+      style="LEFT: 166px; VISIBILITY: hidden" title="" width=4><A 
+      href="http://msdn.microsoft.com/asp.net/downloads/default.aspx">Downloads</A></DIV>
+      <DIV class=mnpMenuRow 
+      style="BACKGROUND: #f1f1f1; BORDER-BOTTOM-COLOR: #f1f1f1; BORDER-LEFT-COLOR: #f1f1f1; BORDER-RIGHT-COLOR: #f1f1f1; BORDER-TOP-COLOR: #f1f1f1; OVERFLOW-X: hidden; WIDTH: 176px" 
+      menu="m4c3940483d3a4ffdb360d3e85dcb776f"><IMG alt=* border=0 
+      class=mnpMenuArrow height=7 
+      src="Web Applications Rich Custom Error Handling with ASP_NET (ASP_NET Technical Articles)_files/arrowLTR.gif" 
+      style="LEFT: 166px; VISIBILITY: hidden" title="" width=4><A 
+      href="http://msdn.microsoft.com/asp.net/support/default.aspx">Support</A></DIV>
+      <DIV class=mnpMenuRow 
+      style="BACKGROUND: #f1f1f1; BORDER-BOTTOM-COLOR: #f1f1f1; BORDER-LEFT-COLOR: #f1f1f1; BORDER-RIGHT-COLOR: #f1f1f1; BORDER-TOP-COLOR: #f1f1f1; OVERFLOW-X: hidden; WIDTH: 176px" 
+      menu="m9a8fceba416f493380cfacc7de5fb00f"><IMG alt=* border=0 
+      class=mnpMenuArrow height=7 
+      src="Web Applications Rich Custom Error Handling with ASP_NET (ASP_NET Technical Articles)_files/arrowLTR.gif" 
+      style="LEFT: 166px; VISIBILITY: hidden" title="" width=4><A 
+      href="http://msdn.microsoft.com/asp.net/community/default.aspx">Community</A></DIV>
+      <DIV class=mnpMenuBorder style="WIDTH: 180px"></DIV>
+      <DIV class=mnpMenuRow 
+      style="BACKGROUND: #f1f1f1; BORDER-BOTTOM-COLOR: #f1f1f1; BORDER-LEFT-COLOR: #f1f1f1; BORDER-RIGHT-COLOR: #f1f1f1; BORDER-TOP-COLOR: #f1f1f1; OVERFLOW-X: hidden; WIDTH: 176px"><IMG 
+      alt=* border=0 class=mnpMenuArrow height=7 
+      src="Web Applications Rich Custom Error Handling with ASP_NET (ASP_NET Technical Articles)_files/arrowLTR.gif" 
+      style="LEFT: 166px; VISIBILITY: hidden" title="" width=4><A 
+      href="http://msdn.microsoft.com/products">Products &amp; 
+      Technologies</A></DIV>
+      <DIV class=mnpMenuBorder 
+      style="MARGIN-BOTTOM: 0px; WIDTH: 180px"></DIV></DIV></DIV>
+      <DIV class=mnpAds 
+      style="BACKGROUND: #f1f1f1; BORDER-BOTTOM: #999999 0px solid; BORDER-LEFT: #999999 0px solid; BORDER-RIGHT: #999999 1px solid; BORDER-TOP: #999999 0px solid; HEIGHT: 100%; MARGIN-BOTTOM: 20px; WIDTH: 181px">
+      <P>
+      <CENTER><A href="http://www.msdnevents.com/" id=ad1 target=_top><IMG 
+      alt="MSDN Events" border=0 
+      src="Web Applications Rich Custom Error Handling with ASP_NET (ASP_NET Technical Articles)_files/msdnevents.gif"></A></CENTER>
+      <P>
+      <CENTER><A href="http://devconnections.com/asp/" id=ad2 target=_top><IMG 
+      alt="Microsoft ASP.NET Connections" border=0 
+      src="Web Applications Rich Custom Error Handling with ASP_NET (ASP_NET Technical Articles)_files/aspconn.gif"></A></CENTER></DIV>
+      <DIV class=mnpAds style="HEIGHT: 100%; MARGIN-BOTTOM: 20px; WIDTH: 181px">
+      <CENTER></CENTER></DIV></TD>
+    <TD dir=ltr width="100%">
+      <TABLE bgColor=#3366cc cellPadding=0 cellSpacing=0 height=46 
+        width="100%"><TBODY>
+        <TR>
+          <TD width=419><IMG alt="MSDN Home" border=0 height=46 
+            src="Web Applications Rich Custom Error Handling with ASP_NET (ASP_NET Technical Articles)_files/left_bnr_ASPNET.jpg" 
+            width=419></TD>
+          <TD 
+          background="Web Applications Rich Custom Error Handling with ASP_NET (ASP_NET Technical Articles)_files/web" 
+          bgColor=#3366cc title="MSDN Home" width="100%">&nbsp;</TD>
+          <TD width=175><IMG alt="MSDN Home" border=0 height=46 
+            src="Web Applications Rich Custom Error Handling with ASP_NET (ASP_NET Technical Articles)_files/right_bnr_aspnet.jpg" 
+            width=175></TD></TR></TBODY></TABLE><SPAN class=eyebrow id=_ctl0_eb 
+      style="COLOR: #003399; HEIGHT: 24px; PADDING-LEFT: 14px; PADDING-TOP: 4px; WIDTH: 100%"><A 
+      href="http://msdn.microsoft.com/">MSDN Home</A>&nbsp;&gt;&nbsp;<A 
+      href="http://msdn.microsoft.com/asp.net/default.aspx">ASP.NET 
+      Home</A>&nbsp;&gt;&nbsp;<A 
+      href="http://msdn.microsoft.com/asp.net/using/default.aspx">Using 
+      ASP.NET</A>&nbsp;&gt;&nbsp;<A 
+      href="http://msdn.microsoft.com/asp.net/using/building/default.aspx">Building 
+      Applications</A>&nbsp;&gt;&nbsp;Web Applications</SPAN> 
+      <DIV class=clsDocBody id=pageContainer><!--pull table-->
+      <TABLE border=0 cellPadding=0 id=hppulltable style="HEIGHT: 100%">
+        <TBODY>
+        <TR>
+          <TD vAlign=top>
+            <TABLE border=0 cellPadding=0 cellSpacing=0 
+            style="BORDER-COLLAPSE: collapse; WIDTH: 100%">
+              <TBODY>
+              <TR align=right style="PADDING-RIGHT: 15px; WIDTH: 100%" 
+              vAlign=top>
+                <TD style="TEXT-ALIGN: left" vAlign=top><IMG align=left 
+                  alt="See this in the MSDN Library" border=0 id=PullImage 
+                  src="Web Applications Rich Custom Error Handling with ASP_NET (ASP_NET Technical Articles)_files/library.gif"><SPAN 
+                  id=PullLabel><A 
+                  href="http://msdn.microsoft.com/library/en-us/dnaspp/html/CustomErrors.asp">See 
+                  This in MSDN Library</A></SPAN></TD></TR></TBODY></TABLE>
+            <DIV style="FLOAT: right">
+            <DIV class=MNPPart id=pageoptions1_OptionsPanel>
+            <H4>Page Options</H4><IFRAME frameBorder=0 height=150 
+            id=frmRatingsOptions scrolling=no 
+            src="Web Applications Rich Custom Error Handling with ASP_NET (ASP_NET Technical Articles)_files/ratings.aspx" 
+            width="95%"></IFRAME></DIV></DIV>
+            <DIV id=nsbanner>
+            <DIV id=TitleRow>
+            <H1 class=dtH1><A name=customerrors></A>Rich Custom Error Handling 
+            with ASP.NET</H1></DIV></DIV>
+            <P>By Eli Robillard</P>
+            <P>January 2004</P>
+            <P>Applies to:<BR>&nbsp;&nbsp;&nbsp;Microsoft® ASP.NET</P>
+            <P><B>Summary:</B> Adding your own custom error handling to your 
+            ASP.NET Web applications can ease debugging and improve customer 
+            satisfaction. Eli Robillard shows how you can create an 
+            error-handling mechanism that shows a friendly face to customers and 
+            still provides the detailed technical information developers will 
+            need. (19 printed pages)</P>
+            <P><A 
+            href="http://download.microsoft.com/download/c/d/7/cd71ff38-cd40-4057-af24-9e1a5b34b3dc/CustomErrorsSample.msi" 
+            target=_top>Download the source code for this article</A>.</P>
+            <H4 class=dtH1>Contents</H4>
+            <P><A 
+            href="http://msdn.microsoft.com/asp.net/using/building/web/default.aspx?pull=/library/en-us/dnaspp/html/CustomErrors.asp#customerrors_topic1" 
+            target=_self>Introduction</A><BR><A 
+            href="http://msdn.microsoft.com/asp.net/using/building/web/default.aspx?pull=/library/en-us/dnaspp/html/CustomErrors.asp#customerrors_topic2" 
+            target=_self>Errors Raise Exceptions</A><BR><A 
+            href="http://msdn.microsoft.com/asp.net/using/building/web/default.aspx?pull=/library/en-us/dnaspp/html/CustomErrors.asp#customerrors_topic3" 
+            target=_self>The Exception Class</A><BR><A 
+            href="http://msdn.microsoft.com/asp.net/using/building/web/default.aspx?pull=/library/en-us/dnaspp/html/CustomErrors.asp#customerrors_topic4" 
+            target=_self>Try...Catch...Finally</A><BR><A 
+            href="http://msdn.microsoft.com/asp.net/using/building/web/default.aspx?pull=/library/en-us/dnaspp/html/CustomErrors.asp#customerrors_topic5" 
+            target=_self>Page_Error</A><BR><A 
+            href="http://msdn.microsoft.com/asp.net/using/building/web/default.aspx?pull=/library/en-us/dnaspp/html/CustomErrors.asp#customerrors_topic6" 
+            target=_self>global.asax: Application_Error </A><BR><A 
+            href="http://msdn.microsoft.com/asp.net/using/building/web/default.aspx?pull=/library/en-us/dnaspp/html/CustomErrors.asp#customerrors_topic7" 
+            target=_self>Rich Custom Error Pages</A><BR><A 
+            href="http://msdn.microsoft.com/asp.net/using/building/web/default.aspx?pull=/library/en-us/dnaspp/html/CustomErrors.asp#customerrors_topic8" 
+            target=_self>Implementation</A></P>
+            <H2 class=dtH1><A name=customerrors_topic1></A>Introduction</H2>
+            <P>The quality of a site should be measured not only by how well it 
+            works, but by how gracefully it fails. While developers need 
+            detailed error reports while debugging, visitors to the site should 
+            be shielded from these. Technical errata only serve to confuse, 
+            disappoint, and reveal cracks in the armor. </P>
+            <P>If an error page is displayed, it should serve both developers 
+            and end-users without sacrificing aesthetics. An ideal error page 
+            maintains the look and feel of the site, offers the ability to 
+            provide detailed errors to internal developers—identified by IP 
+            address—and at the same time offers no detail to end users. Instead, 
+            it gets them back to what they were seeking—easily and without 
+            confusion. The site administrator should be able to review errors 
+            encountered either by e-mail or in the server logs, and optionally 
+            be able to receive feedback from users who run into trouble. Is this 
+            the stuff of dreams? No more.</P>
+            <P>There are several obstacles standing between the current built-in 
+            features of ASP.NET 1.1 and realizing the ideal. For one, the 
+            built-in detailed error page is fixed and cannot be customized. 
+            Further, a custom error page (as set in web.config) does not have 
+            access to the last error thrown, so it is really only useful to make 
+            the apology prettier. While the <B>customErrors</B> tag in 
+            web.config has a property to provide the custom page to external 
+            users and the detailed error page only to the local user 
+            (mode=<B>RemoteOnly</B>), how many developers debug at the server 
+            console? </P>
+            <P>All these problems can be solved, but first it helps to 
+            understand the basics. Peter Bromberg wrote two resources on 
+            exception handling that everyone should read as a prerequisite for 
+            this article: <A 
+            href="http://www.eggheadcafe.com/articles/20030127.asp">Documenting 
+            Exceptional Developers</A> and <A 
+            href="http://www.eggheadcafe.com/articles/20030816.asp">Build a 
+            Really Useful ASP.NET Exception Engine</A>. In addition, source code 
+            is provided with this article (click the link near the top of this 
+            page) for a complete rich custom error system. As with <A 
+            href="http://msdn.microsoft.com/asp.net/using/building/web/default.aspx?pull=/library/en-us/dnaspp/html/ASPNet-OneSiteManyFaces.asp">my 
+            previous MSDN article</A>, the sample is from my favorite fake 
+            Swedish journal of finance: Fjorbes Online. All these online 
+            resources will introduce you to the basics. Now let's see how to put 
+            it all together to bring error handling from the dark ages to the 
+            space age.</P>
+            <H2 class=dtH1><A name=customerrors_topic2></A>Errors Raise 
+            Exceptions</H2>
+            <P>When errors happen, an exception is raised or thrown. There are 
+            three layers at which you may trap and deal with an exception: in a 
+            <B>try...catch...finally</B> block, at the Page level, or at the 
+            Application level. The first two happen right inside a page's code, 
+            and code for application events is kept inside global.asax. </P>
+            <P>The <B>Exception</B> object contains information about the error, 
+            and as the event bubbles up through the layers, it is wrapped in 
+            further detail. In rough terms, the <B>Application_Error</B> 
+            exception contains the <B>Page_Error </B>exception, which expands on 
+            the base <B>Exception</B>, which triggered the bubbling in the first 
+            place. </P>
+            <H2 class=dtH1><A name=customerrors_topic3></A>The Exception 
+            Class</H2>
+            <P>Not surprisingly, the call to get the last error is 
+            <B>Server.GetLastError()</B> and it returns an object of type 
+            <B>Exception</B>:</P><PRE class=code>   Dim err As Exception = Server.GetLastError()
+</PRE>
+            <P>You will find an <B>Exception</B> class reference <A 
+            href="http://msdn.microsoft.com/asp.net/using/building/web/default.aspx?pull=/library/en-us/cpref/html/frlrfSystemExceptionMembersTopic.asp">here</A>. 
+            Some of the properties and methods of the <B>Exception</B> class are 
+            more useful than others. (See Table 1.)</P>
+            <P class=label><B>Table 1. Exception class properties and methods 
+            rated for usefulness</B></P>
+            <TABLE class=data>
+              <TBODY>
+              <TR vAlign=top>
+                <TH align=left class=data width="27%">Property / Method()</TH>
+                <TH align=left class=data width="17%">Return Type</TH>
+                <TH align=left class=data width="56%">Description</TH></TR>
+              <TR vAlign=top>
+                <TD class=data width="27%"><B>Message</B></TD>
+                <TD class=data width="17%">String</TD>
+                <TD class=data width="56%">The error message. Useful. 
+                  Available with debugging on or off.</TD></TR>
+              <TR vAlign=top>
+                <TD class=data width="27%"><B>Source</B></TD>
+                <TD class=data width="17%">String</TD>
+                <TD class=data width="56%">The application or object that 
+                  caused the error. Not of much use when an .aspx file fails, as 
+                  .NET generates a random name when it compiles an .aspx into IL 
+                  (for example, "MyPage.aspx" can become "ecpgatxa"). Reasonably 
+                  useful for debugging classes and controls. </TD></TR>
+              <TR vAlign=top>
+                <TD class=data width="27%"><B>StackTrace</B></TD>
+                <TD class=data width="17%">String</TD>
+                <TD class=data width="56%">When execution ends, the stack is 
+                  unwound. This means that every call from the original page 
+                  request, down to the line that triggered the error, is popped 
+                  off the execution stack and noted. Happily, even line numbers 
+                  are recorded in the base <B>Exception</B> when debugging is 
+                  turned on. Only the method name is reported when debugging is 
+                  off. This is highly useful. </TD></TR>
+              <TR vAlign=top>
+                <TD class=data width="27%"><B>TargetSite</B></TD>
+                <TD class=data width="17%">MethodBase</TD>
+                <TD class=data width="56%">The method that threw the 
+                  <B>Exception</B>. This also shows up in the <B>StackTrace</B>. 
+                  It is not as useful on its own. </TD></TR>
+              <TR vAlign=top>
+                <TD class=data width="27%"><B>HelpLink</B></TD>
+                <TD class=data width="17%">String</TD>
+                <TD class=data width="56%">Can hold a URL that might help the 
+                  user, but usually doesn't. Consider implementing it when 
+                  throwing custom exceptions. </TD></TR>
+              <TR vAlign=top>
+                <TD class=data width="27%"><B>InnerException</B></TD>
+                <TD class=data width="17%">Exception</TD>
+                <TD class=data width="56%">The next error in the 
+                  <B>StackTrace</B>. You can use <B>InnerException</B> to drill 
+                  down through the complete list of exceptions to the original 
+                  <B>Exception</B>.</TD></TR>
+              <TR vAlign=top>
+                <TD class=data width="27%"><B>GetBaseException()</B></TD>
+                <TD class=data width="17%">Exception</TD>
+                <TD class=data width="56%">The <B>Exception</B> describing the 
+                  original error. Since the original error might be wrapped up 
+                  in the depths of <B>InnerException</B>, this method is 
+                  essential to cut to the chase.</TD></TR>
+              <TR vAlign=top>
+                <TD class=data width="27%"><B>ToString()</B></TD>
+                <TD class=data width="17%">String</TD>
+                <TD class=data width="56%">Concatenates the above properties 
+                  into a single string. </TD></TR></TBODY></TABLE>
+            <P>To see how the <B>Exception</B> looks as it bubbles up through 
+            each layer, consider the following sample <B>Page_Load </B>(with 
+            debugging turned on): </P>
+            <H4 class=dtH1>Sample Microsoft® Visual Basic® code</H4><PRE class=code>Sub Page_Load(ByVal src As Object, ByVal e As EventArgs)
+   Throw New ApplicationException("This is an unhandled exception.")
+End Sub
+</PRE>
+            <H4 class=dtH1>Try...Catch...Fail (Exception.Source=" 
+yk1wsaam")</H4>
+            <P>Message: <CODE class=ce>"This is an unhandled 
+            exception."</CODE></P>
+            <H4 class=dtH1>Stack Trace</H4>
+            <P><CODE class=ce>at ASP.Default_aspx.Page_Load(Object src, 
+            EventArgs e) in C:\dev\CustomErrors\Default.aspx:line 5</CODE></P>
+            <H4 class=dtH1>Page_Error (Exception.Source=" yk1wsaam")</H4>
+            <P>Message: <CODE class=ce>"This is an unhandled 
+            exception."</CODE></P>
+            <H4 class=dtH1>Stack Trace</H4><PRE class=code>at ASP.Default2_aspx.Page_Load(Object src, EventArgs e) in C:\dev\CustomErrors\Default.aspx:line 5 
+at System.Web.UI.Control.OnLoad(EventArgs e) 
+at System.Web.UI.Control.LoadRecursive() 
+at System.Web.UI.Page.ProcessRequestMain()
+</PRE>
+            <H4 class=dtH1>Application_Error 
+(Exception.Source="System.Web")</H4>
+            <P>Message: <CODE class=ce>"Exception of type 
+            System.Web.HttpUnhandledException was thrown."</CODE></P>
+            <H4 class=dtH1>Stack Trace</H4><PRE class=code>at System.Web.UI.Page.HandleError(Exception e) 
+at System.Web.UI.Page.ProcessRequestMain() 
+at System.Web.UI.Page.ProcessRequest() 
+at System.Web.UI.Page.ProcessRequest(HttpContext context) 
+at System.Web.CallHandlerExecutionStep.System.Web.HttpApplication+IExecutionStep.Execute() 
+at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean&amp; completedSynchronously)
+</PRE>
+            <P>At the <B>Try...Catch...Fail </B>layer, only the immediate 
+            <B>Exception</B> exists and <B>Exception.Source</B> is a random 
+            string of characters that ASP.NET uses to identify the IL version of 
+            Default.aspx. </P>
+            <P>At the Page level, the stack has unwound to show that the error 
+            happened during <B>Page.ProcessRequestMain</B>. </P>
+            <P>At the Application layer, something interesting happens. The 
+            Source changes to the slightly meaningful, "System.Web." Everything 
+            above <B>Page.ProcessRequestMain</B> from the Page level exception 
+            has been rolled into the <B>Page.HandleError(exception e)</B> line. 
+            At the Application layer, that detail is still available by either 
+            using <B>InnerException</B> or getting straight to the original 
+            exception with <B>GetBaseException()</B>. </P>
+            <H2 class=dtH1><A 
+            name=customerrors_topic4></A>Try...Catch...Finally</H2>
+            <P>The sooner you catch and resolve an error, the better. There is a 
+            reason they are called exceptions and not rules. In most cases, you 
+            can stop problems before they become exceptions with simple 
+            validation. <B>FileIO.File.Exists</B> and <B>String.Empty</B> are 
+            your friends. When writing a new class, always provide a way to 
+            validate data. For example, this article's sample code includes an 
+            IP address class (<B>IPAddress.vb</B>). While methods 
+            <B>IsInRange</B>, <B>ToLong</B>, and <B>ToIPAddress</B> can throw 
+            exceptions, the <B>Validate</B> and <B>IsEmptyOrZero</B> functions 
+            do not. No one should rely on <B>Try...Catch...Fail </B>for 
+            validation. </P>
+            <P>When writing a line or block of code that could fail based on an 
+            uncontrollable condition, such as an unavailable object (like a 
+            missing database connection or Web service), it should be wrapped 
+            with <B>Try...Catch...Finally</B>.</P>
+            <P>Inside the <B>Catch</B> block, you have the option of throwing 
+            the exception higher to a <B>Page</B> and perhaps an 
+            <B>Application</B> error handler. While you can still recover 
+            gracefully (that is, without an apology) inside a <B>Page_Error</B> 
+            handler, you are not likely to write one for every page. No, the 
+            main reason to throw the <B>Exception</B> higher than the 
+            <B>Catch</B> block is to perform notification or logging in an 
+            <B>Application_Error</B> handler. </P>
+            <P>When throwing an <B>Exception</B> higher, don't: </P><PRE class=code>Throw New ApplicationException(e)
+</PRE>
+            <P>Do: </P><PRE class=code>Throw
+</PRE>
+            <P>The former is the syntax for a brand new custom <B>Exception</B>. 
+            In a <B>Catch</B> you already have one in front of you. The latter 
+            is all you need to send the current <B>Exception</B> merrily up the 
+            chain of command for further handling. If you must add your own two 
+            cents, you can always:</P><PRE class=code>   Catch e As System.Exception
+      Throw New System.ApplicationException("My Two Cents", e)
+</PRE>
+            <P>This creates a new <B>Exception</B> that wraps up the original 
+            error as its <B>InnerException</B>. Now for a proper demonstration 
+            of <B>Try...Catch...Finally</B>.</P>
+            <P>Visual Basic:</P><PRE class=code>Dim Conn as New _
+SqlConnection("Server=sql.mySite.com;uid=myUser;password=myPass")
+Dim Cmd As New _
+SqlCommand("SELECT Title, URL FROM Article ORDER BY Title", Conn)
+Dim IsDbAvailable as Boolean = True
+try
+   ' The database may not be available
+Conn.Open
+ArticleGrid.DataSource = Cmd.ExecuteReader
+ArticleGrid.DataBind
+catch e as Exception
+   ' Executed if an error occurs
+   IsDbAvailable = False
+   Trace.Write ("Database unavailable with Message: ", e.Message)
+Trace.Write ("Stack Trace: ", e.StackTrace)
+
+   ' Throw the exception higher for logging and notification
+   Throw
+finally
+   ' If any clean-up is required for either case (unmanaged objects 
+   ' left open, etc.), do it here.
+Conn.Close()
+end try   
+</PRE>
+            <P>C#:</P><PRE class=code>New SqlConnection("Server=sql.mySite.com;uid=myUser;password=myPass") Conn;
+New SqlCommand("SELECT Title, URL FROM Article ORDER BY Title", Conn) Cmd;
+
+Boolean IsDbAvailable = True;
+try {
+   // The database may not be available
+Conn.Open();
+ArticleGrid.DataSource = Cmd.ExecuteReader();
+ArticleGrid.DataBind();
+}
+catch (e as Exception) {
+   // Executed if an error occurs
+   IsDbAvailable = False;
+   Trace.Write ("Database unavailable with Message: ", e.Message);
+   Trace.Write ("Stack Trace: ", e.StackTrace);
+
+   // Throw the exception higher for logging and notification
+   throw;
+}
+finally {
+   /* If any clean-up is required for either case (unmanaged objects 
+      left open, etc.), do it here. */
+   Conn.Close ()
+}
+</PRE>
+            <P>You can have multiple <B>Catch</B> blocks, each overloaded to 
+            catch a different <B>Exception</B> type (<B>Exception</B>, 
+            <B>IndexOutOfRangeException</B>, <B>NullReferenceException</B>, and 
+            so on). Chris Sully wrote an article, <A 
+            href="http://www.dotnetjohn.com/articles/articleid42.aspx">Error 
+            Handling in ASP.NET...</A>, which both provides a reference table of 
+            exception types and makes terrific further reading.</P>
+            <P>Before going on, note that there is a school of thought that says 
+            you should <I>always </I>throw an exception higher, that 
+            "swallowing" the exception is a bad idea. The reasoning is that 
+            exceptions should be visible and logged so that they can be guarded 
+            against in the future (with improved infrastructure, scalability, 
+            and so on), and that any instances that might be swallowed could be 
+            avoided with better programming. This happens to be true. Swallowing 
+            an exception is fine while debugging, but production code should 
+            always throw exceptions higher. Then, whenever preventable 
+            exceptions show up in the logs, you can apply some validation to 
+            ensure they won't happen again. </P>
+            <H2 class=dtH1><A name=customerrors_topic5></A>Page_Error</H2>
+            <P><B>Page_Error</B> and <B>Application_Error </B>are similar. They 
+            take the same arguments, and they can even contain the same code. In 
+            fact a <B>Page_Error </B>section on a test page is a great way to 
+            debug code intended for <B>Application_Error</B>. </P>
+            <P>Their differences are few. One goes inside the .aspx file (or its 
+            code-behind), and the other inside global.asax (or an 
+            <B>IHttpHandler</B> class assembly). Differences between their stack 
+            traces were noted earlier, but if you always use 
+            <B>GetBaseException()</B>, then you will always have the original 
+            error, making this difference irrelevant. Another point to note is 
+            that in <B>Page_Error </B>you can prevent an exception from bubbling 
+            up further on to <B>Application_Error</B> by invoking 
+            <B>Context.ClearError()</B>. While useful for debugging (to avoid 
+            clogging the error log), this is not good practice in production 
+            code.</P>
+            <P>The following sample code adds the error to the trace 
+            information. The page will not finish loading once the exception is 
+            raised, so a brief apology is presented. Note that this simply shows 
+            the mechanics of <B>Page_Error</B>; actually helping the user out is 
+            an exercise left to the reader.</P>
+            <P>Visual Basic:</P><PRE class=code>Sub Page_Load(ByVal src As Object, ByVal args As EventArgs)
+   Throw New ApplicationException("This is an unhandled exception.")
+End Sub
+   
+Sub Page_Error(ByVal src As Object, ByVal args As EventArgs) Handles MyBase.Error
+   Dim e As System.Exception = Server.GetLastError()
+   Trace.Write("Message", e.Message)
+   Trace.Write("Source", e.Source)
+   Trace.Write("Stack Trace", e.StackTrace)
+   Response.Write("Sorry, an error was encountered.")
+Context.ClearError()
+End Sub
+</PRE>
+            <P>C#:</P><PRE class=code>void Page_Load(Object src, EventArgs args) {
+   // raise an intentional exception to get the ball rolling
+   throw new ApplicationException("This is an unhandled exception.");
+}
+
+void Page_Error(Object sender, EventArgs args) {
+   Response.Write("Error:\n");
+   Exception e = Server.GetLastError();
+   Trace.Write("Message",e.Message);
+   Trace.Write("Source",e.Source);
+   Trace.Write("Stack Trace",e.StackTrace);
+Response.Write("Sorry, an error was encountered.");
+   Context.ClearError();
+}
+</PRE>
+            <P>Some people believe that putting code into an override of the 
+            <B>Page</B>'s <B>OnError</B> event is equivalent to putting it in 
+            the <B>Page_Error</B> event. It isn't. <B>OnError</B> hands control 
+            to a private <B>HandleError</B> method. This is where ASP.NET checks 
+            whether <B>customErrors</B> is turned on and redirects when an 
+            exception is raised. It is where ASP.NET checks whether tracing is 
+            turned on and adds its own bit about the exception just raised. The 
+            main reason to override <B>OnError</B> is to replace this behavior 
+            with your own (described later). There is no good reason to put 
+            other code there. If someone does decide to turn on the built-in 
+            <B>customErrors</B>, code sitting in <B>OnError</B> will get in the 
+            way. If someone decides to add code to <B>Page_Error</B> it will not 
+            fire, as <B>OnError</B> fires first. To do error-handling at the 
+            Page level, use <B>Page_Error</B>.</P>
+            <H2 class=dtH1><A name=customerrors_topic6></A>global.asax: 
+            Application_Error </H2>
+            <P>Generating e-mail notification, logging errors to the Event Log, 
+            and the structure of global.asax are covered wonderfully in many 
+            books and articles. Here are two good references: </P>
+            <UL>
+              <LI><A 
+              href="http://msdn.microsoft.com/asp.net/using/building/web/default.aspx?pull=/library/en-us/dnaspnet/html/asp08232001.asp">Event 
+              Logging and E-mail Notification</A>, an article by Rob Howard 
+              <LI><A 
+              href="http://msdn.microsoft.com/asp.net/using/building/web/default.aspx?pull=/library/en-us/cpgenref/html/cpconGlobalasaxSyntax.asp">Global.asax 
+              Reference</A> </LI></UL>
+            <P>The source code provided with the article implements these in 
+            global.asax and uses these web.config declarations:</P><PRE class=code>&lt;appSettings&gt;
+  &lt;add key="customErrorAutomaticLogging" value = "On/Off" /&gt;
+  &lt;add key="customErrorAutomaticEmail" value="On/Off"/&gt;
+  &lt;add key="customErrorEmailAddress" value="<CODE class=ce>errors@mySite.com</CODE>" /&gt;
+&lt;/appSettings&gt;
+</PRE>
+            <P>The interesting part is the construction of rich error messages. 
+            </P>
+            <H2 class=dtH1><A name=customerrors_topic7></A>Rich Custom Error 
+            Pages</H2>
+            <P>There are four pieces to the puzzle: </P>
+            <OL>
+              <LI>Configuring behavior in web.config. The choices are either to 
+              use the built-in <B>customErrors</B> tag with its mode and 
+              <B>defaultRedirect</B> properties, or to build custom settings in 
+              the appSettings section. 
+              <LI>Capturing, logging, and storing the <B>Exception</B> (in 
+              global.asax). The <B>Exception</B> needs to be stored inside an 
+              object that will persist until the custom error page. 
+              Possibilities are: <B>Application</B>, <B>Context</B>, 
+              <B>Cookies</B>, and <B>QueryString</B>. Other notification 
+              (e-mail, pager, and so on) can occur here too. 
+              <LI>Passing control from global.asax to the custom error page. 
+              Methods include using the built-in <B>customErrors</B> method, 
+              <B>Server.Transfer()</B>, or <B>Response.Redirect()</B>. 
+              <LI>Retrieving and displaying the custom error message. Logic to 
+              display detailed information only to certain IP addresses may be 
+              included here. </LI></OL>
+            <P class=fig><IMG alt="" border=0 
+            src="Web Applications Rich Custom Error Handling with ASP_NET (ASP_NET Technical Articles)_files/customerrors_01.gif"></P>
+            <P class=label></P>
+            <P class=normal></P>
+            <P class=label><B>Figure 1. Flow of custom error handler</B></P>
+            <P>Unfortunately, you cannot pick and choose among all these 
+            options; some can only be implemented certain ways. For example, you 
+            cannot store the <B>Exception</B> in <B>Context.Items</B> and 
+            retrieve it after a <B>Response.Redirect()</B> since the 
+            <B>Redirect()</B> creates a brand new <B>Context</B>. The 
+            <B>Exception</B> would disappear. Here is a list of which storage 
+            baskets work with which control-passing methods: </P>
+            <TABLE class=data>
+              <TBODY>
+              <TR vAlign=top>
+                <TH align=left class=data width="26%">Storage Basket</TH>
+                <TH align=left class=data width="74%">Control-passing methods 
+                  that work</TH></TR>
+              <TR vAlign=top>
+                <TD class=data width="26%"><B>Application</B></TD>
+                <TD class=data width="74%"><B>Response.Redirect()</B>, 
+                  <B>Server.Transfer()</B>, or 
+                  <B>customErrors:defaultRedirect</B></TD></TR>
+              <TR vAlign=top>
+                <TD class=data width="26%"><B>Cookies</B></TD>
+                <TD class=data width="74%"><B>Response.Redirect()</B>, 
+                  <B>Server.Transfer()</B>, or 
+                  <B>customErrors:defaultRedirect</B></TD></TR>
+              <TR vAlign=top>
+                <TD class=data width="26%"><B>Context</B>, <B>Session</B></TD>
+                <TD class=data width="74%"><B>Server.Transfer()</B></TD></TR>
+              <TR vAlign=top>
+                <TD class=data width="26%"><B>QueryString</B></TD>
+                <TD class=data width="74%"><B>Response.Redirect()</B> or 
+                  <B>Server.Transfer()</B></TD></TR></TBODY></TABLE>
+            <P>While <B>Application</B> works with all three, it does not scale 
+            without a way to identify which session triggered the error. If two 
+            users trigger nearly simultaneous errors, you do not want one to 
+            overwrite the other. An advantage of <B>Application</B> is that it 
+            can store the complete <B>Exception</B> object.</P>
+            <P><B>Cookie</B> storage also works with all three, and the client 
+            that triggered the error is guaranteed to see the proper error 
+            message. The caveats are that cookies must be enabled on the client, 
+            and they place an extra burden on bandwidth, which raises a 
+            scalability issue. Since you can only store strings and not complete 
+            objects to a cookie, you need to decide which strings to pass. XML 
+            serialization of an <B>Exception</B> is prevented by internal 
+            security issues, but binary or custom serialization is an option. 
+            </P>
+            <P><B>Context</B> and <B>Session</B>, while limited to 
+            <B>Server.Transfer()</B>, both provide the advantage that the entire 
+            <B>Exception</B> object may be stored, without the client 
+            identification steps required to store the object to 
+            <B>Application</B>. </P>
+            <P><B>QueryString</B> is an interesting option first described by 
+            Donny Mack in <I>ASP.NET: Tips, Tutorials and Code</I> (Mitchell, 
+            Mack, Walther, et al., SAMS Publishing, 2001). While you can't stuff 
+            a complete <B>Exception</B> into <B>QueryString</B> and must choose 
+            which strings to pass, it does avoid local storage overhead 
+            completely and would seem to scale the best. </P>
+            <P>The sample code provided with this article implements all of 
+            these methods except <B>Session</B>, which would not be an 
+            improvement on <B>Context</B>. </P>
+            <H2 class=dtH1><A name=customerrors_topic8></A>Implementation</H2>
+            <P>Now let's look in more detail at the four steps mentioned above 
+            to construct rich custom error pages.</P>
+            <H3 class=dtH1>Configuring Behavior</H3>
+            <P>The <B>customErrors </B>setting has three options for the 
+            <B>mode</B> property: On, Off, and RemoteOnly. The 
+            <B>defaultRedirect</B> property sets the custom error page. You can 
+            use <B>customErrors</B> in combination with your own appSettings, 
+            which you might do to control events in global.asax (like event 
+            logging). ASP.NET transfers control from global.asax to the custom 
+            page by generating a default <B>OnError</B> method in the 
+            <B>Page</B>'s event cycle. You can replace the generated method with 
+            your own. The code goes something like this (if "myErrorPage.aspx" 
+            is the defaultRedirect value): </P>
+            <P>Visual Basic:</P><PRE class=code>Protected Overrides Sub OnError(ByVal args As EventArgs)
+    Response.Redirect("myErrorPage.aspx?aspxerrorpath=" &amp; _
+        Request.Path, True)
+End Sub
+</PRE>
+            <P>C#:</P><PRE class=code>protected override void OnError(EventArgs args) {
+    Response.Redirect("myErrorPage.aspx?aspxerrorpath=" + 
+        Request.Path, true);
+}
+</PRE>
+            <P>The <CODE>True</CODE> tells ASP.NET to end the current request 
+            and proceed. Omitting it would imply the default false, and require 
+            an extra line to explicitly call <B>Response.End</B>. </P>
+            <P>Unfortunately, there is no easy way to override the <B>Page</B> 
+            <B>OnError</B> event for all pages on a site (the ideal way to 
+            replace <B>customErrors</B>), short of subclassing <B>Page</B>, 
+            which would require a new reference at the top of each page. The 
+            source code provided uses a different method, relying instead on 
+            custom appSettings inside web.config:</P><PRE class=code>   &lt;appSettings&gt;
+      &lt;add key="customErrorAutomaticLogging" value="On/Off" /&gt;
+      &lt;add key="customErrorAutomaticEmail" value="On/Off" /&gt;
+
+      &lt;add key="customErrorMethod" 
+value="Application/Context/Cookie/QueryString/Off" /&gt;
+      &lt;add key="customErrorPage" value="myErrorPage.aspx" /&gt;
+&lt;add key="customErrorBranchMethod" value="Redirect/Transfer" /&gt;
+      &lt;add key="customErrorAllowReport" value="On/Off" /&gt;
+      &lt;add key="customErrorEmailAddress" value="<CODE class=ce><B>errors@mySite.com</B></CODE>" /&gt;
+&lt;/appSettings&gt; 
+</PRE>
+            <P>Using appSettings in code is as simple as this:</P><PRE class=code>if (System.Configuration.ConfigurationSettings.AppSettings _
+("customErrorAutomaticLogging").ToLower) = "on"
+</PRE>
+            <P>Settings can be added for other functions. For example, you might 
+            need to define a connection string for a central error log on a 
+            particular server. </P>
+            <H3 class=dtH1>Capturing, Logging, and Storing </H3>
+            <P>The top of global.asax imports three namespaces: 
+            <B>System.IO</B>, <B>System.Diagnostics</B>, and 
+            <B>Msdn.ErrorIO</B>. The <B>Msdn.ErrorIO</B> class is provided in 
+            the download as <B>ErrorIO.vb</B>. </P>
+            <P>This line of <B>Application_Error</B> captures the 
+            <B>Exception</B> and converts it to a string for logging or 
+            notification:</P><PRE class=code>   Dim objError As Exception = Server.GetLastError.GetBaseException
+</PRE>
+            <P>In C# this is written over two lines:</P><PRE class=code>   Exception objError = Server.GetLastError();
+objError = objError.GetBaseException();
+</PRE>
+            <P>It was shown that the <B>Page</B> and <B>Application</B> layers 
+            stuff the original <B>Exception</B> in their own <B>Exception</B> 
+            wrappers as the call stack unwinds. While <B>Server.GetLastError</B> 
+            returns this whole wrapped package, <B>GetBaseException</B> pulls 
+            out the original <B>Exception</B> that interrupted execution.</P>
+            <P>The error is next logged and e-mailed to an administrator 
+            depending on web.config settings (see the section, <B>global.asax: 
+            Application_Error</B>). Functions <B>WriteErrorToLog() </B>and 
+            <B>EmailError()</B> are included in global.asax. Note that their 
+            catch blocks are empty, effectively swallowing any problems with 
+            writing to the event log or sending e-mail. This is done to avoid 
+            throwing a new <B>Exception</B> inside the handler and either 
+            creating an endless loop or having ASP.NET default to its own 
+            handler. However, it is never preferred to swallow errors. One 
+            solution would be to store a message (for example, HandlerMessage) 
+            along with the <B>Exception</B> to describe any problems with the 
+            exception handler itself. Such a message could appear with the 
+            original error on the custom error page. The <B>WriteErrorToLog</B> 
+            and <B>EmailError</B> functions allow for this by returning a true 
+            or false based on their success, though this feature is not 
+            implemented in the source provided. </P>
+            <P>Four storage models are implemented in the source code. You will 
+            find each represented by a class in <B>ErrorIO.vb</B>: 
+            <B>ErrorApplication</B>, <B>ErrorCookie</B>, <B>ErrorContext</B>, 
+            and <B>ErrorQueryString</B>. Since all classes use the same methods 
+            (<B>Store</B>, <B>Retrieve</B>, and <B>Clear</B>), a single 
+            interface (<B>IErrorIOHandler</B>) is provided for all three, plus 
+            an <B>ErrorIOFactory</B> class with a <B>Create(model)</B> method 
+            that allows the storage model to be selected at runtime. The 
+            advantage of using the Factory Pattern here is that you can declare 
+            the model to use in web.config and switch between them freely. 
+            Switching to a new model does not require changing any source code, 
+            only the web.config declaration. Of course you can still explicitly 
+            choose a model by creating an instance of, say, <B>ErrorContext</B> 
+            and using its <B>Store</B>, <B>Retrieve</B>, and <B>Clear</B> 
+            methods directly.</P>
+            <P>In the source, the storage basket is created like this: </P><PRE class=code>   Dim objErrorIOFactory As New Msdn.RichErrors.ErrorIOFactory
+   Dim objErrorBasket As MSDN.RichErrors.IErrorIOHandler
+   objErrorBasket = objErrorIOFactory.Create(strErrorMethod)
+</PRE>
+            <P>Yes, it takes three lines to create an <B>ErrorIOFactory</B>, 
+            create a storage basket, and to connect the object created by the 
+            Factory to the basket. It's the price of flexibility. As an 
+            alternative, you can hardcode the type of basket used, like so:</P><PRE class=code>   Dim objErrorBasket as ErrorContext = New ErrorContext()
+</PRE>
+            <P>Instead of <B>ErrorContext</B>, you could similarly create an 
+            instance of <B>ErrorApplication</B>, <B>ErrorCookie</B>, or 
+            <B>ErrorQueryString</B>. Whichever you choose, this is how the 
+            exception is stored:</P><PRE class=code>   Dim strRedirect, strQueryString, strFilePath As String 
+   strRedirect = AppSettings("customErrorPage")
+   strQueryString = objErrorBasket.Store(objError)
+   strFilePath = strRedirect &amp; strQueryString
+</PRE>
+            <P>Hmmm, that probably wasn't what you expected. You may be asking, 
+            "What's this about building <B>strFilePath</B>? The result of 
+            <B>objErrorBasket.Store()</B> is a <B>QueryString</B>?!" Well, back 
+            in the section on configuring behavior, you saw the default ASP.NET 
+            way of implementing <B>customErrors</B>, and it went like this:</P><PRE class=code>Response.Redirect("myErrorPage.aspx?aspxerrorpath=" &amp; Request.Path, True)
+</PRE>
+            <P>To recreate this behavior, each <B>Store()</B> method in the 
+            <B>ErrorIO</B> classes generates the <CODE>aspxerrorpath</CODE> 
+            parameter. The <B>ErrorQueryString</B> class goes a step further and 
+            stores parts of the error (<B>Message</B>, <B>Source</B>, and 
+            <B>StackTrace</B>) plus a DateTime stamp in additional parameters. 
+            Combining the <B>customErrorPage</B> defined in web.config with the 
+            query string generated during the <B>Store()</B> results in a string 
+            that can be used with either <B>Response.Redirect(strFilePath)</B> 
+            or <B>Server.Transfer(strFilePath)</B>. </P>
+            <P>Refer to the source to see exactly how each of the four storage 
+            baskets work; each has unique traits. When naming <B>Application</B> 
+            identifiers, <B>ErrorApplication.Store()</B> appends the client IP 
+            address so each client is sure to receive his own message. 
+            <B>ErrorCookie.Store()</B> uses one multi-part cookie rather than 
+            four separate cookies to get the job done. 
+            <B>ErrorContext.Store()</B> is the simplest the bunch; nothing 
+            tricky about it. <B>QueryString.Store()</B> uses a fast 
+            <B>StringBuilder</B> to generate the query string, which it 
+            initializes as 512 chars (the default is 16) to cut down on internal 
+            resizing steps. </P>
+            <P>Since some of the storage baskets provided store strings and not 
+            objects, the decision was made to store: <B>Exception.Message</B>, 
+            <B>Exception.Source</B>, <B>Exception.StackTrace</B>, the 
+            <B>Date.Now</B> marking the <B>Exception</B>, and the 
+            <B>Request.Filepath</B> (the Web page requested). The source can be 
+            modified to record other properties of <B>Exception</B>, the server 
+            name, client IP, or whatever meets your debugging requirements. </P>
+            <P>The web.config &lt;appSettings&gt; tag to turn rich custom errors 
+            on and set the storage basket is:</P><PRE class=code>&lt;add key="customErrorMethod" 
+value="Application/Cookie/Context/QueryString/Off" /&gt;
+</PRE>
+            <P>Setting this value to Off prevents the remaining steps from 
+            occurring, but will not get in the way of any automatic logging or 
+            notification already done. </P>
+            <H3 class=dtH1>Passing Control</H3>
+            <P>The final task of <B>Application_Error</B> is to execute the 
+            <B>Redirect()</B> or <B>Transfer()</B>. From the discussion of 
+            configuring behavior above, you already know that which of these you 
+            choose is tied to how the <B>Exception</B> is stored, and that some 
+            combinations work while others don't. The features of the storage 
+            methods usually drive the decision.</P>
+            <P>But occasionally, features of <B>Redirect()</B> and 
+            <B>Transfer()</B> drive the decision. <B>Redirect</B> creates a new 
+            <B>Context</B>, <B>Transfer</B> does not. <B>Redirect</B> requires a 
+            round-trip to the browser, <B>Transfer</B> does not. As a result of 
+            this round-trip, <B>Redirect</B> rewrites the URL to reflect the 
+            location of the error page, <B>Transfer</B> does not. </P>
+            <P>If this seems to be an argument in favor of <B>Transfer</B>, it 
+            isn't. The built-in <B>customErrors</B> feature uses <B>Redirect</B> 
+            and not <B>Transfer</B> for a reason. The rationale of the ASP.NET 
+            development team is that <B>Redirect</B> accurately displays the URL 
+            of the custom error page, while <B>Server.Transfer </B>is intended 
+            for "switchboard"-style pages (as on content management sites) where 
+            the true URL is preferably hidden. </P>
+            <P>Therefore, while <B>Context</B> is one of the more convenient 
+            ways to move the <B>Exception</B> from <B>Application_Error </B>to 
+            the rich error page, its dependence on <B>Server.Transfer()</B> 
+            makes it less than perfect. While you may not be concerned that this 
+            approach breaks a tenet of the design philosophy of ASP.NET, be 
+            aware that it does. </P>
+            <P>The web.config &lt;appSettings&gt; tags to set the 
+            control-passing method and identify the custom error pages are:</P><PRE class=code>&lt;add key="customErrorBranchMethod" value="Redirect/Transfer" /&gt;
+&lt;add key="customErrorPage" value ="myErrorPage.aspx" /&gt;
+</PRE>
+            <H3 class=dtH1>Retrieving and Displaying</H3>
+            <P>Finally, the <B>Exception</B> must be retrieved from its storage 
+            basket and displayed in the rich error page. In the sample, this 
+            page is called myErrorPage.aspx.</P>
+            <P>In the sample code, the <B>Exception</B> is retrieved in 
+            myErrorPage.aspx, inside the <B>DisplayDetailedError() </B>function. 
+            </P><PRE class=code>   Dim objErrorIOFactory As New Msdn.ErrorIO.ErrorIOFactory
+   Dim objErrorBasket As Msdn.ErrorIO.IErrorIOHandler
+objErrorBasket = objErrorIOFactory.Create( _ 
+System.Configuration.ConfigurationSettings.AppSettings("customErrorMethod") )
+   objErrorBasket.Retrieve(strMessage, strSource, 
+     strStackTrace, strDate, strQueryString)
+   objErrorBasket.Clear()
+</PRE>
+            <P>The first three lines are familiar; a similar series was used to 
+            create the basket to <B>Store()</B> the <B>Exception</B>. </P>
+            <P><B>Retrieve()</B> passes five parameters by reference. These will 
+            come back holding the exception data. The actual <B>Retrieve</B> 
+            methods (in <B>ErrorIO.vb</B>) are similar to their <B>Store()</B> 
+            counterparts. The big difference is the use of 
+            <B>Try...Catch...Fail</B> to swallow errors that might occur while 
+            retrieving data from the baskets. Again, it is not desirable for an 
+            exception handler to throw exceptions of its own. If the 
+            <B>Retrieve() </B>fails, the error data returned instead describes 
+            the type of retrieve attempted (<B>Application</B>, <B>Cookie</B>, 
+            <B>Context</B>, or <B>QueryString</B>). <B>Try...Catch...Fail</B> is 
+            not used in <B>QueryString.Retrieve()</B>, it being the only 
+            technique that cannot generate exceptions of its own. </P>
+            <P>Finally <B>objErrorBasket.Clear</B> is called. Two of the storage 
+            baskets can or should be destroyed explicitly. Since 
+            <B>Application</B> is unique for each client (it uses the IP Address 
+            to name each identifier), it must be destroyed once used, and even 
+            then there is a chance this technique will leak memory. </P>
+            <P>So too should cookies be destroyed. Cookies are set to expire in 
+            thirty minutes, but a user can trigger any number of errors in this 
+            span. Thirty seconds would make more sense, but the expiration is 
+            based on the server's clock, not the client's. Have you seen how far 
+            off some system clocks are? Thirty minutes is a realistic term, most 
+            clocks should be within that span of each other. But this is the 
+            problem with short-term cookies. Explicit destruction is the best 
+            answer. </P>
+            <P><B>ErrorContext.Clear()</B> and <B>ErrorQueryString.Clear()</B> 
+            have nothing to do, as these baskets ceases to exist once the rich 
+            error page is emitted to the client. </P>
+            <P>The sample rich error page has three display features: </P>
+            <UL>
+              <LI><B>Standard Error Message</B>. The standard message, intended 
+              for public consumption, explains that an error occurred while 
+              loading the requested page and provides a link to try loading the 
+              page again. Links are also provided to get the user back to 
+              familiar ground—in this case back to the home page. If your site 
+              has standard navigation or menu bars, be sure to include them in 
+              the error page as well. 
+              <P>The last thing you want is for someone to hit a brick wall of 
+              no return. Get the user back on track. Some sites parse the page 
+              request to seed a search of either the current site or the whole 
+              Web with a message like, "We couldn't service your request but 
+              maybe this will help." Helpful is good. </P>
+              <LI><B>Error Report Panel</B>. A form asking the user what was 
+              expected when the error happened is a good way to trace issues. 
+              This sample panel says, "If you describe what you were trying to 
+              do, perhaps it can be fixed." Reports are e-mailed to the 
+              administrator along with the <B>Exception.ToString</B> data. The 
+              code in <B>SendClick()</B>, which sends the actual message, is 
+              similar to the <B>EmailError() </B>function in global.asax. This 
+              feature is configured with the web.config &lt;appSettings&gt; 
+              keys: <PRE class=code>&lt;add key="customErrorAllowReport" value="On"/&gt;
+&lt;add key="customErrorEmailAddress" value="errors@mySite.com"/&gt;
+</PRE>
+              <LI><B>Detailed Error Panel. </B>This panel (populated in the 
+              <B>DisplayDetailedError()</B> function) reports the exception 
+              raised by the error, as retrieved from the storage basket. This 
+              information is useful to those debugging the site, but not the 
+              general public. While you could add authentication to distinguish 
+              the two, not all sites need authentication. The built-in 
+              <B>customErrors</B> feature has a switch 
+              (<CODE>mode="remoteOnly"</CODE>) to only display detailed 
+              information to the client at 10.0.0.1, but developers rarely have 
+              access to the server console (Why are so many errors only 
+              reproducible on the live server?). The way to overcome this 
+              limitation is to make a custom IP address class with range 
+              checking. Table 2 shows the methods for this class. 
+              <P class=label><B>Table 2. IPAddress Class (namespace: 
+              Msdn.IPUtils, source: IPAddress.vb)</B> </P>
+              <TABLE>
+                <TBODY>
+                <TR vAlign=top>
+                  <TH align=left class=data width="23%">Method</TH>
+                  <TH align=left class=data width="77%">Description</TH></TR>
+                <TR vAlign=top>
+                  <TD class=data width="23%"><B>Validate()</B></TD>
+                  <TD class=data width="77%">Test for a valid IP address with 
+                    a regular expression. </TD></TR>
+                <TR vAlign=top>
+                  <TD class=data width="23%"><B>IsInRange()</B></TD>
+                  <TD class=data width="77%">Check an IP address against a 
+                    specified range. </TD></TR>
+                <TR vAlign=top>
+                  <TD class=data width="23%"><B>ToString()</B></TD>
+                  <TD class=data width="77%">Return a value of type 
+                    <B>String</B>.</TD></TR>
+                <TR vAlign=top>
+                  <TD class=data width="23%"><B>ToLong()</B></TD>
+                  <TD class=data width="77%">Returns the IP address as a 
+                    12-digit Long (for example, "10.0.0.255" becomes 
+                    010000000255). Helpful for a variety of comparisons.</TD></TR>
+                <TR vAlign=top>
+                  <TD class=data width="23%"><B>ToIPAddress()</B></TD>
+                  <TD class=data width="77%">Returns a value of type<B> 
+                    System.Network.IPAddress</B>. </TD></TR></TBODY></TABLE>
+              <P>This panel is displayed if the client's IP address is within 
+              the range declared by web.config &lt;appSettings&gt;: </P>
+              <P>&lt;add key="customErrorIpRangeMin" value="10.0.0.1"/&gt; </P>
+              <P>&lt;add key="customErrorIpRangeMax" value="10.0.0.255"/&gt; 
+              </P></LI></UL>
+            <H4 class=dtH1>The Return of Page_Error</H4>
+            <P>Debugging custom error pages is a pain. In addition to a local 
+            <B>Page_Error</B> handler, it helps to turn on tracing and debugging 
+            so you can capture and display problems without throwing the 
+            <B>Exception</B> all the way up to <B>Application_Error</B>. Once 
+            your custom error page works, turn these off again. While you can 
+            just forget about <B>Page_Error</B>, you will be glad it's there 
+            during routine maintenance, or whenever you add new errors. </P>
+            <H3 class=dtH1>About the Author</H3>
+            <P>Eli Robillard is a .NET guru based in Toronto, Ontario. He is a 
+            recognized leader in the developer community, a member of the 
+            Microsoft MVP program, and a founding board member of the 
+            ASPInsiders. The ASPInsiders provide feedback to the ASP.NET 
+            development team on present and future versions of the ASP.NET 
+            platform. Eli and his wife Marcie (a.k.a. Datagrid Girl) are both 
+            top .NET consultants providing consulting services, training, and 
+            team mentoring to organizations working with .NET-based 
+            technologies. <A href="http://www.erobillard.com/">Eli's Web 
+            site</A> provides more information.</P>
+            <H3 class=dtH1>Acknowledgements</H3>
+            <P>Thanks to Rob Howard (Microsoft) and Mitch Denny (Monash.NET) for 
+            their invaluable thoughts and suggestions.</P>
+            <H3 class=dtH1>Resources</H3>
+            <UL type=disc>
+              <LI><A 
+              href="http://blogs.gotdotnet.com/BradA/PermaLink.aspx/c9c61dbf-62a9-474f-a5fe-c171cdedb4f6">Brad 
+              Abrams: Exceptions and Error Codes</A> 
+              <LI><A 
+              href="http://blogs.gotdotnet.com/cbrumme/PermaLink.aspx/d5fbb311-0c95-46ac-9c46-8f8c0e6ae561">Chris 
+              Brumme: Structured Error Handling in .NET</A> 
+              <LI><A 
+              href="http://msdn.microsoft.com/asp.net/using/building/web/default.aspx?pull=/library/en-us/cpgenref/html/gngrfCustomerrorsSection.asp">CustomErrors 
+              Documentation</A> 
+              <LI><A 
+              href="http://msdn.microsoft.com/chats/vstudio/vstudio_051602.asp">MSDN 
+              Chat on ASP.NET Error Handling and Tracing (May 29, 2002)</A> 
+              <LI><A 
+              href="http://msdn.microsoft.com/asp.net/using/building/web/default.aspx?pull=/library/en-us/vbcon/html/vbtskDisplayingSafeErrorMessages.asp">Displaying 
+              Safe Error Messages</A> 
+              <LI><A 
+              href="http://dotnetguy.techieswithcats.com/archives/003785.shtml">Simple 
+              HttpModule Example</A> 
+              <LI><A 
+              href="http://weblogs.asp.net/kaevans/archive/07072003.aspx">Kirk 
+              Allan Evans Handling ValidateRequest Errors</A> 
+        </LI></UL></TD></TR></TBODY></TABLE><A 
+      href="http://msdn.microsoft.com/asp.net/using/building/web/default.aspx?pull=/library/en-us/dnaspp/html/CustomErrors.asp#top"><IMG 
+      alt="Top of Page" border=0 
+      src="Web Applications Rich Custom Error Handling with ASP_NET (ASP_NET Technical Articles)_files/top.gif"></A> 
+      <A 
+      href="http://msdn.microsoft.com/asp.net/using/building/web/default.aspx?pull=/library/en-us/dnaspp/html/CustomErrors.asp#top" 
+      title="Top of Page">Top of Page</A> 
+      <P></P></DIV>
+      <TABLE border=0 cellPadding=0 cellSpacing=0 style="WIDTH: 100%">
+        <TBODY>
+        <TR>
+          <TD noWrap style="WIDTH: 500px"></TD></TR>
+        <TR>
+          <TD><IFRAME frameBorder=0 height=250 id=frmRatings scrolling=no 
+            src="E:\netten\Web Applications Rich Custom Error Handling with ASP_NET (ASP_NET Technical Articles)_files\ratings(1).aspx" 
+            width="100%"></IFRAME></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE><BR 
+clear=all style="LINE-HEIGHT: 1px; OVERFLOW: hidden">
+<TABLE cellPadding=0 cellSpacing=0 id=msviFooter width="100%">
+  <TBODY>
+  <TR vAlign=bottom>
+    <TD id=msviFooter2 
+    style="FILTER: progid:DXImageTransform.Microsoft.Gradient(startColorStr='#FFFFFF', endColorStr='#669AFF', gradientType='1')">
+      <DIV id=msviLocalFooter><NOBR><A 
+      href="http://go.microsoft.com/?linkid=317027">Manage Your Profile</A> 
+      |</NOBR><WBR><NOBR><A 
+      href="http://msdn.microsoft.com/isapi/gomscom.asp?target=/legal/">Legal</A> 
+      |</NOBR><WBR><NOBR><A 
+      href="http://register.microsoft.com/contactus30/contactus.asp?domain=msdn">Contact 
+      Us</A> |</NOBR><WBR><NOBR><A href="http://msdn.microsoft.com/flash/">MSDN 
+      Flash Newsletter</A></NOBR></DIV>
+      <DIV id=msviGlobalFooter><SPAN dir=ltr>©2004 Microsoft Corporation. All 
+      rights reserved.&nbsp;</SPAN><NOBR><A 
+      href="http://www.microsoft.com/info/cpyright.mspx">Terms of Use</A> 
+      |</NOBR><WBR><NOBR><A 
+      href="http://www.microsoft.com/info/privacy.mspx">Privacy 
+      Statement</A></NOBR></DIV></TD>
+    <TD bgColor=#669aff width=105><IMG alt=Microsoft border=0 height=29 
+      src="Web Applications Rich Custom Error Handling with ASP_NET (ASP_NET Technical Articles)_files/text.jpg" 
+      title="" width=105></TD></TR></TBODY></TABLE><LAYER visibility="hide">
+<DIV style="DISPLAY: none"><IMG border=0 height=0 hspace=0 
+src="Web Applications Rich Custom Error Handling with ASP_NET (ASP_NET Technical Articles)_files/trans_pixel.gif" 
+width=0></DIV></LAYER></BODY></HTML>

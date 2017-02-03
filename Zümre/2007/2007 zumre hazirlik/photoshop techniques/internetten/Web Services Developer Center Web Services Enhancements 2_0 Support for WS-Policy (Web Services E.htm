@@ -1,0 +1,1676 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0098)http://msdn.microsoft.com/webservices/default.aspx?pull=/library/en-us/dnwse/html/wse2wspolicy.asp -->
+<HTML><HEAD><TITLE>Web Services Developer Center: Web Services Enhancements 2.0 Support for WS-Policy (Web Services Enhancements (WSE) Technical Articles)</TITLE><!--Enter title and description-->
+<META content=en-us name=ms.locale>
+<META content="text/html; charset=utf-8" http-equiv=Content-Type>
+<META 
+content="This article describes support for WS-Policy in the WSE 2.0 Technology Preview, outlines the policy options available, and shows examples of their usage.  The MSDN Web Services Developer Center, a one-stop location for all developers need to understand and build Web Services " 
+name=Description>
+<META content="noindex, nofollow" name=robots><LINK 
+href="Web Services Developer Center Web Services Enhancements 2_0 Support for WS-Policy (Web Services Enhancements (WSE) Technical Articles)_files/css.aspx" 
+rel=Stylesheet type=text/css>
+<SCRIPT language=Javascript 
+src="Web Services Developer Center Web Services Enhancements 2_0 Support for WS-Policy (Web Services Enhancements (WSE) Technical Articles)_files/menujs" 
+type=text/javascript></SCRIPT>
+<LINK 
+href="Web Services Developer Center Web Services Enhancements 2_0 Support for WS-Policy (Web Services Enhancements (WSE) Technical Articles)_files/dc2e.css" 
+rel=Stylesheet type=text/css><LINK 
+href="Web Services Developer Center Web Services Enhancements 2_0 Support for WS-Policy (Web Services Enhancements (WSE) Technical Articles)_files/msdn-mnp25-eyebrow.css" 
+rel=Stylesheet type=text/css><LINK 
+href="E:\netten\Web Services Developer Center Web Services Enhancements 2_0 Support for WS-Policy (Web Services Enhancements (WSE) Technical Articles)_files\css(1).aspx" 
+rel=stylesheet type=text/css>
+<SCRIPT language=JavaScript>var doImage = doImage;
+var TType = TType;
+
+function mhHover(tbl, idx, cls)
+{
+	var t, d;
+	if (document.getElementById)
+		t = document.getElementById(tbl);
+	else
+		t = document.all(tbl);
+	if (t == null) return;
+	if (t.getElementsByTagName)
+		d = t.getElementsByTagName("TD");
+	else
+		d = t.all.tags("TD");
+	if (d == null) return;
+	if (d.length <= idx) return;
+	d[idx].className = cls;
+}
+
+function setMSResearch() {
+  var time = new Date();
+  if( document.cookie.indexOf( 'msresearch=1 ') == -1 ) {
+    document.cookie = 'msresearch=' + time.getTime() + ':' + escape( document.location) + ':' + escape( document.referrer) + '; path=/; domain=.microsoft.com; ';
+  }
+}
+
+function footerjs(doc)
+{
+	if (doImage == null)
+	{
+		var tt = TType == null ? "PV" : TType;
+		doc.write('<layer visibility="hide"><div style="display:none"><img src="http://c.microsoft.com/trans_pixel.asp?source=msdn&TYPE=' + tt + '&p=webservices&r=http%3a%2f%2fmsdn.microsoft.com%2f" width=0 height=0 hspace=0 vspace=0 border=0 /></div></layer>');
+	}
+
+	if( ( document.cookie.indexOf( 'msresearch=1 ') == -1 ) 
+	 && ( document.cookie.indexOf( 'msresearch=')   != -1 ) ) {
+	  setInterval( "setMSResearch()", 1000 );
+	}
+}</SCRIPT>
+
+<SCRIPT language=JavaScript 
+src="Web Services Developer Center Web Services Enhancements 2_0 Support for WS-Policy (Web Services Enhancements (WSE) Technical Articles)_files/logicaluri.js"></SCRIPT>
+
+<SCRIPT language=JavaScript>setLogicalURI("WebServices");</SCRIPT>
+
+<SCRIPT language=JavaScript>
+function MakeHomePage()
+{
+   document.body.style.behavior='url(#default#homepage)';
+   document.body.setHomePage(window.location.href);
+}
+</SCRIPT>
+
+<META content="MSHTML 5.00.2920.0" name=GENERATOR></HEAD>
+<BODY><A name=top></A>
+<SCRIPT language=Javascript>
+				if (self.name == "MNPMainFrame")
+					top.location.href = self.location.href;
+			</SCRIPT>
+
+<DIV id=msviMasthead 
+xmlns:Utility="http://www.microsoft.com/MSCOM/VisualIdentity/Utility">
+<TABLE border=0 cellPadding=0 cellSpacing=0 width="100%">
+  <TBODY>
+  <TR>
+    <TD width="100%">
+      <TABLE border=0 cellPadding=0 cellSpacing=0 height=22 width="100%">
+        <TBODY>
+        <TR>
+          <TD bgColor=#ffffff id=msviRegionIdGraphic></TD>
+          <TD bgColor=#3568cc width="100%"><IMG alt=* height=22 
+            src="Web Services Developer Center Web Services Enhancements 2_0 Support for WS-Policy (Web Services Enhancements (WSE) Technical Articles)_files/gradient.jpg" 
+            title="" width=250></TD></TR></TBODY></TABLE></TD>
+    <TD align=left bgColor=#3568cc dir=ltr height=22 id=msviGlobalToolbar 
+noWrap>
+      <TABLE border=0 cellPadding=0 cellSpacing=0>
+        <TBODY>
+        <TR>
+          <TD class=gt0 noWrap 
+          onmouseout="mhHover('msviGlobalToolbar', 0, 'gt0')" 
+          onmouseover="mhHover('msviGlobalToolbar', 0, 'gt1')"><A 
+            href="http://www.microsoft.com/">Microsoft.com Home</A></TD>
+          <TD class=gtsep>|</TD>
+          <TD class=gt0 noWrap 
+          onmouseout="mhHover('msviGlobalToolbar', 2, 'gt0')" 
+          onmouseover="mhHover('msviGlobalToolbar', 2, 'gt1')"><A 
+            href="http://msdn.microsoft.com/library/toolbar/3.0/sitemap/en-us.mspx">Site 
+            Map</A></TD></TR></TBODY></TABLE></TD></TR>
+  <TR vAlign=top>
+    <TD width="100%">
+      <TABLE border=0 cellPadding=0 cellSpacing=0 height=42 width="100%">
+        <TBODY>
+        <TR vAlign=top>
+          <TD bgColor=#ffffff id=msviBrandBanner><A 
+            href="http://www.microsoft.com/msdn"><IMG alt=MSDN border=0 
+            height=42 
+            src="Web Services Developer Center Web Services Enhancements 2_0 Support for WS-Policy (Web Services Enhancements (WSE) Technical Articles)_files/msdn_masthead_ltr.gif" 
+            title="" width=225></A></TD>
+          <TD bgColor=#6799ff width="100%"><IMG alt=* height=42 
+            src="E:\netten\Web Services Developer Center Web Services Enhancements 2_0 Support for WS-Policy (Web Services Enhancements (WSE) Technical Articles)_files\gradient(1).jpg" 
+            title="" width=250></TD></TR></TBODY></TABLE></TD>
+    <TD bgColor=#6799ff id=msviGlobalSearch>
+      <DIV id=msviNoSearch></DIV></TD></TR></TBODY></TABLE>
+<DIV id=msviLocalToolbar>
+<TABLE border=0 cellPadding=0 cellSpacing=0 height=19 width="100%">
+  <TBODY>
+  <TR>
+    <TD id=msviHomePageLink noWrap><A href="http://msdn.microsoft.com/">MSDN 
+      Home</A></TD>
+    <TD><SPAN class=ltsep>|</SPAN></TD>
+    <TD class=lt0 noWrap onmouseout="mhHover('msviLocalToolbar', 2, 'lt0')" 
+    onmouseover="mhHover('msviLocalToolbar', 2, 'lt1')"><A 
+      href="http://msdn.microsoft.com/developercenters/">Developer 
+Centers</A></TD>
+    <TD><SPAN class=ltsep>|</SPAN></TD>
+    <TD class=lt0 noWrap onmouseout="mhHover('msviLocalToolbar', 4, 'lt0')" 
+    onmouseover="mhHover('msviLocalToolbar', 4, 'lt1')"><A 
+      href="http://msdn.microsoft.com/library/default.asp">Library</A></TD>
+    <TD><SPAN class=ltsep>|</SPAN></TD>
+    <TD class=lt0 noWrap onmouseout="mhHover('msviLocalToolbar', 6, 'lt0')" 
+    onmouseover="mhHover('msviLocalToolbar', 6, 'lt1')"><A 
+      href="http://msdn.microsoft.com/downloads/">Downloads</A></TD>
+    <TD><SPAN class=ltsep>|</SPAN></TD>
+    <TD class=lt0 noWrap onmouseout="mhHover('msviLocalToolbar', 8, 'lt0')" 
+    onmouseover="mhHover('msviLocalToolbar', 8, 'lt1')"><A 
+      href="http://msdn.microsoft.com/code/">Code Center</A></TD>
+    <TD><SPAN class=ltsep>|</SPAN></TD>
+    <TD class=lt0 noWrap onmouseout="mhHover('msviLocalToolbar', 10, 'lt0')" 
+    onmouseover="mhHover('msviLocalToolbar', 10, 'lt1')"><A 
+      href="http://msdn.microsoft.com/subscriptions/">Subscriptions</A></TD>
+    <TD><SPAN class=ltsep>|</SPAN></TD>
+    <TD class=lt0 noWrap onmouseout="mhHover('msviLocalToolbar', 12, 'lt0')" 
+    onmouseover="mhHover('msviLocalToolbar', 12, 'lt1')"><A 
+      href="http://msdn.microsoft.com/worldwide.aspx">MSDN Worldwide</A></TD>
+    <TD width="100%"></TD></TR></TBODY></TABLE></DIV></DIV>
+<TABLE border=0 cellPadding=0 cellSpacing=0 dir=ltr width="100%">
+  <TBODY>
+  <TR vAlign=top>
+    <TD height="100%" style="OVERFLOW-X: hidden" width=181>
+      <TABLE border=0 cellPadding=0 cellSpacing=0 width="100%">
+        <TBODY>
+        <TR>
+          <TD class=mnpQuickSearch dir=ltr 
+          style="BACKGROUND: #cccccc; COLOR: #000000">
+            <FORM action=/msdn-online/shared/components/mscomsearch30.aspx 
+            style="MARGIN: 0px"><NOBR><FONT color=#000000>Search 
+            for</FONT><BR><INPUT class=mnpSearchBox id=qu maxLength=255 name=qu 
+            style="WIDTH: 165px"><BR>
+            <TABLE border=0 cellPadding=0 cellSpacing=0 style="MARGIN-TOP: 2px" 
+            width="100%">
+              <TBODY>
+              <TR>
+                <TD class=mnpQuickSearch 
+                style="PADDING-BOTTOM: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px" 
+                width="100%"><SELECT class=mnpSearchScopes name=SearchScope 
+                  style="WIDTH: 137px"><OPTION selected value=1>All 
+                    MSDN</OPTION><OPTION value=2>All Library</OPTION><OPTION 
+                    value=3>Code &amp; Downloads</OPTION><OPTION value=4>Product 
+                    Information</OPTION><OPTION value=5>Knowledge 
+                  Base</OPTION></SELECT></TD>
+                <TD><INPUT class=mnpSearchButton type=submit value=Go><BR></TD></TR></TBODY></TABLE><A 
+            href="http://search.microsoft.com/search/search.aspx?View=msdn&amp;st=a&amp;c=0&amp;s=1" 
+            onmouseout="style.color='#000000';" 
+            onmouseover="style.color='#0033CC';" style="COLOR: #000000">Advanced 
+            Search</A></NOBR></FORM></TD></TR></TBODY></TABLE>
+      <DIV class=mnpMenuTop dir=ltr id=mnpMenuTop 
+      style="OVERFLOW-X: hidden; WIDTH: 181px" parent="/" 
+      url="/webservices/default.aspx">
+      <DIV class=mnpInherit>
+      <DIV class=mnpMenuRow 
+      style="BACKGROUND: #f1f1f1; BORDER-BOTTOM-COLOR: #f1f1f1; BORDER-LEFT-COLOR: #f1f1f1; BORDER-RIGHT-COLOR: #f1f1f1; BORDER-TOP-COLOR: #f1f1f1; OVERFLOW-X: hidden; WIDTH: 176px"><IMG 
+      alt=* border=0 class=mnpMenuArrow height=7 
+      src="Web Services Developer Center Web Services Enhancements 2_0 Support for WS-Policy (Web Services Enhancements (WSE) Technical Articles)_files/arrowLTR.gif" 
+      style="LEFT: 166px; VISIBILITY: hidden" title="" width=4><A 
+      href="Web Services Developer Center Web Services Enhancements 2_0 Support for WS-Policy (Web Services Enhancements (WSE) Technical Articles)_files/webservices">Web 
+      Services Home</A></DIV>
+      <DIV class=mnpMenuRow 
+      style="BACKGROUND: #f1f1f1; BORDER-BOTTOM-COLOR: #f1f1f1; BORDER-LEFT-COLOR: #f1f1f1; BORDER-RIGHT-COLOR: #f1f1f1; BORDER-TOP-COLOR: #f1f1f1; OVERFLOW-X: hidden; WIDTH: 176px" 
+      menu="me2886ca2e9e449e4a92508edad1c621b"><IMG alt=* border=0 
+      class=mnpMenuArrow height=7 
+      src="Web Services Developer Center Web Services Enhancements 2_0 Support for WS-Policy (Web Services Enhancements (WSE) Technical Articles)_files/arrowLTR.gif" 
+      style="LEFT: 166px; VISIBILITY: hidden" title="" width=4><A 
+      href="http://msdn.microsoft.com/webservices/understanding/default.aspx">Understanding 
+      Web Services</A></DIV>
+      <DIV class=mnpMenuRow 
+      style="BACKGROUND: #f1f1f1; BORDER-BOTTOM-COLOR: #f1f1f1; BORDER-LEFT-COLOR: #f1f1f1; BORDER-RIGHT-COLOR: #f1f1f1; BORDER-TOP-COLOR: #f1f1f1; OVERFLOW-X: hidden; WIDTH: 176px" 
+      menu="md68342e598674e218423e0e506070d08"><IMG alt=* border=0 
+      class=mnpMenuArrow height=7 
+      src="Web Services Developer Center Web Services Enhancements 2_0 Support for WS-Policy (Web Services Enhancements (WSE) Technical Articles)_files/arrowLTR.gif" 
+      style="LEFT: 166px; VISIBILITY: hidden" title="" width=4><A 
+      href="http://msdn.microsoft.com/webservices/building/default.aspx">Building</A></DIV>
+      <DIV class=mnpMenuRow 
+      style="BACKGROUND: #f1f1f1; BORDER-BOTTOM-COLOR: #f1f1f1; BORDER-LEFT-COLOR: #f1f1f1; BORDER-RIGHT-COLOR: #f1f1f1; BORDER-TOP-COLOR: #f1f1f1; OVERFLOW-X: hidden; WIDTH: 176px"><IMG 
+      alt=* border=0 class=mnpMenuArrow height=7 
+      src="Web Services Developer Center Web Services Enhancements 2_0 Support for WS-Policy (Web Services Enhancements (WSE) Technical Articles)_files/arrowLTR.gif" 
+      style="LEFT: 166px; VISIBILITY: hidden" title="" width=4><A 
+      href="http://msdn.microsoft.com/webservices/downloads/default.aspx">Downloads</A></DIV>
+      <DIV class=mnpMenuRow 
+      style="BACKGROUND: #f1f1f1; BORDER-BOTTOM-COLOR: #f1f1f1; BORDER-LEFT-COLOR: #f1f1f1; BORDER-RIGHT-COLOR: #f1f1f1; BORDER-TOP-COLOR: #f1f1f1; OVERFLOW-X: hidden; WIDTH: 176px" 
+      menu="m1f810e0ccd03488a9b71c67fea1204f6"><IMG alt=* border=0 
+      class=mnpMenuArrow height=7 
+      src="Web Services Developer Center Web Services Enhancements 2_0 Support for WS-Policy (Web Services Enhancements (WSE) Technical Articles)_files/arrowLTR.gif" 
+      style="LEFT: 166px; VISIBILITY: hidden" title="" width=4><A 
+      href="http://msdn.microsoft.com/webservices/community/default.aspx">Support 
+      &amp; Community</A></DIV>
+      <DIV class=mnpMenuBorder style="WIDTH: 180px"></DIV>
+      <DIV class=mnpMenuRow 
+      style="BACKGROUND: #f1f1f1; BORDER-BOTTOM-COLOR: #f1f1f1; BORDER-LEFT-COLOR: #f1f1f1; BORDER-RIGHT-COLOR: #f1f1f1; BORDER-TOP-COLOR: #f1f1f1; OVERFLOW-X: hidden; WIDTH: 176px"><IMG 
+      alt=* border=0 class=mnpMenuArrow height=7 
+      src="Web Services Developer Center Web Services Enhancements 2_0 Support for WS-Policy (Web Services Enhancements (WSE) Technical Articles)_files/arrowLTR.gif" 
+      style="LEFT: 166px; VISIBILITY: hidden" title="" width=4><A 
+      href="http://msdn.microsoft.com/products">Products &amp; 
+      Technologies</A></DIV>
+      <DIV class=mnpMenuBorder 
+      style="MARGIN-BOTTOM: 0px; WIDTH: 180px"></DIV></DIV></DIV>
+      <DIV class=mnpAds 
+      style="BACKGROUND: #f1f1f1; BORDER-BOTTOM: #999999 0px solid; BORDER-LEFT: #999999 0px solid; BORDER-RIGHT: #999999 1px solid; BORDER-TOP: #999999 0px solid; HEIGHT: 100%; MARGIN-BOTTOM: 20px; WIDTH: 181px">
+      <P>
+      <CENTER><A href="http://go.microsoft.com/?LinkID=381102" id=ad1 
+      target=_top><IMG alt="Dev Days 2004" border=0 
+      src="Web Services Developer Center Web Services Enhancements 2_0 Support for WS-Policy (Web Services Enhancements (WSE) Technical Articles)_files/DD_button_reg_140x100.jpg"></A></CENTER>
+      <P>
+      <CENTER><A 
+      href="http://msdn.microsoft.com/security/understanding/webcasts/" id=ad2 
+      target=_top><IMG alt="Security Webcasts" border=0 
+      src="Web Services Developer Center Web Services Enhancements 2_0 Support for WS-Policy (Web Services Enhancements (WSE) Technical Articles)_files/DSWebcast140x100.jpg"></A></CENTER></DIV>
+      <DIV class=mnpAds style="HEIGHT: 100%; MARGIN-BOTTOM: 20px; WIDTH: 181px">
+      <CENTER></CENTER></DIV></TD>
+    <TD dir=ltr width="100%">
+      <TABLE bgColor=#3366cc cellPadding=0 cellSpacing=0 height=46 
+        width="100%"><TBODY>
+        <TR>
+          <TD width=419><IMG alt="MSDN Home" border=0 height=46 
+            src="Web Services Developer Center Web Services Enhancements 2_0 Support for WS-Policy (Web Services Enhancements (WSE) Technical Articles)_files/left_bnr_webservices.jpg" 
+            width=419></TD>
+          <TD 
+          background="Web Services Developer Center Web Services Enhancements 2_0 Support for WS-Policy (Web Services Enhancements (WSE) Technical Articles)_files/webservices" 
+          bgColor=#3366cc title="MSDN Home" width="100%">&nbsp;</TD>
+          <TD width=0><IMG alt="MSDN Home" border=0 height=46 
+            src="Web Services Developer Center Web Services Enhancements 2_0 Support for WS-Policy (Web Services Enhancements (WSE) Technical Articles)_files/webservices" 
+            width=0></TD></TR></TBODY></TABLE><SPAN class=eyebrow id=_ctl0_eb 
+      style="COLOR: #003399; HEIGHT: 24px; PADDING-LEFT: 14px; PADDING-TOP: 4px; WIDTH: 100%"><A 
+      href="http://msdn.microsoft.com/">MSDN Home</A>&nbsp;&gt;&nbsp;Web 
+      Services Home</SPAN> <!-----------------><!--BEGIN_CONTENT--><!-----------------><!--<comment>-->
+      <DIV class=clsDocBody id=pageContainer><!--pull table-->
+      <TABLE border=0 cellPadding=0 id=hppulltable style="HEIGHT: 100%">
+        <TBODY>
+        <TR>
+          <TD vAlign=top>
+            <TABLE border=0 cellPadding=0 cellSpacing=0 
+            style="BORDER-COLLAPSE: collapse; WIDTH: 100%">
+              <TBODY>
+              <TR align=right style="PADDING-RIGHT: 15px; WIDTH: 100%" 
+              vAlign=top>
+                <TD style="TEXT-ALIGN: left" vAlign=top><IMG align=left 
+                  alt="See this in the MSDN Library" border=0 id=PullImage 
+                  src="Web Services Developer Center Web Services Enhancements 2_0 Support for WS-Policy (Web Services Enhancements (WSE) Technical Articles)_files/library.gif"><SPAN 
+                  id=PullLabel><A 
+                  href="http://msdn.microsoft.com/library/en-us/dnwse/html/wse2wspolicy.asp">See 
+                  This in MSDN Library</A></SPAN></TD></TR></TBODY></TABLE>
+            <DIV style="FLOAT: right">
+            <DIV class=MNPPart id=pageoptions1_OptionsPanel>
+            <H4>Page Options</H4><IFRAME frameBorder=0 height=150 
+            id=frmRatingsOptions scrolling=no 
+            src="Web Services Developer Center Web Services Enhancements 2_0 Support for WS-Policy (Web Services Enhancements (WSE) Technical Articles)_files/ratings.aspx" 
+            width="95%"></IFRAME></DIV></DIV>
+            <DIV id=nsbanner>
+            <DIV id=TitleRow>
+            <H1 class=dtH1><A name=wse2wspolicy></A>Web Services Enhancements 
+            2.0 Support for WS-Policy</H1></DIV></DIV>
+            <P>Simon Horrell<BR>DevelopMentor</P>
+            <P>February 2004</P>
+            <P>Applies to: <BR>&nbsp;&nbsp;&nbsp;Microsoft® 
+            ASP.NET<BR>&nbsp;&nbsp;&nbsp;Web Services Enhancements (WSE) 2.0 for 
+            Microsoft® .NET Technology Preview<BR>&nbsp;&nbsp;&nbsp;WS-Policy 
+            specification</P>
+            <P><B class=le>Summary:</B> This article describes support for 
+            WS-Policy in the WSE 2.0 Technology Preview, outlines the policy 
+            options available, and shows examples of their usage. (31 printed 
+            pages)</P>
+            <P>Download the associated <A 
+            href="http://download.microsoft.com/download/6/b/f/6bf215e4-79f6-4184-b247-a29341951544/WSE2TP-PolicySample.EXE">WSE-2TPPolicySample.exe</A> 
+            code sample.</P>
+            <H4 class=dtH1>Contents</H4>
+            <P><A 
+            href="http://msdn.microsoft.com/webservices/default.aspx?pull=/library/en-us/dnwse/html/wse2wspolicy.asp#wse2wspolicy_topic1" 
+            target=_self>Introduction</A><BR><A 
+            href="http://msdn.microsoft.com/webservices/default.aspx?pull=/library/en-us/dnwse/html/wse2wspolicy.asp#wse2wspolicy_topic2" 
+            target=_self>WSE 2.0 and Policy</A><BR><A 
+            href="http://msdn.microsoft.com/webservices/default.aspx?pull=/library/en-us/dnwse/html/wse2wspolicy.asp#wse2wspolicy_topic3" 
+            target=_self>Specifying That a Security Token Must Be Present in a 
+            Message</A><BR><A 
+            href="http://msdn.microsoft.com/webservices/default.aspx?pull=/library/en-us/dnwse/html/wse2wspolicy.asp#wse2wspolicy_topic4" 
+            target=_self>Specifying That a Signature Must Be Present in a 
+            Message</A><BR><A 
+            href="http://msdn.microsoft.com/webservices/default.aspx?pull=/library/en-us/dnwse/html/wse2wspolicy.asp#wse2wspolicy_topic5" 
+            target=_self>Specifying Message Expiry</A><BR><A 
+            href="http://msdn.microsoft.com/webservices/default.aspx?pull=/library/en-us/dnwse/html/wse2wspolicy.asp#wse2wspolicy_topic6" 
+            target=_self>Specifying That a Message Must Be Encrypted</A><BR><A 
+            href="http://msdn.microsoft.com/webservices/default.aspx?pull=/library/en-us/dnwse/html/wse2wspolicy.asp#wse2wspolicy_topic7" 
+            target=_self>Specifying a Secure Session to Exchange Multiple 
+            Messages</A><BR><A 
+            href="http://msdn.microsoft.com/webservices/default.aspx?pull=/library/en-us/dnwse/html/wse2wspolicy.asp#wse2wspolicy_topic8" 
+            target=_self>Using the WSE Policy Editor</A><BR><A 
+            href="http://msdn.microsoft.com/webservices/default.aspx?pull=/library/en-us/dnwse/html/wse2wspolicy.asp#wse2wspolicy_topic9" 
+            target=_self>Writing and Configuring Custom Assertions</A><BR><A 
+            href="http://msdn.microsoft.com/webservices/default.aspx?pull=/library/en-us/dnwse/html/wse2wspolicy.asp#wse2wspolicy_topic10" 
+            target=_self>Conclusion</A><BR><A 
+            href="http://msdn.microsoft.com/webservices/default.aspx?pull=/library/en-us/dnwse/html/wse2wspolicy.asp#wse2wspolicy_topic11" 
+            target=_self>References</A><BR><A 
+            href="http://msdn.microsoft.com/webservices/default.aspx?pull=/library/en-us/dnwse/html/wse2wspolicy.asp#wse2wspolicy_topic22" 
+            target=_self>Related Books</A></P>
+            <H2 class=dtH1><A name=wse2wspolicy_topic1></A>Introduction</H2>
+            <P>To interact with a Web service, one needs to be aware of its 
+            requirements, capabilities, and preferences. These <I>policies</I> 
+            make it possible for an application to select and use Web services 
+            in more meaningful ways. </P>
+            <P>For example, an application that wants to interact with a secure 
+            Web service needs to know what authentication information it must 
+            present in the message, and whether the message has to be signed 
+            and/or encrypted (and how, and what parts). Without this 
+            information, it is impossible for the application to know for sure 
+            what the wire-level communication with the service should look like. 
+            </P>
+            <P>This policy information must be expressed in a standard way to 
+            allow interoperability between applications developed and running on 
+            disparate platforms. Furthermore, it must be machine-readable to 
+            allow applications (or more likely, the Web service infrastructure) 
+            to build code to enforce the policies at runtime.</P>
+            <P>With this in mind, Microsoft, IBM, BEA, and SAP created the Web 
+            Services Policy Framework (WS-Policy). <A 
+            href="http://msdn.microsoft.com/webservices/default.aspx?pull=/library/en-us/dnwse/html/wse2wspolicy.asp#wse2wspolicy_topic12" 
+            target=_self>[1]</A> It provides a model and an extensible XML 
+            syntax to describe and communicate the policies in effect for a Web 
+            service. For more information about the various policy-related 
+            specifications (WS-Policy <A 
+            href="http://msdn.microsoft.com/webservices/default.aspx?pull=/library/en-us/dnwse/html/wse2wspolicy.asp#wse2wspolicy_topic12" 
+            target=_self>[1]</A>, WS-PolicyAttachment <A 
+            href="http://msdn.microsoft.com/webservices/default.aspx?pull=/library/en-us/dnwse/html/wse2wspolicy.asp#wse2wspolicy_topic13" 
+            target=_self>[2]</A>, WS-PolicyAssertions <A 
+            href="http://msdn.microsoft.com/webservices/default.aspx?pull=/library/en-us/dnwse/html/wse2wspolicy.asp#wse2wspolicy_topic14" 
+            target=_self>[3]</A>, WS-SecurityPolicy <A 
+            href="http://msdn.microsoft.com/webservices/default.aspx?pull=/library/en-us/dnwse/html/wse2wspolicy.asp#wse2wspolicy_topic15" 
+            target=_self>[4]</A>), and how they work, see the MSDN article, 
+            "Understanding WS-Policy" by Aaron Skonnard. <A 
+            href="http://msdn.microsoft.com/webservices/default.aspx?pull=/library/en-us/dnwse/html/wse2wspolicy.asp#wse2wspolicy_topic16" 
+            target=_self>[5]</A> </P>
+            <P>Microsoft recently provided support for WS-Policy in the Web 
+            Services Enhancements (WSE) 2.0 for Microsoft .NET. <A 
+            href="http://msdn.microsoft.com/webservices/default.aspx?pull=/library/en-us/dnwse/html/wse2wspolicy.asp#wse2wspolicy_topic17" 
+            target=_self>[6]</A> This article describes the policy options 
+            available in the WSE 2.0 Technology Preview and shows examples of 
+            their usage. </P>
+            <H2 class=dtH1><A name=wse2wspolicy_topic2></A>WSE 2.0 and 
+            Policy</H2>
+            <P>The Microsoft Web Services Enhancements (WSE) 2.0 includes a 
+            partial implementation of the WS-Policy Framework, as well as 
+            providing support for several of the standard assertions detailed in 
+            the WS-SecurityPolicy specification, such as those that require a 
+            security token to be present in a message, or require a message to 
+            be signed and/or encrypted, or specify a message expiration time. It 
+            also allows custom assertions to be supported through the 
+            implementation of custom policy assertion handlers. </P>
+            <P>WSE 1.0 had no support for WS-Policy, so to build a Web service 
+            that used, for instance, WS-Security <A 
+            href="http://msdn.microsoft.com/webservices/default.aspx?pull=/library/en-us/dnwse/html/wse2wspolicy.asp#wse2wspolicy_topic18" 
+            target=_self>[7]</A> to enforce security meant that you had to 
+            manually write code to check for tokens and signatures to encrypt 
+            messages, and to authenticate and authorize the different users. 
+            With WSE 2.0 it's possible to achieve the same results by simply 
+            authoring policy assertions declaratively within a policy file. The 
+            WSE 2.0 plumbing inspects the policy file and uses the assertions to 
+            enforce the policy at runtime. Note: when I refer to WSE in this 
+            article, I specifically mean the WSE 2.0 Technology Preview.</P>
+            <P>The WS-PolicyAttachment specification outlines how a particular 
+            policy is associated with the subject it applies to (e.g. a Web 
+            service endpoint). WSE 2.0 currently has no support for 
+            WS-PolicyAttachment, so the policy attachment is also defined in the 
+            policy file, along with the policies themselves. The structure of a 
+            policy file is shown below.</P><PRE class=code>&lt;policyDocument 
+  xmlns="http://microsoft.com/wse/2003/06/PolicyDocument"&gt;
+
+  &lt;mappings&gt;
+
+    &lt;map to="http://www.develop.com/someapp/someservice.asmx"&gt;
+      &lt;action 
+        name="http://www.develop.com/someapp/someservice/someop"
+        policy="#policy1"/&gt;
+    &lt;/map&gt;
+
+    &lt;map to="http://www.develop.com/someapp/someotherservice.asmx"&gt;
+      &lt;default policy="#policy2"/&gt;
+    &lt;/map&gt;
+  &lt;/mappings&gt;
+
+  &lt;policies 
+    xmlns:wsu="http://schemas.xmlsoap.org/ws/2002/07/utility"       
+    xmlns:wsp="http://schemas.xmlsoap.org/ws/2002/12/policy"&gt;
+    &lt;wsp:Policy wsu:Id="policy1"&gt;
+      &lt;!-- Policy assertions go here --&gt;
+      ...
+    &lt;/wsp:Policy&gt;
+    &lt;wsp:Policy wsu:Id="policy2"&gt;
+      &lt;!-- Policy assertions go here --&gt;
+      ...
+    &lt;/wsp:Policy&gt;
+  &lt;/policies&gt;
+
+&lt;/policyDocument&gt;
+</PRE>
+            <P>The root of the policy file is <B>policyDocument</B> from the 
+            <B>http://microsoft.com/wse/2003/06/PolicyDocument</B> namespace. 
+            The <B>policyDocument</B> element contains a <B>policies</B> element 
+            that contains one or more <B>Policy</B> elements, each one 
+            containing a policy definition and its policy assertions. The policy 
+            assertions supported by WSE 2.0 are the main focus of this article 
+            and will be explored later. The <B>policyDocument</B> element also 
+            contains a <B>mappings</B> element that contains one or more 
+            <B>map</B> elements. Each <B>map</B> element maps operations at an 
+            endpoint, specified by its <B>to</B> attribute, to a policy that 
+            will be in effect for the operations. The <B>action</B> element 
+            determines which Web method within a single Web service endpoint the 
+            policy is for. It states (via its <B>name</B> attribute) that the 
+            associated policy applies to messages with that specific 
+            "action"—the <B>action</B> element defined by WS-Addressing (which 
+            will map to the <B>SOAPAction</B> HTTP header for SOAP over HTTP). 
+            Note that ASMX Web services uses the <B>SOAPAction</B> HTTP header 
+            to determine which Web method, within a single Web service endpoint, 
+            the request is for. The <B>default</B> element states that the 
+            policy applies to messages for which no matching <B>action</B> 
+            element was specified. If no <B>default</B> element is specified for 
+            an endpoint, any messages sent to that endpoint with an 
+            <B>action</B> element that is not specified in the policy will 
+            automatically fail. The <B>policy</B> attribute, on both of the 
+            <B>action</B> and <B>default</B> elements, names the policy. In this 
+            case the operation identified by 
+            <B>http://www.develop.com/someapp/someservice/someop</B> at the 
+            endpoint <B>http://www.develop.com/someapp/someservice.asmx</B> is 
+            mapped to the policy with ID <B>#policy1</B> and all the operations 
+            at the endpoint 
+            <B>http://www.develop.com/someapp/someotherservice.asmx</B> are 
+            mapped to the policy with ID <B>#policy2</B>. </P>
+            <P>You must tell WSE where to find the policy file(s) in effect for 
+            an application. You do this in the application's configuration 
+            file—this will be Web.config for Microsoft ASP.NET applications, and 
+            Assemblyname.exe.config for all other .NET executables. An example 
+            configuration file is shown here. Note: line breaks within attribute 
+            values (specifically the <B>type</B> attribute here) are only 
+            provided for clarity. Real configuration files must not include any 
+            line breaks in attribute values.</P><PRE class=code>&lt;configuration&gt;
+
+  &lt;!-- Must configure section handler for microsoft.web.services section --&gt;
+  &lt;configSections&gt;
+    &lt;section 
+      name="microsoft.web.services" 
+      type="Microsoft.Web.Services.Configuration.WebServicesConfiguration,
+            Microsoft.Web.Services, Version=2.0.0.0, Culture=neutral, 
+            PublicKeyToken=31bf3856ad364e35" /&gt;
+  &lt;/configSections&gt;
+
+  &lt;system.web&gt;
+    &lt;webServices&gt;
+      &lt;!-- WSE 2.0 configured as a SOAP extension --&gt;
+      &lt;soapExtensionTypes&gt;
+        &lt;add 
+          type="Microsoft.Web.Services.WebServicesExtension, 
+                Microsoft.Web.Services, Version=2.0.0.0, Culture=neutral, 
+                PublicKeyToken=31bf3856ad364e35" 
+          priority="1" 
+          group="0" /&gt;
+      &lt;/soapExtensionTypes&gt;
+    &lt;/webServices&gt;
+  &lt;/system.web&gt;
+
+<CODE><B class=cfe>  &lt;microsoft.web.services&gt;</B></CODE>
+<CODE><B class=cfe>    &lt;policy&gt;</B></CODE>
+<CODE><B class=cfe>      &lt;receive&gt;</B></CODE>
+<CODE><B class=cfe>        &lt;cache name="rpolicies.xml" /&gt;</B></CODE>
+<CODE><B class=cfe>      &lt;/receive&gt;</B></CODE>
+<CODE><B class=cfe>      &lt;send&gt;</B></CODE>
+<CODE><B class=cfe>        &lt;cache name="spolicies.xml" /&gt;</B></CODE>
+<CODE><B class=cfe>      &lt;/send&gt;</B></CODE>
+<CODE><B class=cfe>    &lt;/policy&gt;</B></CODE>
+<CODE><B class=cfe>  &lt;/microsoft.web.services&gt;</B></CODE>
+
+&lt;/configuration&gt;
+</PRE>
+            <P>Notice how the WSE 2.0 runtime has been configured as a SOAP 
+            extension for the application, and how the 
+            <B>microsoft.web.services</B> configuration section must be 
+            configured before the WSE 2.0 <B>microsoft.web.services</B> 
+            configuration element can be used. Notice also that WSE separates 
+            "send" policies from "receive" policies. </P>
+            <P>A receive policy is enforced when messages arrive. If a received 
+            message does not conform to the receive policy, then WSE generates a 
+            SOAP fault and returns it to the sender without executing the target 
+            operation. For instance, if the receive policy specifies that a 
+            message's body must be signed and it isn't, then it will be 
+            rejected. </P>
+            <P>A send policy checks messages against the policy just before they 
+            are sent. If a message does not satisfy the policy, then WSE can 
+            modify the message in an attempt to enforce the policy. For 
+            instance, the send policy may say that an outgoing message body must 
+            be encrypted. If a message without an encrypted body is about to be 
+            sent, then the infrastructure will attempt to encrypt it according 
+            to the policy details before sending it. </P>
+            <P>Having separate send and receive policies makes perfect sense, as 
+            the conditions placed on messages sent and received are often quite 
+            different. Often an application will only need to specify either a 
+            send or a receive policy, but not both.</P>
+            <P>One thing the WS-Policy Framework does not address is how 
+            policies are discovered. In order to figure out ahead of time 
+            whether they can talk to each other, the client and the Web service 
+            would have to first enter into some form of out-of-band policy 
+            negotiation. </P>
+            <P>Now it is time to look at some specific examples of how WSE 2.0 
+            supports some of the standard assertions defined in the 
+            WS-SecurityPolicy specification. </P>
+            <H2 class=dtH1><A name=wse2wspolicy_topic3></A>Specifying That a 
+            Security Token Must Be Present in a Message</H2>
+            <P>The <B>SecurityToken</B> assertion, defined in the 
+            WS-SecurityPolicy specification, requires that a message contain 
+            some kind of security token (such as an X.509 certificate), which 
+            makes a claim about the sender, such as who the sender is. The 
+            format of the <B>SecurityToken</B> assertion is shown below.</P><PRE class=code>&lt;wsee:SecurityToken 
+  wsp:Usage="..." 
+  xmlns:wsp="http://schemas.xmlsoap.org/ws/2002/12/policy"
+  xmlns:wsse="http://schemas.xmlsoap.org/ws/2002/12/secext"&gt;
+
+  &lt;wsse:TokenType&gt;...&lt;/wsse:TokenType&gt;
+  &lt;wsse:TokenIssuer&gt;...&lt;/wsse:TokenIssuer&gt;
+  &lt;wsse:Claims&gt;...&lt;/wsse:Claims&gt;
+  &lt;!-- Token type-specific information --&gt;
+
+&lt;/wsse:SecurityToken&gt;
+</PRE>
+            <P>At the moment, WSE 2.0 supports four well-known token types, as 
+            shown below, as well as custom token types.</P>
+            <TABLE class=data>
+              <TBODY>
+              <TR vAlign=top>
+                <TH align=left class=data width="42%">Qname</TH>
+                <TH align=left class=data width="58%">Description</TH></TR>
+              <TR vAlign=top>
+                <TD class=data width="42%">wsse:X509v3</TD>
+                <TD class=data width="58%">X.509 v3 certificate </TD></TR>
+              <TR vAlign=top>
+                <TD class=data width="42%">wsse:Kerberosv5ST</TD>
+                <TD class=data width="58%">Kerberos V5 service ticket</TD></TR>
+              <TR vAlign=top>
+                <TD class=data width="42%">wsse:UsernameToken</TD>
+                <TD class=data width="58%">Username token defined in 
+                  WS-Security</TD></TR>
+              <TR vAlign=top>
+                <TD class=data width="42%">wsse:SecurityContextToken</TD>
+                <TD class=data width="58%">SecurityContextToken defined in 
+                  WS-SecureConversation</TD></TR></TBODY></TABLE>
+            <H3 class=dtH1></H3>
+            <H3 class=dtH1>Sending a UsernameToken</H3>
+            <P>Probably the simplest and most generic security token to start 
+            with is the <B>UsernameToken</B> that allows a user's name and, 
+            optionally, password to be specified. Here is a policy that 
+            specifies that a <B>UsernameToken</B> must be present in a message. 
+            </P><PRE class=code>&lt;policyDocument 
+  xmlns="http://microsoft.com/wse/2003/06/PolicyDocument"&gt;
+
+  &lt;mappings&gt;
+<CODE><B class=cfe>    &lt;map to="http://localhost/policyapp/secureservice.asmx"&gt;</B></CODE>
+<CODE><B class=cfe>      &lt;!-- Corresponds to the PassToken operation --&gt;</B></CODE>
+<CODE><B class=cfe>      &lt;action </B></CODE>
+<CODE><B class=cfe>        name="http://develop.com/policyapp/secureservice/passtoken"</B></CODE>
+<CODE><B class=cfe>        policy="#PresentAUserNameToken"/&gt;</B></CODE>
+<CODE><B class=cfe>    &lt;/map&gt;</B></CODE>
+  &lt;/mappings&gt;
+
+  &lt;policies 
+    xmlns:wsu="http://schemas.xmlsoap.org/ws/2002/07/utility"       
+    xmlns:wsp="http://schemas.xmlsoap.org/ws/2002/12/policy"&gt;
+    
+<CODE><B class=cfe>    &lt;wsp:Policy wsu:Id="PresentAUserNameToken"&gt;</B></CODE>
+<CODE><B class=cfe>      &lt;SecurityToken wsp:Usage="wsp:Required" </B></CODE>
+<CODE><B class=cfe>        xmlns="http://schemas.xmlsoap.org/ws/2002/12/secext"&gt;</B></CODE>
+<CODE><B class=cfe>        &lt;TokenType&gt;UsernameToken&lt;/TokenType&gt;</B></CODE>
+<CODE><B class=cfe>      &lt;/SecurityToken&gt;</B></CODE>
+<CODE><B class=cfe>    &lt;/wsp:Policy&gt;</B></CODE>
+  
+  &lt;/policies&gt;
+
+&lt;/policyDocument&gt;
+</PRE>
+            <P>This, like all policies shown in this article, is the Web service 
+            client's send policy and the receive policy of the Web service. Note 
+            that for a <B>UsernameToken</B>, the <B>TokenIssuer</B> element must 
+            be absent.</P>
+            <P>In order to enforce the policy assertion on behalf of the Web 
+            service client, WSE knows it has to send a message that contains a 
+            <B>UsernameToken</B>, but it doesn't know <I>which</I> 
+            <B>UserNameToken</B>. To obtain this information, WSE looks in a 
+            token cache represented by the 
+            <B>Microsoft.Web.Services.Security.SecurityTokenCache</B> class.</P>
+            <P>In this case it is the Web service client's responsibility to 
+            populate the <B>SecurityTokenCache</B> with a specific 
+            <B>UsernameToken</B> before it makes the call to the Web service 
+            proxy as shown.</P><PRE class=code>SecureServiceWse s = new SecureServiceWse();
+UsernameToken tok = 
+  new UsernameToken(
+    "LAP-SIMON\simonh", 
+    "notreallymypwd",
+    PasswordOption.SendPlainText);
+<CODE><B class=cfe>SecurityTokenCache.GlobalCache.Add(tok);</B></CODE>
+s.PassToken(); // Operation for which policy is applied
+</PRE>
+            <P>The message receiver will typically want to authenticate a 
+            security token and then use the information in it to authorize what 
+            the owner of that token is, or is not, allowed to do. Such 
+            authorization may be based on who the token owner is or what 
+            functional roles the token owner is a member of. </P>
+            <P>When WSE receives a message containing a <B>UsernameToken</B> 
+            whose password is sent in the clear, it will automatically attempt 
+            to authenticate the <B>UsernameToken</B> credentials against a 
+            Windows® account. If this is successful, then roles equate to 
+            Windows NT® groups, and the authenticated user's role memberships 
+            are decided by their Windows NT group memberships. </P>
+            <P>However, it is unrealistic to expect that passwords be sent in 
+            the clear. In the previous policy, no particular claims were made 
+            about the <B>UsernameToken</B>—not even that a password need be 
+            sent. The policy below, however, mandates that a secure hash of the 
+            password must be present. </P><PRE class=code>&lt;wsp:Policy wsu:Id=" PresentAUserNameToken2" 
+  xmlns:wsp="http://schemas.xmlsoap.org/ws/2002/12/policy"&gt;
+  &lt;SecurityToken wsp:Usage="wsp:Required" 
+    xmlns="http://schemas.xmlsoap.org/ws/2002/12/secext"&gt;
+    &lt;TokenType&gt;UsernameToken&lt;/TokenType&gt;
+    &lt;Claims&gt;
+<CODE><B class=cfe>      &lt;UsePassword wsp:Usage="wsp:Required" </B></CODE>
+<CODE><B class=cfe>        Type="wsse:PasswordDigest"/&gt;</B></CODE>
+    &lt;/Claims&gt;
+  &lt;/SecurityToken&gt;
+&lt;/wsp:Policy&gt;
+</PRE>
+            <P>The default value of the <B>Type</B> attribute, if not present, 
+            is <B>wsse:PasswordText</B> (plaintext password). </P>
+            <P>In this case, the client code will change slightly. </P><PRE class=code>SecureServiceWse s = new SecureServiceWse();
+UsernameToken tok = 
+  new UsernameToken(
+    "LAP-SIMON\simonh", 
+    "notreallymypwd",
+<CODE><B class=cfe>    PasswordOption.SendHashed);</B></CODE>
+SecurityTokenCache.GlobalCache.Add(tok);
+s.PassToken();
+</PRE>
+            <P>Remember, though, that now WSE cannot map the 
+            <B>UsernameToken</B> to a Windows account because it doesn't have a 
+            plaintext password. </P>
+            <P>If this is the case, or if the credentials contained in a 
+            <B>UsernameToken</B> do not map to a Windows account, then it is 
+            possible for the Web service to authenticate incoming 
+            <B>UsernameTokens</B> for itself by providing a token manager 
+            implementation. It is then possible for it to map the credentials to 
+            a <B>Principal</B> in whatever way it wants using a custom 
+            <B>UsernameTokenManager</B> implementation as shown below.</P><PRE class=code>public class MySecurityTokenManager : UsernameTokenManager   {
+  protected override string AuthenticateToken(UsernameToken token) {
+  string pwd;
+  switch(token.Username) {
+    case "Simon":
+      pwd = token.Username+"-pwd";
+      token.Principal = new GenericPrincipal( 
+        new GenericIdentity(token.Username),
+        new string[] {"SomeRole","SomeOtherRole"} );
+      break;
+    case "Guest":
+      pwd = token.Username+"-pwd";
+      token.Principal = new GenericPrincipal( 
+        new GenericIdentity(token.Username), 
+        new string[] {"SomeRole"} );
+      break;
+    default:
+      pwd = base.AuthenticateToken(token);
+      break;
+    }
+    return pwd;
+  }
+} 
+</PRE>
+            <P>Notice how the token manager creates its own <B>Principal</B> 
+            based on the user's name in the provided <B>UsernameToken</B>, but 
+            with role membership. It then assigns it to the <B>UsernameToken</B> 
+            <B>Principal</B> property. </P>
+            <P>The token manager must be registered in the Web service's 
+            Web.config, as shown here.</P><PRE class=code>&lt;configuration&gt;
+  ...
+  &lt;microsoft.web.services&gt;  
+    ...
+    &lt;security&gt;
+      ...
+<B>      &lt;securityTokenManager </B>
+<B>        qname="wsse:UsernameToken" </B>
+<B>        xmlns:wsse="http://schemas.xmlsoap.org/ws/2002/12/secext" </B>
+<B>        type="policyapp.MySecurityTokenManager, policyapp" /&gt;</B>
+    &lt;/security&gt;
+  &lt;/microsoft.web.services&gt;
+&lt;/configuration&gt;
+</PRE>
+            <P>Whether the <B>UsernameToken</B> is authenticated using a Windows 
+            account or using a custom authentication technique, the result of 
+            that authentication is available to the target of the message. The 
+            following example illustrates how to use this information to enforce 
+            fine-grained authorization within, say, a Web service method 
+            implementation.</P><PRE class=code>Principal p = 
+  RequestSoapContext.Current.Security.Tokens[0].Principal;
+if (p!=null &amp;&amp; <B><CODE><B class=cfe>p.Identity.Name=="LAP-SIMON\simonh</B></CODE>"</B>)
+{
+  // do some stuff
+}
+</PRE>
+            <P>However, if the Web service is purely interested in allowing, or 
+            disallowing, access to a particular operation based on the result of 
+            authentication, then this could be expressed declaratively as shown 
+            here, without the Web service method having to provide any 
+            additional code at all. </P><PRE class=code>&lt;policyDocument 
+  xmlns="http://microsoft.com/wse/2003/06/PolicyDocument"&gt;
+
+  &lt;mappings&gt;
+    &lt;map to="http://localhost/policyapp/secureservice.asmx"&gt;
+      &lt;action 
+        name="http://develop.com/policyapp/secureservice/passtoken"
+        policy="#PresentAUserNameToken"/&gt;
+    &lt;/map&gt;
+  &lt;/mappings&gt;
+
+  &lt;policies 
+    xmlns:wsu="http://schemas.xmlsoap.org/ws/2002/07/utility"       
+    xmlns:wsp="http://schemas.xmlsoap.org/ws/2002/12/policy"&gt;
+    
+<CODE><B class=cfe>    &lt;wsp:Policy wsu:Id="PresentAUserNameToken"&gt;</B></CODE>
+<CODE><B class=cfe>      &lt;SecurityToken wsp:Usage="wsp:Required" </B></CODE>
+<CODE><B class=cfe>        xmlns="http://schemas.xmlsoap.org/ws/2002/12/secext"&gt;</B></CODE>
+<CODE><B class=cfe>        &lt;TokenType&gt;UsernameToken&lt;/TokenType&gt;</B></CODE>
+<CODE><B class=cfe>        &lt;Claims&gt;</B></CODE>
+<CODE><B class=cfe>          &lt;SubjectName </B></CODE>
+<CODE><B class=cfe>            MatchType="wsse:Exact"&gt;LAP-SIMON\simonh&lt;/SubjectName&gt;</B></CODE>
+<CODE><B class=cfe>        &lt;/Claims&gt;</B></CODE>
+<CODE><B class=cfe>      &lt;/SecurityToken&gt;</B></CODE>
+<CODE><B class=cfe>    &lt;/wsp:Policy&gt;</B></CODE>
+  
+  &lt;/policies&gt;
+
+&lt;/policyDocument&gt;
+</PRE>
+            <P>Note that in this case, the <B>Claims</B> element specifies an 
+            exact match for the user name. In this case, only user 
+            LAP-SIMON\simonh is allowed to call the Web method. The 
+            <B>MatchType</B> attribute can be <B>wsse:Exact</B> (exact match), 
+            <B>wsse:Regexp</B> (regular expression match), or <B>wsse:Prefix</B> 
+            (prefix match), which is the default.</P>
+            <P>More likely, perhaps, is that access to an operation would be 
+            determined not by the user associated with the token, but by the 
+            role membership of the user. It is possible for the method 
+            implementer to write code to achieve this. </P><PRE class=code>Principal p = 
+  RequestSoapContext.Current.Security.Tokens[0].Principal;
+if (p!=null &amp;&amp; 
+<CODE><B class=cfe>    (p.IsInRole("LAP-SIMON\SomeRole")|| </B></CODE>
+<CODE><B class=cfe>     p.IsInRole("LAP-SIMON\SomeOtherRole"))</B></CODE>
+{
+  // do some stuff
+}
+</PRE>
+            <P>However, it is also possible to configure this kind of role-based 
+            method access declaratively in a policy. The policy below shows how 
+            to limit access to the Web method to members of either of the 
+            LAP-SIMON\SomeRole or LAP-SIMON\SomeOtherRole roles.</P><PRE class=code>&lt;wsp:Policy wsu:Id="PresentAUserNameToken2" 
+  xmlns:wsp="http://schemas.xmlsoap.org/ws/2002/12/policy"&gt;
+  &lt;SecurityToken wsp:Usage="wsp:Required" 
+    xmlns="http://schemas.xmlsoap.org/ws/2002/12/secext"&gt;
+    &lt;TokenType&gt;UsernameToken&lt;/TokenType&gt;
+    &lt;Claims&gt;
+<CODE><B class=cfe>      &lt;wse:Role value="LAP-SIMON\SomeRole"/&gt;</B></CODE>
+<CODE><B class=cfe>      &lt;wse:Role value="LAP-SIMON\SomeOtherRole"/&gt;</B></CODE>
+    &lt;/Claims&gt;
+  &lt;/SecurityToken&gt;
+&lt;/wsp:Policy&gt;
+</PRE>
+            <P>The <B>UsernameToken</B> is pretty simple to use and generically 
+            applicable to most security scenarios on most platforms, but it has 
+            issues. Passwords are a pain to manage and, in the case where the 
+            password is hashed (which you typically want), it has been shown 
+            that WSE can't automatically map a <B>UsernameToken</B> to a Windows 
+            account. In cases where you know your Web service client's 
+            credentials will map to a Windows account on the server hosting the 
+            Web service, but you don't want to send passwords in the clear, then 
+            you will probably want to use a <B>KerberosToken</B> instead. </P>
+            <H3 class=dtH1>Sending a KerberosToken</H3>
+            <P>If WSE 2.0 is installed on Windows Server™ 2003 or Windows® XP 
+            with Service Pack 1, then it has support for Kerberos authentication 
+            in the form of a <B>KerberosToken</B>. Kerberos has the benefit of 
+            being an open security standard, thus promoting interoperability 
+            between WSE-enabled Web service applications running on Windows and 
+            Web service applications running on non-Windows platforms. </P>
+            <P>The policy below shows how to configure a Web service operation 
+            to accept a Kerberos ticket as a security token. </P><PRE class=code>&lt;wsp:Policy wsu:Id="PassKerberosToken" 
+  xmlns:wsp="http://schemas.xmlsoap.org/ws/2002/12/policy"&gt;
+  &lt;SecurityToken wsp:Usage="wsp:Required" 
+    xmlns="http://schemas.xmlsoap.org/ws/2002/12/secext"&gt;
+    &lt;TokenType&gt;<CODE><B class=cfe>Kerberosv5ST</B></CODE>&lt;/TokenType&gt; 
+  &lt;/SecurityToken&gt;
+&lt;/wsp:Policy&gt;
+</PRE>
+            <P>Again, in this case, because the exact details of a particular 
+            Kerberos ticket have not been specified, the Web service client must 
+            populate the <B>SecurityTokenCache</B> with a specific token—this 
+            time a <B>KerberosToken</B>—before it makes the call to the Web 
+            service proxy, as shown here.</P><PRE class=code>string name = "host/" + System.Net.Dns.GetHostName();
+KerberosToken tok = new KerberosToken(name);
+SecurityTokenCache.GlobalCache.Add(tok);
+s.PassToken();
+</PRE>
+            <P>The <B>KerberosToken</B> is created from the current Windows 
+            user's security context—its <B>Principal</B> property is 
+            automatically set to this user—so it wraps a Kerberos ticket that 
+            allows the Web service client (running on behalf of the current 
+            user) to communicate with the host specified (the same machine, in 
+            this case).</P>
+            <P>A policy detailing a particular Kerberos ticket to use is shown 
+            below. </P><PRE class=code>&lt;wsp:Policy wsu:Id="PassKerberosToken" 
+  xmlns:wsp="http://schemas.xmlsoap.org/ws/2002/12/policy"&gt;
+  &lt;SecurityToken wsp:Usage="wsp:Required" 
+    xmlns="http://schemas.xmlsoap.org/ws/2002/12/secext"&gt;
+    &lt;TokenType&gt;<CODE><B class=cfe>Kerberosv5ST</B></CODE>&lt;/TokenType&gt;
+    &lt;TokenIssuer&gt;<B>DM</B>&lt;/TokenIssuer&gt;
+    &lt;Claims&gt;
+      &lt;SubjectName&gt;<CODE><B class=cfe>DM\simonh</B></CODE>&lt;/SubjectName&gt;
+      &lt;ServiceName&gt;<CODE><B class=cfe>host/LAP-SIMON</B></CODE>&lt;/ServiceName&gt;
+    &lt;/Claims&gt;
+  &lt;/SecurityToken&gt;
+&lt;/wsp:Policy&gt;
+</PRE>
+            <P>In this case, all the Web service client needs to do is call the 
+            Web service method, as WSE has all the information it needs to 
+            obtain a Kerberos ticket and wrap it as a <B>KerberosToken</B>.</P><PRE class=code>s.PassToken();</PRE>
+            <P>As shown above, when the message is received by WSE, it 
+            automatically maps the Kerberos ticket to a Windows user 
+account.</P>
+            <P>However, if the machine hosting either the Web service client or 
+            the Web service doesn't support Kerberos, then we are back where we 
+            started. It's all very well passing user name/password information 
+            from client to server, but if the client wants to verify a message 
+            sent from the server, then this won't necessarily work too well. To 
+            mitigate this problem, X.509 certificates may be chosen as the means 
+            to pass credentials around. </P>
+            <H3 class=dtH1>Sending an X509SecurityToken</H3>
+            <P>WSE 2.0 supports X.509 certificates in the form of an 
+            <B>X509SecurityToken</B>. While individual users often won't have 
+            their own certificates, organizations often will. This mode of 
+            operation is therefore better suited to situations where the client 
+            wants to know the server, or, in business-to-business or Enterprise 
+            Application Integration scenarios, involving inter- and 
+            intra-organization communication. </P>
+            <P>This policy shows how to configure a Web service operation to 
+            accept an X.509 certificate as a security token. </P><PRE class=code>&lt;wsp:Policy wsu:Id="PassX509CertificateToken" 
+  xmlns:wsp="http://schemas.xmlsoap.org/ws/2002/12/policy"&gt;
+  &lt;SecurityToken wsp:Usage="wsp:Required" 
+    xmlns="http://schemas.xmlsoap.org/ws/2002/12/secext"&gt;
+    &lt;TokenType&gt;X509v3&lt;/TokenType&gt; 
+    &lt;Claims&gt;
+      &lt;SubjectName&gt;CN=WSE2QuickStartClient&lt;/SubjectName&gt;
+    &lt;/Claims&gt;
+  &lt;/SecurityToken&gt;
+&lt;/wsp:Policy&gt;  
+</PRE>
+            <P>In this case, only a message containing a token representing the 
+            certificate with the common name of <B>WSE2QuickStartClient</B> is 
+            accepted. </P>
+            <P>There is no need for the client to add the required 
+            <B>X509SecurityToken</B> to the <B>SecurityTokenCache</B> because 
+            WSE knows the name of the certificate from the <B>Claims</B> 
+            element, and so it can load it from a certificate store itself. 
+            Thus, the client becomes even simpler than before, as shown here. 
+            </P><PRE class=code>SecureServiceWse s = new SecureServiceWse();
+s.PassToken();
+</PRE>
+            <P>Of course if the above policy was missing the <B>Claims</B> 
+            element, signifying that any certificate could be presented, then 
+            the client would have to manually create an <B>X509SecurityToken</B> 
+            from a certificate loaded from the appropriate certificate store and 
+            add it to the <B>SecurityTokenCache</B> at runtime. </P>
+            <P>Before going on, it might be helpful to understand how to obtain 
+            and install the certificates needed to try out the examples for 
+            yourself. </P>
+            <P>The first step is to obtain a certificate. You could create a 
+            certificate yourself using the <B>makecert</B> utility, for 
+            instance. Alternatively, you could create a certificate request and 
+            send it to a certificate authority, such as Verisign, which will 
+            then issue a certificate. Microsoft® Certificate Services will allow 
+            you to create a certificate request and issue it for localized use. 
+            Finally, you could use an existing certificate. The WSE 2.0 samples 
+            come bundled with two sample certificates signed by the "Root 
+            agency" for testing purposes: one for a Web service client to use 
+            (common name of <B>WSE2QuickStartClient</B>), and one for a Web 
+            service to use (common name of <B>WSE2QuickStartServer</B>). All of 
+            the certificate-related examples in this article use these 
+            certificates. Note that in the WSE 2 Readme documentation, there is 
+            a warning about performance issues when using these sample 
+            certificates. It reads as follows:</P>
+            <BLOCKQUOTE class=dtBlock>"Certain security operations may run 
+              slow using makecert generated certificates. Certificates issued 
+              from a true Certificate Authority do not have this problem. This 
+              is a known tech preview issue."</BLOCKQUOTE>
+            <P>The second step is to install a certificate in either the 
+            "CurrentUser" certificate store (representing the currently 
+            logged-in user) or the "LocalMachine" certificate store. This can be 
+            done by running the MMC Certificates snap-in. Certificates, 
+            including any in their issuer certificate chain, that are needed by 
+            code that is running in the guise of an account that has login 
+            permissions typically go into the "CurrentUser" certificate store. 
+            Certificates that are needed by code running as an account with no 
+            login permissions, including any in the issuer certificate chain, 
+            typically go into the "LocalMachine" certificate store. The WSE 2.0 
+            samples contain instructions for installing the sample certificates. 
+            There is a .pfx file (containing a private and public key) for the 
+            server that installs into the "LocalMachine" certificate store, and 
+            a .pfx file for the client that installs into the "CurrentUser" 
+            certificate store. There is also a .cer file (containing just a 
+            public key) for the server that installs into the "CurrentUser" 
+            certificate store. All of the certificate-related examples in this 
+            article assume this installation. </P>
+            <P>As mentioned earlier, sometimes it may be necessary for your code 
+            to choose which certificates it needs at runtime and to load them 
+            programmatically from the relevant certificate store. However, 
+            sometimes the certificates required are specified in a declarative 
+            policy file (as in the previous policy shown) and they will be 
+            loaded by WSE on your behalf. To do this, WSE will need to know 
+            which certificate store to use. The certificate store WSE uses by 
+            default is the "LocalMachine" store, which makes perfect sense for a 
+            Web service when it is running under a security account that doesn't 
+            have login permissions (e.g. the ASP.NET worker process account). 
+            However, to get the previous example to work, the Web service client 
+            needs WSE to obtain the <B>WSE2QuickStartClient</B> certificate from 
+            the "CurrentUser" store, in which case its configuration file has to 
+            look like this.</P><PRE class=code>&lt;configuration&gt;
+  ...
+  &lt;microsoft.web.services&gt;  
+    ...
+    &lt;security&gt;
+      ...
+      <B>&lt;x509 storeLocation="CurrentUser" /&gt;</B>
+    &lt;/security&gt;      
+  &lt;/microsoft.web.services&gt;
+&lt;/configuration&gt;
+</PRE>
+            <P>The receiver of a message that contains a certificate needs to 
+            check that it can trust the information in the certificate. Before a 
+            certificate can be trusted, its certification chain needs to be 
+            checked, to ensure that it extends up to a trusted root certificate 
+            authority. Once that has been done, a check needs to be carried out 
+            that ensures the certificate hasn't been revoked since it was 
+            issued. The following attributes of the <B>X509</B> element, shown 
+            above in the above configuration file, are useful in this regard, as 
+            they assist WSE in carrying out certificate verification.</P>
+            <TABLE class=data>
+              <TBODY>
+              <TR vAlign=top>
+                <TH align=left class=data width="29%">Attribute</TH>
+                <TH align=left class=data width="71%">Description</TH></TR>
+              <TR vAlign=top>
+                <TD class=data width="29%">storeLocation</TD>
+                <TD class=data width="71%">Specifies what certificate store 
+                  WSE retrieves X.509 certificates from when verifying trust in 
+                  a certificate. The default is LocalMachine.</TD></TR>
+              <TR vAlign=top>
+                <TD class=data width="29%">verifyTrust</TD>
+                <TD class=data width="71%">Specifies whether WSE checks that a 
+                  certificate's issuer chain extends to a trusted root 
+                  authority. The default is true.</TD></TR>
+              <TR vAlign=top>
+                <TD class=data width="29%">allowTestRoot</TD>
+                <TD class=data width="71%">Specifies whether WSE modifies the 
+                  trust verification process to allow X.509 certificates signed 
+                  by a test root to pass the verification. The default is 
+                false.</TD></TR>
+              <TR vAlign=top>
+                <TD class=data width="29%">allowRevocationUrlRetrieval</TD>
+                <TD class=data width="71%">Specifies whether WSE resolves URLs 
+                  during certificate-revocation checking. When it is set to 
+                  false, only cached URLs are used. The default value is true. 
+                </TD></TR>
+              <TR vAlign=top>
+                <TD class=data width="29%">allowUrlRetrieval</TD>
+                <TD class=data width="71%">Specifies whether WSE resolves URLs 
+                  while checking the certificate's issuer chain. When it is set 
+                  to false, only cached URLs are used. The default value is 
+                false</TD></TR></TBODY></TABLE>
+            <P>The sample certificates that come with the WSE sample code do not 
+            have an issuer chain that extends to a trusted root authority—they 
+            are signed by the test "Root agency". One way to get the last 
+            example to work would be to change the Web service's Web.config to 
+            look like the one shown below.</P><PRE class=code>&lt;configuration&gt;
+  ...
+  &lt;microsoft.web.services&gt;  
+    ...
+    &lt;security&gt;
+<CODE><B class=cfe>      &lt;x509 allowTestRoot="true" /&gt;</B></CODE>
+    &lt;/security&gt;      
+  &lt;/microsoft.web.services&gt;
+&lt;/configuration&gt;
+</PRE>
+            <P>Currently WSE does not support the automatic mapping of X.509 
+            certificates to Windows user accounts, although you could write code 
+            that plugs into the X.509 authentication system yourself that mapped 
+            certificates against your own store of Windows credentials.</P>
+            <H2 class=dtH1><A name=wse2wspolicy_topic4></A>Specifying That a 
+            Signature Must Be Present in a Message</H2>
+            <P>Just sending a security token as part of a message doesn't mean 
+            very much; anyone could have sent it. What the receiver of the 
+            message needs is proof that the message really was sent by the 
+            token's owner, i.e., proof that the sender of the message lays valid 
+            claim to the credentials sent in the token. This can be achieved by 
+            digitally signing all, or parts, of the message with some 'secret 
+            key' associated with the token that only the token owner could 
+            know—perhaps a shared secret (e.g. a password), or maybe a private 
+            key. If the receiver can verify the signature, using perhaps the 
+            shared secret or maybe a matching public key, then the receiver has 
+            demonstrated that the sender was able to show knowledge of something 
+            associated with the token that only the sender could know. </P>
+            <P>However, even if the receiver does know for sure the origin of 
+            those parts of the message that were signed, anyone could have 
+            tampered with the message during transit. A signature over some data 
+            is generated not from the data itself but from a digest (one-way 
+            hash) of the data. If the receiver verifies the signature and runs 
+            the same one-way hash over the data and gets the same digest, then 
+            the receiver knows the message has not been tampered with since it 
+            was signed. A signature, therefore, provides proof that those parts 
+            of the message that were signed did indeed come from the purported 
+            sender and have not been changed since they were sent.</P>
+            <P>By authoring the correct policy, you can get WSE to sign messages 
+            before they are sent and verified as they are received. The 
+            <B>Integrity</B> assertion, defined in the WS-SecurityPolicy 
+            specification, is used to indicate a required signature format as 
+            laid out in the WS-Security specification. The structure of an 
+            <B>Integrity</B> assertion is shown below.</P><PRE class=code>&lt;wsse:Integrity 
+  wsp:Preference="..." 
+  wsp:Usage="..." 
+  xmlns:wsp="http://schemas.xmlsoap.org/ws/2002/12/policy"
+  xmlns:wsse="http://schemas.xmlsoap.org/ws/2002/12/secext"&gt;
+
+  &lt;wsse:Algorithm Type="..." URI="..." wsp:Preference="..."/&gt;
+  &lt;wsse:TokenInfo&gt;
+    &lt;wsse:SecurityToken&gt;...&lt;/wsse:SecurityToken&gt;
+  &lt;/wsse:TokenInfo&gt;
+  &lt;wsse:Claims&gt;...&lt;/wsse:Claims&gt;
+  &lt;wsse:MessageParts Dialect="..." Signer="..."&gt;
+    ...
+  &lt;/wsse:MessageParts&gt;
+&lt;wsse:Integrity&gt;
+</PRE>
+            <P>The WSE tokens that support signatures are <B>UsernameToken</B>, 
+            <B>X509SecurityToken</B>, <B>KerberosToken</B>, 
+            <B>SecurityContextToken</B>, <B>DerivedKeyToken</B>, and custom 
+            tokens. </P>
+            <H3 class=dtH1>Signing with a UserNameToken</H3>
+            <P>The following policy file shows how to specify that any 
+            <B>UsernameToken</B> must sign a message. </P><PRE class=code>&lt;policyDocument 
+  xmlns="http://microsoft.com/wse/2003/06/PolicyDocument"&gt;
+
+  &lt;mappings&gt;
+    &lt;map to="http://localhost/policyapp/secureservice.asmx"&gt;
+      &lt;action 
+        name="http://develop.com/policyapp/secureservice/signwithtoken"
+        policy="#SignBodyWithUserNameToken"/&gt;
+    &lt;/map&gt;
+  &lt;/mappings&gt;
+
+  &lt;policies 
+    xmlns:wsu="http://schemas.xmlsoap.org/ws/2002/07/utility"       
+    xmlns:wsp="http://schemas.xmlsoap.org/ws/2002/12/policy"&gt;
+
+<CODE><B class=cfe>    &lt;wsp:Policy wsu:Id="SignBodyWithUserNameToken"&gt;</B></CODE>
+<CODE><B class=cfe>      &lt;Integrity wsp:Usage="wsp:Required" </B></CODE>
+<CODE><B class=cfe>        xmlns="http://schemas.xmlsoap.org/ws/2002/12/secext"&gt;</B></CODE>
+<CODE><B class=cfe>        &lt;TokenInfo&gt;</B></CODE>
+<CODE><B class=cfe>          &lt;SecurityToken wsp:Usage="wsp:Required"&gt;</B></CODE>
+<CODE><B class=cfe>            &lt;TokenType&gt;UsernameToken&lt;/TokenType&gt;</B></CODE>
+<CODE><B class=cfe>          &lt;/SecurityToken&gt;</B></CODE>
+<CODE><B class=cfe>        &lt;/TokenInfo&gt;</B></CODE>
+<CODE><B class=cfe>        &lt;MessageParts </B></CODE>
+<CODE><B class=cfe>          Dialect="http://schemas.xmlsoap.org/2002/12/wsse#part"&gt;</B></CODE>
+<CODE><B class=cfe>          wsp:Body()</B></CODE>
+<CODE><B class=cfe>        &lt;/MessageParts&gt;</B></CODE>
+<CODE><B class=cfe>      &lt;/Integrity&gt;</B></CODE>
+<CODE><B class=cfe>    &lt;/wsp:Policy&gt;</B></CODE>
+
+  &lt;/policies&gt;
+
+&lt;/policyDocument&gt;
+</PRE>
+            <P>In this case, the user's password is used to sign and verify the 
+            message.</P>
+            <P>The <B>MessageParts</B> element describes what parts of the 
+            message are to be signed. If you were to sign a message 
+            programmatically with WSE, without being specific about which parts 
+            you wanted to sign, then it would sign the following message parts 
+            by default: </P>
+            <P><B>soap:Envelope/soap:Header/soap:Body 
+            <BR>soap:Envelope/soap:Header/wsu:Timestamp/wsu:Created 
+            <BR>soap:Envelope/soap:Header/wsu:Timestamp/wsu:Expires 
+            <BR>soap:Envelope/soap:Header/wsa:Action, 
+            <BR>soap:Envelope/soap:Header/wsa:To 
+            <BR>soap:Envelope/soap:Header/wsa:MessageID 
+            <BR>soap:Envelope/soap:Header/wsa:From/wsa:Address </B></P>
+            <P>Of course, it is possible to not rely on this default and 
+            programmatically specify exactly what parts of the message you want 
+            signed. When declaratively specifying that a message is to be 
+            signed, WSE mandates that the <B>MessageParts</B> element must be 
+            present to indicate which parts of the message are to be signed. The 
+            <B>MessageParts</B> element uses a dialect to describe the message 
+            parts. Two dialects are defined in the WS-PolicyAssertions 
+            specification. The dialect 
+            <B>http://www.w3.org/TR/1999/REC-xpath-19991116</B> means that XPath 
+            expressions are used to describe the message parts. Additionally, it 
+            defines a set of functions to simplify expressions that may be used 
+            to reference SOAP message elements. Although this dialect is 
+            nominated by the specification as the default, it is not supported 
+            by WSE. The other dialect, 
+            <B>http://schemas.xmlsoap.org/2002/12/wsse#part</B>, defines 
+            functions to identify the message parts. The supported functions are 
+            shown below. </P>
+            <TABLE class=data>
+              <TBODY>
+              <TR vAlign=top>
+                <TH align=left class=data width="22%">Function</TH>
+                <TH align=left class=data width="78%">Description</TH></TR>
+              <TR vAlign=top>
+                <TD class=data width="22%">wsp:Body()</TD>
+                <TD class=data width="78%">This function identifies the "body" 
+                  of the message. </TD></TR>
+              <TR vAlign=top>
+                <TD class=data width="22%">wsp:Header(x)</TD>
+                <TD class=data width="78%">This function identifies a "header" 
+                  whose name is the specified QName, x. </TD></TR></TBODY></TABLE>
+            <P>As you can see, the policy above asserts that the body 
+            (<B>soap:Envelope/soap:Header/soap:Body</B>) of the message must be 
+            signed. It is possible to sign multiple parts of the message by 
+            having a single <B>MessageParts</B> element whose content is a 
+            white-space-separated list of functions, or by having multiple 
+            <B>MessageParts</B> elements. The following policy causes the 
+            message body and <B>soap:Envelope/soap:Header/wsa:Action</B> header 
+            to be signed.</P><PRE class=code>&lt;wsp:Policy wsu:Id="SignBodyAndHeaderWithUserNameToken" 
+  xmlns:wsp="http://schemas.xmlsoap.org/ws/2002/12/policy"&gt;
+  &lt;Integrity wsp:Usage="wsp:Required" 
+    xmlns="http://schemas.xmlsoap.org/ws/2002/12/secext"&gt;
+    &lt;TokenInfo&gt;
+      &lt;SecurityToken wsp:Usage="wsp:Required"&gt;
+        &lt;TokenType&gt;UsernameToken&lt;/TokenType&gt;
+      &lt;/SecurityToken&gt;
+    &lt;/TokenInfo&gt;
+<CODE><B class=cfe>    &lt;MessageParts </B></CODE>
+<CODE><B class=cfe>      Dialect="http://schemas.xmlsoap.org/2002/12/wsse#part"&gt;</B></CODE>
+<CODE><B class=cfe>      wsp:Body()</B></CODE>
+<CODE><B class=cfe>    &lt;/MessageParts&gt;</B></CODE>
+<CODE><B class=cfe>    &lt;MessageParts </B></CODE>
+<CODE><B class=cfe>      xmlns:wsa="http://schemas.xmlsoap.org/ws/2003/03/addressing" </B></CODE>
+<CODE><B class=cfe>      Dialect="http://schemas.xmlsoap.org/2002/12/wsse#part"&gt;</B></CODE>
+<CODE><B class=cfe>      wsp:Header(wsa:Action)</B></CODE>
+<CODE><B class=cfe>    &lt;/MessageParts&gt;</B></CODE>
+  &lt;/Integrity&gt;
+&lt;/wsp:Policy&gt;
+</PRE>
+            <P>Note that in the current implementation of WSE, it is only 
+            possible to enforce the <B>Integrity</B> assertion using the 
+            following message parts in the 
+            <B>http://schemas.xmlsoap.org/2002/12/wsse#part</B> dialect: 
+            <B>wsp:Body()</B> or <B>wsp:Header()</B> for the WS-Addressing 
+            <B>To</B>, <B>Action</B>, <B>From</B>, <B>ReplyTo</B>, 
+            <B>RelatesTo</B>, <B>Recipient</B>, <B>FaultTo</B> and 
+            <B>MessageID</B> headers.</P>
+            <P>The Web service client and Web service code for which either of 
+            the previous two policies will be enforced doesn't really change 
+            from that shown earlier, since WSE will automatically add the 
+            signature to the message as it is sent, and verify the signature as 
+            the message is received. The client code is shown below.</P><PRE class=code>SecureServiceWse s = new SecureServiceWse();
+UsernameToken tok = 
+  new UsernameToken(
+    "LAP-SIMON\simonh", 
+    "notreallymypwd",
+    PasswordOption.SendHashed);
+SecurityTokenCache.GlobalCache.Add(tok);
+s.SignWithToken();</PRE>
+            <H3 class=dtH1>Signing with an X509SecurityToken</H3>
+            <P>If the policy was changed to the one below, then the specified 
+            X.509 certificate would be used to sign the body and the 
+            <B>soap:Envelope/soap:Header/wsa:Action</B> header of the message. 
+            </P><PRE class=code>&lt;wsp:Policy wsu:Id="SignBodyAndHeaderWithX509CertificateToken" 
+  xmlns:wsp="http://schemas.xmlsoap.org/ws/2002/12/policy"&gt;
+  &lt;Integrity wsp:Usage="wsp:Required" 
+    xmlns="http://schemas.xmlsoap.org/ws/2002/12/secext"&gt;
+    &lt;TokenInfo&gt;
+      &lt;SecurityToken&gt;
+        &lt;TokenType&gt;X509v3&lt;/TokenType&gt; 
+        &lt;Claims&gt;
+          &lt;SubjectName&gt;CN=WSE2QuickStartClient&lt;/SubjectName&gt;
+        &lt;/Claims&gt;
+      &lt;/SecurityToken&gt;
+    &lt;/TokenInfo&gt;
+    &lt;MessageParts 
+      Dialect="http://schemas.xmlsoap.org/2002/12/wsse#part" 
+      xmlns:wsa="http://schemas.xmlsoap.org/ws/2003/03/addressing"&gt;
+      wsp:Body() wsp:Header(wsa:Action)
+    &lt;/MessageParts&gt;
+  &lt;/Integrity&gt;
+&lt;/wsp:Policy&gt;</PRE>
+            <P>The certificate's private key is used to sign the message and the 
+            certificate's public key is used to verify the message.</P>
+            <P>There is not really anything for the Web service client or Web 
+            service to do in this case, since WSE will automatically add the 
+            signature to the message as it is sent and verify the signature as 
+            the message is received. All the client needs to do is call the 
+            method as shown here.</P><PRE class=code>SecureServiceWse s = new SecureServiceWse();
+s.SignWithToken();</PRE>
+            <H3 class=dtH1>Signing with a KerberosToken</H3>
+            <P>The policy below requires that a message body be signed with a 
+            <B>KerberosToken</B>. </P><PRE class=code>&lt;wsp:Policy wsu:Id="SignBodyWithKerberosToken" 
+  xmlns:wsp="http://schemas.xmlsoap.org/ws/2002/12/policy"&gt;
+  &lt;Integrity wsp:Usage="wsp:Required" 
+    xmlns="http://schemas.xmlsoap.org/ws/2002/12/secext"&gt;
+    &lt;TokenInfo&gt;
+      &lt;SecurityToken wsp:Usage="wsp:Required"&gt;
+        &lt;TokenType&gt;<CODE><B class=cfe>Kerberosv5ST</B></CODE>&lt;/TokenType&gt;
+      &lt;/SecurityToken&gt;
+    &lt;/TokenInfo&gt;
+    &lt;MessageParts 
+      Dialect="http://schemas.xmlsoap.org/2002/12/wsse#part"&gt;
+      wsp:Body()
+    &lt;/MessageParts&gt;
+  &lt;/Integrity&gt;
+&lt;/wsp:Policy&gt;</PRE>
+            <P>In this case, the message is signed and verified with the secret 
+            key inside the Kerberos ticket associated with the 
+            <B>KerberosToken</B>.</P>
+            <H2 class=dtH1><A name=wse2wspolicy_topic5></A>Specifying Message 
+            Expiry</H2>
+            <P>Even when messages are signed they could still be replayed 
+            against the Web service and have an undesirable effect. To minimize 
+            the chances of this happening, it is possible to author a policy 
+            that specifies a message expiration time. This causes WSE to send 
+            the message with a <B>Timestamp</B> with an expiration equal to the 
+            <B>MessageAge</B> policy assertion. The <B>MessageAge</B> policy 
+            assertion's usage is shown in the policy file illustrated here. </P><PRE class=code>&lt;wsp:Policy wsu:Id="AgeMessage" 
+  xmlns:wsp="http://schemas.xmlsoap.org/ws/2002/12/policy"&gt;
+<CODE><B class=cfe>  &lt;MessageAge </B></CODE>
+<CODE><B class=cfe>    xmlns="http://schemas.xmlsoap.org/ws/2002/12/secext"</B></CODE>
+<CODE><B class=cfe>    wsp:Usage="required" </B></CODE>
+<CODE><B class=cfe>    Age="60" /&gt;</B></CODE>
+&lt;/wsp:Policy&gt;</PRE>
+            <P>Any message received by WSE that has expired will be rejected. 
+            There is no onus on the Web service client or Web service to write 
+            any additional code at all. </P>
+            <P>Of course, it is essential to set the <B>Age</B> attribute of the 
+            <B>MessageAge</B> to a value (in seconds) that is big enough to 
+            allow the message to be processed in normal circumstances, but guard 
+            against replay attack. It helps also to sign the <B>Timestamp</B> 
+            header to prevent it from being tampered with. Due to a limitation 
+            mentioned earlier, it is not currently possible to get WSE to sign 
+            the <B>Timestamp</B> header based on a policy expression, so it will 
+            have to be done programmatically. </P>
+            <H2 class=dtH1><A name=wse2wspolicy_topic6></A>Specifying That a 
+            Message Must Be Encrypted</H2>
+            <P>When a signature is applied to a SOAP message, it ensures that 
+            sender cannot repudiate the message, and that it has integrity. 
+            However, the message itself is sent in plaintext. If it is required 
+            that the message, or parts of it, must be private to sender and 
+            receiver, then the message must be encrypted. </P>
+            <P>WSE allows encryption requirements to be specified declaratively 
+            such that WSE will encrypt messages before they are sent and will 
+            decrypt them as they are received. The <B>Confidentiality</B> 
+            assertion, defined in the WS-SecurityPolicy specification, is used 
+            to indicate a required encryption format as laid out in the 
+            WS-Security specification. The format of the <B>Confidentiality</B> 
+            assertion is illustrated below.</P><PRE class=code>&lt;Confidentiality 
+  wsp:Preference="..." 
+  wsp:Usage="..." 
+  xmlns:wsp="http://schemas.xmlsoap.org/ws/2002/12/policy"
+  xmlns:wsse="http://schemas.xmlsoap.org/ws/2002/12/secext"&gt;
+
+  &lt;Algorithm Type="..." URI="..." wsp:Preference="..."/&gt;
+  &lt;KeyInfo&gt;
+    &lt;SecurityToken .../&gt;
+    &lt;SecurityTokenReference .../&gt;
+    ...
+  &lt;/KeyInfo&gt;
+  &lt;MessageParts Dialect="..."&gt;
+  ...
+  &lt;/MessageParts&gt;
+&lt;/Confidentiality&gt;
+</PRE>
+            <P>The WSE tokens that support encryption are 
+            <B>X509SecurityToken</B>, <B>KerberosToken</B>, 
+            <B>SecurityContextToken</B>, <B>DerivedKeyToken</B>, and custom 
+            tokens. The policy below shows how to specify that the 
+            <B>X509SecurityToken</B><CODE> </CODE>must encrypt<CODE> </CODE>a 
+            message's body. </P><PRE class=code>&lt;policyDocument 
+  xmlns="http://microsoft.com/wse/2003/06/PolicyDocument"&gt;
+
+  &lt;mappings&gt;
+    &lt;map to="http://localhost/policyapp/secureservice.asmx"&gt;
+      &lt;action 
+        name="http://develop.com/policyapp/secureservice/encryptwithtoken"
+        policy="#EncryptBodyWithX509CertificateToken"/&gt;
+    &lt;/map&gt;
+  &lt;/mappings&gt;
+
+  &lt;policies 
+    xmlns:wsu="http://schemas.xmlsoap.org/ws/2002/07/utility"       
+    xmlns:wsp="http://schemas.xmlsoap.org/ws/2002/12/policy"&gt;
+
+<CODE><B class=cfe>    &lt;wsp:Policy wsu:Id="EncryptBodyWithX509CertificateToken"&gt;</B></CODE>
+<CODE><B class=cfe>      &lt;Confidentiality wsp:Usage="wsp:Required" </B></CODE>
+<CODE><B class=cfe>        xmlns="http://schemas.xmlsoap.org/ws/2002/12/secext"&gt;</B></CODE>
+<CODE><B class=cfe>        &lt;KeyInfo&gt;</B></CODE>
+<CODE><B class=cfe>          &lt;SecurityToken wsp:Usage="wsp:Required"&gt;</B></CODE>
+<CODE><B class=cfe>            &lt;TokenType&gt;X509v3&lt;/TokenType&gt;</B></CODE>
+<CODE><B class=cfe>            &lt;Claims&gt;</B></CODE>
+<CODE><B class=cfe>              &lt;SubjectName&gt;CN=WSE2QuickStartServer&lt;/SubjectName&gt;</B></CODE>
+<CODE><B class=cfe>            &lt;/Claims&gt;</B></CODE>
+<CODE><B class=cfe>          &lt;/SecurityToken&gt;</B></CODE>
+<CODE><B class=cfe>        &lt;/KeyInfo&gt;</B></CODE>
+<CODE><B class=cfe>        &lt;MessageParts </B></CODE>
+<CODE><B class=cfe>          Dialect="http://schemas.xmlsoap.org/2002/12/wsse#part"&gt;</B></CODE>
+<CODE><B class=cfe>          wsp:Body()</B></CODE>
+<CODE><B class=cfe>        &lt;/MessageParts&gt;</B></CODE>
+<CODE><B class=cfe>      &lt;/Confidentiality&gt;</B></CODE>
+<CODE><B class=cfe>    &lt;/wsp:Policy&gt;</B></CODE>
+
+  &lt;/policies&gt;
+
+&lt;/policyDocument&gt;
+</PRE>
+            <P>Rather than encrypting the data with the certificate's public key 
+            directly, a shared key, that is itself encrypted with the 
+            certificate's public key and included in the message, encrypts the 
+            data. The certificate's private key is used to decrypt the shared 
+            key that is then used to decrypt the data. It is much faster to use 
+            a symmetric key to encrypt/decrypt bulk data than using asymmetric 
+            keys.</P>
+            <P>Again, there is nothing for the Web service client and Web 
+            service to do, since WSE will automatically encrypt the message 
+            before it is sent and decrypt it as it received. In this case, all 
+            the client needs to do is call the method as shown here.</P><PRE class=code>SecureServiceWse s = new SecureServiceWse();
+s.EncryptWithToken();</PRE>
+            <P>WSE must have permission to retrieve the private key from the 
+            local computer store so it can perform the decryption of the shared 
+            key. This means either running ASP.NET under an account that has the 
+            necessary permission (System or the key owner), or providing the 
+            ASP.NET account with the necessary permission. The latter can be 
+            achieved as follows. </P>
+            <OL>
+              <LI>Open the WseCertificate tool. 
+              <LI>Select the <B>Certificate Location</B> as <B>Local 
+              Computer</B> and <B>Store Name</B> as <B>Personal</B>. 
+              <LI>Click <B>Select Certificate from Store</B>. 
+              <LI>Select the certificate needed to decrypt/sign the message. 
+              <LI>Click <B>Open Private Key File Properties</B>. 
+              <LI>On the <B>Security</B> tab, add either the "ASPNET" account 
+              (if running IIS 5) or the "Network Service" account (if running 
+              IIS 6), and then select the <B>Read</B> option. </LI></OL>
+            <P>Under the covers, this is basically modifying the permissions of 
+            the file (under the Machine Keys folder) to include the ASP.NET 
+            worker account. Without this, ASP.NET will not have privileges to 
+            access the private key file and hence cannot perform the decryption. 
+            There is a help topic on this very subject in the WSE 2 
+            documentation (at 
+            ms-help://MS.WSE.1033/wse/html/gxaconmanagingx509certificates.htm).</P>
+            <H2 class=dtH1><A name=wse2wspolicy_topic7></A>Specifying a Secure 
+            Session to Exchange Multiple Messages</H2>
+            <P>The policies shown so far have specified WS-Security requirements 
+            to provide for authentication, integrity, and privacy of a single 
+            message. The WS-Security specification doesn't address how to 
+            establish secure sessions that can be used to securely exchange a 
+            series of messages. This is the remit of the WS-SecureConversation 
+            specification that defines SSL-like functionality for Web services. 
+            It focuses on establishing a security context, within which 'shared 
+            keys' can be computed and passed, used to secure a multi-message 
+            conversation. WSE 2 includes a sample implementation of 
+            WS-SecureConversation, and its WS-Policy implementation allows the 
+            requirements for a secure session to be declaratively specified to 
+            be enforced by WSE.</P>
+            <P>The shared security context is represented by a 
+            <B>SecurityContextToken</B> (SCT) that is shared between 
+            communicating parties for the lifetime of a secure communications 
+            'session'. It holds a shared symmetric 'secret key'. Once 
+            authenticated (and as long as it hasn't expired), the 
+            <B>SecurityContextToken</B> can be used to sign and/or encrypt 
+            messages using the shared symmetric secret key (or a symmetric key 
+            derived from it). As mentioned before, this is much more efficient 
+            than using an asymmetric key.</P>
+            <P>The <B>SecurityContextToken</B> is commonly created by a trusted 
+            security token-issuing service in accordance with the WS-Trust 
+            specification. The context initiator sends a signed 
+            <B>RequestSecurityToken</B> (RST) to the token issuer that 
+            identifies the other party it wants to communicate with. The token 
+            issuer sends back a <B>RequestSecurityTokenResponse</B> (RSTR) that 
+            is signed by the token issuer. Note that the built-in token issuer 
+            for issuing <B>SecurityContextTokens</B> in WSE will encrypted the 
+            RSTR for the context initiator. Thus, it is important that the token 
+            the context initiator used to sign the <B>RequestSecurityToken</B> 
+            is capable of encryption. The <B>RequestSecurityTokenResponse</B> 
+            contains the <B>SecurityContextToken</B> containing the secret 
+            encrypted for the other party and the secret for the context 
+            initiator. The context initiator can now send messages to the other 
+            party, signed and/or encrypted with the shared secret, and that 
+            contain the <B>SecurityContextToken</B>. The figure below shows the 
+            exchange in the case where X.509 certificates are used to sign the 
+            <B>RequestSecurityToken</B> and sign/encrypt the 
+            <B>RequestSecurityTokenResponse</B>.</P>
+            <P class=fig><IMG alt="" border=0 
+            src="Web Services Developer Center Web Services Enhancements 2_0 Support for WS-Policy (Web Services Enhancements (WSE) Technical Articles)_files/wse2wspolicy_01.gif"></P>
+            <P class=label><B>Figure 1. Establishing an SCT via a token-issuing 
+            service</B></P>
+            <P>The context initiator could facilitate this exchange 
+            programmatically or by authoring a policy. The policy shown below 
+            will cause WSE to obtain and use a <B>SecurityContextToken</B> on 
+            behalf of the context initiator—the Web service client, in this 
+            case—in its communication with the Web service.</P><PRE class=code>&lt;policyDocument 
+  xmlns="http://schemas.microsoft.com/wse/2003/06/Policy"&gt;
+  &lt;mappings&gt;
+    &lt;map to="http://localhost/policyapp/secureservice2.asmx"&gt;
+      &lt;default policy="#SignAndEncryptBodyWithSCT" /&gt;
+    &lt;/map&gt;
+    &lt;map to="http://localhost/policyapp/secureConversation.ashx"&gt;
+      &lt;default policy="#SignRSTWithX509Certificate" /&gt;
+    &lt;/map&gt;
+  &lt;/mappings&gt;  
+  &lt;policies 
+    xmlns:wsu="http://schemas.xmlsoap.org/ws/2002/07/utility" 
+    xmlns:wsp="http://schemas.xmlsoap.org/ws/2002/12/policy"&gt;
+
+    &lt;wsp:Policy wsu:Id="SignAndEncryptBodyWithSCT"&gt;
+      &lt;Integrity wsp:Usage="wsp:Required" 
+        xmlns="http://schemas.xmlsoap.org/ws/2002/12/secext"&gt;
+        &lt;TokenInfo&gt;
+          &lt;SecurityToken&gt;
+            &lt;TokenType&gt;SecurityContextToken&lt;/TokenType&gt;
+            &lt;TokenIssuer&gt;
+              http://localhost/policyapp/secureConversation.ashx
+            &lt;/TokenIssuer&gt;
+          &lt;/SecurityToken&gt;
+        &lt;/TokenInfo&gt;
+        &lt;MessageParts 
+          Dialect="http://schemas.xmlsoap.org/2002/12/wsse#part"&gt;
+          wsp:Body()
+        &lt;/MessageParts&gt;
+      &lt;/Integrity&gt;
+      &lt;Confidentiality wsp:Usage="wsp:Required" 
+        xmlns="http://schemas.xmlsoap.org/ws/2002/12/secext"&gt;
+        &lt;KeyInfo&gt;
+          &lt;SecurityToken&gt;
+            &lt;TokenType&gt;SecurityContextToken&lt;/TokenType&gt;
+            &lt;TokenIssuer&gt;
+               http://localhost/policyapp/secureConversation.ashx
+            &lt;/TokenIssuer&gt;
+          &lt;/SecurityToken&gt;
+        &lt;/KeyInfo&gt;
+        &lt;MessageParts 
+          Dialect="http://schemas.xmlsoap.org/2002/12/wsse#part"&gt;
+          wsp:Body()
+        &lt;/MessageParts&gt;
+      &lt;/Confidentiality&gt;
+    &lt;/wsp:Policy&gt;
+
+    &lt;wsp:Policy wsu:Id="SignRSTWithX509Certificate"&gt;
+      &lt;Integrity wsp:Usage="wsp:Required" 
+        xmlns="http://schemas.xmlsoap.org/ws/2002/12/secext"&gt;
+        &lt;TokenInfo&gt;
+          &lt;SecurityToken&gt;
+            &lt;TokenType&gt;X509v3&lt;/TokenType&gt;
+            &lt;Claims&gt;
+              &lt;SubjectName&gt;CN=WSE2QuickStartClient&lt;/SubjectName&gt;
+            &lt;/Claims&gt;
+          &lt;/SecurityToken&gt;
+        &lt;/TokenInfo&gt;
+        &lt;MessageParts 
+          Dialect="http://schemas.xmlsoap.org/2002/12/wsse#part"&gt;
+          wsp:Body()
+        &lt;/MessageParts&gt;
+      &lt;/Integrity&gt;
+    &lt;/wsp:Policy&gt;
+
+  &lt;/policies&gt;
+&lt;/policyDocument&gt;</PRE>
+            <P>Notice that the endpoint at 
+            <B>http://localhost/policyapp/secureConversation.ashx</B> is 
+            configured with the policy with ID 
+            <B>SignRSTWithX509Certificate</B>. This endpoint represents the 
+            token-issuing service. This policy causes WSE to send a 
+            <B>RequestSecurityToken</B> to the token-issuing service signed by 
+            the X.509 certificate specified. </P>
+            <P>The token-issuing service provided by WSE is implemented as an 
+            ASP.NET HTTP handler. To see how the token-issuing service is 
+            configured, look at the Web service Web.config file shown here.</P><PRE class=code>&lt;configuration&gt;
+  ...    
+  &lt;microsoft.web.services&gt;  
+    ...
+    &lt;tokenIssuer&gt;
+      &lt;serverToken&gt;
+        &lt;KeyInfo xmlns="http://www.w3.org/2000/09/xmldsig#"&gt;
+          &lt;SecurityTokenReference 
+            xmlns="http://schemas.xmlsoap.org/ws/2002/12/secext"&gt;
+            &lt;!-- CN=WSE2QuickStartServer --&gt;
+            &lt;KeyIdentifier ValueType="X509v3"&gt;
+              bBwPfItvKp3b6TNDq+14qs58VJQ=
+            &lt;/KeyIdentifier&gt;
+          &lt;/SecurityTokenReference&gt;
+        &lt;/KeyInfo&gt;
+      &lt;/serverToken&gt;
+    &lt;/tokenIssuer&gt;
+  &lt;/microsoft.web.services&gt;
+    
+  &lt;system.web&gt;
+    ...
+    &lt;httpHandlers&gt;
+      &lt;add verb="*" path="secureConversation.ashx" 
+        type="Microsoft.Web.Services.Security.SecureConversation.
+              SecurityContextTokenService, 
+              Microsoft.Web.Services, Version=2.0.0.0, 
+              Culture=neutral, PublicKeyToken=31bf3856ad364e35" /&gt;
+    &lt;/httpHandlers&gt;
+ &lt;/system.web&gt;
+
+&lt;/configuration&gt;</PRE>
+            <P>Note that although the token issuing service can be configured to 
+            be in a different virtual directory than the target Web service, in 
+            this case they are in the same virtual directory. It turns out that 
+            this gives the target Web service 'insider' knowledge of the shared 
+            secret associated with any <B>SecurityContextToken</B> issued by the 
+            token-issuing service on its behalf. This means that 
+            <B>SecurityContextToken</B>s issued in this example don't contain 
+            the shared secret. The <B>tokenIssuer</B> element describes the 
+            token issuer's certificate used to sign the 
+            <B>RequestSecurityTokenResponse</B>. In this case, the X.509 
+            certificate must have a private key and be accessible from the 
+            ASP.NET worker process.</P>
+            <P>The Web service's endpoint is configured with the policy with ID 
+            <B>SignAndEncryptBodyWithSCT</B>. This causes any messages sent to 
+            the Web service to be signed and encrypted with the 
+            <B>SecurityContextToken</B> returned by the token issuing service. 
+            The code snippet below shows how simple the Web service client code 
+            is. </P><PRE class=code>SecureService2Wse s2 = new SecureService2Wse();
+s2.method1("Hello ");
+s2.method2("World"); </PRE>
+            <P>In this case both <B>method1</B> and <B>method2</B> are executed 
+            within the same secure context.</P>
+            <H2 class=dtH1><A name=wse2wspolicy_topic8></A>Using the WSE Policy 
+            Editor</H2>
+            <P>There is actually a GUI policy editor tool that comes with WSE 
+            2.0. It is called WsePolicyEditor.exe and is found in the 
+            Tools\PolicyEditor subdirectory of the WSE 2.0 installation 
+            directory.</P>
+            <H2 class=dtH1><A name=wse2wspolicy_topic9></A>Writing and 
+            Configuring Custom Assertions</H2>
+            <P>If the standard policy assertions covered here don't satisfy your 
+            requirements, then it is also possible to write custom policy 
+            assertion handlers that fit right into the WSE policy framework. 
+            However, at the time of writing, the WSE 2.0 Technology Preview does 
+            not adequately document how this is done.</P>
+            <H2 class=dtH1><A name=wse2wspolicy_topic10></A>Conclusion</H2>
+            <P>The WS-Policy family of specifications provides a standard way to 
+            express the requirements, capabilities, and preferences of Web 
+            service applications and make it easier for them to "reason" about 
+            each other. Their interoperable, declarative nature makes it 
+            possible for Web service infrastructure to provide support for 
+            enforcing policy assertions on behalf of a Web service application 
+            and, in this case, the developer has far less code to write. This is 
+            exactly what WSE 2.0 does: today it provides support for some of the 
+            assertions defined in the WS-SecurityPolicy specification, as well 
+            as providing an extensible mechanism to allow custom assertions to 
+            be handled in the same manner.</P>
+            <H2 class=dtH1><A name=wse2wspolicy_topic11></A>References</H2>
+            <P><A name=wse2wspolicy_topic12></A>[1] <A 
+            href="http://msdn.microsoft.com/webservices/default.aspx?pull=/library/en-us/dnglobspec/html/ws-policy.asp">Web 
+            Services Policy Framework (WS-Policy) specification</A></P>
+            <P><A name=wse2wspolicy_topic13></A>[2] <A 
+            href="http://msdn.microsoft.com/webservices/default.aspx?pull=/library/en-us/dnglobspec/html/ws-policyattachment.asp">WS-PolicyAttachment 
+            specification</A></P>
+            <P><A name=wse2wspolicy_topic14></A>[3] <A 
+            href="http://msdn.microsoft.com/webservices/default.aspx?pull=/library/en-us/dnglobspec/html/ws-policyassertions.asp">WS-PolicyAssertions 
+            specification</A></P>
+            <P><A name=wse2wspolicy_topic15></A>[4] <A 
+            href="http://msdn.microsoft.com/webservices/default.aspx?pull=/library/en-us/dnglobspec/html/ws-securitypolicy.asp">WS-SecurityPolicy 
+            specification</A></P>
+            <P><A name=wse2wspolicy_topic16></A>[5] <A 
+            href="http://msdn.microsoft.com/webservices/default.aspx?pull=/library/en-us/dnwebsrv/html/understwspol.asp">Understanding 
+            WS-Policy</A> by Aaron Skonnard</P>
+            <P><A name=wse2wspolicy_topic17></A>[6] <A 
+            href="http://msdn.microsoft.com/webservices/building/wse/default.aspx">Web 
+            Services Enhancements (WSE) 2.0 for Microsoft .NET</A></P>
+            <P><A name=wse2wspolicy_topic18></A>[7] <A 
+            href="http://msdn.microsoft.com/webservices/default.aspx?pull=/library/en-us/dnglobspec/html/ws-security.asp">WS-Security 
+            specification</A></P>
+            <P><A name=wse2wspolicy_topic19></A>[8] <A 
+            href="http://www.w3.org/TR/xmldsig-core/">XML-Signature Syntax and 
+            Processing (Digital Signature specification)</A></P>
+            <P><A name=wse2wspolicy_topic20></A>[9] <A 
+            href="http://www.w3.org/TR/xmlenc-core/">XML Encryption Syntax and 
+            Processing (specification)</A></P>
+            <P><A name=wse2wspolicy_topic21></A>[10] <A 
+            href="http://msdn.microsoft.com/webservices/default.aspx?pull=/library/en-us/dnwse/html/wssecdrill.asp">WS-Security 
+            Drilldown in Web Services Enhancements 2.0</A> by Don Smith</P>
+            <H2 class=dtH1><A name=wse2wspolicy_topic22></A>Related Books</H2>
+            <P><A 
+            href="http://shopping.msn.com/search/detail.aspx?pcId=12175&amp;prodId=1557091&amp;ptnrid=141&amp;ptnrdata=0">Web 
+            Services Enhancements: Understanding the WSE for .NET Enterprise 
+            Applications</A></P>
+            <P><A 
+            href="http://shopping.msn.com/search/detail.aspx?pcId=12175&amp;prodId=381951&amp;ptnrid=141&amp;ptnrdata=0">.NET 
+            Web Services: Architecture and 
+      Implementation</A></P></TD></TR></TBODY></TABLE><A 
+      href="http://msdn.microsoft.com/webservices/default.aspx?pull=/library/en-us/dnwse/html/wse2wspolicy.asp#top"><IMG 
+      alt="Top of Page" border=0 
+      src="Web Services Developer Center Web Services Enhancements 2_0 Support for WS-Policy (Web Services Enhancements (WSE) Technical Articles)_files/top.gif"></A> 
+      <A 
+      href="http://msdn.microsoft.com/webservices/default.aspx?pull=/library/en-us/dnwse/html/wse2wspolicy.asp#top" 
+      title="Top of Page">Top of Page</A> 
+      <P></P></DIV>
+      <TABLE border=0 cellPadding=0 cellSpacing=0 style="WIDTH: 100%">
+        <TBODY>
+        <TR>
+          <TD noWrap style="WIDTH: 500px"></TD></TR>
+        <TR>
+          <TD><IFRAME frameBorder=0 height=250 id=frmRatings scrolling=no 
+            src="E:\netten\Web Services Developer Center Web Services Enhancements 2_0 Support for WS-Policy (Web Services Enhancements (WSE) Technical Articles)_files\ratings(1).aspx" 
+            width="100%"></IFRAME></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE><BR 
+clear=all style="LINE-HEIGHT: 1px; OVERFLOW: hidden">
+<TABLE cellPadding=0 cellSpacing=0 id=msviFooter width="100%">
+  <TBODY>
+  <TR vAlign=bottom>
+    <TD id=msviFooter2 
+    style="FILTER: progid:DXImageTransform.Microsoft.Gradient(startColorStr='#FFFFFF', endColorStr='#669AFF', gradientType='1')">
+      <DIV id=msviLocalFooter><NOBR><A 
+      href="http://go.microsoft.com/?linkid=317027">Manage Your Profile</A> 
+      |</NOBR><WBR><NOBR><A 
+      href="http://msdn.microsoft.com/isapi/gomscom.asp?target=/legal/">Legal</A> 
+      |</NOBR><WBR><NOBR><A 
+      href="http://register.microsoft.com/contactus30/contactus.asp?domain=msdn">Contact 
+      Us</A> |</NOBR><WBR><NOBR><A href="http://msdn.microsoft.com/flash/">MSDN 
+      Flash Newsletter</A></NOBR></DIV>
+      <DIV id=msviGlobalFooter><SPAN dir=ltr>©2004 Microsoft Corporation. All 
+      rights reserved.&nbsp;</SPAN><NOBR><A 
+      href="http://www.microsoft.com/info/cpyright.mspx">Terms of Use</A> 
+      |</NOBR><WBR><NOBR><A 
+      href="http://www.microsoft.com/info/privacy.mspx">Privacy 
+      Statement</A></NOBR></DIV></TD>
+    <TD bgColor=#669aff width=105><IMG alt=Microsoft border=0 height=29 
+      src="Web Services Developer Center Web Services Enhancements 2_0 Support for WS-Policy (Web Services Enhancements (WSE) Technical Articles)_files/text.jpg" 
+      title="" width=105></TD></TR></TBODY></TABLE><LAYER visibility="hide">
+<DIV style="DISPLAY: none"><IMG border=0 height=0 hspace=0 
+src="Web Services Developer Center Web Services Enhancements 2_0 Support for WS-Policy (Web Services Enhancements (WSE) Technical Articles)_files/trans_pixel.gif" 
+width=0></DIV></LAYER></BODY></HTML>

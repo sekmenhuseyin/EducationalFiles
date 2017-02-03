@@ -1,0 +1,225 @@
+<!doctype html public "-//IETF//DTD HTML//EN">
+<HTML>
+<HEAD>
+<TITLE>Windows XP: The Complete Reference: Sharing Drives and Printers on a LAN</TITLE>
+<META NAME="GENERATOR" CONTENT="Web-O-Matic Deluxe 4.1">
+<META NAME="AUTHOR" CONTENT="John R. Levine, Margaret Levine Young">
+<META NAME="COPYRIGHT" CONTENTS="Copyright 2001 by The McGraw-Hill Companies. All rights reserved.">
+</HEAD>
+<BODY BACKGROUND="../images/background.png">
+<BLOCKQUOTE>
+<SCRIPT LANGUAGE="JavaScript">
+function whomp(i, file)
+{
+	i.src = "../images/" + file + ".png";
+}
+</SCRIPT>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarered3x3.png" HEIGHT=3 WIDTH=3></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=2>
+Chapter 29: Sharing Drives and Printers on a LAN
+</FONT></TD>
+</TR>
+</TABLE>
+<BR>
+<A HREF="1.htm"  OnMouseOver='whomp(prev, "sprev");' OnMouseOut='whomp(prev, "wprev");'
+ title="Previous Section"><IMG NAME=prev SRC="../images/wprev.png" ALT="Previous" HEIGHT=20 WIDTH=82 BORDER=0></A><!--
+--><A HREF="index.htm" OnMouseOver='whomp(chap, "schap");' OnMouseOut='whomp(chap, "wchap");'
+title="Chapter Overview"><IMG SRC="../images/wchap.png" ALT="Chapter" NAME=chap HEIGHT=20 WIDTH=100 BORDER=0></A><A
+HREF="../index.htm" OnMouseOver='whomp(toc, "sbook");' OnMouseOut='whomp(toc, "wbook");' 
+title="Table of Contents"><IMG SRC="../images/wbook.png" ALT="Contents" NAME=toc HEIGHT=20 WIDTH=94 BORDER=0></A><A
+HREF="../glossary/index.htm" OnMouseOver='whomp(glos, "sglos");' OnMouseOut='whomp(glos, "wglos");' 
+title="Glossary"><IMG SRC="../images/wglos.png" ALT="Glossary" NAME=glos HEIGHT=20 WIDTH=94 BORDER=0></A><!--
+--><A HREF="3.htm"  OnMouseOver='whomp(next, "snext");' OnMouseOut='whomp(next, "wnext");'
+ title="Next Section"><IMG NAME=next SRC="../images/wnext.png" ALT="Next" HEIGHT=20 WIDTH=82 BORDER=0></A>
+<BR>
+<A NAME="1">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarered10x10.png" HEIGHT=10 WIDTH=10></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=4><B>Using Shared Drives from Other Computers</B></FONT>
+</TD>
+</TR>
+</TABLE></A>
+<P>
+You can access a shared drive or shared folder in one of two ways:
+<UL>
+<LI >
+If you use the drive or folder only occasionally, you can use <A HREF="../peer2peer/2.htm#3">My Network Places</A> to access the drive.
+<LI >
+If you use the drive or folder frequently, you can <A NAME="ddmap"><I>map</I></A> the drive or folder, which means that you assign the drive or folder a letter so that it appears on the drop-down list of drives in Open and Save As dialog boxes.
+</UL>
+<A NAME="2">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Using Network Drives with My Network Places</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+You can see a list of the shared drives and folders to which you have access. The My Network Places window, shown in Figure 29-1, lists <A NAME="ddnetworkshortcuts"><I>network shortcuts</I></A> to all the shared drives and folders available to you on the LAN. Choose View | Details to display all the information about each shared drive.
+<TABLE BORDER=2><TR><TD ALIGN=CENTER>
+<IMG SRC="sharehw.netplaces.png" WIDTH=571 HEIGHT=449 ALT="[figure]">
+</TD></TR><TR BGCOLOR="#00ffff"><TD><I>Figure 29-1:  The My Network Places window showing shared drives and folders on the LAN</I></TD></TR></TABLE>
+<P>
+The name of each shared drive or folder appears, along with its <A HREF="../files/2.htm#4">UNC (Universal Naming Convention) address</A>--the path name you use when referring to that shared drive or folder. The UNC address consists of two backslashes, the name of the computer, another backslash, and the <A HREF="../sharehw/3.htm#1">share name</A> of the drive or folder.
+<P>
+To display the My Network Places window, use one of these methods:
+<UL>
+<LI >
+Choose Start | My Network Places.
+<LI >
+Open any folder (such as My Computer or My Documents) and click the My Network Places link in the task pane on the left.
+<LI >
+Use Windows Explorer (where the folder tree is showing) and click My Network Places near the bottom of the folder tree.
+</UL>
+<P>
+If you don't see a list of shared folders, consider <A HREF="../peer2peer/5.htm#1">troubleshooting your network</A>. If one or two shared folders are missing, click Add A Network Place in the Task pane to add it. This command is also useful for adding <A HREF="../winsock/3.htm#1">Web servers and FTP servers</A> to your My Network Places window.
+<P>
+<TABLE><TR><TD VALIGN="TOP"><IMG SRC="../images/tip.png" ALT="tip" WIDTH=95 HEIGHT=29></TD>
+<TD VALIGN="TOP">You can change the name of a shared drive or folder as it appears on your computer. For example, if a drive appears as "data drive on Dell" and you'd rather see the name "Accounting Data," you can rename it by right-clicking the shared drive or folder in an Explorer window, choosing Properties from the shortcut menu that appears, and editing the contents of the box at the top of Properties dialog box. Renaming a shared drive or folder on your computer doesn't change its real name on the computer on which it's stored, just how it appears in your Explorer windows.
+
+</TD></TR></TABLE>
+<A NAME="3">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Opening and Saving Files on Shared Drives and Folders</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+You can see the folders and files on a shared drive by opening the drive or folder in the My Network Places window. Once you see the drive, you can <A HREF="../files/5.htm#1">work with it</A> as you do any drive on your own computer.
+<P>
+My Network Places is also available from dialog boxes of any applications you use. It appears in the <A HREF="../running/5.htm#4">Places bar</A> on the left side of the dialog box. Figure 29-2 shows a Save Message As dialog box from Outlook Express, with the contents of My Network Places displayed. If the dialog box doesn't have a Places bar down the left side, click the Save In or Look In box at the top of the dialog box and choose My Network Places from the drop-down menu. Once you have opened My Network Places, move to the folder and file you want. A few programs don't allow saving to a network drive unless you assign it a drive letter, which is covered in the next section.
+<TABLE BORDER=2><TR><TD ALIGN=CENTER>
+<IMG SRC="sharehw.saveas.png" WIDTH=563 HEIGHT=440 ALT="[figure]">
+</TD></TR><TR BGCOLOR="#00ffff"><TD><I>Figure 29-2:  Using a shared drive or folder by using My Network Places from an Open or Save As dialog box</I></TD></TR></TABLE>
+<A NAME="4">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Mapping a Shared Drive or Folder to a Drive Letter</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+If you use a shared drive or folder frequently, you can map it to a drive letter. The process is easy, and when you want to find or save a file to the shared drive or folder, you don't have to spend so much time navigating through My Network Places to find it.
+<P>
+For example, if you frequently use files on drive D of your department's server, you can map drive letter S to that drive. Drive S appears as a disk drive on your computer, even though it's actually on the server.
+<P>
+Here's the easiest way to map a shared drive or folder to a drive letter:
+<OL>
+<LI  VALUE=1>
+Run Windows Explorer (choosing Start | My Computer is the easiest way) to display an Explorer window.
+<LI  VALUE=2>
+Choose Tools | Map Network Drive from the menu bar. You see the Map Network Drive dialog box, shown here:
+</OL>
+<BR><IMG ALIGN=TOP SRC="sharehw.map.png" WIDTH=447 HEIGHT=329 ALT="[image]">
+<OL>
+<LI  VALUE=3>
+Choose a drive letter, clicking the Drive drop-down list to see the available letters. Letters that are mapped to drives on your own computer don't appear. Letters that are already mapped to shared drives or folders appear with the name of the resource to which they are mapped.
+<LI  VALUE=4>
+In the Folder box, type the UNC address of the shared drive or folder you want to Map. Better yet, click the downward-pointing arrow at the right end of the Folder box and choose from the UNC addresses that appear or click the Browse button and navigate to the drive or folder. The list includes all the drives and folders on the LAN that have been configured to be sharable.
+<LI  VALUE=5>
+If you want to continue to map this drive or folder to this drive letter each time you restart Windows, leave the Reconnect At Logon check box selected.
+<LI  VALUE=6>
+Click Finish to close the dialog box. If the shared drive or folder requires a password, Windows prompts you to type it.
+</OL>
+<P>
+<TABLE><TR><TD VALIGN="TOP"><IMG SRC="../images/note.png" ALT="note" WIDTH=95 HEIGHT=29></TD>
+<TD VALIGN="TOP">To display a Map Network Drive button on the Windows Explorer toolbar, right-click the toolbar, choose Customize from the shortcut menu that appears, click Map Drive from the Available Toolbar Buttons list, click Add, and click Close.
+
+</TD></TR></TABLE>
+<P>
+Once you have mapped a drive, it appears in the folder tree with your local drives, and in Windows Explorer you see it when you open My Computer. You can access a mapped network drive in the same way that you access a local drive from any dialog box.
+<P>
+<TABLE><TR><TD VALIGN="TOP"><IMG SRC="../images/note.png" ALT="note" WIDTH=95 HEIGHT=29></TD>
+<TD VALIGN="TOP">To map a drive to a folder, the folder itself must be defined as shared. It is not enough to share the drive on which the folder resides.
+
+</TD></TR></TABLE>
+<A NAME="5">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Tips for Mapping</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+When you map a drive, you only map it for only one computer at a time. If you want the drive mapped for other computers in the LAN, you need to sit down at each of them and repeat the steps in the preceding section. That is, if you want all the computers in your office to be able to use the drive letter F to refer to the Consulting folder on the Accounting computer, you must map the Consulting folder to the F drive on each computer in the LAN.
+<P>
+If you use a shared drive or folder from more than one computer, you might want to spend a moment considering which drive letter to use. You will find it more convenient if the shared network drive has the same drive letter on each computer in the LAN--that way you won't have to refer to "the C drive on the computer in the corner near the door--the one called Bambi." Instead, you can just call it the F drive (the exception, of course, is the person who uses the computer called Bambi, for whom it's just the C drive). Choose a letter that people can remember--for example, map the main disk drive on the server to drive S, or the drive that everyone in the Purchasing department uses to drive P. Before you assign the drive letter, make sure that letter is available on the other computers on the LAN (letters up to about G are frequently already occupied by hard disks, CD-ROM drives, Zip drives, and other devices).
+<P>
+You may have noticed the Reconnect At Logon check box on the Map Network Drive dialog box. When this option is selected, your computer checks that the shared resource is available each time you log on. Reconnecting at logon slows down the log on process slightly, but means that using the drive the first time is quicker, because the drive is already connected. If you are mapping a drive only temporarily (you need it only for the next twenty minutes, for example), or if the computer that drive is on gets rebooted or turned off often, turn off the Reconnect At Logon option.
+<A NAME="6">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Unmapping a Drive</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+If you want to "unmap" a drive, you can do so by disconnecting it: right-click the drive in Windows Explorer and choose Disconnect from the shortcut menu or choose Tools | Disconnect Network Drive, choose the drive to disconnect and click OK. The drive remains accessible through My Network Places, but a drive letter is no longer mapped to it. (To make a drive inaccessible even through My Network Places, you must disable sharing from the computer that owns the resource.)
+<P><TABLE BORDER=2 CELLPADDING=10><TR>
+<TD BGCOLOR="#00ffff" WIDTH=2></TD><TD>
+<A NAME="7">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Mapping Drives and Folders with the NET USE Command</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+If you like to use the DOS command prompt, there's a command that maps a shared drive or folder to a drive letter. This command is useful if you want to create <A HREF="../dos/3.htm#11">batch files</A> (lists of commands) that create or delete mappings.
+<P>
+To use the NET USE command, open a <A HREF="../dos/2.htm#1">Command Prompt window</A> by choosing Start | All Programs | Accessories | Command Prompt. In the Command Prompt window, type this command:
+</TD></TR></TABLE>
+<P><PRE>
+net use d: \\computername\sharename
+</PRE>
+<P><TABLE BORDER=2 CELLPADDING=10><TR>
+<TD BGCOLOR="#00ffff" WIDTH=2></TD><TD>
+<P>
+Replace <I>d</I> with the drive letter you want to map, and \\<I>computername</I>\<I>sharename</I> with the UNC address of the shared drive or folder. For more NET USE options, type this command:
+</TD></TR></TABLE>
+<P><PRE>
+net use /?
+</PRE>
+<A NAME="8">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Using Shared Drives and Folders with Passwords</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+Sometimes a shared resource requires that you log in. When you log in, use the name and password recognized by the computer with the resource you are trying to use. If you have only read-only access, you can't save, delete, or edit files on the shared drive or folder. If you try, you see an error message.
+<P>
+To use shared drives and folders on a domain-based LAN, connect to the drive or folder by clicking it in the My Network Places window. When it prompts you for a password, type <I>domainname\username</I> for the user name, and type your domain password. (Ask the LAN administrator of the domain if you don't know this information.) Select the Remember This Password check box so that you don't have to type this information the next time you connect.
+<P>
+<TABLE><TR><TD VALIGN="TOP"><IMG SRC="../images/note.png" ALT="note" WIDTH=95 HEIGHT=29></TD>
+<TD VALIGN="TOP">If you use Windows XP Home Edition, you can't use roaming profiles, login scripts, or other domain-based networking features.
+
+</TD></TR></TABLE>
+<P>
+<A HREF="1.htm"  OnMouseOver='whomp(prevb, "sprev");' OnMouseOut='whomp(prevb, "wprev");'
+ title="Previous Section"><IMG NAME=prevb SRC="../images/wprev.png" ALT="Previous" HEIGHT=20 WIDTH=82 BORDER=0></A><!--
+--><A HREF="index.htm" OnMouseOver='whomp(chapb, "schap");' OnMouseOut='whomp(chapb, "wchap");'
+title="Chapter Overview"><IMG SRC="../images/wchap.png" ALT="Chapter" NAME=chapb HEIGHT=20 WIDTH=100 BORDER=0></A><A
+HREF="../index.htm" OnMouseOver='whomp(tocb, "sbook");' OnMouseOut='whomp(tocb, "wbook");' 
+title="Table of Contents"><IMG SRC="../images/wbook.png" ALT="Contents" NAME=tocb HEIGHT=20 WIDTH=94 BORDER=0></A><A
+HREF="../glossary/index.htm" OnMouseOver='whomp(glosb, "sglos");' OnMouseOut='whomp(glosb, "wglos");' 
+title="Glossary"><IMG SRC="../images/wglos.png" ALT="Glossary" NAME=glosb HEIGHT=20 WIDTH=94 BORDER=0></A><!--
+--><A HREF="3.htm"  OnMouseOver='whomp(nextb, "snext");' OnMouseOut='whomp(nextb, "wnext");'
+ title="Next Section"><IMG NAME=nextb SRC="../images/wnext.png" ALT="Next" HEIGHT=20 WIDTH=82 BORDER=0></A>
+<BR>
+</BLOCKQUOTE>
+</BODY>
+</HTML>

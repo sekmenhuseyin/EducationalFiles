@@ -1,0 +1,88 @@
+<!doctype html public "-//IETF//DTD HTML//EN">
+<HTML>
+<HEAD>
+<TITLE>Windows XP: The Complete Reference: Keeping Your Disk Safe</TITLE>
+<META NAME="GENERATOR" CONTENT="Web-O-Matic Deluxe 4.1">
+<META NAME="AUTHOR" CONTENT="John R. Levine, Margaret Levine Young">
+<META NAME="COPYRIGHT" CONTENTS="Copyright 2001 by The McGraw-Hill Companies. All rights reserved.">
+</HEAD>
+<BODY BACKGROUND="../images/background.png">
+<BLOCKQUOTE>
+<SCRIPT LANGUAGE="JavaScript">
+function whomp(i, file)
+{
+	i.src = "../images/" + file + ".png";
+}
+</SCRIPT>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarered3x3.png" HEIGHT=3 WIDTH=3></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=2>
+Chapter 33: Keeping Your Disk Safe
+</FONT></TD>
+</TR>
+</TABLE>
+<BR>
+<IMG SRC="../images/bprev.png" ALT="Previous" HEIGHT=20 WIDTH=82 BORDER=0><!--
+--><A HREF="index.htm" OnMouseOver='whomp(chap, "schap");' OnMouseOut='whomp(chap, "wchap");'
+title="Chapter Overview"><IMG SRC="../images/wchap.png" ALT="Chapter" NAME=chap HEIGHT=20 WIDTH=100 BORDER=0></A><A
+HREF="../index.htm" OnMouseOver='whomp(toc, "sbook");' OnMouseOut='whomp(toc, "wbook");' 
+title="Table of Contents"><IMG SRC="../images/wbook.png" ALT="Contents" NAME=toc HEIGHT=20 WIDTH=94 BORDER=0></A><A
+HREF="../glossary/index.htm" OnMouseOver='whomp(glos, "sglos");' OnMouseOut='whomp(glos, "wglos");' 
+title="Glossary"><IMG SRC="../images/wglos.png" ALT="Glossary" NAME=glos HEIGHT=20 WIDTH=94 BORDER=0></A><!--
+--><A HREF="1.htm"  OnMouseOver='whomp(next, "snext");' OnMouseOut='whomp(next, "wnext");'
+ title="Next Section"><IMG NAME=next SRC="../images/wnext.png" ALT="Next" HEIGHT=20 WIDTH=82 BORDER=0></A>
+<BR>
+<A NAME="0">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarered10x10.png" HEIGHT=10 WIDTH=10></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=4><B>Chapter Introduction</B></FONT>
+</TD>
+</TR>
+</TABLE></A>
+<P>
+Your disk contains an incredible amount of information; the hard disks on most Windows XP machines hold anywhere from 4 to 80 gigabytes (GB). (One gigabyte is equal to 1 billion bytes). Some of the space on each disk is used to store the structure of the disk, including a table of the parts of the disk that are free (available for storing new information), a table of the files and folders on the disk, and a list of which blocks on the disk store the information in which file.
+<P>
+If this structural information gets corrupted, you can lose some or all of the information on the disk. It's wise to check the structure of the information on each hard disk regularly by using a Windows program called <A HREF="../disksafe/1.htm#1">ChkDsk</A>--which not only checks the disk structure, but can also fix most of the errors that it finds.
+<P>
+Another disk problem arises when you create and delete many files over a long period of time. Files are stored in a series of <A HREF="../harddisks/1.htm#6">sectors</A> on your disk, and the sectors are not necessarily next to each other. While this is more of a problem for FAT32 partitions, NTFS partitions can also become fragmented after time. To fix this problem, you can run the <A HREF="../disksafe/2.htm#1">Disk Defragmenter</A> utility that comes with Windows. Disk Defragmenter moves the information on your disk around to speed up access.
+<P>
+Many programs create temporary or backup files, which are not always deleted when they are no longer needed. The <A HREF="../disksafe/3.htm#1">Disk Cleanup</A> program can delete stale temporary files for you.
+<P>
+Does it sound like you have a lot to worry about to keep your Windows system tidy? Fortunately, you can schedule Windows to run these housekeeping programs for you. In fact, you can tell the <A HREF="../running/7.htm#1">Scheduled Tasks</A> program to run any program on a regular basis. Be sure to make regular <A HREF="../backup/index.htm">backups</A> of your hard disk, too.
+<P>
+<TABLE><TR><TD VALIGN="TOP"><IMG SRC="../images/note.png" ALT="note" WIDTH=95 HEIGHT=29></TD>
+<TD VALIGN="TOP">If you need to restore your Windows system files to the way they were before you installed an upgrade or before your system started having problems, try the <A HREF="../trouble/6.htm#1">System Restore</A> program. For information about your system, try the <A HREF="../trouble/1.htm#7">System Information</A> program.
+
+</TD></TR></TABLE>
+<P><TABLE BORDER=2 CELLPADDING=10><TR>
+<TD BGCOLOR="#00ffff" WIDTH=2></TD><TD>
+<A NAME="1">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Windows File Protection</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+Windows XP comes with a feature called <A NAME="ddwindowsfileprotection"><I>Windows File Protection</I></A>, or <A NAME="ddwfp"><I>WFP</I></A>. WFP is running whenever Windows is running, monitoring the files that make up Windows itself. Whenever a program replaces one of the Windows system files, WFP checks whether the new file was accompanied by a "signed" (verified and encrypted) file from Microsoft. If not, or if an earlier version of a file has replaced a later version, WFP replaces the file with its own copy (from the WFP collection of duplicate files at C:\Windows\System32\dllcache).
+<P>
+You don't have to turn WFP on, and there's no way to turn it off. WFP doesn't display any messages when it decides to replace a system file with its own version, but it may prompt you to insert the Windows XP CD-ROM to reinstall a file.
+</TD></TR></TABLE>
+<P>
+<IMG SRC="../images/bprev.png" ALT="Previous" HEIGHT=20 WIDTH=82 BORDER=0><!--
+--><A HREF="index.htm" OnMouseOver='whomp(chapb, "schap");' OnMouseOut='whomp(chapb, "wchap");'
+title="Chapter Overview"><IMG SRC="../images/wchap.png" ALT="Chapter" NAME=chapb HEIGHT=20 WIDTH=100 BORDER=0></A><A
+HREF="../index.htm" OnMouseOver='whomp(tocb, "sbook");' OnMouseOut='whomp(tocb, "wbook");' 
+title="Table of Contents"><IMG SRC="../images/wbook.png" ALT="Contents" NAME=tocb HEIGHT=20 WIDTH=94 BORDER=0></A><A
+HREF="../glossary/index.htm" OnMouseOver='whomp(glosb, "sglos");' OnMouseOut='whomp(glosb, "wglos");' 
+title="Glossary"><IMG SRC="../images/wglos.png" ALT="Glossary" NAME=glosb HEIGHT=20 WIDTH=94 BORDER=0></A><!--
+--><A HREF="1.htm"  OnMouseOver='whomp(nextb, "snext");' OnMouseOut='whomp(nextb, "wnext");'
+ title="Next Section"><IMG NAME=nextb SRC="../images/wnext.png" ALT="Next" HEIGHT=20 WIDTH=82 BORDER=0></A>
+<BR>
+</BLOCKQUOTE>
+</BODY>
+</HTML>

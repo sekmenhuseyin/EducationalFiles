@@ -1,0 +1,3 @@
+{var dz=document;dz.writeln("<IFRAME width=\"160\" height=\"600\" scrolling=\"no\" frameborder=\"0\" src=\"http://http300.edge.ru4.com/smartserve/ad?placement=pt-1641-584&invocation=1000&click=http://cmedia5.an.sb.fastclick.net/w/click.here?cid=41749;mid=85806;sid=19203;m=3;c=0;forced_click=\">");
+dz.writeln("    <SCRIPT src=\"http://http300.edge.ru4.com/smartserve/ad?placement=pt-1641-584&invocation=0&click=\"><\/script>");
+dz.writeln("</IFRAME>");}

@@ -1,0 +1,142 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>twoPlanets</title>
+</head>
+<body bgcolor="#cccccc">
+<!--url's used in the movie-->
+<!--text used in the movie-->
+<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,0,0" width="550" height="400" id="twoPlanets" align="middle">
+<param name="allowScriptAccess" value="sameDomain" />
+<param name="movie" value="twoPlanets.swf" />
+<param name="quality" value="high" />
+<param name="bgcolor" value="#000000" />
+<embed src="twoPlanets.swf" quality="high" bgcolor="#000000" width="550" height="400" name="twoPlanets" align="middle" allowScriptAccess="sameDomain" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" />
+</object>
+<h3>Code in frame 1 layer 1</h3>
+<pre>
+//two planets
+//simulate a space ship no friction
+//add a planet with basic gravity
+//experiment with a second planet
+
+init();
+
+function init(){
+  //create the ship
+
+  myShip.dx = 0;
+  myShip.dy = 0;
+  myShip.speed = 0;
+  myShip.dir = 0;
+  myShip.gotoAndStop("still");
+
+  planet.gravity = 10000;
+  planet2.gravity = 15000;
+
+  //set up drawing
+  _root.moveTo(myShip._x, myShip._y);
+  _root.lineStyle(.5,0xffffff,100);
+
+} // end init
+
+myShip.onEnterFrame = function(){
+  myShip.checkKeys();
+  myShip.turn();
+  myShip.move();
+  myShip.gravitate(planet)
+  myShip.gravitate(planet2)
+} // end enter frame
+
+myShip.checkKeys = function(){
+  //check for left and right arrows
+  if (Key.isDown(Key.LEFT)){
+    this.dir -= 10;
+    this.gotoAndStop("left");
+    if (this.dir < 0){
+      this.dir = 350;
+    } // end if
+  } else if (Key.isDown(Key.RIGHT)){
+    this.dir += 10;
+    this.gotoAndStop("right");
+    if (this.dir > 360){
+      this.dir = 10;
+    } // end if
+  } else if (Key.isDown(Key.UP)){
+    //thrust on up arrow
+    this.thrustSpeed = 1;
+    this.gotoAndPlay("thrust");
+  } else {
+    this.thrustSpeed = 0;
+    this.gotoAndStop("still");
+  } // end if
+
+  if (Key.isDown(Key.SPACE)){
+    //clear drawings
+    _root.clear();
+
+    //restart drawing
+    _root.moveTo(myShip._x, myShip._y);
+    _root.lineStyle(.5,0xffffff,100);
+
+  } // end if
+} // end checkKeys
+
+myShip.turn = function(){
+  this._rotation = this.dir;
+  //trace("I'm here...");
+
+  //get new thrust vector
+  degrees = this.dir
+  degrees -= 90;
+  radians = degrees * Math.PI / 180;
+  thrustDX = this.thrustSpeed * Math.cos(radians);
+  thrustDY = this.thrustSpeed * Math.sin(radians);
+
+  //add thrust to dx and dy
+  this.dx += thrustDX;
+  this.dy += thrustDY; 
+
+} // end turn
+
+myShip.move = function(){
+  this._x += this.dx;
+  myShip._y += this.dy;
+
+  //  let ship go off screen
+
+  _root.lineTo(this._x, this._y);
+
+} // end move
+
+myShip.gravitate = function(focus){
+   //pull this element to the focus object
+   //assumes focus object has a gravity property
+
+   //figure angle difference between ship and planet
+   tempDX = this._x - focus._x;
+   tempDY = this._y - focus._y;
+
+   //calculate distance between ship and planet
+   tempDistance = Math.sqrt(tempDX * tempDX + tempDY * tempDY);
+
+   //normalize vector (make it length of one)
+   tempDX /= tempDistance;
+   tempDY /= tempDistance;
+
+   //compensate for the planet’s gravitational pull
+   tempDX *= focus.gravity / (tempDistance * tempDistance);
+   tempDY *= focus.gravity / (tempDistance * tempDistance);
+
+   //invert the vector so it pulls ship to planet
+   tempDX *= -1;
+   tempDY *= -1;
+
+   //add vector to ship
+   this.dx += tempDX;
+   this.dy += tempDY;
+} // end gravitate
+</pre>
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!doctype html public "-//IETF//DTD HTML//EN">
+<HTML>
+<HEAD>
+<TITLE>Windows XP: The Complete Reference: Running DOS Programs and Commands</TITLE>
+<META NAME="GENERATOR" CONTENT="Web-O-Matic Deluxe 4.1">
+<META NAME="AUTHOR" CONTENT="John R. Levine, Margaret Levine Young">
+<META NAME="COPYRIGHT" CONTENTS="Copyright 2001 by The McGraw-Hill Companies. All rights reserved.">
+</HEAD>
+<BODY BACKGROUND="../images/background.png">
+<BLOCKQUOTE>
+<SCRIPT LANGUAGE="JavaScript">
+function whomp(i, file)
+{
+	i.src = "../images/" + file + ".png";
+}
+</SCRIPT>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarered3x3.png" HEIGHT=3 WIDTH=3></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=2>
+Chapter 39: Running DOS Programs and Commands
+</FONT></TD>
+</TR>
+</TABLE>
+<BR>
+<A HREF="4.htm"  OnMouseOver='whomp(prev, "sprev");' OnMouseOut='whomp(prev, "wprev");'
+ title="Previous Section"><IMG NAME=prev SRC="../images/wprev.png" ALT="Previous" HEIGHT=20 WIDTH=82 BORDER=0></A><!--
+--><A HREF="index.htm" OnMouseOver='whomp(chap, "schap");' OnMouseOut='whomp(chap, "wchap");'
+title="Chapter Overview"><IMG SRC="../images/wchap.png" ALT="Chapter" NAME=chap HEIGHT=20 WIDTH=100 BORDER=0></A><A
+HREF="../index.htm" OnMouseOver='whomp(toc, "sbook");' OnMouseOut='whomp(toc, "wbook");' 
+title="Table of Contents"><IMG SRC="../images/wbook.png" ALT="Contents" NAME=toc HEIGHT=20 WIDTH=94 BORDER=0></A><A
+HREF="../glossary/index.htm" OnMouseOver='whomp(glos, "sglos");' OnMouseOut='whomp(glos, "wglos");' 
+title="Glossary"><IMG SRC="../images/wglos.png" ALT="Glossary" NAME=glos HEIGHT=20 WIDTH=94 BORDER=0></A><!--
+--><IMG SRC="../images/bnext.png" ALT="Next" HEIGHT=20 WIDTH=82 BORDER=0>
+<BR>
+<A NAME="1">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarered10x10.png" HEIGHT=10 WIDTH=10></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=4><B>Installing and Configuring DOS Programs</B></FONT>
+</TD>
+</TR>
+</TABLE></A>
+<P>
+DOS provides no standard way to install programs. Most DOS programs include a simple installation <A HREF="../dos/3.htm#11">batch file</A> that copies the program's files from the installation disks to your hard disk. Once a program's files are installed, you can create shortcuts to the executable file and put those shortcuts in the Start menu, on the desktop, or both, just like native Windows applications (see Chapter 2 for how to create shortcuts).
+<P>
+Since some DOS programs require that you install DOS drivers, Microsoft has included basic drivers for both sound cards and CD-ROM drives. These are loaded when Windows starts through lines in the <A HREF="../dos/4.htm#2">Config.nt or Autoexec.nt</A> files. For certain DOS programs, you may need to make changes to these files.
+<P>
+If you have a DOS program (or an older Windows program) that doesn't run properly under Windows XP, you can create revised copies of the Autoexec.nt and Config.nt files for use with the program and edit the properties of the program file (or a shortcut to it) to refer to the Autoexec and Config files you created. This method works if the documentation for the program specifies the lines that the Autoexec.bat (old name for Autoexec.nt) and Config.sys (old name for Config.nt) files need to contain. Follow these steps:
+<OL>
+<LI  VALUE=1>
+ In an Explorer window, locate C:\Windows\System32\Config.nt and C:\Windows\System32\Autoexec.nt (if Windows is stored on another drive, substitute the drive letter for C).
+<LI  VALUE=2>
+Select each file (Config.nt and Autoexec.nt) and press C<SMALL>TRL</SMALL>-C and then C<SMALL>TRL</SMALL>-V to place a copy of the file in the same folder.<LI  VALUE=3>
+Scroll down to the bottom of the list of files to find the copies. Select a file and press <SMALL>F</SMALL>2 to rename it. Name the copies Config.<I>ext</I> and Autoexec.<I>ext</I>, where <I>ext</I> is an abbreviation for the program you are configuring.<LI  VALUE=4>
+Right-click the program file or shortcut and choose Properties from the menu that appears. You see the Properties dialog box for the file or shortcut (described in the previous section).
+<LI  VALUE=5>
+Click the Program tab, which displays the name of the program file that the shortcut runs. Click the Advanced button to display the Windows PIF Settings dialog box:
+</OL>
+<BR><IMG ALIGN=TOP SRC="dos.pif.png" WIDTH=453 HEIGHT=138 ALT="[image]">
+<OL>
+<LI  VALUE=6>
+Change the contents of the Autoexec Filename and Config Filename boxes to the pathname of the file you created earlier. (If they are in the same folder as the Autoexec.nt and Config.nt files, change only the filename at the end of the pathname.) As you edit the filename, Windows shows you matching filenames.
+<LI  VALUE=7>
+If the program needs for the system clock to appear to run slower (that is, if it uses the computer's system clock for timing, and modern PCs make the program run too fast to be usable), select the Compatible Timer Hardware Emulation check box.
+<LI  VALUE=8>
+Click OK to return to the Properties dialog box for the shortcut.
+<LI  VALUE=9>
+For DOS programs that display information in the Command Prompt window, click the Font tab and choose a font size that looks good.
+<LI  VALUE=10>
+If the program uses expanded or extended memory, click the Memory tab and set the memory sizes, as described in section "<A HREF="../dos/4.htm#8">Controlling the Amount of Memory the Program Can Use</A>" earlier in this chapter.
+<LI  VALUE=11>
+If you want the program to appear full-screen rather than in a window, click the Screen tab and choose Full-screen.
+<LI  VALUE=12>
+If the program needs to run in compatibility mode, so that Windows provides a software environment like a previous version of Windows, click the Compatibility tab, select the <A HREF="../running/8.htm#1">Run This Program in Compatibility Mode For</A> check box, and select the version of Windows.
+<LI  VALUE=13>
+Make any other changes to the properties of the file or shortcut, and then click OK to save your changes.
+<LI  VALUE=14>
+Refer to the program's documentation and make whatever changes it suggests to the Autoexec and Config files you created for the program. When the manual or help file refers to the Autoexec.bat file, make the change to your copy of the Autoexec.nt file. When instructions refer to the Config.sys file, make the changes to your copy of the Config.nt file.
+<LI  VALUE=15>
+Test your changes by running the files or shortcut.
+</OL>
+<P>
+<TABLE><TR><TD VALIGN="TOP"><IMG SRC="../images/tip.png" ALT="tip" WIDTH=95 HEIGHT=29></TD>
+<TD VALIGN="TOP">If you want to see messages that let you know what Windows is doing when it processes your Config or Autoexec file, add the single word <B>echoconfig</B> as the last line of the file.
+
+</TD></TR></TABLE>
+<P>
+<A HREF="4.htm"  OnMouseOver='whomp(prevb, "sprev");' OnMouseOut='whomp(prevb, "wprev");'
+ title="Previous Section"><IMG NAME=prevb SRC="../images/wprev.png" ALT="Previous" HEIGHT=20 WIDTH=82 BORDER=0></A><!--
+--><A HREF="index.htm" OnMouseOver='whomp(chapb, "schap");' OnMouseOut='whomp(chapb, "wchap");'
+title="Chapter Overview"><IMG SRC="../images/wchap.png" ALT="Chapter" NAME=chapb HEIGHT=20 WIDTH=100 BORDER=0></A><A
+HREF="../index.htm" OnMouseOver='whomp(tocb, "sbook");' OnMouseOut='whomp(tocb, "wbook");' 
+title="Table of Contents"><IMG SRC="../images/wbook.png" ALT="Contents" NAME=tocb HEIGHT=20 WIDTH=94 BORDER=0></A><A
+HREF="../glossary/index.htm" OnMouseOver='whomp(glosb, "sglos");' OnMouseOut='whomp(glosb, "wglos");' 
+title="Glossary"><IMG SRC="../images/wglos.png" ALT="Glossary" NAME=glosb HEIGHT=20 WIDTH=94 BORDER=0></A><!--
+--><IMG SRC="../images/bnext.png" ALT="Next" HEIGHT=20 WIDTH=82 BORDER=0>
+<BR>
+</BLOCKQUOTE>
+</BODY>
+</HTML>

@@ -1,0 +1,70 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>scroller</title>
+</head>
+<body bgcolor="#cccccc">
+<!--url's used in the movie-->
+<!--text used in the movie-->
+<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,0,0" width="550" height="400" id="scroller" align="middle">
+<param name="allowScriptAccess" value="sameDomain" />
+<param name="movie" value="scroller.swf" />
+<param name="quality" value="high" />
+<param name="bgcolor" value="#ffffff" />
+<embed src="scroller.swf" quality="high" bgcolor="#ffffff" width="550" height="400" name="scroller" align="middle" allowScriptAccess="sameDomain" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" />
+</object>
+<h3>Code in frame 1 layer 1</h3>
+<pre>
+//platform scrolling game
+//scroller.fla
+//By Andy Harris, Dummies Guide to Game Programming in Flash
+
+init();
+
+function init(){
+  guy.speed = 3;
+  guy.dx = 0;
+  guy.dy = 0;
+  guy.jumping = false;
+} // end init
+
+guy.onEnterFrame = function(){
+  //check keys
+  if(Key.isDown(Key.RIGHT)){
+    guy._x += guy.speed;
+  } // end if
+
+  if(Key.isDown(Key.LEFT)){
+    guy._x -= guy.speed;
+  } // end if
+
+  //jump
+  if(Key.isDown(Key.UP)){
+    if(guy.jumping == false){
+      guy.jumping = true;
+      guy._y -= 5;
+      guy.dy = -5;
+    } // end if
+
+  } // end if
+
+  guy.dy += .5;
+
+  //guy hits ground
+  if (land.hitTest(guy._x, guy._y, true)){
+    guy.jumping = false;
+    if(guy.dy > 10){
+      trace("squash");
+    } // 
+    guy.dy = 0;
+
+  } // end if 
+
+  guy._y += guy.dy;
+
+} // end enterFrame
+</pre>
+
+</body>
+</html>

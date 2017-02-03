@@ -1,0 +1,196 @@
+<!doctype html public "-//IETF//DTD HTML//EN">
+<HTML>
+<HEAD>
+<TITLE>Windows XP: The Complete Reference: Formatting and Partitioning Disks</TITLE>
+<META NAME="GENERATOR" CONTENT="Web-O-Matic Deluxe 4.1">
+<META NAME="AUTHOR" CONTENT="John R. Levine, Margaret Levine Young">
+<META NAME="COPYRIGHT" CONTENTS="Copyright 2001 by The McGraw-Hill Companies. All rights reserved.">
+</HEAD>
+<BODY BACKGROUND="../images/background.png">
+<BLOCKQUOTE>
+<SCRIPT LANGUAGE="JavaScript">
+function whomp(i, file)
+{
+	i.src = "../images/" + file + ".png";
+}
+</SCRIPT>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarered3x3.png" HEIGHT=3 WIDTH=3></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=2>
+Chapter 32: Formatting and Partitioning Disks
+</FONT></TD>
+</TR>
+</TABLE>
+<BR>
+<A HREF="2.htm"  OnMouseOver='whomp(prev, "sprev");' OnMouseOut='whomp(prev, "wprev");'
+ title="Previous Section"><IMG NAME=prev SRC="../images/wprev.png" ALT="Previous" HEIGHT=20 WIDTH=82 BORDER=0></A><!--
+--><A HREF="index.htm" OnMouseOver='whomp(chap, "schap");' OnMouseOut='whomp(chap, "wchap");'
+title="Chapter Overview"><IMG SRC="../images/wchap.png" ALT="Chapter" NAME=chap HEIGHT=20 WIDTH=100 BORDER=0></A><A
+HREF="../index.htm" OnMouseOver='whomp(toc, "sbook");' OnMouseOut='whomp(toc, "wbook");' 
+title="Table of Contents"><IMG SRC="../images/wbook.png" ALT="Contents" NAME=toc HEIGHT=20 WIDTH=94 BORDER=0></A><A
+HREF="../glossary/index.htm" OnMouseOver='whomp(glos, "sglos");' OnMouseOut='whomp(glos, "wglos");' 
+title="Glossary"><IMG SRC="../images/wglos.png" ALT="Glossary" NAME=glos HEIGHT=20 WIDTH=94 BORDER=0></A><!--
+--><A HREF="4.htm"  OnMouseOver='whomp(next, "snext");' OnMouseOut='whomp(next, "wnext");'
+ title="Next Section"><IMG NAME=next SRC="../images/wnext.png" ALT="Next" HEIGHT=20 WIDTH=82 BORDER=0></A>
+<BR>
+<A NAME="1">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarered10x10.png" HEIGHT=10 WIDTH=10></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=4><B>Choosing Your Own Drive Letters</B></FONT>
+</TD>
+</TR>
+</TABLE></A>
+<P>
+Windows assigns a drive letter to each partition, logical drive, and removable disk that it can read. Whenever possible, we recommend you use the <A HREF="../harddisks/1.htm#9">drive letters</A> Windows assigns. If you can't, (for example, you are using an antiquated program that expects files to be on certain drives or you install an application that reassigns drive letters willy-nilly like WinOnCD 3.8), you have a few options: change the letters , assign letters to folders or assign pathnames to drives or partitions.
+<P>
+When assigning or changing drive letters, you can use any unassigned letter from C to Z (inclusive). Letters A and B are reserved for floppy disk drives. If a program is using the files on a drive or partition when you try to change its letter, Windows displays an error message.
+<A NAME="2">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Changing Drive Letters</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+You can tell Windows to assign different drive letters to most of your drives and partitions. You cannot, however, change the drive letter of the boot partition (the one that contains the Windows XP program files). You can alternately add new drive letter assignment or, if you're using NTFS, assign special folders to act as conduits to drives.
+<P>
+To change the drive letter for a partition, follow these steps:
+<OL>
+<LI  VALUE=1>
+Choose Start, right-click My Computer, and choose Manage from the menu that appears. In the Computer Management window, click the Disk Management item under the Storage heading (as shown in Figure 32-1 earlier in the chapter). The Disk Management pane appears in the right part of the Computer Management window.
+<LI  VALUE=2>
+Locate the partition whose letter you would like to change in the upper right pane of the Computer Management console (the volume list) or the lower right pane (the list of drives and the diagram of partitions on each drive).
+<LI  VALUE=3>
+Right-click the partition and select Change Drive Letters And Paths from the menu that appears. You see the dialog box shown in Figure 32-6.
+</OL>
+<TABLE BORDER=2><TR><TD ALIGN=CENTER>
+<IMG SRC="harddisks.changeletter.png" WIDTH=384 HEIGHT=256 ALT="[figure]">
+</TD></TR><TR BGCOLOR="#00ffff"><TD><I>Figure 32-6:  Changing the drive letter of a partition, or assigning a pathname to a partition</I></TD></TR></TABLE>
+<OL>
+<LI  VALUE=4>
+Click the Change button to modify the existing letter assignment. You see this dialog box:
+</OL>
+<BR><IMG ALIGN=TOP SRC="harddisks.changeletter2.png" WIDTH=384 HEIGHT=190 ALT="[image]">
+<OL>
+<LI  VALUE=5>
+Type or choose a letter in the Assign The Following Drive Letter box and click OK. You return to the Computer Management window, with updated drive letters for the partition.
+</OL>
+<P>
+You can't add a second drive letter to a partition--each partition has only one drive letter at a time. You can remove the drive letter, though, by clicking the Remove button in the Change Drive Letter And Paths dialog box. Windows warns you not to proceed if the drive letter is in use. If you click the Add button, Windows assumes that you want to assign a pathname to the partition, as described in the next section.
+<P>
+<TABLE><TR><TD VALIGN="TOP"><IMG SRC="../images/caution.png" ALT="caution" WIDTH=95 HEIGHT=29></TD>
+<TD VALIGN="TOP">Don't change the drive letters of the boot partition (which contains Windows XP itself--Windows XP shouldn't allow you to, anyway). Watch out when changing the drive letter of a partition that contains programs. With a different drive letter, existing references to the program files on that partition would be wrong. Changing the drive letter does <I>not</I> update references to the files on that partition.
+
+</TD></TR></TABLE>
+<A NAME="3">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Assigning Pathnames to Partitions</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+You can assign a pathname--like C:\My Documents or D:\Budget Workarea--to a partition. The partition still has its usual drive letter (unless you remove it), but it also has a second name--a pathname. For example, if you want to store your documents on a second partition (which would make it easier to back up, and wouldn't fill up the partition that contains Windows), you could assign the pathname C:\My Documents to the partition D:. This technique is called <A NAME="ddmountingapartition"><I>mounting a partition</I></A>.
+<P>
+<TABLE><TR><TD VALIGN="TOP"><IMG SRC="../images/note.png" ALT="note" WIDTH=95 HEIGHT=29></TD>
+<TD VALIGN="TOP">Any space allocated to a specific file system is called a partition, whether it is a small partition on a large drive or a single partition that takes up an entire drive.
+
+</TD></TR></TABLE>
+<P>
+Before you mount a partition (that is, assign it a pathname) you choose two things:
+<UL>
+<LI >
+<B>The partition to mount.</B> It continues to have its original drive letter, unless you delete the drive letter. The partition can contain files and folders, which will not be disturbed by assigning a pathname to the drive.
+<LI >
+<B>The pathname to assign to the partition. </B>The pathname must refer to an existing, empty folder on an NTFS partition. After you assign the pathname to the partition (mount the partition), Windows will redirect references to that folder to the partition instead.<B></B>
+</UL>
+<P>
+For example, rather than storing all your user's settings and files in the C:\Documents And Settings folders and their subfolders, you might want to store them on a separate partition. You could format a partition with NTFS for this purpose. Move the entire contents of C:\Documents And Settings to the new partition, and mount this partition at the pathname C:\Documents And Settings.
+<P>
+<TABLE><TR><TD VALIGN="TOP"><IMG SRC="../images/caution.png" ALT="caution" WIDTH=95 HEIGHT=29></TD>
+<TD VALIGN="TOP">Be sure to empty the folder in which you are about to mount a partition. In the C:\Documents And Settings example, move the contents of C:\Documents And Settings <I>before </I>issuing the command to mount the partition at the pathname. After issuing the command, you won't be able to access those files and folders--Windows will redirect all requests to the new partition.
+
+</TD></TR></TABLE>
+<P>
+To assign a pathname to a partition or drive, follow these steps:
+<OL>
+<LI  VALUE=1>
+In an Explorer window, create an empty folder (choose New | Folder from the menu) in a partition formatted with NTFS. Or, empty out an existing folder. If you have a blank NTFS partition, you can use the root folder. (In the C:\Documents And Settings example, you might use a partition currently named F:.)
+<LI  VALUE=2>
+Choose Start, right-click My Computer, and choose Manage from the menu that appears. In the Computer Management window, click the Disk Management item under the Storage heading (as shown in Figure 32-1 earlier in the chapter). The Disk Management pane appears in the right part of the Computer Management window.
+<LI  VALUE=3>
+Right-click the partition that you want to mount and choose Change Drive Letter And Paths from the menu that appears. You see the dialog box shown in Figure 32-6. (In our example, right-click the F: partition.)
+<LI  VALUE=4>
+Click the Add button to create a new pathname for the partition. You see this dialog box:
+</OL>
+<BR><IMG ALIGN=TOP SRC="harddisks.mountpart.png" WIDTH=384 HEIGHT=190 ALT="[image]">
+<OL>
+<LI  VALUE=5>
+In the Mount In The Following Empty NTFS Folder box, type the pathname that you want to assign to the partition, or click the Browse button and navigate to the empty folder you identified in step 1. (In our example, browse to C:\Documents And Settings.)
+<LI  VALUE=6>
+Click OK.
+</OL>
+<P>
+<TABLE><TR><TD VALIGN="TOP"><IMG SRC="../images/note.png" ALT="note" WIDTH=95 HEIGHT=29></TD>
+<TD VALIGN="TOP">You can also <A HREF="../sharehw/2.htm#4">assign a drive letter</A> to a network drive or a folder stored on a network drive.
+
+</TD></TR></TABLE>
+<A NAME="4">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Assigning Drive Letters to Folders</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+You can use the DOS SUBST command to assign new drive letters that correspond to folders on existing disks. Follow these steps:
+<OL>
+<LI  VALUE=1>
+Open an <A HREF="../dos/index.htm">Command Prompt window</A> by choosing Start | All Programs | Accessories | Command Prompt. 
+<LI  VALUE=2>
+Type the SUBST command in the following format (press E<SMALL>NTER</SMALL> after typing the command):</OL>
+<P>
+<B>SUBST N: C:\MYAPP</B>
+<P>
+This command makes the drive letter N a synonym for the folder C:\Myapp. You can use any unused drive letter and the address (pathname) of any folder.
+<OL>
+<LI  VALUE=3>
+Type <B>exit</B> to close the Command Prompt window.
+</OL>
+<P>
+The new substituted drive letter is available immediately.
+<P>
+<TABLE><TR><TD VALIGN="TOP"><IMG SRC="../images/caution.png" ALT="caution" WIDTH=95 HEIGHT=29></TD>
+<TD VALIGN="TOP">If the path of your folder uses long names, then in the SUBST command, you have to use the <A HREF="../dos/1.htm#2">MS-DOS name</A> equivalent, as shown by the DOS DIR command.
+
+</TD></TR></TABLE>
+<P>
+To disconnect a SUBSTed drive letter, type the following:
+<P>
+<B>SUBST N: /D</B>
+<P>
+<TABLE><TR><TD VALIGN="TOP"><IMG SRC="../images/tip.png" ALT="tip" WIDTH=95 HEIGHT=29></TD>
+<TD VALIGN="TOP">The SUBST command lists only until you restart Windows. If you use a SUBSTed drive on a regular basis, put the SUBST command in your <A HREF="../dos/index.htm">Autoexec.nt</A> file so that it's available every time you start Windows.
+
+</TD></TR></TABLE>
+<P>
+<A HREF="2.htm"  OnMouseOver='whomp(prevb, "sprev");' OnMouseOut='whomp(prevb, "wprev");'
+ title="Previous Section"><IMG NAME=prevb SRC="../images/wprev.png" ALT="Previous" HEIGHT=20 WIDTH=82 BORDER=0></A><!--
+--><A HREF="index.htm" OnMouseOver='whomp(chapb, "schap");' OnMouseOut='whomp(chapb, "wchap");'
+title="Chapter Overview"><IMG SRC="../images/wchap.png" ALT="Chapter" NAME=chapb HEIGHT=20 WIDTH=100 BORDER=0></A><A
+HREF="../index.htm" OnMouseOver='whomp(tocb, "sbook");' OnMouseOut='whomp(tocb, "wbook");' 
+title="Table of Contents"><IMG SRC="../images/wbook.png" ALT="Contents" NAME=tocb HEIGHT=20 WIDTH=94 BORDER=0></A><A
+HREF="../glossary/index.htm" OnMouseOver='whomp(glosb, "sglos");' OnMouseOut='whomp(glosb, "wglos");' 
+title="Glossary"><IMG SRC="../images/wglos.png" ALT="Glossary" NAME=glosb HEIGHT=20 WIDTH=94 BORDER=0></A><!--
+--><A HREF="4.htm"  OnMouseOver='whomp(nextb, "snext");' OnMouseOut='whomp(nextb, "wnext");'
+ title="Next Section"><IMG NAME=nextb SRC="../images/wnext.png" ALT="Next" HEIGHT=20 WIDTH=82 BORDER=0></A>
+<BR>
+</BLOCKQUOTE>
+</BODY>
+</HTML>

@@ -1,0 +1,16 @@
+Açýklamalar : 
+» Bu scriptte kullanacaðýnýz resimlerin boyutlarý ayný olmak zorunda . Bu boyutlarý;
+var pic_width=145;
+var pic_height=141;
+satýrlarýnda tanýmlýyoruz.(width=geniþlik, height=yükseklik)
+
+» Daha sonra resim galerisinde gösterilcek resimlerin adreslerini;
+pic1= new Image(pic_width,pic_height);
+pic1.src="script/ece01.gif";
+satýrlarýnda src="...." týrnaklar arasýnda adresi yazýyoruz..
+» Eðer siz 3 taneden fazla resim koymak istiyorsanýz, bu satýrlarý yazým kuralýný bozmadan çoðaltabilirsiniz..
+pic1, pic2, pic3 diye gidiyor sýra..
+
+» var pics= new Array(3) satýrýnda kaç resim olacaðýný parantez içinde belirtiyoruz. Ayrýca, var numpics=3; satýrýnda da kaç resim gösterileceðini tanýmlýyoruz..
+
+» Kolay gelsin.. 

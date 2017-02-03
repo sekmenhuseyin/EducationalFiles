@@ -1,0 +1,19 @@
+  
+Hyper-Threading Technology enables multi-threaded software applications to execute threads in parallel. This level of threading technology has never been seen before in a general-purpose microprocessor. Internet, e-Business, and enterprise software applications continue to put higher demands on processors. To improve performance in the past, threading was enabled in the software by splitting instructions into multiple streams so that multiple processors could act upon them. Today with Hyper-Threading Technology, processor-level threading can be utilized which offers more efficient use of processor resources for greater parallelism and improved performance on today's multi-threaded software. 
+Hyper-Threading Technology provides thread-level-parallelism (TLP) on each processor resulting in increased utilization of processor execution resources. As a result, resource utilization yields higher processing throughput. Hyper-Threading Technology is a form of simultaneous multi-threading technology (SMT) where multiple threads of software applications can be run simultaneously on one processor. This is achieved by duplicating the architectural state on each processor, while sharing one set of processor execution resources. Hyper-Threading Technology also delivers faster response times for multi-tasking workload environments. By allowing the processor to use on-die resources that would otherwise have been idle, Hyper-Threading Technology provides a performance boost on multi-threading and multi-tasking operations for the Intel NetBurst® microarchitecture.
+
+This technology is largely invisible to the platform. In fact, many applications are already multi-threaded and will automatically benefit from this technology. However, multi-threaded applications take full advantage of the increased performance that Hyper-Threading Technology has to offer, allowing users will see immediate performance gains when multitasking. Today's multi-processing aware software is also compatible with Hyper-Threading Technology enabled platforms, but further performance gains can be realized by specifically tuning software for Hyper-Threading Technology. This technology complements traditional multi-processing by providing additional headroom for future software optimizations and business growth.
+ 
+ 
+ 
+Hyper-Threading Technology offers many benefits to e-Business and the enterprise such as: 
+ 
+
+Enables more user support improving business productivity 
+Provides faster response times for Internet and e-Business applications enhancing customer experience 
+Increases number of transactions that can be processed 
+Allows compatibility with existing IA-32 applications and operating systems 
+Handles larger workloads 
+Offers headroom for future business growth and new solution capabilities 
+ 
+ 

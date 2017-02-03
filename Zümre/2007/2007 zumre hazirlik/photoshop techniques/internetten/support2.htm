@@ -1,0 +1,118 @@
+<HTML><HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<TITLE>325851 - HOW TO: Set Up ADMT for a Windows NT 4.0-to-Windows Server 2003 Migration</TITLE>
+<!-- (c) 2001, 2002 Microsoft Corporation. All Rights Reserved -->
+<!-- CPMSFTWBSUP04 ASM: GSS, Version=3.7.4.0, Culture=neutral, PublicKeyToken=null FW: 1.1.4322.573 -->
+<!-- REGC: ISO-8859-1 DEFRC: utf-8 RESG: 2/23/2004 8:40:39 AM RESX: 1/1/0001 12:00:00 AM -->
+<META NAME="Keywords" CONTENT="kbActiveDirectory kbhowto kbHOWTOmaster kbmigrate w2000migrate KB325851  kbWinServ2003Data kbWinServ2003Data64bit kbWinServ2003Data64bitSearch kbWinServ2003DataSearch kbWinServ2003Ent kbWinServ2003Ent64bit kbWinServ2003Ent64bitSearch kbWinServ2003EntSearch kbWinServ2003Search kbWinServ2003St " />
+<META NAME="Description" CONTENT="This article describes how to set up the Active Directory Migration Tool (ADMT) to perform a migration from a Windows NT 4.0-based domain to a Windows Server 2003-based domain. You can use the ADMT to migrate users, groups, and computers from one..." />
+<META NAME="MS.LOCALE" CONTENT="EN" />
+<script language="Javascript" SRC="/common/script/gsfx/common.js"></script><link rel='stylesheet' type='text/css' href='/common/css/GN/EN-US/down-other/default.css' ></link><script src="/common/script/gsfx/searchui.js"></script><link rel='stylesheet' type='text/css' href='/common/css/GN/EN-US/down-other/SearchUI.css' ></link><link rel='stylesheet' type='text/css' href='/common/css/GN/EN-US/down-other/webparts.css' ></link><link rel='stylesheet' type='text/css' href='/common/css/GN/EN-US/down-other/KBArticleV2.css' ></link></HEAD>
+
+<BODY bgcolor="#FFFFFF" leftmargin="0" topmargin="0" marginheight="0" marginwidth="0" onLoad="thisLoad();" onUnload="thisUnload();">
+<table border="0" cellpadding="0" cellspacing="0" width="100%" height="100%"><tr><td>
+<TABLE width="100%" cellspacing="0" cellpadding="0" border="0" HSPACE="0" VSPACE="0"><TR><TD><A HREF="/isapi/gomscom.asp?target=/" TARGET="_top" ><IMG SRC="/library/images/support/bnr_microsoft.gif" 	HEIGHT="60" HSPACE="0" VSPACE="0" ALIGN="LEFT" ALT="Microsoft.com Home Page" BORDER="0" /></A></TD><TD width="100%" ><TABLE WIDTH="100%" CELLPADDING="0" CELLSPACING="0" BORDER="0" HSPACE="0" VSPACE="0"><TR><TD BGCOLOR="#0a6cce" VALIGN="TOP" HEIGHT="20" ALIGN="RIGHT" WIDTH="100%">
+<TABLE HEIGHT="20" BORDER="0"CELLPADDING="0" CELLSPACING="0" >
+<TR><TD><IMG SRC="/library/images/toolbar/images/curveLTR.gif" WIDTH="18" HEIGHT="20" HSPACE="0" VSPACE="0" ALT="" BORDER="0" /></TD><TD BGCOLOR="#000000" HEIGHT="20" NOWRAP>&nbsp;
+<a href="http://www.microsoft.com/products/info/default.aspx?view=22" STYLE="color:#FFFFFF;text-decoration:none;" TARGET="_top"><FONT COLOR="#FFFFFF" style="font-family:Verdana,Arial; font-size: 10px;"> All Products</FONT></a>
+</TD><TD BGCOLOR="#000000" HEIGHT="20" NOWRAP><font COLOR="#FFFFFF" style="font-family:Verdana,Arial; font-size: 10px;">&nbsp;|&nbsp;</font></TD><TD BGCOLOR="#000000" HEIGHT="20" NOWRAP>
+<a href="http://support.microsoft.com" STYLE="color:#FFFFFF;text-decoration:none;" TARGET="_top"><FONT COLOR="#FFFFFF" style="font-family:Verdana,Arial; font-size: 10px;"> Support</FONT></a>
+</TD><TD BGCOLOR="#000000" HEIGHT="20" NOWRAP><font COLOR="#FFFFFF" style="font-family:Verdana,Arial; font-size: 10px;">&nbsp;|&nbsp;</font></TD><TD BGCOLOR="#000000" HEIGHT="20" NOWRAP>
+<a href="/isapi/gosearch.asp?target=/us/default.asp" STYLE="color:#FFFFFF;text-decoration:none;" TARGET="_top"><FONT COLOR="#FFFFFF" style="font-family:Verdana,Arial; font-size: 10px;"> Search</FONT></a>
+</TD><TD BGCOLOR="#000000" HEIGHT="20" NOWRAP><font COLOR="#FFFFFF" style="font-family:Verdana,Arial; font-size: 10px;">&nbsp;|&nbsp;</font></TD><TD BGCOLOR="#000000" HEIGHT="20" NOWRAP>
+<a href="/isapi/gomscom.asp?target=/" STYLE="color:#FFFFFF;text-decoration:none;" TARGET="_top"><FONT COLOR="#FFFFFF" style="font-family:Verdana,Arial; font-size: 10px;"> Microsoft.com Guide</FONT></a>
+</TD></TR></TABLE>
+</TD></TR><TR><TD BGCOLOR=#0a6cce HEIGHT="40" align="right"><a href="/common/international.aspx" TARGET="_top"><IMG SRC="/library/images/support/EN-US/region_graphic.gif" ALT="International Support" HEIGHT="40" BORDER="0" HSPACE="0" VSPACE="0" /></A></TD></TR></TABLE>
+</TD></TR></TABLE>
+</td></tr><tr><td class="tpl_top_banner" valign="top"><table class="bbar_outer" border="0" cellpadding="0" cellspacing="0" height="18"><tr>
+<td nowrap class="bbar_cell" onmouseover="this.className='bbar_cell_hot';" onmouseout="this.className='bbar_cell';" onClick="top.location.href='http://support.microsoft.com/'"><a target ="_top" href='http://support.microsoft.com/' title='Return to Support Home Page' onclick='event.cancelBubble=true;'>&nbsp;&nbsp;Home&nbsp;&nbsp;</a></td><td class='bannerborder' width=1><img src='/library/images/support/1ptrans.gif' height=1 width=1></td>
+<td nowrap class="bbar_cell" onmouseover="this.className='bbar_cell_hot';" onmouseout="this.className='bbar_cell';" onClick="top.location.href='http://support.microsoft.com/default.aspx?pr=kbhowto'"><a target ="_top" href='http://support.microsoft.com/default.aspx?pr=kbhowto' title='Search the Knowledge Base' onclick='event.cancelBubble=true;'>&nbsp;&nbsp;Search&nbsp;&nbsp;</a></td><td class='bannerborder' width=1><img src='/library/images/support/1ptrans.gif' height=1 width=1></td>
+<td nowrap class="bbar_cell" onmouseover="this.className='bbar_cell_hot';" onmouseout="this.className='bbar_cell';" onClick="top.location.href='http://support.microsoft.com/default.aspx?pr=faqs'"><a target ="_top" href='http://support.microsoft.com/default.aspx?pr=faqs' title='Frequently Asked Questions and Product Support Centers' onclick='event.cancelBubble=true;'>&nbsp;&nbsp;FAQs&nbsp;&nbsp;</a></td><td class='bannerborder' width=1><img src='/library/images/support/1ptrans.gif' height=1 width=1></td>
+<td nowrap class="bbar_cell" onmouseover="this.className='bbar_cell_hot';" onmouseout="this.className='bbar_cell';" onClick="top.location.href='http://support.microsoft.com/default.aspx?pr=downloadover&style=home'"><a target ="_top" href='http://support.microsoft.com/default.aspx?pr=downloadover&style=home' title='Software Downloads, Updates, and Service Packs' onclick='event.cancelBubble=true;'>&nbsp;&nbsp;Downloads&nbsp;&nbsp;</a></td><td class='bannerborder' width=1><img src='/library/images/support/1ptrans.gif' height=1 width=1></td>
+<td nowrap class="bbar_cell" onmouseover="this.className='bbar_cell_hot';" onmouseout="this.className='bbar_cell';" onClick="top.location.href='http://support.microsoft.com/newsgroups/default.aspx'"><a target ="_top" href='http://support.microsoft.com/newsgroups/default.aspx' title='Community Newsgroups' onclick='event.cancelBubble=true;'>&nbsp;&nbsp;Newsgroups&nbsp;&nbsp;</a></td><td class='bannerborder' width=1><img src='/library/images/support/1ptrans.gif' height=1 width=1></td>
+<td nowrap class="bbar_cell" onmouseover="this.className='bbar_cell_hot';" onmouseout="this.className='bbar_cell';" onClick="top.location.href='http://support.microsoft.com/default.aspx?pr=csshome'"><a target ="_top" href='http://support.microsoft.com/default.aspx?pr=csshome' title='Customer Service' onclick='event.cancelBubble=true;'>&nbsp;&nbsp;Customer Service&nbsp;&nbsp;</a></td><td class='bannerborder' width=1><img src='/library/images/support/1ptrans.gif' height=1 width=1></td>
+</tr></table></td></tr><tr><td valign="top" height="100%"><table border="0" cellpadding="0" cellspacing="0" width="100%" height="100%"><tr><td valign="top"><table cellpadding="0" cellspacing="0" class="tpl_content_bar" width="100%"><tr><td class="tpl_content_title" valign="top" align="left">
+							Microsoft Knowledge Base Article - 325851
+						</td><td class="subBannerGif" valign="top" align="right">
+							<IMG src="/common/resources/Content_subban.gif" border="0" vspace="0" title="325851 - HOW TO: Set Up ADMT for a Windows NT 4.0-to-Windows Server 2003 Migration" />
+						</td></tr></table></td></tr><tr><td width="100%" valign="top"><XMLREADER><DIV class="OldIE">
+<DIV ID="LTRContent" class="LTRContent" DIR="LTR">
+<div class="KBPUBV2" name="KBPUBV2"><!-- - - - - - - - - - - PAGE TEXT BEGINS HERE : KBPUBV2 - - - - - - - - - - --><div class="kbContainer"><table border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td valign="top" width="100%"><table class="kbRightNav"><tr><td valign="top"><!--GETHELP_VERT--><!--SEARCHUI--><table cellspacing="0" cellpadding="0" border="0" id="SupportCenters" name="SupportCenters" class="ListNugget" width="165"><tr><td class="ListNuggetHeader">Support Centers</td></tr><tr><td id="SupportCentersBody" name="SupportCentersBody" class="ListNuggetBody" align="left">
+<TABLE CELLSPACING="0" CELLPADDING="2" BORDER="0">
+<TR><TD WIDTH="6" VALIGN="middle"><IMG SRC="http://support.microsoft.com/library/images/support/blue_bullet.gif" WIDTH="5" HEIGHT="5" BORDER="0" VALIGN="MIDDLE" HSPACE="0" ></TD>
+<TD CLASS="ListNuggetItem" VALIGN="top">
+	<A CLASS="ListNuggetItemLink" HREF="http://support.microsoft.com/default.aspx?scid=fh;EN-US;winsvr2003">Windows Server 2003</A>
+</TD></TR>
+</TABLE><img src="http://support.microsoft.com/library/images/support/1ptrans.gif" height="6" width="100" border="0" /></td></tr></table><table cellspacing="0" cellpadding="0" border="0" id="GeneralInfo" name="GeneralInfo" class="ListNugget" width="165"><tr><td class="ListNuggetHeader">Other Support Options</td></tr><tr><td id="GeneralInfoBody" name="GeneralInfoBody" class="ListNuggetBody" align="left"><TABLE CELLSPACING="0" CELLPADDING="2" BORDER="0"><TR><TD WIDTH="6" VALIGN="top"><IMG SRC="http://support.microsoft.com/library/images/support/blue_bullet.gif" WIDTH="5" HEIGHT="5" BORDER="0" VALIGN="MIDDLE" VSPACE="4" HSPACE="0" ></TD><TD CLASS="ListNuggetItem" VALIGN="top"><A CLASS="ListNuggetItemLink" HREF="http://support.microsoft.com/default.aspx?scid=fh;EN-US;cntactms&amp;style=home" >Contact Microsoft</A><BR>Phone Numbers, Support Options and Pricing, Online Help, and more.</TD></TR><TR><TD WIDTH="6" VALIGN="top"><IMG SRC="http://support.microsoft.com/library/images/support/blue_bullet.gif" WIDTH="5" HEIGHT="5" BORDER="0" VALIGN="MIDDLE" VSPACE="4" HSPACE="0" ></TD><TD CLASS="ListNuggetItem" VALIGN="top"><A CLASS="ListNuggetItemLink" HREF="http://support.microsoft.com/default.aspx?scid=fh;EN-US;csshome&amp;style=home" >Customer Service</A><BR>For non-technical assistance with product purchases, subscriptions, online services, events, training courses, corporate sales, piracy issues, and more.</TD></TR><TR><TD WIDTH="6" VALIGN="top"><IMG SRC="http://support.microsoft.com/library/images/support/blue_bullet.gif" WIDTH="5" HEIGHT="5" BORDER="0" VALIGN="MIDDLE" VSPACE="4" HSPACE="0" ></TD><TD CLASS="ListNuggetItem" VALIGN="top"><A CLASS="ListNuggetItemLink" HREF="http://support.microsoft.com/newsgroups" >Newsgroups</A><BR>Pose a question to other users.  Discussion groups and Forums about specific Microsoft products, technologies, and services.</TD></TR></TABLE><img src="http://support.microsoft.com/library/images/support/1ptrans.gif" height="6" width="100" border="0" /></td></tr></table><table cellspacing="0" cellpadding="0" border="0" id="PageOptions" name="PageOptions" class="ListNugget" width="165"><tr><td class="ListNuggetHeader">Page Options</td></tr><tr><td id="PageOptionsBody" name="PageOptionsBody" class="ListNuggetBody" align="left"><TABLE CELLSPACING="0" CELLPADDING="2" BORDER="0"><TR><TD WIDTH="6" VALIGN="top"><A HREF="mailto:?body=http%3a%2f%2fsupport.microsoft.com%2fdefault.aspx%3fkbid%3d325851" ><IMG SRC="http://support.microsoft.com/library/images/support/emailicon.gif" BORDER="0" HSPACE="0" Title="Send the contents of this page to a Friend" ></A></TD><TD CLASS="ListNuggetItem" VALIGN="top"><A CLASS="ListNuggetItemLink" HREF="mailto:?body=http%3a%2f%2fsupport.microsoft.com%2fdefault.aspx%3fkbid%3d325851" >Send</A></TD></TR><TR><TD WIDTH="6" VALIGN="top"><A HREF="Javascript:PrintContents();" ><IMG SRC="http://support.microsoft.com/library/images/support/printicon.gif" BORDER="0" HSPACE="0" Title="Print the contents of this page" ></A></TD><TD CLASS="ListNuggetItem" VALIGN="top"><A CLASS="ListNuggetItemLink" HREF="Javascript:PrintContents();" >Print</A></TD></TR></TABLE><img src="http://support.microsoft.com/library/images/support/1ptrans.gif" height="6" width="100" border="0" /></td></tr></table></td></tr></table><!-- - - - - - - - - - - KB CONTENT BEGINS BELOW HERE - - - - - - - - - - --><H1 class="title">HOW TO: Set Up ADMT for a Windows NT 4.0-to-Windows Server 2003 Migration</H1><a href="#appliesto">View products that this article applies to.</a><div class="notice">This article was previously published under Q325851 </div><div class="notice"><STRONG>IMPORTANT</STRONG>: This article contains information about modifying the registry. Before you 
+modify the registry, make sure to back it up and make sure that you understand how to restore 
+the registry if a problem occurs. For information about how to back up, restore, and edit the 
+registry, click the following article number to view the article in the Microsoft Knowledge Base:
+<p class="indent"><a class="KBlink" HREF="http://support.microsoft.com/default.aspx?scid=kb;EN-US;256986">256986</a> Description of the Microsoft Windows Registry
+</p><a class="bookmark" NAME="toc"></a><H3>IN THIS TASK</H3><UL><LI><a class="bookref" HREF="#1">SUMMARY</a></LI><LI><UL><LI><a class="bookref" HREF="#2">How to Set Up ADMT for a Windows NT 4.0 to Windows Server 2003 Migration</a></LI><LI><UL><LI><a class="bookref" HREF="#3">Trusts</a></LI><LI><a class="bookref" HREF="#4">Groups</a></LI><LI><a class="bookref" HREF="#5">Auditing</a></LI><LI><a class="bookref" HREF="#6">Registry</a></LI><LI><a class="bookref" HREF="#7">Administrative Shares</a></LI><LI><a class="bookref" HREF="#8">User Rights</a></LI></UL></LI></UL></LI><LI><a class="bookref" HREF="#9">REFERENCES</a></LI></UL><a class="bookmark" NAME="1"></a> </div><div class="summary"><H2>SUMMARY</H2>
+This article describes how to set up the Active Directory Migration Tool (ADMT) to perform a migration from a Windows NT 4.0-based domain to a Windows Server 2003-based domain.
+<BR /><BR />
+You can use the ADMT to migrate users, groups, and computers from one domain to another, and to analyze the migration impact before and after the actual migration process. Make sure that you run ADMT from the primary domain controller (PDC) that is the Flexible Single Master Operation (FSMO) role holder in the target domain.
+<BR /><BR /><span class="weboutput">
+<A NAME="bottom" HREF="#toc">back to the top</A>
+					</span><H3><a class="bookmark" NAME="2"></a>How to Set Up ADMT for a Windows NT 4.0-to-Windows Server 2003 Migration</H3>
+
+Before you upgrade a Windows NT 4.0 domain to a Windows Server 2003-based domain, the following domain and security configurations are required.
+<BR /><BR /><STRONG>NOTE</STRONG>: This article assumes that the source domain is running Windows NT 4.0 Service Pack 4 (SP4) or later, and that the target domain is a Windows Server 2003-based domain in native mode.
+
+<H4><a class="bookmark" NAME="3"></a>Trusts</H4><OL class="dec"><LI>Configure the source domain to trust the target domain.</LI><LI>Configure the target domain to trust the source domain.</LI></OL><span class="weboutput">
+<A NAME="bottom" HREF="#toc">back to the top</A>
+					</span><H4><a class="bookmark" NAME="4"></a>Groups</H4><OL class="dec"><LI>Add the Domain Admins global group from the source domain to the Administrators local group in the target domain.</LI><LI>Add the Domain Admins global group from the target domain to the Administrators local group in the source domain.</LI><LI>Create a new local group in the source domain called <VAR>Source Domain</VAR>$$$.<BR /><BR /><STRONG>NOTE</STRONG>: There must be no members in this group.</LI></OL><span class="weboutput">
+<A NAME="bottom" HREF="#toc">back to the top</A>
+					</span><H4><a class="bookmark" NAME="5"></a>Auditing</H4><OL class="dec"><LI>Enable auditing for the success and failure of user and group management on the source domain.</LI><LI>Enable auditing for the success and failure of Audit account management on the target domain in the Default Domain Controllers policy.</LI></OL><span class="weboutput">
+<A NAME="bottom" HREF="#toc">back to the top</A>
+					</span><H4><a class="bookmark" NAME="6"></a>Registry</H4><STRONG>WARNING</STRONG>: If you use Registry Editor incorrectly, you may cause serious problems that may 
+require you to reinstall your operating system. Microsoft cannot guarantee that you can solve 
+problems that result from using Registry Editor incorrectly. Use Registry Editor at your own 
+risk.<BR /><BR />
+On the PDC in the source domain, add the <STRONG>TcpipClientSupport:REG_DWORD:0x1</STRONG>  value to the following registry key:
+
+<p class="indent"><STRONG>HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\LSA</STRONG></p><span class="weboutput">
+<A NAME="bottom" HREF="#toc">back to the top</A>
+					</span><H4><a class="bookmark" NAME="7"></a>Administrative Shares</H4>
+
+Administrative shares must exist on the domain controller in the target domain on which you run ADMT, and on any computers on which an agent must be dispatched.<BR /><BR /><span class="weboutput">
+<A NAME="bottom" HREF="#toc">back to the top</A>
+					</span><H4><a class="bookmark" NAME="8"></a>User Rights</H4>
+You must log on to the computer on which you run ADMT with an account that has the following permissions:
+<UL><LI>Domain Administrator rights in the target domain.</LI><LI>A member of the Administrators group in the source domain.</LI><LI>Administrator rights on each computer that you migrate.</LI><LI>Administrator rights on each computer on which you translate security.</LI></UL>
+You will have the appropriate rights when you log on to the PDC that is the FSMO role holder in the target domain with the <VAR>Source Domain</VAR>\Administrator account, assuming that the <VAR>Source Domain</VAR>\Domain Administrators group is a member of the Administrators group on each computer.
+<BR /><BR /><span class="weboutput">
+<A NAME="bottom" HREF="#toc">back to the top</A>
+					</span><a class="bookmark" NAME="9"></a> </div><div class="references"><H2>REFERENCES</H2>
+To download ADMT, visit the following Microsoft Web site:
+
+<p class="indent"><a class="URLLink" TARGET="_top" HREF="http://www.microsoft.com/windows2000/downloads/tools/admt/default.asp">http://www.microsoft.com/windows2000/downloads/tools/admt/default.asp
+</a></p>
+
+For more information about how to use ADMT to perform a migration, see ADMT Help. Start the Active Directory Migration Tool, click <STRONG>Help Topics</STRONG> on the <STRONG>Help</STRONG> menu, click the <STRONG>Contents</STRONG> tab, and then click <STRONG>Active Directory Migration Tool</STRONG>.
+<BR /><BR />
+For more information about ADMT, visit the following Microsoft Web site:
+
+<p class="indent"><a class="URLLink" TARGET="_top" HREF="http://www.microsoft.com/windows2000/techinfo/howitworks/activedirectory/admt.asp">http://www.microsoft.com/windows2000/techinfo/howitworks/activedirectory/admt.asp
+</a></p><span class="weboutput">
+<A NAME="bottom" HREF="#toc">back to the top</A>
+					</span> </div><div name="appliesto" id="appliesto" class="appliesto"><H3>The information in this article applies to:</H3><UL><LI>Microsoft Windows Server 2003, Datacenter Edition</LI><LI>Microsoft Windows Server 2003, Enterprise Edition</LI><LI>Microsoft Windows Server 2003, Standard Edition</LI><LI>Microsoft Windows Server 2003, 64-Bit Datacenter Edition</LI><LI>Microsoft Windows Server 2003, 64-Bit Enterprise Edition</LI><LI>Microsoft Windows NT 4.0</LI></UL></div><TABLE class="docinfo" cellspacing="1" cellpadding="3" align="center"><TR><TD align="right" width="5%" class="label" valign="top" nowrap="1">Last Reviewed:</TD><TD align="left" class="data" valign="top">6/6/2003
+			 (5.0)
+		</TD></TR><TR class="composite"><TD align="right" width="5%" class="label" valign="top" nowrap="1">Keywords:</TD><TD align="left" class="data" valign="top">kbActiveDirectory kbhowto kbHOWTOmaster kbmigrate w2000migrate KB325851 kbAudITPro</TD></TR></TABLE><BR /><div class="disclaimer"></div><!-- - - - - - - - - - - - PAGE TEXT ENDS ABOVE HERE - - - - - - - - - - - --></td></tr><tr><td align="center"><!--GETHELP_HORI--></td></tr></table></div></div>
+</DIV>
+
+</DIV>
+</XMLREADER></td></tr></table></td></tr><tr><td valign="top" class="tpl_footer"><table class="tpl_footer_row1"><tr><td class="fbtn_cell">&nbsp;<A HREF="http://support.microsoft.com/default.aspx?pr=cntactms&style=home" TARGET="_top" >Contact Us</A>&nbsp;</td></tr></table><BR><div class="tpl_footer_row2">© 2004 Microsoft Corporation. All rights reserved.&nbsp;&nbsp;<A HREF="http://support.microsoft.com/default.aspx?scid=%2fsupport%2fmisc%2fcpyright.asp" TARGET="http://support.microsoft.com/default.aspx?scid=%2fsupport%2fmisc%2fcpyright.asp" class="ftr_copyright_text">Terms of use</A>&nbsp;&nbsp;<A HREF="http://www.microsoft.com/security/default.asp" TARGET="http://www.microsoft.com/security/default.asp" class="ftr_copyright_text">Security & Privacy</A>&nbsp;&nbsp;<A HREF="http://support.microsoft.com/default.aspx?scid=%2fisapi%2fgomscom.asp%3ftarget%3d%2fenable%2fdefault.htm" TARGET="http://support.microsoft.com/default.aspx?scid=%2fisapi%2fgomscom.asp%3ftarget%3d%2fenable%2fdefault.htm" class="ftr_copyright_text">Accessibility</A>&nbsp;&nbsp;</div></td></tr></table><IMG style="display:none;" name="metrixgif" SRC="/library/images/support/1ptrans.gif"></BODY>
+
+<script language="JavaScript" >
+   function thisLoad(){
+setcookieval("SITE","GN");
+
+   g_reSupportedHostnames = new RegExp(".msn.com$|.passport.com$|.xbox.com$|.microsoft.com$|.microsoft.cz$|.msbpn.com$|.microsoft.co.*", "i");
+  ForeignLink_Hookup(true);LogHit('http://c.microsoft.com/trans_pixel.asp?TYPE=SSPV&SOURCE=SUPPORT&URI=/GN/EN-US/kb_en-us_325851&GUID=1F4FC18C-F71E-47fb-8FC9-612F8EE59C61&R=');
+   }
+
+function thisUnload(){
+;   }
+</script>
+</HTML>

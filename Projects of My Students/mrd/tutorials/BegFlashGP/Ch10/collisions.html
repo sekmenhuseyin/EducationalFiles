@@ -1,0 +1,269 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>collisions</title>
+</head>
+<body bgcolor="#999999">
+<!--url's used in the movie-->
+<!--text used in the movie-->
+<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,0,0" width="550" height="400" id="collisions" align="middle">
+<param name="allowScriptAccess" value="sameDomain" />
+<param name="movie" value="collisions.swf" />
+<param name="quality" value="high" />
+<param name="bgcolor" value="#cccccc" />
+<embed src="collisions.swf" quality="high" bgcolor="#cccccc" width="550" height="400" name="collisions" align="middle" allowScriptAccess="sameDomain" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" />
+</object>
+<h3>code in frame 1 layer 1</h3>
+<pre>
+//collisions
+//handles basic collision detection
+
+init();
+
+function init(){
+  //initialization
+
+  //direction constants
+  _root.NORTH = 0;
+  _root.NORTHWEST = 1;
+  _root.WEST = 2;
+  _root.SOUTHWEST = 3;
+  _root.SOUTH = 4;
+  _root.SOUTHWEST = 5;
+  _root.WEST = 6;
+  _root.NORTHWEST = 7;
+
+  //randomly position cars
+
+  reset(car1);
+  reset(car2);
+  reset(car3);
+
+  //set monster initial values
+  monster.dx = 0;
+  monster.dy = 0;
+  monster.speed = 0;
+  monster.dir = _root.NORTH;
+
+  //set flame initial values
+  flame.dx = 0;
+  flame.dy = 0;
+  flame.speed = 0;
+  flame.dir = _root.NORTH;
+
+
+} // end init
+
+monster.onEnterFrame = function(){
+  checkKeys();
+  turn(monster);
+  move(monster);
+
+  //move the cars, too
+  move(car1);
+  move(car2);
+  move(car3);
+
+  //and the flame, if it's visible
+  moveFlame();
+  
+  //check for collisions
+  checkCollisions();
+
+} // end monster enterFrame
+
+function checkKeys(){
+  //check keyboard to move monster
+  if (Key.isDown(Key.UP)){
+    monster.speed++;
+    if (monster.speed > 8){
+      monster.speed = 8;
+    } // end if
+  } // end if
+
+  if (Key.isDown(Key.DOWN)){
+    monster.speed--;
+    if (monster.speed &lt; -3){
+      monster.speed = -3;
+    } // end if
+  } // end if
+
+  if (Key.isDown(Key.RIGHT)){
+    monster.dir++;
+    if (monster.dir > 7){
+      monster.dir = 0;
+    } // end if
+  } // end if
+
+  if (Key.isDown(Key.LEFT)){
+    monster.dir--;
+    if (monster.dir &lt; 0){
+      monster.dir = 7;
+    } // end if
+  } // end if
+
+  if (Key.isDown(Key.SPACE)){
+    //shoot flame
+    flame._x = monster._x;
+    flame._y = monster._y;
+    flame.dir = monster.dir;
+    flame.speed = monster.speed + 20;
+    turn(flame);
+  } // end if
+
+} // end checkKeys
+
+function reset(sprite){
+  //given a car sprite, resets its parameters
+  sprite._x = Math.random() * Stage.width;
+  sprite._y = Math.random() * Stage.height;
+  sprite.dir = Math.random() * 8;
+  sprite.dir = Math.floor(sprite.dir);
+  sprite._rotation = sprite.dir * 45;
+  sprite.speed = Math.random() * 10;
+  turn(sprite);
+} // end reset
+
+function move(sprite){
+  //moves any sprite, wrapping around boundaries
+
+  //move
+  sprite._x += sprite.dx;
+  sprite._y += sprite.dy;
+
+  //rotate
+  sprite._rotation = sprite.dir * 45;
+  
+  //check boundaries - wrap all directions
+  if (sprite._x > Stage.width){
+    sprite._x = 0;
+  } // end if
+
+  if (sprite._x &lt; 0){
+    sprite._x = Stage.width;
+  } // end if
+
+  if (sprite._y > Stage.height){
+    sprite._y = 0;
+  } // end if
+
+  if (sprite._y &lt; 0){
+    sprite._y = Stage.height;
+  } // end if
+} // end move
+
+function moveFlame(){
+  //the flame has different behavior on borders, so give it its own
+  // movement function
+  //move
+  flame._x += flame.dx;
+  flame._y += flame.dy;
+
+  //rotate not needed
+  //flame._rotation = flame.dir * 45;
+  
+  //hide on all boundaries
+  if ((flame._x > Stage.width) ||
+      (flame._x &lt; 0) ||
+      (flame._y > Stage.height) ||
+      (flame._y &lt; 0)){
+     resetFlame();
+  } // end if
+
+} // end moveFlame
+
+function resetFlame(){
+  //move off screen and stop
+  flame._x = - 200;
+  flame._y = - 200; 
+  flame.speed = 0;
+} // end resetFlame
+
+
+
+function turn(sprite){
+  //given a sprite with a dir and speed, calculates dx and dy values
+  switch (sprite.dir){
+    case 0:
+      sprite.dx = 0 * sprite.speed;
+      sprite.dy = -1 * sprite.speed;
+      break;
+    case 1:
+      sprite.dx = .7 * sprite.speed;
+      sprite.dy = -.7 * sprite.speed;
+      break;
+    case 2:
+      sprite.dx = 1 * sprite.speed;
+      sprite.dy = 0 * sprite.speed;
+      break;
+    case 3:
+      sprite.dx = .7 * sprite.speed;
+      sprite.dy = .7 * sprite.speed;
+      break;
+    case 4:
+      sprite.dx = 0 * sprite.speed;
+      sprite.dy = 1 * sprite.speed;
+      break;
+    case 5:
+      sprite.dx = -.7 * sprite.speed;
+      sprite.dy = .7 * sprite.speed;
+      break;
+    case 6:
+      sprite.dx = -1 * sprite.speed;
+      sprite.dy = 0 * sprite.speed;
+      break;
+    case 7:
+      sprite.dx = -.7 * sprite.speed;
+      sprite.dy = -.7 * sprite.speed;
+      break;
+    default:
+      trace ("Something went wrong here...");
+      break;
+  } // end switch
+} // end turn
+
+function checkCollisions(){
+  //check for various collisions
+
+  if (monster.hitTest(car1)){
+    trace("hit by car 1!");
+    reset(car1);
+  } // end if
+
+  if (monster.hitTest(car2)){
+    trace("hit by car 2!");
+    reset(car2);
+  } // end if
+
+  if (monster.hitTest(car3)){
+    trace("hit by car 3!");
+    reset(car3);
+  } // end if
+
+  //look for flame collisions
+  if (flame.hitTest(car1)){
+    trace("burned car 1");
+    resetFlame();
+    reset(car1);
+  } // end if
+
+  if (flame.hitTest(car2)){
+    trace("burned car 2");
+    resetFlame();
+    reset(car2);
+  } // end if
+
+  if (flame.hitTest(car3)){
+    trace("burned car 3");
+    resetFlame();
+    reset(car3);
+  } // end if
+ 
+} // end checkCollisions
+    
+
+</pre>
+
+</body>
+</html>

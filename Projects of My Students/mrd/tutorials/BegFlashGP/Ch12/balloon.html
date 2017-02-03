@@ -1,0 +1,44 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>balloon</title>
+</head>
+<body bgcolor="#cccccc">
+<!--url's used in the movie-->
+<!--text used in the movie-->
+<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,0,0" width="550" height="400" id="balloon" align="middle">
+<param name="allowScriptAccess" value="sameDomain" />
+<param name="movie" value="balloon.swf" />
+<param name="quality" value="high" />
+<param name="bgcolor" value="#ffffff" />
+<embed src="balloon.swf" quality="high" bgcolor="#ffffff" width="550" height="400" name="balloon" align="middle" allowScriptAccess="sameDomain" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" />
+</object>
+<h3>Code in <i>buttons</i> layer, frame 1</h3>
+<pre>
+target = 1;
+
+btnPrev.onRelease = function(){
+  target -= 10;
+  if (target &lt; 1){ 
+    target = 1;
+  } // end if
+  _root.gotoAndPlay(target);
+} // end btnPrev
+
+btnNext.onRelease = function(){
+  target += 10;
+  if (target >= 40){ 
+    target = 31;
+  } // end if
+  trace ("going to frame " + target);
+  _root.gotoAndPlay(target);
+} // end btnPrev
+
+</pre> 
+<h3>Code at end of each animation</h3>
+<pre>
+_root.gotoAndPlay(_root._currentFrame - 9);
+</pre>
+</body>
+</html>

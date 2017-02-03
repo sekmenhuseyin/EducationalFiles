@@ -1,0 +1,159 @@
+<!doctype html public "-//IETF//DTD HTML//EN">
+<HTML>
+<HEAD>
+<TITLE>Windows XP: The Complete Reference: Windows XP Configuration Files</TITLE>
+<META NAME="GENERATOR" CONTENT="Web-O-Matic Deluxe 4.1">
+<META NAME="AUTHOR" CONTENT="John R. Levine, Margaret Levine Young">
+<META NAME="COPYRIGHT" CONTENTS="Copyright 2001 by The McGraw-Hill Companies. All rights reserved.">
+</HEAD>
+<BODY BACKGROUND="../images/background.png">
+<BLOCKQUOTE>
+<SCRIPT LANGUAGE="JavaScript">
+function whomp(i, file)
+{
+	i.src = "../images/" + file + ".png";
+}
+</SCRIPT>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarered3x3.png" HEIGHT=3 WIDTH=3></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=2>
+Chapter 37: Windows XP Configuration Files
+</FONT></TD>
+</TR>
+</TABLE>
+<BR>
+<A HREF="0.htm"  OnMouseOver='whomp(prev, "sprev");' OnMouseOut='whomp(prev, "wprev");'
+ title="Previous Section"><IMG NAME=prev SRC="../images/wprev.png" ALT="Previous" HEIGHT=20 WIDTH=82 BORDER=0></A><!--
+--><A HREF="index.htm" OnMouseOver='whomp(chap, "schap");' OnMouseOut='whomp(chap, "wchap");'
+title="Chapter Overview"><IMG SRC="../images/wchap.png" ALT="Chapter" NAME=chap HEIGHT=20 WIDTH=100 BORDER=0></A><A
+HREF="../index.htm" OnMouseOver='whomp(toc, "sbook");' OnMouseOut='whomp(toc, "wbook");' 
+title="Table of Contents"><IMG SRC="../images/wbook.png" ALT="Contents" NAME=toc HEIGHT=20 WIDTH=94 BORDER=0></A><A
+HREF="../glossary/index.htm" OnMouseOver='whomp(glos, "sglos");' OnMouseOut='whomp(glos, "wglos");' 
+title="Glossary"><IMG SRC="../images/wglos.png" ALT="Glossary" NAME=glos HEIGHT=20 WIDTH=94 BORDER=0></A><!--
+--><A HREF="2.htm"  OnMouseOver='whomp(next, "snext");' OnMouseOut='whomp(next, "wnext");'
+ title="Next Section"><IMG NAME=next SRC="../images/wnext.png" ALT="Next" HEIGHT=20 WIDTH=82 BORDER=0></A>
+<BR>
+<A NAME="1">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarered10x10.png" HEIGHT=10 WIDTH=10></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=4><B>What Kinds of Configuration Files Does Windows XP Use?</B></FONT>
+</TD>
+</TR>
+</TABLE></A>
+<P>
+Other than the Registry (described in Chapter <A HREF="../registry/index.htm">38</A>), most of Windows' control information is stored in text files that you can open with <A HREF="../docs/1.htm#1">Notepad</A> or any other text editor. Although changing these files is usually a bad idea unless you're quite sure you know what you're doing, looking at their contents is entirely safe--and provides fascinating glimpses into how Windows works.
+<A NAME="2">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Making Configuration Files Visible</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+Most of the control information is stored in <A HREF="../exploring/5.htm#1">hidden</A>, <A HREF="../exploring/3.htm#1">system</A>, and <A HREF="../exploring/3.htm#1">read-only</A> files. Hidden and system files are like any other files, except that they don't normally appear in file listings when you use Windows Explorer to display a folder that contains them. (Any file can be hidden, but only a couple of required files in the root folder of the boot drive are system files.) Read-only files can't be changed or deleted.
+<P>
+You can tell Windows to show you all the hidden files on your computer. In an Explorer window, select Tools | Folder Options and click the View tab. The list of Advanced Settings includes a Hidden Files And Folders category. Click the Show Hidden Files And Folders check box so a check appears. This setting reveals hidden files in all folders, not just the current folder. Hidden files appear listed with regular files, but their icons are paler than regular files. To reveal the hidden files that Windows considers "special," uncheck the Hide Protected Operating System Files (Recommended) check box. Click Yes in the warning dialog box. Click OK when you have finished making changes in the Folder Options dialog box to make the changes active.
+<P>
+You can change a file's hidden or system status by right-clicking the file and selecting Properties. Click the Hidden and Read-only check boxes at the bottom of the <A HREF="../exploring/2.htm#1">Properties dialog box</A> to select or deselect these attributes.
+<P>
+<TABLE><TR><TD VALIGN="TOP"><IMG SRC="../images/tip.png" ALT="tip" WIDTH=95 HEIGHT=29></TD>
+<TD VALIGN="TOP">We recommend that you leave hidden and system folders and files hidden unless you plan to look at them. They can be distracting during normal work. If you do decide to display them, you can tell hidden and system files from normal files by their dimmed appearance.
+
+</TD></TR></TABLE>
+<P><TABLE BORDER=2 CELLPADDING=10><TR>
+<TD BGCOLOR="#00ffff" WIDTH=2></TD><TD>
+<A NAME="3">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>What Is %SystemRoot%?</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+You may see pathnames that include "%SystemRoot%" in a setting in a dialog box setting or in a configuration file. SystemRoot is a global system variable that tells Windows where the Windows program is stored. Windows replaces "%SystemRoot%" with the current location of Windows (usually C:\Windows).
+<P>
+ Why is this useful? Because if you create a configuration file for your computer and then give it to a friend, your friend's Windows system may be installed somewhere else (for example, F:\Windows on a dual-boot system in which the C: partition is used by a previous version of Windows). Your Windows system could be installed on C: but theirs could be F: or L: or Z:. Using %SystemRoot% in a configuration file allows it to work on any system, regardless of circumstance.
+</TD></TR></TABLE>
+<A NAME="4">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Windows Initialization Files</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+Since Windows 95, Microsoft has moved most Windows initialization information into the <A HREF="../registry/index.htm">Registry</A>, but Windows still uses two initialization files: Win.ini and System.ini. Some Windows 3.1 applications stored their setup information in individual <A NAME="ddinifiles"><I>INI files</I></A> (initialization files), such as Progman.ini for the Windows 3.1 Program Manager. Other Windows 3.1 programs used sections in the general-purpose Win.ini file.
+<P>
+All INI files have the file extension .ini, and nearly all reside in the folder in which Windows is installed (usually C:\Windows). All INI files have a common format, of which the following is a typical example (it contains configuration information for the WS_FTP file transfer program):
+<P><PRE>
+[WS_FTP]<BR>
+DIR=F:\Program Files\WS_FTP<BR>
+DEFDIR=F:\Program Files\WS_FTP<BR>
+GROUP=WS_FTP Pro<BR>
+INSTOPTS=4 <BR>
+<BR>
+[Mail]<BR>
+MAPI=1
+</PRE>
+<P>
+An INI file is divided into sections, with each section starting with a section name in square brackets. Within a section, each line is of the form <I>parameter=value</I>, where the value may be a filename, number, or other string. Blank lines and lines that start with a semicolon are ignored.
+<P>
+In general, editing the Win.ini or System.ini file is a bad idea, but if you need to do so, use the <A HREF="../internals/2.htm#1">System Configuration Utility</A>. You can take a look at the contents of the files using this program, too.
+<P>
+<TABLE><TR><TD VALIGN="TOP"><IMG SRC="../images/note.png" ALT="note" WIDTH=95 HEIGHT=29></TD>
+<TD VALIGN="TOP">While Windows may not make much use of the Win.ini and System.ini files, third-party software publishers make wide use of application-specific INI files to retain their programs settings. Take a peek into the program folders for a few of your applications and you'll almost certainly find an INI file.
+
+</TD></TR></TABLE>
+<A NAME="5">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squaregreen6x6.png" HEIGHT=6 WIDTH=6></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>The Win.ini File</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+In Windows 3.1, nearly every scrap of setup information in the entire system ended up in the Win.ini file in C:\Windows, meaning that if any program messed up Win.ini, the system could be nearly unusable. More recent versions of Windows alleviate this situation by moving most configuration of the information into the Registry, but Win.ini is retained to offer support for 16-bit applications. You'll typically find sections for a few of your application programs in Win.ini, plus a little setup information for Windows itself.
+<P>
+You can use Notepad to edit Win.ini, but it's dangerous. Instead, use the <A HREF="../internals/2.htm#1">System Configuration Utility</A> to edit the Win.ini file.
+<A NAME="6">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squaregreen6x6.png" HEIGHT=6 WIDTH=6></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>The System.ini File</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+In Windows 3.1, the System.ini file in C:\Windows listed all the Windows device and subsystem drivers to be loaded at startup. In Windows XP the vast majority of the driver information is in the Registry, but System.ini still contains driver configuration information for 16-bit applications. Use the <A HREF="../internals/2.htm#1">System Configuration Utility</A> (rather than Notepad) to edit the System.ini file.
+<A NAME="7">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>The Registry</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+The Windows <A HREF="../registry/index.htm">Registry</A> contains all of the configuration information not in an INI file, including the vast majority of the actual information used to control Windows and its applications. Use <A HREF="../registry/3.htm#1">the Registry Editor</A> to examine and manage the Registry.
+<P>
+<A HREF="0.htm"  OnMouseOver='whomp(prevb, "sprev");' OnMouseOut='whomp(prevb, "wprev");'
+ title="Previous Section"><IMG NAME=prevb SRC="../images/wprev.png" ALT="Previous" HEIGHT=20 WIDTH=82 BORDER=0></A><!--
+--><A HREF="index.htm" OnMouseOver='whomp(chapb, "schap");' OnMouseOut='whomp(chapb, "wchap");'
+title="Chapter Overview"><IMG SRC="../images/wchap.png" ALT="Chapter" NAME=chapb HEIGHT=20 WIDTH=100 BORDER=0></A><A
+HREF="../index.htm" OnMouseOver='whomp(tocb, "sbook");' OnMouseOut='whomp(tocb, "wbook");' 
+title="Table of Contents"><IMG SRC="../images/wbook.png" ALT="Contents" NAME=tocb HEIGHT=20 WIDTH=94 BORDER=0></A><A
+HREF="../glossary/index.htm" OnMouseOver='whomp(glosb, "sglos");' OnMouseOut='whomp(glosb, "wglos");' 
+title="Glossary"><IMG SRC="../images/wglos.png" ALT="Glossary" NAME=glosb HEIGHT=20 WIDTH=94 BORDER=0></A><!--
+--><A HREF="2.htm"  OnMouseOver='whomp(nextb, "snext");' OnMouseOut='whomp(nextb, "wnext");'
+ title="Next Section"><IMG NAME=nextb SRC="../images/wnext.png" ALT="Next" HEIGHT=20 WIDTH=82 BORDER=0></A>
+<BR>
+</BLOCKQUOTE>
+</BODY>
+</HTML>

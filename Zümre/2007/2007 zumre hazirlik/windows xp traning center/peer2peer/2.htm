@@ -1,0 +1,165 @@
+<!doctype html public "-//IETF//DTD HTML//EN">
+<HTML>
+<HEAD>
+<TITLE>Windows XP: The Complete Reference: Configuring Windows for a LAN</TITLE>
+<META NAME="GENERATOR" CONTENT="Web-O-Matic Deluxe 4.1">
+<META NAME="AUTHOR" CONTENT="John R. Levine, Margaret Levine Young">
+<META NAME="COPYRIGHT" CONTENTS="Copyright 2001 by The McGraw-Hill Companies. All rights reserved.">
+</HEAD>
+<BODY BACKGROUND="../images/background.png">
+<BLOCKQUOTE>
+<SCRIPT LANGUAGE="JavaScript">
+function whomp(i, file)
+{
+	i.src = "../images/" + file + ".png";
+}
+</SCRIPT>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarered3x3.png" HEIGHT=3 WIDTH=3></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=2>
+Chapter 28: Configuring Windows for a LAN
+</FONT></TD>
+</TR>
+</TABLE>
+<BR>
+<A HREF="1.htm"  OnMouseOver='whomp(prev, "sprev");' OnMouseOut='whomp(prev, "wprev");'
+ title="Previous Section"><IMG NAME=prev SRC="../images/wprev.png" ALT="Previous" HEIGHT=20 WIDTH=82 BORDER=0></A><!--
+--><A HREF="index.htm" OnMouseOver='whomp(chap, "schap");' OnMouseOut='whomp(chap, "wchap");'
+title="Chapter Overview"><IMG SRC="../images/wchap.png" ALT="Chapter" NAME=chap HEIGHT=20 WIDTH=100 BORDER=0></A><A
+HREF="../index.htm" OnMouseOver='whomp(toc, "sbook");' OnMouseOut='whomp(toc, "wbook");' 
+title="Table of Contents"><IMG SRC="../images/wbook.png" ALT="Contents" NAME=toc HEIGHT=20 WIDTH=94 BORDER=0></A><A
+HREF="../glossary/index.htm" OnMouseOver='whomp(glos, "sglos");' OnMouseOut='whomp(glos, "wglos");' 
+title="Glossary"><IMG SRC="../images/wglos.png" ALT="Glossary" NAME=glos HEIGHT=20 WIDTH=94 BORDER=0></A><!--
+--><A HREF="3.htm"  OnMouseOver='whomp(next, "snext");' OnMouseOut='whomp(next, "wnext");'
+ title="Next Section"><IMG NAME=next SRC="../images/wnext.png" ALT="Next" HEIGHT=20 WIDTH=82 BORDER=0></A>
+<BR>
+<A NAME="1">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarered10x10.png" HEIGHT=10 WIDTH=10></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=4><B>Configuring and Viewing Your LAN Connections</B></FONT>
+</TD>
+</TR>
+</TABLE></A>
+<P>
+Windows XP installs most <A HREF="../connecting/2.htm#1">networking components</A> automatically, either when you install Windows or when it detects a network interface card among your computer's hardware. The Network Setup Wizard can step you thought the rest of the process of configuring your computer to communicate on your LAN, including setting up ICS (described in Chapter 30). The Wizard can also create a floppy disk containing a configuration program that you can use to configure other Windows systems to work with your network (to use this feature, you need a blank floppy disk). Once your computer is connected to the LAN, you can use the <A HREF="../connecting/2.htm#1">Network Connections window</A> to see your connections and the My Network Places window to see folders on other computers.
+<P>
+<TABLE><TR><TD VALIGN="TOP"><IMG SRC="../images/note.png" ALT="note" WIDTH=95 HEIGHT=29></TD>
+<TD VALIGN="TOP">In order to run the Network Setup Wizard or make any of the configuration changes described in this chapter, you must be logged in with an <A HREF="../users/index.htm">administrative user account</A>.
+
+</TD></TR></TABLE>
+<A NAME="2">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Running the Network Setup Wizard</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+After installing your network interface card (if it's not already installed) and attaching a cable to connect your computer to the LAN, follow these steps:
+<OL>
+<LI  VALUE=1>
+Connect to the Internet, if you have an Internet connection. Turn on all printers on the network, so that the Wizard can detect them.
+<LI  VALUE=2>
+Start the Network Setup Wizard by choosing Start | All Programs | Accessories | Communications | Network Setup Wizard. Alternatively, choose Start | Control Panel, click Network And Internet Connections, click Network Connections, and click Set Up A Home Or Small Office Network in the Task pane. You see the Network Setup Wizard window.
+<LI  VALUE=3>
+Follow the instructions the Wizard displays, clicking Next to move to the next window. Tell it whether you dial into the Internet directly from this computer, you want to connect to the Internet over the LAN, or you don't connect to the Internet.
+<LI  VALUE=4>
+Provide a <A HREF="../peer2peer/1.htm#4">computer name </A> for your computer (see Figure 28-2). On the Wizard's next screen, type the workgroup name. If you are attaching to an existing network, ask you LAN administrator for the workgroup or domain name to use. If you are setting up a new workgroup, use WORKGROUP as the workgroup (or MSHOME, as Windows XP Home Edition suggests). All computers that will share files on a small network need to use the same workgroup name.
+</OL>
+<TABLE BORDER=2><TR><TD ALIGN=CENTER>
+<IMG SRC="peer2peer.wizard.png" WIDTH=503 HEIGHT=393 ALT="[figure]">
+</TD></TR><TR BGCOLOR="#00ffff"><TD><I>Figure 28-2:  The Network Setup Wizard can configure Windows's networking, along with Internet Connection Sharing.</I></TD></TR></TABLE>
+<OL>
+<LI  VALUE=5>
+If you want the Wizard to create a Network Setup Disk with a LAN configuration program that you can run on Windows Me, 2000, 9<I>x</I>, and NT computers on your LAN, insert a blank floppy disk into the drive when the Wizard prompts you. Choose to create the disk if you are setting up a new network that includes computers running previous versions of Windows; otherwise, don't bother.
+</OL>
+<P>
+The Wizard installs the Client For Microsoft Networks, the TCP/IP protocol, and the File And Printer Sharing service to enable your computer to communicate on the LAN.
+<P>
+If you tell the Network Setup Wizard that you dial directly in to the Internet and you want to share your Internet connection with other computers on the LAN, the Wizard installs ICS (see <A HREF="../ics/index.htm">Chapter 30</A> for more information).
+<A NAME="3">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Viewing Network Resources with the My Network Places Window</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+When the Network Setup Wizard finishes, My Network Places should appear on the right side of your Start menu. My Network Places also appears as a choice in the Task pane of many Explorer windows and Open dialog boxes, enabling you to access shared folders on the network easily. When you choose Start | My Network Places, you see the My Network Places window, which is an Explorer window with shortcuts to network resources, as shown in Figure 28-3.
+<TABLE BORDER=2><TR><TD ALIGN=CENTER>
+<IMG SRC="peer2peer.mynetwork.png" WIDTH=600 HEIGHT=404 ALT="[figure]">
+</TD></TR><TR BGCOLOR="#00ffff"><TD><I>Figure 28-3:  My Network Places lists shared disks and printers</I></TD></TR></TABLE>
+<P>
+<TABLE><TR><TD VALIGN="TOP"><IMG SRC="../images/note.png" ALT="note" WIDTH=95 HEIGHT=29></TD>
+<TD VALIGN="TOP">If My Network Places doesn't appear on the Start menu, Windows may not have found your network interface card. Check that it's listed and working by using the <A HREF="../hardware/3.htm#1">Device Manager</A>. Or you may need to run the Network Setup Wizard as described in the <A HREF="../peer2peer/2.htm#1">previous section</A>.
+
+</TD></TR></TABLE>
+<P>
+The My Network Places window should list shared folders you can use. Click a shortcut to see the contents of the folder. <A HREF="../sharehw/index.htm">Chapter 29</A> describes how to add folders on your computer to the list of folders that other people on your LAN can share, how to control who can use which folder, and how to share printers. My Network Places can also include shortcuts to Web and FTP servers on the Internet.
+<P>
+<TABLE><TR><TD VALIGN="TOP"><IMG SRC="../images/tip.png" ALT="tip" WIDTH=95 HEIGHT=29></TD>
+<TD VALIGN="TOP">If you want a My Network Places icon to appear on your desktop, click Start, right-click My Network Places, and choose Show On Desktop from the menu that appears.
+
+</TD></TR></TABLE>
+<A NAME="4">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Viewing Your Network Connections</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+To configure the network, you use the Network Connections window, shown in Figure 28-4. Choose Start | Control Panel, click Network and Internet Connections, and click Network Connections. Another way to display this window is by clicking Start, right-clicking My Network Places, and choosing Properties. Alternatively, if Connect To appears on the Start menu, choose Start | Connect To | Show All Connections.
+<TABLE BORDER=2><TR><TD ALIGN=CENTER>
+<IMG SRC="peer2peer.netconwin.png" WIDTH=690 HEIGHT=487 ALT="[figure]">
+</TD></TR><TR BGCOLOR="#00ffff"><TD><I>Figure 28-4:  The Network Connections window</I></TD></TR></TABLE>
+<P>
+The Network Connections window displays your LAN and Internet connections and lists network-related tasks. To check whether your computer can communicate with other computers on the LAN, click View Workgroup Computers on the Task pane. You should see a list of the other computers in your workgroup or domain.
+<P>
+<TABLE><TR><TD VALIGN="TOP"><IMG SRC="../images/note.png" ALT="note" WIDTH=95 HEIGHT=29></TD>
+<TD VALIGN="TOP">You also use the Network Connections window to <A HREF="../connecting/2.htm#1">configure Windows to communicate with an Internet account</A>.
+
+</TD></TR></TABLE>
+<A NAME="5">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Running the Network Setup Wizard on Windows Me/98, 2000, and NT Systems</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+You can use the Network Setup Wizard to configure computers on your LAN even if they don't run Windows XP. If you created a Network Setup Disk when you ran the Network Setup Wizard (as described in section "<A HREF="../peer2peer/2.htm#2">Running the Network Setup Wizard</A>" earlier in this chapter), you can run the Network Setup Wizard on Windows 2000, Me, NT, or 9<I>x</I> computers on your LAN by putting the floppy disk in the drive, choosing Start | Run, typing <B>a:setup</B> in the Open box, and clicking OK. The Wizard may need to restart each computer after it runs.
+<P>
+If you didn't create a Network Setup Disk, you can run the Wizard from the Windows XP CD-ROM. Follow these steps:
+<OL>
+<LI  VALUE=1>
+Put the Windows XP CD-ROM in the computer's CD drive. If the Welcome To Microsoft Windows XP window doesn't appear, choose Start | Run and type <B>d:setup</B> (where <I>d</I> is the letter of your CD drive) to display it.
+<LI  VALUE=2>
+Choose Perform Additional Tasks.
+<LI  VALUE=3>
+Choose Set Up A Home Or Small Office Network.
+<LI  VALUE=4>
+Follow the Wizard's instructions, clicking Next to move from window to window.
+</OL>
+<P>
+<A HREF="1.htm"  OnMouseOver='whomp(prevb, "sprev");' OnMouseOut='whomp(prevb, "wprev");'
+ title="Previous Section"><IMG NAME=prevb SRC="../images/wprev.png" ALT="Previous" HEIGHT=20 WIDTH=82 BORDER=0></A><!--
+--><A HREF="index.htm" OnMouseOver='whomp(chapb, "schap");' OnMouseOut='whomp(chapb, "wchap");'
+title="Chapter Overview"><IMG SRC="../images/wchap.png" ALT="Chapter" NAME=chapb HEIGHT=20 WIDTH=100 BORDER=0></A><A
+HREF="../index.htm" OnMouseOver='whomp(tocb, "sbook");' OnMouseOut='whomp(tocb, "wbook");' 
+title="Table of Contents"><IMG SRC="../images/wbook.png" ALT="Contents" NAME=tocb HEIGHT=20 WIDTH=94 BORDER=0></A><A
+HREF="../glossary/index.htm" OnMouseOver='whomp(glosb, "sglos");' OnMouseOut='whomp(glosb, "wglos");' 
+title="Glossary"><IMG SRC="../images/wglos.png" ALT="Glossary" NAME=glosb HEIGHT=20 WIDTH=94 BORDER=0></A><!--
+--><A HREF="3.htm"  OnMouseOver='whomp(nextb, "snext");' OnMouseOut='whomp(nextb, "wnext");'
+ title="Next Section"><IMG NAME=nextb SRC="../images/wnext.png" ALT="Next" HEIGHT=20 WIDTH=82 BORDER=0></A>
+<BR>
+</BLOCKQUOTE>
+</BODY>
+</HTML>

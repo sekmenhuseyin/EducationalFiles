@@ -1,0 +1,16 @@
+start;
+printf("You must guess my number.");
+n=random(10000);
+k=0;
+
+#read
+k=k+1;
+scanf(i);
+if(i==n)goto #finish;
+if(n<i)printf("My number is smaller");
+else printf("My number is bigger");
+goto #read;
+
+#finish
+printf("Correct! ",k," steps!");
+end;

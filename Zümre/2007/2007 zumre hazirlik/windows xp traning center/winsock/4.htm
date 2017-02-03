@@ -1,0 +1,219 @@
+<!doctype html public "-//IETF//DTD HTML//EN">
+<HTML>
+<HEAD>
+<TITLE>Windows XP: The Complete Reference: Other Internet Programs That Come with Windows XP</TITLE>
+<META NAME="GENERATOR" CONTENT="Web-O-Matic Deluxe 4.1">
+<META NAME="AUTHOR" CONTENT="John R. Levine, Margaret Levine Young">
+<META NAME="COPYRIGHT" CONTENTS="Copyright 2001 by The McGraw-Hill Companies. All rights reserved.">
+</HEAD>
+<BODY BACKGROUND="../images/background.png">
+<BLOCKQUOTE>
+<SCRIPT LANGUAGE="JavaScript">
+function whomp(i, file)
+{
+	i.src = "../images/" + file + ".png";
+}
+</SCRIPT>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarered3x3.png" HEIGHT=3 WIDTH=3></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=2>
+Chapter 26: Other Internet Programs That Come with Windows XP
+</FONT></TD>
+</TR>
+</TABLE>
+<BR>
+<A HREF="3.htm"  OnMouseOver='whomp(prev, "sprev");' OnMouseOut='whomp(prev, "wprev");'
+ title="Previous Section"><IMG NAME=prev SRC="../images/wprev.png" ALT="Previous" HEIGHT=20 WIDTH=82 BORDER=0></A><!--
+--><A HREF="index.htm" OnMouseOver='whomp(chap, "schap");' OnMouseOut='whomp(chap, "wchap");'
+title="Chapter Overview"><IMG SRC="../images/wchap.png" ALT="Chapter" NAME=chap HEIGHT=20 WIDTH=100 BORDER=0></A><A
+HREF="../index.htm" OnMouseOver='whomp(toc, "sbook");' OnMouseOut='whomp(toc, "wbook");' 
+title="Table of Contents"><IMG SRC="../images/wbook.png" ALT="Contents" NAME=toc HEIGHT=20 WIDTH=94 BORDER=0></A><A
+HREF="../glossary/index.htm" OnMouseOver='whomp(glos, "sglos");' OnMouseOut='whomp(glos, "wglos");' 
+title="Glossary"><IMG SRC="../images/wglos.png" ALT="Glossary" NAME=glos HEIGHT=20 WIDTH=94 BORDER=0></A><!--
+--><A HREF="5.htm"  OnMouseOver='whomp(next, "snext");' OnMouseOut='whomp(next, "wnext");'
+ title="Next Section"><IMG NAME=next SRC="../images/wnext.png" ALT="Next" HEIGHT=20 WIDTH=82 BORDER=0></A>
+<BR>
+<A NAME="1">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarered10x10.png" HEIGHT=10 WIDTH=10></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=4><B>Transferring Files Using Ftp</B></FONT>
+</TD>
+</TR>
+</TABLE></A>
+<P>
+Another way to transfer files to or from an FTP server is by using a separate FTP client program. Windows XP comes with a basic command-driven FTP client program called Ftp. If you plan to do much file transfer, especially uploading, you'll want to use Web folders (as described in the section "<A HREF="../winsock/3.htm#1">Working with FTP and Web Servers Using Web Folders</A>" earlier in this chapter), or a <A HREF="../winsock/5.htm#1">better FTP client program</A>, such as WS_FTP.
+<A NAME="2">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Basics of FTP</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+To run the Windows XP FTP program, choose Start | Run. Type <B>ftp </B><B><I>serverhost</I></B>, where <I>serverhost</I> is the host name of the FTP server, and click OK. If you are not connected to the Internet and you see your dial-up connection window; click Connect. You see the Ftp window, as shown in Figure 26-7.
+<TABLE BORDER=2><TR><TD ALIGN=CENTER>
+<IMG SRC="winsock.ftpwin.png" WIDTH=669 HEIGHT=338 ALT="[figure]">
+</TD></TR><TR BGCOLOR="#00ffff"><TD><I>Figure 26-7:  The Ftp window</I></TD></TR></TABLE>
+<P>
+To connect to an FTP server, you specify the host name of the server (for example, <B>rtfm.mit.edu</B>), and then you log in. You have two choices:
+<UL>
+<LI >
+If you have an account on the FTP server, log in with your user name and password. You can access all the files that your user name gives you permission to use.
+<LI >
+If you don't have an account on the FTP server, the server may accept connections from guests. Connection without an account on the FTP server is called <A NAME="ddanonymousftp"><I>anonymous FTP</I></A>. To use anonymous FTP, type <B>anonymous</B> for the user name and your own e-mail address as the password. Thousands of FTP servers on the Internet allow you to use anonymous FTP to download files, although some are so busy that it may be hard to get connected.
+</UL>
+<P>
+<TABLE><TR><TD VALIGN="TOP"><IMG SRC="../images/note.png" ALT="note" WIDTH=95 HEIGHT=29></TD>
+<TD VALIGN="TOP">UNIX, the operating system of choice among Internet servers, is sensitive to the case of the names of files, unlike Windows. Be aware of capitalization in file names.
+
+</TD></TR></TABLE>
+<P>
+Once you are connected to an FTP server, it displays lots of messages to let you know what's going on. These messages start with three-digit numbers, which you can ignore. For example, when you have transferred a file, you see the message "226 Transfer Complete."
+<P>
+When you transfer a file--by either uploading or downloading--you must choose between two modes:
+<UL>
+<LI >
+<B><A NAME="ddasciimode">ASCII mode</A> </B>When transferring text files, use ASCII mode. Different computer systems use different characters to indicate the ends of lines. In ASCII mode, the Ftp program automatically adjusts line endings for the system to which the file is transferred.<B></B>
+<LI >
+<B><A NAME="ddbinaryorimagemode">Binary or Image mode</A> </B>When transferring files that consist of anything but unformatted text, use Binary mode. In Binary mode, the Ftp program does not make any changes to the contents of the file during transfer. Use Binary mode when transferring graphics files, audio files, video files, programs, or any kind of file other than plain text.<B></B>
+</UL>
+<P>
+<TABLE><TR><TD VALIGN="TOP"><IMG SRC="../images/tip.png" ALT="tip" WIDTH=95 HEIGHT=29></TD>
+<TD VALIGN="TOP">At the Ftp prompt, type <B>?</B> to see a listing of the commands that Ftp can perform.
+
+</TD></TR></TABLE>
+<A NAME="3">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Navigating the Folder Trees</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+The following are the most common ftp tasks:
+<UL>
+<LI >
+To see a list of files and subdirectories in the current directory on the FTP server, type <B>dir</B>. The exact format of the listing depends on the FTP server's operating system. Figure 26-8 shows a typical listing. You can use wildcards (<B>*</B>) to limit the list. If you want to see filenames only, with no other information, you can use the <B>ls</B> (list) command.
+</UL>
+<TABLE BORDER=2><TR><TD ALIGN=CENTER>
+<IMG SRC="winsock.ftpdir.png" WIDTH=669 HEIGHT=338 ALT="[figure]">
+</TD></TR><TR BGCOLOR="#00ffff"><TD><I>Figure 26-8:  A directory list from an FTP server</I></TD></TR></TABLE>
+<UL>
+<LI >
+To change directories, type <B>cd</B> (for "change directory"), followed by the name of the directory to which you want to move.
+<LI >
+To find out the name of the current directory, type <B>pwd</B> (for "print working directory").
+</UL>
+<P>
+On many publicly accessible FTP servers, all the downloadable files are in a directory called pub. Here are a few tips for moving to the directory you want:
+<UL>
+<LI >
+To move to the parent directory of the current directory, type <B>cd ..</B> (that is, the <B>cd</B> command followed by a space and two dots).
+<LI >
+To move to the top-level directory on the FTP server, also called the root directory, type <B>cd /</B> (that is, the <B>cd</B> command followed by a forward slash). Most FTP servers run the UNIX operating system, which uses forward slashes (as opposed to the backslashes used in Windows).
+<LI >
+You can move directly to a directory by typing its full pathname, starting at the root; the full pathname starts with a <B>/</B> to represent the root directory.
+<LI >
+If the FTP server runs the UNIX operating system, capitalization is important. When typing directory or filenames, be sure to use the correct capitalization--most names use lowercase.
+<LI >
+To change the current local directory (the folder from which Ftp can upload files and to which it can download files), type <B>lcd</B> (local directory), followed by the name of the folder on your computer. If the pathname of the folder contains spaces, enclose the pathname in quotes. To move to the parent folder of the current folder, type <B>lcd ..</B> (the <B>lcd</B> command followed by a space and two dots).
+<LI >
+When you have finished transferring files, type <B>quit</B> or <B>bye </B>to disconnect from the FTP server. A message confirms that you have left the FTP server.
+</UL>
+<P>
+<TABLE><TR><TD VALIGN="TOP"><IMG SRC="../images/tip.png" ALT="tip" WIDTH=95 HEIGHT=29></TD>
+<TD VALIGN="TOP">If you want to disconnect from the FTP server and connect to a different server, you don't have to exit the Ftp program. Instead, type <B>close</B> or <B>disconnect</B> and press E<SMALL>NTER</SMALL> to disconnect from the FTP server. Next, type <B>open</B>, followed by a space, and then the host name of another FTP server; and press E<SMALL>NTER</SMALL> to connect to the other server.
+</TD></TR></TABLE>
+<A NAME="4">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Uploading Files</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+You use the <B>put</B> command to upload the files. To upload a group of files, you can use the <B>mput</B> command.
+<P>
+<TABLE><TR><TD VALIGN="TOP"><IMG SRC="../images/note.png" ALT="note" WIDTH=95 HEIGHT=29></TD>
+<TD VALIGN="TOP">You can upload files only if you have write permission in the directory on the FTP server. Most anonymous FTP servers don't accept uploads, or they accept them into only one specific directory. Read the welcome message to find out the rules for the FTP server you are using.
+
+</TD></TR></TABLE>
+<P>
+To upload a file, follow these steps:
+<OL>
+<LI  VALUE=1>
+Connect to the FTP server, move to the directory on the FTP server in which you want to store the file, and set the current local directory to the folder on your computer that contains the files you want to upload.
+<LI  VALUE=2>
+If the file or files you want to upload contain anything but unformatted ASCII text, type <B>binary</B> to select <A HREF="../winsock/4.htm#2">Binary mode</A>. To switch back to ASCII mode to transfer text files, type <B>ascii</B>.
+<LI  VALUE=3>
+Type <B>put</B>, a space, the filename on your computer, a space, and the filename to use on the FTP server. Then press E<SMALL>NTER</SMALL>. For example, to upload a file named draft13.doc and call the uploaded version report.doc, you would type <B>put draft13.doc report.doc</B>.<LI  VALUE=4>
+You see a series of messages; the message Transfer Complete appears when the file transfer is done.
+</OL>
+<P>
+<TABLE><TR><TD VALIGN="TOP"><IMG SRC="../images/caution.png" ALT="caution" WIDTH=95 HEIGHT=29></TD>
+<TD VALIGN="TOP">If a file with the name that you specify already exists on the FTP server, the <B>put</B> command may overwrite the existing file with the uploaded file. You can use the <B>dir</B> or <B>ls</B> command to check for the existence of a file with the same name.
+
+</TD></TR></TABLE>
+<OL>
+<LI  VALUE=5>
+If you want to check that the file is really on the FTP server, type <B>dir</B> to see a listing of files in the current directory.
+</OL>
+<P>
+You can copy a group of files to the FTP server by typing <B>mput</B> (multiple put). Type <B>mput</B>, followed by a wildcard pattern that matches the names of the files you want to upload. The pattern <B>*</B> indicates that all files in the current directory on your computer should be copied. For example, to upload all the files with the extension .html, you would type <B>mput *.html</B>.
+<P>
+As it copies the files, <B>mput</B> asks you about each file. Type <B>y</B> to upload the file or <B>n</B> to skip it.
+<P>
+<TABLE><TR><TD VALIGN="TOP"><IMG SRC="../images/tip.png" ALT="tip" WIDTH=95 HEIGHT=29></TD>
+<TD VALIGN="TOP">If you don't want <B>mput</B> to ask you about each file before uploading it, type the <B>prompt</B> command first before giving the <B>mput </B>command. The <B>prompt</B> command turns off filename prompting.
+
+</TD></TR></TABLE>
+<A NAME="5">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Downloading Files</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+To download files from the FTP server to your computer, follow these steps:
+<OL>
+<LI  VALUE=1>
+Connect to the FTP server, move to the directory on the FTP server that contains the file that you want to download, and set the current local directory to the folder on your computer in which you want to store the files you download.
+<LI  VALUE=2>
+If the file or files you want to download contain anything but unformatted ASCII text, type <B>binary</B> to select <A HREF="../winsock/4.htm#2">Binary mode</A>. To switch back to ASCII mode to transfer text files, type <B>ascii</B>.
+<LI  VALUE=3>
+Type <B>get</B>, a space, the filename on the FTP server, a space, the filename to use on your computer. Then press E<SMALL>NTER</SMALL>. (You can't use filenames with spaces.) For example, to download a file named bud9812.doc and call the downloaded version budget.dec1998.doc, the command is <B>get bud9812.doc budget.dec2001.doc</B>.<LI  VALUE=4>
+You see a series of messages; the message Transfer Complete appears when the file transfer is done. To interrupt the file transfer, press C<SMALL>TRL</SMALL>-C. Sometimes that doesn't work, and the only way to interrupt the transfer is to close the FTP window.<LI  VALUE=5>
+If you want to check whether the file is really downloaded, use Windows Explorer to see a listing of files on your computer.
+</OL>
+<P>
+You can copy a group of files to the FTP server by typing <B>mget</B>, followed by a wildcard pattern that matches the names of the files that you want to download. The pattern <B>*</B> means that all files in the current directory on your computer should be copied. For example, to download all the files whose names start with <I>d</I>, you would type <B>mget d*</B>.
+<P>
+As it copies the files, <B>mget</B> asks you about each file. Type <B>y</B> to download the files or <B>n</B> to skip it.
+<P>
+<TABLE><TR><TD VALIGN="TOP"><IMG SRC="../images/tip.png" ALT="tip" WIDTH=95 HEIGHT=29></TD>
+<TD VALIGN="TOP">If you download a nontext file that is unusable, you probably forgot to issue the binary command before downloading the file.
+
+</TD></TR></TABLE>
+<P>
+<A HREF="3.htm"  OnMouseOver='whomp(prevb, "sprev");' OnMouseOut='whomp(prevb, "wprev");'
+ title="Previous Section"><IMG NAME=prevb SRC="../images/wprev.png" ALT="Previous" HEIGHT=20 WIDTH=82 BORDER=0></A><!--
+--><A HREF="index.htm" OnMouseOver='whomp(chapb, "schap");' OnMouseOut='whomp(chapb, "wchap");'
+title="Chapter Overview"><IMG SRC="../images/wchap.png" ALT="Chapter" NAME=chapb HEIGHT=20 WIDTH=100 BORDER=0></A><A
+HREF="../index.htm" OnMouseOver='whomp(tocb, "sbook");' OnMouseOut='whomp(tocb, "wbook");' 
+title="Table of Contents"><IMG SRC="../images/wbook.png" ALT="Contents" NAME=tocb HEIGHT=20 WIDTH=94 BORDER=0></A><A
+HREF="../glossary/index.htm" OnMouseOver='whomp(glosb, "sglos");' OnMouseOut='whomp(glosb, "wglos");' 
+title="Glossary"><IMG SRC="../images/wglos.png" ALT="Glossary" NAME=glosb HEIGHT=20 WIDTH=94 BORDER=0></A><!--
+--><A HREF="5.htm"  OnMouseOver='whomp(nextb, "snext");' OnMouseOut='whomp(nextb, "wnext");'
+ title="Next Section"><IMG NAME=nextb SRC="../images/wnext.png" ALT="Next" HEIGHT=20 WIDTH=82 BORDER=0></A>
+<BR>
+</BLOCKQUOTE>
+</BODY>
+</HTML>

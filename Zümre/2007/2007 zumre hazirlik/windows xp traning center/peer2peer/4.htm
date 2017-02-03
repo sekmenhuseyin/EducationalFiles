@@ -1,0 +1,171 @@
+<!doctype html public "-//IETF//DTD HTML//EN">
+<HTML>
+<HEAD>
+<TITLE>Windows XP: The Complete Reference: Configuring Windows for a LAN</TITLE>
+<META NAME="GENERATOR" CONTENT="Web-O-Matic Deluxe 4.1">
+<META NAME="AUTHOR" CONTENT="John R. Levine, Margaret Levine Young">
+<META NAME="COPYRIGHT" CONTENTS="Copyright 2001 by The McGraw-Hill Companies. All rights reserved.">
+</HEAD>
+<BODY BACKGROUND="../images/background.png">
+<BLOCKQUOTE>
+<SCRIPT LANGUAGE="JavaScript">
+function whomp(i, file)
+{
+	i.src = "../images/" + file + ".png";
+}
+</SCRIPT>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarered3x3.png" HEIGHT=3 WIDTH=3></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=2>
+Chapter 28: Configuring Windows for a LAN
+</FONT></TD>
+</TR>
+</TABLE>
+<BR>
+<A HREF="3.htm"  OnMouseOver='whomp(prev, "sprev");' OnMouseOut='whomp(prev, "wprev");'
+ title="Previous Section"><IMG NAME=prev SRC="../images/wprev.png" ALT="Previous" HEIGHT=20 WIDTH=82 BORDER=0></A><!--
+--><A HREF="index.htm" OnMouseOver='whomp(chap, "schap");' OnMouseOut='whomp(chap, "wchap");'
+title="Chapter Overview"><IMG SRC="../images/wchap.png" ALT="Chapter" NAME=chap HEIGHT=20 WIDTH=100 BORDER=0></A><A
+HREF="../index.htm" OnMouseOver='whomp(toc, "sbook");' OnMouseOut='whomp(toc, "wbook");' 
+title="Table of Contents"><IMG SRC="../images/wbook.png" ALT="Contents" NAME=toc HEIGHT=20 WIDTH=94 BORDER=0></A><A
+HREF="../glossary/index.htm" OnMouseOver='whomp(glos, "sglos");' OnMouseOut='whomp(glos, "wglos");' 
+title="Glossary"><IMG SRC="../images/wglos.png" ALT="Glossary" NAME=glos HEIGHT=20 WIDTH=94 BORDER=0></A><!--
+--><A HREF="5.htm"  OnMouseOver='whomp(next, "snext");' OnMouseOut='whomp(next, "wnext");'
+ title="Next Section"><IMG NAME=next SRC="../images/wnext.png" ALT="Next" HEIGHT=20 WIDTH=82 BORDER=0></A>
+<BR>
+<A NAME="1">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarered10x10.png" HEIGHT=10 WIDTH=10></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=4><B>Checking Your Network Connection</B></FONT>
+</TD>
+</TR>
+</TABLE></A>
+<P>
+The <A HREF="../peer2peer/2.htm#1">Network Setup Wizard</A> usually installs and configures your network components correctly. This section describes how to discover your computer's IP address and how to try rudimentary network communication.
+<A NAME="2">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Checking Your TCP/IP Address</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+Windows can display your computer's IP address and other TCP/IP settings. In the Network Connections window (choose Start | Control Panel, click Network And Internet Connections, and click Network Connections), right-click a connection and choose Status from the menu that appears. You see a window like this:
+<BR><IMG ALIGN=TOP SRC="peer2peer.status.png" WIDTH=344 HEIGHT=351 ALT="[image]">
+<P>
+Click the Support tab to see your IP address:
+<BR><IMG ALIGN=TOP SRC="peer2peer.status2.png" WIDTH=344 HEIGHT=351 ALT="[image]">
+<P>
+You can also see where the IP address came from (in this example, it was assigned by a DHCP server). For details, click the Details button. You can click Repair to re-request an IP address from the DHCP server.
+<P>
+Another way to see your IP address and other information is by running the Ipconfig program. Choose Start | All Programs | Accessories | Command Prompt to open a <A HREF="../dos/2.htm#1">Command Prompt window</A>. Then type <B>ipconfig /all</B> and press E<SMALL>NTER</SMALL>. You see a listing like this:<P><PRE>
+Windows IP Configuration<BR>
+<BR>
+        Host Name . . . . . . . . . . . . : inspiron7000<BR>
+        Primary Dns Suffix  . . . . . . . :<BR>
+        Node Type . . . . . . . . . . . . : Hybrid<BR>
+        IP Routing Enabled. . . . . . . . : No<BR>
+        WINS Proxy Enabled. . . . . . . . : No<BR>
+<BR>
+Ethernet adapter Local Area Connection:<BR>
+<BR>
+        Connection-specific DNS Suffix  . : mshome.net<BR>
+        Description . . . . . . . . . . . : EtherFast 10/100 PC Card<BR>
+        Physical Address. . . . . . . . . : 00-E0-98-04-47-15<BR>
+        Dhcp Enabled. . . . . . . . . . . : Yes<BR>
+        Autoconfiguration Enabled . . . . : Yes<BR>
+        IP Address. . . . . . . . . . . . : 192.168.0.4<BR>
+        Subnet Mask . . . . . . . . . . . : 255.255.255.0<BR>
+        Default Gateway . . . . . . . . . : 192.168.0.1<BR>
+        DHCP Server . . . . . . . . . . . : 192.168.0.1<BR>
+        DNS Servers . . . . . . . . . . . : 192.168.0.1<BR>
+        Lease Obtained. . . . . . . . . . : Tuesday, July 31, 2001<BR>
+        Lease Expires . . . . . . . . . . : Wednesday, August 01, 2001
+</PRE>
+<P>
+The Dhcp Enabled line tells you whether your computer got its IP address from a DHCP server, and if so, the Lease Obtained line tells when your computer got the address. If your computer uses <A HREF="../ics/index.htm">ICS</A>, the Default Gateway, DHCP Server, and DNS Servers entries are 192.168.0.1.
+<A NAME="3">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Testing Your TCP/IP Connection</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+Once you've installed and configured the network components for a computer, you need to see whether your network works. Sit down at any of the computers on the network and follow these steps:
+<OL>
+<LI  VALUE=1>
+Use the <A HREF="../connecting/8.htm#3">Ping</A> program to ping yourself--that is, ping your own computer's IP address. In the Network Connections window (choose Start | Control Panel, click Network And Internet Connections, and click Network Connections), right-click your LAN connection, choose Status, and click the Support tab to find out your own computer's IP address. If this step doesn't work, TCP/IP isn't correctly installed on your computer, or it's not getting an IP address. (The Ipconfig program described in the previous section pings your own computer to get some of the information the Ipconfig displays.)
+<LI  VALUE=2>
+Ping another computer on the LAN to see whether information can travel from your computer to another. Follow the instructions in the previous section first to determine the IP address of a computer on the LAN to ping. (Trying pinging your default gateway, which is frequently at 192.168.0.1.) If this step fails, your LAN cable or connection may not work.
+<LI  VALUE=3>
+Open the My Network Places window (choose Start | My Network Places) to see what appears. If you are part of a small network (fewer than 32 computers), shortcuts shared folders on the other computers should appear automatically. Otherwise, you can click <A HREF="../sharehw/2.htm#2">Add A Network Place</A> to add shortcuts to folders. If this step doesn't work, your workgroup name may not be set correctly.
+<LI  VALUE=4>
+If you don't see shortcuts in the My Network Places window, there's another way to connect to other computers on the LAN. Click View Workgroup Computers in the Task pane of the My Network Places window. You see the names of all the computers in the workgroup. Open an icon (click or double-click it, depending on how you have Windows configured) to see the folders and printers that are available on that computer. If you see Entire Network as an entry, open it. Then open Microsoft Windows Network, and then open your workgroup. The computers in your workgroup should appear.
+<LI  VALUE=5>
+If you still don't see icons for the other computers on the network, read through the section "<A HREF="../peer2peer/5.htm#1">Troubleshooting Your Network</A>" later in this chapter to find and fix the problem. If you see only your own computer in the workgroup, or the Entire Network window is blank, communication has broken down with the other computers. It could be physical, like a bad cable, or it could be a problem with your software configuration, such as using the wrong protocol.
+</OL>
+<P>
+Once your network is working, the next step is to use it to <A HREF="../sharehw/index.htm">share resources</A>.
+<A NAME="4">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Viewing LAN Resources with the Net Command</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+You can see a list of the shared resources of a computer on the LAN by using a command-line program called Net. Open a Command Prompt window by choosing Start | All Programs | Accessories | Command Prompt. Then type <B>net view //</B><B><I>computername</I></B> and press E<SMALL>NTER</SMALL>. Replace <I>computername</I> with the name of a computer on the LAN. For example, the command <B>net view \\dell8100</B> might produce this listing:<P><PRE>
+Shared resources at \\dell8100<BR>
+<BR>
+Dell Dimension 8100<BR>
+<BR>
+Share name   Type      Use as   Comment<BR>
+---------------------------------------------<BR>
+D            Disk<BR>
+SharedDocs   Disk<BR>
+PRINTER      Print<BR>
+The command completed successfully.
+</PRE>
+<P>
+If the computer has no shared resources, you see the message "There are no entries in the list." If you don't have permission to view the shared resources on that computer, you see the message "Access is denied." If you see the message "System error 53 has occurred," the computer name is wrong, the computer is not on the LAN, or File and Printer Sharing for Microsoft Networks isn't running on that computer.
+<P>
+You can see a list of all the shared resources on your own computer by typing <B>net share</B>.
+<P>
+<TABLE><TR><TD VALIGN="TOP"><IMG SRC="../images/note.png" ALT="note" WIDTH=95 HEIGHT=29></TD>
+<TD VALIGN="TOP">The Net View command works with all installed protocols. Ping works only with TCP/IP.
+
+</TD></TR></TABLE>
+<A NAME="5">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Viewing LAN Usage</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+If you are worried that your LAN is slowing down because it can't handle the volume of data, Windows can display a graph of LAN utilization. Press C<SMALL>TRL</SMALL>-A<SMALL>LT</SMALL>-D<SMALL>ELETE</SMALL> to see the <A HREF="../performance/2.htm#3">Windows Task Manager</A> window. Click the Networking tab to see this window:<BR><IMG ALIGN=TOP SRC="peer2peer.taskman.png" WIDTH=404 HEIGHT=455 ALT="[image]">
+<P>
+The graph shows network usage over time, as a percentage of the amount of data that it could carry. Unless you are copying huge files (for example, if you do backups over the LAN), the percentages usually stay amazingly low.
+<P>
+<A HREF="3.htm"  OnMouseOver='whomp(prevb, "sprev");' OnMouseOut='whomp(prevb, "wprev");'
+ title="Previous Section"><IMG NAME=prevb SRC="../images/wprev.png" ALT="Previous" HEIGHT=20 WIDTH=82 BORDER=0></A><!--
+--><A HREF="index.htm" OnMouseOver='whomp(chapb, "schap");' OnMouseOut='whomp(chapb, "wchap");'
+title="Chapter Overview"><IMG SRC="../images/wchap.png" ALT="Chapter" NAME=chapb HEIGHT=20 WIDTH=100 BORDER=0></A><A
+HREF="../index.htm" OnMouseOver='whomp(tocb, "sbook");' OnMouseOut='whomp(tocb, "wbook");' 
+title="Table of Contents"><IMG SRC="../images/wbook.png" ALT="Contents" NAME=tocb HEIGHT=20 WIDTH=94 BORDER=0></A><A
+HREF="../glossary/index.htm" OnMouseOver='whomp(glosb, "sglos");' OnMouseOut='whomp(glosb, "wglos");' 
+title="Glossary"><IMG SRC="../images/wglos.png" ALT="Glossary" NAME=glosb HEIGHT=20 WIDTH=94 BORDER=0></A><!--
+--><A HREF="5.htm"  OnMouseOver='whomp(nextb, "snext");' OnMouseOut='whomp(nextb, "wnext");'
+ title="Next Section"><IMG NAME=nextb SRC="../images/wnext.png" ALT="Next" HEIGHT=20 WIDTH=82 BORDER=0></A>
+<BR>
+</BLOCKQUOTE>
+</BODY>
+</HTML>

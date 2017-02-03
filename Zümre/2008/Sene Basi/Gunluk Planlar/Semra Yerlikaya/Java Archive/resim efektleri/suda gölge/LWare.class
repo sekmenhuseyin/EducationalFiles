@@ -1,0 +1,23 @@
+Êþº¾  -    ' 3 7 : A B c q  System
+ ! h (Ljava/awt/Font;)V (Ljava/lang/String;)V  java/awt/Color
+ J u -if you want to see or take my latest applets! *(Ljava/awt/Component;)Ljava/awt/Component;
+ d 
+ ^ / add
+  > Ljava/awt/Color; n / java/awt/Event   java/awt/Frame void 
+SourceFile action " java/awt/Font , % D { (Ljava/lang/Object;)Z 1 M Connect java/applet/AppletContext (
+ 5 
+ LocalVariableTable equals #(Ljava/net/URL;Ljava/lang/String;)V
+  L ()V
+ J $ id ) a 'You can connect to my java applets page java/net/URL 4 showDocument )Error linking www.van-der-schaar.demon.nl java/net/MalformedURLException 8 4http://www.van-der-schaar.demon.nl/page1/index2.html	 _ t
+ G g ]  q / pink j l Cancel _blank Ljava/applet/AppletContext; handleEvent (IIII)V HWARNING: Decompiling this code may violate your licensing agreement
+ H java/awt/GridLayout	  & K java/awt/Component Z / I O java/awt/Container m |	  = Code (Ljava/lang/String;II)V %(Ljava/awt/Event;Ljava/lang/Object;)Z
+ J k
+ [ 
+ ) z  
+ N @ show \ java/awt/Button 	lightGray pack ` LWare 6 -
+   (Linking with www.van-der-schaar.demon.nl e java/awt/Label
+ s # q E q S setFont 	setLayout w | (Ljava/awt/LayoutManager;)V setBackground hide
+ J 
+ N X <init> java/lang/Object r  C i  
+showStatus setForeground .(Ljava/applet/AppletContext;Ljava/awt/Label;)V ?  v  (Ljava/awt/Event;)Z (Ljava/awt/Color;)V	  y java/awt/Window ~
+ J P   _       C     q x  R   ¥     ‡*· *+µ ;*» !Y· ¶ *» GY· <¶ Y*² Q¶ €*² }¶ U» dY· N» dY· :*,¶ pW*-¶ pW*¶ pW» [Y· V:*¶ pW» [Y· V:*¶ pW*¶ b±    +               Z /  R   #     *· .±    +                 T  R   x     R,¶ f™ 	*¶ o¬,¶ f™ ;*¶ oN*´ ;	¹ W » 5Y· *N§ W*´ ;¹ W *´ ;-¹ 2 ¬¬  ) 3 6 9  +               D {  R   >      +´ I ËŸ +´ I É  	*¶ o¬*+· 0¬    +                   F

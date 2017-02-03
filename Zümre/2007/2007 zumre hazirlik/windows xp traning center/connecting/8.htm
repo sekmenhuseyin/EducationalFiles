@@ -1,0 +1,342 @@
+<!doctype html public "-//IETF//DTD HTML//EN">
+<HTML>
+<HEAD>
+<TITLE>Windows XP: The Complete Reference: Connecting to the Internet</TITLE>
+<META NAME="GENERATOR" CONTENT="Web-O-Matic Deluxe 4.1">
+<META NAME="AUTHOR" CONTENT="John R. Levine, Margaret Levine Young">
+<META NAME="COPYRIGHT" CONTENTS="Copyright 2001 by The McGraw-Hill Companies. All rights reserved.">
+</HEAD>
+<BODY BACKGROUND="../images/background.png">
+<BLOCKQUOTE>
+<SCRIPT LANGUAGE="JavaScript">
+function whomp(i, file)
+{
+	i.src = "../images/" + file + ".png";
+}
+</SCRIPT>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarered3x3.png" HEIGHT=3 WIDTH=3></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=2>
+Chapter 22: Connecting to the Internet
+</FONT></TD>
+</TR>
+</TABLE>
+<BR>
+<A HREF="7.htm"  OnMouseOver='whomp(prev, "sprev");' OnMouseOut='whomp(prev, "wprev");'
+ title="Previous Section"><IMG NAME=prev SRC="../images/wprev.png" ALT="Previous" HEIGHT=20 WIDTH=82 BORDER=0></A><!--
+--><A HREF="index.htm" OnMouseOver='whomp(chap, "schap");' OnMouseOut='whomp(chap, "wchap");'
+title="Chapter Overview"><IMG SRC="../images/wchap.png" ALT="Chapter" NAME=chap HEIGHT=20 WIDTH=100 BORDER=0></A><A
+HREF="../index.htm" OnMouseOver='whomp(toc, "sbook");' OnMouseOut='whomp(toc, "wbook");' 
+title="Table of Contents"><IMG SRC="../images/wbook.png" ALT="Contents" NAME=toc HEIGHT=20 WIDTH=94 BORDER=0></A><A
+HREF="../glossary/index.htm" OnMouseOver='whomp(glos, "sglos");' OnMouseOut='whomp(glos, "wglos");' 
+title="Glossary"><IMG SRC="../images/wglos.png" ALT="Glossary" NAME=glos HEIGHT=20 WIDTH=94 BORDER=0></A><!--
+--><IMG SRC="../images/bnext.png" ALT="Next" HEIGHT=20 WIDTH=82 BORDER=0>
+<BR>
+<A NAME="1">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarered10x10.png" HEIGHT=10 WIDTH=10></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=4><B>Testing Your Connection</B></FONT>
+</TD>
+</TR>
+</TABLE></A>
+<P>
+After dialing up a <A HREF="../connecting/2.htm#1">network connection</A>, you can use the Windows' <A HREF="../connecting/8.htm#2">Ipconfig</A> command to find out the IP address of your computer. The <A HREF="../connecting/8.htm#3">Ping program</A> can test whether packets of information can make the round trip from your computer, out over the Internet to another computer, and back to your computer. You can use the <A HREF="../connecting/8.htm#4">Tracert program</A> to trace the route packets take to get from your computer to another computer, and you can use the <A HREF="../connecting/8.htm#5">Netstat</A> program to find out to which computers your computer is talking.
+<P>
+Some of these commands are usually run from the <A HREF="../dos/index.htm">Command Prompt window</A>. Open a Command Prompt window by choosing Start | All Programs | Accessories | Command Prompt.
+<A NAME="2">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Displaying Your IP Address</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+Your computer can have more than one IP address at the same time: each network connection can have a separate IP address. For example, your computer can have the address 204.135.25.67 on the Internet (via a dial-up, cable, DSL account, assigned by your ISP) and the address 192.168.0 on your LAN (see <A HREF="../lans/index.htm">Chapter 27</A> for how IP addresses are assigned on the LAN.
+<P>
+There are three easy ways to display the IP address of your Internet connection:
+<UL>
+<LI >
+<B>Dial-up connection icon</B>  For a dial-up connection, click the dial-up connection icon on the notification area of the taskbar (described earlier in this chapter, in the section "<A HREF="../connecting/6.htm#3">Dialing the Internet Manually</A>"). In the status dialog box that appears, click the Details tab, as shown in Figure 22-9.
+</UL>
+<TABLE BORDER=2><TR><TD ALIGN=CENTER>
+<IMG SRC="connecting.ipaddress.png" WIDTH=344 HEIGHT=351 ALT="[figure]">
+</TD></TR><TR BGCOLOR="#00ffff"><TD><I>Figure 22-9:  Displaying the IP address of your Internet dial-up connection</I></TD></TR></TABLE>
+<UL>
+<LI >
+<B>View Status Of This Connection</B>  For all connections, display the Network Connections window (shown in Figure 22-2). Select the connection, and click View Status Of This Connection in the Network Tasks section of the Task pane. You see the status dialog box for the connection. For dial-up connections, click the Details tab (shown in Figure 22-9). For LAN connections, click the Support tab.
+<LI >
+<B>Ipconfig program</B>  The Ipconfig program displays information about your TCP/IP connection. To run Ipconfig, open a Command Prompt window by choosing Start | All Programs | Accessories | Command Prompt. Type <B>ipconfig</B> and press E<SMALL>NTER</SMALL>. You see a listing of your network connections that communicate using TCP/IP (including dial-up Internet connections, DSL and cable Internet connections, and most LAN connections), like this:</UL>
+<P><PRE>
+Windows IP Configuration<BR>
+<BR>
+Ethernet adapter Local Area Connection:<BR>
+<BR>
+        Connection-specific DNS Suffix  . :<BR>
+        IP Address. . . . . . . . . . . . : 192.168.0.1<BR>
+        Subnet Mask . . . . . . . . . . . : 255.255.255.0<BR>
+        Default Gateway . . . . . . . . . :<BR>
+<BR>
+PPP adapter Shoreham.net:<BR>
+<BR>
+        Connection-specific DNS Suffix  . :<BR>
+        IP Address. . . . . . . . . . . . : 208.144.253.8<BR>
+        Subnet Mask . . . . . . . . . . . : 255.255.255.255<BR>
+        Default Gateway . . . . . . . . . : 208.144.253.8
+</PRE>
+<P>
+The IP address of your Internet connection is likely to change each time you connect to your ISP, because most ISPs assign IP addresses dynamically.
+<A NAME="3">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Testing Communication with Another Computer by Using Ping</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+Sending a small text packet on a round-trip is called <A NAME="ddpinging"><I>pinging</I></A>, and you can use Windows' built-in Ping program to send one. (Imagine that your computer sends the message "ping" and the other computer replies "pong.") To run Ping, open a Command Prompt window by choosing Start | All Programs | Accessories | Command Prompt and type the Ping command, as follows:
+<P><PRE>
+ping <I>system</I>
+</PRE>
+<P>
+Replace <I>system</I> with either the numeric <A HREF="../connecting/5.htm#2">IP address</A> or the host name of the computer you want to ping. Choose any Internet host computer that you're sure is online, such as your ISP's mail server. Then press E<SMALL>NTER</SMALL>.<P>
+<TABLE><TR><TD VALIGN="TOP"><IMG SRC="../images/tip.png" ALT="tip" WIDTH=95 HEIGHT=29></TD>
+<TD VALIGN="TOP">To see a listing of all the command-line options for the Ping program, type <B>ping /?</B> at the DOS prompt.
+
+</TD></TR></TABLE>
+<P>
+For example, you can ping the Yahoo! Web server (a Web search engine and directory) by typing
+<P><PRE>
+ping www.yahoo.com
+</PRE>
+<P>
+Ping sends out four test packets (pings) and reports how long the packets take to get to the Internet Gurus computer and back to yours, like this:
+<P><PRE>
+Pinging net.gurus.com [208.31.42.79] with 32 bytes of data:<BR>
+<BR>
+Reply from 208.31.42.79: bytes=32 time=204ms TTL=248<BR>
+Reply from 208.31.42.79: bytes=32 time=220ms TTL=248<BR>
+Reply from 208.31.42.79: bytes=32 time=200ms TTL=248<BR>
+Reply from 208.31.42.79: bytes=32 time=210ms TTL=248<BR>
+<BR>
+Ping statistics for 208.31.42.79:<BR>
+    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),<BR>
+Approximate round trip times in milli-seconds:<BR>
+    Minimum = 200ms, Maximum = 220ms, Average = 208ms
+</PRE>
+<P>
+For each packet, you see both how long the round-trip takes in milliseconds and summary information about all four packets' trips. If ping doesn't receive the response it is waiting for within a time limit, you see an error message.
+<P>
+Ping has a number of options, which are listed in Table 22-2. Ping has other arcane options, not listed here.
+<P>
+<TABLE><TR><TD VALIGN="TOP"><IMG SRC="../images/tip.png" ALT="tip" WIDTH=95 HEIGHT=29></TD>
+<TD VALIGN="TOP">First try Ping with a numeric IP address (for example, 216.32.74.50 for a Yahoo! Web server, or 208.31.42.79 for our Web server), to see whether packets get out to the Internet and back. Then try Ping with a host name, to see whether you successfully contact your DNS to convert the name into an IP address. If the first test works and the second doesn't (failing with an "Unable to resolve target system name" error), your connection isn't <A HREF="../connecting/5.htm#2">set up</A> properly to contact a DNS.
+
+</TD></TR></TABLE>
+<BLOCKQUOTE><TABLE BORDER=2><TR><TD>
+<TABLE>
+<TR>
+<TD>
+<B>Option</B>
+</TD>
+<TD>
+<B>Description</B>
+</TD>
+</TR>
+<TR>
+<TD>
+-a
+</TD>
+<TD>
+Reports numeric addresses rather than host names.
+</TD>
+</TR>
+<TR>
+<TD>
+-f
+</TD>
+<TD>
+Specifies that packets contain a Do Not Fragment flag, so packets aren't fragmented en route. (Useful to test very slow dial-up connections.)
+</TD>
+</TR>
+<TR>
+<TD>
+-i <I>ttl</I>
+</TD>
+<TD>
+Specifies the <A NAME="ddtimetolive"><I>Time To Live</I></A> for the packets (how many times the packet can be passed from one computer to another while in transit on the network).
+</TD>
+</TR>
+<TR>
+<TD>
+-n <I>n</I>
+</TD>
+<TD>
+Specifies to send <I>n</I> pings. (The default is four.)
+</TD>
+</TR>
+<TR>
+<TD>
+-r <I>n</I>
+</TD>
+<TD>
+Specifies the outgoing and returning packets should record the first <I>n</I> hosts on the route they take, using the Return Route field; <I>n</I> is a number from 1 to 9.
+</TD>
+</TR>
+<TR>
+<TD>
+-t
+</TD>
+<TD>
+Specifies to continue pinging until you interrupt it. (Otherwise, it pings four times.)
+</TD>
+</TR>
+<TR>
+<TD>
+-w <I>n</I>
+</TD>
+<TD>
+Specifies a time-out of <I>n</I> milliseconds for each packet.
+</TD>
+</TR>
+</TABLE></BLOCKQUOTE>
+<TR BGCOLOR="#00ffff"><TD>
+<I>Table 2:  Options for the Ping Program</I>
+</TD></TR></TABLE></BLOCKQUOTE>
+<A NAME="4">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Tracing Packets over the Internet</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+Packets of information don't usually go directly from one computer to another computer over the Internet. Instead, they are involved in a huge game of "whisper-down-the-lane," in which packets are passed from computer to computer until they reach their destination. If your data seems to be moving slowly, you can use the Tracert (short for <I>trace route</I>) program to follow your packets across the Internet, from your computer to an Internet host you frequently use. The technique Tracert uses doesn't always work, so it's quite possible running Tracert to a remote computer can fail, even though the computer is working and accessible.
+<P>
+To run Tracert, open a Command Prompt window by choosing Start | All Programs | Accessories | Command Prompt. Then type the Tracert command:
+<P><PRE>
+tracert <I>system</I>
+</PRE>
+<P>
+Replace <I>system</I> with either the numeric IP address or the Internet name of the computer to which you want to trace the route. Then press E<SMALL>NTER</SMALL>.<P>
+<TABLE><TR><TD VALIGN="TOP"><IMG SRC="../images/tip.png" ALT="tip" WIDTH=95 HEIGHT=29></TD>
+<TD VALIGN="TOP">To see a listing of all the command-line options for the Tracert program, type <B>tracert</B> at the DOS prompt, with no system address.
+
+</TD></TR></TABLE>
+<P>
+For example, you can trace the route of packets from your computer to the Internet Gurus Web directory at <B>net.gurus.com</B> by typing:
+<P><PRE>
+tracert net.gurus.com
+</PRE>
+<P>
+You see a listing like this:
+<P><PRE>
+Tracing route to net.gurus.com [208.31.42.79]<BR>
+over a maximum of 30 hops:<BR>
+<BR>
+  1     *        *        *     Request timed out.<BR>
+  2   148 ms   149 ms   139 ms  rtr.shoreham.net [208.144.253.1]<BR>
+  3   149 ms   149 ms   149 ms  shoreham253.greenmountainaccess.net [208.144.253.253]<BR>
+  4   149 ms   139 ms   149 ms  richmond-1.greenmountainaccess.net [208.144.252.13]<BR>
+  5   190 ms   179 ms   189 ms  sl-gw20-nyc-6-1-0-TS8.sprintlink.net [160.81.215.241]<BR>
+  6   216 ms   189 ms   229 ms  sl-finlak-7-0.sprintlink.net [160.81.228.18]<BR>
+  7   220 ms   199 ms   219 ms  208.31.47.5<BR>
+  8   229 ms   199 ms   209 ms  net.gurus.com [208.31.42.79]<BR>
+<BR>
+Trace complete.
+</PRE>
+<P>
+The listing shows the route the packets took from your computer to the specified host (sometimes Tracert reports a different host name from the one you specified, which means the host has more than one name). For each hop (stage of the route), Tracert sends out three packets and reports the time each packet took to reach that far. It also reports the name and numeric IP address of the host.
+<P>
+Table 22-3 shows the options you can use with the Tracert program (type them before the host name or address). A few other arcane options are not listed here.
+<BLOCKQUOTE><TABLE BORDER=2><TR><TD>
+<TABLE>
+<TR>
+<TD>
+<B>Option</B>
+</TD>
+<TD>
+<B>Description</B>
+</TD>
+</TR>
+<TR>
+<TD>
+-d
+</TD>
+<TD>
+Specifies not to resolve addresses to host names, so the resulting list of hosts consists only of numeric IP addresses
+</TD>
+</TR>
+<TR>
+<TD>
+-h <I>n</I>
+</TD>
+<TD>
+Specifies a maximum number of <I>n</I> hops to trace before giving up
+</TD>
+</TR>
+<TR>
+<TD>
+-w <I>n</I>
+</TD>
+<TD>
+Specifies that the program wait <I>n</I> milliseconds for each reply before giving up
+</TD>
+</TR>
+</TABLE></BLOCKQUOTE>
+<TR BGCOLOR="#00ffff"><TD>
+<I>Table 3:  Options for the Tracert Program</I>
+</TD></TR></TABLE></BLOCKQUOTE>
+<A NAME="5">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Displaying Internet Connections Using Netstat</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+Netstat is a network diagnostic program you can use for any TCP/IP connection--Internet connections or LANs. You can run Netstat to see which computers your computer is connected to over the Internet--not the ISP to which you dial in, but other Internet hosts to or from which you are transferring information.
+<P>
+To run Netstat, open a <A HREF="../dos/index.htm">Command Prompt window</A> by choosing Start | All Programs | Accessories | Command Prompt. Then type the following:
+<P><PRE>
+netstat
+</PRE>
+<P>
+When you press E<SMALL>NTER</SMALL>, you see a listing of the Internet connections currently running, like this:<P><PRE>
+Active Connections<BR>
+<BR>
+Proto  Local Address          Foreign Address        State<BR>
+TCP    inspiron7000:4683      ftp1.us.dell.com:ftp   ESTABLISHED<BR>
+TCP    inspiron7000:4684      wx.iecc.com:pop3       SYN_SENT<BR>
+TCP    inspiron7000:4687      pop.vip.sc5.yahoo.com:pop3  TIME_WAIT<BR>
+TCP    inspiron7000:4689      smtp.america.net:smtp  ESTABLISHED<BR>
+TCP    inspiron7000:4690      books.iecc.com:http    SYN_SENT<BR>
+TCP    inspiron7000:4431      msgr-ns9.msgr.hotmail.com:1863  ESTABLISHED
+</PRE>
+<P>
+This listing shows that the computer is connected to other computers for receiving <A HREF="../browsing/index.htm">Web pages</A> (the 80 or http at the end of the address signifies the port commonly used for Web page retrieval), for file transfer (ftp), for sending mail (smtp), for receiving mail (pop3), and for instant messaging.
+<P>
+<TABLE><TR><TD VALIGN="TOP"><IMG SRC="../images/tip.png" ALT="tip" WIDTH=95 HEIGHT=29></TD>
+<TD VALIGN="TOP">To see a listing of all the command-line options for the Netstat program, type <B>netstat /h</B> at the DOS prompt.
+
+</TD></TR></TABLE>
+<P>
+<A HREF="7.htm"  OnMouseOver='whomp(prevb, "sprev");' OnMouseOut='whomp(prevb, "wprev");'
+ title="Previous Section"><IMG NAME=prevb SRC="../images/wprev.png" ALT="Previous" HEIGHT=20 WIDTH=82 BORDER=0></A><!--
+--><A HREF="index.htm" OnMouseOver='whomp(chapb, "schap");' OnMouseOut='whomp(chapb, "wchap");'
+title="Chapter Overview"><IMG SRC="../images/wchap.png" ALT="Chapter" NAME=chapb HEIGHT=20 WIDTH=100 BORDER=0></A><A
+HREF="../index.htm" OnMouseOver='whomp(tocb, "sbook");' OnMouseOut='whomp(tocb, "wbook");' 
+title="Table of Contents"><IMG SRC="../images/wbook.png" ALT="Contents" NAME=tocb HEIGHT=20 WIDTH=94 BORDER=0></A><A
+HREF="../glossary/index.htm" OnMouseOver='whomp(glosb, "sglos");' OnMouseOut='whomp(glosb, "wglos");' 
+title="Glossary"><IMG SRC="../images/wglos.png" ALT="Glossary" NAME=glosb HEIGHT=20 WIDTH=94 BORDER=0></A><!--
+--><IMG SRC="../images/bnext.png" ALT="Next" HEIGHT=20 WIDTH=82 BORDER=0>
+<BR>
+</BLOCKQUOTE>
+</BODY>
+</HTML>

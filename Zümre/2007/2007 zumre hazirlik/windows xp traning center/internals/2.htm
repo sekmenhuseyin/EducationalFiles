@@ -1,0 +1,216 @@
+<!doctype html public "-//IETF//DTD HTML//EN">
+<HTML>
+<HEAD>
+<TITLE>Windows XP: The Complete Reference: Windows XP Configuration Files</TITLE>
+<META NAME="GENERATOR" CONTENT="Web-O-Matic Deluxe 4.1">
+<META NAME="AUTHOR" CONTENT="John R. Levine, Margaret Levine Young">
+<META NAME="COPYRIGHT" CONTENTS="Copyright 2001 by The McGraw-Hill Companies. All rights reserved.">
+</HEAD>
+<BODY BACKGROUND="../images/background.png">
+<BLOCKQUOTE>
+<SCRIPT LANGUAGE="JavaScript">
+function whomp(i, file)
+{
+	i.src = "../images/" + file + ".png";
+}
+</SCRIPT>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarered3x3.png" HEIGHT=3 WIDTH=3></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=2>
+Chapter 37: Windows XP Configuration Files
+</FONT></TD>
+</TR>
+</TABLE>
+<BR>
+<A HREF="1.htm"  OnMouseOver='whomp(prev, "sprev");' OnMouseOut='whomp(prev, "wprev");'
+ title="Previous Section"><IMG NAME=prev SRC="../images/wprev.png" ALT="Previous" HEIGHT=20 WIDTH=82 BORDER=0></A><!--
+--><A HREF="index.htm" OnMouseOver='whomp(chap, "schap");' OnMouseOut='whomp(chap, "wchap");'
+title="Chapter Overview"><IMG SRC="../images/wchap.png" ALT="Chapter" NAME=chap HEIGHT=20 WIDTH=100 BORDER=0></A><A
+HREF="../index.htm" OnMouseOver='whomp(toc, "sbook");' OnMouseOut='whomp(toc, "wbook");' 
+title="Table of Contents"><IMG SRC="../images/wbook.png" ALT="Contents" NAME=toc HEIGHT=20 WIDTH=94 BORDER=0></A><A
+HREF="../glossary/index.htm" OnMouseOver='whomp(glos, "sglos");' OnMouseOut='whomp(glos, "wglos");' 
+title="Glossary"><IMG SRC="../images/wglos.png" ALT="Glossary" NAME=glos HEIGHT=20 WIDTH=94 BORDER=0></A><!--
+--><A HREF="3.htm"  OnMouseOver='whomp(next, "snext");' OnMouseOut='whomp(next, "wnext");'
+ title="Next Section"><IMG NAME=next SRC="../images/wnext.png" ALT="Next" HEIGHT=20 WIDTH=82 BORDER=0></A>
+<BR>
+<A NAME="1">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarered10x10.png" HEIGHT=10 WIDTH=10></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=4><B>Configuring Windows with the System Configuration Utility</B></FONT>
+</TD>
+</TR>
+</TABLE></A>
+<P>
+Microsoft provides the System Configuration Utility to help you make controlled changes to the various <A HREF="../internals/1.htm#1">configuration files</A> described earlier in this chapter. To run the System Configuration Utility, choose Start | Run, type <B>msconfig</B> in the Open box, and click OK. You see the System Configuration Utility window, shown in Figure 37-1.
+<TABLE BORDER=2><TR><TD ALIGN=CENTER>
+<IMG SRC="internals.msconfig.png" WIDTH=575 HEIGHT=385 ALT="[figure]">
+</TD></TR><TR BGCOLOR="#00ffff"><TD><I>Figure 37-1:  The System Configuration Utility window</I></TD></TR></TABLE>
+<P>
+The System Configuration Utility includes a tab for each <A HREF="../internals/1.htm#1">configuration file</A>, along with the Startup tab, which lists information from the <A HREF="../internals/1.htm#7">Registry</A> about programs to be run at startup time. Changes you make don't take effect until the next time Windows restarts, so when you close the System Configuration Utility, it asks whether you want to save the changes you've made; if you click Yes, it offers to reboot Windows for you.
+<A NAME="2">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Restarting Windows with Selected Startup Options</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+The General tab of the System Configuration Utility window can help you restart Windows in a <A HREF="../trouble/1.htm#2">startup mode</A> that helps diagnose problems. The three startup items are as follows:
+<UL>
+<LI >
+<B>Normal Startup  </B>The default mode. You'll not likely switch back to this if things are running smoothly.
+<LI >
+<B>Diagnostic Startup  </B>Essentially the same as Safe Mode. This option limits loading device drivers and system services that may interfere with normal operation.
+<LI >
+<B>Selective Startup  </B>Enables you to select which startup items to load. A good plan when you experience system instability is to turn all your startup items off, reboot, and then turn one on at a time. If that doesn't help, try different combinations. You'd be surprised how much instability can come from a little icon like AOL or Palm Desktop in the notification area of the Windows taskbar.
+</UL>
+<P>
+If you want to restart Windows and tell it to process only specific configuration files, click the Selective Startup setting on the General tab of the System Configuration Utility window and choose the files to process. When you click OK, Windows asks whether you want to reboot your computer. Click Yes. Windows restarts and processes only the files you specified. To save your changes without restarting Windows, click Apply (the changes to the files are saved, but don't go into effect until you reboot).
+<A NAME="3">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Replacing a Corrupted Windows File</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+Occasionally, one of the program files that make up Windows is deleted or corrupted (perhaps by a virus). The Expand File on the General tab of the System Configuration Utility window provides an easy way to extract a single file from the Windows XP CD-ROM (or any other CAB file) and replace it on your system. The program extracts a file from a CAB file (Windows Cabinet file, the format in which program files are stored on the Windows XP CD-ROM). You need to know which file is bad and which CAB file contains the replacement for the file.
+<P>
+If you know what file you want to replace and the location of the CAB file that contains a good copy, follow these steps:
+<OL>
+<LI  VALUE=1>
+Click the Expand File button on the General tab of the System Configuration Utility window. You see the Expand One File From Installation Source dialog box, shown here:
+</OL>
+<BR><IMG ALIGN=TOP SRC="internals.expand.png" WIDTH=453 HEIGHT=221 ALT="[image]">
+<OL>
+<LI  VALUE=2>
+Click the Browse File button and navigate to the problem file. When you have it selected in the Open dialog, click OK.
+<LI  VALUE=3>
+Click the Browse From button and select the CAB file on the CD-ROM that contains the file you want to replace.
+<LI  VALUE=4>
+Click the Browse To button and navigate to the directory that the replacement file should be stored in.
+<LI  VALUE=5>
+Click Expand.
+</OL>
+<P>
+The program doesn't give you any help in figuring out which CAB file on the Windows XP CD-ROM contains the file you need. Also, CAB filenames are not known for their readability. You may have quite a time locating something. Finally, there's no indicator that you have or have not successfully extracted the file. One way to know is to keep an Explorer window open on the desktop showing the contents of the folder into which you are storing the replacement file. If a file is added, it will appear in that folder within 30 seconds or so.
+<A NAME="4">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Changing Your System.ini and Win.ini Files</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+The System Configuration Utility window's System.ini tab, shown in Figure 37-2, and Win.ini tab (which looks similar) show a list of the sections in the <A HREF="../internals/1.htm#6">System.ini</A> and <A HREF="../internals/1.htm#5">Win.ini</A> files. To see the individual lines within a section, click the plus box to the left of the section name. To disable an entire section, deselect the check box to the left of the section name (or select it and click the Disable button). To disable an individual line, deselect the check box to its left (or select it and click the Enable button). If you want to add a new setting, select the line after which you want to add the setting and click the New button. The program adds a new blank line: type the contents (in the format <I>parameter</I>=<I>value</I>) and press E<SMALL>NTER</SMALL> You can also reorder the items by selecting them and clicking the Move Up and Move Down buttons.<TABLE BORDER=2><TR><TD ALIGN=CENTER>
+<IMG SRC="internals.inis.png" WIDTH=575 HEIGHT=385 ALT="[figure]">
+</TD></TR><TR BGCOLOR="#00ffff"><TD><I>Figure 37-2:  Editing your System.ini file</I></TD></TR></TABLE>
+<A NAME="5">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Changing Your Boot.ini File</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+Windows XP, like Windows NT and Windows 2000 before it, was designed as a multiuser operating system. It was also designed to allow more than one operating system to be installed at a time on one computer. It is this capability you see when you start your computer and are asked whether you would like to boot Windows XP or another operating system in another partition (in some cases, whether or not you have another OS installed). This multiboot feature stores your list of bootable partitions in the Boot.ini file.
+<P>
+You can <A HREF="../wininst/12.htm#1">edit the Boot.ini file</A> by clicking the Boot.ini tab in the System Configuration Utility window or by using the System Properties dialog box.
+<A NAME="6">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Changing Your Services and Startup Settings</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+The Services and Startup tabs in the System Configuration Utility window (Figure 37-3) shows the services and applications that run when Windows starts up, including the startup programs listed in the Registry and the programs in your <A HREF="../running/2.htm#10">StartUp folder</A> (usually stored in the C:\Documents And Settings\<I>username</I>\Start Menu\Programs\StartUp folder). You can disable loading a service or program at startup by deselecting its check box.
+<TABLE BORDER=2><TR><TD ALIGN=CENTER>
+<IMG SRC="internals.startup.png" WIDTH=575 HEIGHT=385 ALT="[figure]">
+</TD></TR><TR BGCOLOR="#00ffff"><TD><I>Figure 37-3:  Editing your Startup settings</I></TD></TR></TABLE>
+<P>
+<TABLE><TR><TD VALIGN="TOP"><IMG SRC="../images/note.png" ALT="note" WIDTH=95 HEIGHT=29></TD>
+<TD VALIGN="TOP">We strongly suggest that you avoid modifying the Services tab at all. When installed as a workstation or home system, most of these services are already disabled, so unchecking them results in no change of functionality anyway. The Startup tab, which lists application programs, is where you should concentrate your debugging efforts.
+
+</TD></TR></TABLE>
+<A NAME="7">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Changing Your Environment Settings</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+DOS and early versions of Windows used <A NAME="ddenvironmentvariables"><I>environment variables</I></A> to store some settings. Environment variables can be changed while Windows is running by using the DOS SET command. When Window or a DOS VM start up, the variables must be <I>initialized</I> (that is, set to their initial values).
+<P>
+To see or set your environment variables, click Start, right-click My Computer, and select Properties from the shortcut menu. On the System Properties dialog box that appears, click the Advanced tab and then click the Environment Variables button. You see the Environment Variables dialog box (shown in Figure 37-4). The upper part of the dialog box shows user variables (which store information about the current user account). The lower part shows system variables (which store information about Windows itself).
+<TABLE BORDER=2><TR><TD ALIGN=CENTER>
+<IMG SRC="internals.envs.png" WIDTH=384 HEIGHT=430 ALT="[figure]">
+</TD></TR><TR BGCOLOR="#00ffff"><TD><I>Figure 37-4:  User and system environment variables</I></TD></TR></TABLE>
+<P>
+The two default user variables are TEMP and TMP. Both define where Windows stores its temporary files. The default system variables, which you should not remove or modify, are as follows:<B></B>
+<UL>
+<LI >
+<B>COMSPEC  </B>Location of the Command Prompt program (usually C:\Windows\System32\Cmd.exe). See <A HREF="../dos/index.htm">Chapter39</A> for how to use the Command Prompt program.<B></B>
+<LI >
+<B>NUMBER_OF_PROCESSORS  </B>For single-CPU computers, 1.<B></B>
+<LI >
+<B>OS  </B>The name of your OS. Though a bit odd for more than one reason, Windows XP's name appears as "Windows_NT."<B></B>
+<LI >
+<B>PATH  </B>Where Windows looks for executable programs for launching applications from the command prompt (usually a list of pathnames including C:\Windows\System32 and C:\Windows.
+<LI >
+<B>PATHEXT  </B>Which extensions are recognized as executable when launching from the command prompt (usually a list of extensions including COM, BAT, CMD, VBS, VBE, JS, JSE, WSF, and WSH).
+<LI >
+<B>PROCESSOR_ARCHITECTURE  </B>Usually "x86", the types of processors designed and sold by Intel.
+<LI >
+<B>PROCESSOR_IDENTIFIER  </B>Description of your computer's CPU. Ours shows "x86 Family 6 Model 8 Stepping 6, GenuineIntel".
+<LI >
+<B>PROCESSOR_LEVEL  </B>Stepping level in the PROCESSOR_IDENTIFIER.
+<LI >
+<B>PROCESSOR_REVISION  </B>Revision number of the processor. Ours is "0806."
+<LI >
+<B>TEMP  </B>Where to store temporary files (usually "C:\Windows\Temp").
+<LI >
+<B>TMP  </B>Where to store temporary files (usually "C:\Windows\Temp").
+<LI >
+<B>WINDIR  </B>Location of the system directory (usually "C:\Windows").
+</UL>
+<P>
+<TABLE><TR><TD VALIGN="TOP"><IMG SRC="../images/caution.png" ALT="caution" WIDTH=95 HEIGHT=29></TD>
+<TD VALIGN="TOP">Do not remove or modify these system variables.
+
+</TD></TR></TABLE>
+<A NAME="8">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Changing Your International Settings</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+Most of the Windows international and regional settings appear in the <A HREF="../keymouse/4.htm#1">Regional And Language Options dialog box</A>. Set the Language box to the language of your choice--Windows updates the rest of the settings on the tab to match. Don't edit the individual settings unless you know what you are doing.
+<P>
+<A HREF="1.htm"  OnMouseOver='whomp(prevb, "sprev");' OnMouseOut='whomp(prevb, "wprev");'
+ title="Previous Section"><IMG NAME=prevb SRC="../images/wprev.png" ALT="Previous" HEIGHT=20 WIDTH=82 BORDER=0></A><!--
+--><A HREF="index.htm" OnMouseOver='whomp(chapb, "schap");' OnMouseOut='whomp(chapb, "wchap");'
+title="Chapter Overview"><IMG SRC="../images/wchap.png" ALT="Chapter" NAME=chapb HEIGHT=20 WIDTH=100 BORDER=0></A><A
+HREF="../index.htm" OnMouseOver='whomp(tocb, "sbook");' OnMouseOut='whomp(tocb, "wbook");' 
+title="Table of Contents"><IMG SRC="../images/wbook.png" ALT="Contents" NAME=tocb HEIGHT=20 WIDTH=94 BORDER=0></A><A
+HREF="../glossary/index.htm" OnMouseOver='whomp(glosb, "sglos");' OnMouseOut='whomp(glosb, "wglos");' 
+title="Glossary"><IMG SRC="../images/wglos.png" ALT="Glossary" NAME=glosb HEIGHT=20 WIDTH=94 BORDER=0></A><!--
+--><A HREF="3.htm"  OnMouseOver='whomp(nextb, "snext");' OnMouseOut='whomp(nextb, "wnext");'
+ title="Next Section"><IMG NAME=nextb SRC="../images/wnext.png" ALT="Next" HEIGHT=20 WIDTH=82 BORDER=0></A>
+<BR>
+</BLOCKQUOTE>
+</BODY>
+</HTML>

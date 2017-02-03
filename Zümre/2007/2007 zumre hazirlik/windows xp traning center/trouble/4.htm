@@ -1,0 +1,123 @@
+<!doctype html public "-//IETF//DTD HTML//EN">
+<HTML>
+<HEAD>
+<TITLE>Windows XP: The Complete Reference: Troubleshooting Windows XP</TITLE>
+<META NAME="GENERATOR" CONTENT="Web-O-Matic Deluxe 4.1">
+<META NAME="AUTHOR" CONTENT="John R. Levine, Margaret Levine Young">
+<META NAME="COPYRIGHT" CONTENTS="Copyright 2001 by The McGraw-Hill Companies. All rights reserved.">
+</HEAD>
+<BODY BACKGROUND="../images/background.png">
+<BLOCKQUOTE>
+<SCRIPT LANGUAGE="JavaScript">
+function whomp(i, file)
+{
+	i.src = "../images/" + file + ".png";
+}
+</SCRIPT>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarered3x3.png" HEIGHT=3 WIDTH=3></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=2>
+Chapter 35: Troubleshooting Windows XP
+</FONT></TD>
+</TR>
+</TABLE>
+<BR>
+<A HREF="3.htm"  OnMouseOver='whomp(prev, "sprev");' OnMouseOut='whomp(prev, "wprev");'
+ title="Previous Section"><IMG NAME=prev SRC="../images/wprev.png" ALT="Previous" HEIGHT=20 WIDTH=82 BORDER=0></A><!--
+--><A HREF="index.htm" OnMouseOver='whomp(chap, "schap");' OnMouseOut='whomp(chap, "wchap");'
+title="Chapter Overview"><IMG SRC="../images/wchap.png" ALT="Chapter" NAME=chap HEIGHT=20 WIDTH=100 BORDER=0></A><A
+HREF="../index.htm" OnMouseOver='whomp(toc, "sbook");' OnMouseOut='whomp(toc, "wbook");' 
+title="Table of Contents"><IMG SRC="../images/wbook.png" ALT="Contents" NAME=toc HEIGHT=20 WIDTH=94 BORDER=0></A><A
+HREF="../glossary/index.htm" OnMouseOver='whomp(glos, "sglos");' OnMouseOut='whomp(glos, "wglos");' 
+title="Glossary"><IMG SRC="../images/wglos.png" ALT="Glossary" NAME=glos HEIGHT=20 WIDTH=94 BORDER=0></A><!--
+--><A HREF="5.htm"  OnMouseOver='whomp(next, "snext");' OnMouseOut='whomp(next, "wnext");'
+ title="Next Section"><IMG NAME=next SRC="../images/wnext.png" ALT="Next" HEIGHT=20 WIDTH=82 BORDER=0></A>
+<BR>
+<A NAME="1">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarered10x10.png" HEIGHT=10 WIDTH=10></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=4><B>Diagnosing Problems</B></FONT>
+</TD>
+</TR>
+</TABLE></A>
+<P>
+If Windows doesn't start, or a piece of hardware is operating strangely, you may have either a hardware configuration problem or broken hardware. The most likely culprit is the last piece of software you installed.
+<A NAME="2">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Diagnosing Hardware Problems</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+Windows XP is smart when it comes to hardware, but it's not savvy about everything. Some older hardware may simply not work because Microsoft does not have an updated driver for it. It's better to avoid potential conflicts when you install Windows by allowing the installation program to <A HREF="../wininst/7.htm#1">check system compatibility</A>. The Microsoft Windows Upgrade Advisor notifies you of any questionable software and drivers or hardware known to be problematic.
+<P>
+Windows is also good at allocating resources and dealing with conflicts, either real or looming. The most likely source for hardware conflicts is from older hardware (for example, an ISA or VESA Local Bus adapter card) that is not Plug and Play.
+<P>
+If Windows does have a conflict with recently added hardware, the best thing to do is to locate the culprit in the Device Manager (Start | My Computer, right-click, select Manager, click the Hardware tab, and click Device Manager). If Windows is aware of the problem, it usually already has the device's listing in view and marked with a ugly looking icon. Highlight the gizmo and click Properties. There, you can access the devices specific Troubleshooter.
+<P>
+If you can't start Windows because of a device driver problem, press <TT>F8</TT> while Windows is starting, and choose Last Known Good Configuration from the menu that appears. Windows restores the Registry and drivers from the last time that Windows started, effective rolling back to a configuration that worked.
+<A NAME="3">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Diagnosing Display Problems</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+If your display is acting strangely, Windows offers several possible ways to fix the problem. This section describes the most common ways; also see <A HREF="../trouble/4.htm#4">the next section</A> for how to use Windows' Troubleshooters.
+<P>
+If the screen is utterly unreadable, restart Windows in Safe Mode. After Windows is running in Safe or Normal Mode, right-click the Windows desktop and choose Properties from the menu that appears to display the Display Properties dialog box, and click the <A HREF="../desktop/11.htm#1">Settings tab</A>.
+<P>
+Your screen might not be able to handle the display resolution your adapter is using. Try setting the Screen Resolution (number of pixels displayed) to a smaller value to see whether the screen clears. (The number of colors doesn't matter--all modern screens can display an unlimited number of colors. What you actually get, however, depends on your video card's capabilities.) When choosing Color Quality, choose 16-bit or 32-bit, not 24-bit, which takes more system resources.
+<P>
+Your screen might be able to handle the display resolution but might not be able to handle the adapter's <I>refresh rate</I>, the number of times per second the adapter sends the image to the monitor. Click the Advanced button to display the Properties dialog box for your display adapter and then click the Monitor tab. Try setting the Screen Refresh Rate box to the slowest available refresh rate, usually 60 Hz. If that works, try faster rates until you find the fastest one that works reliably.
+<P>
+<TABLE><TR><TD VALIGN="TOP"><IMG SRC="../images/note.png" ALT="note" WIDTH=95 HEIGHT=29></TD>
+<TD VALIGN="TOP">Once you change a setting and try to apply it, Windows makes the adjustment and then asks if you want to accept the changes. If you cannot see this query, that means that the settings are not ideal. Wait 15 seconds and the display will be returned to the currently saved settings.
+
+</TD></TR></TABLE>
+<P>
+One final possibility is that the accelerator features in your display adapter aren't compatible with your computer. Symptoms typically are that the display is clear, but wrong, with lines or areas of the wrong color or pattern on the screen. Click the Advanced button on the Settings tab in the Display Properties dialog box to display the Properties dialog box for your display adapter. Click the Performance or Troubleshoot and look for the Hardware Acceleration slider ranging from None to Full. Try setting it to None; if this improves the display, try increasing the acceleration setting one notch at a time.
+<A NAME="4">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Diagnosing Problems with Troubleshooters</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+Windows includes many <A NAME="ddtroubleshooters"><I>Troubleshooters</I></A>, step-by-step diagnostics that look for some of the most common problems and suggest solutions. The Troubleshooters start at a basic level and walk you through the details of system configuration changes.
+<P>
+All of the Troubleshooters are part of the <A HREF="../help/index.htm">Help And Support Center </A>. Follow these steps to run a Troubleshooter:
+<OL>
+<LI  VALUE=1>
+Choose Start | Help And Support to display the Help And Support Center window. (Click the Home icon on the toolbar if this window is already open.)
+<LI  VALUE=2>
+Click the Fixing A Problem topic and select the topic that most closely matches the problems you're experiencing.
+<LI  VALUE=3>
+Follow its advice. Windows asks whether its suggestion solved the problem.
+<LI  VALUE=4>
+Click Yes or No and click Next to try the rest of the Troubleshooter's suggestions.
+</OL>
+<P>
+<A HREF="3.htm"  OnMouseOver='whomp(prevb, "sprev");' OnMouseOut='whomp(prevb, "wprev");'
+ title="Previous Section"><IMG NAME=prevb SRC="../images/wprev.png" ALT="Previous" HEIGHT=20 WIDTH=82 BORDER=0></A><!--
+--><A HREF="index.htm" OnMouseOver='whomp(chapb, "schap");' OnMouseOut='whomp(chapb, "wchap");'
+title="Chapter Overview"><IMG SRC="../images/wchap.png" ALT="Chapter" NAME=chapb HEIGHT=20 WIDTH=100 BORDER=0></A><A
+HREF="../index.htm" OnMouseOver='whomp(tocb, "sbook");' OnMouseOut='whomp(tocb, "wbook");' 
+title="Table of Contents"><IMG SRC="../images/wbook.png" ALT="Contents" NAME=tocb HEIGHT=20 WIDTH=94 BORDER=0></A><A
+HREF="../glossary/index.htm" OnMouseOver='whomp(glosb, "sglos");' OnMouseOut='whomp(glosb, "wglos");' 
+title="Glossary"><IMG SRC="../images/wglos.png" ALT="Glossary" NAME=glosb HEIGHT=20 WIDTH=94 BORDER=0></A><!--
+--><A HREF="5.htm"  OnMouseOver='whomp(nextb, "snext");' OnMouseOut='whomp(nextb, "wnext");'
+ title="Next Section"><IMG NAME=nextb SRC="../images/wnext.png" ALT="Next" HEIGHT=20 WIDTH=82 BORDER=0></A>
+<BR>
+</BLOCKQUOTE>
+</BODY>
+</HTML>

@@ -1,0 +1,114 @@
+<!doctype html public "-//IETF//DTD HTML//EN">
+<HTML>
+<HEAD>
+<TITLE>Windows XP: The Complete Reference: Installing Programs</TITLE>
+<META NAME="GENERATOR" CONTENT="Web-O-Matic Deluxe 4.1">
+<META NAME="AUTHOR" CONTENT="John R. Levine, Margaret Levine Young">
+<META NAME="COPYRIGHT" CONTENTS="Copyright 2001 by The McGraw-Hill Companies. All rights reserved.">
+</HEAD>
+<BODY BACKGROUND="../images/background.png">
+<BLOCKQUOTE>
+<SCRIPT LANGUAGE="JavaScript">
+function whomp(i, file)
+{
+	i.src = "../images/" + file + ".png";
+}
+</SCRIPT>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarered3x3.png" HEIGHT=3 WIDTH=3></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=2>
+Chapter 3: Installing Programs
+</FONT></TD>
+</TR>
+</TABLE>
+<BR>
+<A HREF="0.htm"  OnMouseOver='whomp(prev, "sprev");' OnMouseOut='whomp(prev, "wprev");'
+ title="Previous Section"><IMG NAME=prev SRC="../images/wprev.png" ALT="Previous" HEIGHT=20 WIDTH=82 BORDER=0></A><!--
+--><A HREF="index.htm" OnMouseOver='whomp(chap, "schap");' OnMouseOut='whomp(chap, "wchap");'
+title="Chapter Overview"><IMG SRC="../images/wchap.png" ALT="Chapter" NAME=chap HEIGHT=20 WIDTH=100 BORDER=0></A><A
+HREF="../index.htm" OnMouseOver='whomp(toc, "sbook");' OnMouseOut='whomp(toc, "wbook");' 
+title="Table of Contents"><IMG SRC="../images/wbook.png" ALT="Contents" NAME=toc HEIGHT=20 WIDTH=94 BORDER=0></A><A
+HREF="../glossary/index.htm" OnMouseOver='whomp(glos, "sglos");' OnMouseOut='whomp(glos, "wglos");' 
+title="Glossary"><IMG SRC="../images/wglos.png" ALT="Glossary" NAME=glos HEIGHT=20 WIDTH=94 BORDER=0></A><!--
+--><A HREF="2.htm"  OnMouseOver='whomp(next, "snext");' OnMouseOut='whomp(next, "wnext");'
+ title="Next Section"><IMG NAME=next SRC="../images/wnext.png" ALT="Next" HEIGHT=20 WIDTH=82 BORDER=0></A>
+<BR>
+<A NAME="1">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarered10x10.png" HEIGHT=10 WIDTH=10></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=4><B>What Happens During Program Installation and Uninstallation?</B></FONT>
+</TD>
+</TR>
+</TABLE></A>
+<P>
+Before you can install a program, you have to get it--you have to buy or download the program. You may receive a program on a CD-ROM, as a stack of floppy disk or as a file downloaded from the Internet. Once you have a program, you install it, usually by running an installation program to copy the program to your hard disk and configure it to run on your system.
+<P>
+If you download a program, it usually arrives in the form of an <A NAME="ddinstallationfile"><I>installation file</I></A> (also called a <A NAME="dddistributionfile"><I>distribution file</I></A>), which is a compressed file containing all the files required for a program to run, along with an installation program. For example, the installation file may contain the installation program, the program itself, the help file for the program, and a few other files that the program needs. You can download (copy) installation files from the Internet or other sources. If your computer is connected to a local area network (LAN), the installation file may be stored on a <A HREF="../sharehw/index.htm">network disk</A>. The files that make up the program are usually compressed to take up less space and so that they can be packaged together as one file.
+<P>
+<TABLE><TR><TD VALIGN="TOP"><IMG SRC="../images/note.png" ALT="note" WIDTH=95 HEIGHT=29></TD>
+<TD VALIGN="TOP">When installing programs, you must be logged on with a <A HREF="../users/index.htm">user account</A> that is a member of the Administrator or Power user group. Limited and Guest user accounts can't install programs. If you haven't set up user accounts, you are probably logged on automatically as Administrator (in Windows XP Professional) or Owner (in Windows XP Home Edition), which are both members of the Administrator group.
+
+</TD></TR></TABLE>
+<A NAME="2">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>What Happens During Program Installation?</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+Most programs come with an installation program named Setup.exe or Install.exe. When you install a program, the installation program usually does the following:
+<UL>
+<LI >
+Looks for a previous version of the program on your hard disk. If it finds a previous version, the program may ask whether you want to replace the previous version.
+<LI >
+Creates a folder in which to store the program files. Most installation programs ask where you'd like this folder. Some installation programs also create additional folders within this folder. Windows creates a folder named Program Files, usually in C:\ (if Windows is stored in a partition or drive other than C, the Program Files folder is usually in the same partition). We recommend you install all your programs in folders within the Program Files folder.
+</UL>
+<P>
+<TABLE><TR><TD VALIGN="TOP"><IMG SRC="../images/note.png" ALT="note" WIDTH=95 HEIGHT=29></TD>
+<TD VALIGN="TOP">Some software vendors have the bad habit of installing application programs in locations other than your Program Files folder. You can't do much about this; the additional folders may clutter up your root folder, but they don't do any harm.
+
+</TD></TR></TABLE>
+<UL>
+<LI >
+Copies the files onto your hard disk. If the program files are compressed, the installation program uncompresses them. Usually, the installation program copies most of the files into the program's folder, but it may also put some files into your C:\Windows, C:\Windows\System, or other folders.
+<LI >
+Checks your system for the files and hardware it needs to run. For example, an Internet connection program might check for a modem.
+<LI >
+Adds entries to the Windows <A HREF="../registry/index.htm">Registry</A> to tell Windows which types of files the program works with, which files the program is stored in, and other information about the program.
+<LI >
+Adds a command for the program to your <A HREF="../basics/2.htm#6">Start | All Programs menu</A> (some programs add submenus to the Start | All Programs menu to contain several commands). The installation program may also add a <A HREF="../exploring/1.htm#1">shortcut</A> to your Windows desktop to make running the program easy for you. You can <A HREF="../starttask/5.htm#2">change the position on the Start menu</A> of the command for the program, get rid of the command, or create a command if the installation program doesn't make one. You can also <A HREF="../exploring/9.htm#2">create a shortcut icon</A> on the desktop, if the installation program hasn't done so, or move or delete the program's shortcut.
+<LI >
+Asks you a series of questions to configure the program for your system. The program may ask you to type additional information, like Internet addresses, passwords, or software license numbers. It may also ask which users should be able to run the program.
+</UL>
+<P>
+Every installation program is different, because it comes with the application program, not with Windows. If your computer is connected to a <A HREF="../lans/index.htm">LAN</A> or to the Internet, the installation program may configure your program to connect to other computers on the network.
+<A NAME="3">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>What Happens During Program Uninstallation?</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+The perfect uninstallation program exactly undoes all the actions of the installation program, removing all the files and folders the installation program created, and putting back everything else to where it was originally. Unfortunately, we've never seen a perfect uninstallation program, but most uninstallation programs do an acceptable job of removing most traces of a program from your system.
+<P>
+<A HREF="0.htm"  OnMouseOver='whomp(prevb, "sprev");' OnMouseOut='whomp(prevb, "wprev");'
+ title="Previous Section"><IMG NAME=prevb SRC="../images/wprev.png" ALT="Previous" HEIGHT=20 WIDTH=82 BORDER=0></A><!--
+--><A HREF="index.htm" OnMouseOver='whomp(chapb, "schap");' OnMouseOut='whomp(chapb, "wchap");'
+title="Chapter Overview"><IMG SRC="../images/wchap.png" ALT="Chapter" NAME=chapb HEIGHT=20 WIDTH=100 BORDER=0></A><A
+HREF="../index.htm" OnMouseOver='whomp(tocb, "sbook");' OnMouseOut='whomp(tocb, "wbook");' 
+title="Table of Contents"><IMG SRC="../images/wbook.png" ALT="Contents" NAME=tocb HEIGHT=20 WIDTH=94 BORDER=0></A><A
+HREF="../glossary/index.htm" OnMouseOver='whomp(glosb, "sglos");' OnMouseOut='whomp(glosb, "wglos");' 
+title="Glossary"><IMG SRC="../images/wglos.png" ALT="Glossary" NAME=glosb HEIGHT=20 WIDTH=94 BORDER=0></A><!--
+--><A HREF="2.htm"  OnMouseOver='whomp(nextb, "snext");' OnMouseOut='whomp(nextb, "wnext");'
+ title="Next Section"><IMG NAME=nextb SRC="../images/wnext.png" ALT="Next" HEIGHT=20 WIDTH=82 BORDER=0></A>
+<BR>
+</BLOCKQUOTE>
+</BODY>
+</HTML>

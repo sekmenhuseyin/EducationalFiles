@@ -1,0 +1,258 @@
+<!doctype html public "-//IETF//DTD HTML//EN">
+<HTML>
+<HEAD>
+<TITLE>Windows XP: The Complete Reference: Installing Programs</TITLE>
+<META NAME="GENERATOR" CONTENT="Web-O-Matic Deluxe 4.1">
+<META NAME="AUTHOR" CONTENT="John R. Levine, Margaret Levine Young">
+<META NAME="COPYRIGHT" CONTENTS="Copyright 2001 by The McGraw-Hill Companies. All rights reserved.">
+</HEAD>
+<BODY BACKGROUND="../images/background.png">
+<BLOCKQUOTE>
+<SCRIPT LANGUAGE="JavaScript">
+function whomp(i, file)
+{
+	i.src = "../images/" + file + ".png";
+}
+</SCRIPT>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarered3x3.png" HEIGHT=3 WIDTH=3></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=2>
+Chapter 3: Installing Programs
+</FONT></TD>
+</TR>
+</TABLE>
+<BR>
+<A HREF="2.htm"  OnMouseOver='whomp(prev, "sprev");' OnMouseOut='whomp(prev, "wprev");'
+ title="Previous Section"><IMG NAME=prev SRC="../images/wprev.png" ALT="Previous" HEIGHT=20 WIDTH=82 BORDER=0></A><!--
+--><A HREF="index.htm" OnMouseOver='whomp(chap, "schap");' OnMouseOut='whomp(chap, "wchap");'
+title="Chapter Overview"><IMG SRC="../images/wchap.png" ALT="Chapter" NAME=chap HEIGHT=20 WIDTH=100 BORDER=0></A><A
+HREF="../index.htm" OnMouseOver='whomp(toc, "sbook");' OnMouseOut='whomp(toc, "wbook");' 
+title="Table of Contents"><IMG SRC="../images/wbook.png" ALT="Contents" NAME=toc HEIGHT=20 WIDTH=94 BORDER=0></A><A
+HREF="../glossary/index.htm" OnMouseOver='whomp(glos, "sglos");' OnMouseOut='whomp(glos, "wglos");' 
+title="Glossary"><IMG SRC="../images/wglos.png" ALT="Glossary" NAME=glos HEIGHT=20 WIDTH=94 BORDER=0></A><!--
+--><A HREF="4.htm"  OnMouseOver='whomp(next, "snext");' OnMouseOut='whomp(next, "wnext");'
+ title="Next Section"><IMG NAME=next SRC="../images/wnext.png" ALT="Next" HEIGHT=20 WIDTH=82 BORDER=0></A>
+<BR>
+<A NAME="1">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarered10x10.png" HEIGHT=10 WIDTH=10></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=4><B>Associating a Program with a File Extension</B></FONT>
+</TD>
+</TR>
+</TABLE></A>
+<P>
+Many programs create, edit, or display files of a specific type. For example, the <A HREF="../docs/1.htm#1">Notepad program</A> (a text editor that comes with Windows) works with text files that usually have the filename extension .txt (the <A HREF="../files/2.htm#3">extension</A> is the part of the filename that follows the last dot in the filename). When you open a file with the extension .txt, Windows knows to run Notepad.
+<P>
+The Windows <A HREF="../registry/index.htm">Registry</A> stores <A NAME="ddfileassociations"><I>file associations</I></A>, information about which program you use to edit each type of file. Installation programs usually store this information in the Registry, but you can, too. Chapter <A HREF="../registry/index.htm">38</A> describes how to view and edit the Registry with the Registry Editor program, but you can use other tools to change your file associations.
+<P>
+Windows offers three ways to create or change a file association: the Open With dialog box, the Folder Options dialog box, and the Edit File Types dialog box. The third method is rarely used.
+<A NAME="2">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Associating Files with Programs when Opening a File</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+In an Explorer window, you can tell Windows which program to use when opening files with a particular extension. Follow these steps:
+<OL>
+<LI  VALUE=1>
+In an Explorer window, find a file with the extension that you want to associate with a program.
+<LI  VALUE=2>
+Right-click the filename and choose Open With from the menu that appears. (If Open With doesn't appear on the menu, you have to use another method of associating the file type with the program; see the next section.) You see the Open With dialog box shown in Figure 3-3. (If a small submenu of programs appears, select Choose Program to display the Open With dialog box.)
+</OL>
+<TABLE BORDER=2><TR><TD ALIGN=CENTER>
+<IMG SRC="installing.openwith.png" WIDTH=396 HEIGHT=472 ALT="[figure]">
+</TD></TR><TR BGCOLOR="#00ffff"><TD><I>Figure 3-3:  Which program do you want run to open this file (and files like it)?</I></TD></TR></TABLE>
+<OL>
+<LI  VALUE=3>
+Select the program to run, or click Browse to find the program file.
+<LI  VALUE=4>
+Click the Always Use The Selected Program To Open This Kind Of File check box and click OK.
+</OL>
+<P>
+Windows Explorer permanently saves the association of the filename extension with the program, and it opens the file you selected with the program you specified.
+<A NAME="3">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Associating Files with Programs by Using Folder Options</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+Another way to associate a file type (file extension) with a program (or change the program associated with a file type) is to use the File Types tab on the Folder Options dialog box.
+<A NAME="4">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squaregreen6x6.png" HEIGHT=6 WIDTH=6></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Editing an Existing Association</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+To edit a file association, follow these steps:
+<OL>
+<LI  VALUE=1>
+Choose Start | Control Panel, click Appearance And Themes, and run Folder Options. You see the Folder Options dialog box. (You can also display this dialog box by choosing Tools | Folder Options from any Explorer window.)
+<LI  VALUE=2>
+Click the File Types tab, shown in Figure 3-4.
+</OL>
+<TABLE BORDER=2><TR><TD ALIGN=CENTER>
+<IMG SRC="installing.options.png" WIDTH=386 HEIGHT=475 ALT="[figure]">
+</TD></TR><TR BGCOLOR="#00ffff"><TD><I>Figure 3-4:  The Folder Options dialog box with the File Types tab selected</I></TD></TR></TABLE>
+<OL>
+<LI  VALUE=3>
+In the Registered File Types list, click the type of file you want to associate with a program. (Scroll down the list--it's long.) When you select a file type, more information about that file type appears in the Details For File Type box. You also see two buttons: Change (to associate one program with the file type) and Advanced (to associate multiple programs with the file type).
+<LI  VALUE=4>
+To see or change which program Windows runs to open this type of file, click Change. You see the Open With dialog box (see Figure 3-3). Select the program to run or click the Click Here link (in "If the program is not in the list, click here") to find the program file. Then click OK.
+<LI  VALUE=5>
+Close the Open With and Folder Options dialog boxes.
+</OL>
+<P>
+Windows now knows to run the program you specified when you open a file of this type.
+<A NAME="5">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squaregreen6x6.png" HEIGHT=6 WIDTH=6></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Creating a New Association</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+You can create a new file type, with a new extension.
+<OL>
+<LI  VALUE=1>
+Choose Start | Control Panel, click Appearance And Themes, run Folder Options, and click the File Types tab (see Figure 3-4).
+<LI  VALUE=2>
+If the file extension doesn't appear in the list of Registered Files Types, click New to display the Create New Extension dialog box, shown here:
+</OL>
+<BR><IMG ALIGN=TOP SRC="installing.createnew.png" WIDTH=366 HEIGHT=108 ALT="[image]">
+<OL>
+<LI  VALUE=3>
+Type the extension in the File Extension box.
+<LI  VALUE=4>
+If you know the Windows file type (that is, the name of the Windows class or object that this file extension contains), click Advanced to expand the Create New Extension dialog box to include the Associated File Type list. Choose the file type from the (very long) list.
+<LI  VALUE=5>
+Click OK. Windows adds the new type at the top of the list (not in alphabetical order, unless you close and reopen the dialog box).
+<LI  VALUE=6>
+Select the program to associate with this new extension by following the steps in the previous section.
+</OL>
+<A NAME="6">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Editing a File Association</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+Rather than telling Windows that one program can handle a file type, you can specify different programs for different actions. You rarely need to do this: installation programs use this facility when registering a new program to handle file types; human beings almost never need to change the details of file type association.
+<A NAME="7">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squaregreen6x6.png" HEIGHT=6 WIDTH=6></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Displaying the Edit File Types Dialog Box</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+Follow these steps to specify the settings for a file type:
+<OL>
+<LI  VALUE=1>
+Choose Start | Control Panel, click Appearance And Themes, run Folder Options, and click the File Types tab (see Figure 3-4).
+<LI  VALUE=2>
+Choose a file type from the Registered File Types list.
+<LI  VALUE=3>
+Click the Advanced button. You see the Edit File Type dialog box, shown in Figure 3-5. It displays the information that the Registry knows about this file type, including the icon to use for files of this type and a description of the file type. The Actions box lists the tasks that Windows knows how to perform for files of this type: open, print, edit, and other actions. For each action, you can tell Windows which program to use; for example, you can use Internet Explorer to display .gif files, but use Paint Shop Pro to edit and print them.
+</OL>
+<TABLE BORDER=2><TR><TD ALIGN=CENTER>
+<IMG SRC="installing.editfiletype.png" WIDTH=347 HEIGHT=318 ALT="[figure]">
+</TD></TR><TR BGCOLOR="#00ffff"><TD><I>Figure 3-5:  Specifying which programs open and print one file type</I></TD></TR></TABLE>
+<OL>
+<LI  VALUE=4>
+To change which icon appears for this type of file, click the Change Icon button. Windows displays the available icons. Click one and click OK.
+<LI  VALUE=5>
+To see the details of what Windows does when you choose a command like Open or Print from a shortcut menu for a type of file, choose the action from the Actions list and click the Edit button. You see the Editing Action For Type dialog box (Figure 3-6). For information about the entries in this dialog box, see the next section. Click OK when you have finished.
+</OL>
+<TABLE BORDER=2><TR><TD ALIGN=CENTER>
+<IMG SRC="installing.editingaction.png" WIDTH=347 HEIGHT=361 ALT="[figure]">
+</TD></TR><TR BGCOLOR="#00ffff"><TD><I>Figure 3-6:  DDE messages let you control exactly how Windows handles each file type.</I></TD></TR></TABLE>
+<OL>
+<LI  VALUE=6>
+Click any of the three settings that appear on the Edit File Type dialog box, if you want to change their settings:
+</OL>
+<UL>
+<LI >
+<B>Confirm Open After Download</B>  Specifies to open files of this type after downloading.
+<LI >
+<B>Always Show Extension</B>  Specifies the extension always appears after filenames of this type.
+<LI >
+<B>Browse In Same Window</B>  Specifies if the program that opens this program is already running, you want to open the file in the existing program window, rather than opening another window.
+</UL>
+<OL>
+<LI  VALUE=7>
+Click OK to store your changes to the way that Windows handles files of this type.
+</OL>
+<A NAME="8">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squaregreen6x6.png" HEIGHT=6 WIDTH=6></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Actions and DDE Messages Associated with File Types</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+In addition to telling Windows which program to run for each file type, you can define as many <A NAME="ddactions"><I>actions</I></A> for a file type as you want. For example, you can define one action that opens files of that type and another action that prints files. There are two types of actions:
+<UL>
+<LI >
+<B>Regular actions</B>  These actions are listed on the shortcut menu that appears when you right-click filenames in Explorer windows. For example, when you right-click a filename with extension .txt, the Open and Print commands appear on the shortcut menu; the Open and Print actions associated with the .txt file type determine what these commands do.
+<LI >
+<A NAME="ddddeactions"><B>DDE actions</B></A>  These actions define how data can be moved from one program to another using <A HREF="../sharedata/1.htm#6">DDE</A> (Dynamic Data Exchange, a method for programs to exchange information). DDE actions do not appear on the shortcut menu when you right-click filenames.
+</UL>
+<P>
+<TABLE><TR><TD VALIGN="TOP"><IMG SRC="../images/tip.png" ALT="tip" WIDTH=95 HEIGHT=29></TD>
+<TD VALIGN="TOP">Specifying regular actions is useful if you use two programs with files of one file type--for example, you might use your browser to view HTML files, but your Web page editor to create and edit those files. Associate one program with the file type. Add the second program to the actions for that file type. Single- or double-clicking a file of that type runs the first program. To run the second program, right-click the file and choose the program from the shortcut menu.
+
+</TD></TR></TABLE>
+<P>
+In the Edit File Type dialog box, you choose an action and click Edit to see the Editing Action For Type dialog box (Figure 3-6)). The Application Used To Perform Action box contains the command line Windows executes when you open files of this type. The command line usually consists of the full pathname of a program, possibly followed by a space and %1. The %1 represents the name of the file you want to open; that is, this command runs the program and tells the program to open the file you double-clicked.
+<P>
+If the Use DDE check box is not selected, it is a <I>regular</I> action (that is, a command that appears on the shortcut menu, which appears when you right-click a file of this type). In this case, the dialog box has only two settings:
+<UL>
+<LI >
+<B>Action</B>  Specifies the name of the action, which appears in the Edit File Type dialog box and on the shortcut menu you see when you right-click filenames of this type. You don't have to capitalize the first letter of the action: Windows capitalizes the first letter of the action name when it appears on the shortcut menu. You can choose a letter to be underlined on the shortcut menu: precede the letter with an ampersand (&amp;). You can choose a command from the shortcut menu by typing the underlined letter.
+<LI >
+<B>Application Used To Perform Action</B>  Specifies the program to run to perform this action on this type of file.
+</UL>
+<P>
+If the Use DDE check box is selected, the action is a DDE action, and you see four additional settings:
+<UL>
+<LI >
+<B>DDE Message</B>  Specifies the DDE command for this action.
+<LI >
+<B>Application</B>  Specifies the DDE application string to start a DDE link with the program. If this box is blank, Windows runs the program specified in the Application Used To Perform Action box.
+<LI >
+<B>DDE Application Not Running</B>  Specifies the DDE command to use if the program (specified in the Application box) is not already running. If this box is blank, Windows sends the same command specified in the DDE Message box.
+<LI >
+<B>Topic</B>  Specifies the DDE topic string to start a conversation with the program. The default DDE topic string (used if this box is blank) is "System."
+</UL>
+<P>
+<A HREF="2.htm"  OnMouseOver='whomp(prevb, "sprev");' OnMouseOut='whomp(prevb, "wprev");'
+ title="Previous Section"><IMG NAME=prevb SRC="../images/wprev.png" ALT="Previous" HEIGHT=20 WIDTH=82 BORDER=0></A><!--
+--><A HREF="index.htm" OnMouseOver='whomp(chapb, "schap");' OnMouseOut='whomp(chapb, "wchap");'
+title="Chapter Overview"><IMG SRC="../images/wchap.png" ALT="Chapter" NAME=chapb HEIGHT=20 WIDTH=100 BORDER=0></A><A
+HREF="../index.htm" OnMouseOver='whomp(tocb, "sbook");' OnMouseOut='whomp(tocb, "wbook");' 
+title="Table of Contents"><IMG SRC="../images/wbook.png" ALT="Contents" NAME=tocb HEIGHT=20 WIDTH=94 BORDER=0></A><A
+HREF="../glossary/index.htm" OnMouseOver='whomp(glosb, "sglos");' OnMouseOut='whomp(glosb, "wglos");' 
+title="Glossary"><IMG SRC="../images/wglos.png" ALT="Glossary" NAME=glosb HEIGHT=20 WIDTH=94 BORDER=0></A><!--
+--><A HREF="4.htm"  OnMouseOver='whomp(nextb, "snext");' OnMouseOut='whomp(nextb, "wnext");'
+ title="Next Section"><IMG NAME=nextb SRC="../images/wnext.png" ALT="Next" HEIGHT=20 WIDTH=82 BORDER=0></A>
+<BR>
+</BLOCKQUOTE>
+</BODY>
+</HTML>

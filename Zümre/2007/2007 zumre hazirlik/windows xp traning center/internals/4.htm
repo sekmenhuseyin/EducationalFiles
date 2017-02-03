@@ -1,0 +1,102 @@
+<!doctype html public "-//IETF//DTD HTML//EN">
+<HTML>
+<HEAD>
+<TITLE>Windows XP: The Complete Reference: Windows XP Configuration Files</TITLE>
+<META NAME="GENERATOR" CONTENT="Web-O-Matic Deluxe 4.1">
+<META NAME="AUTHOR" CONTENT="John R. Levine, Margaret Levine Young">
+<META NAME="COPYRIGHT" CONTENTS="Copyright 2001 by The McGraw-Hill Companies. All rights reserved.">
+</HEAD>
+<BODY BACKGROUND="../images/background.png">
+<BLOCKQUOTE>
+<SCRIPT LANGUAGE="JavaScript">
+function whomp(i, file)
+{
+	i.src = "../images/" + file + ".png";
+}
+</SCRIPT>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarered3x3.png" HEIGHT=3 WIDTH=3></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=2>
+Chapter 37: Windows XP Configuration Files
+</FONT></TD>
+</TR>
+</TABLE>
+<BR>
+<A HREF="3.htm"  OnMouseOver='whomp(prev, "sprev");' OnMouseOut='whomp(prev, "wprev");'
+ title="Previous Section"><IMG NAME=prev SRC="../images/wprev.png" ALT="Previous" HEIGHT=20 WIDTH=82 BORDER=0></A><!--
+--><A HREF="index.htm" OnMouseOver='whomp(chap, "schap");' OnMouseOut='whomp(chap, "wchap");'
+title="Chapter Overview"><IMG SRC="../images/wchap.png" ALT="Chapter" NAME=chap HEIGHT=20 WIDTH=100 BORDER=0></A><A
+HREF="../index.htm" OnMouseOver='whomp(toc, "sbook");' OnMouseOut='whomp(toc, "wbook");' 
+title="Table of Contents"><IMG SRC="../images/wbook.png" ALT="Contents" NAME=toc HEIGHT=20 WIDTH=94 BORDER=0></A><A
+HREF="../glossary/index.htm" OnMouseOver='whomp(glos, "sglos");' OnMouseOut='whomp(glos, "wglos");' 
+title="Glossary"><IMG SRC="../images/wglos.png" ALT="Glossary" NAME=glos HEIGHT=20 WIDTH=94 BORDER=0></A><!--
+--><IMG SRC="../images/bnext.png" ALT="Next" HEIGHT=20 WIDTH=82 BORDER=0>
+<BR>
+<A NAME="1">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarered10x10.png" HEIGHT=10 WIDTH=10></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=4><B>Disk Formats and Coexisting with Other Operating Systems</B></FONT>
+</TD>
+</TR>
+</TABLE></A>
+<P>
+Windows can share a hard disk with some other operating systems. Because different operating systems format the disk differently, sharing a disk requires splitting it up into partitions.
+<A NAME="2">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Partitioning Disks</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+One way for multiple operating systems to be installed on a single hard disk is for each system to be assigned one or more partitions on the disk and use its partition(s) when running. Windows can share a disk with OS/2 or UNIX this way. Windows uses a Primary partition (which used to be called a Primary DOS partition). Most other operating systems also use a single partition. <A HREF="../harddisks/2.htm#1">Windows</A> can create FAT32 and NTFS partitions and respects partitions created by other systems, but cannot itself create a partition for any other system.
+<P>
+Here are ways to partition a disk between Windows and another system:
+<UL>
+<LI >
+<I>Install Windows first.</I><B> </B>When installing Windows, tell the Setup Wizard to use only as much of the disk as you want to assign to Windows and leave the rest of the disk unassigned. Once Windows is installed, shut Windows down and install the other system, which generally creates its own partition using the rest of the disk.
+<LI >
+<I>Install the other system first.</I><B> </B>Most other operating systems can usually create a Primary partition for Windows at the same time they create their own partitions by using an included utility. Once the other system is installed, shut the system down and install Windows, which automatically uses the existing Primary partition.
+<LI >
+<I>Use a partitioning program like Partition Magic to create the partitions.</I> There are <A HREF="../harddisks/1.htm#5">utility programs</A> designed for creating, modifying, and copying partitions of all types.
+</UL>
+<P>
+A few systems offer other ways to coexist with Windows or DOS. For example, some versions of Linux (a popular clone of UNIX) can create a large file in a DOS partition and use that file as the Linux partition. This makes it possible to install Linux, even on a system that has Windows preinstalled and assigns the entire disk to the DOS partition.
+<P>
+<TABLE><TR><TD VALIGN="TOP"><IMG SRC="../images/note.png" ALT="note" WIDTH=95 HEIGHT=29></TD>
+<TD VALIGN="TOP">When installing more than one operating system to a computer with one or more drives, it's important to know that if you install Windows Me/9x last, it will only boot the computer to Windows Me/9x and will ignore the existence of another operating system. The easiest way around this is to install Windows Me/9x first if you plan to install it at all, followed by UNIX or Linux. Install Windows XP last: its boot loader detects the existing operating systems and adds them to its boot menu to create a <A HREF="../wininst/6.htm#4"> multiboot installation</A>.
+
+</TD></TR></TABLE>
+<A NAME="3">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Other Operating Systems and Windows Files</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+Windows XP can't read or write files in partitions that are formatted with any file system other than DOS FAT, FAT32, or NTFS. Fortunately, nearly every other operating system that runs on a PC can deal with Windows files. Most UNIX and Linux systems, for example, can logically mount a DOS FAT partition so that it appears to be part of the UNIX file system. Consult the documentation for your other operating system to find out how to give it access to your Windows files.
+<P>
+<TABLE><TR><TD VALIGN="TOP"><IMG SRC="../images/note.png" ALT="note" WIDTH=95 HEIGHT=29></TD>
+<TD VALIGN="TOP">If you are creating a dual-boot system with Windows XP and Windows Me/9x and you use NTFS for your Windows XP partition, Windows Me/9x won't be able to read the files in the Windows XP partition. Solve this problem by creating an additional FAT or FAT32 partition that contains no operating system, only data.
+
+</TD></TR></TABLE>
+<P>
+<A HREF="3.htm"  OnMouseOver='whomp(prevb, "sprev");' OnMouseOut='whomp(prevb, "wprev");'
+ title="Previous Section"><IMG NAME=prevb SRC="../images/wprev.png" ALT="Previous" HEIGHT=20 WIDTH=82 BORDER=0></A><!--
+--><A HREF="index.htm" OnMouseOver='whomp(chapb, "schap");' OnMouseOut='whomp(chapb, "wchap");'
+title="Chapter Overview"><IMG SRC="../images/wchap.png" ALT="Chapter" NAME=chapb HEIGHT=20 WIDTH=100 BORDER=0></A><A
+HREF="../index.htm" OnMouseOver='whomp(tocb, "sbook");' OnMouseOut='whomp(tocb, "wbook");' 
+title="Table of Contents"><IMG SRC="../images/wbook.png" ALT="Contents" NAME=tocb HEIGHT=20 WIDTH=94 BORDER=0></A><A
+HREF="../glossary/index.htm" OnMouseOver='whomp(glosb, "sglos");' OnMouseOut='whomp(glosb, "wglos");' 
+title="Glossary"><IMG SRC="../images/wglos.png" ALT="Glossary" NAME=glosb HEIGHT=20 WIDTH=94 BORDER=0></A><!--
+--><IMG SRC="../images/bnext.png" ALT="Next" HEIGHT=20 WIDTH=82 BORDER=0>
+<BR>
+</BLOCKQUOTE>
+</BODY>
+</HTML>

@@ -1,0 +1,182 @@
+<!doctype html public "-//IETF//DTD HTML//EN">
+<HTML>
+<HEAD>
+<TITLE>Windows XP: The Complete Reference: Troubleshooting Windows XP</TITLE>
+<META NAME="GENERATOR" CONTENT="Web-O-Matic Deluxe 4.1">
+<META NAME="AUTHOR" CONTENT="John R. Levine, Margaret Levine Young">
+<META NAME="COPYRIGHT" CONTENTS="Copyright 2001 by The McGraw-Hill Companies. All rights reserved.">
+</HEAD>
+<BODY BACKGROUND="../images/background.png">
+<BLOCKQUOTE>
+<SCRIPT LANGUAGE="JavaScript">
+function whomp(i, file)
+{
+	i.src = "../images/" + file + ".png";
+}
+</SCRIPT>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarered3x3.png" HEIGHT=3 WIDTH=3></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=2>
+Chapter 35: Troubleshooting Windows XP
+</FONT></TD>
+</TR>
+</TABLE>
+<BR>
+<A HREF="4.htm"  OnMouseOver='whomp(prev, "sprev");' OnMouseOut='whomp(prev, "wprev");'
+ title="Previous Section"><IMG NAME=prev SRC="../images/wprev.png" ALT="Previous" HEIGHT=20 WIDTH=82 BORDER=0></A><!--
+--><A HREF="index.htm" OnMouseOver='whomp(chap, "schap");' OnMouseOut='whomp(chap, "wchap");'
+title="Chapter Overview"><IMG SRC="../images/wchap.png" ALT="Chapter" NAME=chap HEIGHT=20 WIDTH=100 BORDER=0></A><A
+HREF="../index.htm" OnMouseOver='whomp(toc, "sbook");' OnMouseOut='whomp(toc, "wbook");' 
+title="Table of Contents"><IMG SRC="../images/wbook.png" ALT="Contents" NAME=toc HEIGHT=20 WIDTH=94 BORDER=0></A><A
+HREF="../glossary/index.htm" OnMouseOver='whomp(glos, "sglos");' OnMouseOut='whomp(glos, "wglos");' 
+title="Glossary"><IMG SRC="../images/wglos.png" ALT="Glossary" NAME=glos HEIGHT=20 WIDTH=94 BORDER=0></A><!--
+--><A HREF="6.htm"  OnMouseOver='whomp(next, "snext");' OnMouseOut='whomp(next, "wnext");'
+ title="Next Section"><IMG NAME=next SRC="../images/wnext.png" ALT="Next" HEIGHT=20 WIDTH=82 BORDER=0></A>
+<BR>
+<A NAME="1">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarered10x10.png" HEIGHT=10 WIDTH=10></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=4><B>The Microsoft Management Console (MMC) [mmc]<I></I></B></FONT>
+</TD>
+</TR>
+</TABLE></A>
+<P>
+Like Windows 2000, Windows XP collects lots of system tools into one place--the <A NAME="ddmicrosoftmanagementconsole">Microsoft Management Console</A> (<A NAME="ddmmc">MMC</A>). Strangely, the window that displays the MMC is titled Computer Management, but the program that provides the information (what is referred to as a <I>framework</I>) is the MMC, and that's what everyone calls itThe MMC can be the "frame" for a number of other "pictures." The pictures are called <A NAME="ddsnapins"><I>snap-ins</I></A>, and each snap-in adds new capabilities to the MMC. (This is same model that Web browsers use.)
+<P>
+<TABLE><TR><TD VALIGN="TOP"><IMG SRC="../images/note.png" ALT="note" WIDTH=95 HEIGHT=29></TD>
+<TD VALIGN="TOP">The vast majority of snap-ins are targeted at systems administrators, information technology professionals, and all-around nerds. Though an integral part of Windows and its general health, you will not commonly find yourself poking around the MMC if you have a choice between that and playing a few rounds of Solitaire.
+
+</TD></TR></TABLE>
+<P>
+To display the MMC, choose Start, right-click My Computer, and choose Manage from the menu that appears. The MMC is shown in Figure 35-3.
+<TABLE BORDER=2><TR><TD ALIGN=CENTER>
+<IMG SRC="trouble.mmc.png" WIDTH=638 HEIGHT=452 ALT="[figure]">
+</TD></TR><TR BGCOLOR="#00ffff"><TD><I>Figure 35-3:  The Microsoft Management Console (MMC)/</I></TD></TR></TABLE>
+<P>
+Several items in the Computer Management MMC are of interest to troubleshooting. The System Tools section of the Computer Management MMC includes the following tools:<B><I></I></B>
+<UL>
+<LI >
+<A HREF="../trouble/5.htm#2">Event Viewer</A><B><I></I></B>
+<LI >
+<A HREF="../sharehw/2.htm#1">Shared Folders</A><B><I></I></B>
+<LI >
+<A HREF="../users/3.htm#1">Local Users and Groups</A><B><I></I></B>
+<LI >
+<A HREF="../trouble/5.htm#3">Performance Logs And Alerts</A><B><I></I></B>
+</UL>
+<P>
+The Event Viewer and Performanace Logs And Alerts are of interest because they provide large amounts of information about your system and its components. The Device Manager is useful for fixing hardware and driver problems.<B><I></I></B>
+<A NAME="2">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>The Event Viewer</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+As Windows runs it makes notes of what's going on. The Event Viewer has a venerated history, beginning with Windows NT 3.1 where it was designed to centrally locate all operational data for the person or persons that managed the server. Your Windows computer may not be a server, but this information is no less helpful, especially when diagnosing a problem. In fact, the Event Viewer may know exactly what's wrong.<B><I></I></B>
+<P>
+In the Computer Management MMC, open System Tools and click Event Viewer. Clicking the plus box reveals three items; Application, Security, and System. Each of these items stores recorded operational data from their respective categories:<B><I></I></B>
+<UL>
+<LI >
+<B>Application</B>  Logs all events generated by applications and programs. These are not System related events, but they may be generated by components that are used by the operating system.<B><I></I></B>
+<LI >
+<B>Security</B>  Logs security-related events, anything from the number of bad logins recorded to when and where objects were added to or taken away from the computers file system.<B><I></I></B>
+<LI >
+<B>System</B>  Logs of events that are recorded by the operating system itself. It keeps track of events, errors, and failures that occur in the systems files and functions. It also records errors and failures that occur in the system but are generated by an external application or program.<B><I></I></B>
+</UL>
+<P>
+The information contained in these logs are often helpful in determining the cause of a system instability.<B><I></I></B>
+<A NAME="3">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Performance Logs and Alerts</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+Like Event Viewer, the Performance Logs And Alerts component stores information about the state of the system. It records information about how well Windows performs and what tolerances, if any, it approaches or exceeds during normal operation. The logs are stored (usually in the Perflogs folder on the same disk as Windows) and you can configure Windows to store them in text files that you can import into a spreadsheet program, a database program, or a program designed specifically for analyzing logs. <A NAME="ddcounterlogs"><I>Counter logs</I></A> record system statistics at regular intervals, <A NAME="ddtracelogs"><I>trace logs</I></A> record what was happening at the time of particular events, and <A NAME="ddalerts"><I>alerts</I></A> send a message or run a program when a counter hits a preset value.
+<P>
+By default, the logging and alert functions are not configured except for one sample Counter log that is installed with Windows. Logging is useful on large networks, where one network administrator is responsible for the functioning of many computers, but individual users rarely use them.
+<P>
+Most people never use the MMC Performance Logs And Alerts' logs, but if you do, follow these steps to create a log:
+<OL>
+<LI  VALUE=1>
+Open the MMC window and open the Performance Logs And Alerts item.<B><I></I></B>
+<LI  VALUE=2>
+Right-click Counter Logs and choose New Log Settings from the menu that appears.<B><I></I></B>
+<LI  VALUE=3>
+In the Name box, type a descriptive name for your new log (for example, type <B>Disk Access</B> if you plan to log what percentage of the time the system is active that the disk is idle). Click OK. You see a Properties dialog box for your new log, like this one:<B><I></I></B>
+</OL>
+<BR><IMG ALIGN=TOP SRC="trouble.log.png" WIDTH=404 HEIGHT=455 ALT="[image]">
+<OL>
+<LI  VALUE=1>
+To determine which counter (or counters) to log, click the Add Counters button, which opens the Add Counters dialog box:<B><I></I></B>
+</OL>
+<BR><IMG ALIGN=TOP SRC="trouble.addcounters.png" WIDTH=384 HEIGHT=386 ALT="[image]">
+<OL>
+<LI  VALUE=2>
+The Select Counters From Computer item is selected with your computer's name below it. Leave this setting, so that you are logging your own computer's performance. (Network administrators can log the performances of computers throughout the network they manage.)<B><I></I></B>
+<LI  VALUE=3>
+Set the Performance Object box to PhysicalDisk to choose which part of your system you want to see counters about. (You can click the Explain button to get information on the selection option on this and the other lists.)<B><I></I></B>
+<LI  VALUE=4>
+The Select Counters From List list displays counters about the performance object you choose. Set this to % Idle Time (that is, the percentage of the time that the physical hard disk is idle).<B><I></I></B>
+<LI  VALUE=5>
+The Select Instances From List list displays Total (for the total for all the hard disks and partitions on your system) and an item that includes the individual hard disk (ours says "0 C: F: D:" to include the three partitions on our hard disk). Select the latter to see separate statistics for the individual disks and partitions.<B><I></I></B>
+<LI  VALUE=6>
+Click the Add button to add this counter to your log. Click Close. Back in the Disk Access dialog, the Counters list now includes an entry for the counter that you added--something like this:<B><I></I></B>
+</OL>
+<P><PRE>
+\\MORTICIA\PhysicalDisk(0 C:)\% Idle Time
+</PRE>
+<OL>
+<LI  VALUE=7>
+Logging usually stores a sample every 15 seconds. You can change that interval by changing the value in the Interval box.
+<LI  VALUE=8>
+If you want to store the log file somewhere other than in the Perflogs folder on the same disk on which Windows is installed, click the Log Files tab and change the settings there.
+<LI  VALUE=9>
+If you want to store the log file in a format that you can import into a database or spreadsheet file, click the Log Files tab and change the Log File Type. (Logging defaults to a Binary File type, which can't be imported.)
+<LI  VALUE=10>
+If you want to control when logging starts and stops (rather than just starting now and continuing indefinitely), click the Schedule tab.
+<LI  VALUE=11>
+Click OK to create your log. Now the log appears in the Counter Logs section of the Performance Logs And Alerts item in the MMC Computer Management window.
+</OL>
+<P>
+You can start and stop logging by selecting the log from the list and clicking the Stop The Selected Log button (a black box) on the MMC toolbar. To start it again, click the Start The Selected Log button (the right-pointing "play" arrow).<B><I></I></B>
+<P>
+To view the log file after it has collected some data, you can open the log file, which is usually in C:\Perflogs and has the name you typed when you created the log, with a number at the end (for example C:\Perflogs\Disk Access_000001.blg). Click or double-click it to open the Performance window, a version of the Performance Logs And Alerts MMC snap-in with one additional component, System Monitor. This window is a live viewer into the operations that you have selected in your log.<B><I></I></B>
+<A NAME="4">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>The Device Manager</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+Like the Device Manager in previous versions of Windows, the Windows XP <A HREF="../hardware/3.htm#1">Device Manager</A> displays information about all the hardware on your computer. In Windows XP, however, you can display it as an MMC snap-in. You can also display the Device Manager in its own window by choosing Start, right-clicking My Computer, choosing Properties from the menu, clicking the Hardware tab, and clicking the Device Manager button. You can do two important things with the Device Manager: <A HREF="../hardware/6.htm#2">modify drivers for a device and remove a device</A>.
+<P>
+<TABLE><TR><TD VALIGN="TOP"><IMG SRC="../images/tip.png" ALT="tip" WIDTH=95 HEIGHT=29></TD>
+<TD VALIGN="TOP">The Windows 2000 and XP versions of the Device Manager have a little-known feature--accessing device-specific Troubleshooters from within the device's Properties dialog. Locate the device that is giving you trouble, double-click it to open its Properties dialog box, and click the Troubleshooter button. If you look at the General tab of the Properties dialog box, Windows tells you if it thinks the device is misbehaving.<B><I></I></B>
+
+</TD></TR></TABLE>
+<P>
+<A HREF="4.htm"  OnMouseOver='whomp(prevb, "sprev");' OnMouseOut='whomp(prevb, "wprev");'
+ title="Previous Section"><IMG NAME=prevb SRC="../images/wprev.png" ALT="Previous" HEIGHT=20 WIDTH=82 BORDER=0></A><!--
+--><A HREF="index.htm" OnMouseOver='whomp(chapb, "schap");' OnMouseOut='whomp(chapb, "wchap");'
+title="Chapter Overview"><IMG SRC="../images/wchap.png" ALT="Chapter" NAME=chapb HEIGHT=20 WIDTH=100 BORDER=0></A><A
+HREF="../index.htm" OnMouseOver='whomp(tocb, "sbook");' OnMouseOut='whomp(tocb, "wbook");' 
+title="Table of Contents"><IMG SRC="../images/wbook.png" ALT="Contents" NAME=tocb HEIGHT=20 WIDTH=94 BORDER=0></A><A
+HREF="../glossary/index.htm" OnMouseOver='whomp(glosb, "sglos");' OnMouseOut='whomp(glosb, "wglos");' 
+title="Glossary"><IMG SRC="../images/wglos.png" ALT="Glossary" NAME=glosb HEIGHT=20 WIDTH=94 BORDER=0></A><!--
+--><A HREF="6.htm"  OnMouseOver='whomp(nextb, "snext");' OnMouseOut='whomp(nextb, "wnext");'
+ title="Next Section"><IMG NAME=nextb SRC="../images/wnext.png" ALT="Next" HEIGHT=20 WIDTH=82 BORDER=0></A>
+<BR>
+</BLOCKQUOTE>
+</BODY>
+</HTML>

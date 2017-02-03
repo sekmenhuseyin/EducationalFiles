@@ -1,0 +1,239 @@
+<!doctype html public "-//IETF//DTD HTML//EN">
+<HTML>
+<HEAD>
+<TITLE>Windows XP: The Complete Reference: Network and Internet Security</TITLE>
+<META NAME="GENERATOR" CONTENT="Web-O-Matic Deluxe 4.1">
+<META NAME="AUTHOR" CONTENT="John R. Levine, Margaret Levine Young">
+<META NAME="COPYRIGHT" CONTENTS="Copyright 2001 by The McGraw-Hill Companies. All rights reserved.">
+</HEAD>
+<BODY BACKGROUND="../images/background.png">
+<BLOCKQUOTE>
+<SCRIPT LANGUAGE="JavaScript">
+function whomp(i, file)
+{
+	i.src = "../images/" + file + ".png";
+}
+</SCRIPT>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarered3x3.png" HEIGHT=3 WIDTH=3></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=2>
+Chapter 31: Network and Internet Security
+</FONT></TD>
+</TR>
+</TABLE>
+<BR>
+<A HREF="0.htm"  OnMouseOver='whomp(prev, "sprev");' OnMouseOut='whomp(prev, "wprev");'
+ title="Previous Section"><IMG NAME=prev SRC="../images/wprev.png" ALT="Previous" HEIGHT=20 WIDTH=82 BORDER=0></A><!--
+--><A HREF="index.htm" OnMouseOver='whomp(chap, "schap");' OnMouseOut='whomp(chap, "wchap");'
+title="Chapter Overview"><IMG SRC="../images/wchap.png" ALT="Chapter" NAME=chap HEIGHT=20 WIDTH=100 BORDER=0></A><A
+HREF="../index.htm" OnMouseOver='whomp(toc, "sbook");' OnMouseOut='whomp(toc, "wbook");' 
+title="Table of Contents"><IMG SRC="../images/wbook.png" ALT="Contents" NAME=toc HEIGHT=20 WIDTH=94 BORDER=0></A><A
+HREF="../glossary/index.htm" OnMouseOver='whomp(glos, "sglos");' OnMouseOut='whomp(glos, "wglos");' 
+title="Glossary"><IMG SRC="../images/wglos.png" ALT="Glossary" NAME=glos HEIGHT=20 WIDTH=94 BORDER=0></A><!--
+--><A HREF="2.htm"  OnMouseOver='whomp(next, "snext");' OnMouseOut='whomp(next, "wnext");'
+ title="Next Section"><IMG NAME=next SRC="../images/wnext.png" ALT="Next" HEIGHT=20 WIDTH=82 BORDER=0></A>
+<BR>
+<A NAME="1">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarered10x10.png" HEIGHT=10 WIDTH=10></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=4><B>Protecting Your System from Viruses and Worms</B></FONT>
+</TD>
+</TR>
+</TABLE></A>
+<P>
+One of the less appealing aspects of the Internet has been security and the potential for becoming the victim of a <A NAME="ddvirus"><I>virus</I></A> (a program that reproduce by infecting--or copying itself into --other files or computers). More properly, a virus is a self-reproducing program that can infect files on one computer but needs help in order to find other systems to infect (like people sharing programs), while a <A NAME="ddworm"><I>worm</I></A> is a self-reproducing program that can send itself to other systems (e-mail viruses are actually worms). Some viruses and worms are just annoying, taking up space on your system or displaying an annoying message, but many others are destructive, deleting or altering files or clogging up Internet e-mail systems with thousands of unwanted messages. The sidebar "<A HREF="../security/1.htm#3">How Do Viruses Spread?</A>" contains more information.
+<P>
+John M. Goodman, author of many computer books, says, "If your computer is in good health (with regular <A HREF="../backup/index.htm">backups</A>), a virus is annoying and can waste several days work. If your computer's health is shaky (with irregular or no backups), a virus can kill you."
+<A NAME="2">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Types of Virus Files</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+Viruses and worms can be stored in several types of files:
+<UL>
+<LI >
+<B>.exe, .com, .bat, .msi, .mso, or .pif (program files); scraps; or shortcuts</B>  These viruses and worms run when they are opened (clicked or double-clicked in Windows Explorer or your e-mail program, for example). If Windows is configured not to show file extensions, you may not be able to tell easily which files have these extensions. (Tell Windows to display filename extensions by choosing Start | My Computer, choosing Tools | Folder Options, clicking the View tab, and deselecting the Hide Extensions For Known File Types check box.)
+<LI >
+<B>.doc (Word documents), .xls (Excel spreadsheets), or .mdb (Access databases)</B>  These files may contain viruses and worms written in Microsoft Word, Excel, or Access macro languages. The macros (customized automation instructions) usually run when you open the file. Because Word and Excel are the most popular programs that run macros, Word documents and Excel spreadsheets are the most common macro virus carriers.
+<LI >
+<B>.vbs (Visual Basic Script files)</B>  These viruses and worms are written in Visual Basic and run when you click or double-click them. Visual Basic is a programming language used, among other things, to write macros for the Office suite of applications, including Outlook 2002.
+</UL>
+<P>
+For a more complete of file types that might contain viruses, see article Q262631, "Information About the Outlook E-mail Security Update" in Microsoft's Knowledge Base: go to <A HREF="htp://support.microsoft.com"><B>htp://support.microsoft.com</B></A> and search for the article number.
+<P>
+<TABLE><TR><TD VALIGN="TOP"><IMG SRC="../images/caution.png" ALT="caution" WIDTH=95 HEIGHT=29></TD>
+<TD VALIGN="TOP">Scraps, a Windows file type created by cut-and-paste operations, can contain executable files (including viruses and worms) that appear to be other types of (harmless) files. An article on this issue is at <A HREF="http://pc-help.org/security/scrap.htm"><B>http://pc-help.org/security/scrap.htm</B></A>.
+
+</TD></TR></TABLE>
+<P><TABLE BORDER=2 CELLPADDING=10><TR>
+<TD BGCOLOR="#00ffff" WIDTH=2></TD><TD>
+<A NAME="3">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>How Do Viruses Spread?</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+The commonly cited psychological reasons for individuals to open suspicious e-mails are fear, greed, and sex. Greed is the least enticing of the dastardly trio. While fear can cause people to open an e-mail to find out how to stop something bad from happening, sex is the most effective motivator.
+<P>
+The notorious Melissa worm by David Smith was started by simply being posted to the <B>alt.sex</B> newsgroup. Smith asked that the file not be circulated, so of course, it was. That single posting to a newsgroup was the only action that Smith performed to spread his worm throughout the world, causing millions of dollars in damages and, in some cases, days of mail server downtime for some major companies.
+<P>
+A new tactic is to appeal to the recipient's ego. The more recent SirCam worm draws in the viewer by asking for sage advice on the "subject" included in the attached "message." The attachment is really the worm in disguise.
+<P>
+So, the moral of the story is: If you receive a message from someone you don't know, or from someone you know but didn't expect to receive a file from, approach it with caution. If it has an attachment, just delete it. If you're not sure, let it sit unopened in your inbox for a few days, while you check the anti-virus and e-mail hoax Web sites. A six- or eight-hour delay in opening the ILOVEYOU virus would have been enough for most people to have heard about the danger of the virus.
+</TD></TR></TABLE>
+<A NAME="4">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Preventing Infection by Viruses</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+The best prevention for viruses is to avoid getting infected in the first place (practice safe computing). If you do get infected, tools are available to clean your system.
+<A NAME="5">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squaregreen6x6.png" HEIGHT=6 WIDTH=6></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Avoiding Getting Infected</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+The generally accepted method of preventing viruses from successfully attacking your computer is the use of <A NAME="ddantivirussoftware"><I>antivirus software</I></A>--programs that detect known viruses before they run and infect your computer. Of course, there is the tried-and-true method of not downloading or opening anything that you cannot verify, validate, or otherwise determine the source of.
+<P>
+<TABLE><TR><TD VALIGN="TOP"><IMG SRC="../images/note.png" ALT="note" WIDTH=95 HEIGHT=29></TD>
+<TD VALIGN="TOP">The Internet isn't the only way to catch viruses. If you commonly move files from one place to another using removable media (for example, floppy disks, writable CD-ROMs, Zip disks, or Jaz disks) then you need to be careful with these as well. The data on a disk, whether it be from school, office, or library, likely came from the Internet. This simple fact makes it possible for the disk to contain a virus. Office networks are typically more secure, because your LAN administrator has probably installed antivirus software, but don't take that for granted. School networks can be less secure because of insufficient staffing resources. Public access points like ones in libraries, copy shops, or cyber caf0xe9s are a mixed bag. Your best bet is to be wary of any data coming to your computer from the outside. Even commercial software has been known to be a transmission source for viruses. Trust no one. When in doubt, wait at least 24 hours before opening attachments, and check an <A HREF="../security/1.htm#11">anti-virus Web site</A> in the meantime. And <A HREF="../backup/index.htm">back up</A> your entire system regularly!
+
+</TD></TR></TABLE>
+<A NAME="6"><H4>(4)Antivirus Programs</H4></A>
+<P>
+Take our word for it and do <I>not</I> wait until you have contracted a virus to install an antivirus program. An antivirus program can't prevent infection if it's not running. Buying and installing an antivirus application is a small price to pay, compared to losing all of your work for a week, all of your carefully collected bookmarks, the hours that you spent making all of your CDs into MP3 files, your family pictures from last year's picnic in Hawaii--whatever your most treasured files include. Here are some of the most popular and effective antivirus programs:
+<UL>
+<LI >
+<B>Symantec Norton AntiVirus, at </B>(<A HREF="http://www.symantec.com/nav"><B>http://www.symantec.com/nav</B></A>)  Norton AntiVirus is a complete solution. You can go with the simple Norton AntiVirus or pop for the complete Internet Security Family Edition suite of security applications--the Family Edition is a particularly good deal, including a personal <I>firewall</I> application that is particularly well suited to protecting broadband (cable and DSL) users.
+<LI >
+<B>McAfee VirusScan, at </B><A HREF="http://www.mcafee.com"><B>http://www.mcafee.com</B></A>  McAfee has lately turned many of their programs into online applications--online information services that are updated 24 hours a day. They also offer an application update service that tracks what you have and sends you updates as they become available.
+</UL>
+<P>
+After you install an antivirus program, make sure that you arrange to get regular updates. Some antivirus programs can update themselves by downloading lists of viruses from the manufacturer's Web site automatically. You can also visit the manufacturer's Web site and download new virus lists yourself. An antivirus program won't protect you from the latest virus if your virus lists are months old.
+<P>
+Once you have an antivirus program installed, configured, and running according to the documentation that came with the program, the antivirus program scans all incoming files (via e-mail and Web) for viruses. For example, the antivirus program might display a dialog box while you are retrieving your e-mail, reporting that a message contains the SirCam worm and offering to delete it for you. Some antivirus programs also scan your hard disk regularly to look for viruses that might have sneaked through. If the program sees a virus, it displays a message telling you what to do.
+<A NAME="7"><H4>(4)Practicing Safe Computing Online</H4></A>
+<P>
+Here's a brief list of ways to protect yourself when you're online:
+<UL>
+<LI >
+Do not open an attachment that you either did not specifically request or that would not normally be unexpected. If a colleague sends you a file that you asked for, it's likely to be safe. However, if someone named GaToR|RoTaG or something similar sends you a file, don't touch it. Similarly, if someone you know (whose address book you are likely to be in) sends a file you aren't expecting, write back and ask about it <I>before</I> opening the file.
+<LI >
+Before opening an attachment, wait a few hours or days. In the meantime, check an antivirus Web site for news of new viruses and worms.
+<LI >
+Do not download files from sources you are not familiar with. Stick to known, reputable Web sites like ZDNet (<A HREF="http://www.zdnet.com"><B>http://www.zdnet.com</B></A>), Tucows (<A HREF="http://www.tucows.com"><B>http://www.tucows.com</B></A>), Stroud's CWSApps (<A HREF="http://cws.internet.com"><B>http://cws.internet.com</B></A>), and C|Net (<A HREF="http://www.cnet.com"><B>http://www.cnet.com</B></A>) or the Web sites of well-known hardware and software manufacturers, as sources for downloadable software. Many pornographic sites require you to download a viewer program: think twice, since these programs have been known to contain dangerous viruses.
+<LI >
+Do not accept any file that is offered unsolicited. If you receive an e-mail notifying you that you have won a contest and you can click a URL in the message to download your prize, think again. Did you sign up for a contest? Legitimate sources invariably draw from an existing customer base and rely on word of mouth and advertising campaigns to get new customers, not random free give-aways.
+<LI >
+Ask friends and family not to forward too many jokes to you (or choose <I>one</I> friend to be your Internet joke source). This reduces your potential for infection, as well as cutting down on your e-mail volume.
+</UL>
+<A NAME="8"><H4>(4)Avoiding Outlook and Outlook Express</H4></A>
+<P>
+Many people believe that your computer can't get infected by a virus simply by opening an e-mail message that has no attachments. This used to be true, but is no longer. Formatted e-mail messages can carry viruses, too, because some versions of Outlook and Outlook Express automatically open and display attachments. Many viruses have been written specifically to exploit security holes in Outlook and Outlook Express. Microsoft has issued several security patches to close these security holes. As Microsoft finds new security problems, they usually respond quickly with patches. Be sure to use Windows <A HREF="../resources/2.htm#1">Automatic Updates</A> to download and install these patches.
+<P>
+<TABLE><TR><TD VALIGN="TOP"><IMG SRC="../images/tip.png" ALT="tip" WIDTH=95 HEIGHT=29></TD>
+<TD VALIGN="TOP">One simple solution to this and many other worms is not to use older versions of Outlook or Outlook Express. The most recent versions, Outlook 2002 and Outlook Express 6, respectively, have vastly improved handling of known viruses. If you use Eudora, an excellent and widely-used e-mail program from Qualcomm, Inc. (at <A HREF="http://www.eudora.com"><B>http://www.eudora.com</B></A>), you can avoid most viruses by not opening attached files.
+
+</TD></TR></TABLE>
+<A NAME="9"><H4>(4)Knowing When You're Infected</H4></A>
+<P>
+You may find out that your system is infected when you see a strange message telling you that you're a victim. Some other ways of telling are as follows (although all but the last can be signs of other Windows problems):
+<UL>
+<LI >
+Your system slows down (especially programs loading).
+<LI >
+Files disappear.
+<LI >
+Programs crash unexpectedly.
+<LI >
+For e-mail based viruses, people e-mail you to say that they received a virus from you.
+</UL>
+<A NAME="10">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squaregreen6x6.png" HEIGHT=6 WIDTH=6></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Dealing with an Infected Windows System</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+If you have<I> </I>already been infected with a virus, follow these steps:
+<OL>
+<LI  VALUE=1>
+If an unfamiliar dialog box, error message, or something else unfamiliar appears, make a note of the message or other symptom. Unplug the modem or network cable, and then shut down the computer. Continuing to use an infected computer is a bad idea for several reasons. Depending on what type of virus or worm you have, additional damage can be done. With the speed of today's systems, a virus or worm can delete or write over gigabytes of data in a matter of minutes. Also, some viruses exploit functions in Microsoft Outlook and Outlook Express that can cause your computer to forward a copy of the virus to all entries in your address book.
+<LI  VALUE=2>
+Do not try to repair or otherwise contain the damage or effects of a virus or worm using software that was not specifically designed to do so. In other words, don't run Norton Speed Disk to try and solve the problem.
+<LI  VALUE=3>
+Do not install antivirus software <I>after</I> you discover a virus or worm. Unless you are sure that the virus is nondestructive, leave the computer turned off until you find out how to get rid of the specific virus that your system has contracted.
+<LI  VALUE=4>
+Locate a computer that is not infected. Go to a virus resource Web site and find out how to fix it. Try the Web site of one of the most popular antivirus programs (listed in a previous section), or one of the virus information sites listed in the next section. Look for step-by-step instructions for removing the virus. Companies like Symantec and McAfee often develop scripts that aid in the removal of recently discovered viruses and publish of the details about what that virus has done or can do, so that they can be safely removed.
+<LI  VALUE=5>
+Once you know which virus you have, follow the steps to disinfect your system (that is, remove the virus). If the virus has deleted or overwritten files, it might not be possible to get the files back, but you can at least prevent further damage to your system and infection of other systems.
+<LI  VALUE=6>
+If you can't find identify the virus or find a procedure for getting rid of it, call technical support for your computer (or your local technical support person). Explain to them what happened and that you would like some assistance in removing the virus, or at least in taking steps to minimize the damage.
+<LI  VALUE=7>
+Once you are sure that the virus is gone, buy and install an antivirus program. Don't make the same mistake twice!
+</OL>
+<P>
+Another approach is to <A HREF="../backup/index.htm">back up all your data files</A> (but none of your programs), reformat your hard disk, reinstall Windows and your applications, restore your data files, and buy and install an antivirus program to prevent reinfection. However, leaving your computer running while you make the backups can give the virus time to delete more files.
+<P>
+<TABLE><TR><TD VALIGN="TOP"><IMG SRC="../images/tip.png" ALT="tip" WIDTH=95 HEIGHT=29></TD>
+<TD VALIGN="TOP">After you have cleaned up a virus, back up, reformat, and reinstall your system. Many viruses and the resulting repairs leave your system unstable, and parts of virus files may still be lying around.
+
+</TD></TR></TABLE>
+<P>
+If you make regular backups, check the <A HREF="../backup/index.htm">backups</A> that you made within at least 72 hours of discovering the infection. Your system may have been infected for days (or longer) before you realized it.
+<A NAME="11">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Sources of Antivirus Information</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+Here is a quick list of applications and sites that you should investigate long before you need them:
+<UL>
+<LI >
+<B>Doug Muth's Anti-Virus Help Page, at </B><A HREF="http://www.claws-and-paws.com/virus"><B>http://www.claws-and-paws.com/virus</B></A>  A fantastically deep collection of information regarding computer viruses with lots of helpful papers, reports, and links to additional resources. One thing that makes this site great is that it's not tied to any commercial concern.
+<LI >
+<B>Symantec AntiVirus Research Center (SARC), at </B><A HREF="http://www.sarc.com"><B>http://www.sarc.com</B></A>  An easy enough domain name to remember, especially when you need fast access to the latest virus alerts. Muth's page is great, but the SARC team is fast, which is one of the benefits of commercial relations.
+<LI >
+<B>McAfee Virus Information Library, at </B><A HREF="http://vil.nai.com/vil"><B>http://vil.nai.com/vil</B></A>  This encyclopedic listing of viruses is one of the first places you should look to get help or find out what's going on.
+<LI >
+<B>Vmyths (formerly the Computer Virus Myths page), at </B><A HREF="http://www.vmyths.com"><B>http://www.vmyths.com</B></A>  Myths and news about viruses and hoaxes.
+</UL>
+<P>
+Please take our advice and make sure you're covered.
+<P>
+<A HREF="0.htm"  OnMouseOver='whomp(prevb, "sprev");' OnMouseOut='whomp(prevb, "wprev");'
+ title="Previous Section"><IMG NAME=prevb SRC="../images/wprev.png" ALT="Previous" HEIGHT=20 WIDTH=82 BORDER=0></A><!--
+--><A HREF="index.htm" OnMouseOver='whomp(chapb, "schap");' OnMouseOut='whomp(chapb, "wchap");'
+title="Chapter Overview"><IMG SRC="../images/wchap.png" ALT="Chapter" NAME=chapb HEIGHT=20 WIDTH=100 BORDER=0></A><A
+HREF="../index.htm" OnMouseOver='whomp(tocb, "sbook");' OnMouseOut='whomp(tocb, "wbook");' 
+title="Table of Contents"><IMG SRC="../images/wbook.png" ALT="Contents" NAME=tocb HEIGHT=20 WIDTH=94 BORDER=0></A><A
+HREF="../glossary/index.htm" OnMouseOver='whomp(glosb, "sglos");' OnMouseOut='whomp(glosb, "wglos");' 
+title="Glossary"><IMG SRC="../images/wglos.png" ALT="Glossary" NAME=glosb HEIGHT=20 WIDTH=94 BORDER=0></A><!--
+--><A HREF="2.htm"  OnMouseOver='whomp(nextb, "snext");' OnMouseOut='whomp(nextb, "wnext");'
+ title="Next Section"><IMG NAME=nextb SRC="../images/wnext.png" ALT="Next" HEIGHT=20 WIDTH=82 BORDER=0></A>
+<BR>
+</BLOCKQUOTE>
+</BODY>
+</HTML>

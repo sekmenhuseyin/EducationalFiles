@@ -1,0 +1,11 @@
+DragonDictate
+From Wikipedia, the free encyclopedia
+Jump to: navigation, search
+
+DragonDictate was the original speech recognition application from Dragon Systems and uses discrete speech where "you - pause - between - each - word - that - you - say".
+
+Dragon NaturallySpeaking allows continuous speech recognition.
+
+DragonDictate is still available but has not been updated since Windows 98 was the current operating system.
+
+Some historical information on DragonDictate can be found in the article on Dragon NaturallySpeaking.

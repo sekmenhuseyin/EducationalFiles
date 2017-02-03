@@ -1,0 +1,217 @@
+<!doctype html public "-//IETF//DTD HTML//EN">
+<HTML>
+<HEAD>
+<TITLE>Windows XP: The Complete Reference: Network and Internet Security</TITLE>
+<META NAME="GENERATOR" CONTENT="Web-O-Matic Deluxe 4.1">
+<META NAME="AUTHOR" CONTENT="John R. Levine, Margaret Levine Young">
+<META NAME="COPYRIGHT" CONTENTS="Copyright 2001 by The McGraw-Hill Companies. All rights reserved.">
+</HEAD>
+<BODY BACKGROUND="../images/background.png">
+<BLOCKQUOTE>
+<SCRIPT LANGUAGE="JavaScript">
+function whomp(i, file)
+{
+	i.src = "../images/" + file + ".png";
+}
+</SCRIPT>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarered3x3.png" HEIGHT=3 WIDTH=3></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=2>
+Chapter 31: Network and Internet Security
+</FONT></TD>
+</TR>
+</TABLE>
+<BR>
+<A HREF="1.htm"  OnMouseOver='whomp(prev, "sprev");' OnMouseOut='whomp(prev, "wprev");'
+ title="Previous Section"><IMG NAME=prev SRC="../images/wprev.png" ALT="Previous" HEIGHT=20 WIDTH=82 BORDER=0></A><!--
+--><A HREF="index.htm" OnMouseOver='whomp(chap, "schap");' OnMouseOut='whomp(chap, "wchap");'
+title="Chapter Overview"><IMG SRC="../images/wchap.png" ALT="Chapter" NAME=chap HEIGHT=20 WIDTH=100 BORDER=0></A><A
+HREF="../index.htm" OnMouseOver='whomp(toc, "sbook");' OnMouseOut='whomp(toc, "wbook");' 
+title="Table of Contents"><IMG SRC="../images/wbook.png" ALT="Contents" NAME=toc HEIGHT=20 WIDTH=94 BORDER=0></A><A
+HREF="../glossary/index.htm" OnMouseOver='whomp(glos, "sglos");' OnMouseOut='whomp(glos, "wglos");' 
+title="Glossary"><IMG SRC="../images/wglos.png" ALT="Glossary" NAME=glos HEIGHT=20 WIDTH=94 BORDER=0></A><!--
+--><A HREF="3.htm"  OnMouseOver='whomp(next, "snext");' OnMouseOut='whomp(next, "wnext");'
+ title="Next Section"><IMG NAME=next SRC="../images/wnext.png" ALT="Next" HEIGHT=20 WIDTH=82 BORDER=0></A>
+<BR>
+<A NAME="1">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarered10x10.png" HEIGHT=10 WIDTH=10></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=4><B>Managing Which Files Internet Explorer Downloads</B></FONT>
+</TD>
+</TR>
+</TABLE></A>
+<P>
+Internet Explorer can retrieve a wide variety of files and objects, ranging from innocuous plain text files and images to potentially destructive executable programs. Some Web pages increase the amount of interactivity they can offer by downloading small programs to run on your computer. For example, rather than transmitting the individual frames of an animation over the Internet, a Web server may send an animation-constructing program that runs on your computer. A financial Web site may download a program that displays a scrolling stock ticker. Typically, this process is invisible to the user--the interaction or the animation just happens, without calling your attention to how it happens.
+<P>
+While these programs are useful, they also create security issues. If Web sites can put useful programs on your computer and run them without informing you, precautions must be taken to make sure that they can't also put harmful programs on your computer. Internet Explorer takes certain precautions automatically, and allows you the option to choose additional precautions.
+<P>
+Internet Explorer's downloaded object security allows you to decide, based on both the Web site where an object came from and the type of object, whether to retrieve an object, and once it's retrieved, what to do with it. Internet Explorer defines three levels of object access (low, medium, and high) to give varying amounts of access to your computer. You can also define custom access permissions, if the three standard settings don't meet your needs.
+<A NAME="2">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>What Are Java, JavaScript, VBScript, and ActiveX?</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+<A NAME="ddjava"><I>Java</I></A> is a language for sending small applications (called <A NAME="ddapplets"><I>applets</I></A>) over the Web, so that they can be executed by your computer. <A NAME="ddjavascript"><I>JavaScript</I></A> is a language for extending <A HREF="../browsing/1.htm#2">HTML</A> to embed small programs called <A NAME="ddscripts"><I>scripts</I></A> in Web pages. <A NAME="ddvbscript"><I>VBScript</I></A>, a language that resembles Microsoft's Visual Basic, can be used to add scripts to pages that are displayed by Internet Explorer. Anything that VBScript can do, JavaScript (which Microsoft calls JScript) can do, too and vice versa.
+<P>
+<A NAME="ddactivexcontrols"><I>ActiveX controls</I></A>, like Java, are a way to embed executable programs into a Web page. Unlike Java and JavaScript, but like VBScript, ActiveX is a Microsoft system that is not used by Navigator or most other browsers. When Internet Explorer encounters a Web page that uses ActiveX controls, it checks to see whether that particular control is already installed and if it is not, IE installs the control on your machine.
+<P>
+<TABLE><TR><TD VALIGN="TOP"><IMG SRC="../images/caution.png" ALT="caution" WIDTH=95 HEIGHT=29></TD>
+<TD VALIGN="TOP">ActiveX controls are considerably more dangerous than JavaScript or VBScript scripts or Java applets. Java applets and JavaScript scripts are run in a "sandbox" inside your Web browser, which limits the accidental or deliberate damage they can do; and VBScript scripts are run by an interpreter, which should limit the types of damage they can do. However, ActiveX controls are programs with full access to your computer's resources.
+
+</TD></TR></TABLE>
+<A NAME="3">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>What Are Internet Explorer's Zones?</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+Internet Explorer divides the world into four <A NAME="ddzones"><I>zones</I></A>:
+<UL>
+<LI >
+<A NAME="ddinternet"><B>Internet</B></A>  Includes all sites that are not in one of the other three zones. Objects from this zone generally are given the medium level of access to your computer.
+<LI >
+<A NAME="ddlocalintranet"><B>Local Intranet</B></A>  Contains computers on your local network. They're usually considered fairly trustworthy, and objects are given a medium level of access to your computer.
+<LI >
+<A NAME="ddtrustedsites"><B>Trusted Sites</B></A>  Includes the sites that you or Microsoft have listed as trustworthy. Objects from this zone generally are given the high level of access to your computer.
+<LI >
+<A NAME="ddrestrictedsites"><B>Restricted Sites</B></A>  Includes the sites that you have listed as untrustworthy. Objects from this zone are given the low level of access to your computer. Don't change the access level of this zone to grant higher access.
+</UL>
+<P>
+Downloaded ActiveX controls and other executable objects can and should be signed by their authors using a certificate scheme similar to that used for validating remote servers.
+<P>
+For each of the four zones into which a Web page can fall, you can set the security to high, medium, medium-low, or low. For each zone, you can set exactly which remote operations you're willing to perform. To prevent downloading and running software that might infect your system with a virus, see the section "<A HREF="../security/1.htm#4">Preventing Infection by Viruses</A>" earlier in this chapter.
+<A NAME="4">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Controlling Your Download Security</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+The rules governing scripts and applets are set zone by zone on the Security tab of the Internet Options dialog box. To examine or change these settings:
+<OL>
+<LI  VALUE=1>
+Open the Internet Options dialog box by selecting Tools | Internet Options from the Internet Explorer menu bar.
+<LI  VALUE=2>
+Click the Security tab of the Internet Options dialog box (as shown in Figure 31-1).
+</OL>
+<TABLE BORDER=2><TR><TD ALIGN=CENTER>
+<IMG SRC="security.iesec.png" WIDTH=406 HEIGHT=459 ALT="[figure]">
+</TD></TR><TR BGCOLOR="#00ffff"><TD><I>Figure 31-1:  Security tab of the Internet Options dialog box</I></TD></TR></TABLE>
+<OL>
+<LI  VALUE=3>
+Select the security zone you want to examine or change. The rest of the information on the Security tab changes to show the settings for that zone.
+<LI  VALUE=4>
+If you want to change the security setting of a zone, move the slider on the Security tab of the Internet Options dialog box. (The slider doesn't appear if the zone has been given custom settings. To reset such a zone to one of the standard settings, click the Default Level button. When the slider reappears, you can move it to the desired setting.)
+<LI  VALUE=5>
+If you want to change the security settings of the selected zone, scroll through the Security Settings dialog box until you see the item you want to change. Change an item by selecting or deselecting its check box or by selecting a different radio button than the current selection.
+<LI  VALUE=6>
+Click OK to close each open dialog box. Click Yes in the confirmation box that asks if you want to change the security settings.
+</OL>
+<A NAME="5">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squaregreen6x6.png" HEIGHT=6 WIDTH=6></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Displaying and Changing Settings for Zones</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+To add or delete a Web site from the Local Intranet, Trusted Sites, or Restricted Sites Zones, click the zone on the Security tab of the Internet Options dialog box. Click the Sites button. (There's no button for the Internet Zone, since it contains all the Web sites that are not contained in the other three zones.) You see a dialog box like the one shown here:
+<BR><IMG ALIGN=TOP SRC="security.trustedsites.png" WIDTH=384 HEIGHT=342 ALT="[image]">
+<P>
+If you want to include only sites that have secure servers, leave the Require Server Verification (https:) For All Sites In This Zone check box selected. If you want to be able to add any Web site to the list of trusted sites for this zone, deselect the check box. To add a site, type its URP (including http:// or https://) in the top box and click Add. To remove a site, click in the Web Sites box and click Remove.
+<A NAME="6">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squaregreen6x6.png" HEIGHT=6 WIDTH=6></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Controlling Which Web Sites Are in the Local Intranet Zone</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+The Local Intranet Zone normally contains sites on your own local area network and is set up that way by your network administrator when he or she sets up the network. When you click Add Sites on the Security tab, Windows displays the Local Intranet Zone dialog box, with these three check boxes:
+<UL>
+<LI >
+<B>Include All Local (Intranet) Sites Not Listed In Other Zones</B><B>  </B>Select this check box to include all other sites on the same local area network in the Local Intranet Zone. This check box is usually checked.
+<LI >
+<B>Include All Sites That Bypass The Proxy Server</B><B>  </B>Many organizations have a <I>proxy server</I> that mediates access to sites outside the organization. Select this check box to include sites outside your organization to which your organization lets you connect directly in the Local Intranet zone. You can see a list of the sites that bypass the proxy server by displaying the Internet Properties or Internet Options dialog box, clicking the Connections tab, and clicking the Advanced button.
+<LI >
+<B>Include All Network Paths (UNCs)</B><B>  </B>Select this check box to include all the sites with UNC addresses (Universal Naming Convention addresses), which apply only to computers on your LAN.
+</UL>
+<P>
+You can also click the Advanced button to add sites individually, as for Trusted and Restricted sites. See <A HREF="../ics/index.htm">Chapter 30</A> for more information on how networks connect to the Internet.
+<A NAME="7">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squaregreen6x6.png" HEIGHT=6 WIDTH=6></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Controlling Which Web Sites Are in the Trusted and Restricted Sites Zones</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+The Trusted and Restricted Sites zones start with no Web sites listed; you must specify the Web sites to include in these zones. To specify sites, select the zone to which you want to add sites and click Sites on the Security tab of the Internet Options dialog box. You see the Trusted Sites or the Restricted Sites dialog box, the first of which is shown in Figure 31-2. To add a new site, type its full address, starting with <B>http://</B> or <B>https://</B>, into the Add This Web Site To The Zone box and click Add. The Web site appears in the Web Sites list. To remove a site, select it in the Web Sites list and click Remove. You can require a verified secure connection to all sites in this zone by clicking the Require Server Verification (https:) For All Sites In This Zone check box at the bottom of the dialog box; when selected, this setting prevents you from adding any sites that don't support HTTPS, which is described in the section "<A HREF="../security/3.htm#1">Securing Your Web Communication with Encryption and Certificates</A>" later in this chapter.
+<TABLE BORDER=2><TR><TD ALIGN=CENTER>
+<IMG SRC="security.ieadd.png" WIDTH=384 HEIGHT=342 ALT="[figure]">
+</TD></TR><TR BGCOLOR="#00ffff"><TD><I>Figure 31-2:  Adding sites to the Trusted Sites zone</I></TD></TR></TABLE>
+<A NAME="8">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Managing Java and JavaScript</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+The security settings that affect how Internet Explorer deals with Java and JavaScript programs are in the Microsoft VM and Scripting sections of the Security Settings dialog box. Follow these steps:
+<OL>
+<LI  VALUE=1>
+On the Security tab of the Internet Options dialog box, click the zone for which you want to change or see the settings.
+<LI  VALUE=2>
+Click the Custom Level button to display the Security Settings dialog box, shown here:
+</OL>
+<BR><IMG ALIGN=TOP SRC="security.activex.png" WIDTH=353 HEIGHT=412 ALT="[image]">
+<OL>
+<LI  VALUE=3>
+You may change what these applets and scripts are allowed to do on your computer, or even disable Java or JavaScript entirely, by choosing Disable (Internet Explorer does not run this type of program downloaded from this zone), Enable (IE does run this type of program downloaded from this zone), or Prompt (ask before running the program).
+</OL>
+<A NAME="9">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Managing ActiveX Controls</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+We have never been big fans of <A HREF="../security/2.htm#2">ActiveX controls</A>. They allow Web sites to have too much power over your system and are hard to monitor. If you should happen to download and install a rogue ActiveX control by mistake, it could (on its own) download and install lots more rogue ActiveX controls--which would then be permanent parts of your software environment, even when you are offline. None of this would appear the least bit suspicious to any virus-detecting software you might own, because ActiveX controls aren't viruses: They have the same status as applications that you install yourself.
+<P>
+Disabling ActiveX controls is one option, as described in the previous section. However, if you frequent Microsoft Web sites like MSN or MSNBC, you will be exposed to numerous temptations to turn them back on. (We finally gave in to the excellent portfolio-tracking services at MSN Moneycentral.) We suggest the following compromise: Disable ActiveX controls everywhere but in the Trusted Sites security zone. (Do this from the Security Settings dialog box, following the steps in the previous section.) When you find a Microsoft Web site that offers some wonderful service involving ActiveX controls, move that site into the Trusted Sites security zone.
+<P>
+ActiveX controls are stored in the folder C:\Windows\Downloaded Program Files (if Windows is installed in C:\Windows). If you use Internet Explorer, you should check this file periodically to see what applications Internet Explorer has downloaded. Dispose of an ActiveX control by right-clicking its icon and selecting Remove from the shortcut menu.
+<P>
+<A HREF="1.htm"  OnMouseOver='whomp(prevb, "sprev");' OnMouseOut='whomp(prevb, "wprev");'
+ title="Previous Section"><IMG NAME=prevb SRC="../images/wprev.png" ALT="Previous" HEIGHT=20 WIDTH=82 BORDER=0></A><!--
+--><A HREF="index.htm" OnMouseOver='whomp(chapb, "schap");' OnMouseOut='whomp(chapb, "wchap");'
+title="Chapter Overview"><IMG SRC="../images/wchap.png" ALT="Chapter" NAME=chapb HEIGHT=20 WIDTH=100 BORDER=0></A><A
+HREF="../index.htm" OnMouseOver='whomp(tocb, "sbook");' OnMouseOut='whomp(tocb, "wbook");' 
+title="Table of Contents"><IMG SRC="../images/wbook.png" ALT="Contents" NAME=tocb HEIGHT=20 WIDTH=94 BORDER=0></A><A
+HREF="../glossary/index.htm" OnMouseOver='whomp(glosb, "sglos");' OnMouseOut='whomp(glosb, "wglos");' 
+title="Glossary"><IMG SRC="../images/wglos.png" ALT="Glossary" NAME=glosb HEIGHT=20 WIDTH=94 BORDER=0></A><!--
+--><A HREF="3.htm"  OnMouseOver='whomp(nextb, "snext");' OnMouseOut='whomp(nextb, "wnext");'
+ title="Next Section"><IMG NAME=nextb SRC="../images/wnext.png" ALT="Next" HEIGHT=20 WIDTH=82 BORDER=0></A>
+<BR>
+</BLOCKQUOTE>
+</BODY>
+</HTML>

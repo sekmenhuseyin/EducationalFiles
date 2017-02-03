@@ -1,0 +1,117 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>gravityTrace</title>
+</head>
+<body bgcolor="#cccccc">
+<!--url's used in the movie-->
+<!--text used in the movie-->
+<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,0,0" width="550" height="400" id="gravityTrace" align="middle">
+<param name="allowScriptAccess" value="sameDomain" />
+<param name="movie" value="gravityTrace.swf" />
+<param name="quality" value="high" />
+<param name="bgcolor" value="#ffffff" />
+<embed src="gravityTrace.swf" quality="high" bgcolor="#ffffff" width="550" height="400" name="gravityTrace" align="middle" allowScriptAccess="sameDomain" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" />
+</object>
+<h3>Code in frame 1 layer 1</h3>
+<pre>
+init();
+
+function init(){
+  gun.dir = 0;
+  gun.charge = 0;
+  bullet.dir = 0;
+  bullet.speed = 0;
+
+  gravity = 1;
+}
+
+_root.onEnterFrame = function(){
+  checkKeys();
+  move(bullet);
+} // end enterFrame
+
+function checkKeys(){
+  if (Key.isDown(Key.LEFT)){
+    gun.dir--;
+    gun._rotation = gun.dir;
+  } // end if
+
+  if (Key.isDown(Key.RIGHT)){
+    gun.dir++;
+    gun._rotation = gun.dir;
+  } // end if
+
+  if (Key.isDown(Key.UP)){
+    gun.charge++;
+  } // end if
+
+  if (Key.isDown(Key.DOWN)){
+    gun.charge--;
+  } // end if
+
+  if (Key.isDown(Key.SPACE)){
+    bullet._x = gun._x;
+    bullet._y = gun._y;
+    bullet.speed = gun.charge;
+    bullet.dir = gun.dir;
+
+    //initialize line
+    _root.clear();
+    _root.lineStyle(2,0x000000,100);
+    _root.moveTo(gun._x, gun._y);
+
+    turn(bullet);
+  } // end if
+
+} // end checkKeys
+
+function turn(sprite){
+  //use vector projection to get DX and DY
+
+  //offset the angle
+  degrees = sprite.dir -90;
+
+  //convert to radians
+  radians = degrees / 180 * Math.PI;
+
+  //get DX and DY (normalized: length is one)
+  sprite.dx = Math.cos(radians);
+  sprite.dy = Math.sin(radians);
+
+  //compensate for speed
+  sprite.dx *= sprite.speed;
+  sprite.dy *= sprite.speed;
+} // end turn;  
+
+function move(sprite){
+  //moves an object.  Kills it if it moves off stage
+
+  sprite._x += sprite.dx;
+  sprite._y += sprite.dy;
+
+  //use drawing tools to trace the path
+  _root.lineTo(sprite._x, sprite._y);
+
+  if ((sprite._x > Stage.width) ||
+      (sprite._x &lt; 0) ||
+      (sprite._y > Stage.height) ||
+      (sprite._y &lt; 0)){
+    //stop sprite and move it off stage
+    sprite._x = -100;
+    sprite._y = -100;
+    sprite._speed = 0;
+    sprite.dx = 0;
+    sprite.dy = 0;
+
+    //turn off line drawing
+    _root.lineStyle(0,0x000000,0);
+  } //end if
+
+  //incorporate gravity
+  sprite.dy += gravity;
+} // end move
+</pre>
+</body>
+</html>

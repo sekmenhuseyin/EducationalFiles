@@ -1,0 +1,221 @@
+<!doctype html public "-//IETF//DTD HTML//EN">
+<HTML>
+<HEAD>
+<TITLE>Windows XP: The Complete Reference: Copying, Moving, and Sharing Information Between Programs</TITLE>
+<META NAME="GENERATOR" CONTENT="Web-O-Matic Deluxe 4.1">
+<META NAME="AUTHOR" CONTENT="John R. Levine, Margaret Levine Young">
+<META NAME="COPYRIGHT" CONTENTS="Copyright 2001 by The McGraw-Hill Companies. All rights reserved.">
+</HEAD>
+<BODY BACKGROUND="../images/background.png">
+<BLOCKQUOTE>
+<SCRIPT LANGUAGE="JavaScript">
+function whomp(i, file)
+{
+	i.src = "../images/" + file + ".png";
+}
+</SCRIPT>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarered3x3.png" HEIGHT=3 WIDTH=3></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=2>
+Chapter 5: Copying, Moving, and Sharing Information Between Programs
+</FONT></TD>
+</TR>
+</TABLE>
+<BR>
+<A HREF="1.htm"  OnMouseOver='whomp(prev, "sprev");' OnMouseOut='whomp(prev, "wprev");'
+ title="Previous Section"><IMG NAME=prev SRC="../images/wprev.png" ALT="Previous" HEIGHT=20 WIDTH=82 BORDER=0></A><!--
+--><A HREF="index.htm" OnMouseOver='whomp(chap, "schap");' OnMouseOut='whomp(chap, "wchap");'
+title="Chapter Overview"><IMG SRC="../images/wchap.png" ALT="Chapter" NAME=chap HEIGHT=20 WIDTH=100 BORDER=0></A><A
+HREF="../index.htm" OnMouseOver='whomp(toc, "sbook");' OnMouseOut='whomp(toc, "wbook");' 
+title="Table of Contents"><IMG SRC="../images/wbook.png" ALT="Contents" NAME=toc HEIGHT=20 WIDTH=94 BORDER=0></A><A
+HREF="../glossary/index.htm" OnMouseOver='whomp(glos, "sglos");' OnMouseOut='whomp(glos, "wglos");' 
+title="Glossary"><IMG SRC="../images/wglos.png" ALT="Glossary" NAME=glos HEIGHT=20 WIDTH=94 BORDER=0></A><!--
+--><IMG SRC="../images/bnext.png" ALT="Next" HEIGHT=20 WIDTH=82 BORDER=0>
+<BR>
+<A NAME="1">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarered10x10.png" HEIGHT=10 WIDTH=10></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=4><B>Sharing Information Using OLE</B></FONT>
+</TD>
+</TR>
+</TABLE></A>
+<P>
+<A NAME="ddole"><I>OLE</I></A> <I>(Object Linking and Embedding)</I> is far more flexible and can be far more complicated than cut-and-paste or drag-and-drop. OLE enables you to use all your software applications to create an integrated document. For instance, you might want to create an annual report that includes these components:
+<UL>
+<LI >
+Text you create and format by using a word processor, such as Microsoft Word or Corel WordPerfect.
+<LI >
+A company logo stored in a graphics file created by Adobe Photoshop, Paint, or some other graphics application.
+<LI >
+Data and calculations on operating costs stored in a Microsoft Excel or Lotus 1-2-3 spreadsheet.
+<LI >
+Graphs and charts, which may come from your spreadsheet package or another graphics package.
+</UL>
+<P>
+These components may not reflect exactly what <I>you</I> want to do, but the point is the same--if you want to combine the output of different applications, OLE offers many advantages over the Clipboard. Why? Because, when you use OLE, the original program retains ownership of the object, and you can use the program to edit the object. For instance, if you use OLE to embed a portion of a spreadsheet in a word processing document, you can always use the spreadsheet application to edit the object and the spreadsheet in the word processing document will reflect those changes. If, instead, you use the Clipboard to copy the numbers from the spreadsheet and then you paste the numbers to the word processor, they would just sit in the word processor, oblivious to their origins--you could use only the tools available in the word processor to edit the numbers. This means that if you later change the original spreadsheet, the numbers pasted in the word processing document won't change.
+<P>
+In OLE, an <A NAME="ddobject"><I>object</I></A> refers to a piece of information from one application that is placed in a <A NAME="ddcontainerfile"><I>container file</I></A> created by another application. For example, a spreadsheet or graphic is an object when it is included in a word processing document. OLE actually is two similar methods of sharing information between applications--embedding and linking. Sticking with the previous example, <A NAME="ddembedding"><I>embedding</I></A> means putting the spreadsheet object in the word processing document (container file) and asking the word processor to take care of storing the object. So, although the word processor enables you to edit the spreadsheet object by using the spreadsheet application, the spreadsheet object is stored with the word processing document. <A NAME="ddlinking"><I>Linking</I></A>, on the other hand, allows the object to retain a close relationship with its origins--so close, in fact, if the numbers in the original spreadsheet file change, the linked spreadsheet object in the word processing document changes to match. This occurs because the word processing document doesn't really contain the object it displays--it only contains a reference to the file where the information is stored.
+<P>
+You may also choose to insert a <A NAME="ddpackage"><I>package</I></A> into another file. A package is a small file that uses OLE, but instead of displaying content owned by another application, it displays an icon, which, when clicked, opens the owner application and displays the object. Packages can be either linked or embedded. Whether you choose to embed or link objects, the process is similar: You create an object in one application, and then link or embed the object into another application.
+<P>
+Although using OLE to link files can be wonderfully convenient and can save you hours of revisions, it should be used judiciously. If you ever plan to move the file containing linked objects or to send it to someone, you must make sure one of the following occurs:
+<UL>
+<LI >
+The linked files also get moved or sent.
+<LI >
+The linked objects don't get updated. This means the host application won't go looking for the information in the linked file. To break the link, delete the object and paste in a nonlinked version instead.
+<LI >
+You edit the links so the host file knows where to find the source files for the linked objects.
+</UL>
+<P>
+Otherwise, your beautifully organized and time-saving document can become a complete mess. If you are going to move a document with linked objects in it, you need to know how to maintain links, a topic covered later in this chapter.
+<P>
+If you don't need the automatic updating you get with linked objects (for instance, if the source file isn't going to change, or if you don't want the object to reflect changes), or if you know you are going to move or send files, then stick with embedded objects--they're easier to maintain. However, embedding a large object may take more disk space than linking.
+<P>
+<TABLE><TR><TD VALIGN="TOP"><IMG SRC="../images/note.png" ALT="note" WIDTH=95 HEIGHT=29></TD>
+<TD VALIGN="TOP">Some applications enable you to link one file to another in a different way--by using a <A HREF="../browsing/1.htm#1">hyperlink</A>. A hyperlink actually takes you from one file to another, opening the application for the second file, if necessary.
+
+</TD></TR></TABLE>
+<A NAME="2">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Creating Linked or Embedded Objects</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+The way you link or embed an object depends on the application programs you're using--the program into which you want to embed or link the object. Most programs have a menu command to create an object by using OLE, but you may have to use the online help system to find the command. In Microsoft Word, for instance, you can use Insert | Object to create an object by using OLE. When using Insert | Object in Microsoft Word or its equivalent in another program, you may see the Display As Icon option. This option allows you to create a package, an icon that when clicked, opens the object in its native application. The following two techniques may also work to link or embed an object: <A HREF="../sharedata/2.htm#3">dragging-and-dropping</A> and using <A HREF="../sharedata/2.htm#4">Edit | Paste Special</A>. Neither technique is supported by all applications.
+<A NAME="3">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squaregreen6x6.png" HEIGHT=6 WIDTH=6></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Embedding an Object by Dragging and Dropping</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+The easiest way to embed an object is to drag the information from one program and drop it in the other program. For this method to work, both applications must support drag-and-drop embedding. Check the documentation for the program that contains the information you want to embed. When dragging the information you want to embed, use the same technique you use to copy selected information <I>within</I> the application: Some applications require you to hold down the C<SMALL>TRL</SMALL> key while dragging the information. For instance, in Excel, you have to click-and-drag the border of the selected area to move or copy it.<P>
+Follow these steps to use drag-and-drop embedding:
+<OL>
+<LI  VALUE=1>
+Select the information you want to embed.
+<LI  VALUE=2>
+Use drag-and-drop to drag the selected information to the other application; use the same drag-and-drop technique you use to copy information within an application. If the second application isn't visible on the screen, you can drag the information to the application's Taskbar button--hold the mouse pointer there for a second, and the application window opens.
+<LI  VALUE=3>
+Drop the information where you want it--if the application supports OLE, you automatically create an embedded object.
+</OL>
+<P>
+<TABLE><TR><TD VALIGN="TOP"><IMG SRC="../images/tip.png" ALT="tip" WIDTH=95 HEIGHT=29></TD>
+<TD VALIGN="TOP">You may be able to specify that the information be linked rather than embedded (the usual default when OLE drag-and-drop is supported) by holding down the <I>S<SMALL>HIFT</SMALL></I> key--try it to see whether the application you are using supports this feature.
+</TD></TR></TABLE>
+<A NAME="4">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squaregreen6x6.png" HEIGHT=6 WIDTH=6></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Linking or Embedding an Object Using Paste Special</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+You may want a little more control over the object than you have when you drag-and-drop it--to achieve more control over the object, use the Edit | Paste Special command found in many applications. The procedure is much like using the Clipboard to cut-and-paste, except you paste by using OLE instead, as follows:
+<OL>
+<LI  VALUE=1>
+Select the information you want to link or embed.
+<LI  VALUE=2>
+Press C<SMALL>TRL</SMALL>-C or C<SMALL>TRL</SMALL>-X to copy or cut the information (or use another method to copy or cut).<LI  VALUE=3>
+Move the cursor where you want the object to appear.
+<LI  VALUE=4>
+Choose Edit | Paste Special. You see a dialog box similar to the one shown in Figure 5-2. Choose the correct application from the choices displayed. Make sure to choose the application you want to use to edit the object--in the figure, that is Microsoft Word. If you choose another option, you won't be using OLE--instead, you will be using the Clipboard to do a simple paste of information from one application to another.
+</OL>
+<TABLE BORDER=2><TR><TD ALIGN=CENTER>
+<IMG SRC="sharedata.pastespcqp.png" WIDTH=468 HEIGHT=290 ALT="[figure]">
+</TD></TR><TR BGCOLOR="#00ffff"><TD><I>Figure 5-2:  Use this dialog box (or one like it) to embed a Word document into another file.</I></TD></TR></TABLE>
+<OL>
+<LI  VALUE=5>
+Choose the correct setting either to embed the object in the new file or to link the two files together. To embed the object, choose the Paste option; to link the object, choose the Paste Link option. Figure 5-2 shows the settings to embed a Microsoft Word object into an Excel spreadsheet. Figure 5-3 shows the settings to link an Excel spreadsheet into a Microsoft Word document. Other applications may have Paste Special dialog boxes that look different from these.
+</OL>
+<TABLE BORDER=2><TR><TD ALIGN=CENTER>
+<IMG SRC="sharedata.pastesp.png" WIDTH=468 HEIGHT=290 ALT="[figure]">
+</TD></TR><TR BGCOLOR="#00ffff"><TD><I>Figure 5-3:  Use settings like these to link the object to its parent file.</I></TD></TR></TABLE>
+<OL>
+<LI  VALUE=6>
+Change the Display As Icon setting, if necessary. If you choose to display the object as an icon, you don't see the information itself. Instead, you create a <A NAME="ddpackagedobject"><I>packaged object</I></A> that shows the information it contains only when you open its icon.
+<LI  VALUE=7>
+Click OK to link or embed the object. You see the object in the container file, as in Figure 5-4.
+</OL>
+<TABLE BORDER=2><TR><TD ALIGN=CENTER>
+<IMG SRC="sharedata.embed.png" WIDTH=708 HEIGHT=481 ALT="[figure]">
+</TD></TR><TR BGCOLOR="#00ffff"><TD><I>Figure 5-4:  Part of an Excel worksheet embedded in a Word document</I></TD></TR></TABLE>
+<A NAME="5">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Editing a Linked or Embedded Object</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+Editing a linked or embedded object is simple--in most applications, you just double-click the object. For other applications, you may need to right-click the object to display a menu with an edit option or change modes so you are in Edit mode (if you're having trouble, check the help system of the application containing the object). Once you figure out how to edit the object, the object's application opens. Next, the menu and toolbars of the window in which the object appears are replaced by the menu and toolbars of the application assigned by the registry to that file type (usually the application used to create the object). In other words, if you're editing an Excel object in a Word document, double-click the object to display Excel's menu and toolbars in Word's window, as in Figure 5-5. You can edit the object by using that application's tools. When you're done, click outside the object to reinstate the regular menu and toolbars, or choose File | Update or Exit. If you're asked whether you want to update the object, answer Yes.
+<TABLE BORDER=2><TR><TD ALIGN=CENTER>
+<IMG SRC="sharedata.edit.png" WIDTH=708 HEIGHT=481 ALT="[figure]">
+</TD></TR><TR BGCOLOR="#00ffff"><TD><I>Figure 5-5:  Edit an Excel object in a Word document by using the Excel menu and toolbars that appear when you double-click the object.</I></TD></TR></TABLE>
+<P>
+If the object is linked, rather than embedded, you can also edit the object by editing the source file itself. If the file containing the object is also open, you may have to update it manually to see the new information in the object. Closing and opening the file containing the object may be the easiest way to update the object.
+<P>
+Delete an object by single-clicking it to select it--you'll probably see a box around it--then press the D<SMALL>ELETE</SMALL> or B<SMALL>ACKSPACE</SMALL> key.<A NAME="6">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Maintaining OLE Links</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+If you decide to use a link to put an object in a file, rather than embed the object, you may have to do some maintenance if the linked file or the file containing the link moves to a new location. A link is usually updated each time the file containing the object is opened or printed. <I>Updating</I> means that the current information from the linked file is brought into the object.
+<P>
+If the location of a file changes, you may need to "lock" the link so the last available information is retained, break the link so the object becomes an embedded object rather than a linked object, or edit the link so the correct path and filename are referenced. The exact commands may differ by application (check the online help), but usually there's one dialog box where all these tasks can be performed, like this one:
+<BR><IMG ALIGN=TOP SRC="sharedata.links.png" WIDTH=522 HEIGHT=361 ALT="[image]">
+<P>
+In most Microsoft applications, you can display the dialog box by choosing Edit | Links. The following list explains how to do these three tasks in a Microsoft application. Other applications work in a similar way, but may have different names for the dialog box buttons and options.
+<UL>
+<LI >
+<B>Lock the link  </B>Use the Locked option on the Links dialog box to lock the selected link. You can select multiple links to lock by C<SMALL>TRL</SMALL>-clicking or S<SMALL>HIFT</SMALL>-clicking additional links. A locked link isn't updated. To check whether a link is locked, select the link and see whether the Locked option is checked.<B></B><LI >
+<B>Break the link  </B>Use the Break Link (or Cancel Link) button to break a link. When you break a link, the link disappears from the Links list, and you can no longer use the original application to edit the object. A better choice, often, is to lock the link or replace the linked object with an embedded object.
+<LI >
+<B>Edit the link  </B>Use the Change Source button to edit the link. This enables you to redirect the link to a different file or to the same file stored in a different location.<B></B>
+</UL>
+<P>
+Another option is to set up the file to update the links only when you tell it to do so by specifying manual updating. The Links dialog box has an Update Method option that enables you to specify automatic or manual updating. If you set this option to manual, the links are updated only when you display the Links dialog box and click the Update Now button.
+<A NAME="7">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Saving Small Bits of Data as Scraps</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+Not everyone finds scraps useful, but if you need them, they may be a lifesaver. <A NAME="ddscraps"><I>Scraps</I></A> are OLE objects that have been left on the desktop or in a folder. You can keep a scrap on the desktop or in the folder or, at some later point, drag it to another application. A scrap has an icon that looks like this:
+<BR><IMG ALIGN=TOP SRC="sharedata.scrap.png" WIDTH=68 HEIGHT=66 ALT="[image]">
+<P>
+Scrap icons all look the same, but their names give you a clue as to which application created them. For instance, a scrap from Word or another word processor is called a <I>Document scrap</I>, a scrap from Excel is a <I>Worksheet scrap</I>, and a scrap from Quattro Pro is a <I>Notebook scrap</I> (using the Quattro Pro terminology). Not all applications can be used to create scraps. For instance, Notepad, which doesn't support drag-and-drop, cannot be used to create scraps.
+<P>
+To create a scrap, drag some information to the desktop or copy it to the Clipboard, and then paste it to the desktop (by right-clicking the desktop and choosing Paste). When you open a scrap on the desktop, the application that created the information opens to display it. You can drag a scrap into a different application to create an OLE object out of it.
+<P>
+<A HREF="1.htm"  OnMouseOver='whomp(prevb, "sprev");' OnMouseOut='whomp(prevb, "wprev");'
+ title="Previous Section"><IMG NAME=prevb SRC="../images/wprev.png" ALT="Previous" HEIGHT=20 WIDTH=82 BORDER=0></A><!--
+--><A HREF="index.htm" OnMouseOver='whomp(chapb, "schap");' OnMouseOut='whomp(chapb, "wchap");'
+title="Chapter Overview"><IMG SRC="../images/wchap.png" ALT="Chapter" NAME=chapb HEIGHT=20 WIDTH=100 BORDER=0></A><A
+HREF="../index.htm" OnMouseOver='whomp(tocb, "sbook");' OnMouseOut='whomp(tocb, "wbook");' 
+title="Table of Contents"><IMG SRC="../images/wbook.png" ALT="Contents" NAME=tocb HEIGHT=20 WIDTH=94 BORDER=0></A><A
+HREF="../glossary/index.htm" OnMouseOver='whomp(glosb, "sglos");' OnMouseOut='whomp(glosb, "wglos");' 
+title="Glossary"><IMG SRC="../images/wglos.png" ALT="Glossary" NAME=glosb HEIGHT=20 WIDTH=94 BORDER=0></A><!--
+--><IMG SRC="../images/bnext.png" ALT="Next" HEIGHT=20 WIDTH=82 BORDER=0>
+<BR>
+</BLOCKQUOTE>
+</BODY>
+</HTML>

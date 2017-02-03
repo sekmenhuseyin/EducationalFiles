@@ -1,0 +1,477 @@
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >
+<html>
+<head>
+   <!--Enter title and description-->
+   <title>Web Services Developer Center</title>
+   <meta name="ms.locale" content="en-us">
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">   
+	<meta name="Description" content="The MSDN Web Services Developer Center, a one-stop location for all developers need to understand and build Web Services " />
+	
+	<link type='text/css' rel='Stylesheet' href='/library/mnp/2/aspx/css.aspx?locale=en-us&amp;name=QuickSearch&amp;name=Menu&amp;static=Page' />
+<script type='text/javascript' language='Javascript' src='/library/mnp/2/aspx/js.aspx?&amp;path=/library/include/ctredir.js'></script>
+<script type='text/javascript' language='Javascript' src='/mnp_utility.mspx/menujs?mnpshell=%2fwebservices%2fshell.config&amp;clicktrax=True'></script>
+<link type='text/css' rel='Stylesheet' href='/msdn-online/shared/css/dc2e.css' />
+<link type='text/css' rel='Stylesheet' href='/msdn-online/shared/css/msdn-mnp25-eyebrow.css' />
+<link rel='stylesheet' type='text/css' href='/library/toolbar/3.0/css.aspx?c=/webservices/shell.config' /><script language='JavaScript'>var doImage = doImage;
+var TType = TType;
+
+function mhHover(tbl, idx, cls)
+{
+	var t, d;
+	if (document.getElementById)
+		t = document.getElementById(tbl);
+	else
+		t = document.all(tbl);
+	if (t == null) return;
+	if (t.getElementsByTagName)
+		d = t.getElementsByTagName("TD");
+	else
+		d = t.all.tags("TD");
+	if (d == null) return;
+	if (d.length <= idx) return;
+	d[idx].className = cls;
+}
+
+function setMSResearch() {
+  var time = new Date();
+  if( document.cookie.indexOf( 'msresearch=1 ') == -1 ) {
+    document.cookie = 'msresearch=' + time.getTime() + ':' + escape( document.location) + ':' + escape( document.referrer) + '; path=/; domain=.microsoft.com; ';
+  }
+}
+
+function footerjs(doc)
+{
+	if (doImage == null)
+	{
+		var tt = TType == null ? "PV" : TType;
+		doc.write('<layer visibility="hide"><div style="display:none"><img src="http://c.microsoft.com/trans_pixel.asp?source=msdn&TYPE=' + tt + '&p=webservices" width=0 height=0 hspace=0 vspace=0 border=0 /></div></layer>');
+	}
+
+	if( ( document.cookie.indexOf( 'msresearch=1 ') == -1 ) 
+	 && ( document.cookie.indexOf( 'msresearch=')   != -1 ) ) {
+	  setInterval( "setMSResearch()", 1000 );
+	}
+}</script>		
+</head>
+
+
+
+<script language="JavaScript" src='/library/toolbar/logicaluri.js'></script>
+<script language="JavaScript">setLogicalURI("WebServices");</script>
+
+<script language="JavaScript">
+function MakeHomePage()
+{
+   document.body.style.behavior='url(#default#homepage)';
+   document.body.setHomePage(window.location.href);
+}
+</script>
+
+<body>
+<a name="top"></a>
+
+
+		<script language="Javascript">
+				if (self.name == "MNPMainFrame")
+					top.location.href = self.location.href;
+			</script><div id="msviMasthead" xmlns:Utility="http://www.microsoft.com/MSCOM/VisualIdentity/Utility"><table cellpadding="0" cellspacing="0" width="100%" border="0"><tr><td width="100%"><table cellpadding="0" cellspacing="0" width="100%" height="22" border="0"><tr><td id="msviRegionIdGraphic" bgcolor="#FFFFFF"></td><td width="100%" bgcolor="#3568CC"><img src="/library/toolbar/3.0/gradient.aspx?a=FFFFFF&amp;b=3568CC&amp;w=250&amp;h=22&amp;d=ltr&amp;c=RkWooiSyZq0Yx5DIezuYpFhZ%2ffA%3d" width="250" height="22" alt="*" title="" /></td></tr></table></td><td id="msviGlobalToolbar" bgcolor="#3568CC" height="22" nowrap="" dir="ltr" align="left"><table cellpadding="0" cellspacing="0" border="0"><tr><td class="gt0" nowrap="nowrap" onmouseover="mhHover('msviGlobalToolbar', 0, 'gt1')" onmouseout="mhHover('msviGlobalToolbar', 0, 'gt0')"><a href="http://www.microsoft.com" LinkArea="GlobalToolbar" LinkID="GT_Drop1" onclick="trackInfo(this)">Microsoft.com Home</a></td><td class="gtsep">|</td><td class="gt0" nowrap="nowrap" onmouseover="mhHover('msviGlobalToolbar', 2, 'gt1')" onmouseout="mhHover('msviGlobalToolbar', 2, 'gt0')"><a href="/library/toolbar/3.0/sitemap/en-us.mspx" LinkArea="GlobalToolbar" LinkID="GT_Drop2" onclick="trackInfo(this)">Site Map</a></td></tr></table></td></tr><tr valign="top"><td width="100%"><table cellpadding="0" cellspacing="0" width="100%" height="42" border="0" style="height: expression(parentElement.offsetHeight)"><tr valign="top"><td id="msviBrandBanner" bgcolor="FFFFFF"><a href="http://www.microsoft.com/msdn" LinkArea="Masthead" LinkID="Banner" onclick="trackInfo(this)"><img src="/library/toolbar/3.0/images/banners/msdn_masthead_ltr.gif" width="225" height="42" alt="MSDN" title="" border="0" /></a></td><td width="100%" bgcolor="#6799FF"><img src="/library/toolbar/3.0/gradient.aspx?a=FFFFFF&amp;b=6799FF&amp;w=250&amp;h=42&amp;d=ltr&amp;c=87hrt6fb9uyj4Xgg%2f0ZD3dLE36E%3d" width="250" height="42" alt="*" title="" /></td></tr></table></td><td id="msviGlobalSearch" bgcolor="#6799FF"><div id="msviNoSearch"></div></td></tr></table><div id="msviLocalToolbar"><table cellpadding="0" cellspacing="0" width="100%" height="19" border="0"><tr><td nowrap="nowrap" id="msviHomePageLink"><a href="/" LinkArea="LocalToolbar" LinkID="LT_Drop1" onclick="trackInfo(this)">MSDN Home</a></td><td><span class="ltsep">|</span></td><td class="lt0" nowrap="nowrap" onmouseover="mhHover('msviLocalToolbar', 2, 'lt1')" onmouseout="mhHover('msviLocalToolbar', 2, 'lt0')"><a href="/developercenters/" LinkArea="LocalToolbar" LinkID="LT_Drop2" onclick="trackInfo(this)">Developer Centers</a></td><td><span class="ltsep">|</span></td><td class="lt0" nowrap="nowrap" onmouseover="mhHover('msviLocalToolbar', 4, 'lt1')" onmouseout="mhHover('msviLocalToolbar', 4, 'lt0')"><a href="/library/default.asp" LinkArea="LocalToolbar" LinkID="LT_Drop3" onclick="trackInfo(this)">Library</a></td><td><span class="ltsep">|</span></td><td class="lt0" nowrap="nowrap" onmouseover="mhHover('msviLocalToolbar', 6, 'lt1')" onmouseout="mhHover('msviLocalToolbar', 6, 'lt0')"><a href="/downloads/" LinkArea="LocalToolbar" LinkID="LT_Drop4" onclick="trackInfo(this)">Downloads</a></td><td><span class="ltsep">|</span></td><td class="lt0" nowrap="nowrap" onmouseover="mhHover('msviLocalToolbar', 8, 'lt1')" onmouseout="mhHover('msviLocalToolbar', 8, 'lt0')"><a href="/code/" LinkArea="LocalToolbar" LinkID="LT_Drop5" onclick="trackInfo(this)">Code Center</a></td><td><span class="ltsep">|</span></td><td class="lt0" nowrap="nowrap" onmouseover="mhHover('msviLocalToolbar', 10, 'lt1')" onmouseout="mhHover('msviLocalToolbar', 10, 'lt0')"><a href="/subscriptions/" LinkArea="LocalToolbar" LinkID="LT_Drop6" onclick="trackInfo(this)">Subscriptions</a></td><td><span class="ltsep">|</span></td><td class="lt0" nowrap="nowrap" onmouseover="mhHover('msviLocalToolbar', 12, 'lt1')" onmouseout="mhHover('msviLocalToolbar', 12, 'lt0')"><a href="/worldwide.aspx" LinkArea="LocalToolbar" LinkID="LT_Drop7" onclick="trackInfo(this)">MSDN Worldwide</a></td><td width="100%"></td></tr></table></div></div>
+			<table cellpadding="0" cellspacing="0" border="0" width="100%" dir="LTR">
+				<tr valign="top">
+		<td height="100%" style="overflow-x: hidden" width="181"><table cellpadding="0" cellspacing="0" border="0" width="100%"><tr><td class="mnpQuickSearch" style="background: #CCCCCC; color: #000000" dir="LTR"><form style="margin: 0px" action="/msdn-online/shared/components/mscomsearch30.aspx" onsubmit="return trackScopedSearch()"><nobr><font color="#000000">Search for</font><br><script language="Javascript">
+function trackScopedSearch()
+{
+	var sc = document.getElementById("SearchScope");
+	var sl = document.getElementById("searchLink");
+	sl.href = "/msdn-online/shared/components/mscomsearch30.aspx?SearchScope=" + sc.value + "&qu=";
+	return trackSearch(sl, document.getElementById("qu"));
+}							
+								</script><input class="mnpSearchBox" type="text" id="qu" name="qu" maxlength="255" style="width: 165px"><br><table cellpadding="0" cellspacing="0" border="0" width="100%" style="margin-top: 2px"><tr><td width="100%" class="mnpQuickSearch" style="padding: 0px"><select class="mnpSearchScopes" style="width: 137px" name="SearchScope"><option value="1" selected="">All MSDN</option><option value="2">All Library</option><option value="3">Code &amp; Downloads</option><option value="4">Product Information</option><option value="5">Knowledge Base</option></select></td><td><input class="mnpSearchButton" type="submit" value="Go"><br></td></tr></table><a href="http://search.microsoft.com/search/search.aspx?View=msdn&amp;st=a&amp;c=0&amp;s=1" style="color: #000000" onmouseover="style.color='#0033CC';" onmouseout="style.color='#000000';" LinkArea="Search" LinkID="Search_Advanced" onclick="trackInfo(this)">Advanced Search</a><a id="searchLink" style="display:none" LinkArea="Search" LinkID="Search" href="/msdn-online/shared/components/mscomsearch30.aspx?qu="></a></nobr></form></td></tr></table><div id="mnpMenuTop" class="mnpMenuTop" style="overflow-x: hidden; width: 181px" url="/webservices/default.aspx" dir="LTR" parent="/"><div class="mnpInherit"><div class="mnpMenuRow" style="border-color: #F1F1F1; background: #F1F1F1; width: 176px; overflow-x: hidden"><img width="4" height="7" border="0" alt="*" title="" class="mnpMenuArrow" src="/library/mnp/2/gif/arrowLTR.gif" style="left: 166px; visibility: hidden"><a href="/webservices/" onclick="trackInfo(this)" LinkArea="Left Nav" LinkID="Flyout_S1_Node1">Web Services Home</a></div><div class="mnpMenuRow" style="border-color: #F1F1F1; background: #F1F1F1; width: 176px; overflow-x: hidden" menu="me2886ca2e9e449e4a92508edad1c621b"><img width="4" height="7" border="0" alt="*" title="" class="mnpMenuArrow" src="/library/mnp/2/gif/arrowLTR.gif" style="left: 166px; visibility: hidden"><a href="/webservices/understanding/default.aspx" onclick="trackInfo(this)" LinkArea="Left Nav" LinkID="Flyout_S1_Node2">Understanding Web Services</a></div><div class="mnpMenuRow" style="border-color: #F1F1F1; background: #F1F1F1; width: 176px; overflow-x: hidden" menu="md68342e598674e218423e0e506070d08"><img width="4" height="7" border="0" alt="*" title="" class="mnpMenuArrow" src="/library/mnp/2/gif/arrowLTR.gif" style="left: 166px; visibility: hidden"><a href="/webservices/building/default.aspx" onclick="trackInfo(this)" LinkArea="Left Nav" LinkID="Flyout_S1_Node3">Building</a></div><div class="mnpMenuRow" style="border-color: #F1F1F1; background: #F1F1F1; width: 176px; overflow-x: hidden"><img width="4" height="7" border="0" alt="*" title="" class="mnpMenuArrow" src="/library/mnp/2/gif/arrowLTR.gif" style="left: 166px; visibility: hidden"><a href="/webservices/downloads/default.aspx" onclick="trackInfo(this)" LinkArea="Left Nav" LinkID="Flyout_S1_Node4">Downloads</a></div><div class="mnpMenuRow" style="border-color: #F1F1F1; background: #F1F1F1; width: 176px; overflow-x: hidden" menu="m1f810e0ccd03488a9b71c67fea1204f6"><img width="4" height="7" border="0" alt="*" title="" class="mnpMenuArrow" src="/library/mnp/2/gif/arrowLTR.gif" style="left: 166px; visibility: hidden"><a href="/webservices/community/default.aspx" onclick="trackInfo(this)" LinkArea="Left Nav" LinkID="Flyout_S1_Node5">Support &amp; Community</a></div><div class="mnpMenuBorder" style="width: 180px"></div><div class="mnpMenuRow" style="border-color: #F1F1F1; background: #F1F1F1; width: 176px; overflow-x: hidden"><img width="4" height="7" border="0" alt="*" title="" class="mnpMenuArrow" src="/library/mnp/2/gif/arrowLTR.gif" style="left: 166px; visibility: hidden"><a href="/products" onclick="trackInfo(this)" LinkArea="Left Nav" LinkID="Flyout_S2_Node1">Products &amp; Technologies</a></div><div class="mnpMenuBorder" style="width: 180px; margin-bottom: 0px"></div></div></div><div class="mnpAds" style="width: 181px; height: 100%; margin-bottom: 20px; background: #F1F1F1; border-style: solid; border-color: #999999; border-width: 0px 1px 0px 0px">
+	<p /><center><a id="ad1" onclick="javascript:trackInfo(this);" LinkID="Flyout_Graphic1" LinkArea="Flyout_Graphic" href="http://go.microsoft.com/?LinkID=381102" target="_top"><img src="/nodehomes/graphics/DD_button_reg_140x100.jpg" alt="Dev Days 2004" border="0" /></a></center><p /><center><a id="ad2" onclick="javascript:trackInfo(this);" LinkID="Flyout_Graphic2" LinkArea="Flyout_Graphic" href="/security/understanding/webcasts/" target="_top"><img src="/security/graphics/DSWebcast140x100.jpg" alt="Security Webcasts" border="0" /></a></center>
+</div><div class="mnpAds" style="width: 181px; height: 100%; margin-bottom: 20px"><center></center></div></td>
+						<td width="100%" dir="LTR">
+		<table width="100%" cellpadding="0" cellspacing="0" height="46" bgcolor="#3366CC"><tr><td width="419"><img border="0" src="/msdn-online/shared/graphics/left_bnr_webservices.jpg" width="419" height="46" alt="MSDN Home"></td><td width="100%" title="MSDN Home" background="" bgcolor="#3366CC">&nbsp;</td><td width="0"><img border="0" src="" width="0" height="46" alt="MSDN Home"></td></tr></table>
+<span id="_ctl0_eb" class="eyebrow" style="COLOR: #003399;width: 100%;height: 24px;padding-top:4px;padding-left:14px;"><a href='/'>MSDN Home</a>&nbsp;&gt;&nbsp;Web Services Home</span>
+
+
+<!----------------->
+<!--BEGIN_CONTENT-->
+<!----------------->
+<!--<comment>-->
+<div id="pageContainer" class="clsDocBody">
+	
+<table id="hpcontenttable" cellpadding="0" border="0" border="0" style="width:100%;">
+		<tr>
+			<td valign="Top"><a href="default.aspx?pull=/library/en-us/dnglobspec/html/ws-discovery.asp" onclick="javascript:trackInfo(this);" LinkID="TS_Graphic0" LinkArea="TS_Graphic"><img align="left" style="margin-right:10px;" border="0" alt="Web Services Dynamic Discovery (WS-Discovery) Specification Released" src="/webservices/graphics/specifications.jpg" />
+			</a>
+			<h1>Web Services Dynamic Discovery (WS-Discovery) Specification Released</h1>
+			<p />
+
+				<span style="color:#000000;">WS-Discovery enables advertisement and dynamic discovery of services on both ad-hoc and managed networks. Services may be organized in a hierarchical scope, and clients can query for services by type as well as scope without heavy administrative costs. This specification enables numerous design patterns for enterprise services; provides a discovery architecture for peer-to-peer services like buddy lists, websites, and file shares; and forms the basis for discovering network-attached devices such as printers, cameras, and PDAs.
+				</span>&nbsp;&nbsp;
+
+		<br />
+
+		<font color="gray">(February 17, Article)  </font>
+		<span style="text-align:right;">
+		<a href="default.aspx?pull=/library/en-us/dnglobspec/html/ws-discovery.asp" onclick="javascript:trackInfo(this);" LinkID="TS_Topic1" LinkArea="DevCenterHeader">More...</a>
+		</span>
+		<br clear="all" />
+ <hr />
+   <p>
+
+<img align="left" border="0" style="margin-right:10px;" src="/msdn-online/shared/graphics/icons/article.gif" />
+
+<span style="display:inline-block;">
+<a style="font-weight:bold;" href="default.aspx?pull=/library/en-us/dnwse/html/wse2wspolicy.asp" onclick="javascript:trackInfo(this);" LinkID="WP_DevCenterHeadlines_6F1146DA-9107-4043-A037-CE7BD13B6509" LinkArea="DevCenterHeadlines">Web Service Enhancements 2.0 Support for WS-Policy</a><br />
+
+
+	<span style="color:#000000;">Want to write less code and interoperate more? Use the assertions support in WSE 2.0 and the standard expressions for Web service applications in WS-Policy to enter a whole new age of reason.
+	</span>&nbsp;&nbsp;
+
+
+<font color="gray">(February 12, Article)  </font>
+
+</span>
+<p />
+
+<img align="left" border="0" style="margin-right:10px;" src="/msdn-online/shared/graphics/icons/article.gif" />
+
+<span style="display:inline-block;">
+<a style="font-weight:bold;" href="/data/default.aspx" onclick="javascript:trackInfo(this);" LinkID="WP_DevCenterHeadlines_4BAAD5F6-10C3-491D-BEF7-F8A95DD17CB3" LinkArea="DevCenterHeadlines">Visit the New Data Access & Storage Developer Center</a><br />
+
+
+	<span style="color:#000000;">Check out the new Data Access & Storage Developer Center.
+	</span>&nbsp;&nbsp;
+
+
+<font color="gray">(February 16, Announcement)  </font>
+
+</span>
+<p />
+
+<img align="left" border="0" style="margin-right:10px;" src="/msdn-online/shared/graphics/icons/multimedia.gif" />
+
+<span style="display:inline-block;">
+<a style="font-weight:bold;" href="http://msdn.microsoft.com/msdntv/episode.aspx?xml=episodes/en/20040129vstudioat/manifest.xml" onclick="javascript:trackInfo(this);" LinkID="WP_DevCenterHeadlines_99B21D19-34E6-4938-B743-B727E3AF8A6F" LinkArea="DevCenterHeadlines">MSDN TV: The Whidbey Chronicles: Whitehorse</a><br />
+
+
+	<span style="color:#000000;">Whitehorse introduces new graphical designers in Whidbey, the next version of Visual Studio .NET,  that support the design and validation of Web services-based systems.
+	</span>&nbsp;&nbsp;
+
+
+<font color="gray">(February 6, Multimedia)  </font>
+
+</span>
+<p />
+
+<img align="left" border="0" style="margin-right:10px;" src="/msdn-online/shared/graphics/icons/article1.gif" />
+
+<span style="display:inline-block;">
+<a style="font-weight:bold;" href="default.aspx?pull=/library/en-us/dnwebsrv/html/wsacoord.asp" onclick="javascript:trackInfo(this);" LinkID="WP_DevCenterHeadlines_A7E22A56-33B3-47D0-A4B6-767DF74C5F80" LinkArea="DevCenterHeadlines">Coordinating Web Services Activities</a><br />
+
+
+	<span style="color:#000000;">Understand how the new <a href="http://msdn.microsoft.com/webservices/understanding/specs/default.aspx?pull=/library/en-us/dnglobspec/html/wsba.asp">WS-BusinessActivity</a> specification relates to WS-AtomicTransaction and WS-Coordination.  These specs collectively provide the necessary mechanisms to create activities, join in activities, and reach common agreement on the outcome of joint operations across distributed systems.
+	</span>&nbsp;&nbsp;
+
+
+<font color="gray">(January 28, Article)  </font>
+
+</span>
+<p />
+
+<img align="left" border="0" style="margin-right:10px;" src="/msdn-online/shared/graphics/icons/article1.gif" />
+
+<span style="display:inline-block;">
+<a style="font-weight:bold;" href="default.aspx?pull=/library/en-us/dnmapnet30/html/mwsfind.asp" onclick="javascript:trackInfo(this);" LinkID="WP_DevCenterHeadlines_5EC573D4-5FD3-4DE3-8A10-89105D13EA87" LinkArea="DevCenterHeadlines">Optimize MapPoint Web Service Find Calls</a><br />
+
+
+	<span style="color:#000000;">Learn how to improve the performance and scalability of your Microsoft MapPoint Web Service applications by optimizing find queries with the FindOptions object.
+	</span>&nbsp;&nbsp;
+
+
+<font color="gray">(January 30, Article)  </font>
+
+</span>
+<p />
+
+<img align="left" border="0" style="margin-right:10px;" src="/msdn-online/shared/graphics/icons/article1.gif" />
+
+<span style="display:inline-block;">
+<a style="font-weight:bold;" href="default.aspx?pull=/library/en-us/dnmapnet30/html/findnearbyws.asp" onclick="javascript:trackInfo(this);" LinkID="WP_DevCenterHeadlines_F35E6739-CCAF-46CC-9897-DB68FABE8BAF" LinkArea="DevCenterHeadlines">FindNearby Method Basics for MapPoint Web Service</a><br />
+
+
+	<span style="color:#000000;">Learn basic concepts and techniques for finding nearby points of interest using Microsoft MapPoint Web Service.
+	</span>&nbsp;&nbsp;
+
+
+<font color="gray">(January 30, Article)  </font>
+
+</span>
+<p />
+</p>
+<p>
+
+
+<span style="display:inline-block;">
+
+
+	<span style="color:#000000;">See the <a href="/legend/">legend of icons</a> used on this MSDN site.
+	</span>&nbsp;&nbsp;
+
+
+</span>
+<p />
+</p>
+
+ <hr />
+
+<!--Community two column table-->
+<table cellpadding="0" border="0" border="0" style="width:100%;">
+	<tr>
+		<td colspan="2">
+   <h3>Community</h3>
+   <p />
+</td>
+	</tr><tr>
+		<td valign="Top" style="width:50%;border-right:solid 1 #cccccc;padding-right:5px;">
+<h4><a name='newsgroups'>Newsgroups</a></h4>
+<p>
+
+
+<span style="display:inline-block;">
+<a style="font-weight:bold;display:inline-block;" href="http://msdn.microsoft.com/newsgroups/default.aspx?dg=microsoft.public.dotnet.framework.webservices" onclick="javascript:trackInfo(this);" LinkID="WP_newsgroups_FC2B260D-FB7C-4A86-94D0-4E76025BB13A" LinkArea="newsgroups">.NET Framework Web Services Newsgroup</a><br />
+
+
+	<span style="color:#000000;">Join this forum on .NET Framework Web services. 
+
+	</span>&nbsp;&nbsp;
+
+
+</span>
+<p />
+
+
+<span style="display:inline-block;">
+<a style="font-weight:bold;display:inline-block;" href="http://msdn.microsoft.com/newsgroups/default.aspx?dg=microsoft.public.dotnet.framework.webservices.enhancements" onclick="javascript:trackInfo(this);" LinkID="WP_newsgroups_0C68FC0B-E979-4D46-A67C-40DF391E0313" LinkArea="newsgroups">Web Services Enhancements (WSE) Newsgroup</a><br />
+
+
+	<span style="color:#000000;">Join the discussion about Web Services Enhancements (WSE).
+	</span>&nbsp;&nbsp;
+
+
+</span>
+<p />
+<div style="text-align:right;">
+<a href="/webservices/community/newsgroups/default.aspx" onclick="javascript:trackInfo(this);" LinkID="KM_newsgroups_3" LinkArea="newsgroups">More...</a>
+</div>
+</p>
+
+    <p />
+    
+<h4><a name='discussions'>List Servers</a></h4>
+<p>
+
+
+<span style="display:inline-block;">
+<a style="font-weight:bold;display:inline-block;" href="http://discuss.develop.com/soap.html" onclick="javascript:trackInfo(this);" LinkID="WP_discussions_2860B5F8-C25B-4A8E-BF64-7D01C3665FFE" LinkArea="discussions">SOAP </a><br />
+
+
+	<span style="color:#000000;">Join this listserv to talk about different ways to implement SOAP.
+	</span>&nbsp;&nbsp;
+
+
+</span>
+<p />
+
+
+<span style="display:inline-block;">
+<a style="font-weight:bold;display:inline-block;" href="http://discuss.develop.com/ws-futures.html" onclick="javascript:trackInfo(this);" LinkID="WP_discussions_9E8F2DC1-6AAC-49AD-8BC2-1739D422EC47" LinkArea="discussions">WS-FUTURES</a><br />
+
+
+	<span style="color:#000000;">Take part in this listserv to discuss future directions for Web Services and the evolving platform-neutral Web Service-related specifications.
+	</span>&nbsp;&nbsp;
+
+
+</span>
+<p />
+<div style="text-align:right;">
+<a href="/webservices/community/newsgroups/default.aspx" onclick="javascript:trackInfo(this);" LinkID="KM_discussions_3" LinkArea="discussions">More...</a>
+</div>
+</p>
+</td><td valign="Top" style="width:50%;padding-left:10px">
+<h4><a name='relatedsites'>Related Sites</a></h4>
+<p>
+
+
+<span style="display:inline-block;">
+<a style="font-weight:bold;display:inline-block;" href="http://www.w3.org/" onclick="javascript:trackInfo(this);" LinkID="WP_relatedsites_6755F8F7-65E0-488D-A8FB-C749141645AB" LinkArea="relatedsites">World Wide Web Consortium (W3C)</a><br />
+
+
+	<span style="color:#000000;">The World Wide Web Consortium (W3C) develops interoperable technologies, such as specifications, guidelines, software, and tools to lead the Web to its full potential. Get W3C news and links to W3C technologies.
+	</span>&nbsp;&nbsp;
+
+
+</span>
+<p />
+
+
+<span style="display:inline-block;">
+<a style="font-weight:bold;display:inline-block;" href="http://www.oasis-open.org/" onclick="javascript:trackInfo(this);" LinkID="WP_relatedsites_AE67270F-8E5D-439C-8FAB-8735FBC9BD84" LinkArea="relatedsites">OASIS</a><br />
+
+
+	<span style="color:#000000;">The Organization for the Advancement of Structured Information Standards (OASIS) is a not-for-profit, global consortium that drives the development, convergence, and adoption of e-business standards.
+	</span>&nbsp;&nbsp;
+
+
+</span>
+<p />
+
+
+<span style="display:inline-block;">
+<a style="font-weight:bold;display:inline-block;" href="http://www.ws-i.org/" onclick="javascript:trackInfo(this);" LinkID="WP_relatedsites_4FE2FF1F-3DF8-4A0B-8BE1-38DD5D2F5B97" LinkArea="relatedsites">WS-I </a><br />
+
+
+	<span style="color:#000000;">Get resources and guidelines for Web services interoperability from WS-I, an open, industry organization that promotes Web services interoperability across platforms, operating systems, and programming languages.
+	</span>&nbsp;&nbsp;
+
+
+</span>
+<p />
+
+
+<span style="display:inline-block;">
+<a style="font-weight:bold;display:inline-block;" href="http://www.ietf.org/" onclick="javascript:trackInfo(this);" LinkID="WP_relatedsites_186A75EC-8795-4854-874A-B04EB2B14DC7" LinkArea="relatedsites">IETF</a><br />
+
+
+	<span style="color:#000000;">The Internet Engineering Task Force (IETF) is a large open international community of network designers, operators, vendors, and researchers concerned with the evolution of the Internet architecture and the smooth operation of the Internet.
+	</span>&nbsp;&nbsp;
+
+
+</span>
+<p />
+
+
+<span style="display:inline-block;">
+<a style="font-weight:bold;display:inline-block;" href="http://www.xmethods.com/" onclick="javascript:trackInfo(this);" LinkID="WP_relatedsites_359E3696-79FC-43D7-BD67-AB228F9DE514" LinkArea="relatedsites">XMethods</a><br />
+
+
+	<span style="color:#000000;">XMethods is a &quot;virtual laboratory&quot; for developers. The organization lists publicly available Web services and showcases new ways to apply the Web services technology.
+	</span>&nbsp;&nbsp;
+
+
+</span>
+<p />
+<div style="text-align:right;">
+<a href="/webservices/community/related/default.aspx" onclick="javascript:trackInfo(this);" LinkID="KM_relatedsites_6" LinkArea="relatedsites">More...</a>
+</div>
+</p>
+
+    <p />
+    </td>
+</tr>
+</table>
+<!--End Community two column table-->
+
+</td><td valign="Top" style="padding-left:20px;"><div class="MNPPart">
+<b><a href="http://go.microsoft.com/?LinkID=395139"><img src="/nodehomes/graphics/mydoom-remove_140x100.gif" alt="Use the free tool to quickly check for and remove Mydoom.A, Mydoom.B, or Doomjuice (A or B) from your PC. To help avoid infection, be cautious about opening all e-mail attachments, even if they appear to be from a trusted source." border=0></a></b>
+</div>
+ 	<p />
+   <div id="pageoptions_OptionsPanel" class="PageOptionsMNPPart">
+	
+<h4>Page Options</h4>
+<IFRAME id='frmRatingsOptions' src='/msdn-online/shared/components/ratings/ratings.aspx?&opt=1&ContentID=-19002&mnp2=1&Config=/webservices/ratingscnfg.xml&Print=Default.aspx?print=true&HideDiscuss=1' frameborder='0' scrolling='no' width='95%' height='70' ></IFRAME>
+
+
+<div id="pageoptions_Optional">
+		
+	<span id="pageoptions_HomePage">
+		<img src="/msdn-online/shared/graphics/icons/home.gif" style="float:left;" />&nbsp;
+		<a href="javascript:SetHomePage();">Set as home page</a>
+	</span>
+<a id="homepageLink" LinkArea="MakeHomePage" LinkID="MakeHomePage" onclick="javascript:trackInfo(this);" href="default.aspx" style="display:none">Set as home page</a>
+	</div>				
+
+</div>
+
+<script language="JavaScript">function SetHomePage(){document.body.style.behavior="url(#default#homepage)";document.body.setHomePage(window.location.href);document.body.all.homepageLink.click();}</script>
+   <p />
+	
+	<p />
+	<div class="MNPPart">
+<b><a name='VanillaEssentialInfo'>Essential Information</a></b>
+<ul><li><a href="/webservices/understanding/webservicebasics/default.aspx" onclick="javascript:trackInfo(this);" LinkID="WP_VanillaEssentialInfo_23C6A6D7-E370-4D6D-B5DE-DAE7360859CC" LinkArea="VanillaEssentialInfo">Web Services Basics</a></li><li><a href="/webservices/understanding/specs/default.aspx" onclick="javascript:trackInfo(this);" LinkID="WP_VanillaEssentialInfo_6E831127-DACE-4FA3-A159-9291C470DCF1" LinkArea="VanillaEssentialInfo">Specifications</a></li><li><a href="/webservices/community/workshops/default.aspx" onclick="javascript:trackInfo(this);" LinkID="WP_VanillaEssentialInfo_B7CBF816-48F3-4B3E-87E1-120BE28E033D" LinkArea="VanillaEssentialInfo">Workshops</a></li></ul></div>
+	<p />
+	<div class="MNPPart">
+<b><a name='VanillaDownloads'>Top Downloads</a></b>
+<ul><li><a href="http://microsoft.com/downloads/details.aspx?familyid=21fb9b9a-c5f6-4c95-87b7-fc7ab49b3edd&displaylang=en" onclick="javascript:trackInfo(this);" LinkID="WP_VanillaDownloads_FAA55674-15C1-43F3-8E4E-4823EA0A3C8C" LinkArea="VanillaDownloads">Web Services Enhancements (WSE) 2.0 Technology Preview</a></li><li><a href="http://microsoft.com/downloads/details.aspx?familyid=06255a94-2635-4d29-a90c-28b282993a41&displaylang=en" onclick="javascript:trackInfo(this);" LinkID="WP_VanillaDownloads_B3F942A6-68DC-45F4-9BA8-191662CE1AEB" LinkArea="VanillaDownloads">Web Services Enhancements (WSE) 1.0 SP1 for Microsoft .NET</a></li><li><a href="/downloads/list/netdevframework.asp" onclick="javascript:trackInfo(this);" LinkID="WP_VanillaDownloads_A26D4303-F43A-42EA-852B-3291F1086E18" LinkArea="VanillaDownloads">.NET Framework SDK Download</a></li></ul><div style="text-align:right;">
+<a href="/webservices/downloads/default.aspx" onclick="javascript:trackInfo(this);" LinkID="WP_VanillaDownloads_4" LinkArea="VanillaDownloads">More</a>
+</div>
+</ul></div>
+	<p />
+	<div class="MNPPart">
+<b><a name='VanillaEditor'>From the Editor</a></b>
+<ul><li><a style="font-weight:bold;display:inline-block;" href="/webservices/letters/" onclick="javascript:trackInfo(this);" LinkID="WP_VanillaEditor_FA536013-37B6-4AEB-8610-38BF0943ACEB" LinkArea="VanillaEditor">Letter from the Editor</a></li>
+
+	<span style="color:#000000;">Notes from Matt Powell, Editor of the Web Services Developer Center.
+	</span>&nbsp;&nbsp;
+<p />
+</ul></div>
+	<p />
+	<div class="MNPPart">
+<b><a name='VanillaNews'>Industry News</a></b>
+<ul><li><a href="/ws/2003/12/wsskb/" onclick="javascript:trackInfo(this);" LinkID="WP_VanillaNews_9CB651A5-336F-4A0F-8272-C44C89503234" LinkArea="VanillaNews">Web Services Security Kerberos Binding Released</a></li><li><a href="http://www.microsoft.com/presspass/press/2003/nov03/11-17xmlrefschemaemeapr.asp" onclick="javascript:trackInfo(this);" LinkID="WP_VanillaNews_FA05B7B8-CEAB-4A98-AD00-C527392E67E5" LinkArea="VanillaNews">Announcing Royalty-Free License For Office 2003 XML Reference Schemas </a></li><li><a href="http://www.w3.org/news/2003#item183" onclick="javascript:trackInfo(this);" LinkID="WP_VanillaNews_DC1EFC32-2A9A-4BE8-B9CC-F12320A24AFC" LinkArea="VanillaNews">WSDL 2.0 Working Draft Published</a></li><li><a href="http://www.microsoft.com/presspass/press/2003/oct03/10-13msvodaphonepr.asp" onclick="javascript:trackInfo(this);" LinkID="WP_VanillaNews_F2F7C16B-45F4-4A80-95CD-0CE5D4172D5C" LinkArea="VanillaNews">Industry Leaders to Help Develop Mobile Web Services Standards</a></li><li><a href="default.aspx?pull=/library/en-us/dnglobspec/html/wsatspecindex.asp" onclick="javascript:trackInfo(this);" LinkID="WP_VanillaNews_E7DE34F2-1C6A-432B-B983-1B516CDECE4F" LinkArea="VanillaNews">Updated Transaction Specification Available</a></li><li><a href="/webservices/community/industrynews/default.aspx#2" onclick="javascript:trackInfo(this);" LinkID="WP_VanillaNews_A5119476-6849-4347-AE4B-54EDE9977B87" LinkArea="VanillaNews">WS-I Basic Profile Is Released</a></li></ul><div style="text-align:right;">
+<a href="/webservices/community/industrynews/default.aspx" onclick="javascript:trackInfo(this);" LinkID="WP_VanillaNews_7" LinkArea="VanillaNews">More</a>
+</div>
+</ul></div>
+	<p />
+	
+	<p />
+
+<!----------------->
+<!--END_CONTENT---->
+<!----------------->
+</td>
+</tr>
+</table>
+
+<!--pull table-->
+
+
+<a href="#top"><img src="/msdn-online/shared/graphics/top.gif" border="0" alt="Top of Page" /></a>
+<a href="#top" title="Top of Page">Top of Page</a>
+<p />
+
+
+</div>
+
+
+
+
+<TABLE cellpadding='0' cellspacing='0' border='0' style='width:100%'>
+<TR>
+<TD style='width:500' nowrap>
+</TD>
+</TR>
+<TR>
+<TD>
+<IFRAME id='frmRatings' src='/msdn-online/shared/components/ratings/ratings.aspx?ContentID=-10034&mnp2=1&Config=/webservices/ratingscnfg.xml&Print=Default.aspx?print=true&HideDiscuss=1' frameborder='0' scrolling='no' width='100%' height='24' vspace='0' hspace='0' ></IFRAME>
+</TD></TR></TABLE>
+
+
+
+
+
+
+
+
+
+					</td>
+		
+				</tr>
+			</table>
+		<br clear="all" style="line-height: 1px; overflow: hidden" /><table id="msviFooter" width="100%" cellpadding="0" cellspacing="0"><tr valign="bottom"><td id="msviFooter2" style="filter:progid:DXImageTransform.Microsoft.Gradient(startColorStr='#FFFFFF', endColorStr='#669AFF', gradientType='1')"><div id="msviLocalFooter"><nobr><a href="http://go.microsoft.com/?linkid=317027" LinkArea="Footer" LinkID="Footer_Link1" onclick="trackInfo(this)">Manage Your Profile</a> |</nobr><wbr /><nobr><a href="/isapi/gomscom.asp?target=/legal/" LinkArea="Footer" LinkID="Footer_Link2" onclick="trackInfo(this)">Legal</a> |</nobr><wbr /><nobr><a href="http://register.microsoft.com/contactus30/contactus.asp?domain=msdn" LinkArea="Footer" LinkID="Footer_Link3" onclick="trackInfo(this)">Contact Us</a> |</nobr><wbr /><nobr><a href="/flash/" LinkArea="Footer" LinkID="Footer_Link4" onclick="trackInfo(this)">MSDN Flash Newsletter</a></nobr></div><div id="msviGlobalFooter"><span dir="ltr">&#169;2004 Microsoft Corporation. All rights reserved.&nbsp;</span><nobr><a href="http://www.microsoft.com/info/cpyright.mspx" LinkArea="Footer" LinkID="Footer_Link5" onclick="trackInfo(this)">Terms of Use</a> |</nobr><wbr /><nobr><a href="http://www.microsoft.com/info/privacy.mspx" LinkArea="Footer" LinkID="Footer_Link6" onclick="trackInfo(this)">Privacy Statement</a></nobr></div></td><td bgcolor="#669AFF" width="105"><img src="/library/toolbar/3.0/text.aspx?t=TQ%3d%3d&amp;f=FFFFFF&amp;b=669AFF&amp;font=Microsoft+Logo+95%2c+13.5pt&amp;w=105&amp;h=29&amp;a=0&amp;l=0&amp;v=0&amp;c=p7fMCifCOtX%2bJ5SQCkICNeYZbK0%3d" width="105" height="29" alt="Microsoft" title="" border="0" /></td></tr></table><layer visibility="hide"><div style="display:none"><img width="0" height="0" border="0" hspace="0" vspace="0" src="http://c.microsoft.com/trans_pixel.asp?source=msdn&amp;TYPE=PV&amp;p=webservices"></div></layer>
+
+</body>
+</html>

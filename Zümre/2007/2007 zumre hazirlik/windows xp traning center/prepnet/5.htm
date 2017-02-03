@@ -1,0 +1,123 @@
+<!doctype html public "-//IETF//DTD HTML//EN">
+<HTML>
+<HEAD>
+<TITLE>Windows XP: The Complete Reference: Configuring Windows to Work with Your Modem</TITLE>
+<META NAME="GENERATOR" CONTENT="Web-O-Matic Deluxe 4.1">
+<META NAME="AUTHOR" CONTENT="John R. Levine, Margaret Levine Young">
+<META NAME="COPYRIGHT" CONTENTS="Copyright 2001 by The McGraw-Hill Companies. All rights reserved.">
+</HEAD>
+<BODY BACKGROUND="../images/background.png">
+<BLOCKQUOTE>
+<SCRIPT LANGUAGE="JavaScript">
+function whomp(i, file)
+{
+	i.src = "../images/" + file + ".png";
+}
+</SCRIPT>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarered3x3.png" HEIGHT=3 WIDTH=3></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=2>
+Chapter 21: Configuring Windows to Work with Your Modem
+</FONT></TD>
+</TR>
+</TABLE>
+<BR>
+<A HREF="4.htm"  OnMouseOver='whomp(prev, "sprev");' OnMouseOut='whomp(prev, "wprev");'
+ title="Previous Section"><IMG NAME=prev SRC="../images/wprev.png" ALT="Previous" HEIGHT=20 WIDTH=82 BORDER=0></A><!--
+--><A HREF="index.htm" OnMouseOver='whomp(chap, "schap");' OnMouseOut='whomp(chap, "wchap");'
+title="Chapter Overview"><IMG SRC="../images/wchap.png" ALT="Chapter" NAME=chap HEIGHT=20 WIDTH=100 BORDER=0></A><A
+HREF="../index.htm" OnMouseOver='whomp(toc, "sbook");' OnMouseOut='whomp(toc, "wbook");' 
+title="Table of Contents"><IMG SRC="../images/wbook.png" ALT="Contents" NAME=toc HEIGHT=20 WIDTH=94 BORDER=0></A><A
+HREF="../glossary/index.htm" OnMouseOver='whomp(glos, "sglos");' OnMouseOut='whomp(glos, "wglos");' 
+title="Glossary"><IMG SRC="../images/wglos.png" ALT="Glossary" NAME=glos HEIGHT=20 WIDTH=94 BORDER=0></A><!--
+--><A HREF="6.htm"  OnMouseOver='whomp(next, "snext");' OnMouseOut='whomp(next, "wnext");'
+ title="Next Section"><IMG NAME=next SRC="../images/wnext.png" ALT="Next" HEIGHT=20 WIDTH=82 BORDER=0></A>
+<BR>
+<A NAME="1">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarered10x10.png" HEIGHT=10 WIDTH=10></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=4><B>Connecting to a DSL Line</B></FONT>
+</TD>
+</TR>
+</TABLE></A>
+<P>
+A <A NAME="dddsl"><I>DSL</I></A> (<I>Digital Subscriber Line </I>or<I> Digital Subscriber Loop</I>) is a special phone line that communicates digitally. With a dial-up phone line, your modem converts the digital information from your computer into an analog signal for transmission. At the other end, another modem converts the analog signal back into digital information. Along the way, your phone company may perform additional conversions. With a DSL line, your digital information never has to be converted. Unlike dial-up lines, DSL lines stay connected all the time--there's no waiting for your computer to connect. Data transmission is also much faster than on a dial-up line: downstream (downloading) speeds range from 384 Kbps to 8 Mbps, and upstream (uploading) speeds range from 90 Kbps to 640 Kbps. Some DSL lines support simultaneous computer and voice use.
+<P>
+DSL comes in several varieties:
+<UL>
+<LI >
+<B>ADSL</B>  Asymmetric DSL, because it downloads faster than it uploads
+<LI >
+<B>SDSL</B>  Symmetric DSL
+<LI >
+<B>IDSL</B>  ISDN (Integrated Services Digital Network) emulating DSL
+<LI >
+<B>HDSL  </B>A modern replacement for a T1 line
+</UL>
+<P>
+ADSL, the most common type of DSL line, supports faster communication to your computer (downloading) than from your computer (uploading), which matches the way most people use the Internet. When people talk about DSL, they usually mean ADSL.
+<P>
+There are two ways that your PC can connect to the Internet using your DSL line:
+<UL>
+<LI >
+<B>DHCP (Dynamic Host Configuration Protocol)</B>  Your computer is online all the time, with a numeric IP address assigned to you by your ISP's DHCP server (a server computer that issues IP addresses as needed (see the section "<A HREF="../peer2peer/1.htm#3">How Does TCP/IP Work?</A>" in Chapter 28).
+<LI >
+<B>PPPoE (PPP over Ethernet)</B>  Your computer must log on each time you want to use the Internet, as if you were dialing in. Once you log in, your ISP issues your computer a numeric IP address that works until you log out (or the connection times out).
+</UL>
+<P>
+Which method you use depends on your DSL provider; you don't get to choose. Windows XP can work with either method. You can find out more about DSL from the xDSL Web site at <A HREF="http://www.xdsl.com"><B>http://www.xdsl.com</B></A>.
+<P>
+<TABLE><TR><TD VALIGN="TOP"><IMG SRC="../images/tip.png" ALT="tip" WIDTH=95 HEIGHT=29></TD>
+<TD VALIGN="TOP">Because DSL is high-speed, it's well suited for allowing a LAN (like a group of networked computers in a home or small office) to <A HREF="../ics/index.htm">share one Internet account</A>.
+
+</TD></TR></TABLE>
+<A NAME="2">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Getting DSL</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+DSL is not available from all phone companies, but its use is growing. Prices and speeds vary. You can call your local phone company for pricing and availability in your area. Better yet, call your ISP and ask them to order the DSL line for you. You may also be able to get a DSL line from a third-party provider.
+<P>
+To connect your computer to a DSL line, you need a <A NAME="dddslmodem"><I>DSL modem</I></A>. DSL modems may be internal or external, and external DSL modems may connect either to a network adapter or to a USB port. Order the DSL line from your ISP when you check whether they offer DSL service; your ISP can probably order the line for you from your phone company. Ask for the phone company or ISP to provide the DSL modem, too--some phone companies don't support DSL modems purchased elsewhere. If the DSL modem requires a <A HREF="../hardware/4.htm#5">network adapter</A> (network interface card, or NIC), get one from a computer store and install it in your computer before the installer arrives. The ISP or phone company should provide the software and instructions for configuring Windows to work with the DSL modem. Your phone company or other DSL provider usually installs the DSL modem and configures your computer to use it. They usually configure your network interface card to work with the cable modem.
+<P>
+<TABLE><TR><TD VALIGN="TOP"><IMG SRC="../images/caution.png" ALT="caution" WIDTH=95 HEIGHT=29></TD>
+<TD VALIGN="TOP">Not all DSL modems work with all DSL lines. Get your DSL modem from your phone company or ISP. If you already have a DSL modem, check with your DSL provider to find out whether it will work with their phone lines or not.
+
+</TD></TR></TABLE>
+<A NAME="3">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Configuring Windows for DSL</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+To see your DSL configuration, choose Start | My Network Places, click View Network Connections in the Task pane, right-click your DSL connection, and choose Properties to see the Properties dialog box. Click Internet Protocol (TCP/IP) and click the Properties button to see the configuration for the connection. Don't change the settings without information from your phone company or ISP.
+<P>
+<TABLE><TR><TD VALIGN="TOP"><IMG SRC="../images/caution.png" ALT="caution" WIDTH=95 HEIGHT=29></TD>
+<TD VALIGN="TOP">On the Properties dialog box for the DSL connection, make sure that neither the Client For Microsoft Networks nor the File And Printer Sharing For Microsoft Networks check boxes are selected. If they are, deselect them--otherwise, you may be giving other people on the Internet access to your files and printer!
+
+</TD></TR></TABLE>
+<P>
+<A HREF="4.htm"  OnMouseOver='whomp(prevb, "sprev");' OnMouseOut='whomp(prevb, "wprev");'
+ title="Previous Section"><IMG NAME=prevb SRC="../images/wprev.png" ALT="Previous" HEIGHT=20 WIDTH=82 BORDER=0></A><!--
+--><A HREF="index.htm" OnMouseOver='whomp(chapb, "schap");' OnMouseOut='whomp(chapb, "wchap");'
+title="Chapter Overview"><IMG SRC="../images/wchap.png" ALT="Chapter" NAME=chapb HEIGHT=20 WIDTH=100 BORDER=0></A><A
+HREF="../index.htm" OnMouseOver='whomp(tocb, "sbook");' OnMouseOut='whomp(tocb, "wbook");' 
+title="Table of Contents"><IMG SRC="../images/wbook.png" ALT="Contents" NAME=tocb HEIGHT=20 WIDTH=94 BORDER=0></A><A
+HREF="../glossary/index.htm" OnMouseOver='whomp(glosb, "sglos");' OnMouseOut='whomp(glosb, "wglos");' 
+title="Glossary"><IMG SRC="../images/wglos.png" ALT="Glossary" NAME=glosb HEIGHT=20 WIDTH=94 BORDER=0></A><!--
+--><A HREF="6.htm"  OnMouseOver='whomp(nextb, "snext");' OnMouseOut='whomp(nextb, "wnext");'
+ title="Next Section"><IMG NAME=nextb SRC="../images/wnext.png" ALT="Next" HEIGHT=20 WIDTH=82 BORDER=0></A>
+<BR>
+</BLOCKQUOTE>
+</BODY>
+</HTML>

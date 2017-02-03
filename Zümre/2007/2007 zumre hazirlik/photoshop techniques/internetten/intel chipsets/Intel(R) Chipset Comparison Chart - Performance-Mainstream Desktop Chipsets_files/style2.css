@@ -1,0 +1,99 @@
+.xs {
+	FONT-FAMILY: arial,helvetica; FONT-SIZE: 11px
+}
+.smlink {
+	FONT-FAMILY: arial,helvetica; FONT-SIZE: 11px
+}
+.spotlight {
+	FONT-FAMILY: arial,helvetica; FONT-SIZE: 11px
+}
+.subquote {
+	FONT-FAMILY: arial,helvetica; FONT-SIZE: 11px
+}
+.sm {
+	FONT-FAMILY: arial,helvetica; FONT-SIZE: 12px
+}
+.breadcrumb {
+	FONT-FAMILY: arial,helvetica; FONT-SIZE: 12px
+}
+.med {
+	FONT-FAMILY: arial,helvetica; FONT-SIZE: 13px
+}
+.bodycopy {
+	FONT-FAMILY: arial,helvetica; FONT-SIZE: 13px
+}
+.pullquote {
+	FONT-FAMILY: arial,helvetica; FONT-SIZE: 13px
+}
+.reg {
+	FONT-FAMILY: arial,helvetica; FONT-SIZE: 14px
+}
+.sup {
+	FONT-SIZE: 12px
+}
+.blacklink {
+	COLOR: black
+}
+.relatedlink {
+	COLOR: black
+}
+.boxlink {
+	COLOR: black
+}
+.boxlink {
+	COLOR: #666; FONT-FAMILY: arial,helvetica; FONT-SIZE: 11px; TEXT-DECORATION: none
+}
+.boxlink:hover {
+	TEXT-DECORATION: underline
+}
+.spotlink {
+	COLOR: #03f; FONT-FAMILY: arial,helvetica; FONT-SIZE: 11px
+}
+.jumplink {
+	COLOR: #03f; FONT-FAMILY: arial,helvetica; FONT-SIZE: 11px; TEXT-DECORATION: none
+}
+.jumplink:hover {
+	TEXT-DECORATION: underline
+}
+.boxheader {
+	COLOR: #03f; FONT-FAMILY: arial,helvetica; FONT-SIZE: 15px
+}
+.boxsubhead {
+	COLOR: #03f; FONT-FAMILY: arial,helvetica; FONT-SIZE: 11px
+}
+.featureheader {
+	COLOR: #03f; FONT-FAMILY: arial,helvetica; FONT-SIZE: 12px; FONT-WEIGHT: bold
+}
+.featuretext {
+	COLOR: #000; FONT-FAMILY: arial,helvetica; FONT-SIZE: 11px
+}
+.spotheader {
+	COLOR: #03f; FONT-FAMILY: arial,helvetica; FONT-SIZE: 15px
+}
+.spottext {
+	COLOR: #000; FONT-FAMILY: arial,helvetica; FONT-SIZE: 11px
+}
+.spotsubhd {
+	COLOR: #333; FONT-FAMILY: arial,helvetica; FONT-SIZE: 12px; FONT-WEIGHT: bold
+}
+.sectionheader {
+	COLOR: #03f; FONT-FAMILY: arial,helvetica; FONT-SIZE: 15px; TEXT-DECORATION: none
+}
+.sectionheader:hover {
+	TEXT-DECORATION: underline
+}
+.sectionlink {
+	COLOR: #03f; FONT-FAMILY: arial,helvetica; FONT-SIZE: 11px
+}
+.sectiontext {
+	COLOR: #000; FONT-FAMILY: arial,helvetica; FONT-SIZE: 12px
+}
+.legaltext {
+	COLOR: #000; FONT-FAMILY: arial,helvetica; FONT-SIZE: 10px
+}
+.tableheader {
+	COLOR: #fff; FONT-FAMILY: arial,helvetica; FONT-SIZE: 12px; FONT-WEIGHT: bold
+}
+.jumplinkheader {
+	COLOR: #03f; FONT-FAMILY: arial,helvetica; FONT-SIZE: 12px; FONT-WEIGHT: bold
+}

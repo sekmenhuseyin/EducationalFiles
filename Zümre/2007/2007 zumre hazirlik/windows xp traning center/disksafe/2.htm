@@ -1,0 +1,116 @@
+<!doctype html public "-//IETF//DTD HTML//EN">
+<HTML>
+<HEAD>
+<TITLE>Windows XP: The Complete Reference: Keeping Your Disk Safe</TITLE>
+<META NAME="GENERATOR" CONTENT="Web-O-Matic Deluxe 4.1">
+<META NAME="AUTHOR" CONTENT="John R. Levine, Margaret Levine Young">
+<META NAME="COPYRIGHT" CONTENTS="Copyright 2001 by The McGraw-Hill Companies. All rights reserved.">
+</HEAD>
+<BODY BACKGROUND="../images/background.png">
+<BLOCKQUOTE>
+<SCRIPT LANGUAGE="JavaScript">
+function whomp(i, file)
+{
+	i.src = "../images/" + file + ".png";
+}
+</SCRIPT>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarered3x3.png" HEIGHT=3 WIDTH=3></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=2>
+Chapter 33: Keeping Your Disk Safe
+</FONT></TD>
+</TR>
+</TABLE>
+<BR>
+<A HREF="1.htm"  OnMouseOver='whomp(prev, "sprev");' OnMouseOut='whomp(prev, "wprev");'
+ title="Previous Section"><IMG NAME=prev SRC="../images/wprev.png" ALT="Previous" HEIGHT=20 WIDTH=82 BORDER=0></A><!--
+--><A HREF="index.htm" OnMouseOver='whomp(chap, "schap");' OnMouseOut='whomp(chap, "wchap");'
+title="Chapter Overview"><IMG SRC="../images/wchap.png" ALT="Chapter" NAME=chap HEIGHT=20 WIDTH=100 BORDER=0></A><A
+HREF="../index.htm" OnMouseOver='whomp(toc, "sbook");' OnMouseOut='whomp(toc, "wbook");' 
+title="Table of Contents"><IMG SRC="../images/wbook.png" ALT="Contents" NAME=toc HEIGHT=20 WIDTH=94 BORDER=0></A><A
+HREF="../glossary/index.htm" OnMouseOver='whomp(glos, "sglos");' OnMouseOut='whomp(glos, "wglos");' 
+title="Glossary"><IMG SRC="../images/wglos.png" ALT="Glossary" NAME=glos HEIGHT=20 WIDTH=94 BORDER=0></A><!--
+--><A HREF="3.htm"  OnMouseOver='whomp(next, "snext");' OnMouseOut='whomp(next, "wnext");'
+ title="Next Section"><IMG NAME=next SRC="../images/wnext.png" ALT="Next" HEIGHT=20 WIDTH=82 BORDER=0></A>
+<BR>
+<A NAME="1">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarered10x10.png" HEIGHT=10 WIDTH=10></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=4><B>Defragmenting Your Disk</B></FONT>
+</TD>
+</TR>
+</TABLE></A>
+<P>
+Windows stores information on your disks in sectors, which can be anywhere from 2 to 32 kilobytes (KB) in size. Files are stored in as many sectors as requires to fit (for example, a 64 KB file would take two sectors on a disk with 32KB sectors). These sectors do not need to remain sequential: Windows keeps track of which sectors are used for which files, no matterwhere they are on the disk. Sectors for a single file can be located just about anywhere on the disk.
+<P>
+<A NAME="ddfragmentation"><I>Fragmentation</I></A> occurs when you add and remove files from your computer. When you delete a file, Windows marks the sectors as available, and uses them the next time you create a file. If a file gets larger and contiguous space isn't available, Windows uses other available sectors to store the new part of the file. As you continue to use your computer, your files can become more and more fragmented. When you save a new file, if no contiguous space is large enough, Windows writes new file using sectors that aren't together--the file is fragmented right from the start.
+<P>
+Fragmentation slows down your disk access and, subsequently, your computing efficiency, because Windows has to spend more time finding the parts of each file. The more chunks a file is split into, the slower Windows accesses the file, because the file system has to move all over the disk to find pieces of the file.
+<P>
+Fortunately, Windows comes with a program that moves the contents of files around on your hard disk so that each file is stored as one contiguous string of sectors--Disk Defragmenter. Run the Disk Defragmenter utility when you plan on not using your computer for some time, because it can take an hour or so, and has to restart if you change any files.
+<P>
+In this day of ultra-cheap, gargantuan drives (80GB and beyond) with superfast access times (7,200 RPM standard and 10,000 RPM becoming more common), fragmentation doesn't affect speed nearly as much as it did on older hard disks. One reason is that newer disks read an entire <A NAME="ddtrack"><I>track</I></A> (concentric circle of information) at a time from the disk into the disk's buffer memory, so it matters less if the sectors of the track contain information in the wrong order.
+<P>
+<TABLE><TR><TD VALIGN="TOP"><IMG SRC="../images/note.png" ALT="note" WIDTH=95 HEIGHT=29></TD>
+<TD VALIGN="TOP">Even though Disk Defragmenter moves data about on your drive, no files or folders appear to move. How you organize your files and such are really an illusion anyway. Which folder you put your copy of the next Great American Novel has nothing to do with where it's stored in the disk itself.
+
+</TD></TR></TABLE>
+<A NAME="2">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Running Disk Defragmenter</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+Follow these steps to run Disk Defragmenter.
+<OL>
+<LI  VALUE=1>
+Choose Start | All Programs | Accessories | System Tools | Disk Defragmenter, or right-click the disk drive in an Explorer window and choose Properties. On the Properties dialog box for the disk, click the Tools tab and click the Defragment Now button. You see the Disk Defragmenter window, shown here:
+</OL>
+<BR><IMG ALIGN=TOP SRC="disksafe.defragmain.png" WIDTH=638 HEIGHT=468 ALT="[image]">
+<OL>
+<LI  VALUE=2>
+Choose the drive you want to defragment by right-clicking the drive from the list that appears. (They're listed by the partition's location on the drive and not by drive letter.) The list of drives includes physical drives (actual disk drives or partitions of drives) and removable drives. The list does not include <A HREF="../sharehw/index.htm">networked drives</A> on other systems.
+<LI  VALUE=3>
+Click Analyze. Disk Defragmenter starts to work and displays the results of its analysis, shown here:
+</OL>
+<BR><IMG ALIGN=TOP SRC="disksafe.defrag.png" WIDTH=638 HEIGHT=468 ALT="[image]">
+<OL>
+<LI  VALUE=4>
+The colored bar in the Estimated Disk Usage Before Defragmentation box shows the usage of the sectors on the disk. The meanings of the colors are shown at the bottom of the window. If the analysis reveals that the volume should be defragmented, the same dialog box offers to start the process. Click the Defragment button if it appears: if it doesn't, your disk doesn't need defragmentation.
+<LI  VALUE=5>
+When Disk Defragmenter is done, a message asks whether you want to exit the program; click Yes.
+</OL>
+<A NAME="3">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Tips for Defragmenting</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+When Disk Defragmenter is running, you see two disk maps, the upper one the analysis of your hard disk, and the lower one an estimate of what it will look like following the defragmentation, as shown in Figure 33-1.
+<TABLE BORDER=2><TR><TD ALIGN=CENTER>
+<IMG SRC="disksafe.scandetails.png" WIDTH=638 HEIGHT=468 ALT="[figure]">
+</TD></TR><TR BGCOLOR="#00ffff"><TD><I>Figure 33-1:  Disk Defragmenter's map of the sectors on your disk</I></TD></TR></TABLE>
+<P>
+<A HREF="1.htm"  OnMouseOver='whomp(prevb, "sprev");' OnMouseOut='whomp(prevb, "wprev");'
+ title="Previous Section"><IMG NAME=prevb SRC="../images/wprev.png" ALT="Previous" HEIGHT=20 WIDTH=82 BORDER=0></A><!--
+--><A HREF="index.htm" OnMouseOver='whomp(chapb, "schap");' OnMouseOut='whomp(chapb, "wchap");'
+title="Chapter Overview"><IMG SRC="../images/wchap.png" ALT="Chapter" NAME=chapb HEIGHT=20 WIDTH=100 BORDER=0></A><A
+HREF="../index.htm" OnMouseOver='whomp(tocb, "sbook");' OnMouseOut='whomp(tocb, "wbook");' 
+title="Table of Contents"><IMG SRC="../images/wbook.png" ALT="Contents" NAME=tocb HEIGHT=20 WIDTH=94 BORDER=0></A><A
+HREF="../glossary/index.htm" OnMouseOver='whomp(glosb, "sglos");' OnMouseOut='whomp(glosb, "wglos");' 
+title="Glossary"><IMG SRC="../images/wglos.png" ALT="Glossary" NAME=glosb HEIGHT=20 WIDTH=94 BORDER=0></A><!--
+--><A HREF="3.htm"  OnMouseOver='whomp(nextb, "snext");' OnMouseOut='whomp(nextb, "wnext");'
+ title="Next Section"><IMG NAME=nextb SRC="../images/wnext.png" ALT="Next" HEIGHT=20 WIDTH=82 BORDER=0></A>
+<BR>
+</BLOCKQUOTE>
+</BODY>
+</HTML>

@@ -1,0 +1,460 @@
+<!doctype html public "-//IETF//DTD HTML//EN">
+<HTML>
+<HEAD>
+<TITLE>Windows XP: The Complete Reference: Running Windows XP on Laptops</TITLE>
+<META NAME="GENERATOR" CONTENT="Web-O-Matic Deluxe 4.1">
+<META NAME="AUTHOR" CONTENT="John R. Levine, Margaret Levine Young">
+<META NAME="COPYRIGHT" CONTENTS="Copyright 2001 by The McGraw-Hill Companies. All rights reserved.">
+</HEAD>
+<BODY BACKGROUND="../images/background.png">
+<BLOCKQUOTE>
+<SCRIPT LANGUAGE="JavaScript">
+function whomp(i, file)
+{
+	i.src = "../images/" + file + ".png";
+}
+</SCRIPT>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarered3x3.png" HEIGHT=3 WIDTH=3></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=2>
+Chapter 15: Running Windows XP on Laptops
+</FONT></TD>
+</TR>
+</TABLE>
+<BR>
+<A HREF="2.htm"  OnMouseOver='whomp(prev, "sprev");' OnMouseOut='whomp(prev, "wprev");'
+ title="Previous Section"><IMG NAME=prev SRC="../images/wprev.png" ALT="Previous" HEIGHT=20 WIDTH=82 BORDER=0></A><!--
+--><A HREF="index.htm" OnMouseOver='whomp(chap, "schap");' OnMouseOut='whomp(chap, "wchap");'
+title="Chapter Overview"><IMG SRC="../images/wchap.png" ALT="Chapter" NAME=chap HEIGHT=20 WIDTH=100 BORDER=0></A><A
+HREF="../index.htm" OnMouseOver='whomp(toc, "sbook");' OnMouseOut='whomp(toc, "wbook");' 
+title="Table of Contents"><IMG SRC="../images/wbook.png" ALT="Contents" NAME=toc HEIGHT=20 WIDTH=94 BORDER=0></A><A
+HREF="../glossary/index.htm" OnMouseOver='whomp(glos, "sglos");' OnMouseOut='whomp(glos, "wglos");' 
+title="Glossary"><IMG SRC="../images/wglos.png" ALT="Glossary" NAME=glos HEIGHT=20 WIDTH=94 BORDER=0></A><!--
+--><A HREF="4.htm"  OnMouseOver='whomp(next, "snext");' OnMouseOut='whomp(next, "wnext");'
+ title="Next Section"><IMG NAME=next SRC="../images/wnext.png" ALT="Next" HEIGHT=20 WIDTH=82 BORDER=0></A>
+<BR>
+<A NAME="1">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarered10x10.png" HEIGHT=10 WIDTH=10></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=4><B>Accessing Other Computers with Remote Desktop</B></FONT>
+</TD>
+</TR>
+</TABLE></A>
+<P>
+Remote Desktop allows you to have access to the desktop of one computer while you are running another. Not only can you see and use all the files on the remote computer, you can actually see the desktop and run programs as if you were sitting in front of the remote computer. If the remote computer is running Windows .NET, 2000, or NT Server, more than one person can use the remote computer at the same time.
+<P>
+<TABLE><TR><TD VALIGN="TOP"><IMG SRC="../images/note.png" ALT="note" WIDTH=95 HEIGHT=29></TD>
+<TD VALIGN="TOP">You can also access a computer remotely using <A HREF="../chatting/2.htm#1">NetMeeting</A>. If you're familiar with NetMeeting, and your needs are not sophisticated, it might be a simpler solution. Other remote-access programs have been available for years, including pcAnywhere (at <A HREF="http://www.symantec.com/pcanywhere"><B>http://www.symantec.com/pcanywhere</B></A>) and the freeware VNC (Virtual Network Computing, at <A HREF="http://www.uk.research.att.com/vnc"><B>http://www.uk.research.att.com/vnc</B></A>).
+
+</TD></TR></TABLE>
+<P>
+Remote Desktop uses a LAN, a VPN (virtual private network), or the Internet to access the remote computer--the speed of response will depend on the speed of your connection.
+<P>
+The <A NAME="ddserver"><I>server</I></A> is the computer that you will be taking control of from a remote location. Usually, the server computer in the Remote Desktop application is the computer on your desk--the one that you will not be taking with you. You can also use Remote Desktop to connect to a Remote Access Server (RA Server) on a Windows .NET, 2000, or NT machine. The <A NAME="ddclient"><I>client</I></A> computer is the one that you will use while you are away to see the desktop of the server computer.
+<P>
+Remote Desktop comes in two flavors--regular Remote Desktop and Remote Desktop Web Connection. The first requires that you install software on the client computer (the computer that you use to access the computer back on your desk). The second needs only Internet Explorer, but it requires more setup on the server computer (the computer that you access from another location).
+<P>
+<TABLE><TR><TD VALIGN="TOP"><IMG SRC="../images/note.png" ALT="note" WIDTH=95 HEIGHT=29></TD>
+<TD VALIGN="TOP">A computer running Windows XP Home Edition can't act as a Remote Desktop server. That is, you can't remotely access a computer running Windows XP Home Edition. However, you can use a computer running Home Edition as the Remote Desktop client.
+
+</TD></TR></TABLE>
+<P>
+Before you leave the computer you want to access remotely (the server), get Remote Desktop configured and working--you should also test it before you leave. For example, if you want to be able to use your office desktop computer remotely while you are traveling, be sure to configure it for Remote Desktop before you leave on your trip. This step is necessary whether you use either regular Remote Desktop or Remote Desktop Web connection.
+<A NAME="2">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Configuring the Server for Remote Desktop</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+To gain access using Remote Desktop, you specify one or more <A HREF="../users/index.htm">user accounts</A> on the server computer to which you want remote access. The user accounts must have passwords, so as not to leave your system open to hackers. If you normally do not use a login password, <A HREF="../users/4.htm#1">create a password for your user account</A> or create a new user account with a password solely for the purpose of using Remote Desktop. When you configure the Remote Desktop server (as described in the next section), you type the user account name when Windows asks for the Object Name in the Select Users dialog box. If you are using Remote Desktop over a domain-based LAN, you can connect using a user account on any computer on the LAN.
+<P>
+<TABLE><TR><TD VALIGN="TOP"><IMG SRC="../images/note.png" ALT="note" WIDTH=95 HEIGHT=29></TD>
+<TD VALIGN="TOP">Microsoft discourages you from using an administrative user account in situations where there is a security risk. They recommend that you use a non-administrative user account when logging in remotely. <A HREF="../users/index.htm">Make a new user account and add it to the Remote Desktop Users group</A>.
+
+</TD></TR></TABLE>
+<A NAME="3">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squaregreen6x6.png" HEIGHT=6 WIDTH=6></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Configuring the Server for Remote Desktop</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+If you plan on using Remote Desktop, follow these steps to configure the server computer for access by you or others:
+<OL>
+<LI  VALUE=1>
+Display the System Properties dialog box by choosing Start | Control Panel | Performance And Maintenance | System.
+<LI  VALUE=2>
+Click the Remote tab.
+<LI  VALUE=3>
+Select the Allow Users To Connect Remotely To This Computer check box in the Remote Desktop section of the dialog box. If you see a warning box about user accounts without passwords, click OK.
+<LI  VALUE=4>
+Click the Select Remote Users button to display the Remote Desktop users dialog box. Users with administrative accounts are automatically given access, and you can add other users.
+<LI  VALUE=5>
+Click Add to display the Select Users dialog box shown in Figure 15-4. User accounts have three identifiers: Object Type, Location, and Name.
+<LI  VALUE=6>
+To specify a user account from the computer you are sitting at, leave the Select This Object Type box set to Users, and type an account name in the Enter The Object Names To Select box.  To specify a user account from another computer on a domain-based LAN, click the Locations button and choose the domain before you specify the user account name.
+</OL>
+<P>
+<TABLE><TR><TD VALIGN="TOP"><IMG SRC="../images/note.png" ALT="note" WIDTH=95 HEIGHT=29></TD>
+<TD VALIGN="TOP">An <A NAME="ddobjecttype"><I>object type</I></A> is nothing mysterious--it specifies the type of resource, user account, or group account for which you want to establish remote access. To give a user account remote access, leave the Object Type box set to Users. Other types are Computers, Printers, and groups of users, computers, and printers. The entry in the From This Location box is also simple, though the name is rather misleading. The location does not describe the physical place that another computer inhabits, but is the name<I> </I>of that computer. To allow a user from another computer access to your computer, you type the other computer's name. In the Enter The Object Names To Select box, you can type <I>computername</I>\<I>username</I> to specify a user account on that computer (for example, SOLARIA\Rima Regas or DELL8100\Margy Levine Young).
+
+</TD></TR></TABLE>
+<TABLE BORDER=2><TR><TD ALIGN=CENTER>
+<IMG SRC="mobile.users.png" WIDTH=464 HEIGHT=254 ALT="[figure]">
+</TD></TR><TR BGCOLOR="#00ffff"><TD><I>Figure 15-4:  Choose users who can access the computer remotely</I></TD></TR></TABLE>
+<OL>
+<LI  VALUE=7>
+Click Check Names. Windows replaces the name using the form it needs (<I>computername</I>\<I>username</I>).
+<LI  VALUE=8>
+Click OK. The Remote Desktop Users dialog box displays the user you added. To add another user, repeat steps 5-8.
+<LI  VALUE=9>
+Click OK to close the Remote Desktop Users and click OK again to close the System Properties dialog boxes.
+</OL>
+<P>
+<TABLE><TR><TD VALIGN="TOP"><IMG SRC="../images/note.png" ALT="note" WIDTH=95 HEIGHT=29></TD>
+<TD VALIGN="TOP">If the computer you will be accessing is protected by a <A HREF="../security/index.htm">firewall</A>, make sure that the firewall allows remote connection traffic.
+
+</TD></TR></TABLE>
+<A NAME="4">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squaregreen6x6.png" HEIGHT=6 WIDTH=6></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Configuring the Server for Remote Desktop Web Connection</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+The Remote Desktop Web Connection is part of Microsoft's Internet Information Services (IIS) component of Windows, which comes with Windows XP Professional (but not Windows XP Home Edition). When you install it, Windows copies the necessary files to your C:\Windows\Web\TSWeb folder (assuming that Windows is installed on C:)--<A NAME="ddtsweb"><I>TSWeb</I></A> stands for Terminal Services Web.
+<P>
+If you want to use Remote Desktop Web Connection you also need to complete these steps, which ensure that the Windows components are installed and running. These steps seem unnecessarily arcane to us, but they work. You must be logged in with an administrative user account to do the following:
+<OL>
+<LI  VALUE=1>
+Choose Start | Control Panel | Add Or Remove Programs.
+<LI  VALUE=2>
+Click Add/Remove Windows Components. You see the Windows Components Wizard window.
+<LI  VALUE=3>
+Select Internet Information Services from the list of optional Windows components and click Details; select World Wide Web Service and click Details; select Remote Desktop Web Connection and World Wide Web Service. Click OK to close dialog boxes until you return to the Windows Components Wizard.
+</OL>
+<OL>
+<LI  VALUE=4>
+Click Next in the Windows Components Wizard window to install the new components. You may need to insert the Windows XP CD-ROM during the installation. (If the Windows XP installation menu appears, click the Exit button to close it.) Installation may take several minutes. Click Finish to close the Wizard.
+<LI  VALUE=5>
+Close the Add Or Remove Programs window.
+<LI  VALUE=6>
+Open Computer Management by clicking Start, right-clicking My Computer, and selecting Manage. 
+</OL>
+<OL>
+<LI  VALUE=7>
+Click the plus box to the left of the Services And Applications item in the left pane of the Computer Management window. If the component was correctly installed, you see the  item Internet Information Services.
+</OL>
+<OL>
+<LI  VALUE=8>
+Click the plus box to the left of the Internet Information Services, and to its subentries, to display to Internet Information Services\<I>computername</I>/\Web Sites\Default Web Site\tsweb. (<I>Computername</I> is the name of your computer.)
+</OL>
+<OL>
+<LI  VALUE=9>
+Right-click the Tsweb folder and select Properties to display the Tsweb Properties dialog box.
+<LI  VALUE=10>
+Click the Directory Security tab.
+<LI  VALUE=11>
+Click the Edit button in the Anonymous Access And Authentication Control section of the dialog box. You see the Authentication Methods dialog box.
+</OL>
+<OL>
+<LI  VALUE=12>
+Select the Anonymous Access check box.
+</OL>
+<OL>
+<LI  VALUE=13>
+Click OK to close your dialog boxes. 
+</OL>
+<A NAME="5">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Configuring the Client Computer for Remote Desktop</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+If you are using the regular Remote Desktop (without the Web Connection), then the computer that you will use while you are away (the client computer) must have the Remote Desktop Connection program installed. To check for this command, choose Start | All Programs | Accessories | Communications | Remote Desktop Connection. (Windows XP Professional and Home Edition both normally install Remote Desktop Connection.)
+<P>
+<TABLE><TR><TD VALIGN="TOP"><IMG SRC="../images/note.png" ALT="note" WIDTH=95 HEIGHT=29></TD>
+<TD VALIGN="TOP">If the command isn't there, install Remote Desktop Connection from your Windows XP CD-ROM--insert the CD, click Perform Additional Tasks on the Welcome page, and then choose Set Up Remote Desktop Connection to run the Remote Desktop Connection InstallShield Wizard. You get to choose who can use the remote connection: anyone on the computer, or just the logged in user. Then the Wizard takes over. Once the Wizard has finished, you can close the installation program.
+
+</TD></TR></TABLE>
+<P>
+If you are using Remote Desktop Web Connection, the client computer that you use to access the computer on your desk must have a TCP/IP connection to the LAN or the Internet, and it must have Internet Explorer 4.0 or higher (Windows XP comes with Internet Explorer 6). No other configuration is necessary for Remote Desktop Web Connection.
+<A NAME="6">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Connecting to the Remote Computer with Remote Desktop</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+Once you have completed the necessary setup tasks you are ready to test Remote Desktop. Make sure that the server machine is on and working and connected to whatever network you will use to access it--usually the Internet or a LAN (obviously, you need to do this before you leave). Sit at the client machine--that is, the computer that you will have wherever it is you are going. The next two sections describe connecting with the regular Remote Desktop and with the Remote Desktop Web Connection. Read the section for the type of connection for which you configured your computers.
+<P>
+<TABLE><TR><TD VALIGN="TOP"><IMG SRC="../images/note.png" ALT="note" WIDTH=95 HEIGHT=29></TD>
+<TD VALIGN="TOP">Although many users can log into a Windows XP Professional server computer remotely, if the computer is being used as a remote server, no one can be logged in locally. That is, one or more people can log in to the server computer using its own screen and keyboard, or one or more people can log in remotely, but not both. In fact, if someone is logged in locally when you try to log in remotely you see a message that lets you know that if you want to connect, the local user has to disconnect. The server also displays a message allowing the local user to prevent the remote connection, but if the person does not respond, the connection proceeds. So you can log in remotely even if you forgot to log off before you left. Windows .NET Server can act as a multiple-user server.
+
+</TD></TR></TABLE>
+<A NAME="7">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squaregreen6x6.png" HEIGHT=6 WIDTH=6></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Connecting with Remote Desktop Connection</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+Start Remote Desktop Connection on the client computer (the one you will take with you) by following these steps:
+<OL>
+<LI  VALUE=1>
+Choose Start | All Programs | Accessories | Communications | Remote Desktop Connection. You see the Remote Desktop Connection window:
+</OL>
+<BR><IMG ALIGN=TOP SRC="mobile.rdc.png" WIDTH=411 HEIGHT=176 ALT="[image]">
+<OL>
+<LI  VALUE=2>
+Select the name of the server computer from the Computer drop-down list, or enter the computer name or IP address. If no computer names appear on the drop-down list, choose Browse For More to see the available computers in your domain or workgroup--only computers that you have configured for remote access appear.
+</OL>
+<P>
+<TABLE><TR><TD VALIGN="TOP"><IMG SRC="../images/note.png" ALT="note" WIDTH=95 HEIGHT=29></TD>
+<TD VALIGN="TOP">To discover a computer's IP address, choose Start | My Network Places, click View Network Connections, right-click your LAN or Internet connection (whichever connects you to the network over which you will remotely access the server), choose Status, and click the Support tab. Or open a <A HREF="../dos/3.htm#2">Command Prompt window</A> and run the <A HREF="../peer2peer/4.htm#2">ipconfig</A> program.
+
+</TD></TR></TABLE>
+<OL>
+<LI  VALUE=3>
+Click Connect.
+<LI  VALUE=4>
+Enter your name and password in the Log On To Windows window: type the user account name and password that you use on the server computer. Click OK.
+<LI  VALUE=5>
+You see the remote desktop, such as the one in Figure 15-5. Notice the special toolbar at the top of the window--you can use it to minimize, restore or close the Remote Desktop Connection window. (Click the restore or minimize button if you want to work on the client computer, but then return to the server computer.) Clicking the pushpin icon locks the menu open.
+</OL>
+<TABLE BORDER=2><TR><TD ALIGN=CENTER>
+<IMG SRC="mobile.rdcdesktop.png" WIDTH=800 HEIGHT=600 ALT="[figure]">
+</TD></TR><TR BGCOLOR="#00ffff"><TD><I>Figure 15-5:  The Remote Desktop appears on your screen--notice the special toolbar at the top.</I></TD></TR></TABLE>
+<P>
+You're ready to work on the server computer.
+<A NAME="8">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squaregreen6x6.png" HEIGHT=6 WIDTH=6></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Connecting with Remote Desktop Web Connection</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+If you are connecting with Internet Explorer and Remote Desktop Web Connection you can sit at any computer provided that it has Internet Explorer 4.0 or greater and the appropriate network connection. Access the server computer by following these steps:
+<OL>
+<LI  VALUE=1>
+Open Internet Explorer.
+<LI  VALUE=2>
+In the Address box, type the URL for the home directory of the Remote Desktop computer. Generally, this URL takes the following form: <B>http://</B><B><I>servercomputer/path</I></B>. Replace <I>servercomputer</I> with the address of the server computer, and <I>path</I> with the path containing the Remote Desktop Connection files (the default location is C:\Tsweb, if Windows is installed on C:). The computer address can be the name on the LAN, or the computer's numeric IP address. You can usually omit the <B>http://</B>. For instance, if you are connecting over a LAN to a server computer named Jadzia, type <B>Jadzia/Tsweb</B> in the Address box.
+</OL>
+<P>
+<TABLE><TR><TD VALIGN="TOP"><IMG SRC="../images/note.png" ALT="note" WIDTH=95 HEIGHT=29></TD>
+<TD VALIGN="TOP">To avoid typing this address again, add it to your Internet Explorer <A HREF="../browsing/5.htm#6">Favorites</A> by choosing Favorites | Add To Favorites from the menu.
+
+</TD></TR></TABLE>
+<OL>
+<LI  VALUE=3>
+Press E<SMALL>NTER</SMALL> to see the Remote Desktop Web Connection page (shown in Figure 15-6).</OL>
+<TABLE BORDER=2><TR><TD ALIGN=CENTER>
+<IMG SRC="mobile.rdwclogin.png" WIDTH=692 HEIGHT=460 ALT="[figure]">
+</TD></TR><TR BGCOLOR="#00ffff"><TD><I>Figure 15-6:  Logging into a remote PC using Internet Explorer</I></TD></TR></TABLE>
+<OL>
+<LI  VALUE=4>
+Type the server computer's name or numeric IP address in the Server box.
+<LI  VALUE=5>
+Choose the Size for the Remote Desktop window: Full Screen, or one of the other available sizes. Remote Desktop is easier to use if the resolution of the client computer's screen is greater than size you choose (for example, you choose to display the server's screen at 8000xd7 600 on a client computer screen with a resolution of 10240xd7 768).
+<LI  VALUE=6>
+Click Connect. The first time you use this feature, Windows may ask you whether you want to install and run the Microsoft Terminal Services Control program: if it does, click Yes. You see the Remote Desktop Connection Security Warning dialog box shown in Figure 15-7 with the following options:
+</OL>
+<TABLE BORDER=2><TR><TD ALIGN=CENTER>
+<IMG SRC="mobile.rdcsecurity.png" WIDTH=392 HEIGHT=212 ALT="[figure]">
+</TD></TR><TR BGCOLOR="#00ffff"><TD><I>Figure 15-7:  You have these options when you use Remote Desktop Web Connection</I></TD></TR></TABLE>
+<UL>
+<LI >
+<B>Connect Your Local Disk Drives To The Remote Computer</B>  Makes the drives on the local (client) computer available on the remote computer. So, for instance, if you are using Remote Desktop and opening a file in Word, you can see files on your local hard drives, network drives, and floppy drives. This option is automatically available in Remote Desktop Connection.
+<LI >
+<B>Connect Your Local Ports To The Remote Computer</B>  Makes the ports on the local (client) computer available on the remote computer in the Remote Desktop Web Connection window.
+</UL>
+<P>
+Select or deselect check boxes as needed and click OK.
+<OL>
+<LI  VALUE=7>
+Log in to the server computer by typing the user name and password that you use on that computer.
+</OL>
+<P>
+You see the window shown in Figure 15-5 if you chose full screen. If you chose another size, you see the remote desktop in an Internet Explorer window. Use the Minimize, Restore or Close buttons to control the Remote Desktop Connection window. When you are done using the server computer, close the Internet Explorer window.
+<A NAME="9">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Using the Remote Desktop Connection</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+Once you have established the Remote Desktop Connection, you can work as if you were working on the server computer. You can also combine the capabilities of the remote server computer with the local client computer in the following ways:
+<UL>
+<LI >
+<A HREF="../sharedata/1.htm#2"><B>Cut-and-paste</B></A>  You can cut information from the Remote Desktop window and paste it into an application on the local computer.
+<LI >
+<B>Use local files in the remote session</B>  If you are using the Remote Desktop Connection program, this option is available automatically. If you are using Remote Desktop Web Connection, you need to select Connect Your Local Disk Drives To The Remote Computer when you log in. Local drives appear in My Computer, as shown in Figure 15-8 under Other. They will also appear in Open and Save dialog boxes in applications.
+</UL>
+<P>
+Local drives available in remote session
+<TABLE BORDER=2><TR><TD ALIGN=CENTER>
+<IMG SRC="mobile.rdcdrives.png" WIDTH=675 HEIGHT=560 ALT="[figure]">
+</TD></TR><TR BGCOLOR="#00ffff"><TD><I>Figure 15-8:  Local drives are available in the remote session.</I></TD></TR></TABLE>
+<UL>
+<LI >
+<B>Use a local printer in the remote session</B>  When you print while you are using Remote Desktop, the print job automatically goes to the default local printer if the printer driver is available on the server computer.
+</UL>
+<A NAME="10">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Other Remote Desktop Options</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+When you <A HREF="../mobile/3.htm#7">connect to a computer using Remote Desktop</A>, you see the Remote Desktop Connection dialog box. You can click the Options button to see a larger version of this dialog box with many additional options, as shown in Figure 15-9. Table 15-1 lists the options.
+<TABLE BORDER=2><TR><TD ALIGN=CENTER>
+<IMG SRC="mobile.rdoptions.png" WIDTH=411 HEIGHT=471 ALT="[figure]">
+</TD></TR><TR BGCOLOR="#00ffff"><TD><I>Figure 15-9:  Setting the options for your remote connection</I></TD></TR></TABLE>
+<BLOCKQUOTE><TABLE BORDER=2><TR><TD>
+<TABLE>
+<TR>
+<TD>
+<B>Dialog Box Tab</B>
+</TD>
+<TD>
+<B>Setting</B>
+</TD>
+<TD>
+Description
+</TD>
+</TR>
+<TR>
+<TD>
+General
+</TD>
+<TD>
+Save my password
+</TD>
+<TD>
+Specifies whether you have to type your user account password each time you connect.
+</TD>
+</TR>
+<TR>
+<TD>
+Display
+</TD>
+<TD>
+Remote desktop size and colors<B></B>
+</TD>
+<TD>
+Selects the size and color depth of the Remote Desktop window on your screen.
+</TD>
+</TR>
+<TR>
+<TD>
+Local Resources
+</TD>
+<TD>
+Remote computer sound<B></B>
+</TD>
+<TD>
+Specifies whether to play the sounds that the other computer would make on your computer instead.
+</TD>
+</TR>
+<TR>
+<TD>
+Local Resources<B></B>
+</TD>
+<TD>
+Keyboard<B></B>
+</TD>
+<TD>
+Specifies whether A<SMALL>LT</SMALL>- key combinations apply to the local computer or the remote computer.</TD>
+</TR>
+<TR>
+<TD>
+Local Resources
+</TD>
+<TD>
+Local devices (Disk drives, Printers, and Serial ports)
+</TD>
+<TD>
+Specifies which devices on the remote computer you connect to automatically.
+</TD>
+</TR>
+<TR>
+<TD>
+Programs
+</TD>
+<TD>
+Start the following program on connection
+</TD>
+<TD>
+Runs a program automatically when you connect to the remote computer, and specifies which program.
+</TD>
+</TR>
+<TR>
+<TD>
+Experience
+</TD>
+<TD>
+Choose your connection speed to optimize performance
+</TD>
+<TD>
+Specifies the speed of your connection to the remote computer.
+</TD>
+</TR>
+<TR>
+<TD>
+Experience
+</TD>
+<TD>
+Allow the following (Desktop background, Show contents of window while dragging, Menu and window animation, Themes, and Bitmap caching)
+</TD>
+<TD>
+Specifies which desktop features appear in your Remote Desktop window. Deselect items to improve performance, especially if you have a slow connection.
+</TD>
+</TR>
+</TABLE></BLOCKQUOTE>
+<TR BGCOLOR="#00ffff"><TD>
+<I>Table 1:  Settings on the Remote Desktop Connection Dialog Box</I>
+</TD></TR></TABLE></BLOCKQUOTE>
+<P>
+<TABLE><TR><TD VALIGN="TOP"><IMG SRC="../images/tip.png" ALT="tip" WIDTH=95 HEIGHT=29></TD>
+<TD VALIGN="TOP">Once you have configured the settings for your Remote Desktop connection, you can save them with a name by clicking the Save As button on the General tab of the Remote Desktop Connection dialog box. The next time you want to use these settings, click the Open button.
+
+</TD></TR></TABLE>
+<P>
+<A HREF="2.htm"  OnMouseOver='whomp(prevb, "sprev");' OnMouseOut='whomp(prevb, "wprev");'
+ title="Previous Section"><IMG NAME=prevb SRC="../images/wprev.png" ALT="Previous" HEIGHT=20 WIDTH=82 BORDER=0></A><!--
+--><A HREF="index.htm" OnMouseOver='whomp(chapb, "schap");' OnMouseOut='whomp(chapb, "wchap");'
+title="Chapter Overview"><IMG SRC="../images/wchap.png" ALT="Chapter" NAME=chapb HEIGHT=20 WIDTH=100 BORDER=0></A><A
+HREF="../index.htm" OnMouseOver='whomp(tocb, "sbook");' OnMouseOut='whomp(tocb, "wbook");' 
+title="Table of Contents"><IMG SRC="../images/wbook.png" ALT="Contents" NAME=tocb HEIGHT=20 WIDTH=94 BORDER=0></A><A
+HREF="../glossary/index.htm" OnMouseOver='whomp(glosb, "sglos");' OnMouseOut='whomp(glosb, "wglos");' 
+title="Glossary"><IMG SRC="../images/wglos.png" ALT="Glossary" NAME=glosb HEIGHT=20 WIDTH=94 BORDER=0></A><!--
+--><A HREF="4.htm"  OnMouseOver='whomp(nextb, "snext");' OnMouseOut='whomp(nextb, "wnext");'
+ title="Next Section"><IMG NAME=nextb SRC="../images/wnext.png" ALT="Next" HEIGHT=20 WIDTH=82 BORDER=0></A>
+<BR>
+</BLOCKQUOTE>
+</BODY>
+</HTML>

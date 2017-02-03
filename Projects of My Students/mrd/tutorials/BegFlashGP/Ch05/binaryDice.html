@@ -1,0 +1,53 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>binaryDice</title>
+</head>
+<body bgcolor="#cccccc">
+<!--url's used in the movie-->
+<!--text used in the movie-->
+<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,0,0" width="550" height="400" id="binaryDice" align="middle">
+<param name="allowScriptAccess" value="sameDomain" />
+<param name="movie" value="binaryDice.swf" />
+<param name="quality" value="high" />
+<param name="bgcolor" value="#006633" />
+<embed src="binaryDice.swf" quality="high" bgcolor="#006633" width="550" height="400" name="binaryDice" align="middle" allowScriptAccess="sameDomain" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" />
+</object>
+<h3>Code in <i>frame 1 layer 1</i></h3>
+<pre>
+// binaryDice
+// demonstrates switch structure
+// Andy Harris, 12/04
+
+btnRoll.onRelease = function(){
+  //roll a die
+  die = Math.ceil(Math.random() * 6);
+
+  switch(die){
+    case 1:
+      output = "001";
+      break;
+    case 2:
+      output = "010";
+      break;
+    case 3:
+      output = "011";
+      break;
+    case 4:
+      output = "100";
+      break;
+    case 5:
+      output = "101";
+      break;
+    case 6:
+      output = "110";
+      break;
+    default:
+      output = "problem...";
+      break;
+  } // end switch
+} // end roll
+</pre>
+</body>
+</html>

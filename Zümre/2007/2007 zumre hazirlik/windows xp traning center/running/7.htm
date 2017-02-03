@@ -1,0 +1,354 @@
+<!doctype html public "-//IETF//DTD HTML//EN">
+<HTML>
+<HEAD>
+<TITLE>Windows XP: The Complete Reference: Running Programs</TITLE>
+<META NAME="GENERATOR" CONTENT="Web-O-Matic Deluxe 4.1">
+<META NAME="AUTHOR" CONTENT="John R. Levine, Margaret Levine Young">
+<META NAME="COPYRIGHT" CONTENTS="Copyright 2001 by The McGraw-Hill Companies. All rights reserved.">
+</HEAD>
+<BODY BACKGROUND="../images/background.png">
+<BLOCKQUOTE>
+<SCRIPT LANGUAGE="JavaScript">
+function whomp(i, file)
+{
+	i.src = "../images/" + file + ".png";
+}
+</SCRIPT>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarered3x3.png" HEIGHT=3 WIDTH=3></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=2>
+Chapter 2: Running Programs
+</FONT></TD>
+</TR>
+</TABLE>
+<BR>
+<A HREF="6.htm"  OnMouseOver='whomp(prev, "sprev");' OnMouseOut='whomp(prev, "wprev");'
+ title="Previous Section"><IMG NAME=prev SRC="../images/wprev.png" ALT="Previous" HEIGHT=20 WIDTH=82 BORDER=0></A><!--
+--><A HREF="index.htm" OnMouseOver='whomp(chap, "schap");' OnMouseOut='whomp(chap, "wchap");'
+title="Chapter Overview"><IMG SRC="../images/wchap.png" ALT="Chapter" NAME=chap HEIGHT=20 WIDTH=100 BORDER=0></A><A
+HREF="../index.htm" OnMouseOver='whomp(toc, "sbook");' OnMouseOut='whomp(toc, "wbook");' 
+title="Table of Contents"><IMG SRC="../images/wbook.png" ALT="Contents" NAME=toc HEIGHT=20 WIDTH=94 BORDER=0></A><A
+HREF="../glossary/index.htm" OnMouseOver='whomp(glos, "sglos");' OnMouseOut='whomp(glos, "wglos");' 
+title="Glossary"><IMG SRC="../images/wglos.png" ALT="Glossary" NAME=glos HEIGHT=20 WIDTH=94 BORDER=0></A><!--
+--><A HREF="8.htm"  OnMouseOver='whomp(next, "snext");' OnMouseOut='whomp(next, "wnext");'
+ title="Next Section"><IMG NAME=next SRC="../images/wnext.png" ALT="Next" HEIGHT=20 WIDTH=82 BORDER=0></A>
+<BR>
+<A NAME="1">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarered10x10.png" HEIGHT=10 WIDTH=10></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=4><B>Running Programs on a Schedule Using Scheduled Tasks</B></FONT>
+</TD>
+</TR>
+</TABLE></A>
+<P>
+Scheduled Tasks is the program Windows uses to check the files and folders on your hard disk automatically. You can also use the Scheduled Tasks program to run almost any program at a specified time on a regular basis. When you schedule a task, you must specify the following information:
+<UL>
+<LI >
+What program you want to run.
+<LI >
+How often you want to run it (daily, weekly, monthly, when your computer starts, or when you log on).
+<LI >
+What time you want the program to start running. For weekly and monthly schedules, you also specify what day to start the program.
+<LI >
+What user account you want to use when running the program. You enter the user's name and password (usually your own username and password).
+</UL>
+<P>
+When Scheduled Tasks is running, its icon appears in the system tray at the right end of the taskbar.
+<A NAME="2">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Scheduling a Program</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+To tell Scheduled Tasks to run a program on a regular schedule, follow these steps:
+<OL>
+<LI  VALUE=1>
+Look at the Scheduled Tasks window by choosing Start | All Programs | Accessories | System Tools | Scheduled Tasks; or choose Start | Control Panel, click Performance And Maintenance, and click Scheduled Tasks. You see the Scheduled Tasks window, shown in Figure 2-7.
+</OL>
+<TABLE BORDER=2><TR><TD ALIGN=CENTER>
+<IMG SRC="running.scheduled.png" WIDTH=699 HEIGHT=378 ALT="[figure]">
+</TD></TR><TR BGCOLOR="#00ffff"><TD><I>Figure 2-7:  The Scheduled Tasks window</I></TD></TR></TABLE>
+<OL>
+<LI  VALUE=2>
+Run the Add Scheduled Task item that appears in the Name column of the Scheduled Tasks window. (If it's underlined, click it once. Otherwise, double-click it.)
+<LI  VALUE=3>
+Windows runs the Scheduled Task Wizard, which takes you through the steps required to schedule tasks to run automatically. Follow the prompts on the screen, clicking Next to move to the next step.
+<LI  VALUE=4>
+When the Scheduled Task Wizard displays all the information you have specified about the program's schedule, including the name of the program and when you want it to run, click the Finish button. The program appears on a new line in the Scheduled Tasks window.
+</OL>
+<P>
+Be sure to leave your computer turned on all the time, so when the scheduled time arrives, Windows runs your program. If your computer is off (or Scheduled Tasks isn't running) when the time comes, the program doesn't run.
+<P>
+<TABLE><TR><TD VALIGN="TOP"><IMG SRC="../images/note.png" ALT="note" WIDTH=95 HEIGHT=29></TD>
+<TD VALIGN="TOP">When you schedule a task, Windows creates a file with the extension .job in the C:\Windows\Tasks folder (assuming that Windows XP is installed on your C: drive).
+
+</TD></TR></TABLE>
+<A NAME="3">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Canceling a Scheduled Program</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+If you decide you no longer want Windows to run the program automatically, open the Scheduled Tasks window, right-click the line for the program, and choose Delete from the menu that appears. When Windows asks you to confirm that you want to delete the file for this job, click Yes.
+<P>
+To cancel running all scheduled programs, choose Advanced | Stop Using Task Scheduler from the menu bar in the Scheduled Tasks window. No scheduled programs will be run until you choose the command Advanced | Start Using Task Scheduler. You can pause the scheduler program by choosing Advanced | Pause Task Scheduler to skip running scheduled programs temporarily and choose Advanced | Continue Task Scheduler to resume. Pausing Scheduled Tasks is a good idea while you are installing new software, for example, so installation isn't interrupted.
+<A NAME="4">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Configuring a Scheduled Program</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+You can configure other settings for a scheduled task. Click or double-click the line for the task in the Scheduled Tasks window (or select the line and click the Properties button on the toolbar, or right-click the program name and choose Properties from the menu that appears). You see a dialog box with all the settings for the scheduled program (see Figure 2-8). Table 2-1 lists all the settings you can specify when you schedule a program to run.
+<TABLE BORDER=2><TR><TD ALIGN=CENTER>
+<IMG SRC="running.schedprops.png" WIDTH=406 HEIGHT=455 ALT="[figure]">
+</TD></TR><TR BGCOLOR="#00ffff"><TD><I>Figure 2-8:  Settings for a scheduled program</I></TD></TR></TABLE>
+<BLOCKQUOTE><TABLE BORDER=2><TR><TD>
+<TABLE>
+<TR>
+<TD>
+<B>Tab in Dialog Box</B>
+</TD>
+<TD>
+<B>Setting</B>
+</TD>
+<TD>
+<B>Description</B>
+</TD>
+</TR>
+<TR>
+<TD>
+Task
+</TD>
+<TD>
+Run
+</TD>
+<TD>
+Specifies the pathname (and optional parameters) to run the program. If the pathname includes spaces, enclose the entire pathname in double quotes. Click Browse to find a program.
+</TD>
+</TR>
+<TR>
+<TD>
+Task
+</TD>
+<TD>
+Start in
+</TD>
+<TD>
+Specifies the default folder for the program files (some programs require files other than the program file, and this setting tells the program where to look for them).
+</TD>
+</TR>
+<TR>
+<TD>
+Task
+</TD>
+<TD>
+Comments
+</TD>
+<TD>
+Provides space for you to type comments (ignored by Windows).
+</TD>
+</TR>
+<TR>
+<TD>
+Task
+</TD>
+<TD>
+Run as
+</TD>
+<TD>
+Specifies the user account to use when running the program. Click Set Password to type the password for that user account.
+</TD>
+</TR>
+<TR>
+<TD>
+Task
+</TD>
+<TD>
+Enabled
+</TD>
+<TD>
+Specifies that the task is scheduled. To suspend scheduling the task, clear this check box.
+</TD>
+</TR>
+<TR>
+<TD>
+Schedule
+</TD>
+<TD>
+Schedule Task
+</TD>
+<TD>
+Specifies the frequency the task runs: daily, weekly, monthly, once, at system startup, at logon, or when idle. The rest of the settings on the Schedule tab of the dialog box depend on which frequency you choose.
+</TD>
+</TR>
+<TR>
+<TD>
+Schedule
+</TD>
+<TD>
+Start time
+</TD>
+<TD>
+For daily, weekly, monthly, or one-time tasks, specifies the time Windows starts the program.
+</TD>
+</TR>
+<TR>
+<TD>
+Schedule
+</TD>
+<TD>
+Advanced
+</TD>
+<TD>
+Displays the Advanced Schedule Options dialog box, in which you can specify an end date or number of repetitions.
+</TD>
+</TR>
+<TR>
+<TD>
+Schedule
+</TD>
+<TD>
+Show multiple schedules
+</TD>
+<TD>
+When this check box is selected, a box appears at the top of the Schedule tab from which you can pick from a list of the schedules you have defined.
+</TD>
+</TR>
+<TR>
+<TD>
+Settings
+</TD>
+<TD>
+Delete the task if it is not scheduled to run again
+</TD>
+<TD>
+Specifies that Windows delete the item from the Scheduled Tasks list after running it (useful for programs you have scheduled to run only once).
+</TD>
+</TR>
+<TR>
+<TD>
+Settings
+</TD>
+<TD>
+Stop the task if it runs for <I>xx</I> hours <I>xx</I> minutes
+</TD>
+<TD>
+Specifies the maximum number of hours and minutes the scheduled program can run. If the program is still running after the specified amount of time, Windows stops the program.
+</TD>
+</TR>
+<TR>
+<TD>
+Settings
+</TD>
+<TD>
+Only start the task if computer has been idle for at least <I>xx</I> minutes
+</TD>
+<TD>
+Specifies that Windows should start the task only after the specified amount of time with no keyboard or mouse use.
+</TD>
+</TR>
+<TR>
+<TD>
+Settings
+</TD>
+<TD>
+If the computer has not been idle that long, retry for up to <I>xx</I> minutes
+</TD>
+<TD>
+If the computer has not been idle for the amount of time specified in the preceding setting when Windows tries to start the program, specifies the number of minutes during which Windows should try to run the program.
+</TD>
+</TR>
+<TR>
+<TD>
+Settings
+</TD>
+<TD>
+Stop the task if computer ceases to be idle
+</TD>
+<TD>
+Specifies that Windows stop the program if you begin to use the computer.
+</TD>
+</TR>
+<TR>
+<TD>
+Settings
+</TD>
+<TD>
+Don't start the task if computer is running on batteries
+</TD>
+<TD>
+Specifies that Windows not start the task if the computer is running on batteries. Some programs, especially disk-housekeeping programs, perform lots of disk access, which can run down your computer's batteries.
+</TD>
+</TR>
+<TR>
+<TD>
+Settings
+</TD>
+<TD>
+Stop the task if battery mode begins
+</TD>
+<TD>
+Specifies that Windows stop the program if your computer switches from external power to batteries.
+</TD>
+</TR>
+<TR>
+<TD>
+Settings
+</TD>
+<TD>
+Wake the computer to run this task
+</TD>
+<TD>
+Wakes the computer when the task is schedule to run, even if it is suspended or in sleep mode.
+</TD>
+</TR>
+</TABLE></BLOCKQUOTE>
+<TR BGCOLOR="#00ffff"><TD>
+<I>Table 1:  Settings for a Scheduled Task</I>
+</TD></TR></TABLE></BLOCKQUOTE>
+<A NAME="5">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Other Scheduling Options</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+You can ask Scheduled Tasks to let you know how its scheduled programs are doing. If you want to be notified when Scheduled Tasks is unable to run a scheduled program, choose Advanced from the Scheduled Tasks window's menu bar and make sure a check mark appears to the left of the Notify Me Of Missed Tasks option (if no check mark appears, choose the option from the menu).
+<P>
+You can look at a log file of the results of scheduled programs by choosing Advanced | View Log from the Scheduled Tasks menu bar. Windows displays the log file, which is stored in text format in C:\Windows\SchedLgU.txt, using Notepad. Log entries consist of several lines of text, as shown here:
+<P><PRE>
+"Activation reminder.job" (oobebaln.exe)<BR>
+ Finished 7/3/2002 1:39:35 PM<BR>
+ Result: The task completed with an exit code of (0).
+</PRE>
+<P>
+The first line describes the program, and the subsequent lines report on the outcome of running the program.
+<P>
+<A HREF="6.htm"  OnMouseOver='whomp(prevb, "sprev");' OnMouseOut='whomp(prevb, "wprev");'
+ title="Previous Section"><IMG NAME=prevb SRC="../images/wprev.png" ALT="Previous" HEIGHT=20 WIDTH=82 BORDER=0></A><!--
+--><A HREF="index.htm" OnMouseOver='whomp(chapb, "schap");' OnMouseOut='whomp(chapb, "wchap");'
+title="Chapter Overview"><IMG SRC="../images/wchap.png" ALT="Chapter" NAME=chapb HEIGHT=20 WIDTH=100 BORDER=0></A><A
+HREF="../index.htm" OnMouseOver='whomp(tocb, "sbook");' OnMouseOut='whomp(tocb, "wbook");' 
+title="Table of Contents"><IMG SRC="../images/wbook.png" ALT="Contents" NAME=tocb HEIGHT=20 WIDTH=94 BORDER=0></A><A
+HREF="../glossary/index.htm" OnMouseOver='whomp(glosb, "sglos");' OnMouseOut='whomp(glosb, "wglos");' 
+title="Glossary"><IMG SRC="../images/wglos.png" ALT="Glossary" NAME=glosb HEIGHT=20 WIDTH=94 BORDER=0></A><!--
+--><A HREF="8.htm"  OnMouseOver='whomp(nextb, "snext");' OnMouseOut='whomp(nextb, "wnext");'
+ title="Next Section"><IMG NAME=nextb SRC="../images/wnext.png" ALT="Next" HEIGHT=20 WIDTH=82 BORDER=0></A>
+<BR>
+</BLOCKQUOTE>
+</BODY>
+</HTML>

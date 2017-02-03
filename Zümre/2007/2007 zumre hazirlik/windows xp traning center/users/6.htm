@@ -1,0 +1,186 @@
+<!doctype html public "-//IETF//DTD HTML//EN">
+<HTML>
+<HEAD>
+<TITLE>Windows XP: The Complete Reference: Sharing Your Computer with Multiple Users</TITLE>
+<META NAME="GENERATOR" CONTENT="Web-O-Matic Deluxe 4.1">
+<META NAME="AUTHOR" CONTENT="John R. Levine, Margaret Levine Young">
+<META NAME="COPYRIGHT" CONTENTS="Copyright 2001 by The McGraw-Hill Companies. All rights reserved.">
+</HEAD>
+<BODY BACKGROUND="../images/background.png">
+<BLOCKQUOTE>
+<SCRIPT LANGUAGE="JavaScript">
+function whomp(i, file)
+{
+	i.src = "../images/" + file + ".png";
+}
+</SCRIPT>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarered3x3.png" HEIGHT=3 WIDTH=3></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=2>
+Chapter 6: Sharing Your Computer with Multiple Users
+</FONT></TD>
+</TR>
+</TABLE>
+<BR>
+<A HREF="5.htm"  OnMouseOver='whomp(prev, "sprev");' OnMouseOut='whomp(prev, "wprev");'
+ title="Previous Section"><IMG NAME=prev SRC="../images/wprev.png" ALT="Previous" HEIGHT=20 WIDTH=82 BORDER=0></A><!--
+--><A HREF="index.htm" OnMouseOver='whomp(chap, "schap");' OnMouseOut='whomp(chap, "wchap");'
+title="Chapter Overview"><IMG SRC="../images/wchap.png" ALT="Chapter" NAME=chap HEIGHT=20 WIDTH=100 BORDER=0></A><A
+HREF="../index.htm" OnMouseOver='whomp(toc, "sbook");' OnMouseOut='whomp(toc, "wbook");' 
+title="Table of Contents"><IMG SRC="../images/wbook.png" ALT="Contents" NAME=toc HEIGHT=20 WIDTH=94 BORDER=0></A><A
+HREF="../glossary/index.htm" OnMouseOver='whomp(glos, "sglos");' OnMouseOut='whomp(glos, "wglos");' 
+title="Glossary"><IMG SRC="../images/wglos.png" ALT="Glossary" NAME=glos HEIGHT=20 WIDTH=94 BORDER=0></A><!--
+--><IMG SRC="../images/bnext.png" ALT="Next" HEIGHT=20 WIDTH=82 BORDER=0>
+<BR>
+<A NAME="1">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarered10x10.png" HEIGHT=10 WIDTH=10></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=4><B>Managing Multiple Users</B></FONT>
+</TD>
+</TR>
+</TABLE></A>
+<P>
+As an administrator or power user, you can keep track of who is logged on and who has programs running. You can also help users who have forgotten a password.
+<A NAME="2">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Managing Logged-In Users</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+In Windows Me/9x, the term "Task Manager" referred to buttons on the taskbar for the program that were currently running as well as to a program could who you what programs were running. In Windows XP, the <A HREF="../trouble/2.htm#1">Windows Task Manager</A> (or Task Manager) is a program that can show you the tasks that the computer is currently doing, which users are currently logged on, and more.
+<P>
+The two easiest ways to display the Task Manager are by pressing C<SMALL>TRL</SMALL>-A<SMALL>LT</SMALL>-D<SMALL>ELETE</SMALL> and by right-clicking a blank place on the taskbar and choosing Task Manager from the menu that appears. You see the Task Manager, with tabs for Applications, Processes, Performance, Networking, and Users. To see who is using the computer, click the Users tab (see Figure 6-13).<TABLE BORDER=2><TR><TD ALIGN=CENTER>
+<IMG SRC="users.taskmgr.png" WIDTH=404 HEIGHT=456 ALT="[figure]">
+</TD></TR><TR BGCOLOR="#00ffff"><TD><I>Figure 6-13:  The Task Manager's Users tab</I></TD></TR></TABLE>
+<P>
+If you are an administrator, you see a list of the users who are logged on. (Other users just see an entry for themselves.) The user who is currently using the computer (you, presumably) has the status Active, while other logged-on users are Disconnected.
+<P>
+To switch to another user, click the currently active user and click Disconnect. To log a user out, click the user and click Logoff.
+<P>
+You can send a message to another logged-in user by selecting the user and clicking Send Message. When you see the Send Message dialog box, type the text of your message and click OK. The next time you switch to that user, the user sees a message box like this:
+<BR><IMG ALIGN=TOP SRC="users.message.png" WIDTH=371 HEIGHT=126 ALT="[image]">
+<A NAME="3">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Unlocking a Locked-Out Account</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+If someone tries to break into your computer, she may try guessing a user's password, entering a series of wrong passwords. You can tell Windows XP Professional to lock an account after someone has tried a specific number of wrong passwords (Windows XP Home Edition doesn't support this). This feature is called <A NAME="ddaccountlockout"><I>account lockout</I></A>.
+<P>
+To tell Windows to lock out accounts if someone enters a series of wrong passwords, you can specify three security policy settings:
+<UL>
+<LI >
+<B>Account Lockout Threshold</B>  How many wrong passwords causes Windows to lock out the account. Entering 0 turns off account lockout. To turn on account lockout, enter a number between 1 and 999 (we recommend 3).
+<LI >
+<B>Account Lockout Duration</B>  How long the lockout lasts, in minutes. After the duration (usually 30 minutes), Windows automatically unlocks the account. You can enter a number from 1 to 99,999.
+<LI >
+<B>Reset Account Lockout Counter After</B>  How long Windows waits after the last wrong password is entered before restarting the account lockout counter, in minutes (usually 30 minutes). After this amount of time, Windows starts counting at 1 again the next time someone starts entering wrong passwords. This must be shorter than or the same as the account lockout duration.
+</UL>
+<P>
+To turn account lockout on or off, follow these steps:
+<OL>
+<LI  VALUE=1>
+Choose Start | Control Panel, click Performance And Maintenance, and run Administrative Tools. You see the Administrative Tools window.
+<LI  VALUE=2>
+Run the Local Security Policy program (which doesn't come with Windows XP Home Edition). You see the Local Security Settings window.
+<LI  VALUE=3>
+Open the Accounts Policies folder in the list at the left, and click the Account Lockout Policy folder. At the right, you see the three account lockout settings.
+<LI  VALUE=4>
+To turn on account lockout, click Account Lockout Threshold and click the Properties button on the toolbar. Enter a number 1 or greater (try 3). Click OK.
+<LI  VALUE=5>
+Windows lets you know that by turning on account lockout, you are also setting the other two settings to their default values. Account Lockout Duration and Reset Account Lockout Counter After are now both 30 minutes. Click OK.
+<LI  VALUE=6>
+If you want to change the duration or reset time, click the setting and click Properties on the toolbar.
+</OL>
+<P>
+When someone has tried to log on with the wrong password too many times, Windows locks the account. An administrative or power user on Windows XP Professional can unlock the account before the Account Lockout Duration has passed. Follow these steps:
+<OL>
+<LI  VALUE=1>
+Choose Start, right-click My Computer, and choose Manage from the menu that appears. You see the Computer Management window, as shown in Figure 6-2.
+<LI  VALUE=2>
+Open the Local Users And Groups folder and the Users folder.
+<LI  VALUE=3>
+Click a user account and click the Properties button on the toolbar. Or, right-click a user account and choose Properties from the menu that appears. You see the Properties dialog box for the user.
+<LI  VALUE=4>
+On the General tab, if the user account is locked out, the Account Is Locked Out check box is selected. Clear the check box to enable the user to use this account again (and assign the person a new password!).
+</OL>
+<A NAME="4">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Setting Quotas for Disk Usage</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+For NFTS drives and partitions, you can limit users' files to a specified amount of disk space. Follow these steps:
+<OL>
+<LI  VALUE=1>
+In an Explorer window (choose Start | My Computer), find the drive or partition for which you want to set quotas.
+<LI  VALUE=2>
+Right-click the drive or partition and choose Properties from the shortcut menu. You see the Properties dialog box for the drive or partition.
+<LI  VALUE=3>
+Click the Quota tab, as shown in Figure 6-14. (The Quota tab doesn't appear for FAT32 and FAT drives.)
+</OL>
+<TABLE BORDER=2><TR><TD ALIGN=CENTER>
+<IMG SRC="users.quotas.png" WIDTH=367 HEIGHT=455 ALT="[figure]">
+</TD></TR><TR BGCOLOR="#00ffff"><TD><I>Figure 6-14:  Enabling disk quotas</I></TD></TR></TABLE>
+<OL>
+<LI  VALUE=4>
+Select the Enable Quota Management check box. If you don't want to let people exceed their quotas, select the Deny Disk Space To Users Exceeding Their Quota Limit check box (otherwise, Windows displays a warning, but still allows the file to be stored).
+<LI  VALUE=5>
+Click the Limit Disk Space To <I>xx</I> radio button, and set the box to its right to the limit you want to set for new user accounts. Set the amount of space at which you want users to receive a warning, too. Be sure to change the right-hand box from KB to MB unless you are setting a <I>very</I> small limit.
+<LI  VALUE=6>
+If you want Windows to create a system log entry each time a user goes over quota, select one or both of the check boxes at the bottom of the dialog box.
+<LI  VALUE=7>
+To set limits for existing user accounts, click the Quota Entries button. You see the Quota Entries dialog box, shown in Figure 6-15. Widen the Name and Logon Name columns by dragging the column header dividers rightward, so you can read the user account names. Listed users who are under their quotas appear with "OK" in the Status column.
+</OL>
+<TABLE BORDER=2><TR><TD ALIGN=CENTER>
+<IMG SRC="users.quotaentries.png" WIDTH=627 HEIGHT=265 ALT="[figure]">
+</TD></TR><TR BGCOLOR="#00ffff"><TD><I>Figure 6-15:  Setting disk quotas by user</I></TD></TR></TABLE>
+<OL>
+<LI  VALUE=8>
+The Quota Entries dialog box includes an entry for the Administrators group account, with no limit. To set a limit for a user account, choose Quota | New Quota Entry from the menu bar, or click the New Quota Entry button on the toolbar. You see the Select Users dialog box:
+</OL>
+<BR><IMG ALIGN=TOP SRC="users.selectusers.png" WIDTH=464 HEIGHT=254 ALT="[image]">
+<OL>
+<LI  VALUE=9>
+Type a user account name into the Enter Object Names To Select box and click OK. You see the Add New Quota Entry dialog box:
+</OL>
+<BR><IMG ALIGN=TOP SRC="users.newquota.png" WIDTH=324 HEIGHT=240 ALT="[image]">
+<OL>
+<LI  VALUE=10>
+Click the Limit Disk Space To <I>xx</I> radio button, and set the limit. Click OK.
+<LI  VALUE=11>
+You can change the limits for existing quotas by selecting the entry in the list in the Quota Entries dialog box and clicking the Properties button on the toolbar (or by right-clicking the entry and choosing Properties from the menu that appears).
+<LI  VALUE=12>
+When you are finished setting quotas, close the Quota Entries dialog box and the Properties dialog box for the drive or partition.
+</OL>
+<P>
+<TABLE><TR><TD VALIGN="TOP"><IMG SRC="../images/tip.png" ALT="tip" WIDTH=95 HEIGHT=29></TD>
+<TD VALIGN="TOP">If you don't want to limit how much space people use, but you want to track space usage, quotas are still useful. Enable quotas, but don't choose to deny disk space to people who exceed their quotas. Select the check boxes that cause Windows to log whenever people exceed their quotas, and watch your log files. To see when people have exceeded their quotas, click Start, right-click My Computer, and choose Manage to open the Computer Management window. Click the plus box to the left of Event Viewer in the list of items to see the types of logs available, and click the System log.
+
+</TD></TR></TABLE>
+<P>
+<A HREF="5.htm"  OnMouseOver='whomp(prevb, "sprev");' OnMouseOut='whomp(prevb, "wprev");'
+ title="Previous Section"><IMG NAME=prevb SRC="../images/wprev.png" ALT="Previous" HEIGHT=20 WIDTH=82 BORDER=0></A><!--
+--><A HREF="index.htm" OnMouseOver='whomp(chapb, "schap");' OnMouseOut='whomp(chapb, "wchap");'
+title="Chapter Overview"><IMG SRC="../images/wchap.png" ALT="Chapter" NAME=chapb HEIGHT=20 WIDTH=100 BORDER=0></A><A
+HREF="../index.htm" OnMouseOver='whomp(tocb, "sbook");' OnMouseOut='whomp(tocb, "wbook");' 
+title="Table of Contents"><IMG SRC="../images/wbook.png" ALT="Contents" NAME=tocb HEIGHT=20 WIDTH=94 BORDER=0></A><A
+HREF="../glossary/index.htm" OnMouseOver='whomp(glosb, "sglos");' OnMouseOut='whomp(glosb, "wglos");' 
+title="Glossary"><IMG SRC="../images/wglos.png" ALT="Glossary" NAME=glosb HEIGHT=20 WIDTH=94 BORDER=0></A><!--
+--><IMG SRC="../images/bnext.png" ALT="Next" HEIGHT=20 WIDTH=82 BORDER=0>
+<BR>
+</BLOCKQUOTE>
+</BODY>
+</HTML>

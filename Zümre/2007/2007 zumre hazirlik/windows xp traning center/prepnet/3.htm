@@ -1,0 +1,114 @@
+<!doctype html public "-//IETF//DTD HTML//EN">
+<HTML>
+<HEAD>
+<TITLE>Windows XP: The Complete Reference: Configuring Windows to Work with Your Modem</TITLE>
+<META NAME="GENERATOR" CONTENT="Web-O-Matic Deluxe 4.1">
+<META NAME="AUTHOR" CONTENT="John R. Levine, Margaret Levine Young">
+<META NAME="COPYRIGHT" CONTENTS="Copyright 2001 by The McGraw-Hill Companies. All rights reserved.">
+</HEAD>
+<BODY BACKGROUND="../images/background.png">
+<BLOCKQUOTE>
+<SCRIPT LANGUAGE="JavaScript">
+function whomp(i, file)
+{
+	i.src = "../images/" + file + ".png";
+}
+</SCRIPT>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarered3x3.png" HEIGHT=3 WIDTH=3></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=2>
+Chapter 21: Configuring Windows to Work with Your Modem
+</FONT></TD>
+</TR>
+</TABLE>
+<BR>
+<A HREF="2.htm"  OnMouseOver='whomp(prev, "sprev");' OnMouseOut='whomp(prev, "wprev");'
+ title="Previous Section"><IMG NAME=prev SRC="../images/wprev.png" ALT="Previous" HEIGHT=20 WIDTH=82 BORDER=0></A><!--
+--><A HREF="index.htm" OnMouseOver='whomp(chap, "schap");' OnMouseOut='whomp(chap, "wchap");'
+title="Chapter Overview"><IMG SRC="../images/wchap.png" ALT="Chapter" NAME=chap HEIGHT=20 WIDTH=100 BORDER=0></A><A
+HREF="../index.htm" OnMouseOver='whomp(toc, "sbook");' OnMouseOut='whomp(toc, "wbook");' 
+title="Table of Contents"><IMG SRC="../images/wbook.png" ALT="Contents" NAME=toc HEIGHT=20 WIDTH=94 BORDER=0></A><A
+HREF="../glossary/index.htm" OnMouseOver='whomp(glos, "sglos");' OnMouseOut='whomp(glos, "wglos");' 
+title="Glossary"><IMG SRC="../images/wglos.png" ALT="Glossary" NAME=glos HEIGHT=20 WIDTH=94 BORDER=0></A><!--
+--><A HREF="4.htm"  OnMouseOver='whomp(next, "snext");' OnMouseOut='whomp(next, "wnext");'
+ title="Next Section"><IMG NAME=next SRC="../images/wnext.png" ALT="Next" HEIGHT=20 WIDTH=82 BORDER=0></A>
+<BR>
+<A NAME="1">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarered10x10.png" HEIGHT=10 WIDTH=10></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=4><B>Setting Up Area Code Rules</B></FONT>
+</TD>
+</TR>
+</TABLE></A>
+<P>
+You can configure Windows to dial 1 and the area code automatically when necessary, but not to dial it for local calls.
+<A NAME="2">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>What Are Area Code Rules?</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+In the old days, you probably had to dial 1 and the area code only for numbers outside your own area code. Now, you may have to dial 1 and the area code for some or all phone numbers, even within your own area code. You can tell Windows exactly when it has to dial what numbers, so when you type a phone number to dial, Windows can dial the correct sequence of digits. Windows stores this information as an <A NAME="ddareacoderule"><I>area code rule</I></A>, which defines what Windows should dial when calling from one dialing location to one area code (for example, when dialing 617 area code numbers from your Lexington MA dialing location).
+<A NAME="3">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Creating Area Code Rules</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+To tell Windows the <A HREF="../prepnet/3.htm#1">dialing rules for an area code</A>:
+<OL>
+<LI  VALUE=1>
+Choose Start | Control Panel, click Printers And Other Hardware, and click Phones And Modem Options. On the Phone And Modem Options dialog box that appears, click the Dialing Rules tab (if it's not already selected), as shown in Figure 21-3.
+<LI  VALUE=2>
+Choose the dialing location for which you want to create area code rules, click the Edit button to display the Edit Locations dialog box (shown in Figure 21-4), and then click the Area Code Rules tab. You see a list of the area code rules that apply to calls made from dialing location (the list starts out empty).
+<LI  VALUE=3>
+Click the New button. You see the New Area Code Rule dialog box, shown in Figure 21-5.
+</OL>
+<TABLE BORDER=2><TR><TD ALIGN=CENTER>
+<IMG SRC="prepnet.areacodes.png" WIDTH=384 HEIGHT=450 ALT="[figure]">
+</TD></TR><TR BGCOLOR="#00ffff"><TD><I>Figure 21-5:  The New Area Code Rule dialog box tells Windows when to dial 1 and the area code.</I></TD></TR></TABLE>
+<OL>
+<LI  VALUE=4>
+Type the area code to which this rule applies (that is, Windows follows this rule when dialing numbers in this area code from this dialing location).
+<LI  VALUE=5>
+In the Prefixes section, specify whether the rule appears to all numbers in the area code, or only to certain prefixes (or exchanges, that is, the three digits that come after the area code). If the rule applies to certain prefixes, click Add and type the prefixes.
+</OL>
+<P>
+<TABLE><TR><TD VALIGN="TOP"><IMG SRC="../images/note.png" ALT="note" WIDTH=95 HEIGHT=29></TD>
+<TD VALIGN="TOP">You can't tell Windows that a rule applies to all prefixes <I>except</I> the ones you list (which would be handy in some area codes).
+
+</TD></TR></TABLE>
+<OL>
+<LI  VALUE=6>
+If you must dial 1 (or another set of digits) for these phone numbers, click the Dial check box and type the digit (usually 1, which already appears there).
+<LI  VALUE=7>
+If you must dial the area code for these phone numbers, click the Include The Area Code check box.
+<LI  VALUE=8>
+Click OK to return to the Edit Locations dialog box, where your rule now appears. Click OK again to return to the Phone And Modem Options dialog box.
+</OL>
+<P>
+You can change an existing area code rule (or delete it) by selecting the dialing location to which it applies from the Dialing Rules tab of the Phone And Modem Options dialog box, clicking Edit, clicking the Area Code Rules tab of the Edit Location dialog box that appears, clicking the area code rule, and clicking Edit or Delete.
+<P>
+<A HREF="2.htm"  OnMouseOver='whomp(prevb, "sprev");' OnMouseOut='whomp(prevb, "wprev");'
+ title="Previous Section"><IMG NAME=prevb SRC="../images/wprev.png" ALT="Previous" HEIGHT=20 WIDTH=82 BORDER=0></A><!--
+--><A HREF="index.htm" OnMouseOver='whomp(chapb, "schap");' OnMouseOut='whomp(chapb, "wchap");'
+title="Chapter Overview"><IMG SRC="../images/wchap.png" ALT="Chapter" NAME=chapb HEIGHT=20 WIDTH=100 BORDER=0></A><A
+HREF="../index.htm" OnMouseOver='whomp(tocb, "sbook");' OnMouseOut='whomp(tocb, "wbook");' 
+title="Table of Contents"><IMG SRC="../images/wbook.png" ALT="Contents" NAME=tocb HEIGHT=20 WIDTH=94 BORDER=0></A><A
+HREF="../glossary/index.htm" OnMouseOver='whomp(glosb, "sglos");' OnMouseOut='whomp(glosb, "wglos");' 
+title="Glossary"><IMG SRC="../images/wglos.png" ALT="Glossary" NAME=glosb HEIGHT=20 WIDTH=94 BORDER=0></A><!--
+--><A HREF="4.htm"  OnMouseOver='whomp(nextb, "snext");' OnMouseOut='whomp(nextb, "wnext");'
+ title="Next Section"><IMG NAME=nextb SRC="../images/wnext.png" ALT="Next" HEIGHT=20 WIDTH=82 BORDER=0></A>
+<BR>
+</BLOCKQUOTE>
+</BODY>
+</HTML>

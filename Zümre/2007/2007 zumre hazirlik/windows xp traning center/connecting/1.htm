@@ -1,0 +1,188 @@
+<!doctype html public "-//IETF//DTD HTML//EN">
+<HTML>
+<HEAD>
+<TITLE>Windows XP: The Complete Reference: Connecting to the Internet</TITLE>
+<META NAME="GENERATOR" CONTENT="Web-O-Matic Deluxe 4.1">
+<META NAME="AUTHOR" CONTENT="John R. Levine, Margaret Levine Young">
+<META NAME="COPYRIGHT" CONTENTS="Copyright 2001 by The McGraw-Hill Companies. All rights reserved.">
+</HEAD>
+<BODY BACKGROUND="../images/background.png">
+<BLOCKQUOTE>
+<SCRIPT LANGUAGE="JavaScript">
+function whomp(i, file)
+{
+	i.src = "../images/" + file + ".png";
+}
+</SCRIPT>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarered3x3.png" HEIGHT=3 WIDTH=3></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=2>
+Chapter 22: Connecting to the Internet
+</FONT></TD>
+</TR>
+</TABLE>
+<BR>
+<A HREF="0.htm"  OnMouseOver='whomp(prev, "sprev");' OnMouseOut='whomp(prev, "wprev");'
+ title="Previous Section"><IMG NAME=prev SRC="../images/wprev.png" ALT="Previous" HEIGHT=20 WIDTH=82 BORDER=0></A><!--
+--><A HREF="index.htm" OnMouseOver='whomp(chap, "schap");' OnMouseOut='whomp(chap, "wchap");'
+title="Chapter Overview"><IMG SRC="../images/wchap.png" ALT="Chapter" NAME=chap HEIGHT=20 WIDTH=100 BORDER=0></A><A
+HREF="../index.htm" OnMouseOver='whomp(toc, "sbook");' OnMouseOut='whomp(toc, "wbook");' 
+title="Table of Contents"><IMG SRC="../images/wbook.png" ALT="Contents" NAME=toc HEIGHT=20 WIDTH=94 BORDER=0></A><A
+HREF="../glossary/index.htm" OnMouseOver='whomp(glos, "sglos");' OnMouseOut='whomp(glos, "wglos");' 
+title="Glossary"><IMG SRC="../images/wglos.png" ALT="Glossary" NAME=glos HEIGHT=20 WIDTH=94 BORDER=0></A><!--
+--><A HREF="2.htm"  OnMouseOver='whomp(next, "snext");' OnMouseOut='whomp(next, "wnext");'
+ title="Next Section"><IMG NAME=next SRC="../images/wnext.png" ALT="Next" HEIGHT=20 WIDTH=82 BORDER=0></A>
+<BR>
+<A NAME="1">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarered10x10.png" HEIGHT=10 WIDTH=10></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=4><B>To What Types of Internet Accounts Can Windows Connect?</B></FONT>
+</TD>
+</TR>
+</TABLE></A>
+<P>
+To connect to the Internet, you can use one of several types of accounts: <A HREF="../connecting/1.htm#2">Internet PPP</A> accounts (using a dial-up, ISDN, or DSL line), <A HREF="../connecting/1.htm#6">cable Internet accounts</A>, or <A HREF="../connecting/1.htm#7">online services</A>. You can also use an old-fashioned text-based account (see the "<A HREF="../connecting/1.htm#5">UNIX Shell Accounts and Bulletin Board Systems</A>" sidebar in this chapter). Cable Internet accounts are described in "<A HREF="../prepnet/6.htm#1">Connecting to a Cable Modem</A>" in Chapter 21.
+<P>
+<TABLE><TR><TD VALIGN="TOP"><IMG SRC="../images/note.png" ALT="note" WIDTH=95 HEIGHT=29></TD>
+<TD VALIGN="TOP">If you use America Online (AOL), you must use the software that AOL provides--you can't use Windows <A HREF="../connecting/2.htm#1">network connections</A>. AOL connection software may come with your Windows XP installation (as it has with previous versions of Windows). If you use a UNIX shell account (where you type UNIX commands), bulletin-board system, or other text-based system, you can connect to the Internet by using <A HREF="../winsock/1.htm#1">HyperTerminal</A>, the Windows terminal program.
+
+</TD></TR></TABLE>
+<A NAME="2">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Internet (PPP) Accounts</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+A <A NAME="ddppp"><I>PPP</I></A> (<I>Point-to-Point Protocol</I>) account is an Internet account that uses the PPP communications protocol. PPP is the most popular type of Internet account because the most popular software--Internet Explorer, Netscape Navigator, Outlook Express, Eudora, and other programs--is designed to work with PPP accounts. Occasionally, you may run into a <A NAME="ddslip"><I>SLIP</I></A> (Serial Line Internet Protocol) or <A NAME="ddcslip"><I>CSLIP</I></A> account (Compressed SLIP), which are old, less-reliable protocols than PPP, but which work the same way. This book refers to PPP, CSLIP, and SLIP accounts as <A NAME="dddialupinternetaccounts"><I>dial-up Internet accounts</I></A>.
+<P>
+An <A NAME="ddinternetserviceprovider"><I>Internet service provider</I></A> (<A NAME="ddisp"><I>ISP</I></A>) is an organization that provides Internet accounts, usually PPP accounts, but occasionally <A HREF="../connecting/1.htm#5">UNIX shell accounts</A>. All ISPs provide dial-in accounts using regular phone lines, and many also provide ISDN and DSL connections.
+<P>
+Previous U.S. versions of Windows came with sign-up programs for ISPs, but Microsoft appears now to be pushing Microsoft Network (MSN) instead--their own ISP. The <A HREF="../connecting/3.htm#4">New Connection Wizard</A> offers to set you up with an MSN account. You can also use the <A HREF="../connecting/3.htm#3">Wizard to call the Microsoft Referral Service</A> to find out about ISPs in your area. The New Connection Wizard is described in the "Signing Up for a New Account" section in this chapter.
+<A NAME="3">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squaregreen6x6.png" HEIGHT=6 WIDTH=6></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Dial-Up Internet Accounts, Including ISDN</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+To connect to an Internet account over a dial-up phone line, you need a PPP-, CSLIP-, or SLIP-compatible communications program, which is built into <A HREF="../connecting/2.htm#1">Windows</A>. Windows Network Connections can dial the phone by using your modem, connect to your ISP, log into your account by using your user name and password, and then establish a PPP, CSLIP, or SLIP connection, so your computer is connected to the Internet. While connected, you can use a variety of <A HREF="../connecting/1.htm#9">Winsock-compatible</A> programs to read your e-mail, browse the Web, and access other information from the Internet. When you are done, you tell Windows to disconnect from your Internet account. You configure your network connection by using the <A HREF="../connecting/3.htm#2">New Connection Wizard</A>. You can also <A HREF="../connecting/5.htm#1">create and edit network connections manually</A>.
+<P>
+<TABLE><TR><TD VALIGN="TOP"><IMG SRC="../images/note.png" ALT="note" WIDTH=95 HEIGHT=29></TD>
+<TD VALIGN="TOP">Dial-up connections that appear in the Network Connections window were called Dial-Up Networking (DUN) connections in previous versions of Windows.
+
+</TD></TR></TABLE>
+<P>
+ISDN phone lines are a high-speed type of dial-up line; see the section "<A HREF="../prepnet/7.htm#1">Connecting to an ISDN Line</A>" in Chapter 21 for instructions on how to configure Windows to connect to an ISDN line. Then see "<A HREF="../connecting/4.htm#3">Creating a Network Connection for an ISDN Line</A>" later in this chapter.
+<P>
+<TABLE><TR><TD VALIGN="TOP"><IMG SRC="../images/tip.png" ALT="tip" WIDTH=95 HEIGHT=29></TD>
+<TD VALIGN="TOP">You can have several network connections on one computer. For example, your laptop computer might have one network connection for the DSL account you use at home and another for the national ISP you dial into when you are travelling.
+
+</TD></TR></TABLE>
+<A NAME="4">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squaregreen6x6.png" HEIGHT=6 WIDTH=6></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>DSL Accounts</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+If you want to use a high-speed Internet account, check with local and national ISPs to find out which ones offer DSL in your area. If your ISP offers ISDN or DSL accounts, they can work with your telephone company to get the high-speed phone line installed and tell you the type of ISDN or DSL modem you need. See the section "<A HREF="../prepnet/5.htm#1">Connecting to a DSL Line </A>" in Chapter 21 for how to configure Windows to work with a high-speed account.
+<P><TABLE BORDER=2 CELLPADDING=10><TR>
+<TD BGCOLOR="#00ffff" WIDTH=2></TD><TD>
+<A NAME="5">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>UNIX Shell Accounts and Bulletin Board Systems</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+Before the advent of PPP and SLIP accounts, most Internet accounts were text-only <A NAME="ddunixshellaccounts"><I>UNIX shell accounts</I></A>. You run a <A NAME="ddterminalemulationprogram"><I>terminal-emulation program</I></A> (a program that allows your PC to pretend it's a computer terminal) on your PC to connect to an Internet host computer. Most Internet hosts run UNIX, a powerful but frequently confusing operating system, and you have to type UNIX commands to use a UNIX shell account. To send and receive e-mail or browse the Web, you run text-only programs, such as pine (the most popular UNIX e-mail program) and Lynx (the most widely used UNIX Web browser). UNIX shell accounts don't let you see graphics, use a mouse, or easily store information on your own computer.
+<P>
+Some ISPs give you both a PPP account and a UNIX shell account; you use the PPP account for your regular Internet work, and the UNIX shell account only when you need to change your account's password.
+<P>
+A <A NAME="ddbulletinboardsystem"><I>bulletin board system</I></A> (<I>BBS</I>) is another type of text-based account to which you dial in directly. Like UNIX shell accounts, you usually connect to BBSs with a terminal emulator. Most bulletin board systems have migrated to the Internet, but a few are still independent, including the card-catalog systems of some small libraries.
+<P>
+Windows comes with <A HREF="../winsock/1.htm#1">HyperTerminal</A>, a terminal-emulation program you can use to connect to UNIX shell accounts and BBSs.
+</TD></TR></TABLE>
+<A NAME="6">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Cable Internet Accounts</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+With a cable Internet account, your cable television company is your ISP, and you connect to the Internet over your cable. Contact your cable company to find out whether it offers Internet accounts. If it does, sign up to open an account. The monthly fee usually includes the rental of a cable modem. See "<A HREF="../prepnet/6.htm#3"> Configuring Windows for a Cable Modem </A>" in Chapter 21 for an explanation of how to configure Windows to work with a cable Internet account.
+<A NAME="7">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Online Services</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+An <A NAME="ddonlineservice"><I>online service</I></A> is a commercial service that enables you to connect and access its proprietary information system. Most online services also provide an Internet connection, e-mail, access to the Web, and sometimes other Internet services. Online services usually require special programs to connect to and use your account. Previous U.S. versions of Windows came with signup programs for some online services.
+<P>
+The two most popular online services in the United States are America Online (AOL) and CompuServe<B> </B>(CIS), which is owned by AOL. The <A HREF="../connecting/1.htm#8">Microsoft Network (MSN)</A> started out as an online service, but has been relaunched as an ISP. AOL and CompuServe let you use some Winsock-compatible programs while you are connected to the account. For example, you can use the Internet Explorer or Netscape Navigator Web browsers with any of these accounts. However, AOL doesn't support standard e-mail programs--you have to use their software (or their Web site) to read your mail.
+<P>
+AOL is available in the United States, Canada, and the U.K., with other countries being added. The latest version of the America Online software (as of 2001) is 6.0, but 7.0 is on the way. To sign up for an AOL account, install and run the AOL software. Download the software from the AOL Web site, if you haven't already received it on a CD-ROM bound into a magazine or in a direct mail solicitation. Windows XP may come with the AOL software pre-installed, especially if you buy a computer with Windows XP preinstalled. The program steps you through connecting to AOL using an existing account, or signing you up for a new one.
+<P><TABLE BORDER=2 CELLPADDING=10><TR>
+<TD BGCOLOR="#00ffff" WIDTH=2></TD><TD>
+<A NAME="8">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>The Microsoft Network (MSN)</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+Microsoft Network (MSN) was Microsoft's entrant in the world of online services in 1995. Although MSN has gained a lot of users because of the easy-to-click icon on the Windows 95, 98, and Me desktops, it's never been as highly rated as AOL or CompuServe. Microsoft has changed MSN from an online service to a regular Internet service, so you now use network connections to connect to MSN and Winsock programs to access its services.
+<P>
+When you start Internet Explorer, you usually start at the MSN portal Web site (<A HREF="http://www.msn.com"><B>http://www.msn.com</B></A>, which is accessible no matter what kind of Internet account you use.
+</TD></TR></TABLE>
+<P><TABLE BORDER=2 CELLPADDING=10><TR>
+<TD BGCOLOR="#00ffff" WIDTH=2></TD><TD>
+<A NAME="9">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>What Is Winsock?</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+<A NAME="ddwinsock"><I>Winsock</I></A> (short for <I>Win</I>dows <I>Sock</I>ets) is a standard way for Windows programs to work with Internet connection software. Any Winsock-compatible program can work with any Winsock-compatible connection software. Windows <A HREF="../connecting/2.htm#1">network connections</A> are Winsock-compatible; if you use them to connect to your Internet account, you can use almost any Winsock-compatible program with your account. Most popular Internet programs are compatible with the Winsock standard.
+<P>
+The key file for Winsock is named Winsock.dll. Windows comes with a Winsock.dll file in the C:\Windows\System32 folder. The connection software for some online services (such as America Online) also provide Winsock.dll files, so you can use Winsock-compatible software with their services.
+<P>
+Windows comes with many Winsock-compatible programs, including <A HREF="../browsing/index.htm">Internet Explorer</A> (see Chapter 24) and <A HREF="../email/index.htm">Outlook Express</A> (see Chapter 23). See <A HREF="../winsock/index.htm">Chapter 26</A> for descriptions of other Winsock-compatible programs.
+</TD></TR></TABLE>
+<P>
+<A HREF="0.htm"  OnMouseOver='whomp(prevb, "sprev");' OnMouseOut='whomp(prevb, "wprev");'
+ title="Previous Section"><IMG NAME=prevb SRC="../images/wprev.png" ALT="Previous" HEIGHT=20 WIDTH=82 BORDER=0></A><!--
+--><A HREF="index.htm" OnMouseOver='whomp(chapb, "schap");' OnMouseOut='whomp(chapb, "wchap");'
+title="Chapter Overview"><IMG SRC="../images/wchap.png" ALT="Chapter" NAME=chapb HEIGHT=20 WIDTH=100 BORDER=0></A><A
+HREF="../index.htm" OnMouseOver='whomp(tocb, "sbook");' OnMouseOut='whomp(tocb, "wbook");' 
+title="Table of Contents"><IMG SRC="../images/wbook.png" ALT="Contents" NAME=tocb HEIGHT=20 WIDTH=94 BORDER=0></A><A
+HREF="../glossary/index.htm" OnMouseOver='whomp(glosb, "sglos");' OnMouseOut='whomp(glosb, "wglos");' 
+title="Glossary"><IMG SRC="../images/wglos.png" ALT="Glossary" NAME=glosb HEIGHT=20 WIDTH=94 BORDER=0></A><!--
+--><A HREF="2.htm"  OnMouseOver='whomp(nextb, "snext");' OnMouseOut='whomp(nextb, "wnext");'
+ title="Next Section"><IMG NAME=nextb SRC="../images/wnext.png" ALT="Next" HEIGHT=20 WIDTH=82 BORDER=0></A>
+<BR>
+</BLOCKQUOTE>
+</BODY>
+</HTML>

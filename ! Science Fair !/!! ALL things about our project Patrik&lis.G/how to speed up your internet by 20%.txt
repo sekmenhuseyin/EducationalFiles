@@ -1,0 +1,21 @@
+you must need a firefox or internet explorer
+
+type in : about:config
+type in the filter : network
+select : network.http.pipelining and set it to true.
+one down: change it from 3 to a higher number like 10.
+
+
+And for ie users follow:
+
+open run and type regetid:
+click:HKEY_CURRENT_USER
+click:software
+click:microsoft
+click:windows
+click:internet settings
+
+then go to Maxconnectionsper1_0server
+and change it to decimal and type 10 and hit enter
+Go down and select  Maxconnectionsperserver and change it to decimal and then type 10 hit enter again and you are finished
+                                  ENJOY

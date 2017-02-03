@@ -1,0 +1,135 @@
+<!doctype html public "-//IETF//DTD HTML//EN">
+<HTML>
+<HEAD>
+<TITLE>Windows XP: The Complete Reference: Connecting Your LAN to the Internet</TITLE>
+<META NAME="GENERATOR" CONTENT="Web-O-Matic Deluxe 4.1">
+<META NAME="AUTHOR" CONTENT="John R. Levine, Margaret Levine Young">
+<META NAME="COPYRIGHT" CONTENTS="Copyright 2001 by The McGraw-Hill Companies. All rights reserved.">
+</HEAD>
+<BODY BACKGROUND="../images/background.png">
+<BLOCKQUOTE>
+<SCRIPT LANGUAGE="JavaScript">
+function whomp(i, file)
+{
+	i.src = "../images/" + file + ".png";
+}
+</SCRIPT>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarered3x3.png" HEIGHT=3 WIDTH=3></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=2>
+Chapter 30: Connecting Your LAN to the Internet
+</FONT></TD>
+</TR>
+</TABLE>
+<BR>
+<A HREF="3.htm"  OnMouseOver='whomp(prev, "sprev");' OnMouseOut='whomp(prev, "wprev");'
+ title="Previous Section"><IMG NAME=prev SRC="../images/wprev.png" ALT="Previous" HEIGHT=20 WIDTH=82 BORDER=0></A><!--
+--><A HREF="index.htm" OnMouseOver='whomp(chap, "schap");' OnMouseOut='whomp(chap, "wchap");'
+title="Chapter Overview"><IMG SRC="../images/wchap.png" ALT="Chapter" NAME=chap HEIGHT=20 WIDTH=100 BORDER=0></A><A
+HREF="../index.htm" OnMouseOver='whomp(toc, "sbook");' OnMouseOut='whomp(toc, "wbook");' 
+title="Table of Contents"><IMG SRC="../images/wbook.png" ALT="Contents" NAME=toc HEIGHT=20 WIDTH=94 BORDER=0></A><A
+HREF="../glossary/index.htm" OnMouseOver='whomp(glos, "sglos");' OnMouseOut='whomp(glos, "wglos");' 
+title="Glossary"><IMG SRC="../images/wglos.png" ALT="Glossary" NAME=glos HEIGHT=20 WIDTH=94 BORDER=0></A><!--
+--><A HREF="5.htm"  OnMouseOver='whomp(next, "snext");' OnMouseOut='whomp(next, "wnext");'
+ title="Next Section"><IMG NAME=next SRC="../images/wnext.png" ALT="Next" HEIGHT=20 WIDTH=82 BORDER=0></A>
+<BR>
+<A NAME="1">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarered10x10.png" HEIGHT=10 WIDTH=10></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=4><B>Configuring the ICS Clients</B></FONT>
+</TD>
+</TR>
+</TABLE></A>
+<P>
+You must configure each of the ICS <I>clients</I>--the other computers that share the ICS connection to the Internet. If you installed the ICS server using the Network Setup Wizard and you chose to create a Network Setup Disk, the Wizard created a floppy disk that contains a version of the Wizard program with which you can configure the ICS clients. The Wizard configures only computers running Windows Me, 9x, 2000, or NT 4. For ICS clients running Windows XP, you can run the Network Setup Wizard that is part of Windows.
+<P>
+When you configure a computer as an ICS client, you add TCP/IP as a network protocol, if it's not already installed, and set the computer to get its IP address from a DHCP server (the one that is running on the ICS server as part of ICS).
+<A NAME="2">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Configuring an ICS Client with the Network Setup Wizard</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+To configure your computer as an ICS client, insert the floppy disk that the Network Setup Wizard created, choose Start | Run, type <B>a:setup</B>, and click Open. Or, if your computer runs Windows XP, choose Start | All Programs | Accessories | Communications | Network Setup Wizard
+<P>
+As the Wizard asks you questions, make these choices:
+<UL>
+<LI >
+<B>Select A Connection Method</B>  Select This Computer Connects To The Internet Through Another Computer On My Network Or Through A Residential Gateway.
+<LI >
+<B>Give This Computer A Description And Name</B>  Type a unique name for your computer and a description (this description doesn't have to be unique and appears only in the My Network Places window).
+<LI >
+<B>Name Your Network</B>  Type the name for your <A HREF="../peer2peer/1.htm#4">workgroup</A>. Use the same workgroup name you entered for the ICS server. When you click Next, the Wizard confirms your settings, like this:
+</UL>
+<BR><IMG ALIGN=TOP SRC="ics.readyc.png" WIDTH=503 HEIGHT=393 ALT="[image]">
+<UL>
+<LI >
+<B>You're Almost Done</B>  After the Wizard installs your settings, it offers to create a Network Setup Disk. Choose Yes only if you need one for configuring ICS clients that don't run Windows XP.
+</UL>
+<A NAME="3">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Testing Your Internet Connection from an ICS Client</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+When you ask a browser or other Internet program to display a Web page or sent or receive e-mail on an ICS client computer, Windows passes your the Internet request along to the ICS server, which connects to the Internet on your behalf. If the ICS server was already logged into the Internet, you should see your Web page or e-mail right away; if the ICS server has to connect, there's the usual delay in logging in. Once the ICS server and clients are configured correctly, users on all ICS servers and clients can use the Internet connection simultaneously.
+<P>
+To test your connection from an ICS server, try these actions:
+<UL>
+<LI >
+Run Internet Explorer (or another Web browser) and try to display a Web page.
+<LI >
+Run the <A HREF="../connecting/8.htm#3">Ping</A> program and try to ping the ICS server at 192.168.0.1. If that works, try pinging a computer on the Internet, like <B>www.yahoo.com</B>.
+</UL>
+<A NAME="4">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>ICS Client Configuration Details</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+Here are ways you can check the configuration of your ICS client.
+<P>
+Check that your computer is configured to communicate over the LAN using TCP/IP. Choose Start | Control Panel | Network And Internet Connections | Network Connections to display the Network Connections window. Right-click your Local Area Connection and choose Properties from the menu that appears to display the <A HREF="../peer2peer/3.htm#1">Properties dialog box for the LAN connection</A>.
+<P>
+On the General tab, check that Internet Protocol (TCP/IP) appears and is selected so that your computer can communicate via TCP/IP on the LAN. If the TCP/IP entries don't appear, <A HREF="../peer2peer/3.htm#4">install TCP/IP</A> by clicking the Install button, choosing Protocol, clicking the Add button, choosing TCP/IP from the list of network protocols, and clicking OK. Also make sure that the QoS Packet Scheduler appears and is selected.
+<P>
+Make sure that your computer is configured to get its IP address from the DHCP server that runs on the ICS server. On the General tab of the Local Area Connections Properties dialog box, click Internet Protocol (TCP/IP) on the list of installed components and click the Properties button to display the <A HREF="../connecting/0.htm#1">Internet Protocol (TCP/IP) Properties dialog box</A>. On the General tab, select Obtain An IP Address Automatically and Obtain DNS Server Address Automatically.
+<P>
+Check the TCP/IP settings on the ICS client by opening the Network Connections window, right-clicking the Local Area Connection, and choosing Status from the menu that appears. Click the Support tab, shown here:
+<BR><IMG ALIGN=TOP SRC="ics.support.png" WIDTH=344 HEIGHT=351 ALT="[image]">
+<P>
+The settings should be the same as those in this illustration, except for the IP Address, which may with a number other than 2.
+<P>
+Check to see that your computer is not configured to connect to the Internet directly. Choose Start | Control Panel, click Network And Internet Options, and click Internet Options. On the Connections tab of the Internet Properties dialog box, select either Never Dial A Connection or Dial Whenever A Network Connection Is Not Present. (If no connections appear in the Dial-Up And Virtual Private Network Settings box, the Never Dial A Connection setting is gray, but it's still selected.)
+<P>
+Click the LAN Settings button on the Connections tab of the Internet Properties dialog box to display the Local Area Network (LAN) Settings dialog box, shown here:
+<BR><IMG ALIGN=TOP SRC="ics.lansettings.png" WIDTH=384 HEIGHT=339 ALT="[image]">
+<P>
+These are settings you might need to use if you connect to the Internet using a proxy server other than ICS. None of the check boxes should be selected, unless your LAN administrator specifies otherwise.
+<P>
+<A HREF="3.htm"  OnMouseOver='whomp(prevb, "sprev");' OnMouseOut='whomp(prevb, "wprev");'
+ title="Previous Section"><IMG NAME=prevb SRC="../images/wprev.png" ALT="Previous" HEIGHT=20 WIDTH=82 BORDER=0></A><!--
+--><A HREF="index.htm" OnMouseOver='whomp(chapb, "schap");' OnMouseOut='whomp(chapb, "wchap");'
+title="Chapter Overview"><IMG SRC="../images/wchap.png" ALT="Chapter" NAME=chapb HEIGHT=20 WIDTH=100 BORDER=0></A><A
+HREF="../index.htm" OnMouseOver='whomp(tocb, "sbook");' OnMouseOut='whomp(tocb, "wbook");' 
+title="Table of Contents"><IMG SRC="../images/wbook.png" ALT="Contents" NAME=tocb HEIGHT=20 WIDTH=94 BORDER=0></A><A
+HREF="../glossary/index.htm" OnMouseOver='whomp(glosb, "sglos");' OnMouseOut='whomp(glosb, "wglos");' 
+title="Glossary"><IMG SRC="../images/wglos.png" ALT="Glossary" NAME=glosb HEIGHT=20 WIDTH=94 BORDER=0></A><!--
+--><A HREF="5.htm"  OnMouseOver='whomp(nextb, "snext");' OnMouseOut='whomp(nextb, "wnext");'
+ title="Next Section"><IMG NAME=nextb SRC="../images/wnext.png" ALT="Next" HEIGHT=20 WIDTH=82 BORDER=0></A>
+<BR>
+</BLOCKQUOTE>
+</BODY>
+</HTML>

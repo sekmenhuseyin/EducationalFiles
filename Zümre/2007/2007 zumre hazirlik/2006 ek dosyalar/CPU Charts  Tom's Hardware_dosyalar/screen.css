@@ -1,0 +1,948 @@
+BODY {
+	FONT-SIZE: 12px; MARGIN: 0px; FONT-FAMILY: Arial, sans-serif; BACKGROUND-COLOR: #f5f5f5
+}
+A {
+	COLOR: #5674a0; TEXT-DECORATION: none
+}
+A:hover {
+	TEXT-DECORATION: underline
+}
+A IMG {
+	BORDER-TOP-STYLE: none; BORDER-RIGHT-STYLE: none; BORDER-LEFT-STYLE: none; BORDER-BOTTOM-STYLE: none
+}
+TD {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; PADDING-TOP: 0px
+}
+H1 {
+	FONT-WEIGHT: normal; FONT-SIZE: 18px; COLOR: #880000
+}
+P {
+	MARGIN-BOTTOM: 18px; LINE-HEIGHT: 18px
+}
+.float_left {
+	FLOAT: left
+}
+.float_right {
+	FLOAT: right
+}
+.byline {
+	FONT-SIZE: 10px; COLOR: #9c9c9c
+}
+#body {
+	MARGIN-LEFT: auto; WIDTH: 1004px; BORDER-TOP-STYLE: none; MARGIN-RIGHT: auto; BORDER-RIGHT-STYLE: none; BORDER-LEFT-STYLE: none; BORDER-COLLAPSE: collapse; BACKGROUND-COLOR: #fefefe; BORDER-BOTTOM-STYLE: none
+}
+#body TD IMG {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+.cap_left {
+	BACKGROUND: url(http://images.tomshardware.com/Design/graphics/tomshardware/cap-left.gif) repeat-y left top; min-width: 24px
+}
+.cap_right {
+	BACKGROUND: url(http://images.tomshardware.com/Design/graphics/tomshardware/cap-right.gif) repeat-y left top; WIDTH: 14px
+}
+#header {
+	BACKGROUND: url(http://images.tomshardware.com/Design/graphics/tomshardware/header-background.gif) #fefefe repeat-x left top; POSITION: relative
+}
+#header IMG#banner {
+	LEFT: 250px; POSITION: absolute; TOP: 7px
+}
+#nav_bar {
+	BACKGROUND: url(http://images.tomshardware.com/Design/graphics/tomshardware/nav-bg.gif) repeat-x
+}
+#nav_primary UL {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+#nav_primary A {
+	BACKGROUND: url(http://images.tomshardware.com/Design/graphics/tomshardware/nav-bg.gif) repeat-x left center; COLOR: #ffffff
+}
+#nav_primary #main_nav LI A {
+	PADDING-RIGHT: 10px; PADDING-LEFT: 10px; FLOAT: left; PADDING-BOTTOM: 6px; MARGIN: 0px; PADDING-TOP: 6px
+}
+#nav_primary #functional LI A {
+	PADDING-RIGHT: 10px; PADDING-LEFT: 10px; FLOAT: left; PADDING-BOTTOM: 6px; MARGIN: 0px; PADDING-TOP: 6px
+}
+#nav_primary LI A:hover {
+	BACKGROUND: url(http://images.tomshardware.com/Design/graphics/tomshardware/nav-bg-over.gif) repeat-x
+}
+#nav_primary LI.selected {
+	PADDING-RIGHT: 10px; DISPLAY: block; PADDING-LEFT: 10px; PADDING-BOTTOM: 6px; COLOR: #000000; PADDING-TOP: 5px; BACKGROUND-COLOR: #f5f5f5
+}
+#nav_primary #functional {
+	BORDER-RIGHT: #d7d7d7 1px solid; BORDER-TOP: #d7d7d7 1px solid; FLOAT: left; BORDER-LEFT: #d7d7d7 1px solid; WIDTH: 159px; POSITION: relative; BACKGROUND-COLOR: #f5f5f5; TEXT-ALIGN: center
+}
+#nav_primary A:hover {
+	TEXT-DECORATION: none
+}
+.nav_list A:hover {
+	TEXT-DECORATION: none
+}
+#nav_primary UL LI {
+	BORDER-RIGHT: #f5f5f5 1px solid; DISPLAY: block; FONT-WEIGHT: bold; FONT-SIZE: 11px; FLOAT: left; VERTICAL-ALIGN: middle; TEXT-TRANSFORM: uppercase; COLOR: #ffffff; TEXT-ALIGN: center
+}
+#nav_primary #functional LI#login {
+	LEFT: 79px; POSITION: absolute
+}
+#nav_primary #functional LI.selected#login {
+	BORDER-RIGHT: #9c9c9c 1px solid
+}
+#nav_primary #functional LI {
+	WIDTH: 59px
+}
+#nav_primary #functional A {
+	WIDTH: 59px
+}
+#nav_primary #functional LI#selected {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 6px; PADDING-TOP: 6px
+}
+#nav_primary #functional A {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 6px; PADDING-TOP: 6px
+}
+#nav_primary LI#subscriptions {
+	PADDING-RIGHT: 6px; PADDING-LEFT: 6px; FLOAT: right; PADDING-BOTTOM: 6px; BORDER-TOP-STYLE: none; PADDING-TOP: 6px; BORDER-RIGHT-STYLE: none; BORDER-LEFT-STYLE: none; BORDER-BOTTOM-STYLE: none
+}
+#nav_primary LI#subscriptions A {
+	PADDING-RIGHT: 10px; DISPLAY: inline; PADDING-LEFT: 10px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+#nav_primary LI#subscriptions A:hover {
+	BACKGROUND: none transparent scroll repeat 0% 0%; TEXT-DECORATION: underline
+}
+#nav_primary #functional LI {
+	TEXT-TRANSFORM: none; BORDER-RIGHT-STYLE: none
+}
+#columns {
+	VERTICAL-ALIGN: top
+}
+UNKNOWN {
+	VERTICAL-ALIGN: top
+}
+#nav_secondary {
+	WIDTH: 160px
+}
+#nav_secondary #search_box {
+	BORDER-RIGHT: #d7d7d7 1px solid; PADDING-RIGHT: 5px; BORDER-TOP: #d7d7d7 1px; PADDING-LEFT: 5px; PADDING-BOTTOM: 5px; BORDER-LEFT: #d7d7d7 1px solid; PADDING-TOP: 10px; BORDER-BOTTOM: #d7d7d7 1px solid; BACKGROUND-COLOR: #f5f5f5
+}
+ HTML #nav_secondary #search_box {
+	PADDING-RIGHT: 5px; PADDING-LEFT: 5px; FONT-SIZE: 12px; PADDING-BOTTOM: 0px; PADDING-TOP: 0px
+}
+#nav_secondary FORM {
+	PADDING-TOP: 7px
+}
+#nav_secondary #search_box #search_button {
+	VERTICAL-ALIGN: middle
+}
+#nav_secondary #search_box #search_button {
+	VERTICAL-ALIGN: top
+}
+#nav_secondary #search_box #search_text {
+	WIDTH: 115px
+}
+#nav_secondary #search_box P {
+	MARGIN: 5px 0px 0px
+}
+#nav_secondary #search_box P {
+	MARGIN: 5px 0px
+}
+#nav_secondary #search_box FORM {
+	MARGIN: 0px 0px 5px
+}
+#nav_secondary #search_box A {
+	COLOR: #296ac4
+}
+#nav_secondary .nav_list {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FONT-SIZE: 12px; PADDING-BOTTOM: 0px; MARGIN: 7px 0px; PADDING-TOP: 0px
+}
+#nav_secondary .nav_list LI A {
+	PADDING-RIGHT: 5px; DISPLAY: block; PADDING-LEFT: 5px; PADDING-BOTTOM: 5px; MARGIN: 0px 0px 1px; WIDTH: 150px; PADDING-TOP: 5px; BACKGROUND-COLOR: #2967c2
+}
+ HTML #nav_secondary .nav_list LI A {
+	WIDTH: 150px
+}
+#nav_secondary .nav_list LI A:hover {
+	BACKGROUND-COLOR: #3485f7
+}
+#charts A {
+	COLOR: #1e66b5
+}
+#topics A {
+	COLOR: #1e66b5
+}
+#product_finder A {
+	COLOR: #1e66b5
+}
+#charts TD {
+	PADDING-RIGHT: 2px; PADDING-LEFT: 2px; PADDING-BOTTOM: 2px; BORDER-TOP-STYLE: none; PADDING-TOP: 2px; BORDER-RIGHT-STYLE: none; BORDER-LEFT-STYLE: none; BORDER-BOTTOM-STYLE: none
+}
+#product_finder TD {
+	PADDING-RIGHT: 2px; PADDING-LEFT: 2px; PADDING-BOTTOM: 2px; BORDER-TOP-STYLE: none; PADDING-TOP: 2px; BORDER-RIGHT-STYLE: none; BORDER-LEFT-STYLE: none; BORDER-BOTTOM-STYLE: none
+}
+#charts THEAD TD {
+	BORDER-RIGHT: #d7d7d7 1px solid; PADDING-RIGHT: 4px; BORDER-TOP: #d7d7d7 1px solid; PADDING-LEFT: 4px; PADDING-BOTTOM: 4px; BORDER-LEFT: #d7d7d7 1px solid; PADDING-TOP: 4px; BORDER-BOTTOM: #d7d7d7 1px solid
+}
+#nav_secondary .nav_list LI A {
+	COLOR: #ffffff
+}
+#testlog LI {
+	MARGIN: 5px
+}
+#testlog A {
+	FONT-WEIGHT: bold; COLOR: #1e66b5
+}
+#testlog P {
+	PADDING-RIGHT: 5px; PADDING-LEFT: 0px; FONT-SIZE: 11px; FLOAT: right; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+#testlog P A {
+	FONT-WEIGHT: normal
+}
+#article_body {
+	PADDING-RIGHT: 10px; PADDING-LEFT: 10px; PADDING-BOTTOM: 10px; PADDING-TOP: 10px; min-width: 455px; max-width: 600px
+}
+#index_body {
+	PADDING-RIGHT: 10px; PADDING-LEFT: 10px; PADDING-BOTTOM: 10px; PADDING-TOP: 10px; min-width: 455px; max-width: 600px
+}
+#index_body {
+	PADDING-RIGHT: 9px; PADDING-LEFT: 10px; PADDING-BOTTOM: 10px; PADDING-TOP: 10px
+}
+#index_body H2 {
+	CLEAR: left; FONT-SIZE: 12px; MARGIN: 10px 0px 3px
+}
+#index_body P {
+	CLEAR: left; FONT-SIZE: 11px; LINE-HEIGHT: 14px
+}
+ HTML #index_body P {
+	MARGIN-TOP: 0px
+}
+#index_body .datetime {
+	FLOAT: left; MARGIN: 0px; COLOR: #9c9c9c
+}
+ HTML #index_body .datetime {
+	MARGIN: 0px
+}
+.summaries {
+	CLEAR: both
+}
+.image_summary {
+	WIDTH: 215px; BORDER-TOP-STYLE: none; BORDER-RIGHT-STYLE: none; BORDER-LEFT-STYLE: none; BORDER-BOTTOM-STYLE: none
+}
+.float_left {
+	BORDER-RIGHT: #d7d7d7 1px solid; PADDING-RIGHT: 9px
+}
+#body TD .image_summary IMG {
+	BORDER-RIGHT: #1e65b5 1px solid; BORDER-TOP: #1e65b5 1px solid; BORDER-LEFT: #1e65b5 1px solid; BORDER-BOTTOM: #1e65b5 1px solid
+}
+#body TD .image_summary IMG.float_left {
+	MARGIN: 3px 7px 5px 0px
+}
+#body TD .image_summary IMG.float_right {
+	MARGIN: 3px 0px 5px 7px
+}
+.summary P {
+	MARGIN: 0px
+}
+#daily P.datetime {
+	MARGIN-BOTTOM: 15px
+}
+ HTML #daily P.datetime {
+	MARGIN-BOTTOM: 5px
+}
+#index_body H2 A {
+	COLOR: #1e66b5
+}
+ HTML #article_body P {
+	FONT-SIZE: 12px
+}
+#article_body P {
+	TEXT-ALIGN: justify
+}
+#article_footer {
+	TEXT-ALIGN: left
+}
+#article_footer LI {
+	PADDING-RIGHT: 0px; DISPLAY: inline; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+#article_footer #article_nav IMG {
+	VERTICAL-ALIGN: middle
+}
+#article_footer #article_nav A {
+	FONT-SIZE: 16px; MARGIN: 20px 0px; COLOR: #2866c2
+}
+#article_footer #article_nav #previous {
+	FLOAT: left
+}
+#article_footer #article_nav #next {
+	FLOAT: right
+}
+#article_footer #nav_form SELECT {
+	CLEAR: both; FONT-SIZE: 12px; FONT-FAMILY: Arial, sans-serif; min-width: 300px; max-width: 550px
+}
+TABLE.narrow_box {
+	BORDER-RIGHT: #d7d7d7 1px solid; PADDING-RIGHT: 0px; BORDER-TOP: #d7d7d7 1px solid; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px 0px 5px; VERTICAL-ALIGN: middle; BORDER-LEFT: #d7d7d7 1px solid; PADDING-TOP: 0px; BORDER-BOTTOM: #d7d7d7 1px solid; BORDER-COLLAPSE: collapse
+}
+TABLE.wide_box {
+	BORDER-RIGHT: #d7d7d7 1px solid; PADDING-RIGHT: 0px; BORDER-TOP: #d7d7d7 1px solid; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px 0px 5px; VERTICAL-ALIGN: middle; BORDER-LEFT: #d7d7d7 1px solid; PADDING-TOP: 0px; BORDER-BOTTOM: #d7d7d7 1px solid; BORDER-COLLAPSE: collapse
+}
+TABLE.stretch_box {
+	BORDER-RIGHT: #d7d7d7 1px solid; PADDING-RIGHT: 0px; BORDER-TOP: #d7d7d7 1px solid; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; VERTICAL-ALIGN: middle; BORDER-LEFT: #d7d7d7 1px solid; COLOR: #5674a0; PADDING-TOP: 0px; BORDER-BOTTOM: #d7d7d7 1px solid; BORDER-COLLAPSE: collapse
+}
+TABLE.narrow_box TD {
+	BORDER-RIGHT: #d7d7d7 1px solid; PADDING-RIGHT: 3px; BORDER-TOP: #d7d7d7 1px solid; BORDER-LEFT: #d7d7d7 1px solid; BORDER-BOTTOM: #d7d7d7 1px solid
+}
+TABLE.wide_box TD {
+	BORDER-RIGHT: #d7d7d7 1px solid; PADDING-RIGHT: 3px; BORDER-TOP: #d7d7d7 1px solid; BORDER-LEFT: #d7d7d7 1px solid; BORDER-BOTTOM: #d7d7d7 1px solid
+}
+ HTML TABLE.narrow_box {
+	FONT-SIZE: 12px
+}
+ HTML TABLE.wide_box {
+	FONT-SIZE: 12px
+}
+TABLE.narrow_box {
+	WIDTH: 160px
+}
+.sponsored_links_article .bar {
+	BORDER-RIGHT: #d7d7d7 1px solid; PADDING-RIGHT: 0px; BORDER-TOP: #d7d7d7 1px solid; PADDING-LEFT: 0px; FONT-WEIGHT: bold; BACKGROUND: url(http://images.tomshardware.com/Design/graphics/tomshardware/box-header-bg.gif) #d8e9ff repeat-x left top; PADDING-BOTTOM: 0px; MARGIN: 5px 0px 0px; TEXT-TRANSFORM: uppercase; BORDER-LEFT: #d7d7d7 1px solid; COLOR: #5674a0; PADDING-TOP: 0px; BORDER-BOTTOM: #d7d7d7 1px solid; TEXT-ALIGN: center
+}
+.sponsored_links_article .bar P {
+	PADDING-RIGHT: 2px; PADDING-LEFT: 2px; PADDING-BOTTOM: 2px; MARGIN: 0px; PADDING-TOP: 2px
+}
+.sponsored_links_article .edge {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+.sponsored_links_article .box {
+	BORDER-RIGHT: #d7d7d7 1px solid; MARGIN: 0px 0px 5px; BORDER-LEFT: #d7d7d7 1px solid; WIDTH: 334px; BORDER-BOTTOM: #d7d7d7 1px solid; WORD-WRAP: break-word
+}
+TABLE.wide_box {
+	WIDTH: 336px
+}
+TABLE.stretch_box {
+	WIDTH: 100%
+}
+THEAD TR {
+	MARGIN: 0px; BACKGROUND-COLOR: #f5f5f5
+}
+#merchant_link THEAD TR {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; BACKGROUND: #cccccc; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+THEAD TR TD {
+	PADDING-RIGHT: 4px; PADDING-LEFT: 4px; FONT-WEIGHT: bold; PADDING-BOTTOM: 4px; MARGIN: 0px; VERTICAL-ALIGN: middle; TEXT-TRANSFORM: uppercase; PADDING-TOP: 4px; FONT-FAMILY: Arial, sans-serif; TEXT-ALIGN: center
+}
+TABLE.narrow_box IMG {
+	MARGIN: 3px 0px; VERTICAL-ALIGN: middle
+}
+#related {
+	WIDTH: 336px; PADDING-TOP: 10px
+}
+#merchant_link {
+	FLOAT: left; MARGIN: 0px 0px 5px; WIDTH: 165px
+}
+#shortcuts {
+	FLOAT: left; MARGIN: 0px 0px 5px; WIDTH: 165px
+}
+#related #popular_products IMG {
+	MARGIN-LEFT: 2px; MARGIN-RIGHT: 2px
+}
+#news {
+	FLOAT: right
+}
+#merchant_link A {
+	COLOR: #010101
+}
+#merchant_link THEAD A {
+	COLOR: #5674a0
+}
+#news .body TD {
+	VERTICAL-ALIGN: top
+}
+#news A {
+	COLOR: #5674a0
+}
+#charts UL {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px; TEXT-ALIGN: left
+}
+#news UL {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px; TEXT-ALIGN: left
+}
+#news_front UL {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px; TEXT-ALIGN: left
+}
+#merchant_link UL {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px; TEXT-ALIGN: left
+}
+#shortcuts UL {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px; TEXT-ALIGN: left
+}
+#topics UL {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px; TEXT-ALIGN: left
+}
+#product_finder UL {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px; TEXT-ALIGN: left
+}
+#charts LI {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 12px; FONT-SIZE: 12px; BACKGROUND: url(http://images.tomshardware.com/Design/graphics/tomshardware/nok.gif) no-repeat 5px 9px; PADDING-BOTTOM: 3px; MARGIN: 0px; COLOR: #555; LINE-HEIGHT: 16px; PADDING-TOP: 3px; LIST-STYLE-TYPE: none
+}
+#product_finder LI {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 12px; FONT-SIZE: 12px; BACKGROUND: url(http://images.tomshardware.com/Design/graphics/tomshardware/nok.gif) no-repeat 5px 9px; PADDING-BOTTOM: 1px; MARGIN: 0px; COLOR: #555; LINE-HEIGHT: 16px; PADDING-TOP: 1px; LIST-STYLE-TYPE: none
+}
+#topics LI {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 12px; FONT-SIZE: 11px; BACKGROUND: url(http://images.tomshardware.com/Design/graphics/tomshardware/nok.gif) no-repeat 5px 9px; PADDING-BOTTOM: 1px; MARGIN: 0px; COLOR: #555; LINE-HEIGHT: 16px; PADDING-TOP: 1px; LIST-STYLE-TYPE: none
+}
+#news LI {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 15px; FONT-SIZE: 12px; BACKGROUND: url(http://images.tomshardware.com/Design/graphics/tomshardware/rarr-double.gif) no-repeat 5px 9px; PADDING-BOTTOM: 3px; MARGIN: 0px; COLOR: #555; LINE-HEIGHT: 16px; PADDING-TOP: 3px; LIST-STYLE-TYPE: none
+}
+#news_front LI {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 15px; FONT-SIZE: 12px; BACKGROUND: url(http://images.tomshardware.com/Design/graphics/tomshardware/rarr-double.gif) no-repeat 5px 9px; PADDING-BOTTOM: 3px; MARGIN: 0px; COLOR: #555; LINE-HEIGHT: 16px; PADDING-TOP: 3px; LIST-STYLE-TYPE: none
+}
+#merchant_link LI {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 15px; FONT-SIZE: 12px; BACKGROUND: url(http://images.tomshardware.com/Design/graphics/tomshardware/rarr.gif) no-repeat 5px 9px; PADDING-BOTTOM: 3px; MARGIN: 0px; COLOR: #555; LINE-HEIGHT: 16px; PADDING-TOP: 3px; LIST-STYLE-TYPE: none
+}
+#shortcuts LI {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 15px; FONT-SIZE: 12px; BACKGROUND: url(http://images.tomshardware.com/Design/graphics/tomshardware/rarr.gif) no-repeat 5px 9px; PADDING-BOTTOM: 3px; MARGIN: 0px; COLOR: #555; LINE-HEIGHT: 16px; PADDING-TOP: 3px; LIST-STYLE-TYPE: none
+}
+#merchant_link THEAD TD {
+	FONT-SIZE: 11px; TEXT-TRANSFORM: none
+}
+#shortcuts THEAD TD {
+	FONT-SIZE: 11px; TEXT-TRANSFORM: none
+}
+#news_front THEAD TD {
+	FONT-SIZE: 11px
+}
+#testlog UL {
+	PADDING-RIGHT: 3px; PADDING-LEFT: 3px; PADDING-BOTTOM: 3px; MARGIN: 0px; PADDING-TOP: 3px; LIST-STYLE-TYPE: none; TEXT-ALIGN: left
+}
+#article_footer UL LI {
+	TEXT-TRANSFORM: none
+}
+ HTML #article_footer UL LI {
+	FONT-SIZE: 12px
+}
+#article_footer LI A {
+	PADDING-RIGHT: 2px; PADDING-LEFT: 2px; PADDING-BOTTOM: 2px; PADDING-TOP: 2px
+}
+#footer {
+	PADDING-RIGHT: 0px; BACKGROUND-POSITION: 50% bottom; PADDING-LEFT: 0px; BACKGROUND-IMAGE: url(http://images.tomshardware.com/Design/graphics/tomshardware/bg_07.gif); PADDING-BOTTOM: 0px; PADDING-TOP: 0px; BACKGROUND-REPEAT: repeat-x; HEIGHT: 20px
+}
+#footer IMG {
+	FLOAT: left; VERTICAL-ALIGN: middle
+}
+#footer #copyright {
+	FLOAT: left; MARGIN-LEFT: 30px
+}
+#footer #our_links {
+	FLOAT: right; MARGIN: 0px 10px 0px 0px
+}
+#footer #our_links A {
+	MARGIN: 0px 7px; COLOR: #4476c1
+}
+#merchant_hound_table {
+	BORDER-RIGHT: #e9e9e9 6px solid; BORDER-TOP: #e9e9e9 0px solid; BORDER-LEFT: #e9e9e9 6px solid; BORDER-BOTTOM: #e9e9e9 6px solid
+}
+#product_finder .liteblu TD {
+	BORDER-TOP: #d7d7d7 1px solid; PADDING-LEFT: 10px; BACKGROUND: #f5f5f5; BORDER-BOTTOM: #d7d7d7 1px solid; TEXT-ALIGN: left
+}
+#product_finder .liteblu A {
+	FONT-WEIGHT: bold; FONT-SIZE: 12px; COLOR: #555; LINE-HEIGHT: 24px; FONT-FAMILY: Arial
+}
+#product_finder .various TD A {
+	FONT-SIZE: 12px; FONT-FAMILY: Arial
+}
+#product_finder #hide_product1 {
+	DISPLAY: none
+}
+#product_finder #hide_product2 {
+	DISPLAY: none
+}
+#product_finder #hide_product3 {
+	DISPLAY: none
+}
+TABLE.image_scroller {
+	BORDER-TOP-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px
+}
+TABLE.image_scroller TD {
+	BORDER-TOP-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; PADDING-BOTTOM: 2px; PADDING-TOP: 2px; BORDER-RIGHT-WIDTH: 0px
+}
+#scr_container {
+	BORDER-RIGHT: blue 0px ridge; BORDER-TOP: blue 0px ridge; OVERFLOW: hidden; BORDER-LEFT: blue 0px ridge; BORDER-BOTTOM: blue 0px ridge; POSITION: relative
+}
+IMG.thumbnail_img {
+	BORDER-RIGHT: #ffffff 2px solid; BORDER-TOP: #ffffff 1px solid; BORDER-LEFT: #ffffff 2px solid; BORDER-BOTTOM: #ffffff 1px solid
+}
+IMG.arrow {
+	BORDER-TOP-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; MARGIN: 1px 0px; BORDER-RIGHT-WIDTH: 0px
+}
+#top-stories {
+	BORDER-RIGHT: #b9b8b2 1px solid; BORDER-TOP: #b9b8b2 1px solid; FONT-SIZE: 12px; BORDER-LEFT: #b9b8b2 1px solid; WIDTH: 443px; BORDER-BOTTOM: #b9b8b2 1px solid; FONT-FAMILY: Arial, sans-serif; POSITION: relative; HEIGHT: 200px
+}
+#top-stories A IMG {
+	BORDER-RIGHT: #b9b8b2 1px solid; LEFT: 0px; BORDER-TOP-STYLE: none; BORDER-LEFT-STYLE: none; POSITION: absolute; TOP: 0px; BORDER-BOTTOM-STYLE: none
+}
+#top-stories DIV {
+	LEFT: 161px; OVERFLOW: hidden; WIDTH: 282px; POSITION: absolute; TOP: 0px; HEIGHT: 200px
+}
+#top-stories DIV A {
+	COLOR: #2967c3
+}
+#top-stories UL {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px; LIST-STYLE-TYPE: none
+}
+#top-stories UL LI {
+	BORDER-RIGHT: #b9b8b2 1px solid; BORDER-TOP: #b9b8b2 1px solid; DISPLAY: block; MARGIN: -1px 0px 0px -1px; OVERFLOW: hidden; BORDER-LEFT: #b9b8b2 1px solid; WIDTH: 282px; BORDER-BOTTOM: #b9b8b2 1px solid
+}
+UNKNOWN {
+	MARGIN-BOTTOM: -2px; HEIGHT: 22px
+}
+#top-stories UL LI A {
+	DISPLAY: block; PADDING-LEFT: 22px; FONT-WEIGHT: bold; BACKGROUND: url(http://images.tomshardware.com/Design/graphics/tomshardware/top-story-bg.gif) no-repeat left 50%; WIDTH: 100%; PADDING-TOP: 4px; HEIGHT: 18px; TEXT-DECORATION: none
+}
+ HTML #top-stories UL LI A {
+	MARGIN-TOP: 0px; OVERFLOW: hidden; WIDTH: 284px
+}
+#top-stories UL LI A:hover {
+	BACKGROUND: url(http://images.tomshardware.com/Design/graphics/tomshardware/top-story-bg-hover.gif) no-repeat left 50%; COLOR: white
+}
+#top-stories P {
+	PADDING-RIGHT: 2px; PADDING-LEFT: 4px; LEFT: 0px; PADDING-BOTTOM: 2px; MARGIN: 0px; WIDTH: 276px; PADDING-TOP: 2px; POSITION: absolute; TOP: 138px; HEIGHT: 100%; BACKGROUND-COLOR: #fefefe
+}
+ HTML #top-stories P {
+	WIDTH: 280px
+}
+#top-stories P A {
+	FONT-SIZE: 11px; WIDTH: 100%; COLOR: black; HEIGHT: 100%; TEXT-DECORATION: none
+}
+#topics UL.col2 {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; WIDTH: 100px; PADDING-TOP: 0px
+}
+#topics UL.col1 {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FLOAT: right; PADDING-BOTTOM: 0px; MARGIN: 0px; WIDTH: 100px; PADDING-TOP: 0px
+}
+#foot {
+	FONT-SIZE: 12px; PADDING-BOTTOM: 20px; WIDTH: 100%; COLOR: #666; FONT-FAMILY: Arial
+}
+#foot A:link {
+	COLOR: #9d1c1f; TEXT-DECORATION: none
+}
+#foot A:visited {
+	COLOR: #9d1c1f; TEXT-DECORATION: none
+}
+#foot A:active {
+	COLOR: #9d1c1f; TEXT-DECORATION: none
+}
+#foot A:hover {
+	COLOR: #0046a0; TEXT-DECORATION: none
+}
+#foot .top {
+	BORDER-TOP: #d7d7d7 1px solid; MARGIN-BOTTOM: 8px; PADDING-BOTTOM: 8px; LINE-HEIGHT: 22px; PADDING-TOP: 8px; BORDER-BOTTOM: #d7d7d7 1px solid
+}
+#foot TABLE {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; WIDTH: 100%; PADDING-TOP: 0px
+}
+#foot TD {
+	FONT-SIZE: 11px; VERTICAL-ALIGN: top; COLOR: #666; LINE-HEIGHT: 16px; FONT-FAMILY: Arial
+}
+#foot TD A:link {
+	COLOR: #666
+}
+#foot TD A:visited {
+	COLOR: #666
+}
+#foot TD A:active {
+	COLOR: #666
+}
+#foot TD A:active {
+	COLOR: #9d1c1f
+}
+#foot TD B {
+	FONT-SIZE: 12px; COLOR: #0050a8
+}
+#foot EM {
+	MARGIN: 0px 6px; COLOR: #cdcdcd
+}
+#foot .reg {
+	MARGIN-TOP: 13px; FONT-SIZE: 11px; LINE-HEIGHT: 20px
+}
+#ArticleFooterTable {
+	FONT-SIZE: 10px; WIDTH: 100%; FONT-FAMILY: Arial, sans-serif; TEXT-ALIGN: center
+}
+#ArticleFooterTable A {
+	FONT-WEIGHT: bold; FONT-SIZE: 16px; FONT-FAMILY: Arial, sans-serif
+}
+.content_table_quote_wide {
+	BORDER-TOP-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; WIDTH: 600px; BORDER-RIGHT-WIDTH: 0px
+}
+.content_table_quote_narrow {
+	BORDER-TOP-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; WIDTH: 425px; BORDER-RIGHT-WIDTH: 0px
+}
+.content_table_quote_wide TD {
+	PADDING-RIGHT: 3px; PADDING-LEFT: 3px; FONT-SIZE: 12px; BACKGROUND: #f0f0f0; PADDING-BOTTOM: 3px; VERTICAL-ALIGN: top; COLOR: #000000; LINE-HEIGHT: 18px; PADDING-TOP: 3px; FONT-FAMILY: Verdana, Arial, helvetica, Tahoma, "Trebuchet MS", sans-serif
+}
+.content_table_quote_narrow TD {
+	PADDING-RIGHT: 3px; PADDING-LEFT: 3px; FONT-SIZE: 12px; BACKGROUND: #f0f0f0; PADDING-BOTTOM: 3px; VERTICAL-ALIGN: top; COLOR: #000000; LINE-HEIGHT: 18px; PADDING-TOP: 3px; FONT-FAMILY: Verdana, Arial, helvetica, Tahoma, "Trebuchet MS", sans-serif
+}
+.content_table_narrow {
+	FONT-SIZE: 12px; FONT-FAMILY: Verdana, Arial, helvetica, Tahoma, "Trebuchet MS", sans-serif
+}
+.content_table_wide {
+	FONT-SIZE: 12px; FONT-FAMILY: Verdana, Arial, helvetica, Tahoma, "Trebuchet MS", sans-serif
+}
+.content_table_narrow_small {
+	FONT-SIZE: 10px; FONT-FAMILY: Verdana, Arial, helvetica, Tahoma, "Trebuchet MS", sans-serif
+}
+.content_table_wide_small {
+	FONT-SIZE: 10px; FONT-FAMILY: Verdana, Arial, helvetica, Tahoma, "Trebuchet MS", sans-serif
+}
+.content_table_narrow {
+	BORDER-TOP-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; WIDTH: 425px; BORDER-RIGHT-WIDTH: 0px
+}
+.content_table_narrow_small {
+	BORDER-TOP-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; WIDTH: 425px; BORDER-RIGHT-WIDTH: 0px
+}
+.content_table_wide {
+	BORDER-TOP-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; WIDTH: 600px; BORDER-RIGHT-WIDTH: 0px
+}
+.content_table_wide_small {
+	BORDER-TOP-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; WIDTH: 600px; BORDER-RIGHT-WIDTH: 0px
+}
+.content_table_narrow {
+	BORDER-COLLAPSE: collapse
+}
+.content_table_narrow_small {
+	BORDER-COLLAPSE: collapse
+}
+.content_table_wide {
+	BORDER-COLLAPSE: collapse
+}
+.content_table_wide_small {
+	BORDER-COLLAPSE: collapse
+}
+.content_table_narrow TH {
+	BORDER-RIGHT: #ffffff 1px solid; PADDING-RIGHT: 3px; BORDER-TOP: #ffffff 1px solid; PADDING-LEFT: 3px; FONT-SIZE: 12px; BACKGROUND: #000000; PADDING-BOTTOM: 3px; VERTICAL-ALIGN: top; BORDER-LEFT: #ffffff 1px solid; COLOR: #ffffff; PADDING-TOP: 3px; BORDER-BOTTOM: #ffffff 1px solid; FONT-FAMILY: Verdana, Arial, helvetica, Tahoma, "Trebuchet MS", sans-serif; TEXT-ALIGN: center
+}
+.content_table_wide TH {
+	BORDER-RIGHT: #ffffff 1px solid; PADDING-RIGHT: 3px; BORDER-TOP: #ffffff 1px solid; PADDING-LEFT: 3px; FONT-SIZE: 12px; BACKGROUND: #000000; PADDING-BOTTOM: 3px; VERTICAL-ALIGN: top; BORDER-LEFT: #ffffff 1px solid; COLOR: #ffffff; PADDING-TOP: 3px; BORDER-BOTTOM: #ffffff 1px solid; FONT-FAMILY: Verdana, Arial, helvetica, Tahoma, "Trebuchet MS", sans-serif; TEXT-ALIGN: center
+}
+.content_table_narrow_small TH {
+	BORDER-RIGHT: #ffffff 1px solid; PADDING-RIGHT: 3px; BORDER-TOP: #ffffff 1px solid; PADDING-LEFT: 3px; FONT-SIZE: 12px; BACKGROUND: #000000; PADDING-BOTTOM: 3px; VERTICAL-ALIGN: top; BORDER-LEFT: #ffffff 1px solid; COLOR: #ffffff; PADDING-TOP: 3px; BORDER-BOTTOM: #ffffff 1px solid; FONT-FAMILY: Verdana, Arial, helvetica, Tahoma, "Trebuchet MS", sans-serif; TEXT-ALIGN: center
+}
+.content_table_wide_small TH {
+	BORDER-RIGHT: #ffffff 1px solid; PADDING-RIGHT: 3px; BORDER-TOP: #ffffff 1px solid; PADDING-LEFT: 3px; FONT-SIZE: 12px; BACKGROUND: #000000; PADDING-BOTTOM: 3px; VERTICAL-ALIGN: top; BORDER-LEFT: #ffffff 1px solid; COLOR: #ffffff; PADDING-TOP: 3px; BORDER-BOTTOM: #ffffff 1px solid; FONT-FAMILY: Verdana, Arial, helvetica, Tahoma, "Trebuchet MS", sans-serif; TEXT-ALIGN: center
+}
+.content_table_narrow .light TD {
+	BORDER-RIGHT: #ffffff 1px solid; PADDING-RIGHT: 1px; BORDER-TOP: #ffffff 1px solid; PADDING-LEFT: 3px; BACKGROUND: #f0f0f0; PADDING-BOTTOM: 1px; VERTICAL-ALIGN: top; BORDER-LEFT: #ffffff 1px solid; COLOR: #000000; PADDING-TOP: 1px; BORDER-BOTTOM: #ffffff 1px solid
+}
+.content_table_wide .light TD {
+	BORDER-RIGHT: #ffffff 1px solid; PADDING-RIGHT: 1px; BORDER-TOP: #ffffff 1px solid; PADDING-LEFT: 3px; BACKGROUND: #f0f0f0; PADDING-BOTTOM: 1px; VERTICAL-ALIGN: top; BORDER-LEFT: #ffffff 1px solid; COLOR: #000000; PADDING-TOP: 1px; BORDER-BOTTOM: #ffffff 1px solid
+}
+.content_table_narrow_small .light TD {
+	BORDER-RIGHT: #ffffff 1px solid; PADDING-RIGHT: 1px; BORDER-TOP: #ffffff 1px solid; PADDING-LEFT: 3px; BACKGROUND: #f0f0f0; PADDING-BOTTOM: 1px; VERTICAL-ALIGN: top; BORDER-LEFT: #ffffff 1px solid; COLOR: #000000; PADDING-TOP: 1px; BORDER-BOTTOM: #ffffff 1px solid
+}
+.content_table_wide_small .light TD {
+	BORDER-RIGHT: #ffffff 1px solid; PADDING-RIGHT: 1px; BORDER-TOP: #ffffff 1px solid; PADDING-LEFT: 3px; BACKGROUND: #f0f0f0; PADDING-BOTTOM: 1px; VERTICAL-ALIGN: top; BORDER-LEFT: #ffffff 1px solid; COLOR: #000000; PADDING-TOP: 1px; BORDER-BOTTOM: #ffffff 1px solid
+}
+.content_table_narrow .dark TD {
+	BORDER-RIGHT: #ffffff 1px solid; PADDING-RIGHT: 1px; BORDER-TOP: #ffffff 1px solid; PADDING-LEFT: 3px; BACKGROUND: #c0c0c0; PADDING-BOTTOM: 1px; VERTICAL-ALIGN: top; BORDER-LEFT: #ffffff 1px solid; COLOR: #000000; PADDING-TOP: 1px; BORDER-BOTTOM: #ffffff 1px solid
+}
+.content_table_wide .dark TD {
+	BORDER-RIGHT: #ffffff 1px solid; PADDING-RIGHT: 1px; BORDER-TOP: #ffffff 1px solid; PADDING-LEFT: 3px; BACKGROUND: #c0c0c0; PADDING-BOTTOM: 1px; VERTICAL-ALIGN: top; BORDER-LEFT: #ffffff 1px solid; COLOR: #000000; PADDING-TOP: 1px; BORDER-BOTTOM: #ffffff 1px solid
+}
+.content_table_narrow_small .dark TD {
+	BORDER-RIGHT: #ffffff 1px solid; PADDING-RIGHT: 1px; BORDER-TOP: #ffffff 1px solid; PADDING-LEFT: 3px; BACKGROUND: #c0c0c0; PADDING-BOTTOM: 1px; VERTICAL-ALIGN: top; BORDER-LEFT: #ffffff 1px solid; COLOR: #000000; PADDING-TOP: 1px; BORDER-BOTTOM: #ffffff 1px solid
+}
+.content_table_wide_small .dark TD {
+	BORDER-RIGHT: #ffffff 1px solid; PADDING-RIGHT: 1px; BORDER-TOP: #ffffff 1px solid; PADDING-LEFT: 3px; BACKGROUND: #c0c0c0; PADDING-BOTTOM: 1px; VERTICAL-ALIGN: top; BORDER-LEFT: #ffffff 1px solid; COLOR: #000000; PADDING-TOP: 1px; BORDER-BOTTOM: #ffffff 1px solid
+}
+.content {
+	FONT-SIZE: 12px; LINE-HEIGHT: 18px; FONT-FAMILY: Verdana, Arial, helvetica, Tahoma, "Trebuchet MS", sans-serif; TEXT-ALIGN: justify
+}
+.content H2 {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FONT-WEIGHT: bold; FONT-SIZE: 16px; PADDING-BOTTOM: 4px; MARGIN: 5px 0px; LINE-HEIGHT: 21px; PADDING-TOP: 2px; FONT-FAMILY: Arial, Helvetica, Verdana
+}
+.content H3 {
+	FONT-WEIGHT: bold; FONT-SIZE: 14px; MARGIN-BOTTOM: 10px; FONT-FAMILY: Arial, Helvetica, Verdana
+}
+.content H4 {
+	FONT-WEIGHT: bold; FONT-SIZE: 14px; MARGIN-BOTTOM: 10px; FONT-FAMILY: Arial, Helvetica, Verdana
+}
+.content H5 {
+	FONT-WEIGHT: bold; FONT-SIZE: 14px; MARGIN-BOTTOM: 10px; FONT-FAMILY: Arial, Helvetica, Verdana
+}
+.content H6 {
+	MARGIN-TOP: 0px; FONT-WEIGHT: normal; FONT-SIZE: 10px; LINE-HEIGHT: 12px; FONT-FAMILY: Verdana, Arial, helvetica, Tahoma, "Trebuchet MS", sans-serif
+}
+.shortcutz {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; BACKGROUND: none transparent scroll repeat 0% 0%; FLOAT: right; PADDING-BOTTOM: 0px; MARGIN: 40px 0px 10px 6px; WIDTH: 160px; PADDING-TOP: 0px; POSITION: relative
+}
+.cutzbox {
+	BORDER-RIGHT: #ccc 1px solid; BORDER-TOP: #ccc 0px solid; MARGIN-TOP: -2px; BACKGROUND: none transparent scroll repeat 0% 0%; BORDER-LEFT: #ccc 1px solid; BORDER-BOTTOM: #ccc 0px solid
+}
+.submark {
+	PADDING-LEFT: 20px; FONT-WEIGHT: bold; FONT-SIZE: 10px; BACKGROUND: url(http://images.tomshardware.com/Design/graphics/icons/arrowlink.gif) no-repeat 4px 4px; MARGIN: 5px 0px; LINE-HEIGHT: 12px
+}
+.pad {
+	PADDING-RIGHT: 6px; PADDING-LEFT: 6px; PADDING-BOTTOM: 6px; PADDING-TOP: 6px
+}
+.Standfirst {
+	FONT-FAMILY: Verdana, Arial, helvetica, Tahoma, "Trebuchet MS", sans-serif; TEXT-ALIGN: justify
+}
+.content .Date {
+	MARGIN-TOP: -10px; FONT-SIZE: 9px; COLOR: #666; FONT-FAMILY: Verdana, Arial, helvetica, Tahoma, "Trebuchet MS", sans-serif
+}
+.fleft {
+	BORDER-RIGHT: white 10px solid; FLOAT: left
+}
+.cleanerleft {
+	CLEAR: left; PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FONT-SIZE: 1px; BACKGROUND: none transparent scroll repeat 0% 0%; PADDING-BOTTOM: 0px; MARGIN: 0px; BORDER-TOP-STYLE: none; PADDING-TOP: 0px; BORDER-RIGHT-STYLE: none; BORDER-LEFT-STYLE: none; HEIGHT: 1px; BORDER-BOTTOM-STYLE: none
+}
+.Author {
+	PADDING-RIGHT: 5px; DISPLAY: inline; PADDING-LEFT: 0px; FONT-WEIGHT: bold; FONT-SIZE: 9px; PADDING-BOTTOM: 0px; MARGIN: -3px 0px 0px; COLOR: #060; LINE-HEIGHT: 18px; PADDING-TOP: 0px; POSITION: relative
+}
+.PublishDate {
+	PADDING-RIGHT: 0px; DISPLAY: inline; PADDING-LEFT: 0px; FONT-WEIGHT: normal; FONT-SIZE: 9px; PADDING-BOTTOM: 0px; MARGIN: -3px 0px 0px; COLOR: #666; LINE-HEIGHT: 18px; PADDING-TOP: 0px; POSITION: relative
+}
+.buttonboxitem {
+	MARGIN-TOP: 15px
+}
+.YouAreHere {
+	FONT-SIZE: 12px; FONT-FAMILY: Arial, sans-serif
+}
+#grainy {
+	BORDER-RIGHT: #666 1px solid; BORDER-TOP: #666 0px solid; FONT-SIZE: 12px; BACKGROUND: url(http://images.tomshardware.com/Design/graphics/layout/_misc/bg_01.gif) #333; MARGIN: 0px 0px 10px; BORDER-LEFT: #666 1px solid; BORDER-BOTTOM: #666 1px solid; POSITION: relative
+}
+#grainy .ico {
+	BORDER-RIGHT: #000 1px solid; BORDER-TOP: #000 1px solid; MARGIN-BOTTOM: 10px; BORDER-LEFT: #000 1px solid; BORDER-BOTTOM: #000 1px solid
+}
+#grainy .sel {
+	BORDER-RIGHT: #f00 1px solid; BORDER-TOP: #f00 1px solid; MARGIN-BOTTOM: 10px; BORDER-LEFT: #f00 1px solid; BORDER-BOTTOM: #f00 1px solid
+}
+#grainy TABLE.desc TD {
+	PADDING-RIGHT: 5px; PADDING-LEFT: 5px; FONT-SIZE: 11px; BACKGROUND: #000; PADDING-BOTTOM: 5px; COLOR: #fff; LINE-HEIGHT: 14px; PADDING-TOP: 5px
+}
+#grainy TD {
+	FONT-SIZE: 12px; COLOR: #fff; LINE-HEIGHT: 14px
+}
+#grainy H2 {
+	FONT-WEIGHT: bold; FONT-SIZE: 16px; COLOR: #fff; LINE-HEIGHT: 24px
+}
+H1 {
+	FONT-WEIGHT: bold; FONT-SIZE: 16px; COLOR: #fff; LINE-HEIGHT: 24px
+}
+#grainy H2 {
+	COLOR: #999
+}
+#grainy A {
+	FONT-WEIGHT: bold; COLOR: #fff
+}
+#grainy A:hover {
+	FONT-WEIGHT: bold; COLOR: #0ff
+}
+#grainy .scr {
+	FLOAT: right; OVERFLOW: scroll; WIDTH: 140px; HEIGHT: 640px
+}
+.whitey {
+	PADDING-LEFT: 20px; FONT-WEIGHT: bold; FONT-SIZE: 12px; BACKGROUND: url(http://images.tomshardware.com/Design/graphics/icons/arrowwht.gif) no-repeat 4px 4px; MARGIN: 5px 0px; LINE-HEIGHT: 12px
+}
+.whitey A {
+	FONT-WEIGHT: bold
+}
+#expnav {
+	MARGIN: 0px 0px 5px
+}
+#expnav .non {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+#expnav UL {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+#expnav UL LI {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px; BORDER-BOTTOM: white 1px solid; LIST-STYLE-TYPE: none
+}
+#expnav UL LI A {
+	DISPLAY: block; FONT-SIZE: 12px; BACKGROUND: url(http://images.tomshardware.com/Design/graphics/tomshardware/bluaro.gif) #2967c2 no-repeat right 50%; WIDTH: 100%; COLOR: #fff; TEXT-INDENT: 6px; LINE-HEIGHT: 21px; FONT-FAMILY: Arial; HEIGHT: 21px; TEXT-ALIGN: left; TEXT-DECORATION: none
+}
+#expnav UL.subnav LI A {
+	DISPLAY: block; FONT-SIZE: 12px; BACKGROUND: #ebebeb; WIDTH: 100%; COLOR: #114faa; TEXT-INDENT: 6px; LINE-HEIGHT: 21px; FONT-FAMILY: Arial; HEIGHT: 21px; TEXT-ALIGN: left
+}
+#expnav UL LI.non A {
+	BACKGROUND: #2967c2
+}
+.invnav {
+	DISPLAY: none
+}
+TABLE.chotz {
+	CLEAR: both; PADDING-RIGHT: 0px; PADDING-LEFT: 0px; BACKGROUND: url(http://images.tomshardware.com/Design/graphics/tomshardware/chotz.gif) #f8f8f8 repeat-x center top; PADDING-BOTTOM: 0px; MARGIN: 0px 0px 5px; WIDTH: 336px; PADDING-TOP: 0px; BORDER-COLLAPSE: collapse
+}
+TABLE.chotz TD {
+	BORDER-RIGHT: #d7d7d7 1px solid; PADDING-RIGHT: 6px; BORDER-TOP: #d7d7d7 1px solid; PADDING-LEFT: 6px; FONT-SIZE: 11px; PADDING-BOTTOM: 0px; MARGIN: 0px; BORDER-LEFT: #d7d7d7 1px solid; PADDING-TOP: 5px; BORDER-BOTTOM: #d7d7d7 1px solid; TEXT-ALIGN: right
+}
+TABLE.chotz TD A.nok {
+	PADDING-LEFT: 6px; FONT-WEIGHT: bold; BACKGROUND: url(http://images.tomshardware.com/Design/graphics/tomshardware/nok.gif) no-repeat 0px 4px
+}
+TABLE.chotz TD H4 {
+	DISPLAY: inline; FONT-WEIGHT: bold; FONT-SIZE: 12px; BACKGROUND: none transparent scroll repeat 0% 0%; FLOAT: left; MARGIN-LEFT: 4px; TEXT-TRANSFORM: uppercase; COLOR: #af0000; BORDER-TOP-STYLE: none; FONT-FAMILY: Arial; BORDER-RIGHT-STYLE: none; BORDER-LEFT-STYLE: none; BORDER-BOTTOM-STYLE: none
+}
+TABLE.chotz TR.ico TD {
+	FONT-WEIGHT: bold; FONT-SIZE: 10px; LINE-HEIGHT: 13px; TEXT-ALIGN: center
+}
+TABLE.chotz TR.ico TD A {
+	COLOR: #af0000
+}
+.outy {
+	BORDER-RIGHT: #d7d7d7 1px solid; BORDER-TOP: #d7d7d7 1px solid; BACKGROUND: #f5f5f5; MARGIN-BOTTOM: 5px; BORDER-LEFT: #d7d7d7 1px solid; BORDER-BOTTOM: #d7d7d7 1px solid; FONT-FAMILY: Arial
+}
+.outy H4 {
+	PADDING-RIGHT: 0px; DISPLAY: block; PADDING-LEFT: 0px; FONT-SIZE: 12px; BACKGROUND: url(http://images.tomshardware.com/Design/graphics/tomshardware/tabby.gif) repeat-x; PADDING-BOTTOM: 0px; MARGIN: 0px; TEXT-TRANSFORM: uppercase; WIDTH: 100%; COLOR: #af0000; BORDER-TOP-STYLE: none; LINE-HEIGHT: 24px; PADDING-TOP: 0px; BORDER-BOTTOM: #d7d7d7 1px solid; BORDER-RIGHT-STYLE: none; BORDER-LEFT-STYLE: none; TEXT-ALIGN: center
+}
+.inny {
+	BORDER-RIGHT: #ececec 1px solid; BORDER-TOP: #ececec 1px solid; BACKGROUND: #fff; MARGIN: 5px; BORDER-LEFT: #ececec 1px solid; BORDER-BOTTOM: #ececec 1px solid
+}
+.inny .ibox {
+	MARGIN: 0px; BORDER-TOP-STYLE: none; BORDER-RIGHT-STYLE: none; BORDER-LEFT-STYLE: none; BORDER-BOTTOM-STYLE: none
+}
+.mark {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 20px; FONT-WEIGHT: normal; FONT-SIZE: 10px; BACKGROUND: url(http://images.tomshardware.com/Design/graphics/icons/arrowred.gif) no-repeat 6px 8px; PADDING-BOTTOM: 3px; MARGIN: 0px; COLOR: #2967c2; LINE-HEIGHT: 13px; PADDING-TOP: 3px; LIST-STYLE-TYPE: none; TEXT-ALIGN: left
+}
+.markx {
+	PADDING-LEFT: 13px; FONT-WEIGHT: bold; FONT-SIZE: 10px; BACKGROUND: url(http://images.tomshardware.com/Design/graphics/icons/arrowred.gif) no-repeat 0px 4px; MARGIN: 5px 0px; LINE-HEIGHT: 12px; TEXT-ALIGN: left
+}
+.wide_box .ico {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; PADDING-TOP: 0px
+}
+#news_front TD {
+	TEXT-ALIGN: center
+}
+.site_table {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; WIDTH: 100%; PADDING-TOP: 0px; BORDER-COLLAPSE: collapse
+}
+.wide_box .site_table TD {
+	BORDER-TOP-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px
+}
+.site_table TR TD A {
+	COLOR: #af0000
+}
+#siteheadlines_tomshardware {
+	BACKGROUND: url(http://images.tomshardware.com/Design/graphics/tomshardware/chotz.gif) repeat-x left -70px; COLOR: #af0000
+}
+#siteheadlines_smallnetbuilder {
+	BACKGROUND: url(http://images.tomshardware.com/Design/graphics/tomshardware/chotz.gif) repeat-x left -70px; COLOR: #af0000
+}
+#siteheadlines_geardigest {
+	BACKGROUND: url(http://images.tomshardware.com/Design/graphics/tomshardware/chotz.gif) repeat-x left -70px; COLOR: #af0000
+}
+#siteheadlines_twitchguru {
+	BACKGROUND: url(http://images.tomshardware.com/Design/graphics/tomshardware/chotz.gif) repeat-x left -70px; COLOR: #af0000
+}
+#siteheadlines_channel {
+	BACKGROUND: url(http://images.tomshardware.com/Design/graphics/tomshardware/chotz.gif) repeat-x left -70px; COLOR: #af0000
+}
+#siteheadlines_news {
+	BACKGROUND: #af0000
+}
+#siteheadlines_news A {
+	COLOR: #ffffff
+}
+#headlines-iframe UL {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 20px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px; TEXT-ALIGN: left
+}
+#headlines-iframe LI {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 24px; BACKGROUND: url(http://images.tomshardware.com/Design/graphics/tomshardware/headline-arrow.gif) no-repeat 6px 6px; PADDING-BOTTOM: 3px; MARGIN: 0px; PADDING-TOP: 3px; LIST-STYLE-TYPE: none
+}
+#headlines-iframe P {
+	FLOAT: right
+}
+#headlines-iframe P A {
+	COLOR: #af0000; MARGIN-RIGHT: 5px
+}
+#more-news {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+P#more-news {
+	FONT-WEIGHT: bold; FONT-SIZE: 12px; TEXT-TRANSFORM: uppercase; COLOR: #af0000; FONT-FAMILY: Arial, sans-serif
+}
+#video-description {
+	MARGIN-TOP: 5px; FONT-SIZE: 12px; FONT-FAMILY: Arial, sans-serif
+}
+#video-description P {
+	MARGIN: 0px
+}
+#player-window {
+	MARGIN-BOTTOM: 5px
+}
+H4.buycom_160 {
+	BORDER-RIGHT: #d7d7d7 1px solid; PADDING-RIGHT: 0px; BORDER-TOP: #d7d7d7 1px solid; PADDING-LEFT: 0px; FONT-WEIGHT: bold; FONT-SIZE: 12px; BACKGROUND: #f5f5f5; PADDING-BOTTOM: 0px; MARGIN: 0px; BORDER-LEFT: #d7d7d7 1px solid; WIDTH: 158px; COLOR: #444; LINE-HEIGHT: 29px; PADDING-TOP: 0px; BORDER-BOTTOM: #d7d7d7 1px solid; TEXT-ALIGN: center
+}
+H4.buycom_336 {
+	BORDER-RIGHT: #d7d7d7 1px solid; PADDING-RIGHT: 0px; BORDER-TOP: #d7d7d7 1px solid; PADDING-LEFT: 0px; FONT-WEIGHT: bold; FONT-SIZE: 12px; BACKGROUND: #f5f5f5; PADDING-BOTTOM: 0px; MARGIN: 0px; BORDER-LEFT: #d7d7d7 1px solid; WIDTH: 334px; COLOR: #444; LINE-HEIGHT: 29px; PADDING-TOP: 0px; BORDER-BOTTOM: #d7d7d7 1px solid; TEXT-ALIGN: center
+}
+#buy_160 {
+	BORDER-RIGHT: #ccc 1px solid; BORDER-TOP: #ccc 0px solid; BORDER-LEFT: #ccc 1px solid; WIDTH: 158px; COLOR: #000; BORDER-BOTTOM: #ccc 0px solid; POSITION: relative; HEIGHT: 600px
+}
+#buy_160 A:link {
+	COLOR: #2967c2; TEXT-DECORATION: none
+}
+#buy_160 A:hover {
+	COLOR: #c00; TEXT-DECORATION: underline
+}
+#buy_160 A:visited {
+	COLOR: #2967c2; TEXT-DECORATION: none
+}
+#buy_160 A:active {
+	COLOR: #2967c2; TEXT-DECORATION: none
+}
+#buy_160 TD {
+	FONT-SIZE: 11px; FONT-FAMILY: Arial; TEXT-ALIGN: center
+}
+#buy_160 TD B {
+	FONT-SIZE: 12px
+}
+#buy_160 TD EM {
+	FONT-SIZE: 11px; COLOR: #c00
+}
+DL.fbox {
+	BORDER-RIGHT: #ccc 1px solid; PADDING-RIGHT: 5px; BORDER-TOP: #ccc 0px solid; PADDING-LEFT: 5px; FONT-SIZE: 12px; PADDING-BOTTOM: 5px; MARGIN: 0px; BORDER-LEFT: #ccc 1px solid; WIDTH: 324px; COLOR: #333; LINE-HEIGHT: 16px; PADDING-TOP: 5px; BORDER-BOTTOM: #ccc 0px solid; TEXT-ALIGN: left
+}
+DL.fbox DT {
+	PADDING-RIGHT: 0px; DISPLAY: block; PADDING-LEFT: 5px; FONT-WEIGHT: bold; FONT-SIZE: 16px; PADDING-BOTTOM: 5px; MARGIN: 0px; LINE-HEIGHT: 18px; PADDING-TOP: 2px; LIST-STYLE-TYPE: none; HEIGHT: 80px
+}
+DL.fbox DD {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 12px; FONT-WEIGHT: bold; BACKGROUND: url(http://images.tomshardware.com/Design/graphics/tomshardware/nok.gif) no-repeat 5px 8px; PADDING-BOTTOM: 3px; MARGIN: 0px; PADDING-TOP: 3px; LIST-STYLE-TYPE: none
+}
+DL.fbox EM {
+	FONT-WEIGHT: normal; FONT-SIZE: 10px; COLOR: #333; FONT-STYLE: normal
+}
+DL.fbox B {
+	COLOR: #c00
+}
+DL.fbox DT EM {
+	FONT-SIZE: 12px
+}
+DL.fbox IMG {
+	FLOAT: left; MARGIN-RIGHT: 10px
+}
+DL.ibox {
+	BORDER-RIGHT: #ccc 1px solid; PADDING-RIGHT: 5px; BORDER-TOP: #ccc 0px solid; PADDING-LEFT: 5px; FONT-SIZE: 12px; PADDING-BOTTOM: 5px; MARGIN: 0px; BORDER-LEFT: #ccc 1px solid; WIDTH: 324px; COLOR: #333; LINE-HEIGHT: 16px; PADDING-TOP: 5px; BORDER-BOTTOM: #ccc 0px solid; TEXT-ALIGN: left
+}
+DL.ibox DT {
+	PADDING-RIGHT: 5px; DISPLAY: block; PADDING-LEFT: 5px; FLOAT: right; PADDING-BOTTOM: 5px; MARGIN: 0px; PADDING-TOP: 5px; LIST-STYLE-TYPE: none; TEXT-ALIGN: right
+}
+DL.ibox DD {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 12px; FONT-WEIGHT: bold; BACKGROUND: url(http://images.tomshardware.com/Design/graphics/tomshardware/nok.gif) no-repeat 5px 8px; PADDING-BOTTOM: 3px; MARGIN: 0px; PADDING-TOP: 3px; LIST-STYLE-TYPE: none
+}
+DL.ibox EM {
+	FONT-WEIGHT: normal; FONT-SIZE: 10px; COLOR: #333; LINE-HEIGHT: 13px; FONT-STYLE: normal
+}
+DL.ibox B {
+	COLOR: #c00
+}
+DL.ibox DT EM {
+	FONT-SIZE: 12px
+}
+.partoftgp {
+	MARGIN-TOP: 10px; FONT-SIZE: 10px; FLOAT: right
+}
+.countdownwrapper {
+	FONT-WEIGHT: bold; FONT-SIZE: 14px; BACKGROUND: url(http://images.tomshardware.com/Design/graphics/box_images/clock-bg.gif) #7f7f7f no-repeat; WIDTH: 252px; COLOR: #ffffff; BORDER-TOP-STYLE: none; FONT-FAMILY: Times; BORDER-RIGHT-STYLE: none; BORDER-LEFT-STYLE: none; BORDER-COLLAPSE: collapse; HEIGHT: 54px; BORDER-BOTTOM-STYLE: none
+}
+.countdown {
+	FONT-WEIGHT: bold; FONT-SIZE: 14px; WIDTH: 252px; COLOR: #ffffff; BORDER-TOP-STYLE: none; FONT-FAMILY: Times; BORDER-RIGHT-STYLE: none; BORDER-LEFT-STYLE: none; BORDER-COLLAPSE: collapse; HEIGHT: 54px; BORDER-BOTTOM-STYLE: none
+}
+.countdown TD {
+	PADDING-TOP: 5px; TEXT-ALIGN: center
+}

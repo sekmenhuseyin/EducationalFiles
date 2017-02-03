@@ -1,0 +1,1547 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0077)http://www.microsoft.com/windows2000/techinfo/planning/server/serversteps.asp -->
+<!--TOOLBAR_EXEMPT--><HTML><HEAD><TITLE>Step-by-Step Guide to a Common Infrastructure for Windows 2000 Server Deployment - Part 1: Installing a Windows 2000 Server as a Domain Controller</TITLE>
+<META 
+content="Microsoft Windows 2000 Server, Active Directory, AD, Active Directory structure, OUs, User Accounts, domain controller, deployment, step-by step, walkthrough" 
+name=KEYWORDS>
+<META 
+content="This document explains how to build a common network infrastructure, beginning with the Windows 2000 Server operating system configured as a domain controller." 
+name=DESCRIPTION>
+<META content=EN-US name=MS.LOCALE>
+<META http-equiv=Content-Type content=text/html;charset=iso-8859-1>
+<META content=TEMPLATE= name=DTC_TEMPLATE>
+<META content=/windows2000/library/planning/server/serversteps.asp 
+name=OldURL><LINK 
+href="Step-by-Step Guide to a Common Infrastructure for Windows 2000 Server Deployment - Part 1 Installing a Windows 2000 Server as a Domain Controller_files/css.htm" 
+type=text/css rel=stylesheet>
+<META http-equiv=PICS-Label 
+content='(PICS-1.1 "http://www.rsac.org/ratingsv01.html" l comment "RSACi North America Server" by "inet@microsoft.com" r (n 0 s 0 v 0 l 0))'>
+<SCRIPT 
+src="Step-by-Step Guide to a Common Infrastructure for Windows 2000 Server Deployment - Part 1 Installing a Windows 2000 Server as a Domain Controller_files/global.js" 
+type=text/javascript></SCRIPT>
+<LINK 
+href="Step-by-Step Guide to a Common Infrastructure for Windows 2000 Server Deployment - Part 1 Installing a Windows 2000 Server as a Domain Controller_files/default.css" 
+type=text/css rel=stylesheet>
+<SCRIPT type=text/javascript><!--
+	
+	sImgDefaultArrow = "";
+	sImgExpandedArrow = "";
+
+	if (sImgDefaultArrow == ""){
+		sImgDefaultArrow = "/products/shared/images/arrow_default.gif";
+	}
+	if (sImgExpandedArrow == ""){
+		sImgExpandedArrow = "/products/shared/images/arrow_expand.gif";
+	}
+	
+	//-->
+	</SCRIPT>
+
+<META content="MSHTML 6.00.2800.1106" name=GENERATOR></HEAD>
+<BODY bgColor=#ffffff leftMargin=0 topMargin=0 marginwidth="0" 
+marginheight="0"><SPAN id=donotprint><!-- Start: ToolBar V2.0-->
+<SCRIPT language=JavaScript 
+src="Step-by-Step Guide to a Common Infrastructure for Windows 2000 Server Deployment - Part 1 Installing a Windows 2000 Server as a Domain Controller_files/toolbar.js" 
+type=text/javascript></SCRIPT>
+
+<SCRIPT language=JavaScript 
+src="Step-by-Step Guide to a Common Infrastructure for Windows 2000 Server Deployment - Part 1 Installing a Windows 2000 Server as a Domain Controller_files/globalMNP.js" 
+type=text/javascript></SCRIPT>
+
+<SCRIPT language=JavaScript 
+src="Step-by-Step Guide to a Common Infrastructure for Windows 2000 Server Deployment - Part 1 Installing a Windows 2000 Server as a Domain Controller_files/toolbar_w2k.js" 
+type=text/javascript></SCRIPT>
+<!-- Start: ToolBar for down-level browsers--><SPAN id=TBDownLevelDiv>
+<TABLE cellSpacing=0 cellPadding=0 width="100%" bgColor=#ffffff border=0>
+  <TBODY>
+  <TR>
+    <TD vAlign=top width=250 bgColor=#ffffff rowSpan=2><A 
+      href="http://www.microsoft.com/windows2000/" target=_top><IMG 
+      alt="Windows 2000 Home" 
+      src="Step-by-Step Guide to a Common Infrastructure for Windows 2000 Server Deployment - Part 1 Installing a Windows 2000 Server as a Domain Controller_files/bnrWin2000.gif" 
+      border=0></A></TD>
+    <TD vAlign=top align=right width=19 bgColor=#ffffff height=20><IMG 
+      src="Step-by-Step Guide to a Common Infrastructure for Windows 2000 Server Deployment - Part 1 Installing a Windows 2000 Server as a Domain Controller_files/curve.gif"></TD>
+    <TD vAlign=center noWrap align=right bgColor=#000000 colSpan=2 
+      height=20><FONT face="Verdana, Arial, Helvetica" color=#ffffff 
+      size=1>&nbsp;&nbsp;<A style="COLOR: #ffffff; TEXT-DECORATION: none" 
+      href="http://www.microsoft.com/products/" target=_top><FONT 
+      color=#ffffff>All Products</FONT></A>&nbsp;&nbsp;<FONT 
+      color=#ffffff>|</FONT> &nbsp;&nbsp;<A 
+      style="COLOR: #ffffff; TEXT-DECORATION: none" 
+      href="http://www.microsoft.com/support/" target=_top><FONT 
+      color=#ffffff>Support</FONT></A>&nbsp;&nbsp;<FONT color=#ffffff>|</FONT> 
+      &nbsp;&nbsp;<A style="COLOR: #ffffff; TEXT-DECORATION: none" 
+      href="http://search.microsoft.com/" target=_top><FONT 
+      color=#ffffff>Search</FONT></A>&nbsp;&nbsp;<FONT color=#ffffff>|</FONT> 
+      &nbsp;&nbsp;<A style="COLOR: #ffffff; TEXT-DECORATION: none" 
+      href="http://www.microsoft.com/" target=_top><FONT 
+      color=#ffffff>microsoft.com Guide</FONT></A>&nbsp;&nbsp;</FONT></TD></TR>
+  <TR>
+    <TD vAlign=top width=19 bgColor=#ffffff height=40><IMG height=1 alt="" 
+      src="Step-by-Step Guide to a Common Infrastructure for Windows 2000 Server Deployment - Part 1 Installing a Windows 2000 Server as a Domain Controller_files/Trans.gif" 
+      width=1 border=0></TD>
+    <TD vAlign=top noWrap align=right colSpan=2 height=40><A 
+      href="http://www.microsoft.com/isapi/gomscom.asp?target=/" 
+      target=_top><IMG height=40 alt="Microsoft.com home" 
+      src="Step-by-Step Guide to a Common Infrastructure for Windows 2000 Server Deployment - Part 1 Installing a Windows 2000 Server as a Domain Controller_files/mslogo.gif" 
+      width=112 border=0></A></TD></TR>
+  <TR><!-- Start: Local menus -->
+    <TD vAlign=center noWrap bgColor=#003366 colSpan=4 height=20><FONT 
+      class=fontSize1 color=#ffffff><B>&nbsp;&nbsp;<A 
+      style="COLOR: #ffffff; TEXT-DECORATION: none" 
+      href="http://www.microsoft.com/windows2000/" target=_top><FONT 
+      color=#ffffff>Windows 2000 Home</FONT></A>&nbsp;&nbsp;<FONT 
+      color=#ffffff>|</FONT> &nbsp;&nbsp;<A 
+      style="COLOR: #ffffff; TEXT-DECORATION: none" 
+      href="http://www.microsoft.com/windows2000/worldwide/" target=_top><FONT 
+      color=#ffffff>Windows 2000 Worldwide</FONT></A>&nbsp;&nbsp;<FONT 
+      color=#ffffff>|</FONT> 
+</B></FONT></TD><!-- End: Local menus --></TR></TBODY></TABLE></SPAN><!-- End: ToolBar for old browsers-->
+<SCRIPT language=JavaScript type=text/javascript>
+<!--// Hide from old browsers
+
+var ToolBar_Supported = ToolBar_Supported;
+if (ToolBar_Supported != null && ToolBar_Supported == true && (navigator.platform=="Win32"))
+{
+	TBDownLevelDiv.style.display ='none';
+	drawToolbar();
+	var fBrowserOK = true;
+}
+
+//-->
+</SCRIPT>
+<!-- End: ToolBar V2.0--></SPAN><A name=top></A>
+<TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+  <TBODY>
+  <TR>
+    <TD bgColor=#ffffff height=1><IMG height=1 alt=* 
+      src="Step-by-Step Guide to a Common Infrastructure for Windows 2000 Server Deployment - Part 1 Installing a Windows 2000 Server as a Domain Controller_files/ts.gif" 
+      width=1></TD></TR></TBODY></TABLE>
+<TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+  <TBODY>
+  <TR vAlign=top>
+    <TD vAlign=top>
+      <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+        <TBODY>
+        <TR vAlign=top>
+          <TD id=donotprint vAlign=top width=178><!-- start leftnav And search code -->
+            <TABLE cellSpacing=0 cellPadding=0 width="100%" bgColor=#003366 
+            border=0>
+              <TBODY>
+              <TR height=38>
+                <TD align=middle bgColor=#003366><!-- quick search-->
+                  <TABLE cellSpacing=0 cellPadding=0 width=179 border=0>
+                    <FORM id=form1 name=form1 
+                    action=http://search.microsoft.com/us/products/windows/windows2000/advanced_search.asp 
+                    method=get>
+                    <TBODY>
+                    <TR>
+                      <TD><IMG height=1 
+                        src="C:\Documents and Settings\Administrator\Desktop\Step-by-Step Guide to a Common Infrastructure for Windows 2000 Server Deployment - Part 1 Installing a Windows 2000 Server as a Domain Controller_files\Trans(1).gif" 
+                        width=5></TD>
+                      <TD><!--[if IE ]><SPAN class=fontSize1 
+                        style="COLOR: #ffffff">Search for</SPAN><BR><INPUT 
+                        type=hidden value=0 name=IntCat> <INPUT type=hidden 
+                        value=ALL name=Boolean> <INPUT type=hidden value=new 
+                        name=Nq> <INPUT style="WIDTH: 125px; HEIGHT: 20px" 
+                        maxLength=255 size=14 name=qu> <IMG height=1 
+                        src="C:\Documents and Settings\Administrator\Desktop\Step-by-Step Guide to a Common Infrastructure for Windows 2000 Server Deployment - Part 1 Installing a Windows 2000 Server as a Domain Controller_files\trans(2).gif" 
+                        width=2 border=0> <INPUT class=btnSearch type=submit alt=go value=Go name=finish><![endif]--><![if ! ie ]>
+															<span class="fontSize1" style="color:#ffffff">Search for<br>
+															<input type="HIDDEN" name="IntCat" value="0" />
+															<input type="HIDDEN" name="Boolean" value="ALL" />
+															<input type="HIDDEN" name="Nq" value="NEW" />
+															<input type="TEXT" name="qu" size="10" maxlength="255" />
+															<input alt="Go" type="SUBMIT" name="FINISH" value="Go" />
+															</span>
+														<![endif]> </TD></TR></FORM></TBODY></TABLE><!--end quick search --></TD>
+                <TD width=1 bgColor=#003366><IMG height=0 alt="" 
+                  src="C:\Documents and Settings\Administrator\Desktop\Step-by-Step Guide to a Common Infrastructure for Windows 2000 Server Deployment - Part 1 Installing a Windows 2000 Server as a Domain Controller_files\Trans(1).gif" 
+                  width=1 border=0></TD></TR>
+              <TR>
+                <TD>
+                  <TABLE cellSpacing=0 cellPadding=0 width="100%" 
+                  bgColor=#003366 border=0>
+                    <TBODY>
+                    <TR>
+                      <TD><IMG height=1 
+                        src="C:\Documents and Settings\Administrator\Desktop\Step-by-Step Guide to a Common Infrastructure for Windows 2000 Server Deployment - Part 1 Installing a Windows 2000 Server as a Domain Controller_files\Trans(1).gif" 
+                        width=3></TD>
+                      <TD class=AdvSearch vAlign=top><A 
+                        href="http://search.microsoft.com/us/products/windows/windows2000/advanced_search.asp?IntCat=0">Advanced 
+                        Search</A></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE>
+            <TABLE 
+            onmouseover="if(document.readyState=='complete'&amp;&amp;fBrowserOK)delayRemove();" 
+            onmouseout="if (document.readyState=='complete'&amp;&amp;fBrowserOK)cancelDelay();" 
+            cellSpacing=0 cellPadding=0 width="100%" border=0>
+              <TBODY>
+              <TR>
+                <TD bgColor=#003366><IMG height=9 alt="" 
+                  src="C:\Documents and Settings\Administrator\Desktop\Step-by-Step Guide to a Common Infrastructure for Windows 2000 Server Deployment - Part 1 Installing a Windows 2000 Server as a Domain Controller_files\Trans(1).gif" 
+                  width=179></TD>
+                <TD width=1 bgColor=#003366><IMG height=0 alt="" 
+                  src="C:\Documents and Settings\Administrator\Desktop\Step-by-Step Guide to a Common Infrastructure for Windows 2000 Server Deployment - Part 1 Installing a Windows 2000 Server as a Domain Controller_files\Trans(1).gif" 
+                  width=1 border=0></TD></TR></TBODY></TABLE>
+            <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+              <TBODY>
+              <TR>
+                <TD>
+                  <TABLE class=flyoutMenu cellSpacing=0 cellPadding=2 width=180 
+                  border=0 
+                  menudata="/windows2000/inc/MnpXmlDataGen.asp?subroot=techinfo">
+                    <TBODY>
+                    <TR>
+                      <TD>
+                        <TABLE cellSpacing=0 cellPadding=0 width=175 border=0>
+                          <TBODY>
+                          <TR>
+                            <TD class=flyoutLink handle="4267"><A 
+                              href="http://www.microsoft.com/windows2000/windows2000home.asp">Windows 
+                              2000</A></TD></TR></TBODY></TABLE>
+                        <TABLE cellSpacing=0 cellPadding=0 width=175 border=0>
+                          <TBODY>
+                          <TR>
+                            <TD class=flyoutLink handle="1086"><A 
+                              href="http://www.microsoft.com/windows2000/evaluation/default.asp">Product 
+                              Information</A></TD></TR></TBODY></TABLE>
+                        <TABLE cellSpacing=0 cellPadding=0 width=175 border=0>
+                          <TBODY>
+                          <TR>
+                            <TD class=flyoutLink handle="1094"><A 
+                              href="http://www.microsoft.com/windows2000/howtobuy/default.asp">How 
+                              to Buy</A></TD></TR></TBODY></TABLE>
+                        <TABLE cellSpacing=0 cellPadding=0 width=175 border=0>
+                          <TBODY>
+                          <TR>
+                            <TD class=flyoutLink handle="1781"><A 
+                              href="http://www.microsoft.com/windows2000/techinfo/default.asp">Technical 
+                              Resources</A></TD></TR></TBODY></TABLE>
+                        <TABLE cellSpacing=0 cellPadding=0 width=175 border=0>
+                          <TBODY>
+                          <TR>
+                            <TD class=flyoutLink handle="2202"><A 
+                              href="http://www.microsoft.com/windows2000/downloads/default.asp">Downloads</A></TD></TR></TBODY></TABLE>
+                        <TABLE cellSpacing=0 cellPadding=0 width=175 border=0>
+                          <TBODY>
+                          <TR>
+                            <TD class=flyoutLink handle="2203"><A 
+                              href="http://www.microsoft.com/windows2000/support/default.asp">Support</A></TD></TR></TBODY></TABLE>
+                        <TABLE cellSpacing=0 cellPadding=0 width=175 border=0>
+                          <TBODY>
+                          <TR>
+                            <TD class=flyoutLink handle="2204"><A 
+                              href="http://www.microsoft.com/windows2000/technologies/default.asp">Technology 
+                              Centers</A></TD></TR></TBODY></TABLE>
+                        <TABLE cellSpacing=0 cellPadding=0 width=175 border=0>
+                          <TBODY>
+                          <TR>
+                            <TD class=flyoutLink><A 
+                              href="http://www.microsoft.com/windows2000/partners/default.asp">Partners</A></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE>
+                  <TABLE class=flyoutMenu cellSpacing=0 cellPadding=2 width=180 
+                  border=0 menudata="/windows2000/inc/MnpXmlDataGen.asp">
+                    <TBODY>
+                    <TR>
+                      <TD>
+                        <TABLE cellSpacing=0 cellPadding=0 width=175 border=0>
+                          <TBODY>
+                          <TR>
+                            <TD class=flyoutLink><A 
+                              href="http://www.microsoft.com/windows2000/community/default.asp">Windows 
+                              Server 
+                    Community</A></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE>
+                  <TABLE class=flyoutMenu cellSpacing=0 cellPadding=2 width=180 
+                  border=0 menudata="/windows/shared/winfamflyout.xml">
+                    <TBODY>
+                    <TR>
+                      <TD>
+                        <TABLE cellSpacing=0 cellPadding=0 width=175 border=0>
+                          <TBODY>
+                          <TR>
+                            <TD class=flyoutLink handle="0420"><A 
+                              href="http://www.microsoft.com/windows/">Windows 
+                              Family</A></TD></TR></TBODY></TABLE>
+                        <TABLE cellSpacing=0 cellPadding=0 width=175 border=0>
+                          <TBODY>
+                          <TR>
+                            <TD class=flyoutLink handle="6880"><A 
+                              href="http://www.microsoft.com/windows2000/windowsupdate/default.asp">Windows 
+                              Update</A></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE><!-- end leftnav And search code -->
+            <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+              <TBODY>
+              <TR>
+                <TD><BR><!-- --><!-- Below LeftNav Area START --><!-- Below LeftNav Area END --></TD></TR></TBODY></TABLE></TD>
+          <TD width="100%"><!-- This is the new global Sub Product Banner ----- It needs to be built by a general lookup -->
+            <TABLE cellSpacing=0 cellPadding=20 width="100%" border=0>
+              <TBODY>
+              <TR>
+                <TD 
+                style="PADDING-RIGHT: 20px; PADDING-LEFT: 20px; PADDING-BOTTOM: 20px; PADDING-TOP: 11px"><!-- -->
+                  <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+                    <TBODY>
+                    <TR>
+                      <TD><SPAN class=fontSize1 id=donotprint 
+                        style="COLOR: #0066cc"><A class=eyebrow 
+                        href="http://www.microsoft.com/windows2000/default.asp" 
+                        target=_top>Windows 2000</A> &nbsp;&gt;&nbsp;<A 
+                        class=eyebrow 
+                        href="http://www.microsoft.com/windows2000/techinfo/default.asp" 
+                        target=_top>Technical Resources</A> &nbsp;&gt;&nbsp;<A 
+                        class=eyebrow 
+                        href="http://www.microsoft.com/windows2000/techinfo/planning/walkthroughs/default.asp" 
+                        target=_top>Step-by-Step Guides</A> </SPAN></TD></TR>
+                    <TR>
+                      <TD><SPAN id=donotprint><IMG height=5 alt="" 
+                        src="Step-by-Step Guide to a Common Infrastructure for Windows 2000 Server Deployment - Part 1 Installing a Windows 2000 Server as a Domain Controller_files/ts.gif" 
+                        width=1></SPAN></TD></TR>
+                    <TR>
+                      <TD>
+                        <H1>Step-by-Step Guide to a Common Infrastructure for 
+                        Windows 2000 Server Deployment - Part 1: Installing a 
+                        Windows 2000 Server as a Domain Controller</H1></TD></TR>
+                    <TR>
+                      <TD>
+                        <H2 class=Subtitle></H2></TD></TR>
+                    <TR>
+                      <TD><IMG height=5 alt="" 
+                        src="Step-by-Step Guide to a Common Infrastructure for Windows 2000 Server Deployment - Part 1 Installing a Windows 2000 Server as a Domain Controller_files/ts.gif" 
+                        width=1></TD></TR>
+                    <TR>
+                      <TD width="100%" bgColor=#cccccc height=1><IMG height=1 
+                        alt="" 
+                        src="Step-by-Step Guide to a Common Infrastructure for Windows 2000 Server Deployment - Part 1 Installing a Windows 2000 Server as a Domain Controller_files/ts.gif" 
+                        width=1></TD></TR>
+                    <TR>
+                      <TD>
+                        <TABLE cellSpacing=0 cellPadding=0 width="100%" 
+border=0>
+                          <TBODY>
+                          <TR>
+                            <TD align=left>
+                              <TABLE cellSpacing=0 cellPadding=0 border=0>
+                                <TBODY>
+                                <TR>
+                                <TD class=footnote style="COLOR: #666666"><!--Will be generated v-->Posted: 
+                                January 21, 2000</TD>
+                                <TD><IMG height=20 alt="" 
+                                src="Step-by-Step Guide to a Common Infrastructure for Windows 2000 Server Deployment - Part 1 Installing a Windows 2000 Server as a Domain Controller_files/ts.gif" 
+                                width=28></TD></TR></TBODY></TABLE></TD>
+                            <TD align=right>
+                              <TABLE cellSpacing=0 cellPadding=0 border=0>
+                                <SCRIPT language=javascript 
+type=text/javascript>
+                                                                 <!--	
+                                                                 if (fBrowserOK) 
+                                                                 {
+                                                                      document.write("<tr id=\"printicon\" style=\"display:'';\">")
+                                                                      document.write("<td onmouseover=\"this.style.cursor='hand';\" onclick=\"noPrint\(\)\"><img src=\"/products/shared/images/printericon.gif\" width=\"24\" height=\"18\" alt=\"Printer-friendly version\" border=\"0\"></td>")
+                                                                      document.write("<td><a tabindex=\"0\" class=\"footnote\"  onclick=\"noPrint\(\)\" style=\"cursor:hand;\" onmouseover=\"this.style.color='#ff3300';\" onmouseout=\"this.style.color='#0066cc';\">Printer-friendly version</a></td>")
+                                                                      document.write("</tr>")
+                                                                      document.write("<tr id=\"backicon\" style=\"display:'none';\">")
+                                                                      document.write("<td onmouseover=\"this.style.cursor='hand';\" onclick=\"noPrint\(\)\"><img src=\"/products/shared/images/backicon.gif\" width=\"24\" height=\"18\" alt=\"Web-friendly version\" border=\"0\"></td>")
+                                                                      document.write("<td><a tabindex=\"0\" class=\"footnote\"  onclick=\"noPrint\(\)\" style=\"cursor:hand;\" onmouseover=\"this.style.color='#ff3300';\" onmouseout=\"this.style.color='#0066cc';\">Web-friendly version</a></td>")
+                                                                      document.write("</tr>")
+                                                                 }
+                                                                 //-->
+                                                                 </SCRIPT>
+
+                                <TBODY></TBODY></TABLE></TD></TR></TBODY></TABLE></TD></TR>
+                    <TR>
+                      <TD width="100%" bgColor=#cccccc height=1><IMG height=1 
+                        alt="" 
+                        src="Step-by-Step Guide to a Common Infrastructure for Windows 2000 Server Deployment - Part 1 Installing a Windows 2000 Server as a Domain Controller_files/ts.gif" 
+                        width=1></TD></TR></TBODY></TABLE>
+                  <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+                    <TBODY>
+                    <TR>
+                      <TD><IMG height=10 alt="" 
+                        src="Step-by-Step Guide to a Common Infrastructure for Windows 2000 Server Deployment - Part 1 Installing a Windows 2000 Server as a Domain Controller_files/ts.gif" 
+                        width=1></TD></TR></TBODY></TABLE>
+                  <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+                    <TBODY>
+                    <TR>
+                      <TD vAlign=top align=left><!-- -->
+                        <TABLE id=donotprint cellSpacing=0 cellPadding=0 
+                        width=175 align=right border=0>
+                          <TBODY>
+                          <TR>
+                            <TD><IMG height=4 alt=* 
+                              src="Step-by-Step Guide to a Common Infrastructure for Windows 2000 Server Deployment - Part 1 Installing a Windows 2000 Server as a Domain Controller_files/ts.gif" 
+                              width=1></TD>
+                            <TD><IMG height=1 alt=* 
+                              src="Step-by-Step Guide to a Common Infrastructure for Windows 2000 Server Deployment - Part 1 Installing a Windows 2000 Server as a Domain Controller_files/ts.gif" 
+                              width=1></TD></TR>
+                          <TR>
+                            <TD><IMG height=1 alt=* 
+                              src="Step-by-Step Guide to a Common Infrastructure for Windows 2000 Server Deployment - Part 1 Installing a Windows 2000 Server as a Domain Controller_files/ts.gif" 
+                              width=10></TD>
+                            <TD><!-- Floating SideBar Area START --><SPAN 
+                              id=donotprint>
+                              <TABLE cellSpacing=0 cellPadding=0 width=175 
+                              border=0>
+                                <TBODY>
+                                <TR vAlign=top align=left>
+                                <TD>
+                                <TABLE class=componentBorder id=headeridArticle 
+                                onmouseover="if (fBrowserOK) chngColour('idArticle')" 
+                                onmouseout="if (fBrowserOK) chngColour('idArticle')" 
+                                cellSpacing=0 cellPadding=0 width=175 border=0>
+                                <TBODY>
+                                <TR>
+                                <TD class=componentHeader id=articleidArticle 
+                                width=175><IMG 
+                                src="Step-by-Step Guide to a Common Infrastructure for Windows 2000 Server Deployment - Part 1 Installing a Windows 2000 Server as a Domain Controller_files/ts.gif" 
+                                width=6 border=0>On this page</TD>
+                                <SCRIPT language=javascript 
+type=text/javascript>
+								<!--	
+								if (fBrowserOK) {
+                                document.write("<td style=\"width:1px;background-color:#999999;\"></td>")
+								document.write("<td id=\"arrowColidArticle\" bgcolor=\"#6699cc\" width=\"21\" height=\"17\"><img id=\"ImgArrowidArticle\" src=" + sImgDefaultArrow + " alt=\"collapse menu\" border=\"0\" style=\"cursor:hand;\" onclick=\"change_display\(\'headingidArticle\'\)\"></td>")
+								} 
+								//-->
+								</SCRIPT>
+                                </TR></TBODY></TABLE></TD></TR></TBODY></TABLE>
+                              <DIV id=headingidArticle>
+                              <TABLE class=componentBorder id=mainidArticle 
+                              style="BORDER-TOP: 0px" cellSpacing=0 
+                              cellPadding=8 width=175 border=0>
+                                <TBODY>
+                                <TR vAlign=top align=left>
+                                <TD width="100%">
+                                <TABLE cellSpacing=0 cellPadding=0 width="100%" 
+                                border=0>
+                                <TBODY>
+                                <TR>
+                                <TD class=componentBodyText vAlign=top><IMG 
+                                height=11 
+                                src="Step-by-Step Guide to a Common Infrastructure for Windows 2000 Server Deployment - Part 1 Installing a Windows 2000 Server as a Domain Controller_files/jump2.gif" 
+                                width=11 border=0></TD>
+                                <TD class=componentBodyText align=left 
+                                width="100%"><A 
+                                href="http://www.microsoft.com/windows2000/techinfo/planning/server/serversteps.asp#heading1">Introduction</A></TD></TR>
+                                <TR>
+                                <TD><IMG height=10 
+                                src="Step-by-Step Guide to a Common Infrastructure for Windows 2000 Server Deployment - Part 1 Installing a Windows 2000 Server as a Domain Controller_files/ts.gif" 
+                                width=1 border=0></TD>
+                                <TD><IMG height=10 
+                                src="Step-by-Step Guide to a Common Infrastructure for Windows 2000 Server Deployment - Part 1 Installing a Windows 2000 Server as a Domain Controller_files/ts.gif" 
+                                width=1 border=0></TD></TR></TBODY></TABLE>
+                                <TABLE cellSpacing=0 cellPadding=0 width="100%" 
+                                border=0>
+                                <TBODY>
+                                <TR>
+                                <TD class=componentBodyText vAlign=top><IMG 
+                                height=11 
+                                src="Step-by-Step Guide to a Common Infrastructure for Windows 2000 Server Deployment - Part 1 Installing a Windows 2000 Server as a Domain Controller_files/jump2.gif" 
+                                width=11 border=0></TD>
+                                <TD class=componentBodyText align=left 
+                                width="100%"><A 
+                                href="http://www.microsoft.com/windows2000/techinfo/planning/server/serversteps.asp#heading2">Hardware 
+                                Requirements</A></TD></TR>
+                                <TR>
+                                <TD><IMG height=10 
+                                src="Step-by-Step Guide to a Common Infrastructure for Windows 2000 Server Deployment - Part 1 Installing a Windows 2000 Server as a Domain Controller_files/ts.gif" 
+                                width=1 border=0></TD>
+                                <TD><IMG height=10 
+                                src="Step-by-Step Guide to a Common Infrastructure for Windows 2000 Server Deployment - Part 1 Installing a Windows 2000 Server as a Domain Controller_files/ts.gif" 
+                                width=1 border=0></TD></TR></TBODY></TABLE>
+                                <TABLE cellSpacing=0 cellPadding=0 width="100%" 
+                                border=0>
+                                <TBODY>
+                                <TR>
+                                <TD class=componentBodyText vAlign=top><IMG 
+                                height=11 
+                                src="Step-by-Step Guide to a Common Infrastructure for Windows 2000 Server Deployment - Part 1 Installing a Windows 2000 Server as a Domain Controller_files/jump2.gif" 
+                                width=11 border=0></TD>
+                                <TD class=componentBodyText align=left 
+                                width="100%"><A 
+                                href="http://www.microsoft.com/windows2000/techinfo/planning/server/serversteps.asp#heading3">Server 
+                                Configuration</A></TD></TR>
+                                <TR>
+                                <TD><IMG height=10 
+                                src="Step-by-Step Guide to a Common Infrastructure for Windows 2000 Server Deployment - Part 1 Installing a Windows 2000 Server as a Domain Controller_files/ts.gif" 
+                                width=1 border=0></TD>
+                                <TD><IMG height=10 
+                                src="Step-by-Step Guide to a Common Infrastructure for Windows 2000 Server Deployment - Part 1 Installing a Windows 2000 Server as a Domain Controller_files/ts.gif" 
+                                width=1 border=0></TD></TR></TBODY></TABLE>
+                                <TABLE cellSpacing=0 cellPadding=0 width="100%" 
+                                border=0>
+                                <TBODY>
+                                <TR>
+                                <TD class=componentBodyText vAlign=top><IMG 
+                                height=11 
+                                src="Step-by-Step Guide to a Common Infrastructure for Windows 2000 Server Deployment - Part 1 Installing a Windows 2000 Server as a Domain Controller_files/jump2.gif" 
+                                width=11 border=0></TD>
+                                <TD class=componentBodyText align=left 
+                                width="100%"><A 
+                                href="http://www.microsoft.com/windows2000/techinfo/planning/server/serversteps.asp#heading4">Server 
+                                Installation</A></TD></TR>
+                                <TR>
+                                <TD><IMG height=10 
+                                src="Step-by-Step Guide to a Common Infrastructure for Windows 2000 Server Deployment - Part 1 Installing a Windows 2000 Server as a Domain Controller_files/ts.gif" 
+                                width=1 border=0></TD>
+                                <TD><IMG height=10 
+                                src="Step-by-Step Guide to a Common Infrastructure for Windows 2000 Server Deployment - Part 1 Installing a Windows 2000 Server as a Domain Controller_files/ts.gif" 
+                                width=1 border=0></TD></TR></TBODY></TABLE>
+                                <TABLE cellSpacing=0 cellPadding=0 width="100%" 
+                                border=0>
+                                <TBODY>
+                                <TR>
+                                <TD class=componentBodyText vAlign=top><IMG 
+                                height=11 
+                                src="Step-by-Step Guide to a Common Infrastructure for Windows 2000 Server Deployment - Part 1 Installing a Windows 2000 Server as a Domain Controller_files/jump2.gif" 
+                                width=11 border=0></TD>
+                                <TD class=componentBodyText align=left 
+                                width="100%"><A 
+                                href="http://www.microsoft.com/windows2000/techinfo/planning/server/serversteps.asp#heading5">Configuring 
+                                Your Server as a Domain Controller</A></TD></TR>
+                                <TR>
+                                <TD><IMG height=10 
+                                src="Step-by-Step Guide to a Common Infrastructure for Windows 2000 Server Deployment - Part 1 Installing a Windows 2000 Server as a Domain Controller_files/ts.gif" 
+                                width=1 border=0></TD>
+                                <TD><IMG height=10 
+                                src="Step-by-Step Guide to a Common Infrastructure for Windows 2000 Server Deployment - Part 1 Installing a Windows 2000 Server as a Domain Controller_files/ts.gif" 
+                                width=1 border=0></TD></TR></TBODY></TABLE>
+                                <TABLE cellSpacing=0 cellPadding=0 width="100%" 
+                                border=0>
+                                <TBODY>
+                                <TR>
+                                <TD class=componentBodyText vAlign=top><IMG 
+                                height=11 
+                                src="Step-by-Step Guide to a Common Infrastructure for Windows 2000 Server Deployment - Part 1 Installing a Windows 2000 Server as a Domain Controller_files/jump2.gif" 
+                                width=11 border=0></TD>
+                                <TD class=componentBodyText align=left 
+                                width="100%"><A 
+                                href="http://www.microsoft.com/windows2000/techinfo/planning/server/serversteps.asp#heading6">Active 
+                                Directory</A></TD></TR>
+                                <TR>
+                                <TD><IMG height=10 
+                                src="Step-by-Step Guide to a Common Infrastructure for Windows 2000 Server Deployment - Part 1 Installing a Windows 2000 Server as a Domain Controller_files/ts.gif" 
+                                width=1 border=0></TD>
+                                <TD><IMG height=10 
+                                src="Step-by-Step Guide to a Common Infrastructure for Windows 2000 Server Deployment - Part 1 Installing a Windows 2000 Server as a Domain Controller_files/ts.gif" 
+                                width=1 border=0></TD></TR></TBODY></TABLE>
+                                <TABLE cellSpacing=0 cellPadding=0 width="100%" 
+                                border=0>
+                                <TBODY>
+                                <TR>
+                                <TD class=componentBodyText vAlign=top><IMG 
+                                height=11 
+                                src="Step-by-Step Guide to a Common Infrastructure for Windows 2000 Server Deployment - Part 1 Installing a Windows 2000 Server as a Domain Controller_files/jump2.gif" 
+                                width=11 border=0></TD>
+                                <TD class=componentBodyText align=left 
+                                width="100%"><A 
+                                href="http://www.microsoft.com/windows2000/techinfo/planning/server/serversteps.asp#heading7">Appendix 
+                                A: Active Directory Populace</A></TD></TR>
+                                <TR>
+                                <TD><IMG height=10 
+                                src="Step-by-Step Guide to a Common Infrastructure for Windows 2000 Server Deployment - Part 1 Installing a Windows 2000 Server as a Domain Controller_files/ts.gif" 
+                                width=1 border=0></TD>
+                                <TD><IMG height=10 
+                                src="Step-by-Step Guide to a Common Infrastructure for Windows 2000 Server Deployment - Part 1 Installing a Windows 2000 Server as a Domain Controller_files/ts.gif" 
+                                width=1 
+                                border=0></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></DIV><BR></SPAN><SPAN 
+                              id=donotprint>
+                              <TABLE cellSpacing=0 cellPadding=0 width=175 
+                              border=0>
+                                <TBODY>
+                                <TR vAlign=top align=left>
+                                <TD>
+                                <TABLE class=componentBorder id=headeridRelated 
+                                onmouseover="if (fBrowserOK) chngColour('idRelated')" 
+                                onmouseout="if (fBrowserOK) chngColour('idRelated')" 
+                                cellSpacing=0 cellPadding=0 width=175 border=0>
+                                <TBODY>
+                                <TR>
+                                <TD class=componentHeader id=articleidRelated 
+                                width=175><IMG 
+                                src="Step-by-Step Guide to a Common Infrastructure for Windows 2000 Server Deployment - Part 1 Installing a Windows 2000 Server as a Domain Controller_files/ts.gif" 
+                                width=6 border=0>Related Links</TD>
+                                <SCRIPT language=javascript 
+type=text/javascript>
+								<!--	
+								if (fBrowserOK) {
+                                document.write("<td style=\"width:1px;background-color:#999999;\"></td>")
+								document.write("<td id=\"arrowColidRelated\" bgcolor=\"#6699cc\" width=\"21\" height=\"17\"><img id=\"ImgArrowidRelated\" src=" + sImgDefaultArrow + " alt=\"collapse menu\" border=\"0\" style=\"cursor:hand;\" onclick=\"change_display\(\'headingidRelated\'\)\"></td>")
+								} 
+								//-->
+								</SCRIPT>
+                                </TR></TBODY></TABLE></TD></TR></TBODY></TABLE>
+                              <DIV id=headingidRelated>
+                              <TABLE class=componentBorder id=mainidRelated 
+                              style="BORDER-TOP: 0px" cellSpacing=0 
+                              cellPadding=8 width=175 border=0>
+                                <TBODY>
+                                <TR vAlign=top align=left>
+                                <TD width="100%">
+                                <TABLE cellSpacing=0 cellPadding=0 width="100%" 
+                                border=0>
+                                <TBODY>
+                                <TR>
+                                <TD class=componentBodyText vAlign=top><IMG 
+                                height=11 
+                                src="Step-by-Step Guide to a Common Infrastructure for Windows 2000 Server Deployment - Part 1 Installing a Windows 2000 Server as a Domain Controller_files/reLink2.gif" 
+                                width=11 border=0></TD>
+                                <TD class=componentBodyText align=left 
+                                width="100%"><A 
+                                href="http://www.microsoft.com/windows2000/techinfo/planning/server/prosteps.asp">Part 
+                                2: Installing a Windows 2000 Professional 
+                                Workstation and Connecting it to a 
+                                Domain</A></TD></TR>
+                                <TR>
+                                <TD><IMG height=10 
+                                src="Step-by-Step Guide to a Common Infrastructure for Windows 2000 Server Deployment - Part 1 Installing a Windows 2000 Server as a Domain Controller_files/ts.gif" 
+                                width=1 border=0></TD>
+                                <TD><IMG height=10 
+                                src="Step-by-Step Guide to a Common Infrastructure for Windows 2000 Server Deployment - Part 1 Installing a Windows 2000 Server as a Domain Controller_files/ts.gif" 
+                                width=1 border=0></TD></TR></TBODY></TABLE>
+                                <TABLE cellSpacing=0 cellPadding=0 width="100%" 
+                                border=0>
+                                <TBODY>
+                                <TR>
+                                <TD class=componentBodyText vAlign=top><IMG 
+                                height=11 
+                                src="Step-by-Step Guide to a Common Infrastructure for Windows 2000 Server Deployment - Part 1 Installing a Windows 2000 Server as a Domain Controller_files/reLink2.gif" 
+                                width=11 border=0></TD>
+                                <TD class=componentBodyText align=left 
+                                width="100%"><A 
+                                href="http://www.microsoft.com/windows2000/en/server/help/">Windows 
+                                2000 Server Online Help</A></TD></TR>
+                                <TR>
+                                <TD><IMG height=10 
+                                src="Step-by-Step Guide to a Common Infrastructure for Windows 2000 Server Deployment - Part 1 Installing a Windows 2000 Server as a Domain Controller_files/ts.gif" 
+                                width=1 border=0></TD>
+                                <TD><IMG height=10 
+                                src="Step-by-Step Guide to a Common Infrastructure for Windows 2000 Server Deployment - Part 1 Installing a Windows 2000 Server as a Domain Controller_files/ts.gif" 
+                                width=1 border=0></TD></TR></TBODY></TABLE>
+                                <TABLE cellSpacing=0 cellPadding=0 width="100%" 
+                                border=0>
+                                <TBODY>
+                                <TR>
+                                <TD class=componentBodyText vAlign=top><IMG 
+                                height=11 
+                                src="Step-by-Step Guide to a Common Infrastructure for Windows 2000 Server Deployment - Part 1 Installing a Windows 2000 Server as a Domain Controller_files/reLink2.gif" 
+                                width=11 border=0></TD>
+                                <TD class=componentBodyText align=left 
+                                width="100%"><A 
+                                href="http://www.microsoft.com/windows2000/techinfo/reskit/dpg/default.asp">Windows 
+                                2000 Planning and Deployment Guide</A></TD></TR>
+                                <TR>
+                                <TD><IMG height=10 
+                                src="Step-by-Step Guide to a Common Infrastructure for Windows 2000 Server Deployment - Part 1 Installing a Windows 2000 Server as a Domain Controller_files/ts.gif" 
+                                width=1 border=0></TD>
+                                <TD><IMG height=10 
+                                src="Step-by-Step Guide to a Common Infrastructure for Windows 2000 Server Deployment - Part 1 Installing a Windows 2000 Server as a Domain Controller_files/ts.gif" 
+                                width=1 border=0></TD></TR></TBODY></TABLE>
+                                <TABLE cellSpacing=0 cellPadding=0 width="100%" 
+                                border=0>
+                                <TBODY>
+                                <TR>
+                                <TD class=componentBodyText vAlign=top><IMG 
+                                height=11 
+                                src="Step-by-Step Guide to a Common Infrastructure for Windows 2000 Server Deployment - Part 1 Installing a Windows 2000 Server as a Domain Controller_files/reLink2.gif" 
+                                width=11 border=0></TD>
+                                <TD class=componentBodyText align=left 
+                                width="100%"><A 
+                                href="http://computingcentral.msn.com/software/OS/nt2k/">Windows 
+                                2000/NT Forum</A></TD></TR>
+                                <TR>
+                                <TD><IMG height=10 
+                                src="Step-by-Step Guide to a Common Infrastructure for Windows 2000 Server Deployment - Part 1 Installing a Windows 2000 Server as a Domain Controller_files/ts.gif" 
+                                width=1 border=0></TD>
+                                <TD><IMG height=10 
+                                src="Step-by-Step Guide to a Common Infrastructure for Windows 2000 Server Deployment - Part 1 Installing a Windows 2000 Server as a Domain Controller_files/ts.gif" 
+                                width=1 
+                                border=0></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></DIV><BR></SPAN><!-- Floating SideBar Area END --></TD>
+                            <TD><IMG height=1 alt=* 
+                              src="Step-by-Step Guide to a Common Infrastructure for Windows 2000 Server Deployment - Part 1 Installing a Windows 2000 Server as a Domain Controller_files/ts.gif" 
+                              width=10></TD></TR>
+                          <TR>
+                            <TD><IMG height=4 alt=* 
+                              src="Step-by-Step Guide to a Common Infrastructure for Windows 2000 Server Deployment - Part 1 Installing a Windows 2000 Server as a Domain Controller_files/ts.gif" 
+                              width=1></TD>
+                            <TD><IMG height=1 alt=* 
+                              src="Step-by-Step Guide to a Common Infrastructure for Windows 2000 Server Deployment - Part 1 Installing a Windows 2000 Server as a Domain Controller_files/ts.gif" 
+                              width=1></TD></TR></TBODY></TABLE><!-- Main Content Area START --><A 
+                        name=top></A><A name=heading1></A>
+                        <H2>Introduction</H2>
+                        <P>This document explains how to build a common network 
+                        infrastructure, beginning with the 
+                        Windows<SUP>®</SUP>&nbsp;2000 Server operating system 
+                        configured as a domain controller. This common 
+                        infrastructure allows you to learn about and evaluate 
+                        Windows<SUP>®</SUP>&nbsp;2000 Server and 
+                        Windows&nbsp;2000 Professional. As you deploy the 
+                        systems, think about how you will use them in your 
+                        organization.</P>
+                        <P>This document, which is part one of two, shows how to 
+                        install a server as a domain controller and populate a 
+                        sample Active Directory<SUP>®</SUP> service structure. 
+                        Part two describes steps to install a Windows&nbsp;2000 
+                        Professional client and connect that client to the 
+                        domain controller. First, complete the procedures in 
+                        this document. Then use <A 
+                        href="http://www.microsoft.com/windows2000/techinfo/planning/server/prosteps.asp">"Part 
+                        Two: Installing and Connecting a Windows&nbsp;2000 
+                        Professional Workstation and Connecting it to a 
+                        Domain"</A> to complete your base infrastructure.</P>
+                        <P>All other Windows&nbsp;2000 step-by-step guides 
+                        assume that you have this common infrastructure. If you 
+                        do not wish to follow this common infrastructure, you 
+                        will need to make the appropriate allowances as you use 
+                        the other guides.</P>
+                        <P>Administrators can evaluate Windows&nbsp;2000 by 
+                        building the infrastructure in their labs. Follow the 
+                        steps outlined in this document and <A 
+                        href="http://www.microsoft.com/windows2000/techinfo/planning/server/prosteps.asp">"Part 
+                        II: Installing and Connecting a Windows&nbsp;2000 
+                        Professional Workstation and Connecting it to a 
+                        Domain."</A> Follow other step-by-step guides on this 
+                        site to learn about and evaluate features and 
+                        services.</P>
+                        <TABLE id=donotprint cellSpacing=0 cellPadding=0 
+                        border=0>
+                          <TBODY>
+                          <TR vAlign=bottom>
+                            <TD align=left><A 
+                              href="http://www.microsoft.com/windows2000/techinfo/planning/server/serversteps.asp#top"><IMG 
+                              height=20 alt="To top of page" 
+                              src="Step-by-Step Guide to a Common Infrastructure for Windows 2000 Server Deployment - Part 1 Installing a Windows 2000 Server as a Domain Controller_files/top_v1.gif" 
+                              width=40 border=0></A></TD></TR></TBODY></TABLE><A 
+                        name=heading2></A>
+                        <H2>Hardware Requirements</H2>
+                        <P>These are the hardware requirements for the common 
+                        infrastructure:</P>
+                        <TABLE class=tblMatrix cellSpacing=0 
+                        borderColorDark=#999999 cellPadding=5 
+                        borderColorLight=#ffffff border=1 frame=below>
+                          <TBODY>
+                          <TR><!-- BEGIN CELL // row-1 column-1 -->
+                            <TD class=tblHeader vAlign=top>Item</TD><!-- BEGIN CELL // row-1 column-2 -->
+                            <TD class=tblHeader vAlign=top>Quantity</TD><!-- BEGIN CELL // row-1 column-3 -->
+                            <TD class=tblHeader vAlign=top>Comments</TD></TR>
+                          <TR><!-- BEGIN CELL // row-2 column-1 -->
+                            <TD class=tblColOne vAlign=top>Server(s)</TD><!-- BEGIN CELL // row-2 column-2 -->
+                            <TD class=tblData vAlign=top>1</TD><!-- BEGIN CELL // row-2 column-3 -->
+                            <TD class=tblData vAlign=top>Capable of running 
+                              Windows 2000 Server</TD></TR>
+                          <TR><!-- BEGIN CELL // row-3 column-1 -->
+                            <TD class=tblColOne vAlign=top>Workstation(s)</TD><!-- BEGIN CELL // row-3 column-2 -->
+                            <TD class=tblData vAlign=top>As Needed</TD><!-- BEGIN CELL // row-3 column-3 -->
+                            <TD class=tblData vAlign=top>Capable of running 
+                              Windows 2000 Professional</TD></TR>
+                          <TR><!-- BEGIN CELL // row-4 column-1 -->
+                            <TD class=tblColOne vAlign=top>Network Hub(s)</TD><!-- BEGIN CELL // row-4 column-2 -->
+                            <TD class=tblData vAlign=top>As Needed</TD><!-- BEGIN CELL // row-4 column-3 -->
+                            <TD class=tblData vAlign=top>A private network is 
+                              recommended</TD></TR>
+                          <TR><!-- BEGIN CELL // row-5 column-1 -->
+                            <TD class=tblColOne vAlign=top>Remote Access 
+                              Hardware</TD><!-- BEGIN CELL // row-5 column-2 -->
+                            <TD class=tblData vAlign=top>As Needed</TD><!-- BEGIN CELL // row-5 column-3 -->
+                            <TD class=tblData vAlign=top>For testing slow-link 
+                              and remote connections</TD></TR>
+                          <TR><!-- BEGIN CELL // row-6 column-1 -->
+                            <TD class=tblColOne vAlign=top>Network Interface 
+                              Cards</TD><!-- BEGIN CELL // row-6 column-2 -->
+                            <TD class=tblData vAlign=top>As Needed</TD><!-- BEGIN CELL // row-6 column-3 -->
+                            <TD class=tblData vAlign=top></TD></TR>
+                          <TR><!-- BEGIN CELL // row-7 column-1 -->
+                            <TD class=tblColOne vAlign=top>Backup Device</TD><!-- BEGIN CELL // row-7 column-2 -->
+                            <TD class=tblData vAlign=top>Optional</TD><!-- BEGIN CELL // row-7 column-3 -->
+                            <TD class=tblData vAlign=top>RS-232 </TD></TR>
+                          <TR><!-- BEGIN CELL // row-8 column-1 -->
+                            <TD class=tblColOne vAlign=top>UPS</TD><!-- BEGIN CELL // row-8 column-2 -->
+                            <TD class=tblData vAlign=top>Optional</TD><!-- BEGIN CELL // row-8 column-3 -->
+                            <TD class=tblData vAlign=top>To protect the 
+                            servers</TD></TR>
+                          <TR><!-- BEGIN CELL // row-9 column-1 -->
+                            <TD class=tblColOne vAlign=top>Printer</TD><!-- BEGIN CELL // row-9 column-2 -->
+                            <TD class=tblData vAlign=top>Optional</TD><!-- BEGIN CELL // row-9 column-3 -->
+                            <TD class=tblData vAlign=top>To print-out 
+                              configuration information and other 
+                          tests</TD></TR></TBODY></TABLE><BR>
+                        <P><B>Notes</B></P>
+                        <UL>
+                          <LI>An Intel–processor-based server running 
+                          Windows&nbsp;2000 Server must have at least 64 
+                          megabytes (MB) of RAM. Microsoft recommends that the 
+                          server have several gigabytes of disk storage. In 
+                          addition, servers should be equipped with high-speed 
+                          network interface cards. 
+                          <LI>Use a sufficient number of workstations to 
+                          simulate a variety of workstation environments, 
+                          including your organization’s typical desktop, roaming 
+                          user, mobile user, and any other configurations that 
+                          may be appropriate. These computers must be capable of 
+                          running Windows&nbsp;2000 Professional. Microsoft 
+                          recommends a minimum of 32 MB of RAM for Intel 
+                          processor-based workstations. For best results, make 
+                          sure that these computers have sufficient RAM and disk 
+                          storage. 
+                          <LI>A private network is recommended; therefore, you 
+                          need sufficient network hubs and other networking 
+                          hardware to connect all of the workstations and 
+                          servers to a single network. 
+                          <LI>You can use the Routing and Remote Access Service 
+                          (RRAS) to evaluate the Windows&nbsp;2000 Change and 
+                          Configuration Management features in a remote user 
+                          environment (where users only have dial-in access). 
+                          Approved modems and asynchronous multi-port hardware 
+                          are necessary to use RRAS. 
+                          <LI>The most current information about hardware 
+                          requirements and compatibility for servers, clients, 
+                          and peripherals is available at the <A 
+                          href="http://www.microsoft.com/windows2000/server/howtobuy/upgrading/compat/default.asp">Windows&nbsp;2000 
+                          Product Compatibility</A> site. </LI></UL>
+                        <H3>Additional Server Parameters</H3>
+                        <P>If you add additional servers, continue the server 
+                        naming convention as shown.</P>
+                        <TABLE class=tblMatrix cellSpacing=0 
+                        borderColorDark=#999999 cellPadding=5 width=400 
+                        borderColorLight=#ffffff border=1 frame=below>
+                          <TBODY>
+                          <TR><!-- BEGIN CELL // row-1 column-1 -->
+                            <TD class=tblHeader vAlign=top>Parameter</TD><!-- BEGIN CELL // row-1 column-2 -->
+                            <TD class=tblHeader vAlign=top>Value</TD></TR>
+                          <TR><!-- BEGIN CELL // row-2 column-1 -->
+                            <TD class=tblColOne vAlign=top>Computer Name(s)</TD><!-- BEGIN CELL // row-2 column-2 -->
+                            <TD class=tblData 
+                              vAlign=top>HQ-RES-SRV-02-<BR>HQ-RES-SRV-nn</TD></TR></TBODY></TABLE><BR>
+                        <TABLE id=donotprint cellSpacing=0 cellPadding=0 
+                        border=0>
+                          <TBODY>
+                          <TR vAlign=bottom>
+                            <TD align=left><A 
+                              href="http://www.microsoft.com/windows2000/techinfo/planning/server/serversteps.asp#top"><IMG 
+                              height=20 alt="To top of page" 
+                              src="Step-by-Step Guide to a Common Infrastructure for Windows 2000 Server Deployment - Part 1 Installing a Windows 2000 Server as a Domain Controller_files/top_v1.gif" 
+                              width=40 border=0></A></TD></TR></TBODY></TABLE><A 
+                        name=heading3></A>
+                        <H2>Server Configuration</H2>
+                        <H3>Overview</H3>
+                        <P>Figure 1 below shows the basic server 
+                        configuration.</P><IMG height=222 
+                        alt="The Server Configuration" 
+                        src="Step-by-Step Guide to a Common Infrastructure for Windows 2000 Server Deployment - Part 1 Installing a Windows 2000 Server as a Domain Controller_files/fig1_servconf.gif" 
+                        width=300> 
+                        <P><I>Figure 1. The Server Configuration</I></P>
+                        <H3>Server Disk Configuration</H3>
+                        <P>To use a single server for the infrastructure in this 
+                        guide, you need a server with either two disk drives or 
+                        a single disk drive with two partitions. (Some 
+                        step-by-step guides in this series require additional 
+                        servers or other equipment; those additions are 
+                        addressed in the specific guide.)</P>
+                        <P>The first disk or partition holds Windows&nbsp;2000 
+                        and the other files for the common infrastructure, such 
+                        as the Windows Installer packages and application source 
+                        files.</P>
+                        <P>The second disk or partition is reserved for 
+                        procedures in other step-by-step guides. For example, it 
+                        holds the operating system images for the "Step-by-Step 
+                        Guide to Remote OS Installation."</P>
+                        <P>Each disk or partition must hold several gigabytes of 
+                        information, and each disk or partition must be 
+                        formatted for the NTFS file system. The steps for 
+                        creating partitions and formatting them are contained 
+                        within this guide.</P>
+                        <TABLE id=donotprint cellSpacing=0 cellPadding=0 
+                        border=0>
+                          <TBODY>
+                          <TR vAlign=bottom>
+                            <TD align=left><A 
+                              href="http://www.microsoft.com/windows2000/techinfo/planning/server/serversteps.asp#top"><IMG 
+                              height=20 alt="To top of page" 
+                              src="Step-by-Step Guide to a Common Infrastructure for Windows 2000 Server Deployment - Part 1 Installing a Windows 2000 Server as a Domain Controller_files/top_v1.gif" 
+                              width=40 border=0></A></TD></TR></TBODY></TABLE><A 
+                        name=heading4></A>
+                        <H2>Server Installation</H2>
+                        <P>This installation procedure starts with making boot 
+                        disks. You start the installation after booting from 
+                        these disks. This procedure is used for these guides so 
+                        that you can easily reconfigure the disk partitions.</P>
+                        <P><B>Note</B>: <I>When you configure partitions and 
+                        format drives, any data on the server hard drive is 
+                        destroyed.</I></P>
+                        <H3>Making the Windows&nbsp;2000 Installation Floppy 
+                        Disks</H3>
+                        <P>You need four formatted disks and the 
+                        Windows&nbsp;2000 Server CD. On a computer running a 
+                        32-bit version of the Windows operating system:</P>
+                        <OL>
+                          <LI>Insert the Windows&nbsp;2000 Server CD into the 
+                          CD-ROM drive.<BR><BR>
+                          <LI>When prompted, <B>Would you like to upgrade to 
+                          Windows&nbsp;2000</B>, click <B>No</B>.<BR><BR>
+                          <LI>On the Windows&nbsp;2000 Server CD splash screen, 
+                          click <B>Browse This CD</B>.<BR><BR>
+                          <LI>When a list of folders appears, double-click the 
+                          <B>BOOTDISK</B> folder.<BR><BR>
+                          <LI>Double-click <B>MAKEBT32</B>.<BR><BR>
+                          <LI>At the prompt, <B>Please specify the floppy drive 
+                          to copy the images to</B>, type: <B>A</B>.<BR><BR>
+                          <LI>Insert the first disk, and press 
+                          <B>Enter</B>.<BR><BR>
+                          <LI>Follow the instructions to create the remaining 
+                          three disks.<BR><BR><B>Best Practice</B>: <I>Label the 
+                          disks as prompted during the creation process so that 
+                          you will know the correct order to use them for 
+                          Setup.</I><BR><BR>
+                          <LI>Close the <B>BOOTDISK</B> folder and close the 
+                          Windows&nbsp;2000 CD splash screen.<BR><BR></LI></OL>
+                        <H3>Beginning the Installation</H3>
+                        <P>Setup creates the disk partitions on the computer 
+                        running Windows&nbsp;2000 Server, formats the drive, and 
+                        then copies installation files from the CD to the 
+                        server.</P>
+                        <P><B>Note</B>: <I>These instructions assume you are 
+                        installing Windows&nbsp;2000 Server on a computer that 
+                        is not already running Windows. If you are upgrading 
+                        from an older version of Windows, some of the 
+                        installation steps may differ.</I></P>
+                        <OL>
+                          <LI>Insert the Windows&nbsp;2000 Server installation 
+                          floppy disk number one.<BR><BR>
+                          <LI>Restart the computer. The Windows&nbsp;2000 Server 
+                          installation begins.<BR><BR>
+                          <LI>Insert the remaining three Windows&nbsp;2000 
+                          Server installation disks as prompted by 
+                          Windows&nbsp;2000 Setup.<BR><BR>
+                          <LI>At the <B>Welcome to Setup</B> screen, press 
+                          <B>Enter</B>.<BR><BR>
+                          <LI>Review and if acceptable, agree to the license 
+                          agreement by pressing <B>F8</B>.<BR><BR><B>Note</B>: 
+                          <I>If you had a previous version of Windows&nbsp;2000 
+                          installed on this server, you might get a message 
+                          asking if you want to repair the drive. Press 
+                          <B>Esc</B> to continue and not repair the 
+                          drive.</I><BR><BR>
+                          <LI>Follow the instructions to delete all existing 
+                          disk partitions. The exact steps will differ based on 
+                          the number and type of partitions already on the 
+                          computer. Continue to delete partitions until all disk 
+                          space is labeled as <B>Unpartitioned 
+space</B>.<BR><BR>
+                          <LI>When all disk space is labeled as <B>Unpartitioned 
+                          space</B>, press <B>C</B> to create a partition in the 
+                          unpartitioned space.<BR><BR>
+                          <LI>If your server has a single disk drive, split the 
+                          available disk space in half to create two equal sized 
+                          partitions. Delete the total <B>space default 
+                          value</B>. Type the value of half your total disk 
+                          space at the <B>Create partition of size (in MB)</B> 
+                          prompt. Press <B>Enter</B>. (If your server has two 
+                          disk drives, type the total size of the first drive at 
+                          this prompt.)<BR><BR>
+                          <LI>After the <B>New (Unformatted)</B> partition is 
+                          created, press <B>Enter</B>.<BR><BR>
+                          <LI>Select <B>Format the partition using the NTFS file 
+                          system</B> (the default selection) and press 
+                          <B>Enter</B>. Remove the floppy disk from the 
+                          drive.<BR><BR></LI></OL>
+                        <P>Windows&nbsp;2000 Setup formats the partition and 
+                        then copies the files from the Windows&nbsp;2000 Server 
+                        CD to the hard drive. The computer restarts, and the 
+                        Windows&nbsp;2000 Installation Program continues.</P>
+                        <H3>Continuing the Installation</H3>
+                        <P>This procedure continues the installation with the 
+                        Windows&nbsp;2000 Server Setup Wizard.</P>
+                        <OL>
+                          <LI>The <B>Welcome to the Windows&nbsp;2000 Setup</B> 
+                          Wizard appears, click <B>Next</B>. Windows&nbsp;2000 
+                          then detects and installs devices. This can take 
+                          several minutes, and during the process your screen 
+                          may flicker.<BR><BR>
+                          <LI>In the <B>Regional Settings</B> dialog box, make 
+                          changes required for your locale (typically, none are 
+                          required for the United States), and click 
+                          <B>Next</B>.<BR><BR>
+                          <LI>In the <B>Personalize Your Software</B> dialog, 
+                          type <B>Mike Nash</B> in the <B>Name</B> box and type 
+                          <B>Reskit</B> in the <B>Organization</B> box. Click 
+                          <B>Next</B>.<BR><BR>
+                          <LI>Type the <B>Product Key</B> (found on the back of 
+                          your Windows&nbsp;2000 CD case) in the text boxes 
+                          provided. Click <B>Next</B>.<BR><BR>
+                          <LI>In the <B>Licensing Modes</B> dialog box, select 
+                          the appropriate licensing mode for your organization 
+                          and click <B>Next</B>.<BR><BR>
+                          <LI>In the <B>Computer Name and Administrator 
+                          Password</B> dialog box, type the new computer name 
+                          <B>HQ-RES-DC-01</B> in the computer name box and click 
+                          <B>Next</B>.<BR><BR><B>Best Practice</B>: <I>To 
+                          facilitate the steps in these guides, the 
+                          Administrator password is left blank and there is no 
+                          password. This is bad security practice. When 
+                          installing a server for your production network, a 
+                          password should always be set.</I><BR><BR>
+                          <LI>In the <B>Windows&nbsp;2000 Components</B> dialog 
+                          box, click <B>Next</B> . Wait while networking 
+                          components are installed. This takes a few 
+                          minutes.<BR><BR>
+                          <LI>In the <B>Date and Time Settings</B> dialog, 
+                          correct the current date and time if necessary and 
+                          click <B>Next</B>.<BR><BR>
+                          <LI>In the <B>Networking Settings</B> dialog, make 
+                          sure <B>Typical Settings</B> is selected and then 
+                          click <B>Next</B>.<BR><BR>
+                          <LI>In the <B>Workgroups or Computer Domain</B> dialog 
+                          box, <B>No</B> is selected by default, then click 
+                          <B>Next</B>.<BR><BR><B>Note</B>: <I>A domain name 
+                          could be specified at this point, but this guide uses 
+                          the Configure Your Server Wizard to create the domain 
+                          name at a later time.</I><BR><BR>Windows&nbsp;2000 
+                          Server Installation continues and configures the 
+                          necessary components. This takes a few 
+minutes.<BR><BR>
+                          <LI>When you reach the <B>Completing the 
+                          Windows&nbsp;2000 Setup</B> Wizard, remove the CD-ROM 
+                          from the drive and click 
+<B>Finish</B>.<BR><BR></LI></OL>
+                        <P>The server restarts and the operating system loads 
+                        from the hard drive.</P>
+                        <TABLE id=donotprint cellSpacing=0 cellPadding=0 
+                        border=0>
+                          <TBODY>
+                          <TR vAlign=bottom>
+                            <TD align=left><A 
+                              href="http://www.microsoft.com/windows2000/techinfo/planning/server/serversteps.asp#top"><IMG 
+                              height=20 alt="To top of page" 
+                              src="Step-by-Step Guide to a Common Infrastructure for Windows 2000 Server Deployment - Part 1 Installing a Windows 2000 Server as a Domain Controller_files/top_v1.gif" 
+                              width=40 border=0></A></TD></TR></TBODY></TABLE><A 
+                        name=heading5></A>
+                        <H2>Configuring Your Server as a Domain Controller</H2>
+                        <P>Dynamic Host Configuration Protocol (DHCP), Domain 
+                        Name Service (DNS), and DCPromo (the command-line tool 
+                        that creates DNS and Active Directory) can be installed 
+                        manually or by using the <B>Windows&nbsp;2000 Configure 
+                        Your Server</B> Wizard. This guide uses the wizard; the 
+                        manual procedures are not covered here.</P>
+                        <OL>
+                          <LI>Press <B>Ctrl-Alt-Del</B> and log on to the server 
+                          as <B>administrator</B>. Leave the password 
+                          blank.<BR><BR>
+                          <LI>When the <B>Windows&nbsp;2000 Configure Your 
+                          Server</B> page appears, select <B>This is the only 
+                          server in my network</B> and click 
+<B>Next</B>.<BR><BR>
+                          <LI>Click <B>Next</B> to configure the server as a 
+                          domain controller and set up Active Directory, DHCP, 
+                          and DNS.<BR><BR>
+                          <LI>On the <B>What do you want to name your domain 
+                          page</B>, type <B>Reskit</B>.<BR><BR>
+                          <LI>In the Domain name box, type <B>com</B>. Click on 
+                          the screen outside of the textbox to see the Preview 
+                          of the Active Directory domain name. Click 
+                          <B>Next</B>.<BR><BR><B>Note</B>: <I>As shown in Figure 
+                          2 below, the combined name appears as reskit.com in 
+                          the Preview of Active Directory domain name box. The 
+                          wizard puts the dot (.) into the name.</I><BR><BR><IMG 
+                          height=234 alt="Configure Your Server Wizard" 
+                          src="Step-by-Step Guide to a Common Infrastructure for Windows 2000 Server Deployment - Part 1 Installing a Windows 2000 Server as a Domain Controller_files/fig2_confwiz.gif" 
+                          width=330> <BR><BR><I>Figure 2. Configure Your Server 
+                          Wizard</I><BR><BR>
+                          <LI>Click <B>Next</B> to run the wizard. When 
+                          prompted, insert the Windows&nbsp;2000 Server CD-ROM. 
+                          When the wizard is finished, the machine 
+                          reboots.<BR><BR></LI></OL>
+                        <P>The <B>Configure Your Server</B> Wizard installs DNS 
+                        and DHCP and configures DNS, DHCP, and Active Directory. 
+                        The default values set by the wizard are:</P>
+                        <TABLE class=tblMatrix cellSpacing=0 
+                        borderColorDark=#999999 cellPadding=5 width=400 
+                        borderColorLight=#ffffff border=1 frame=below>
+                          <TBODY>
+                          <TR><!-- BEGIN CELL // row-1 column-1 -->
+                            <TD class=tblColOneTrans vAlign=top>DHCP Scope: 
+</TD><!-- BEGIN CELL // row-1 column-2 -->
+                            <TD class=tblData 
+                          vAlign=top>10.0.0.3-10.0.0.254</TD></TR>
+                          <TR><!-- BEGIN CELL // row-2 column-1 -->
+                            <TD class=tblColOneTrans vAlign=top>Preferred DNS 
+                              Server:</TD><!-- BEGIN CELL // row-2 column-2 -->
+                            <TD class=tblData vAlign=top>127.0.0.1</TD></TR>
+                          <TR><!-- BEGIN CELL // row-3 column-1 -->
+                            <TD class=tblColOneTrans vAlign=top>IP address:</TD><!-- BEGIN CELL // row-3 column-2 -->
+                            <TD class=tblData vAlign=top>10.10.1.1</TD></TR>
+                          <TR><!-- BEGIN CELL // row-4 column-1 -->
+                            <TD class=tblColOneTrans vAlign=top>Subnet 
+mask:</TD><!-- BEGIN CELL // row-4 column-2 -->
+                            <TD class=tblData 
+                          vAlign=top>255.0.0.0</TD></TR></TBODY></TABLE><BR>
+                        <P><B>Reskit.com</B> is the Active Directory domain and 
+                        DNS name, and <B>reskit</B> is the down-level domain 
+                        name.</P>
+                        <H3>Format the Second Disk Drive or Partition</H3>
+                        <P><B>Warning</B>: <I>Formatting the partition destroys 
+                        any data on the partition. Make sure you do this only if 
+                        necessary, and that you select the correct 
+                        partition.</I> 
+                        <OL>
+                          <LI>Log on to the server as the Administrator.<BR><BR>
+                          <LI>Clear the <B>Show this screen at start-up</B> 
+                          check box in the <B>Configure Your Server</B> Wizard, 
+                          and close the wizard.<BR><BR>
+                          <LI>Click <B>Start</B>, point to <B>Programs</B>, then 
+                          point to <B>Administrative Tools</B>, and click 
+                          <B>Computer Management</B>. The Computer Management 
+                          snap-in appears.<BR><BR>
+                          <LI>Click the <B>+</B> next to <B>Storage</B> if the 
+                          folder is not already expanded.<BR><BR>
+                          <LI>Click the <B>Disk Management</B> folder.<BR><BR>
+                          <LI>Right-click <B>unallocated disk space</B> and 
+                          click <B>Create partition</B>.<BR><BR>
+                          <LI>The <B>Welcome to the Create Partition</B> wizard 
+                          appears. Click <B>Next</B>.<BR><BR>
+                          <LI>Select <B>Extended Partition</B>, and click 
+                          <B>Next</B>.<BR><BR>
+                          <LI>Accept the specified partition size by clicking 
+                          <B>Next</B>, and then click <B>Finish</B>.<BR><BR>
+                          <LI>Right-click <B>Free space</B> and then click 
+                          <B>Create logical drive</B>.<BR><BR>
+                          <LI>The <B>Welcome to the Create Partition</B> wizard 
+                          appears. Click <B>Next</B>.<BR><BR>
+                          <LI>Select <B>Logical drive</B>, and click 
+                          <B>Next</B>.<BR><BR>
+                          <LI>Accept the specified partition size by clicking 
+                          <B>Next</B>.<BR><BR>
+                          <LI>Accept the default drive letter by clicking 
+                          <B>Next</B>.<BR><BR>
+                          <LI>On the Format Partition page, accept the defaults 
+                          for File system to use (NTFS format and the entire 
+                          size of the partition), Allocation unit size, and 
+                          Volume label. Click <B>Next</B> and then click 
+                          <B>Finish</B>. The drive or partition will be 
+                          formatted. This may take some time depending on the 
+                          size of the disk and the speed of the computer. At the 
+                          end, your window should look similar to Figure 3 
+                          below.<BR><BR><IMG height=191 
+                          alt="Disk Management Snap-In Window" 
+                          src="Step-by-Step Guide to a Common Infrastructure for Windows 2000 Server Deployment - Part 1 Installing a Windows 2000 Server as a Domain Controller_files/fig3_diskmgmt.gif" 
+                          width=333> <BR><BR><I>Figure 3. Disk Management 
+                          Snap-In Window</I><BR><BR><B>Note</B>: <I>You might 
+                          get an error message saying <B>Volume is open or in 
+                          use. Request cannot be completed</B>. This is a timing 
+                          error because you just created the partition. If you 
+                          receive this message, click <B>OK</B>, then 
+                          right-click the partition again and click 
+                          <B>Format</B>. Accept all defaults and click 
+                          <B>OK</B>. You receive a warning that continuing the 
+                          format will erase all data. Click 
+                          <B>OK</B>.</I><BR><BR>
+                          <LI>After the disk or partition has been formatted, 
+                          close the Disk management snap-in.<BR><BR></LI></OL>
+                        <TABLE id=donotprint cellSpacing=0 cellPadding=0 
+                        border=0>
+                          <TBODY>
+                          <TR vAlign=bottom>
+                            <TD align=left><A 
+                              href="http://www.microsoft.com/windows2000/techinfo/planning/server/serversteps.asp#top"><IMG 
+                              height=20 alt="To top of page" 
+                              src="Step-by-Step Guide to a Common Infrastructure for Windows 2000 Server Deployment - Part 1 Installing a Windows 2000 Server as a Domain Controller_files/top_v1.gif" 
+                              width=40 border=0></A></TD></TR></TBODY></TABLE><A 
+                        name=heading6></A>
+                        <H2>Active Directory</H2>
+                        <H3>Active Directory Sample Infrastructure</H3>
+                        <P>The common infrastructure is based on the fictitious 
+                        company <I>Reskit</I>.</P>
+                        <P>Reskit has the DNS name <I>reskit.com</I> that was 
+                        configured using the <B>Configure Your Server</B> Wizard 
+                        in the preceding section. Figure 4 below illustrates the 
+                        sample Active Directory structure.</P><IMG height=324 
+                        alt="Sample Active Directory Structure" 
+                        src="Step-by-Step Guide to a Common Infrastructure for Windows 2000 Server Deployment - Part 1 Installing a Windows 2000 Server as a Domain Controller_files/fig4_sampad.gif" 
+                        width=369> 
+                        <P><I>Figure 4. Sample Active Directory 
+Structure</I></P>
+                        <P>Of most interest here are the Domain (reskit.com), 
+                        and the Accounts, Headquarters, Production, Marketing, 
+                        Groups, Resources, Desktops, Laptops, and Servers 
+                        organizational units (OUs). These are represented by 
+                        circles in Figure 4. OUs exist for the delegation of 
+                        administration and for the application of Group Policy 
+                        and not to simply mirror a business organization. Please 
+                        see the <A 
+                        href="http://www.microsoft.com/windows2000/techinfo/planning/reskit/dpg.asp">Windows&nbsp;2000 
+                        Deployment Guide</A> chapter, "Designing the Active 
+                        Directory Structure," for an in-depth discussion on 
+                        creating an OU structure.</P>
+                        <H3>Populating Active Directory</H3>
+                        <P>This section describes how to manually create the 
+                        OUs, Users, and Security Groups outlined in Appendix A 
+                        of this document.</P>
+                        <P><B>To create Organizational Units and Groups</B></P>
+                        <OL>
+                          <LI>Click <B>Start</B>, point to <B>Programs</B>, then 
+                          point to <B>Administrative Tools</B>, and click 
+                          <B>Active Directory Users and Computers</B>.<BR><BR>
+                          <LI>Click the <B>+</B> next to <B>Reskit.com</B> to 
+                          expand it. Click <B>Reskit.com</B> itself to show its 
+                          contents in the right pane.<BR><BR>
+                          <LI>In the left pane, right-click <B>Reskit.com</B>, 
+                          point to <B>New</B>, and click <B>Organizational 
+                          Unit</B>.<BR><BR>
+                          <LI>Type <B>Accounts</B> in the name box, and click 
+                          <B>OK</B>.<BR><BR>
+                          <LI>Repeat steps 3 and 4 to create the <B>Groups</B> 
+                          and <B>Resources</B> OUs. These three OUs now show up 
+                          in the right pane.<BR><BR>
+                          <LI>Click <B>Accounts</B> in the <I>left pane</I>. Its 
+                          contents now display in the right pane (it is empty to 
+                          start).<BR><BR>
+                          <LI>Right-click <B>Accounts</B>, point to <B>New</B>, 
+                          and click <B>Organizational Unit</B>.<BR><BR>
+                          <LI>Type <B>Headquarters</B>, and click 
+                          <B>OK</B>.<BR><BR>
+                          <LI>Repeat steps 6 and 7 to create the 
+                          <B>Production</B> and <B>Marketing</B> OUs under 
+                          <B>Accounts</B>. When you have finished, the OU 
+                          structure should look like Figure 5 below:<BR><BR><IMG 
+                          height=194 alt="Create Organizational Units" 
+                          src="Step-by-Step Guide to a Common Infrastructure for Windows 2000 Server Deployment - Part 1 Installing a Windows 2000 Server as a Domain Controller_files/fig5_createOUs.gif" 
+                          width=350> <BR><BR><I>Figure 5. Create Organizational 
+                          Units</I><BR><BR>
+                          <LI>In the same way, create <B>Desktops</B>, 
+                          <B>Laptops</B>, and <B>Servers</B> under the Resources 
+                          OU.<BR><BR>
+                          <LI>Create the two security groups by right-clicking 
+                          <B>Groups</B>, then pointing to <B>New</B>, then 
+                          clicking <B>Group</B>. The two groups to add are 
+                          <B>Management</B> and <B>Non-management</B>. The 
+                          settings for each group should be <B>Global</B> and 
+                          <B>Security</B>. Click <B>OK</B> to create each 
+                          group.<BR><BR></LI></OL><BR>
+                        <H3>To create User Accounts</H3><BR>
+                        <OL>
+                          <LI>In the left-hand screen, click the <STRONG>+ 
+                          </STRONG>next to the <B>Accounts</B> folder to expand 
+                          it.<BR><BR>
+                          <LI>Click <B>Headquarters</B> (under <B>Accounts</B>) 
+                          in the left-hand screen. Its contents now display in 
+                          the right pane (it is empty at the beginning of this 
+                          procedure).<BR><BR>
+                          <LI>Right-click <B>Headquarters</B>, point to 
+                          <B>New</B>, and click <B>User</B>.<BR><BR>
+                          <LI>Type Teresa for the first name and Atkinson for 
+                          the last name. (Note that the full name is 
+                          automatically filled in at the full name box.)<BR><BR>
+                          <LI>Type <B>Teresa</B> for the <B>User logon name</B>. 
+                          The window will look like Figure 6 below:<BR><BR><IMG 
+                          height=255 alt="Adding a User" 
+                          src="Step-by-Step Guide to a Common Infrastructure for Windows 2000 Server Deployment - Part 1 Installing a Windows 2000 Server as a Domain Controller_files/fig6_addter.gif" 
+                          width=320> <BR><BR><I>Figure 6. Adding a 
+                          User</I><BR><BR>
+                          <LI>Click <B>Next</B>.<BR><BR>
+                          <LI>Click <B>Next</B> on the <B>Password</B> page to 
+                          accept the defaults.<BR><BR>
+                          <LI>Click <B>Finish</B>. Teresa Atkinson now displays 
+                          on the right-hand screen, as a user under 
+                          Reskit.com/Accounts/Headquarters.<BR><BR>
+                          <LI>Repeat steps 2 through 7, adding the names listed 
+                          in Appendix A for the Headquarters OU. When you are 
+                          finished, the Headquarters OU screen appears as 
+                          illustrated in Figure 7 below.<BR><BR><IMG height=231 
+                          alt="User listing in the Headquarters OU" 
+                          src="Step-by-Step Guide to a Common Infrastructure for Windows 2000 Server Deployment - Part 1 Installing a Windows 2000 Server as a Domain Controller_files/fig7_hqusers.gif" 
+                          width=350> <BR><BR><I>Figure 7. User listing in the 
+                          Headquarters OU</I><BR><BR>
+                          <LI>Repeat steps 1 through 8 to create the users in 
+                          the Production and Marketing OUs.<BR><BR></LI></OL><BR>
+                        <H3>To add Users to Security Groups</H3><BR>
+                        <OL>
+                          <LI>In the left pane, click <B>Groups</B>.<BR><BR>
+                          <LI>In the right pane, double-click the group 
+                          <B>Management</B>.<BR><BR>
+                          <LI>Click the <B>Members</B> tab and then click 
+                          <B>Add</B>.<BR><BR>
+                          <LI>Select the users in the upper pane as shown in 
+                          Figure 8 below by holding down the <B>ctrl</B> key 
+                          while clicking each name; click <B>Add</B> to add them 
+                          all at once. (The users who should be members of this 
+                          security group are listed in Appendix A.) Their names 
+                          will display in the bottom pane. Click <B>OK</B> to 
+                          accept.<BR><BR><IMG height=315 
+                          alt="The members of the Management group are drawn from three OUs." 
+                          src="Step-by-Step Guide to a Common Infrastructure for Windows 2000 Server Deployment - Part 1 Installing a Windows 2000 Server as a Domain Controller_files/fig8_mgmtgrp.gif" 
+                          width=300> <BR><BR><I>Figure 8. The members of the 
+                          Management group are drawn from three OUs.</I><BR><BR>
+                          <LI>Repeat steps 2 through 4 to add members to the 
+                          <B>Non-management</B> group.<BR><BR>
+                          <LI>Close the <B>Active Directory Users and 
+                          Computers</B> snap-in.<BR><BR></LI></OL><BR>
+                        <H3>Important Notes</H3>
+                        <P><I>The example company, organization, products, 
+                        people, and events depicted in&nbsp;this 
+                        step-by-step&nbsp;guide are fictitious. No association 
+                        with any real company, organization, product, person, or 
+                        event is intended or should be inferred.</I></P>
+                        <P><I>This common infrastructure is designed for use on 
+                        a private network. The fictitious company name and DNS 
+                        name used in the common infrastructure are not 
+                        registered for use on the Internet. Please do not use 
+                        this name on a public network or Internet.</I></P>
+                        <P><I>The Active Directory service structure for this 
+                        common infrastructure is designed to show how Microsoft 
+                        Windows&nbsp;2000 Change and Configuration Management 
+                        works and functions with the Active Directory. It was 
+                        not designed as a model for configuring an Active 
+                        Directory for any organization—for such information see 
+                        the Active Directory documentation.</I></P><BR>
+                        <TABLE id=donotprint cellSpacing=0 cellPadding=0 
+                        border=0>
+                          <TBODY>
+                          <TR vAlign=bottom>
+                            <TD align=left><A 
+                              href="http://www.microsoft.com/windows2000/techinfo/planning/server/serversteps.asp#top"><IMG 
+                              height=20 alt="To top of page" 
+                              src="Step-by-Step Guide to a Common Infrastructure for Windows 2000 Server Deployment - Part 1 Installing a Windows 2000 Server as a Domain Controller_files/top_v1.gif" 
+                              width=40 border=0></A></TD></TR></TBODY></TABLE><A 
+                        name=heading7></A>
+                        <H2>Appendix A: Active Directory Populace</H2>
+                        <P><B>Users</B></P>
+                        <TABLE borderColor=silver cellSpacing=0 cellPadding=2 
+                        width=550 border=1>
+                          <TBODY>
+                          <TR>
+                            <TH align=left width=100>
+                              <P>OU</P></TH>
+                            <TH align=left width=175>
+                              <P>Full Name</P></TD>
+                            <TH align=left width=100>
+                              <P>Login Name</P></TH>
+                            <TH align=left width=175>
+                              <P>Group Membership</P></TH></TR>
+                          <TR>
+                            <TD>
+                              <P>Headquarters</P></TD>
+                            <TD>
+                              <P>Teresa Atkinson</P></TD>
+                            <TD>
+                              <P>Teresa</P></TD>
+                            <TD>
+                              <P>Management</P></TD></TR>
+                          <TR>
+                            <TD>
+                              <P>&nbsp;</P></TD>
+                            <TD>
+                              <P>Paul West</P></TD>
+                            <TD>
+                              <P>Paul</P></TD>
+                            <TD>
+                              <P>Management</P></TD></TR>
+                          <TR>
+                            <TD>
+                              <P>&nbsp;</P></TD>
+                            <TD>
+                              <P>Arlette Cox</P></TD>
+                            <TD>
+                              <P>Arlette</P></TD>
+                            <TD>
+                              <P>Management</P></TD></TR>
+                          <TR>
+                            <TD>
+                              <P>&nbsp;</P></TD>
+                            <TD>
+                              <P>Derik Stenerson</P></TD>
+                            <TD>
+                              <P>Derik</P></TD>
+                            <TD>
+                              <P>Management</P></TD></TR>
+                          <TR>
+                            <TD>
+                              <P>&nbsp;</P></TD>
+                            <TD>
+                              <P>Carolyn Seeley</P></TD>
+                            <TD>
+                              <P>Carolyn</P></TD>
+                            <TD>
+                              <P>Management</P></TD></TR>
+                          <TR>
+                            <TD>
+                              <P>&nbsp;</P></TD>
+                            <TD>
+                              <P>Mike Nash</P></TD>
+                            <TD>
+                              <P>Mike</P></TD>
+                            <TD>
+                              <P>Management</P></TD></TR>
+                          <TR>
+                            <TD>
+                              <P>&nbsp;</P></TD>
+                            <TD>
+                              <P>Elizabeth Boyle</P></TD>
+                            <TD>
+                              <P>Elizabeth</P></TD>
+                            <TD>
+                              <P>Non-management</P></TD></TR>
+                          <TR>
+                            <TD>
+                              <P>Production</P></TD>
+                            <TD>
+                              <P>Lani Oto</P></TD>
+                            <TD>
+                              <P>Lani</P></TD>
+                            <TD>
+                              <P>Management</P></TD></TR>
+                          <TR>
+                            <TD>
+                              <P>&nbsp;</P></TD>
+                            <TD>
+                              <P>Jon Grande</P></TD>
+                            <TD>
+                              <P>Jon</P></TD>
+                            <TD>
+                              <P>Non-management</P></TD></TR>
+                          <TR>
+                            <TD>
+                              <P>&nbsp;</P></TD>
+                            <TD>
+                              <P>Clair Hector</P></TD>
+                            <TD>
+                              <P>Clair*</P></TD>
+                            <TD>
+                              <P>Non-management</P></TD></TR>
+                          <TR>
+                            <TD>
+                              <P>&nbsp;</P></TD>
+                            <TD>
+                              <P>Pat Kirkland</P></TD>
+                            <TD>
+                              <P>Pat</P></TD>
+                            <TD>
+                              <P>Non-management</P></TD></TR>
+                          <TR>
+                            <TD>
+                              <P>&nbsp;</P></TD>
+                            <TD>
+                              <P>Lorraine Nay</P></TD>
+                            <TD>
+                              <P>Lorraine</P></TD>
+                            <TD>
+                              <P>Management</P></TD></TR>
+                          <TR>
+                            <TD>
+                              <P>&nbsp;</P></TD>
+                            <TD>
+                              <P>Cynthia Randall</P></TD>
+                            <TD>
+                              <P>Cynthia</P></TD>
+                            <TD>
+                              <P>Non-management</P></TD></TR>
+                          <TR>
+                            <TD>
+                              <P>&nbsp;</P></TD>
+                            <TD>
+                              <P>Kevin F. Browne</P></TD>
+                            <TD>
+                              <P>Kevin</P></TD>
+                            <TD>
+                              <P>Non-management</P></TD></TR>
+                          <TR>
+                            <TD>
+                              <P>Marketing</P></TD>
+                            <TD>
+                              <P>Charles Fitzgerald</P></TD>
+                            <TD>
+                              <P>Charles</P></TD>
+                            <TD>
+                              <P>Management</P></TD></TR>
+                          <TR>
+                            <TD>
+                              <P>&nbsp;</P></TD>
+                            <TD>
+                              <P>Salman Mughal</P></TD>
+                            <TD>
+                              <P>Salman</P></TD>
+                            <TD>
+                              <P>Non-management</P></TD></TR>
+                          <TR>
+                            <TD>
+                              <P>&nbsp;</P></TD>
+                            <TD>
+                              <P>Suanne Nagata</P></TD>
+                            <TD>
+                              <P>Suanne</P></TD>
+                            <TD>
+                              <P>Non-management</P></TD></TR>
+                          <TR>
+                            <TD>
+                              <P>&nbsp;</P></TD>
+                            <TD>
+                              <P>Suki White</P></TD>
+                            <TD>
+                              <P>Suki</P></TD>
+                            <TD>
+                              <P>Non-management</P></TD></TR></TBODY></TABLE><BR>
+                        <P>* Clair Hector is a roaming user in the <A 
+                        href="http://www.microsoft.com/windows2000/techinfo/planning/management/userdata.asp">Step-by-Step 
+                        Guide to User Data and User Settings</A>.</P><!-- Main Content Area END --></TD></TR>
+                    <TR>
+                      <TD><BR>
+                        <TABLE id=donotprint cellSpacing=0 cellPadding=0 
+                        width="100%" border=0>
+                          <TBODY>
+                          <TR vAlign=bottom>
+                            <TD align=left><A 
+                              href="http://www.microsoft.com/windows2000/techinfo/planning/server/serversteps.asp#top"><IMG 
+                              height=20 alt="To top of page" 
+                              src="Step-by-Step Guide to a Common Infrastructure for Windows 2000 Server Deployment - Part 1 Installing a Windows 2000 Server as a Domain Controller_files/top_v1.gif" 
+                              width=40 border=0></A></TD>
+                            <TD 
+                  align=right></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></TD></TR>
+  <TR vAlign=top>
+    <TD>
+      <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+        <TBODY>
+        <TR>
+          <TD width="100%"><SPAN id=donotprint><SPAN id=pgFooter>
+            <TABLE class=FooterBranding height=20 cellSpacing=0 cellPadding=0 
+            width="100%" border=0>
+              <TBODY>
+              <TR>
+                <TD align=left>
+                  <TABLE height="100%" cellSpacing=0 cellPadding=0 border=0>
+                    <TBODY>
+                    <TR class=MNPFooterRow1>
+                      <TD width=10>&nbsp;&nbsp;</TD>
+                      <TD noWrap><A 
+                        href="http://www.microsoft.com/isapi/goregwiz.asp?target=/contactus/contactus.asp" 
+                        target=_top>Contact Us</A></TD>
+                      <TD width=10>&nbsp;&nbsp;</TD>
+                      <SCRIPT language=javascript type=text/javascript>
+							var sItemURL = "mailto:?subject=A link from Microsoft&body=This link is from the Microsoft Windows 2000 Web site" + " "  + escape(top.parent.location.href)
+							document.write('<td nowrap><a href="' + sItemURL + '"  target=>E-Mail This Page</a></td>')
+							document.write ('<td>&nbsp;&nbsp;</td>')
+							
+						</SCRIPT>
+
+                      <TD noWrap><A 
+                        href="http://www.microsoft.com/windows2000/newsletters/default.asp" 
+                        target=_top>Free Newsletters</A></TD>
+                      <TD 
+              width=10>&nbsp;&nbsp;</TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE>
+            <TABLE class=FooterBranding height=30 cellSpacing=0 cellPadding=0 
+            width="100%" border=0>
+              <TBODY>
+              <TR>
+                <TD align=left>
+                  <TABLE height="100%" cellSpacing=0 cellPadding=0 border=0>
+                    <TBODY>
+                    <TR class=MNPFooterRow2>
+                      <TD width=10>&nbsp;&nbsp;</TD>
+                      <TD noWrap><A 
+                        href="http://www.microsoft.com/isapi/gomscom.asp?target=/info/cpyright.htm" 
+                        target=_top>© 2004 Microsoft Corporation. All rights 
+                        reserved. Terms of Use.</A></TD>
+                      <TD width=10>&nbsp;&nbsp;</TD>
+                      <TD noWrap><A 
+                        href="http://www.microsoft.com/isapi/gomscom.asp?target=/info/privacy.htm" 
+                        target=_top>Privacy Statement</A></TD>
+                      <TD width=10>&nbsp;&nbsp;</TD>
+                      <TD noWrap><A 
+                        href="http://www.microsoft.com/isapi/gomscom.asp?target=/enable/" 
+                        target=_top>Accessibility</A></TD>
+                      <TD 
+              width=10>&nbsp;&nbsp;</TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></SPAN></SPAN></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></BODY></HTML>

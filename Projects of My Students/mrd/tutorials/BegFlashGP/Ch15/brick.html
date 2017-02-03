@@ -1,0 +1,108 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>brick</title>
+</head>
+<body bgcolor="#cccccc">
+<!--url's used in the movie-->
+<!--text used in the movie-->
+<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,0,0" width="550" height="400" id="brick" align="middle">
+<param name="allowScriptAccess" value="sameDomain" />
+<param name="movie" value="brick.swf" />
+<param name="quality" value="high" />
+<param name="bgcolor" value="#ffffff" />
+<embed src="brick.swf" quality="high" bgcolor="#ffffff" width="550" height="400" name="brick" align="middle" allowScriptAccess="sameDomain" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" />
+</object>
+<h3>Code in frame 1 layer 1</h3>
+<pre>
+//breakout
+//brick.fla
+//By Andy Harris, Dummies Guide to Game Programming in Flash
+
+init();
+
+function init(){
+  globalDX = 5;
+  globalDY = 0;
+
+  row = 1;
+  colOffset = 10;
+  rowOffset = 10;
+  setupBall();
+  setupBricks();
+  setupPaddle();
+} // end init
+
+function setupBall(){
+  ball.dx = 5;
+  ball.dy = -5;
+  ball.onEnterFrame = function(){
+    ball._x += ball.dx;
+    ball._y += ball.dy;
+  
+    //check boundaries;
+    if ((ball._x > Stage.width) ||
+        (ball._x < 0)){
+      ball.dx *= -1;
+    } // end if
+  
+    if (ball._y < 0){
+      ball.dy *= -1;
+    } // end if
+  
+    if (ball._y > Stage.height){
+      ball.dy *= -1;
+    } // end if
+   
+  } // end ball enterFrame
+} // end setupBall
+
+function setupPaddle(){
+  paddle.onEnterFrame = function(){
+    //follow mouse in x
+    this._x = _root._xmouse;
+    if (this.hitTest(ball)){
+      ball.dy *= -1;
+    } // end if
+  } // end enterFrame
+} // end setupPaddle
+
+function setupBricks(){
+  
+  for (row = 1; row <= 3; row++){
+    for (col = 1; col <= 5; col++){
+    
+      _root.attachMovie("brick", "brick_" + row + "_" + col, (row * 1000) + (col * 100));
+      theBrick = eval("brick_" + row + "_" + col);
+      theBrick._x = (col * (theBrick._width + 5) + colOffset);
+      theBrick._y = (row * (theBrick._height + 5) + rowOffset);
+      theBrick.onEnterFrame = function(){
+  
+        //move by global dx and dy values
+        nextX = this._x + globalDX;
+        nextY = this._y + globalDY;
+        //check boundaries
+        if (nextX > Stage.width){
+          globalDX *= -1;
+        } // end if
+  
+        if (nextX < 0){
+          globalDX *= -1;
+        } // end if
+  
+        this._x = nextX;
+        this._Y = nextY;
+  
+        if (this.hitTest(ball)){
+          ball.dy *= -1;
+          this.removeMovieClip(this);
+        } // end if
+      } // end enterFrame
+    } // end col loop
+  } // end row loop
+} // end setupBricks
+</pre>
+
+</body>
+</html>

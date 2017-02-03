@@ -1,0 +1,90 @@
+
+
+function mnpMenuDir()
+{
+	return "LTR";
+}
+
+function mnpMenuCT()
+{
+	
+	return false;
+}
+
+function me2886ca2e9e449e4a92508edad1c621b()
+{
+	this.items = new Array();
+	var n = 0;
+	this.items[n++] = new mnpPage('Understanding Web Services: Overview', '/webservices/understanding/', '', '', '_S1_Node2_S1_Node1');
+	this.items[n++] = new mnpPage('XML Fundamentals', '/webservices/understanding/xmlfundamentals/default.aspx', '', '', '_S1_Node2_S1_Node2');
+	this.items[n++] = new mnpPage('Web Service Basics', '/webservices/understanding/webservicebasics/default.aspx', '', '', '_S1_Node2_S1_Node3');
+	this.items[n++] = new mnpPage('Advanced Web Services', '/webservices/understanding/advancedwebservices/default.aspx', '', '', '_S1_Node2_S1_Node4');
+	this.items[n++] = new mnpPage('Specifications', '/webservices/understanding/specs/default.aspx', '', '', '_S1_Node2_S1_Node5');
+	this.items[n++] = new mnpPage('Case Studies', '/webservices/understanding/casestudies/default.aspx', '', '', '_S1_Node2_S1_Node6');
+	this.items[n++] = new mnpPage('Books', '/webservices/understanding/books/default.aspx', '', '', '_S1_Node2_S1_Node7');
+}
+
+function md68342e598674e218423e0e506070d08()
+{
+	this.items = new Array();
+	var n = 0;
+	this.items[n++] = new mnpPage('Building: Overview', '/webservices/building/', '', '', '_S1_Node3_S1_Node1');
+	this.items[n++] = new mnpPage('.NET Framework and Visual Studio .NET', '/webservices/building/frameworkandstudio/default.aspx', '', 'm7624b67aa23842ffb805513352db910c', '_S1_Node3_S1_Node2');
+	this.items[n++] = new mnpPage('Web Services Enhancements (WSE)', '/webservices/building/wse/default.aspx', '', '', '_S1_Node3_S1_Node3');
+	this.items[n++] = new mnpPage('Office and Web Services', '/webservices/building/office/default.aspx', '', '', '_S1_Node3_S1_Node4');
+	this.items[n++] = new mnpPage('Indigo', '/webservices/building/indigo/default.aspx', '', '', '_S1_Node3_S1_Node5');
+	this.items[n++] = new mnpPage('SOAP Toolkit', '/webservices/building/soaptk/default.aspx', '', '', '_S1_Node3_S1_Node6');
+	this.items[n++] = new mnpPage('Other Web Service Tools', '/webservices/building/othertools/default.aspx', '', '', '_S1_Node3_S1_Node7');
+	this.items[n++] = new mnpPage('Architecture &amp; Design', '/webservices/building/architecture/default.aspx', '', '', '_S1_Node3_S1_Node8');
+	this.items[n++] = new mnpPage('XML Development', '/webservices/building/xmldevelopment/default.aspx', '', 'mad4bc43a268848458a8b5da897e48e74', '_S1_Node3_S1_Node9');
+	this.items[n++] = new mnpPage('Security', '/webservices/building/security/default.aspx', '', '', '_S1_Node3_S1_Node10');
+	this.items[n++] = new mnpPage('Description &amp; Discovery', '/webservices/building/description/default.aspx', '', '', '_S1_Node3_S1_Node11');
+	this.items[n++] = new mnpPage('Live Web Services', '/webservices/building/livewebservices/default.aspx', '', 'm1cb1a57a2dbc4f329f386fa95f0f1816', '_S1_Node3_S1_Node12');
+	this.items[n++] = new mnpPage('Columns', '/webservices/building/columns/default.aspx', '', '', '_S1_Node3_S1_Node13');
+}
+
+function m7624b67aa23842ffb805513352db910c()
+{
+	this.items = new Array();
+	var n = 0;
+	this.items[n++] = new mnpPage('.NET Framework and Visual Studio .NET: Overview', '/webservices/building/frameworkandstudio/', '', '', '_S1_Node3_S1_Node2_S1_Node1');
+	this.items[n++] = new mnpPage('Essential', '/webservices/building/frameworkandstudio/essential/default.aspx', '', '', '_S1_Node3_S1_Node2_S1_Node2');
+	this.items[n++] = new mnpPage('Designing .NET Web Services', '/webservices/building/frameworkandstudio/designing/default.aspx', '', '', '_S1_Node3_S1_Node2_S1_Node3');
+	this.items[n++] = new mnpPage('Tips &amp; Tricks', '/webservices/building/frameworkandstudio/tipstricks/default.aspx', '', '', '_S1_Node3_S1_Node2_S1_Node4');
+}
+
+function mad4bc43a268848458a8b5da897e48e74()
+{
+	this.items = new Array();
+	var n = 0;
+	this.items[n++] = new mnpPage('XML Development: Overview', '/webservices/building/xmldevelopment/', '', '', '_S1_Node3_S1_Node9_S1_Node1');
+	this.items[n++] = new mnpPage('XML Schema', '/webservices/building/xmldevelopment/schema/default.aspx', '', '', '_S1_Node3_S1_Node9_S1_Node2');
+	this.items[n++] = new mnpPage('XML APIs', '/webservices/building/xmldevelopment/api/default.aspx', '', '', '_S1_Node3_S1_Node9_S1_Node3');
+	this.items[n++] = new mnpPage('Query (XPath)', '/webservices/building/xmldevelopment/xpath/default.aspx', '', '', '_S1_Node3_S1_Node9_S1_Node4');
+	this.items[n++] = new mnpPage('XML Serialization', '/webservices/building/xmldevelopment/xmlserialization/default.aspx', '', '', '_S1_Node3_S1_Node9_S1_Node5');
+	this.items[n++] = new mnpPage('XML and Data', '/webservices/building/xmldevelopment/xmldata/default.aspx', '', '', '_S1_Node3_S1_Node9_S1_Node6');
+	this.items[n++] = new mnpPage('XML Seminars', '/webservices/building/xmldevelopment/seminars/default.aspx', '', '', '_S1_Node3_S1_Node9_S1_Node7');
+}
+
+function m1cb1a57a2dbc4f329f386fa95f0f1816()
+{
+	this.items = new Array();
+	var n = 0;
+	this.items[n++] = new mnpPage('Live Web Services: Overview', '/webservices/building/livewebservices/', '', '', '_S1_Node3_S1_Node12_S1_Node1');
+	this.items[n++] = new mnpPage('Microsoft.com WebServices', '/webservices/building/livewebservices/mscomservices/default.aspx', '', '', '_S1_Node3_S1_Node12_S1_Node2');
+	this.items[n++] = new mnpPage('MapPoint .NET', '/webservices/building/livewebservices/mappoint/default.aspx', '', '', '_S1_Node3_S1_Node12_S1_Node3');
+	this.items[n++] = new mnpPage('Other Web Services', '/webservices/building/livewebservices/otherwebservices/default.aspx', '', '', '_S1_Node3_S1_Node12_S1_Node4');
+}
+
+function m1f810e0ccd03488a9b71c67fea1204f6()
+{
+	this.items = new Array();
+	var n = 0;
+	this.items[n++] = new mnpPage('Support &amp; Community: Overview', '/webservices/community/', '', '', '_S1_Node5_S1_Node1');
+	this.items[n++] = new mnpPage('Workshops', '/webservices/community/workshops/default.aspx', '', '', '_S1_Node5_S1_Node2');
+	this.items[n++] = new mnpPage('List Servers and Newsgroups', '/webservices/community/newsgroups/default.aspx', '', '', '_S1_Node5_S1_Node3');
+	this.items[n++] = new mnpPage('Related Sites', '/webservices/community/related/default.aspx', '', '', '_S1_Node5_S1_Node4');
+	this.items[n++] = new mnpPage('Blogs', '/webservices/community/blogs/default.aspx', '', '', '_S1_Node5_S1_Node5');
+	this.items[n++] = new mnpPage('Industry News', '/webservices/community/industrynews/default.aspx', '', '', '_S1_Node5_S1_Node6');
+}
+

@@ -1,0 +1,122 @@
+<!doctype html public "-//IETF//DTD HTML//EN">
+<HTML>
+<HEAD>
+<TITLE>Windows XP: The Complete Reference: Configuring Windows to Work with Your Modem</TITLE>
+<META NAME="GENERATOR" CONTENT="Web-O-Matic Deluxe 4.1">
+<META NAME="AUTHOR" CONTENT="John R. Levine, Margaret Levine Young">
+<META NAME="COPYRIGHT" CONTENTS="Copyright 2001 by The McGraw-Hill Companies. All rights reserved.">
+</HEAD>
+<BODY BACKGROUND="../images/background.png">
+<BLOCKQUOTE>
+<SCRIPT LANGUAGE="JavaScript">
+function whomp(i, file)
+{
+	i.src = "../images/" + file + ".png";
+}
+</SCRIPT>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarered3x3.png" HEIGHT=3 WIDTH=3></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=2>
+Chapter 21: Configuring Windows to Work with Your Modem
+</FONT></TD>
+</TR>
+</TABLE>
+<BR>
+<A HREF="6.htm"  OnMouseOver='whomp(prev, "sprev");' OnMouseOut='whomp(prev, "wprev");'
+ title="Previous Section"><IMG NAME=prev SRC="../images/wprev.png" ALT="Previous" HEIGHT=20 WIDTH=82 BORDER=0></A><!--
+--><A HREF="index.htm" OnMouseOver='whomp(chap, "schap");' OnMouseOut='whomp(chap, "wchap");'
+title="Chapter Overview"><IMG SRC="../images/wchap.png" ALT="Chapter" NAME=chap HEIGHT=20 WIDTH=100 BORDER=0></A><A
+HREF="../index.htm" OnMouseOver='whomp(toc, "sbook");' OnMouseOut='whomp(toc, "wbook");' 
+title="Table of Contents"><IMG SRC="../images/wbook.png" ALT="Contents" NAME=toc HEIGHT=20 WIDTH=94 BORDER=0></A><A
+HREF="../glossary/index.htm" OnMouseOver='whomp(glos, "sglos");' OnMouseOut='whomp(glos, "wglos");' 
+title="Glossary"><IMG SRC="../images/wglos.png" ALT="Glossary" NAME=glos HEIGHT=20 WIDTH=94 BORDER=0></A><!--
+--><IMG SRC="../images/bnext.png" ALT="Next" HEIGHT=20 WIDTH=82 BORDER=0>
+<BR>
+<A NAME="1">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarered10x10.png" HEIGHT=10 WIDTH=10></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=4><B>Connecting to an ISDN Line</B></FONT>
+</TD>
+</TR>
+</TABLE></A>
+<P>
+<A NAME="ddisdn"><I>ISDN</I></A> (<I>Integrated Services Digital Network</I>) is an all-digital phone line that is less widely used in the United States, but quite common, for example, in Europe, where an ISDN line is typically cheaper than two analog phone lines. The type of ISDN service for residential customers is Basic Rate Interface (BRI). A BRI consists of two 64 kbps (or 56 kbps on some older systems in the United States) channels, each of which can be used independently for phone, fax, or data connections. Both channels can be combined (bundled) in a single data connection, allowing you to connect at 128 kbps, over twice the speed of a fast dial-up line (at the cost of being unable to make or receive phone calls over the ISDN line for the duration of the bundled connection). Unlike DSL and cable modems, ISDN is not connected directly to the Internet, but rather to the telephone network, so you connect to the Internet by making a phone call to an ISP which offers ISDN access.
+<P>
+<TABLE><TR><TD VALIGN="TOP"><IMG SRC="../images/tip.png" ALT="tip" WIDTH=95 HEIGHT=29></TD>
+<TD VALIGN="TOP">If your phone company offers DSL, choose it over ISDN, as DSL delivers higher speeds than ISDN, is usually cheaper, and usually lacks a per-minute charge. In the United States, ISDN lines are usually priced with a monthly charge that includes a base number of minutes of usage, plus a per-minute charge if you use the line for additional minutes.
+
+</TD></TR></TABLE>
+<P>
+For more information about how ISDN works, see the ISDN Zone Web site at <A HREF="http://www.isdnzone.com"><B>http://www.isdnzone.com</B></A>.
+<A NAME="2">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Getting ISDN</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+You can order an ISDN line from your local telephone company, but you should call your ISP first to confirm they can also provide ISDN service. ISDN lines are more expensive than normal phone lines, and not all phone companies can provide them. Even companies that do provide ISDN lines often have trouble installing them correctly; so if your ISP can arrange to set up the line, order it through them.
+<P>
+You also need an <A NAME="ddisdnterminaladapter"><I>ISDN terminal adapter</I></A> (also called an <I>ISDN adapter</I>, <I>ISDN TA</I>, or <I>ISDN modem</I>) to connect your computer's serial port to the ISDN phone line. Better yet, get an external ISDN TA with a USB (Universal Serial Bus) interface or an internal ISDN adapter card that installs inside your computer for faster communications (external ISDN adapters that connect to the serial port are limited by the 115 kbps speed of the serial port). Your <A HREF="../connecting/1.htm#2">ISP</A> (or whatever computer you are connecting to) must have ISDN phone numbers for you to connect to.
+<A NAME="3">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Configuring Windows for Your ISDN Adapter</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+Your telephone installer usually installs the ISDN adapter and configures Windows to use it, but here is information about how to do so yourself. See <A HREF="../hardware/5.htm#1">Chapter 13</A> for how to install an internal ISDN adapter. If you have an external ISDN adapter that connects to the serial port, connect its serial cable to a serial (COM) port on your PC (shut down Windows and turn your PC off first). If you have an external USB ISDN TA, plug it into a free USB connector on your PC (you don't have to turn off your PC first).
+<P>
+When you turn your PC back on or when you plug in an USB ISDN TA, Windows should detect the new hardware and run the Add Hardware Wizard automatically. If it doesn't, choose Start | Control Panel | Printers And Other Hardware and choose Add Hardware from the See Also list. If the Wizard doesn't detect the ISDN adapter, choose Add A New Device.
+<P>
+When Windows has installed the drivers for the ISDN adapter, you (or your telephone installer) configure Windows to use it. The Add Hardware Wizard usually displays a dialog box asking for configuration information: if it doesn't, choose Start | Control Panel | Printers And Other Hardware and choose System to display the System Properties dialog box. Click the Hardware tab and click the Device Manager button. (You can also see the Device Manager from the Computer Management window.) Your ISDN adapter appears in Modems if it is external or Network Adapters if it is internal. Right-click the ISDN adapter and choose Properties from the menu that appears. Click the ISDN tab and select the Switch type or D-channel protocol your phone company uses (ask your phone company for this information). Then click the Configure button and enter the requested information, which you need to get from your phone company or ISP:
+<UL>
+<LI >
+<B>Phone Number</B>  The phone number(s) of your ISDN line for U.S. and Canada switch types. Your ISDN line may have one or two phone numbers.<B></B>
+<LI >
+<B>Service Profile Identifier (SPID)</B>  Your ISDN phone number, plus a few extra digits that identify the type of ISDN switch. SPIDs are generally used only in the UnitedStates and Canada.
+<LI >
+<B>Multi-Subscriber Numbers (MSN)</B>  The phone number(s) of your ISDN line for European ISDN (DSS1)--this has nothing to do with MSN, Microsoft's ISP. European ISDN allows multiple phone numbers on an ISDN line. You only need to enter the MSN(s) you actually intend to use with your computer--the MSNs you want to your computer to accept calls for, and the MSN to which you want outgoing calls to be billed. Note that outgoing calls you make with your computer will be billed to the first MSN in the list, which will always be the lowest number, since Windows sorts the list. If you enter no MSN, the calls will be billed to the primary MSN of your line.
+</UL>
+<P>
+<TABLE><TR><TD VALIGN="TOP"><IMG SRC="../images/tip.png" ALT="tip" WIDTH=95 HEIGHT=29></TD>
+<TD VALIGN="TOP">You must be logged on using an administrator account to configure your ISDN adapter.
+
+</TD></TR></TABLE>
+<P>
+See "<A HREF="../connecting/4.htm#3">Creating a Network Connection for an ISDN Line</A>" for how to create and configure a dial-up connection for your ISDN line.
+<P><TABLE BORDER=2 CELLPADDING=10><TR>
+<TD BGCOLOR="#00ffff" WIDTH=2></TD><TD>
+<A NAME="4">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Two-Way Satellite Connections</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+A new option for connecting to the Internet is by two-way satellite. For example, Starband (at <A HREF="http://www.starband.com"><B>http://www.starband.com</B></A>) and DirecPC (at <A HREF="http://www.direcpc.com"><B>http://www.direcpc.com</B></A>) offer a satellite dish, satellite modem, Internet account, and optional satellite television service. It's more expensive to install than a DSL or cable Internet, but it's available anywhere in the continental United States where you can see the Southern sky.
+<P>
+The satellite dish mounts on your roof, and connects using a coaxial cable and a satellite modem to either the USB or network adapter on your computer. A Starband or DirecPC installer does the installation of both the disk and the modem.
+<P>
+<A HREF="6.htm"  OnMouseOver='whomp(prevb, "sprev");' OnMouseOut='whomp(prevb, "wprev");'
+ title="Previous Section"><IMG NAME=prevb SRC="../images/wprev.png" ALT="Previous" HEIGHT=20 WIDTH=82 BORDER=0></A><!--
+--><A HREF="index.htm" OnMouseOver='whomp(chapb, "schap");' OnMouseOut='whomp(chapb, "wchap");'
+title="Chapter Overview"><IMG SRC="../images/wchap.png" ALT="Chapter" NAME=chapb HEIGHT=20 WIDTH=100 BORDER=0></A><A
+HREF="../index.htm" OnMouseOver='whomp(tocb, "sbook");' OnMouseOut='whomp(tocb, "wbook");' 
+title="Table of Contents"><IMG SRC="../images/wbook.png" ALT="Contents" NAME=tocb HEIGHT=20 WIDTH=94 BORDER=0></A><A
+HREF="../glossary/index.htm" OnMouseOver='whomp(glosb, "sglos");' OnMouseOut='whomp(glosb, "wglos");' 
+title="Glossary"><IMG SRC="../images/wglos.png" ALT="Glossary" NAME=glosb HEIGHT=20 WIDTH=94 BORDER=0></A><!--
+--><IMG SRC="../images/bnext.png" ALT="Next" HEIGHT=20 WIDTH=82 BORDER=0>
+<BR>
+</BLOCKQUOTE>
+</BODY>
+</HTML>

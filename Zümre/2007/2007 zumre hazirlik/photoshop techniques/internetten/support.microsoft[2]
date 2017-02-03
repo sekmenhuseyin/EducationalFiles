@@ -1,0 +1,720 @@
+<HTML><HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<TITLE>325379 - How to Upgrade Windows 2000 Domain Controllers to Windows Server 2003</TITLE>
+<!-- (c) 2001, 2002 Microsoft Corporation. All Rights Reserved -->
+<!-- CPMSFTWBSUP04 ASM: GSS, Version=3.7.4.0, Culture=neutral, PublicKeyToken=null FW: 1.1.4322.573 -->
+<!-- REGC: ISO-8859-1 DEFRC: utf-8 RESG: 2/23/2004 8:38:55 AM RESX: 1/1/0001 12:00:00 AM -->
+<META NAME="Keywords" CONTENT="kbinfo KB325379  kbExchange2000Search kbExchange2000Serv kbExchange2000ServSearch kbExchangeSearch kbwin2000AdvServ kbwin2000AdvServSearch kbwin2000DataServ kbwin2000DataServSearch kbwin2000Search kbwin2000Serv kbwin2000ServSearch kbWinAdvServSearch kbWinDataServSearch kbWinServ2003Data kbWinServ2003DataSearch kbWinServ2003Ent kbWinServ2003EntSearch kbWinServ2003Search kbWinServ2003St " />
+<META NAME="Description" CONTENT="This article discusses how to upgrade Windows 2000 domain controllers to Windows Server 2003 and how to add new Windows Server 2003 domain controllers to Windows 2000 domains." />
+<META NAME="MS.LOCALE" CONTENT="EN" />
+<script language="Javascript" SRC="/common/script/gsfx/common.js"></script><link rel='stylesheet' type='text/css' href='/common/css/GN/EN-US/down-other/default.css' ></link><script src="/common/script/gsfx/searchui.js"></script><link rel='stylesheet' type='text/css' href='/common/css/GN/EN-US/down-other/SearchUI.css' ></link><link rel='stylesheet' type='text/css' href='/common/css/GN/EN-US/down-other/webparts.css' ></link><link rel='stylesheet' type='text/css' href='/common/css/GN/EN-US/down-other/KBArticleV2.css' ></link></HEAD>
+
+<BODY bgcolor="#FFFFFF" leftmargin="0" topmargin="0" marginheight="0" marginwidth="0" onLoad="thisLoad();" onUnload="thisUnload();">
+<table border="0" cellpadding="0" cellspacing="0" width="100%" height="100%"><tr><td>
+<TABLE width="100%" cellspacing="0" cellpadding="0" border="0" HSPACE="0" VSPACE="0"><TR><TD><A HREF="/isapi/gomscom.asp?target=/" TARGET="_top" ><IMG SRC="/library/images/support/bnr_microsoft.gif" 	HEIGHT="60" HSPACE="0" VSPACE="0" ALIGN="LEFT" ALT="Microsoft.com Home Page" BORDER="0" /></A></TD><TD width="100%" ><TABLE WIDTH="100%" CELLPADDING="0" CELLSPACING="0" BORDER="0" HSPACE="0" VSPACE="0"><TR><TD BGCOLOR="#0a6cce" VALIGN="TOP" HEIGHT="20" ALIGN="RIGHT" WIDTH="100%">
+<TABLE HEIGHT="20" BORDER="0"CELLPADDING="0" CELLSPACING="0" >
+<TR><TD><IMG SRC="/library/images/toolbar/images/curveLTR.gif" WIDTH="18" HEIGHT="20" HSPACE="0" VSPACE="0" ALT="" BORDER="0" /></TD><TD BGCOLOR="#000000" HEIGHT="20" NOWRAP>&nbsp;
+<a href="http://www.microsoft.com/products/info/default.aspx?view=22" STYLE="color:#FFFFFF;text-decoration:none;" TARGET="_top"><FONT COLOR="#FFFFFF" style="font-family:Verdana,Arial; font-size: 10px;"> All Products</FONT></a>
+</TD><TD BGCOLOR="#000000" HEIGHT="20" NOWRAP><font COLOR="#FFFFFF" style="font-family:Verdana,Arial; font-size: 10px;">&nbsp;|&nbsp;</font></TD><TD BGCOLOR="#000000" HEIGHT="20" NOWRAP>
+<a href="http://support.microsoft.com" STYLE="color:#FFFFFF;text-decoration:none;" TARGET="_top"><FONT COLOR="#FFFFFF" style="font-family:Verdana,Arial; font-size: 10px;"> Support</FONT></a>
+</TD><TD BGCOLOR="#000000" HEIGHT="20" NOWRAP><font COLOR="#FFFFFF" style="font-family:Verdana,Arial; font-size: 10px;">&nbsp;|&nbsp;</font></TD><TD BGCOLOR="#000000" HEIGHT="20" NOWRAP>
+<a href="/isapi/gosearch.asp?target=/us/default.asp" STYLE="color:#FFFFFF;text-decoration:none;" TARGET="_top"><FONT COLOR="#FFFFFF" style="font-family:Verdana,Arial; font-size: 10px;"> Search</FONT></a>
+</TD><TD BGCOLOR="#000000" HEIGHT="20" NOWRAP><font COLOR="#FFFFFF" style="font-family:Verdana,Arial; font-size: 10px;">&nbsp;|&nbsp;</font></TD><TD BGCOLOR="#000000" HEIGHT="20" NOWRAP>
+<a href="/isapi/gomscom.asp?target=/" STYLE="color:#FFFFFF;text-decoration:none;" TARGET="_top"><FONT COLOR="#FFFFFF" style="font-family:Verdana,Arial; font-size: 10px;"> Microsoft.com Guide</FONT></a>
+</TD></TR></TABLE>
+</TD></TR><TR><TD BGCOLOR=#0a6cce HEIGHT="40" align="right"><a href="/common/international.aspx" TARGET="_top"><IMG SRC="/library/images/support/EN-US/region_graphic.gif" ALT="International Support" HEIGHT="40" BORDER="0" HSPACE="0" VSPACE="0" /></A></TD></TR></TABLE>
+</TD></TR></TABLE>
+</td></tr><tr><td class="tpl_top_banner" valign="top"><table class="bbar_outer" border="0" cellpadding="0" cellspacing="0" height="18"><tr>
+<td nowrap class="bbar_cell" onmouseover="this.className='bbar_cell_hot';" onmouseout="this.className='bbar_cell';" onClick="top.location.href='http://support.microsoft.com/'"><a target ="_top" href='http://support.microsoft.com/' title='Return to Support Home Page' onclick='event.cancelBubble=true;'>&nbsp;&nbsp;Home&nbsp;&nbsp;</a></td><td class='bannerborder' width=1><img src='/library/images/support/1ptrans.gif' height=1 width=1></td>
+<td nowrap class="bbar_cell" onmouseover="this.className='bbar_cell_hot';" onmouseout="this.className='bbar_cell';" onClick="top.location.href='http://support.microsoft.com/default.aspx?pr=kbhowto'"><a target ="_top" href='http://support.microsoft.com/default.aspx?pr=kbhowto' title='Search the Knowledge Base' onclick='event.cancelBubble=true;'>&nbsp;&nbsp;Search&nbsp;&nbsp;</a></td><td class='bannerborder' width=1><img src='/library/images/support/1ptrans.gif' height=1 width=1></td>
+<td nowrap class="bbar_cell" onmouseover="this.className='bbar_cell_hot';" onmouseout="this.className='bbar_cell';" onClick="top.location.href='http://support.microsoft.com/default.aspx?pr=faqs'"><a target ="_top" href='http://support.microsoft.com/default.aspx?pr=faqs' title='Frequently Asked Questions and Product Support Centers' onclick='event.cancelBubble=true;'>&nbsp;&nbsp;FAQs&nbsp;&nbsp;</a></td><td class='bannerborder' width=1><img src='/library/images/support/1ptrans.gif' height=1 width=1></td>
+<td nowrap class="bbar_cell" onmouseover="this.className='bbar_cell_hot';" onmouseout="this.className='bbar_cell';" onClick="top.location.href='http://support.microsoft.com/default.aspx?pr=downloadover&style=home'"><a target ="_top" href='http://support.microsoft.com/default.aspx?pr=downloadover&style=home' title='Software Downloads, Updates, and Service Packs' onclick='event.cancelBubble=true;'>&nbsp;&nbsp;Downloads&nbsp;&nbsp;</a></td><td class='bannerborder' width=1><img src='/library/images/support/1ptrans.gif' height=1 width=1></td>
+<td nowrap class="bbar_cell" onmouseover="this.className='bbar_cell_hot';" onmouseout="this.className='bbar_cell';" onClick="top.location.href='http://support.microsoft.com/newsgroups/default.aspx'"><a target ="_top" href='http://support.microsoft.com/newsgroups/default.aspx' title='Community Newsgroups' onclick='event.cancelBubble=true;'>&nbsp;&nbsp;Newsgroups&nbsp;&nbsp;</a></td><td class='bannerborder' width=1><img src='/library/images/support/1ptrans.gif' height=1 width=1></td>
+<td nowrap class="bbar_cell" onmouseover="this.className='bbar_cell_hot';" onmouseout="this.className='bbar_cell';" onClick="top.location.href='http://support.microsoft.com/default.aspx?pr=csshome'"><a target ="_top" href='http://support.microsoft.com/default.aspx?pr=csshome' title='Customer Service' onclick='event.cancelBubble=true;'>&nbsp;&nbsp;Customer Service&nbsp;&nbsp;</a></td><td class='bannerborder' width=1><img src='/library/images/support/1ptrans.gif' height=1 width=1></td>
+</tr></table></td></tr><tr><td valign="top" height="100%"><table border="0" cellpadding="0" cellspacing="0" width="100%" height="100%"><tr><td valign="top"><table cellpadding="0" cellspacing="0" class="tpl_content_bar" width="100%"><tr><td class="tpl_content_title" valign="top" align="left">
+							Microsoft Knowledge Base Article - 325379
+						</td><td class="subBannerGif" valign="top" align="right">
+							<IMG src="/common/resources/Content_subban.gif" border="0" vspace="0" title="325379 - How to Upgrade Windows 2000 Domain Controllers to Windows Server 2003" />
+						</td></tr></table></td></tr><tr><td width="100%" valign="top"><XMLREADER><DIV class="OldIE">
+<DIV ID="LTRContent" class="LTRContent" DIR="LTR">
+<div class="KBPUBV2" name="KBPUBV2"><!-- - - - - - - - - - - PAGE TEXT BEGINS HERE : KBPUBV2 - - - - - - - - - - --><div class="kbContainer"><table border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td valign="top" width="100%"><table class="kbRightNav"><tr><td valign="top"><!--GETHELP_VERT--><!--SEARCHUI--><table cellspacing="0" cellpadding="0" border="0" id="SupportCenters" name="SupportCenters" class="ListNugget" width="165"><tr><td class="ListNuggetHeader">Support Centers</td></tr><tr><td id="SupportCentersBody" name="SupportCentersBody" class="ListNuggetBody" align="left">
+<TABLE CELLSPACING="0" CELLPADDING="2" BORDER="0">
+<TR><TD WIDTH="6" VALIGN="middle"><IMG SRC="http://support.microsoft.com/library/images/support/blue_bullet.gif" WIDTH="5" HEIGHT="5" BORDER="0" VALIGN="MIDDLE" HSPACE="0" ></TD>
+<TD CLASS="ListNuggetItem" VALIGN="top">
+	<A CLASS="ListNuggetItemLink" HREF="http://support.microsoft.com/default.aspx?scid=fh;EN-US;exch2k">Exchange 2000 Server</A>
+</TD></TR>
+<TR><TD WIDTH="6" VALIGN="middle"><IMG SRC="http://support.microsoft.com/library/images/support/blue_bullet.gif" WIDTH="5" HEIGHT="5" BORDER="0" VALIGN="MIDDLE" HSPACE="0" ></TD>
+<TD CLASS="ListNuggetItem" VALIGN="top">
+	<A CLASS="ListNuggetItemLink" HREF="http://support.microsoft.com/default.aspx?scid=fh;EN-US;exchange">Exchange</A>
+</TD></TR>
+<TR><TD WIDTH="6" VALIGN="middle"><IMG SRC="http://support.microsoft.com/library/images/support/blue_bullet.gif" WIDTH="5" HEIGHT="5" BORDER="0" VALIGN="MIDDLE" HSPACE="0" ></TD>
+<TD CLASS="ListNuggetItem" VALIGN="top">
+	<A CLASS="ListNuggetItemLink" HREF="http://support.microsoft.com/default.aspx?scid=fh;EN-US;sbs">Small Business Server</A>
+</TD></TR>
+<TR><TD WIDTH="6" VALIGN="middle"><IMG SRC="http://support.microsoft.com/library/images/support/blue_bullet.gif" WIDTH="5" HEIGHT="5" BORDER="0" VALIGN="MIDDLE" HSPACE="0" ></TD>
+<TD CLASS="ListNuggetItem" VALIGN="top">
+	<A CLASS="ListNuggetItemLink" HREF="http://support.microsoft.com/default.aspx?scid=fh;EN-US;win2000">Windows 2000</A>
+</TD></TR>
+<TR><TD WIDTH="6" VALIGN="middle"><IMG SRC="http://support.microsoft.com/library/images/support/blue_bullet.gif" WIDTH="5" HEIGHT="5" BORDER="0" VALIGN="MIDDLE" HSPACE="0" ></TD>
+<TD CLASS="ListNuggetItem" VALIGN="top">
+	<A CLASS="ListNuggetItemLink" HREF="http://support.microsoft.com/default.aspx?scid=fh;EN-US;Win2000Dev">Windows 2000 - Developer</A>
+</TD></TR>
+<TR><TD WIDTH="6" VALIGN="middle"><IMG SRC="http://support.microsoft.com/library/images/support/blue_bullet.gif" WIDTH="5" HEIGHT="5" BORDER="0" VALIGN="MIDDLE" HSPACE="0" ></TD>
+<TD CLASS="ListNuggetItem" VALIGN="top">
+	<A CLASS="ListNuggetItemLink" HREF="http://support.microsoft.com/default.aspx?scid=fh;EN-US;winsvr2003">Windows Server 2003</A>
+</TD></TR>
+</TABLE><img src="http://support.microsoft.com/library/images/support/1ptrans.gif" height="6" width="100" border="0" /></td></tr></table><table cellspacing="0" cellpadding="0" border="0" id="GeneralInfo" name="GeneralInfo" class="ListNugget" width="165"><tr><td class="ListNuggetHeader">Other Support Options</td></tr><tr><td id="GeneralInfoBody" name="GeneralInfoBody" class="ListNuggetBody" align="left"><TABLE CELLSPACING="0" CELLPADDING="2" BORDER="0"><TR><TD WIDTH="6" VALIGN="top"><IMG SRC="http://support.microsoft.com/library/images/support/blue_bullet.gif" WIDTH="5" HEIGHT="5" BORDER="0" VALIGN="MIDDLE" VSPACE="4" HSPACE="0" ></TD><TD CLASS="ListNuggetItem" VALIGN="top"><A CLASS="ListNuggetItemLink" HREF="http://support.microsoft.com/default.aspx?scid=fh;EN-US;cntactms&amp;style=home" >Contact Microsoft</A><BR>Phone Numbers, Support Options and Pricing, Online Help, and more.</TD></TR><TR><TD WIDTH="6" VALIGN="top"><IMG SRC="http://support.microsoft.com/library/images/support/blue_bullet.gif" WIDTH="5" HEIGHT="5" BORDER="0" VALIGN="MIDDLE" VSPACE="4" HSPACE="0" ></TD><TD CLASS="ListNuggetItem" VALIGN="top"><A CLASS="ListNuggetItemLink" HREF="http://support.microsoft.com/default.aspx?scid=fh;EN-US;csshome&amp;style=home" >Customer Service</A><BR>For non-technical assistance with product purchases, subscriptions, online services, events, training courses, corporate sales, piracy issues, and more.</TD></TR><TR><TD WIDTH="6" VALIGN="top"><IMG SRC="http://support.microsoft.com/library/images/support/blue_bullet.gif" WIDTH="5" HEIGHT="5" BORDER="0" VALIGN="MIDDLE" VSPACE="4" HSPACE="0" ></TD><TD CLASS="ListNuggetItem" VALIGN="top"><A CLASS="ListNuggetItemLink" HREF="http://support.microsoft.com/newsgroups" >Newsgroups</A><BR>Pose a question to other users.  Discussion groups and Forums about specific Microsoft products, technologies, and services.</TD></TR></TABLE><img src="http://support.microsoft.com/library/images/support/1ptrans.gif" height="6" width="100" border="0" /></td></tr></table><table cellspacing="0" cellpadding="0" border="0" id="PageOptions" name="PageOptions" class="ListNugget" width="165"><tr><td class="ListNuggetHeader">Page Options</td></tr><tr><td id="PageOptionsBody" name="PageOptionsBody" class="ListNuggetBody" align="left"><TABLE CELLSPACING="0" CELLPADDING="2" BORDER="0"><TR><TD WIDTH="6" VALIGN="top"><A HREF="mailto:?body=http%3a%2f%2fsupport.microsoft.com%2fdefault.aspx%3fkbid%3d325379" ><IMG SRC="http://support.microsoft.com/library/images/support/emailicon.gif" BORDER="0" HSPACE="0" Title="Send the contents of this page to a Friend" ></A></TD><TD CLASS="ListNuggetItem" VALIGN="top"><A CLASS="ListNuggetItemLink" HREF="mailto:?body=http%3a%2f%2fsupport.microsoft.com%2fdefault.aspx%3fkbid%3d325379" >Send</A></TD></TR><TR><TD WIDTH="6" VALIGN="top"><A HREF="Javascript:PrintContents();" ><IMG SRC="http://support.microsoft.com/library/images/support/printicon.gif" BORDER="0" HSPACE="0" Title="Print the contents of this page" ></A></TD><TD CLASS="ListNuggetItem" VALIGN="top"><A CLASS="ListNuggetItemLink" HREF="Javascript:PrintContents();" >Print</A></TD></TR></TABLE><img src="http://support.microsoft.com/library/images/support/1ptrans.gif" height="6" width="100" border="0" /></td></tr></table></td></tr></table><!-- - - - - - - - - - - KB CONTENT BEGINS BELOW HERE - - - - - - - - - - --><H1 class="title">How to Upgrade Windows 2000 Domain Controllers to Windows Server 2003</H1><a href="#appliesto">View products that this article applies to.</a><div class="notice">This article was previously published under Q325379 </div><div class="summary"><H2>SUMMARY</H2>This article discusses how to upgrade Windows 2000 domain
+		  controllers to Windows Server 2003 and how to add new Windows Server 2003
+		  domain controllers to Windows 2000 domains. </div><div class="moreinformation"><H3>Domain And Forest Inventory </H3>Before you add Windows Server 2003 schema changes or Windows
+		  Server 2003 domain controllers to a production Windows 2000 forest, follow
+		  these steps: 
+		  <OL class="dec"><LI>Inventory the clients that access resources in the domain
+				that you want to upgrade: 
+				<OL class="alpha"><LI>Windows 95, Windows NT 4.0, and Macintosh
+					 clients:<BR /><BR />Macintosh clients may receive the following error message
+					 during an attempt to connect to a network resource <BR /><div class="errormsg">-
+					 Error -36 I/O</div>Local security settings defined on Windows Server 2003
+					 domain controllers require clients to use SMB Service signing. Windows 95
+					 without the Active Directory directory service client installed and Windows NT
+					 4.0 Service Pack 2 (SP2) or earlier clients are not compatible with the SMB
+					 Service signing requirements that are enabled in the default Windows Server
+					 2003 security settings. Such clients cannot authenticate with, or access
+					 resources on Windows Server 2003 domain controllers. <BR /><BR />Windows 95
+					 clients without the directory service client installed may receive the
+					 following error message when they try to authenticate against Windows 2003
+					 domain controllers with SMB Service signing enabled:<BR /><div class="errormsg">The
+					 domain password you supplied is not correct, or access to your logon server has
+					 been denied. </div> Windows 95 clients can authenticate and access
+					 resources by either disabling the SMB Service signing requirements in Group
+					 Policy on the domain controllers or by installing the Windows 9<EM>x</EM> directory service client on the Windows 95 computers. The
+					 original Win9<EM>x</EM> directory service client is available on the Windows 2000 Server
+					 CD-ROM. However, that client add-on has been replaced by an improved Win9<EM>x</EM> directory service client. 
+					  For additional
+						information, click the following article number to view the article in the
+						Microsoft Knowledge Base: <p class="indent"><a class="KBlink" HREF="http://support.microsoft.com/default.aspx?scid=kb;EN-US;323466">323466</a>
+ Availability of the Directory Services Client Update for Windows 95 and Windows 98
+</p> Windows NT 4.0 clients running NT 4.0 SP2 and
+					 earlier will have the same authentication and resource access issues as Windows
+					 95 computers without the directory service client installed. Windows NT 4.0
+					 clients with SP2 or earlier installed may receive the following error message
+					 when they try to authenticate against Windows 2003 domain controllers with SMB
+					 Service signing enabled:<BR /><div class="errormsg">The system could not log you on.
+					 Make sure your User name and domain are correct, then type your password again.
+					 Letters in passwords must be typed using the correct case. Make sure that Caps
+					 Lock is not accidentally on. </div>Microsoft recommends that administrators
+					 install NT 4.0 SP6A on all NT 4.0 computers authenticating with domains
+					 containing Windows Server 2003 computers. <BR /><BR />If the software updates
+					 cannot be installed on affected Windows 95 and Windows NT 4.0 clients before
+					 the introduction of Windows Server 2003 domain controllers, temporarily disable
+					 the SMB Service signing requirements in Group Policy until you can deploy
+					 updated client software on Windows 95 and NT 4.0 client. <BR /><BR />SMB Service
+					 signing may be disabled in the following node of Default Domain Controllers
+					 policy on the domain controllers organizational unit:<p class="indent">
+Computer Configuration\Windows Settings\Security Settings\Local Policies\Security Options\Microsoft Network Server: Digitally sign communications (always)</p>If domain controllers are not located in the domain controller's
+					 organizational unit, you must link the default domain controller's Group Policy
+					 object (GPO) to all organizational units that host Windows 2000 or Windows
+					 Server 2003 domain controllers. Or, you can configure SMB Service signing in a
+					 GPO that is linked to those organizational units.</LI><LI>Other clients:<BR /><BR />You do not have to take
+					 additional action on computers running Windows 98, Windows 98 Second Edition,
+					 Windows Millennium Edition, Windows NT 4.0 with SP3 or later installed, Windows
+					 2000, Windows XP Professional or Windows Server 2003.</LI></OL></LI><LI>Inventory the domain controllers that are in the domain and
+				the forest: 
+				<OL class="alpha"><LI>Make sure that all the Windows 2000 domain controllers
+					 in the forest have installed all the appropriate hotfixes and service
+					 packs.<BR /><BR />Microsoft recommends that all the Windows 2000 domain
+					 controllers run the Windows 2000 Service Pack 3 (SP3) or later operating
+					 systems. If you cannot fully deploy Windows 2000 SP3, all the Windows 2000
+					 domain controllers must have an Ntdsa.dll file whose date stamp and version is
+					 later than June 4th, 2001 and 5.0.2195.3673. 
+					  For
+						additional information, click the following article number to view the article
+						in the Microsoft Knowledge Base: <p class="indent"><a class="KBlink" HREF="http://support.microsoft.com/default.aspx?scid=kb;EN-US;331161">331161</a>
+ Hotfixes to Install on Windows 2000 Domain Controllers Before Running Adprep /Forestprep
+</p>By default, Active Directory administrative tools on
+					 Windows 2000 SP4, Windows XP, and Windows Server 2003 client computers use
+					 Lightweight Directory Access Protocol (LDAP) signing. If such computers use (or
+					 fall back to) NTLM authentication when they target Windows 2000 domain
+					 controllers, the connection will not work. To resolve this behavior, the
+					 targeted domain controllers must have a minimum of Windows 2000 SP3 installed,
+					 or you must turn off LDAP signing in the clients that run the administration
+					 tools.
+
+For additional information
+						about LDAP, click the following article numbers to view the articles in the Microsoft Knowledge Base:
+
+<p class="indent"><a class="KBlink" HREF="http://support.microsoft.com/default.aspx?kbid=325465">325465</a>
+
+ Windows 2000 Domain Controllers Require Service Pack 3 or Later When Using Windows Server 2003 Administration Tools
+
+</p>The following scenarios use NTLM authentication: 
+					 <UL><LI>You administer Windows 2000 domain controllers that
+						  are located in an external forest connected by NTLM (earlier versions)
+						  trusts.</LI><LI>You focus snap-ins against a specific domain
+						  controller that is referenced by its IP address. For example, you click
+						  <STRONG class="uiterm">Start</STRONG>, click <STRONG class="uiterm">Run</STRONG>, and then type the following
+						  command:<p class="indent"><KBD>dsa.msc /server=ipaddress</KBD></p></LI></UL>To determine the operating system and the service pack
+					 revision level of Active Directory domain controllers in an Active Directory
+					 domain, install the Windows Server 2003 version of Repadmin.exe on a Windows XP
+					 Professional or Windows Server 2003 member computer in the forest, and then run
+					 the following <STRONG>repadmin</STRONG> command against a domain controller in each domain in the forest:
+					 <p class="indent"><KBD>&gt;repadmin /showattr <VAR>name of the domain controller that is in the target domain</VAR> ncobj:domain: "/filter:(&amp;(objectCategory=computer)(primaryGroupID=516))"
+/subtree /atts:operatingSystem,operatingSystemVersion,operatingSystemServicePack</KBD><BR /><BR /><KBD>DN: CN=NA-DC-01,organizational unit=Domain
+					 Controllers,DC=company,DC=com</KBD><BR /><BR /><KBD>1&gt; operatingSystem: Windows Server 2003</KBD><BR /><KBD>1&gt; operatingSystemVersion: 5.2 (3718)
+DN: CN=NA-DC-02,organizational unit=Domain Controllers,DC=company,DC=com</KBD><BR /><KBD>1&gt; operatingSystem: Windows 2000 Server</KBD><BR /><KBD>1&gt; operatingSystemVersion: 5.0 (2195)</KBD><BR /><KBD>1&gt; operatingSystemServicePack: Service Pack 1</KBD></p><STRONG>Note</STRONG>: The domain controller's attributes do not track the installation
+					 of individual hotfixes.</LI><LI>Verify the end-to-end Active Directory replication
+					 throughout the forest.<BR /><BR />Verify that each domain controller in the
+					 upgraded forest replicates all its locally held naming contexts with its
+					 partners consistently with the schedule that site links or connection objects
+					 define. Specifically, each domain controller must have at least one inbound and
+					 outbound connection object for the following partitions: 
+					 <UL><LI>Schema and Configuration: shared by all domain
+						  controllers in the forest</LI><LI>Domain: shared by all domain controllers in the
+						  same domain</LI></UL> Use the Windows Server 2003 version of Repadmin.exe on
+					 a Windows XP- or Windows Server 2003-based member computer in the forest with
+					 the following arguments:<PRE>
+REPADMIN /REPLSUM /BYSRC /BYDEST /SORT:DELTA              &lt;-output formatted to fit on page
+
+DestDC    largest delta    fails/total  %%  error
+
+NA-DC-01 13d.21h:10m:10s    97 / 143  67  (8240) There is no such object...
+NA-DC-02 13d.04h:11m:07s   180 / 763  23  (8524) The DSA operation...
+NA-DC-03 12d.03h:54m:41s     5 /   5 100  (8524) The DSA operation...
+								</PRE> All the domain controllers in the forest must replicate without error
+					 and the value in the "Largest Delta" column must not be greater than the
+					 replication frequency that the matching site link or connection object define.
+					 Investigate any domain controllers in the REPLSUM output that is reporting
+					 replication errors, especially those that have not replicated inbound or
+					 outbound changes in Tombstone Lifetime (TSL) number of days (by default, 60
+					 days). To do so, view the output from <STRONG>repadmin /showrepl * /CSV &gt;c:\repldrilldown.csv</STRONG> in an electronic spreadsheet program that imports .csv files, and
+					 then sort on the "last success time". <BR /><BR />Be careful when you try to
+					 resolve replication errors on domain controllers that have not replicated
+					 inbound or outbound changes for a naming context for greater than
+					 <VAR>tombstonelifetime</VAR> number of days. When you do so,
+					 you may reanimate objects that were deleted on one domain controller but are
+					 still active on other domain controllers if knowledge of the deletion did not
+					 fully propagate throughout the forest in the previous 60 days.
+					 <BR /><BR />Consider forcefully demoting such domain controllers and removing
+					 their remaining elements from the Active Directory forest by using Ntdsutil and
+					 other utilities. Contact your support provider or Microsoft PSS for additional
+					 help. <BR /><BR />You must bring online all the domain controllers that are
+					 currently offline for less than <VAR>tombstonelifetime</VAR>
+					 number of days, and then verify the inbound and outbound
+					 replication.<BR /><BR />If your domain controllers cannot replicate Active
+					 Directory, you may have to forcibly demote the domain controllers and remove
+					 them from the forest by using the Ntdsutil <STRONG>metadata cleanup</STRONG> command, and then promote them back into the forest. You can use
+					 a forceful demotion to save both the operating system installation and the
+					 programs that are on an orphaned domain controller. 
+					  For
+						additional information about how to remove orphaned Windows 2000 domain
+						controllers from their domain, click the following article number to view the
+						article in the Microsoft Knowledge Base: <p class="indent"><a class="KBlink" HREF="http://support.microsoft.com/default.aspx?scid=kb;EN-US;216498">216498</a>
+ HOW TO: Remove Data in Active Directory After an Unsuccessful Domain Controller Demotion
+</p>Take this action only as a last resort to recover
+					 the installation of the operating system and the installed programs. You will
+					 lose unreplicated objects and attributes on orphaned domain controllers
+					 including users, computers, trust relationships, their passwords, groups and
+					 group memberships.</LI><LI>Verify that the contents of the Sysvol share are
+					 consistent.<BR /><BR />Your domain controllers must consistently and successfully
+					 apply the default domain policy and the default domain controllers policy
+					 replicated in the Sysvol to maintain the health of Active Directory . In the
+					 Domain System Volume (Sysvol share) of the Windows 2000 domain controllers that
+					 are in the same domain, verify that the file system portion of the policy is
+					 consistent. You can use Gpotool.exe from the Resource Kit to determine whether
+					 there are inconsistencies in policies across a domain. Use Healthcheck from the
+					 Windows Server 2003 support tools to determine whether the Sysvol share replica
+					 sets function correctly in each domain.<BR /><BR /> If the contents of the Sysvol
+					 share are inconsistent, resolve all the inconsistencies. </LI><LI>Use Dcdiag.exe from the support tools to verify that
+					 all the domain controllers have shared netlogon and sysvol shares. To do so,
+					 type the following command at a command prompt: <p class="indent"><KBD>DCDIAG.EXE /e /test:frssysvol</KBD></p></LI><LI>Inventory the operations roles.<BR /><BR />The schema and
+					 infrastructure operations masters introduce forest and domain-wide schema
+					 changes to the forest and its domains. Assign the infrastructure operations
+					 master role (also known as flexible single master operations or FSMO) to an
+					 online domain controller for each domain. The domain controller that hosts the
+					 infrastructure operations master must not be a global catalog server if the
+					 forest contains more than one domain. The schema operations master is typically
+					 located on the primary domain controller of the forest root domain however, it
+					 may reside on any domain controller in the forest. Finally, verify that the
+					 primary domain controller, relative ID (RID), and domain naming master
+					 operations masters are assigned to healthy domain controllers. 
+					  For additional
+						information about operations masters and their placement, click the following
+						article numbers to view the articles in the Microsoft Knowledge Base: <p class="indent"><a class="KBlink" HREF="http://support.microsoft.com/default.aspx?scid=kb;EN-US;197132">197132</a>
+ Windows 2000 Active Directory FSMO Roles
+</p><p class="indent"><a class="KBlink" HREF="http://support.microsoft.com/default.aspx?scid=kb;EN-US;223346">223346</a> FSMO Placement and Optimization on Windows 2000 Domains
+</p>The <STRONG>netdom query fsmo</STRONG> command can be used to view forest-wide and domain-wide
+					 operational roles.<BR /></LI><LI>EventLog Review<BR /><BR /> Examine the event logs on all
+					 the domain controllers for problematic events. The event logs must not contain
+					 serious event messages that indicate a problem with any of the following
+					 processes and components:<p class="indent">physical connectivity<BR />network connectivity<BR />name
+					 registration<BR />name resolution<BR />authentication<BR />Group
+					 Policy<BR />security policy<BR />disk
+					 subsystem<BR />schema<BR />topology<BR />replication
+					 engine</p></LI><LI>Disk Space Inventory<BR /><BR />The volume that hosts the
+					 Active Directory database file, Ntds.dit, must have free space equal to at
+					 least 15-20% of the Ntds.dit file size. The volume that hosts the Active
+					 Directory log file must also have free space equal to at least 15-20% of the
+					 Ntds.dit file size. For additional information about how to free up additional
+					 disk space, see the "Domain Controllers Without Sufficient Disk Space" section
+					 of this article.</LI><LI>DNS Scavenging (Optional)<BR /><BR />Enable DNS
+					 Scavenging at 7-day intervals for all DNS servers in the forest. For best
+					 results, perform this operation 61 or more days before you upgrade the
+					 operating system. This provides the DNS scavenging daemon sufficient time to
+					 garbage-collect the aged DNS objects when an offline defragmentation is
+					 performed on the Ntds.dit file.</LI><LI>Disable the DLT Server Service (Optional)<BR /><BR />
+					 Unless a Windows 2000 or Windows XP client uses it, set the start value for the
+					 Distributed Link Tracking Service (DLT) Service to "disabled" on all the
+					 Windows 2000 domain controllers. For additional information, see the "Microsoft
+					 Recommendations for distributed link tracking" section of the following article
+					 in the Microsoft Knowledge Base:<p class="indent"><a class="KBlink" HREF="http://support.microsoft.com/default.aspx?kbid=312403">312403</a> Distributed Link Tracking on Windows-Based Domain Controllers
+
+</p></LI><LI>System State Backup<BR /><BR /> Make a system state
+					 backup of at least two domain controllers in every domain in the forest. You
+					 can use the backup to recover all the domains in the forest if the upgrade does
+					 not work.</LI></OL></LI></OL><H3>Exchange 2000 in Windows 2000 Forests</H3><STRONG>Note</STRONG> Read this section if Exchange 2000 Server is installed, or will
+		  be installed, in a Windows 2000 forest. <BR /><BR />The Exchange 2000 schema
+		  defines three non-Request for Comment (RFC)-compliant attributes:
+		  houseIdentifier, secretary, and labeledURI. The Windows 2000 InetOrPerson Kit
+		  and the <STRONG>adprep</STRONG> command in Windows Server 2003 have redefined these attributes.
+		  When Active Directory detects a duplicate name, it modifies the name of one of
+		  the objects by adding "Dup" and some unique characters to the beginning of the
+		  name. Therefore, if Exchange 2000 created these three attributes in a Windows
+		  2000 forest <EM> before</EM> you ran the Windows 2000 InetorgPerson Kit or Windows Server 2003
+		  schema changes, the LDAPDisplayName for these attributes may be conflicted or
+		  mangled after the new RFC-compliant definitions replicate. This behavior is
+		  known as <EM>mangling</EM>. <BR /><BR />Active Directory forests are not vulnerable to this
+		  mangled display problem if you use InetOrgPerson Kit in Windows 2000 or the <STRONG>adprep</STRONG> command in Windows Server 2003 to create the initial definition
+		  of the Secretary and the labeledURI attributes. Specifically, mangled
+		  LdapDisplayName attributes do not occur in the following scenarios: 
+		  <UL><LI>You add Windows 2000 InetOrgPerson Kit to a Windows 2000
+				forest before you run the Windows Server 2003 <STRONG>adprep</STRONG> command. </LI><LI>You run the Windows Server 2003 <STRONG>adprep</STRONG> command in a Windows 2000 forest before you install Exchange
+				2000.</LI><LI>You add Exchange 2000 to an existing Windows Server 2003
+				forest. </LI><LI>You install Exchange 2000 SP3 on the Exchange 2000 servers
+				before running <STRONG>adprep</STRONG>.</LI></UL>Mangled attributes may occur in Windows 2000 and Windows Server
+		  2003 forests if Exchange 2000 creates the initial definition of the Secretary
+		  and the labeledURI attributes in a Windows 2000 domain. This behavior may occur
+		  in the following scenarios: 
+		  <UL><LI>You add the Exchange 2000 SP2 and earlier version of the
+				InetOrgPerson class to a Windows 2000 forest before you add the InetOrgPerson
+				class from InetOrgPerson Kit. </LI><LI>You add the Exchange 2000 SP2 and earlier version of the
+				InetOrgPerson class to a Windows 2000 forest before you run the Windows Server
+				2003 <STRONG>adprep /forestprep</STRONG> command. </LI><LI>A Windows 2000 domain controller that contains the Exchange
+				2000 SP2 and earlier definition of InetOrgPerson does not receive updates to
+				Active Directory after you run InetOrgPerson-fix.ldf from Windows 2000
+				InetOrgPerson Kit.</LI></UL>Therefore, if you have installed, or will install, Exchange 2000
+		  Server in a Windows 2000 forest, use the following steps.<H4>Scenario 1: Exchange 2000 Schema Changes Are Added After You Run the adprep /forestprep Command</H4>If Exchange 2000 schema changes will be introduced to your Windows
+		  2000 forest after the Windows Server 2003 <STRONG>adprep /forestprep</STRONG> command is run, continue to the "Overview: Upgrading Windows 2000
+		  Domain Controllers to Windows Server2003" section of this article.<H4>Scenario 2: Exchange 2000 Schema Changes Will Be Installed Before the Windows Server adprep /forestprep Command</H4>If Exchange 2000 schema changes have already been installed but
+		  you have NOT run the Windows Server 2003 <STRONG>adprep /forestprep</STRONG> command, consider the following action plan: 
+		  <OL class="dec"><LI>Log on to the console of the schema operations master by
+				using an account that is a member of the schema administrators and enterprise
+				administrators groups.</LI><LI>Enable Schema Updates on the schema master. For additional information about how to permit updates to
+				  the Active Directory schema, click the following article number to view the
+				  article in the Microsoft Knowledge Base: <p class="indent"><a class="KBlink" HREF="http://support.microsoft.com/default.aspx?scid=kb;EN-US;285172">285172</a>
+ Schema Updates Require Write Access to Schema in Active Directory
+</p></LI><LI>Click <STRONG class="uiterm">Start</STRONG>, click <STRONG class="uiterm">Run</STRONG>,
+				type <KBD>notepad.exe</KBD> in the <STRONG class="uiterm">Open</STRONG> box, and
+				then click <STRONG class="uiterm">OK</STRONG>. </LI><LI>Copy the text between the <STRONG>[start copy here]</STRONG> and <STRONG>[end copy here]</STRONG> section marks from the following text (including the trailing "-"
+				character) to Notepad. <BR /><BR /><STRONG>[start copy here]</STRONG><BR />dn:
+				CN=ms-Exch-Assistant-Name,CN=Schema,CN=Configuration,DC=X<BR />changetype:
+				Modify<BR />replace: lDAPDisplayName<BR />lDAPDisplayName:
+				msExchAssistantName<BR />-<BR /><BR />dn:
+				CN=ms-Exch-LabeledURI,CN=Schema,CN=Configuration,DC=X<BR />changetype:
+				Modify<BR />replace: lDAPDisplayName<BR />lDAPDisplayName:
+				msExchLabeledURI<BR />-<BR /><BR />dn:
+				CN=ms-Exch-House-Identifier,CN=Schema,CN=Configuration,DC=X<BR />changetype:
+				Modify<BR />replace: lDAPDisplayName<BR />lDAPDisplayName:
+				msExchHouseIdentifier<BR />-<BR /><BR />dn: <BR />changetype: Modify<BR />add:
+				schemaUpdateNow<BR />schemaUpdateNow: 1<BR />-<BR /><STRONG>[end copy here]</STRONG></LI><LI>In Notepad, click <STRONG class="uiterm">Save</STRONG> on the
+				<STRONG class="uiterm">File</STRONG> menu. Create a %systemdrive%\IOP folder, (where
+				%systemdrive% is the logical drive that hosts the Windows 2000 operating
+				system. Save the document in that folder with the file name
+				InetOrgPersonPrevent.ldf. Quit Notepad.</LI><LI>Run the InetOrgPersonPrevent.ldf script. 
+				<OL class="alpha"><LI>Click <STRONG class="uiterm">Start</STRONG>, click
+					 <STRONG class="uiterm">Run</STRONG>, type <KBD>cmd</KBD> in the
+					 <STRONG class="uiterm">Open</STRONG> box, and then click <STRONG class="uiterm">OK</STRONG>. </LI><LI>At a command prompt, type the following, and then press
+					 ENTER:<p class="indent"><KBD>cd
+						 
+					 <VAR>%systemdrive%</VAR>\IOP</KBD></p></LI><LI>Type the following command, and then press ENTER, where
+					 &lt;X&gt; is a case-sensitive constant (dc=corp,dc=tailspintoys,dc=com)  and &lt;dn
+					 path for forest root domain&gt; is
+					 the domain name path for the root domain of the forest:<p class="indent"><KBD>c:\iop&gt;ldifde -i -f inetorgpersonprevent.ldf -v -c DC=&lt;X&gt; "&lt;dn path for forest
+						  root domain&gt;"</KBD></p> Include the quotation marks.</LI></OL></LI><LI>Verify that the LDAPDisplaynames for the
+				CN=ms-Exch-Assistant-Name, CN=ms-Exch-LabeledURI, and
+				CN=ms-Exch-House-Identifier attributes in the schema naming context now appear
+				as msExchAssistantName, msExchLabeledURI, and msExchHouseIdentifier before you
+				run the Windows Server 2003 <STRONG>adprep /forestprep</STRONG> commands.</LI><LI>Go to the "Overview: Upgrading Windows 2000 Domain
+				Controllers to Windows Server2003 " section of this article to run the <STRONG>adprep
+					 /forestprep</STRONG> and <STRONG>/domainprep</STRONG> commands.</LI></OL><H4>Scenario 3: The Windows Server 2003 forestprep Command Was Run Without First Running InetOrgPersonFix</H4>If you run the Windows Server 2003 <STRONG>adprep
+				/forestprep</STRONG> command in a Windows 2000 forest that contains the Exchange 2000
+		  schema changes, the LDAPDisplay attributes for houseIdentifier, Secretary, and
+		  labeledURI will become mangled. To identify mangled names, use Ldp.exe to
+		  locate the affected attributes: 
+		  <OL class="dec"><LI>Install Ldp.exe from the Support\Tools folder of the
+				Microsoft Windows 2000 or Windows Server 2003 media.</LI><LI>Start Ldp.exe from a domain controller or member computer
+				in the forest. 
+				<OL class="alpha"><LI>On the <STRONG class="uiterm">Connection</STRONG> menu, click
+					 <STRONG class="uiterm">Connect</STRONG>, leave the <STRONG class="uiterm">Server</STRONG> box empty, type
+					 <KBD>389</KBD> in the <STRONG class="uiterm">Port</STRONG> box, and then click
+					 <STRONG class="uiterm">OK</STRONG>.</LI><LI>On the <STRONG class="uiterm">Connection</STRONG> menu, click
+					 <STRONG class="uiterm">Bind</STRONG>, leave all the boxes empty, and then click
+					 <STRONG class="uiterm">OK</STRONG>.</LI></OL></LI><LI>Record the distinguished name path for the
+				SchemaNamingContext attribute. For example, for a domain controller in the
+				CORP.ADATUM.COM forest, the distinguished name path might be
+				CN=Schema,CN=Configuration,DC=corp,DC=company,DC=com.</LI><LI>On the <STRONG class="uiterm">Browse</STRONG> menu, click
+				<STRONG class="uiterm">Search</STRONG>.</LI><LI>Use the following settings to configure the
+				<STRONG class="uiterm">Search</STRONG> dialog box: 
+				<UL><LI><STRONG class="uiterm">Base DN</STRONG>: The distinguished name path
+					 for the schema naming context that is identified in step 3.</LI><LI><STRONG class="uiterm">Filter</STRONG>: (ldapdisplayname=dup*)
+					 </LI><LI><STRONG class="uiterm">Scope</STRONG>: Subtree</LI></UL></LI><LI>Mangled houseIdentifier, Secretary and LabeledURI
+				attributes have LDAPDisplayName attributes that are similar to the following
+				format: <p class="indent">lDAPDisplayName:
+						  DUP-labeledURI-9591bbd3-d2a6-4669-afda-48af7c35507d;<BR />lDAPDisplayName:
+						  DUP-secretary-c5a1240d-70c0-455c-9906-a4070602f85f<BR />lDAPDisplayName:
+						  DUP-houseIdentifier-354b0ca8-9b6c-4722-aae7-e66906cc9eef</p></LI><LI>If the LDAP Display names for labeledURI, Secretary, and
+				HouseIdentifier were mangled, run the Windows Server 2003 InetOrgPersonFix.ldf
+				script to recover, and then go to the "Upgrading Windows 2000 Domain
+				Controllers with Winnt32.exe" section in this article. 
+				<OL class="alpha"><LI> Create a folder named %Systemdrive%\IOP, and then
+					 extract the InetOrgPersonFix.ldf file to this folder.
+					 </LI><LI>At a command prompt, type <KBD>cd
+					 %systemdrive%\iop</KBD>.</LI><LI>Extract
+					 the InetOrgPersonFix.ldf file from the Support.cab file that is located in the
+					 Support\Tools folder of the Windows Server 2003 installation media.</LI><LI> From the console of the schema operations master, load
+					 the InetOrgPersonFix.ldf file by using Ldifde.exe to correct the <STRONG>LdapDisplayName</STRONG> attribute of the <STRONG>houseIdentifier</STRONG>, <STRONG>Secretary</STRONG>, and <STRONG>labeledURI</STRONG> attributes. To do so, type the following command, where &lt;X&gt; is a
+					 case-sensitive constant and &lt;dn path for forest root
+					 domain&gt; is the domain name path for the root domain of the forest: <p class="indent"><KBD>C:\IOP&gt;ldifde -i -f inetorgpersonfix.ldf -v -c DC=&lt;X&gt; "&lt;dn path for forest root domain&gt;"</KBD></p> Include the quotation marks.</LI></OL></LI><LI>Verify that the <STRONG>houseIdentifier</STRONG>, <STRONG>Secretary</STRONG>, and <STRONG>labeledURI
+				</STRONG>attributes in the schema naming context are not "mangled" before
+				you install Exchange 2000.</LI></OL> </div><div class="moreinformation"><H3>Overview: Upgrading Windows 2000 Domain Controllers to Windows Server 2003</H3> The Adprep.exe utility that you run from the \I386 folder of the
+		  Windows Server 2003 media prepares a Windows 2000 forest and its domains for
+		  the addition of Windows Server 2003 domain controllers. ADPREP adds the
+		  following features: 
+		  <UL><LI>Improved default security descriptors for object classes
+				</LI><LI>New user and group attributes </LI><LI>New Schema objects and attributes like
+				InetOrgPerson</LI></UL> Windows Server 2003's ADPREP helps to make sure that an
+		  upgraded Windows 2000 forest and domain contains the additional objects,
+		  attributes and permissions to support the Windows Active Directory environment.
+		  ADPREP supports two command-line arguments:<p class="indent"><STRONG>adprep /forestprep</STRONG>: Runs forest upgrade operations.<BR /><STRONG>adprep /domainprep</STRONG>: Runs domain upgrade operations. </p> The <STRONG>adprep /forestprep</STRONG> command is a one-time operation performed on the schema operation
+		  master (FSMO) of the forest. The <STRONG>forestprep</STRONG> operation must complete and replicate to the infrastructure
+		  master of each domain before you can run <STRONG>adprep /domainprep</STRONG> in that domain. <BR /><BR />The <STRONG>adprep /domainprep</STRONG> command is a one-time operation that you run on the
+		  infrastructure operations master domain controller of each domain in the forest
+		  that will host new or upgraded Windows Server 2003 domain controllers. The <STRONG>adprep /domainprep</STRONG> command verifies that the changes from <STRONG>forestprep</STRONG> have replicated in.<BR /><BR /> The <STRONG>adprep /domainprep</STRONG> command does not run if <STRONG>forestprep</STRONG> changes do not exist. Additionally, you cannot perform either of
+		  the following actions unless the <STRONG>/forestprep</STRONG> and the <STRONG>/domainprep</STRONG> operations have completed and replicated to all the domain
+		  controllers in that domain: 
+		  <UL><LI>Upgrade the Windows 2000 domain controllers to Windows
+				Server 2003 domain controllers by using Winnt32.exe.<BR /><BR /><STRONG>Note</STRONG>: You can upgrade the Windows 2000 member servers and computers to
+				Windows Server 2003 member computers whenever you want.</LI><LI>Promote new Windows Server 2003 domain controllers into the
+				domain by using Dcpromo.exe. </LI></UL>The domain that hosts the schema operations master is the only
+		  domain where you must run both <STRONG>adprep /forestprep</STRONG> and <STRONG>adprep /domainprep</STRONG>. In all other domains, you only have to run <STRONG>adprep /domainprep</STRONG>. Your forest must complete end-to-end replication for all domain
+		  controllers in the forest to detect the changes made by ADPREP.<BR /><BR />Even
+		  if you run <STRONG>forestprep</STRONG> and <STRONG>domainprep</STRONG> several times, completed operations are performed only one time.
+		  The <STRONG>adprep</STRONG> command does not add attributes to the global catalog partial
+		  attribute set or cause a full synchronization of the global catalog. The RTM
+		  version of <STRONG>adprep /domainprep</STRONG> does cause a full sync of the \Policies folder in the Sysvol
+		  tree. <BR /><BR />After the changes from <STRONG>adprep /forestprep</STRONG> and <STRONG>adprep /domainprep</STRONG> completely replicate, you can upgrade the Windows 2000 domain
+		  controllers to Windows Server 2003 by running Winnt32.exe from the \I386 folder
+		  of the Windows Server 2003 media. Also, you can add new Windows Server 2003
+		  domain controllers to the domain by using Dcpromo.exe.<H4>Upgrading the Forest with the adprep /forestprep Command</H4>To prepare a Windows 2000 forest and domains to accept Windows
+		  Server 2003 domain controllers, follow these steps first in a lab environment,
+		  then in a production environment: 
+		  <OL class="dec"><LI>Make sure that you have completed all the operations in the
+				"Forest Inventory" phase with special attention to the following items: 
+				<OL class="alpha"><LI>You have created system state backups.</LI><LI>All the Windows 2000 domain controllers in the forest
+					 have installed all the appropriate hotfixes and service packs.</LI><LI>End-to-end replication of Active Directory is occurring
+					 throughout the forest</LI><LI>FRS replicates the file system policy correctly
+					 throughout each domain.</LI></OL></LI><LI>Log on to the console of the schema operations master with
+				an account that is a member of the Schema Administrators group and the
+				enterprise administrators group.</LI><LI>Run ADPREP on the schema operations master. To do so, click
+				Start, click Run, type <KBD>cmd</KBD>, and then on the schema
+				operations master type the following command:<p class="indent"><KBD>X:\I386\adprep /forestprep</KBD></p> where X:\I386\ is the path of the Windows Server 2003
+				installation media. This command runs the forest-wide schema upgrade.<BR /><BR /><p class="indent"><STRONG>Note</STRONG> Events with event ID 1153 that are logged in the Directory
+				Service event log, such as the sample that follows, can be ignored:<P class="indent">Event Type : Error <BR />Event Source : NTDS General
+				<BR />Event Category: Internal Processing<BR /> Event ID : 1153 <BR />Date:
+				MM/DD/YYYY <BR />Time: HH:MM:SS AM|PM<BR /> User : Everyone Computer : &lt;some
+				DC&gt;<BR /> Description: Class identifier 655562 (class name
+				msWMI-MergeablePolicyTemplate) has an invalid superclass 655560. Inheritance
+				ignored. </P></p></LI><LI>Verify that the <STRONG>adprep /forestprep</STRONG> command successfully ran on the schema operations master. To do
+				so, from the console of the schema operations master, verify the following
+				items: 
+				<UL><LI>The <STRONG>adprep /forestprep</STRONG> command completed without error. </LI><LI>The CN=Windows2003Update object is written under
+					 CN=ForestUpdates,CN=Configuration,DC=<VAR>forest_root_domain</VAR>.
+					 Record the value of the Revision attribute.</LI><LI>(Optional) The schema version incremented to version
+					 30. To do so, see the ObjectVersion attribute under
+					 CN=Schema,CN=Configuration,DC=<VAR>forest_root_domain</VAR>.</LI></UL>If <STRONG>adprep /forestprep</STRONG> does not run, verify the following items: 
+				<UL><LI>The fully qualified path for Adprep.exe located in the
+					 \I386 folder of the installation media was specified when <STRONG>adprep</STRONG> ran. To do so, type the following command: <p class="indent"><KBD><VAR>x</VAR>:\i386\adprep /forestprep</KBD></p> where <VAR>x</VAR> is the drive that hosts the
+					 installation media.</LI><LI>The logged on user who runs ADPREP has membership to
+					 the enterprise and schema administrator groups. To verify this, use the <STRONG>whoami
+						  /all</STRONG> command.</LI><LI>If ADPREP still does not work, view the ADPREP.LOG file
+					 in the
+					 %systemroot%\System32\Debug\Adprep\Logs\<VAR>Latest_log</VAR>
+					 folder.</LI></UL></LI><LI>Verify that the <STRONG>adprep /forestprep</STRONG> changes have replicated on all the domain controllers in the
+				forest. It is useful to monitor the following attributes: 
+				<OL class="alpha"><LI>Incrementing the schema version</LI><LI>The CN=Windows2003Update,
+					 CN=ForestUpdates,CN=Configuration,DC=<VAR>forest_root_domain</VAR>
+					 or
+					 CN=Operations,CN=DomainUpdates,CN=System,DC=<VAR>forest_root_domain</VAR>
+					 and the operations GUIDs under it have replicated in.</LI><LI>Search for new schema classes, objects, attributes or
+					 other changes that <STRONG>adprep /forestprep</STRONG> adds such as InetOrgPerson. View the
+					 Sch<VAR>XX</VAR>.LDF files (where <VAR>XX</VAR>
+					 is a number between 14 and 30) in the %systemroot%\System32 folder to determine
+					 what objects and attributes there should be. For example, InetOrgPerson is
+					 defined in Sch18.ldf.</LI></OL></LI><LI>Look for mangled LdapDisplay names.<BR /><BR /> If Exchange
+				2000 was installed before you ran the Windows Server 2003 <STRONG>adprep /forestprep</STRONG> command, see the "How to Identify Mangled Name Attributes"
+				section of the following article in the Microsoft Knowledge Base:<p class="indent"><a class="KBlink" HREF="http://support.microsoft.com/default.aspx?kbid=314649">314649</a> Windows Server 2003 ADPREP Command Causes Mangled Attributes in Windows 2000 Forests That Contain Exchange 2000 Servers
+
+</p>If you find mangled names, go to Scenario 3 of the
+				"Exchange 2000 in Windows 2000 Forests" section of the same article.</LI><LI>Log on to the console of the schema operations master with
+				an account that is a member of the Schema Administrators group and the
+				enterprise administrators group of the forest that hosts the schema operations
+				master.</LI></OL><H4>Upgrading the Domain with ADPREP /DOMAINPREP</H4>Run <STRONG>adprep /domainprep</STRONG> after the <STRONG>/forestprep</STRONG> changes fully replicate to the infrastructure master domain
+		  controller in each domain that will host Windows Server 2003 domain
+		  controllers. To do so, follow these steps: 
+		  <OL class="dec"><LI>Identify the infrastructure master domain controller in the
+				domain you are upgrading, and then log on with an account that is a member of
+				the domain administrators group in the domain you are upgrading.<BR /><BR /><STRONG>Note</STRONG>: The enterprise administrator may not be a member of the domain
+				administrators group in child domains of the forest.</LI><LI>Run Adprep.exe on the Infrastructure master. To do so,
+				click Start, click Run, type <KBD>cmd</KBD>, and then on the
+				Infrastructure master type the following command:<p class="indent"><KBD>X:\I386\adprep /domainprep</KBD></p> where X:\I386\ is the path of the Windows Server 2003
+				installation media. This command runs domain-wide changes in the target
+				domain.<BR /><BR /><STRONG>Note</STRONG>: The <STRONG>adprep /domainprep</STRONG> command modifies files permissions in the Sysvol share. These
+				modifications cause a full synchronization of files in that directory
+				tree.</LI><LI>Verify that <STRONG>domainprep</STRONG> completed successfully. To do so, verify the following items: 
+				<UL><LI>The <STRONG>adprep /domainprep</STRONG> command completed without error.</LI><LI>The
+					 CN=Windows2003Update,CN=DomainUpdates,CN=System,DC=<VAR>dn path of
+					 domain you are upgrading</VAR> exists</LI></UL> If <STRONG>adprep /domainprep</STRONG> does not run, verify the following items: 
+				<UL><LI>The logged on user who runs ADPREP has membership to
+					 the domain administrators group in the domain being you are upgrading. To do
+					 so, use the <STRONG>whoami
+					 /all</STRONG> command.</LI><LI>The fully qualified path for ADPREP.EXE located in the
+					 \I386 directory of the installation media was specified when you ran ADPREP. To
+					 do so, at a command prompt type the following command:<p class="indent"><KBD><VAR>x</VAR>:\i386\adprep /forestprep</KBD></p> where <VAR>x</VAR> is the drive that hosts the
+					 installation media.</LI><LI>If ADPREP still does not work, view the Adprep.log file
+					 in the
+					 %systemroot%\System32\Debug\Adprep\Logs\<VAR>Latest_log</VAR>
+					 folder.</LI></UL></LI><LI>Verify that the <STRONG>adprep /domainprep</STRONG> changes have replicated. To do so, for the remaining domain
+				controllers in the domain, verify the following items: 
+				<UL><LI>The
+					 CN=Windows2003Update,CN=DomainUpdates,CN=System,DC=<VAR>dn path of
+					 domain you are upgrading</VAR> object exists and the value for the
+					 Revision attribute matches the value of the same attribute on the
+					 infrastructure master of the domain.</LI><LI>(Optional) Look for objects, attributes or access
+					 control list (ACL) changes that <STRONG>adprep /domainprep</STRONG> added.</LI></UL>Repeat steps 1-4 on the infrastructure master of the
+				remaining domains in bulk or as you add or upgrade DC's in those domains to
+				Windows Server 2003. Now you can promote new Windows Server 2003 computers into
+				the forest by using DCPROMO. Or, you can upgrade existing Windows 2000 domain
+				controllers to Windows Server 2003 by using WINNT32.EXE.</LI></OL><H3>Creating the Installation Media</H3>This section will lists the hotfixes that Microsoft identifies as
+		  either required or highly desirable for Windows Server 2003 domain controllers.
+		  Consider adding the following hotfixes to your installation media or installing
+		  them before you run DCPROMO for new domain controllers. Finally, install these
+		  hotfixes on Windows Server 2003 member computers because they may be affected
+		  or their roles may change later. <BR /><BR /><STRONG>Note</STRONG>: A post RTM release of NTFRS.EXE is planned for Windows Server
+		  2003.<H3>Upgrading Windows 2000 Domain Controllers by Using Winnt32.exe</H3>After the changes from <STRONG>/forestprep</STRONG> and <STRONG>/domainprep</STRONG> completely replicate and you have made a decision about security
+		  interoperability with earlier-version clients, you can upgrade Windows 2000
+		  domain controllers to Windows Server 2003 and add new Windows Server 2003
+		  domain controllers to the domain. <BR /><BR />The following computers must be
+		  among the first domain controllers that run Windows Server 2003 in the forest
+		  in each domain: 
+		  <UL><LI>The domain naming master in the forest so that you can
+				create default DNS program partitions.</LI><LI>The primary domain controller of the forest root domain so
+				that the enterprise-wide security principals that Windows Server 2003's <STRONG>forestprep</STRONG> adds become visible in the ACL editor.</LI><LI>The primary domain controller in each non-root domain so
+				that you can create new domain-specific Windows 2003 security
+				principals.</LI></UL>To do so, use WINNT32 to upgrade existing domain controllers
+		  that host the operational role you want. Or, transfer the role to a
+		  newly-promoted Windows Server 2003 domain controller. Perform the following
+		  steps for each Windows 2000 domain controller that you upgrade to Windows
+		  Server 2003 with WINNT32 and for each Windows Server 2003 workgroup or member
+		  computer that you promote: 
+		  <OL class="dec"><LI>Before you use WINNT32 to upgrade Windows 2000 member
+				computers and domain controllers, remove Windows 2000 Administration Tools. To
+				do so, use the Add/Remove Programs tool in Control Panel. (Windows 2000
+				upgrades only.)</LI><LI>Install any hotfix files listed in the "Creating the
+				Installation Media" section of this article or other fixes that either
+				Microsoft or the administrator determines is important.</LI><LI>Check each domain controller for possible upgrade issues.
+				To do so, run the following command from the \I386 folder of the installation
+				media: <p class="indent"><KBD>winnt32.exe /checkupgradeonly</KBD></p>Resolve any issues that the compatibility check
+				identifies.</LI><LI>Run WINNT32.EXE from the \I386 folder of the installation
+				media, and the restart the upgraded 2003 domain controller.</LI><LI>Lower the security settings for earlier-version clients as
+				required.<BR /><BR />If Windows NT 4.0 clients do not have NT 4.0 SP6 or Windows
+				95 clients do not have the directory service client installed, disable SMB
+				Service signing on the Default Domain Controllers policy on the Domain
+				Controllers organizational unit, and then link this policy to all
+				organizational units that host domain controllers.<p class="indent">
+Computer Configuration\Windows Settings\Security Settings\Local Policies\Security Options\Microsoft Network Server: Digitally sign communications (always)
+</p></LI><LI>Verify the health of the upgrade using the following data
+				points: 
+				<UL><LI>The upgrade completed successfully.</LI><LI>The hotfixes that you added to the installation
+					 successfully replaced the original binaries.</LI><LI>Inbound and outbound replication of Active Directory is
+					 occurring for all naming contexts held by the domain controller.</LI><LI>The Netlogon and Sysvol shares exist.</LI><LI>The event log indicates that the domain controller and
+					 its services are healthy.<BR /><BR /><STRONG>Note</STRONG>: You may receive the following event message after you upgrade:<p class="indent"><P class="indent">Event Type: Error <BR />Event Source: NTDS Backup
+					 <BR />Event Category: Backup <BR />Event ID: 1913 <BR />Date:
+					 <VAR>Date</VAR><BR />Time: HH:MM:SSAM|PM <BR />User: N/A
+					 <BR />Computer: &lt;computername&gt; <BR />Description: Internal error: The
+					 Active Directory backup and restore operation encountered an unexpected error.
+					 Backup or restore will not succeed until this is corrected. </P></p>You can safely ignore this event message.</LI></UL></LI><LI>Install the Windows Server 2003 Administration Tools
+				(Windows 2000 upgrades and Windows Server 2003 non-domain controllers only).
+				Adminpak.msi is in the \I386 folder of the Windows Server 2003 CD-ROM. Windows
+				Server 2003 media contains updated support tools in the
+				Support\Tools\Suptools.msi file. Make sure that you reinstall this
+				file.</LI><LI>Make new backups of at least the first two Windows 2000
+				domain controllers that you upgraded to Windows Server 2003 in each domain in
+				the forest. Locate the backups of the Windows 2000 computers that you upgraded
+				to Windows Server 2003 in locked storage so you do not accidentally use them to
+				restore a domain controller that now runs Windows Server 2003.</LI><LI>(Optional) Perform an offline defragmentation of the Active
+				Directory database on the domain controllers that you upgraded to Windows
+				Server 2003 after the single instance store (SIS) has completed (Windows 2000
+				upgrades only).<BR /><BR />The SIS reviews existing permissions on objects stored
+				in Active Directory, and then applies a more efficient security descriptor on
+				those objects. The SIS starts automatically (identified by event 1953 in the
+				directory service event log) when upgraded domain controllers first start the
+				Windows Server 2003 operating system. You benefit from the improved security
+				descriptor store only when you log an event ID 1966 event message in the
+				directory service event log: <P class="indent">Event Type: Information
+				<BR />Event Source: NTDS SDPROP <BR />Event Category: Internal
+				Processing<BR />Event ID: 1966 <BR />Date: MM/DD/YYYY<BR />Time: HH:MM:SS AM|PM
+				<BR />User: NT AUTHORITY\ANONYMorganizational unitS LOGON <BR />Computer:
+				&lt;computername&gt;<BR />Description: The security descriptor propagator has
+				completed a full propagation pass. <BR />Allocated space (MB): <BR />XX Free
+				space (MB): XX <BR /><BR />This may have increased free space in the Active
+				Directory database. User Action Consider defragmenting the database offline to
+				reclaim the free space that may be available in the Active Directory database.
+				For more information, see Help and Support Center at
+				http://go.microsoft.com/fwlink/events.asp. </P>This event message
+				indicates that the single instance store operation has completed and serves as
+				a queues the administrator to perform of offline defragmentation of the
+				Ntds.dit using NTDSUTIL.EXE. <BR /><BR />The offline defragmentation can reduce
+				the size of a Windows 2000 Ntds.dit file by up to 40%, improves Active
+				Directory performance, and updates the pages in the database for more efficient
+				storage of Link Valued attributes. 
+				 For additional
+				  information about how to defragment the Active Directory database, click the
+				  following article number to view the article in the Microsoft Knowledge Base: <p class="indent"><a class="KBlink" HREF="http://support.microsoft.com/default.aspx?scid=kb;EN-US;232122">232122</a>
+ Performing an Offline Defragmentation of the Active Directory Database
+</p></LI><LI>Investigate the DLT Server Service. Windows Server 2003
+				domain controllers disable the DLT Server service on fresh and upgrade
+				installs. If Windows 2000 or Windows XP clients in your organization use the
+				DLT Server service, use Group Policy to enable the DLT Server service on new or
+				upgraded Windows Server 2003 domain controllers. Otherwise, incrementally
+				delete distributed link tracking objects from Active Directory. 
+				 For additional information, click
+				  the following article numbers to view the articles in the Microsoft Knowledge
+				  Base: <p class="indent"><a class="KBlink" HREF="http://support.microsoft.com/default.aspx?scid=kb;EN-US;312403">312403</a>
+ Distributed Link Tracking on Windows-Based Domain Controllers
+</p><p class="indent"><a class="KBlink" HREF="http://support.microsoft.com/default.aspx?kbid=315229">315229</a> Text Version of Dltpurge.vbs for Microsoft Knowledge Base Article Q312403
+
+</p>If you bulk delete thousands of DLT objects or other objects,
+				you may block replication because of a lack of version store. Wait
+				<VAR>tombstonelifetime</VAR> number of days (by default, 60
+				days) after you delete the last DLT object and for garbage collection to
+				complete, then use NTDSUTIL.EXE to perform an offline defragmentation of the
+				Ntds.dit file.</LI><LI>Configure the best practice organizational unit structure.
+				Microsoft recommends that administrators actively deploy the best practice
+				organizational unit structure in all the Active Directory domains, and after
+				they upgrade or deploy Windows Server 2003 domain controllers in Windows Domain
+				mode, redirect the default containers that earlier-version APIs use to create
+				users, computers and groups to an organizational unit container that the
+				administrator specifies.<BR /><BR />For additional information about the best
+				practice organizational unit structure, view the "Creating an Organizational
+				Unit Design" section of the "Best Practice Active Directory Design for Managing
+				Windows Networks" white paper. To view the white paper, visit the following
+				Microsoft Web site: <p class="indent"><a class="URLLink" TARGET="_top" HREF="http://www.microsoft.com/technet/prodtechnol/ad/windows2000/plan/bpaddsgn.asp">http://www.microsoft.com/technet/prodtechnol/ad/windows2000/plan/bpaddsgn.asp</a></p> For additional information about changing the default
+				  container where users, computers and groups that earlier-version APIs create
+				  are located, click the following article number to view the article in the
+				  Microsoft Knowledge Base: <p class="indent"><a class="KBlink" HREF="http://support.microsoft.com/default.aspx?scid=kb;EN-US;324949">324949</a>
+ Redirecting the Users and Computers Containers in Windows Server 2003 Domains
+</p></LI><LI>Repeat steps 1 through 10 as required for each new or
+				upgraded Windows Server 2003 domain controller in the forest and step 11 (Best
+				Practice organizational unit structure) for each Active Directory
+				domain.<BR /><BR /> In Summary: 
+				<UL><LI>Upgrade Windows 2000 Domain controllers with WINNT32
+					 (from the slipstreamed installation media if used)</LI><LI>Verify the hotfixed files have been installed on the
+					 upgraded computers</LI><LI>Install any required hotfixes not contained on
+					 installation media</LI><LI>Verify the health on new or upgraded servers ( AD, FRS,
+					 Policy etc)</LI><LI>Wait 24 hours after OS upgrade then offline defrag
+					 (optional)</LI><LI>Start the DLT Service if you must, otherwise delete DLT
+					 objects using q312403 / q315229 post forest wide domainpreps</LI><LI>Perform offline defrag 60+ days (tombstone lifetime and
+					 garbage collection # of days) after deleting DLT objects</LI></UL></LI></OL><H3>Dry Run Upgrades in a Lab Environment</H3>Before you upgrade Windows domain controllers to a production
+		  Windows 2000 domain, validate and refine your upgrade process in the lab. If
+		  the upgrade of a lab environment that accurately mirrors the production forest
+		  performs smoothly, you can expect similar results in production environments.
+		  For complex environments, the lab environment must mirror the production
+		  environment in the following areas: 
+		  <UL><LI><STRONG>Hardware</STRONG>: computer type, memory size, page file placement, disk size,
+				performance and raid configuration, BIOS and firmware revision
+				levels</LI><LI><STRONG>Software</STRONG>: client and server operating system versions, client and server
+				applications, service pack versions, hotfixes, schema changes, security groups,
+				group memberships, permissions, policy settings, object count type and
+				location, version interoperability</LI><LI><STRONG>Network infrastructure</STRONG>: WINS, DHCP, link speeds, available bandwidth</LI><LI><STRONG>Load</STRONG>: Load simulators can simulate password changes, object creation,
+				Active Directory replication, logon authentication and other events. The goal
+				is not to reproduce the scale of the production environment. Instead, the goals
+				are to discover the costs and frequency of common operations and to interpolate
+				their effects (name queries, replication traffic, network bandwidth, and
+				processor consumption) on the production environment based on your current and
+				future requirements.</LI><LI><STRONG>Administration</STRONG>: tasks performed, tools used, operating systems used </LI><LI><STRONG>Operation</STRONG>: capacity, interoperability</LI><LI><STRONG>Disk Space</STRONG>: Note the starting, peak and ending size of the operating system,
+				Ntds.dit and Active Directory log files on global catalog and non-global
+				catalog domain controllers in each domain after each of the following
+				operations: 
+				<OL class="alpha"><LI><STRONG>adprep /forestprep</STRONG></LI><LI><STRONG>adprep /domainprep</STRONG></LI><LI>Upgrading Windows 2000 domain controllers to Windows
+					 Server 2003 </LI><LI>Performing offline defragmentation after version
+					 upgrades</LI></OL></LI></UL> An understanding of the upgrade process and complexity of the
+		  environment combined with detailed observation determines the pace and degree
+		  of care that you apply to upgrading production environments. Environments with
+		  a small number of domain controllers and Active Directory objects connected
+		  over high availability wide area network (WAN) links might upgrade in only a
+		  few hours. You may have to take more care with enterprise deployments that have
+		  hundreds of domain controllers or hundreds of thousands of Active Directory
+		  objects. In such cases, you may want to perform the upgrade over the course of
+		  several weeks or months. <BR /><BR /> Use "Dry-run" upgrades in the lab to
+		  perform the following tasks: 
+		  <UL><LI>Understand the inner workings of the upgrade process and
+				the associated risks.</LI><LI>Expose potential problem areas for the deployment process
+				in your environment.</LI><LI>Test and develop fall-back plans in case the upgrade does
+				not succeed.</LI><LI>Define the appropriate level of detail to apply to the
+				upgrade process for the production domain.</LI></UL><H3>Domain Controllers Without Sufficient Disk Space</H3>On domain controllers with insufficient disk space, use the
+		  following steps to free up additional disk space on the volume that hosts the
+		  Ntds.dit and Log files: 
+		  <OL class="alpha"><LI>Delete the unused files including *.tmp files or cached
+				files that internet browsers use. To do so, type the following commands (press
+				ENTER after each command):<p class="indent"><KBD>cd /d <VAR>drive</VAR>\</KBD><BR /><KBD>del *.tmp
+				/s</KBD></p></LI><LI>Delete any user or memory dump files. To do so, type the
+				following commands (press ENTER after each command):<p class="indent"><KBD>cd /d
+				<VAR>drive</VAR>\</KBD><BR /><KBD>del *.dmp /s</KBD></p></LI><LI>Temporarily remove or relocate files that you can access
+				from other servers or easily reinstall. Files that you can remove and easily
+				replace include ADMINPAK, Support Tools, and all the files in the
+				%systemroot%\System32\Dllcache folder.</LI><LI>Delete old or unused user profiles. To do so, click
+				<STRONG class="uiterm">Start</STRONG>, right-click <STRONG class="uiterm">My Computer</STRONG>, click
+				<STRONG class="uiterm">Properties</STRONG>, click the <STRONG class="uiterm">User Profiles</STRONG> tab, and
+				then delete all the profiles that are for old and unused accounts. Do not
+				delete any profiles that may be for service accounts.</LI><LI>Delete the symbols at %systemroot%\Symbols. To do so, type
+				the following command:<p class="indent"><KBD>rd /s
+				%systemroot%\symbols</KBD></p>Depending on whether the servers have a full or small symbol set,
+				this may gain approximately 70 MB to 600 MB. </LI><LI>Perform an offline defragmentation. An offline
+				defragmentation of the Ntds.dit file may free up space but temporarily requires
+				double the space of the current DIT file. Perform the offline defrag by using
+				other local volumes if one is available. Or, use space on a best connected
+				network server to perform the offline defragmentation. If the disk space is
+				still not sufficient, incrementally delete unnecessary user accounts, computer
+				accounts, DNS records and DLT objects from Active Directory.<BR /><BR /><STRONG>Note</STRONG>: Active Directory does not delete objects from the database until
+				<VAR>tombstonelifetime</VAR> number of days (by default, 60
+				days) have passed and the garbage collection completes. If you reduce
+				<VAR>tombstonelifetime</VAR> to a value lower than end-to-end
+				replication in the forest, you may cause inconsistencies in Active
+				Directory.</LI></OL> </div><div name="appliesto" id="appliesto" class="appliesto"><H3>The information in this article applies to:</H3><UL><LI>Microsoft Windows 2000 Server</LI><LI>Microsoft Windows 2000 Advanced Server</LI><LI>Microsoft Windows 2000 Datacenter Server</LI><LI>Microsoft Windows Server 2003, Standard Edition</LI><LI>Microsoft Windows Server 2003, Enterprise Edition</LI><LI>Microsoft Windows Server 2003, Datacenter Edition</LI><LI>Microsoft Exchange 2000 Server</LI></UL></div><TABLE class="docinfo" cellspacing="1" cellpadding="3" align="center"><TR><TD align="right" width="5%" class="label" valign="top" nowrap="1">Last Reviewed:</TD><TD align="left" class="data" valign="top">7/30/2003
+			 (11.0)
+		</TD></TR><TR class="composite"><TD align="right" width="5%" class="label" valign="top" nowrap="1">Keywords:</TD><TD align="left" class="data" valign="top">kbinfo KB325379</TD></TR></TABLE><BR /><div class="disclaimer"></div><!-- - - - - - - - - - - - PAGE TEXT ENDS ABOVE HERE - - - - - - - - - - - --></td></tr><tr><td align="center"><!--GETHELP_HORI--></td></tr></table></div></div>
+</DIV>
+
+</DIV>
+</XMLREADER></td></tr></table></td></tr><tr><td valign="top" class="tpl_footer"><table class="tpl_footer_row1"><tr><td class="fbtn_cell">&nbsp;<A HREF="http://support.microsoft.com/default.aspx?pr=cntactms&style=home" TARGET="_top" >Contact Us</A>&nbsp;</td></tr></table><BR><div class="tpl_footer_row2">© 2004 Microsoft Corporation. All rights reserved.&nbsp;&nbsp;<A HREF="http://support.microsoft.com/default.aspx?scid=%2fsupport%2fmisc%2fcpyright.asp" TARGET="http://support.microsoft.com/default.aspx?scid=%2fsupport%2fmisc%2fcpyright.asp" class="ftr_copyright_text">Terms of use</A>&nbsp;&nbsp;<A HREF="http://www.microsoft.com/security/default.asp" TARGET="http://www.microsoft.com/security/default.asp" class="ftr_copyright_text">Security & Privacy</A>&nbsp;&nbsp;<A HREF="http://support.microsoft.com/default.aspx?scid=%2fisapi%2fgomscom.asp%3ftarget%3d%2fenable%2fdefault.htm" TARGET="http://support.microsoft.com/default.aspx?scid=%2fisapi%2fgomscom.asp%3ftarget%3d%2fenable%2fdefault.htm" class="ftr_copyright_text">Accessibility</A>&nbsp;&nbsp;</div></td></tr></table><IMG style="display:none;" name="metrixgif" SRC="/library/images/support/1ptrans.gif"></BODY>
+
+<script language="JavaScript" >
+   function thisLoad(){
+setcookieval("SITE","GN");
+
+   g_reSupportedHostnames = new RegExp(".msn.com$|.passport.com$|.xbox.com$|.microsoft.com$|.microsoft.cz$|.msbpn.com$|.microsoft.co.*", "i");
+  ForeignLink_Hookup(true);LogHit('http://c.microsoft.com/trans_pixel.asp?TYPE=SSPV&SOURCE=SUPPORT&URI=/GN/EN-US/kb_en-us_325379&GUID=1F4FC18C-F71E-47fb-8FC9-612F8EE59C61&R=');
+   }
+
+function thisUnload(){
+;   }
+</script>
+</HTML>

@@ -1,0 +1,27 @@
+TABLE#chart {
+	FONT-SIZE: 10pt; WIDTH: 600px; FONT-FAMILY: Verdana; BORDER-COLLAPSE: collapse
+}
+TABLE#platformdetails {
+	FONT-SIZE: 10pt; WIDTH: 600px; FONT-FAMILY: Verdana; BORDER-COLLAPSE: collapse
+}
+TABLE#platformdetails {
+	BORDER-RIGHT: black 1px solid; BORDER-TOP: black 1px solid; BORDER-LEFT: black 1px solid; WIDTH: 380px; BORDER-BOTTOM: black 1px solid
+}
+TH.platformdetails {
+	PADDING-TOP: 15px
+}
+TD.plattformdetails {
+	BORDER-RIGHT: black 1px solid; BORDER-TOP: black 1px solid; VERTICAL-ALIGN: top; BORDER-LEFT: black 1px solid; BORDER-BOTTOM: black 1px solid
+}
+TD.chartheader {
+	PADDING-RIGHT: 5px; PADDING-LEFT: 5px; VERTICAL-ALIGN: top
+}
+TD#chart {
+	
+}
+TD.chartfooter {
+	PADDING-LEFT: 5px; VERTICAL-ALIGN: top
+}
+TD#closetag {
+	VERTICAL-ALIGN: middle; HEIGHT: 30px; TEXT-ALIGN: center
+}

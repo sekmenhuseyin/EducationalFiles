@@ -1,0 +1,77 @@
+<!doctype html public "-//IETF//DTD HTML//EN">
+<HTML>
+<HEAD>
+<TITLE>Windows XP: The Complete Reference: Registering Programs and File Types</TITLE>
+<META NAME="GENERATOR" CONTENT="Web-O-Matic Deluxe 4.1">
+<META NAME="AUTHOR" CONTENT="John R. Levine, Margaret Levine Young">
+<META NAME="COPYRIGHT" CONTENTS="Copyright 2001 by The McGraw-Hill Companies. All rights reserved.">
+</HEAD>
+<BODY BACKGROUND="../images/background.png">
+<BLOCKQUOTE>
+<SCRIPT LANGUAGE="JavaScript">
+function whomp(i, file)
+{
+	i.src = "../images/" + file + ".png";
+}
+</SCRIPT>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarered3x3.png" HEIGHT=3 WIDTH=3></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=2>
+Chapter 38: Registering Programs and File Types
+</FONT></TD>
+</TR>
+</TABLE>
+<BR>
+<A HREF="1.htm"  OnMouseOver='whomp(prev, "sprev");' OnMouseOut='whomp(prev, "wprev");'
+ title="Previous Section"><IMG NAME=prev SRC="../images/wprev.png" ALT="Previous" HEIGHT=20 WIDTH=82 BORDER=0></A><!--
+--><A HREF="index.htm" OnMouseOver='whomp(chap, "schap");' OnMouseOut='whomp(chap, "wchap");'
+title="Chapter Overview"><IMG SRC="../images/wchap.png" ALT="Chapter" NAME=chap HEIGHT=20 WIDTH=100 BORDER=0></A><A
+HREF="../index.htm" OnMouseOver='whomp(toc, "sbook");' OnMouseOut='whomp(toc, "wbook");' 
+title="Table of Contents"><IMG SRC="../images/wbook.png" ALT="Contents" NAME=toc HEIGHT=20 WIDTH=94 BORDER=0></A><A
+HREF="../glossary/index.htm" OnMouseOver='whomp(glos, "sglos");' OnMouseOut='whomp(glos, "wglos");' 
+title="Glossary"><IMG SRC="../images/wglos.png" ALT="Glossary" NAME=glos HEIGHT=20 WIDTH=94 BORDER=0></A><!--
+--><A HREF="3.htm"  OnMouseOver='whomp(next, "snext");' OnMouseOut='whomp(next, "wnext");'
+ title="Next Section"><IMG NAME=next SRC="../images/wnext.png" ALT="Next" HEIGHT=20 WIDTH=82 BORDER=0></A>
+<BR>
+<A NAME="1">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarered10x10.png" HEIGHT=10 WIDTH=10></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=4><B>Associating File Types with Programs</B></FONT>
+</TD>
+</TR>
+</TABLE></A>
+<P>
+In Windows, every file has a <A HREF="../files/2.htm#3"><I>file type</I></A>, determined by the file extension (usually three letters) after the dot. For example, My Proposal.doc has type DOC, so one usually calls it a DOC file. Every file type can be associated with a program or group of programs, so when you open a file of that type in an Explorer window (by clicking or double-clicking the file), the associated program runs automatically to process the file. Most programs associate themselves with the appropriate file types when you install the program, but in two circumstances, you may want to set your own associations:
+<UL>
+<LI >
+<B>Dueling programs</B>  When two or more programs can handle the same type of file, whichever one you installed most recently wins, unless you intervene. This problem is particularly common with graphics formats such as GIF and JPG, because both graphics editing programs (such as the Windows Picture And Fax Viewer that comes with Windows XP) and Web browsers (such as Internet Explorer) can display them. You can change the association to whichever program you prefer, and Windows XP can display a list of the programs that should be able to open a file.
+<LI >
+<B>Nonstandard file extensions</B>  Many files with unknown types are, in fact, known types in disguise, or close enough to known types that a program you have installed can handle them. For example, most .log files are actually text files that <A HREF="../docs/1.htm#1">Notepad</A>, <A HREF="../docs/2.htm#1">WordPad</A>, or any other text editor can read. Word processors can almost all read each other's files; for example, if you use WordPerfect rather than Word, you can associate DOC files with WordPerfect.
+</UL>
+<P>
+The Windows file association facility is complex and flexible. A file type can have several programs associated with it to do different actions, such as viewing and editing a file. The usual way to process a file is to open an application, but file associations can also use <A HREF="../sharedata/1.htm#6">DDE (Dynamic Data Exchange)</A>, a Windows facility that enables one running program to send a message to another program.
+<P>
+To see or change the details of a file association or to create a new association, open any disk drive or folder in Windows Explorer and choose Tools | Folder Options. In the Folder Options window, click the File Types tab. (The first time you do so, Windows takes a minute to assemble a list of the registered file types.) Highlight a file type in the Registered File Types list to see information about that file type in the lower part of the dialog box. Click the Change button to display the Open With dialog box and to choose a different program to run when you open that type of file. Windows lists the programs that it recommends for handling this type of file, along with other programs that it knows can open them. You can also browse to other programs that are not listed. Or, click the Advanced button to see the <A HREF="../installing/3.htm#3">Edit File Type dialog box</A>, which contains a description of the type, the icon, the usual extension for the type, and a list of actions.
+<P>
+<TABLE><TR><TD VALIGN="TOP"><IMG SRC="../images/tip.png" ALT="tip" WIDTH=95 HEIGHT=29></TD>
+<TD VALIGN="TOP">When you try to open a file from the Explorer window but the filename extension isn't associated with any program, Windows opens a dialog box explaining that it can't open the file. It offers two choices: downloading a program from the Internet, or using the Open With window to choose an application that you have on your computer. If you do not see the application you want to use, click the Browse button at the bottom of the dialog box and find the file that contains the program. You can also create a file association for this file type by entering a short description of the file type and selecting the appropriate application from the Programs list. Unless you uncheck the Always Use The Selected Program To Open This Kind Of File box, Windows saves the association.
+
+</TD></TR></TABLE>
+<P>
+<A HREF="1.htm"  OnMouseOver='whomp(prevb, "sprev");' OnMouseOut='whomp(prevb, "wprev");'
+ title="Previous Section"><IMG NAME=prevb SRC="../images/wprev.png" ALT="Previous" HEIGHT=20 WIDTH=82 BORDER=0></A><!--
+--><A HREF="index.htm" OnMouseOver='whomp(chapb, "schap");' OnMouseOut='whomp(chapb, "wchap");'
+title="Chapter Overview"><IMG SRC="../images/wchap.png" ALT="Chapter" NAME=chapb HEIGHT=20 WIDTH=100 BORDER=0></A><A
+HREF="../index.htm" OnMouseOver='whomp(tocb, "sbook");' OnMouseOut='whomp(tocb, "wbook");' 
+title="Table of Contents"><IMG SRC="../images/wbook.png" ALT="Contents" NAME=tocb HEIGHT=20 WIDTH=94 BORDER=0></A><A
+HREF="../glossary/index.htm" OnMouseOver='whomp(glosb, "sglos");' OnMouseOut='whomp(glosb, "wglos");' 
+title="Glossary"><IMG SRC="../images/wglos.png" ALT="Glossary" NAME=glosb HEIGHT=20 WIDTH=94 BORDER=0></A><!--
+--><A HREF="3.htm"  OnMouseOver='whomp(nextb, "snext");' OnMouseOut='whomp(nextb, "wnext");'
+ title="Next Section"><IMG NAME=nextb SRC="../images/wnext.png" ALT="Next" HEIGHT=20 WIDTH=82 BORDER=0></A>
+<BR>
+</BLOCKQUOTE>
+</BODY>
+</HTML>

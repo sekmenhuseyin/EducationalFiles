@@ -1,0 +1,299 @@
+<!doctype html public "-//IETF//DTD HTML//EN">
+<HTML>
+<HEAD>
+<TITLE>Windows XP: The Complete Reference: Other Internet Programs That Come with Windows XP</TITLE>
+<META NAME="GENERATOR" CONTENT="Web-O-Matic Deluxe 4.1">
+<META NAME="AUTHOR" CONTENT="John R. Levine, Margaret Levine Young">
+<META NAME="COPYRIGHT" CONTENTS="Copyright 2001 by The McGraw-Hill Companies. All rights reserved.">
+</HEAD>
+<BODY BACKGROUND="../images/background.png">
+<BLOCKQUOTE>
+<SCRIPT LANGUAGE="JavaScript">
+function whomp(i, file)
+{
+	i.src = "../images/" + file + ".png";
+}
+</SCRIPT>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarered3x3.png" HEIGHT=3 WIDTH=3></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=2>
+Chapter 26: Other Internet Programs That Come with Windows XP
+</FONT></TD>
+</TR>
+</TABLE>
+<BR>
+<A HREF="0.htm"  OnMouseOver='whomp(prev, "sprev");' OnMouseOut='whomp(prev, "wprev");'
+ title="Previous Section"><IMG NAME=prev SRC="../images/wprev.png" ALT="Previous" HEIGHT=20 WIDTH=82 BORDER=0></A><!--
+--><A HREF="index.htm" OnMouseOver='whomp(chap, "schap");' OnMouseOut='whomp(chap, "wchap");'
+title="Chapter Overview"><IMG SRC="../images/wchap.png" ALT="Chapter" NAME=chap HEIGHT=20 WIDTH=100 BORDER=0></A><A
+HREF="../index.htm" OnMouseOver='whomp(toc, "sbook");' OnMouseOut='whomp(toc, "wbook");' 
+title="Table of Contents"><IMG SRC="../images/wbook.png" ALT="Contents" NAME=toc HEIGHT=20 WIDTH=94 BORDER=0></A><A
+HREF="../glossary/index.htm" OnMouseOver='whomp(glos, "sglos");' OnMouseOut='whomp(glos, "wglos");' 
+title="Glossary"><IMG SRC="../images/wglos.png" ALT="Glossary" NAME=glos HEIGHT=20 WIDTH=94 BORDER=0></A><!--
+--><A HREF="2.htm"  OnMouseOver='whomp(next, "snext");' OnMouseOut='whomp(next, "wnext");'
+ title="Next Section"><IMG NAME=next SRC="../images/wnext.png" ALT="Next" HEIGHT=20 WIDTH=82 BORDER=0></A>
+<BR>
+<A NAME="1">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarered10x10.png" HEIGHT=10 WIDTH=10></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=4><B>Logging in to Text-Based Systems with HyperTerminal</B></FONT>
+</TD>
+</TR>
+</TABLE></A>
+<P>
+HyperTerminal is the Windows terminal-emulation program. It lets your powerful Windows computer--loaded with RAM, hard disk space, and other hardware--pretend to be a dumb terminal. HyperTerminal is useful for connecting to computers that are designed to talk to terminals, including <A HREF="../connecting/1.htm#5">UNIX shell accounts and bulletin board systems</A>. The computer you connect to by using HyperTerminal is called the <A NAME="ddremotecomputer"><I>remote computer</I></A> (as opposed to your own <A NAME="ddlocalcomputer"><I>local computer</I></A>).
+<P>
+You can use HyperTerminal in three ways:
+<UL>
+<LI >
+<B>Dial-up connections </B>You can use HyperTerminal to call another computer over a modem and phone line. No other communications program or account is involved. You use this method when connecting directly to a bulletin board system, UNIX shell account, or other text-based system that works with terminals. You tell HyperTerminal what modem to use to make the connection, along with the country, area code, and phone number to dial.
+<LI >
+<B>Direct network connections </B>You can use HyperTerminal to connect to a computer to which your computer is connected by a cable. You tell HyperTerminal the communications port (COM1 or COM2) to which the cable is connected. Alternatively, you can use a <A HREF="../lans/7.htm#3">direct connection</A> in the Network Connections window.
+<LI >
+<B>Telnet connections </B>If you have an Internet account (or other TCP/IP-based connection), you can use HyperTerminal as a Winsock-compatible <A NAME="ddtelnet"><I>telnet</I></A> program, a terminal program that works over the Internet. First, you connect to the Internet by using a <A HREF="../connecting/2.htm#1">dial-up connection</A>. Then, you connect to a computer over the Internet by using a HyperTerminal telnet connection--you "telnet in." For example, you can look up books at the U.S. Library of Congress by making a telnet connection to the library's mainframe system and using its text-only interface. You tell HyperTerminal to connect using <A HREF="../connecting/0.htm#1">TCP/IP (Winsock)</A>, along with the port number and host address of the computer to which you want to connect. The standard <A NAME="ddportnumber"><I>port number</I></A> (a number that tells an Internet host computer whether you are connecting for e-mail, the Web, telnet, or another Internet service) is 23. The <A NAME="ddhostaddress"><I>host address</I></A> is the Internet host name of the computer you want to telnet in to; for example, the host address of the U.S. Library of Congress is <B>locis.loc.gov</B>.
+</UL>
+<P>
+To dial up and connect to a computer, HyperTerminal creates a <A NAME="ddhyperterminalconnection"><I>HyperTerminal connection</I></A>, a <A HREF="../winsock/1.htm#3">configuration file</A> with the specifications for the connection. HyperTerminal connection files have the extension .ht.
+<P>
+Windows XP comes with HyperTerminal 5.1, which is very similar to the version that shipped with Windows Me/9x.
+<A NAME="2">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Running HyperTerminal</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+To run HyperTerminal, choose Start | All Programs | Accessories | Communications | HyperTerminal. If HyperTerminal isn't already your default telnet program, you see a dialog box asking whether Windows should do so. The HyperTerminal window appears, and the Connection Description window also opens to help set up a new first HyperTerminal connection.
+<A NAME="3">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Configuring HyperTerminal for Your Account</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+The first time you run HyperTerminal, it displays the Connection Description dialog box, as shown in Figure 26-1. You can also display it by choosing File | New Connection or clicking the New button on the toolbar of the HyperTerminal window. When you see the Connection Description dialog box, follow these steps:
+<TABLE BORDER=2><TR><TD ALIGN=CENTER>
+<IMG SRC="winsock.hypcondesc.png" WIDTH=332 HEIGHT=299 ALT="[figure]">
+</TD></TR><TR BGCOLOR="#00ffff"><TD><I>Figure 26-1:  Creating a HyperTerminal connection</I></TD></TR></TABLE>
+<OL>
+<LI  VALUE=1>
+Type the name you want to use for the connection, choose an icon, and click OK. You see the Connect To dialog box, asking for information about how to dial the phone to connect to the computer:
+</OL>
+<BR><IMG ALIGN=TOP SRC="winsock.hyperconnect2.png" WIDTH=296 HEIGHT=300 ALT="[image]">
+<OL>
+<LI  VALUE=2>
+The options you see on this dialog box depend on what you've selected for the Connect using setting. For a dial-up connection, set the Connect Using box to the modem to use for the connection, choose the country, type the area code, and type the phone number to dial. For a direct cable connection, set the Connect Using box to your modem or to COM1 or COM2 (the communications port to which the modem is connected). For a telnet connection, set the Connect Using box to TCP/IP (Winsock, that is, your Internet connection) and fill in the host address and port number (usually 23).
+<LI  VALUE=3>
+Click OK. For dial-up connections, you see the Connect dialog box (for telnet connections, skip to step 6):
+</OL>
+<BR><IMG ALIGN=TOP SRC="winsock.hypconn.png" WIDTH=344 HEIGHT=250 ALT="[image]">
+<OL>
+<LI  VALUE=4>
+If you want to change your <A HREF="../prepnet/2.htm#1">dialing location</A> (where you are dialing from) or use a <A HREF="../prepnet/4.htm#1">calling card</A>, click the Dialing Properties button and use the New and Edit buttons to change the way the connection is dialed.
+<LI  VALUE=5>
+To connect, click Dial. (If you click Cancel, HyperTerminal remembers the connection information you entered, but doesn't make the connection.) For dial-up connections, HyperTerminal dials the phone. For telnet connections, if you're not already online, your dial-up connection may display its dialog box to get you connected to your Internet account; if so, click Connect. When HyperTerminal has established a connection with the remote computer, you see the HyperTerminal window, shown in Figure 26-2.
+</OL>
+<TABLE BORDER=2><TR><TD ALIGN=CENTER>
+<IMG SRC="winsock.hypdial.png" WIDTH=861 HEIGHT=577 ALT="[figure]">
+</TD></TR><TR BGCOLOR="#00ffff"><TD><I>Figure 26-2:  HyperTerminal connected to another computer</I></TD></TR></TABLE>
+<OL>
+<LI  VALUE=6>
+Log in and use the remote computer, typing the commands that the remote computer requires. For example, if the remote computer displays a UNIX command line, you must type UNIX commands. You can use the scroll bar along the right side of the HyperTerminal window to see the <A NAME="ddbackscrollbuffer"><I>backscroll buffer</I></A>, which stores the last 500 lines of text that have scrolled up off the top of the terminal window (you can configure the buffer to be larger).
+<LI  VALUE=7>
+When you are done using the remote computer, log off by using the commands that it requires. HyperTerminal disconnects, too. If you have trouble getting disconnected, tell HyperTerminal to hang up by choosing Call | Disconnect from the menu bar or by clicking the Disconnect icon on the toolbar.
+<LI  VALUE=8>
+When you exit HyperTerminal, it asks whether you want to save the session (connection) you just created. Click Yes. (If you never plan to connect to this remote computer again, click No to throw away the connection information you entered.) HyperTerminal creates an icon for the connection in the C:\Program Files\Accessories\HyperTerminal folder.
+</OL>
+<A NAME="4">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Connecting with HyperTerminal</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+You can connect to a computer for which you've already created a HyperTerminal connection in two ways:
+<UL>
+<LI >
+Open the C:\Program Files\Accessories\HyperTerminal folder (replace C with the drive letter on which Windows is installed if it's not C). Then open the icon for the connection (single-click or double-click, depending on how you configured Windows).
+<LI >
+Choose Start | All Programs | Accessories | Communications | HyperTerminal. When the HyperTerminal window appears, click Cancel to close the Connection Description dialog box. Choose File | Open or click the Open button on the toolbar and choose the connection.
+</UL>
+<P>
+HyperTerminal runs and displays the Connect dialog box; click Dial to make the connection. If you are using a telnet connection and you are not already connected to the Internet, your dial-up connection displays its window to prompt you to get online; click Connect.
+<P>
+When you are done using the remote computer, log off using whatever commands it requires; HyperTerminal should disconnect, too. If necessary, end the connection by choosing Call | Disconnect or by clicking the Disconnect icon on the toolbar.
+<A NAME="5">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Changing Information about a Connection</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+If the phone number for a remote computer changes or you need to change the modem (or other information about the connection), run HyperTerminal by using the connection, or choose File | Open to open the connection. Click the Properties button on the toolbar (the rightmost button) or choose File | Properties to display the connection Properties dialog box, as shown in Figure 26-3. You can also display the Properties dialog box when you are using the connection. The settings on the Properties dialog box depend on the type of connection (dial-up, direct cable connection, or telnet).
+<TABLE BORDER=2><TR><TD ALIGN=CENTER>
+<IMG SRC="winsock.hypprop.png" WIDTH=344 HEIGHT=423 ALT="[figure]">
+</TD></TR><TR BGCOLOR="#00ffff"><TD><I>Figure 26-3:  Changing the properties of a HyperTerminal connection</I></TD></TR></TABLE>
+<P>
+In the Properties dialog box for the connection, you can set these types of options:
+<UL>
+<LI >
+<B>Connect using </B>On the Connect To tab, you specify the icon and how to connect: via modem, via cable (connected to your modem, COM1, or COM2 port), or via TCP/IP (for a telnet connection). For dial-up connections, you also specify the phone number. For TCP/IP connections, you also specify the host address and port number (the default is 23, telnet's usual port). If you have <A HREF="../lans/7.htm#16">Virtual Private Networking</A> installed, VPN appears as an option.
+<LI >
+<B>What keys do </B>On the Settings tab, you specify whether the function keys, cursor motion keys, and C<SMALL>TRL</SMALL> key combinations are transmitted to the other computer or are interpreted by Windows. You can also control the actions of the B<SMALL>ACKSPACE</SMALL> key.<LI >
+<B>Terminal emulation </B>On the Settings tab, you tell HyperTerminal what type of terminal to emulate (act like). Most remote computers are configured to work with certain standard terminal types. HyperTerminal can emulate many of the most commonly used terminal types: ANSI, ANSIW, Minitel, TTY, Viewdata, VT100, VT100J, VT52, and VT-UTF8. If you set the Emulation box to Auto Detect, HyperTerminal tries to figure out what type of terminal to emulate, based on information from the remote computer. If you click the Terminal Setup button, you can further configure HyperTerminal's actions, including how the cursor looks, what keys on the keypad do, and whether the terminal window displays 80 or 132 columns.
+<LI >
+<B>Character set </B>On the Settings tab, click the Terminal Setup button to control settings that are specific to the type of terminal that you are emulating. Click the ASCII Setup button to control the characters that HyperTerminal sends and receives, including which character(s) HyperTerminal sends at the end of each line, whether HyperTerminal displays the characters you type or waits to display them until the remote computer echoes them back, and whether HyperTerminal waits a fraction of a second after each character or line it sends.
+<LI >
+<B>Other settings </B>You can specify how many lines of the text the backscroll buffer stores and whether HyperTerminal beeps when connecting and disconnecting.
+</UL>
+<A NAME="6">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Transferring Files</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+HyperTerminal can send files from your computer to the remote computer or receive files from the remote computer. A number of standard file transfer protocols exist; HyperTerminal can send and receive files by using the Xmodem (regular or 1K), Kermit, Ymodem, Ymodem-G, Zmodem, and Zmodem With Crash Recovery protocols. Choose a protocol that the remote computer can also handle. If you have a choice, use Zmodem With Crash Recovery.
+<A NAME="7">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squaregreen6x6.png" HEIGHT=6 WIDTH=6></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Sending a File to the Remote Computer</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+To send a file to the remote computer:
+<OL>
+<LI  VALUE=1>
+Connect to the remote computer. If applicable, move to the directory on the remote computer in which you want to store the file.
+<LI  VALUE=2>
+If the file transfer protocol you plan to use requires you to give a command on the remote computer to tell it to expect a file, do so. For example, when transferring a file to a UNIX system by using Xmodem, you type the command <B>rx </B><B><I>filename</I></B> on the remote computer. When transferring a file by using Zmodem (with or without Crash Recovery), no command is required; the UNIX system can detect when the file begins to arrive, and stores it automatically.
+<LI  VALUE=3>
+Click the Send button on the toolbar or choose Transfer | Send File. You see the Send File dialog box, shown here:
+</OL>
+<BR><IMG ALIGN=TOP SRC="winsock.hypersend.png" WIDTH=350 HEIGHT=191 ALT="[image]">
+<OL>
+<LI  VALUE=4>
+In the Filename box, type the name of the file you want to send or click the Browse button to select the file.
+<LI  VALUE=5>
+Set the Protocol box to a file transfer protocol that the remote computer can use when receiving files.
+<LI  VALUE=6>
+Click the Send button. You see a window displaying the status of the file transfer. How much information the window displays depends on which file transfer protocol you use. You can click the Cancel button to stop the file transfer. Click the cps/bps button to control whether you see the transfer speed in characters per second (cps) or bits per second (bps). When the window disappears, file transfer is complete.
+</OL>
+<A NAME="8">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squaregreen6x6.png" HEIGHT=6 WIDTH=6></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Receiving a File from the Remote Computer</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+To receive a file from the remote computer:
+<OL>
+<LI  VALUE=1>
+Connect to the remote computer. If applicable, move to the directory on the remote computer in which the file is stored.
+<LI  VALUE=2>
+Give the command on the remote computer to tell it to send the file. For example, to tell a UNIX system to transfer a file to your system by using Xmodem, you type the command <B>sx </B><B><I>filename</I></B> on the remote computer.
+<LI  VALUE=3>
+If you are using Zmodem (with or without Crash Recovery), HyperTerminal detects that a file is arriving and begins receiving the file automatically (skip to step 8). Otherwise, click the Receive button on the toolbar or choose Transfer | Receive File. You see the Receive File dialog box:
+<LI  VALUE=4>
+In the Place Received File In The Following Folder box, type the pathname of the folder into which you want to store the file or click the Browse button to change the pathname.
+<LI  VALUE=5>
+Set the Use Receiving Protocol setting to the file transfer protocol that the remote computer is using to send the file.
+<LI  VALUE=6>
+Click the Receive button.
+<LI  VALUE=7>
+For some protocols, HyperTerminal may need additional information. For example, when using Xmodem, the sending computer doesn't include the filename with the file, so HyperTerminal asks you what to name the file it receives. Type the additional information and click OK.
+<LI  VALUE=8>
+HyperTerminal displays a status window showing the progress of the file's transfer. You can click the Cancel button to stop the file transfer. Click the cps/bps button to control whether you see the transfer speed in characters per second (cps) or bits per second (bps). When the window disappears, the file transfer is complete.
+</OL>
+<A NAME="9">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Sending Text Files</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+You might want to send text to the other computer as though you were typing it. For example, if the remote computer asks a question to which you have an answer stored in a small text file, you can send the text file rather than retyping it--the remote computer doesn't realize that you are sending a file, and accepts the text as though you typed it. You can also send text that is displayed by some other program; for example, you might want to send a number that is displayed in your spreadsheet program.
+<P>
+You can send small amounts of text by using either of two methods:
+<UL>
+<LI >
+<B>Copy-and-paste it </B>Display the text file in another program and copy it to the Windows <A HREF="../sharedata/1.htm#1">Clipboard</A>. In HyperTerminal, choose Edit | Paste To Host.
+<LI >
+<B>Transfer it </B>Choose Transfer | Send Text File. When you see the Send Text File dialog box, choose the file to send. (Make sure that it's a small text file; large files, or files that contain nontext information, rarely arrive intact.) HyperTerminal sends the contents of the file to the remote computer in the same way that it sends characters that you type.
+</UL>
+<P>
+<TABLE><TR><TD VALIGN="TOP"><IMG SRC="../images/note.png" ALT="note" WIDTH=95 HEIGHT=29></TD>
+<TD VALIGN="TOP">C<SMALL>TRL</SMALL>-C and C<SMALL>TRL</SMALL>-V may not work for cut-and-paste in HyperTerminal, depending on whether these keystrokes are used by the terminal that HyperTerminal is emulating. Choose Edit | Paste To Host from the menu bar instead, or right-click and choose Copy or Paste To Host.
+</TD></TR></TABLE>
+<A NAME="10">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Capturing Text from the HyperTerminal Window</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+If the remote computer displays interesting information in the HyperTerminal window, you may want to save it. You can use these three methods to save text:
+<UL>
+<LI >
+<B>Copy-and-paste it </B>Select the text and choose Edit | Copy from the toolbar. You can use the scroll bar to see and select text that has already scrolled up off the top of the HyperTerminal window. HyperTerminal copies the text to the Windows <A HREF="../sharedata/1.htm#1">Clipboard</A>. You can paste this text into the Windows Notepad, WordPad, your word processing program, or any other program that accepts blocks of text.
+<LI >
+<B>Capture it </B>Choose Transfer | Capture Text. When you see the Capture Text dialog box, type the folder name and filename of the file into which you want to store the text. (Click Browse to select the folder.) Then click Start. All the text that appears in the terminal window from this point forward is also stored in the file. To stop capturing text, choose Transfer | Capture Text | Stop. To stop temporarily, choose Transfer | Capture Text | Pause; to restart the text later and capture into the same file, choose Transfer | Capture Text | Resume. While HyperTerminal is capturing text to a file, the word Capture appears on the status bar along the bottom of the HyperTerminal window.
+<LI >
+<B>Print it </B>To tell HyperTerminal to print the information as it arrives in the terminal window, choose Transfer | Capture To Printer from the menu bar. As the remote computer sends text to your computer and HyperTerminal displays it, the text is printed. To stop printing, choose Transfer | Capture To Printer again. While HyperTerminal is printing all incoming text, the message Print Echo appears on the status bar.
+<LI >
+<B>Print the whole session </B>To print the entire session with the remote computer, starting at the beginning of the backscroll buffer, choose File | Print.
+</UL>
+<A NAME="11">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Other HyperTerminal Commands</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+Here are a few other things you can do with HyperTerminal:
+<UL>
+<LI >
+<B>Tell HyperTerminal to answer incoming calls </B>If you are expecting a remote computer to dial into your computer, you can set your modem and HyperTerminal to answer the phone. Choose Call | Wait For A Call. The words Waiting For Calls appear on the status line. If an incoming call arrives on the phone line to which your modem is connected, your modem answers the phone, and HyperTerminal tries to connect to a computer on the other end of the phone line. To turn off auto-answer, choose Call | Stop Waiting.
+<LI >
+<B>Change the font that HyperTerminal displays in the terminal window </B>Choose View | Font.
+<LI >
+<B>Set the size of the HyperTerminal window to fit the terminal window </B>Choose View | Snap.
+</UL>
+<P>
+<A HREF="0.htm"  OnMouseOver='whomp(prevb, "sprev");' OnMouseOut='whomp(prevb, "wprev");'
+ title="Previous Section"><IMG NAME=prevb SRC="../images/wprev.png" ALT="Previous" HEIGHT=20 WIDTH=82 BORDER=0></A><!--
+--><A HREF="index.htm" OnMouseOver='whomp(chapb, "schap");' OnMouseOut='whomp(chapb, "wchap");'
+title="Chapter Overview"><IMG SRC="../images/wchap.png" ALT="Chapter" NAME=chapb HEIGHT=20 WIDTH=100 BORDER=0></A><A
+HREF="../index.htm" OnMouseOver='whomp(tocb, "sbook");' OnMouseOut='whomp(tocb, "wbook");' 
+title="Table of Contents"><IMG SRC="../images/wbook.png" ALT="Contents" NAME=tocb HEIGHT=20 WIDTH=94 BORDER=0></A><A
+HREF="../glossary/index.htm" OnMouseOver='whomp(glosb, "sglos");' OnMouseOut='whomp(glosb, "wglos");' 
+title="Glossary"><IMG SRC="../images/wglos.png" ALT="Glossary" NAME=glosb HEIGHT=20 WIDTH=94 BORDER=0></A><!--
+--><A HREF="2.htm"  OnMouseOver='whomp(nextb, "snext");' OnMouseOut='whomp(nextb, "wnext");'
+ title="Next Section"><IMG NAME=nextb SRC="../images/wnext.png" ALT="Next" HEIGHT=20 WIDTH=82 BORDER=0></A>
+<BR>
+</BLOCKQUOTE>
+</BODY>
+</HTML>

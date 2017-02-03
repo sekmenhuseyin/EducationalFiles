@@ -1,0 +1,60 @@
+<table width=308 border=0 colspan=0 rowspan=0 bgcolor=#c8c8c8>
+<tr><td>
+<applet code="TMenu.class" width=75 height=23>
+    <PARAM name="BACKGROUND" value="#C8C8C8">
+    <PARAM name="FOREGROUND" value="#00000">
+    <PARAM name="TARGET" value="BODY">
+    <PARAM name="TITLE" value="1. Baslik">
+    <PARAM name="page0" value="1. Konu">
+    <PARAM name="url0" value="1. Konunun Linki">
+    <PARAM name="page1" value="2. Konu">
+    <PARAM name="url1" value="2. Konunun Linki">
+</applet>
+    </td>
+
+    <td>
+<applet code="TMenu.class" width=88 height=23>
+    <PARAM name="BACKGROUND" value="#C8C8C8">
+    <PARAM name="FOREGROUND" value="#000000">
+    <PARAM name="TARGET" value="BODY">
+    <PARAM name="TITLE" value="2. Baslik">
+    <PARAM name="TSPACE" value="3">
+    <PARAM name="page0" value="1. Konu">
+    <PARAM name="url0" value="1.. Konunun linki">
+    <PARAM name="separator0" value="Y">
+    <PARAM name="page1" value="2. Konu">
+    <PARAM name="url1" value="2. Konunun linki">
+</applet>
+    </td>
+
+    <td>
+<applet code="TMenu.class" width=70 height=23>
+    <PARAM name="BACKGROUND" value="#C8C8C8">
+    <PARAM name="FOREGROUND" value="#000000">
+    <PARAM name="TARGET" value="BODY">
+    <PARAM name="TITLE" value="3. Baslik">
+    <PARAM name="TSPACE" value="4">
+    <PARAM name="page0" value="1. Konu">
+    <PARAM name="url0" value="1. Konunun linki">
+    <PARAM name="separator0" value="Y">
+    <PARAM name="page1" value="2. Konu">
+    <PARAM name="url1" value="2. Konunun linki">
+    <PARAM name="page2" value="3. Konu">
+    <PARAM name="url2" value="3. konunun linki">
+    <PARAM name="page3" value="4. Konu">
+    <PARAM name="url3" value="4. Konunun linki">
+</applet>
+    </td>
+
+    <td>
+<applet code="TMenu.class" width=75 height=23>
+    <PARAM name="BACKGROUND" value="#C8C8C8">
+    <PARAM name="FOREGROUND" value="#000000">
+    <PARAM name="TARGET" value="BODY">
+    <PARAM name="TITLE" value="4. Baslik">
+    <PARAM name="TSPACE" value="3">
+    <PARAM name="page0" value="1. Konu">
+    <PARAM name="url0" value="1. Konunun linki">
+    <PARAM name="page1" value="2. Konu">
+    <PARAM name="url1" value="2. Konunun linki">
+</applet></table>

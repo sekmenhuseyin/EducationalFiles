@@ -1,0 +1,107 @@
+<!doctype html public "-//IETF//DTD HTML//EN">
+<HTML>
+<HEAD>
+<TITLE>Windows XP: The Complete Reference: Network and Internet Security</TITLE>
+<META NAME="GENERATOR" CONTENT="Web-O-Matic Deluxe 4.1">
+<META NAME="AUTHOR" CONTENT="John R. Levine, Margaret Levine Young">
+<META NAME="COPYRIGHT" CONTENTS="Copyright 2001 by The McGraw-Hill Companies. All rights reserved.">
+</HEAD>
+<BODY BACKGROUND="../images/background.png">
+<BLOCKQUOTE>
+<SCRIPT LANGUAGE="JavaScript">
+function whomp(i, file)
+{
+	i.src = "../images/" + file + ".png";
+}
+</SCRIPT>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarered3x3.png" HEIGHT=3 WIDTH=3></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=2>
+Chapter 31: Network and Internet Security
+</FONT></TD>
+</TR>
+</TABLE>
+<BR>
+<A HREF="3.htm"  OnMouseOver='whomp(prev, "sprev");' OnMouseOut='whomp(prev, "wprev");'
+ title="Previous Section"><IMG NAME=prev SRC="../images/wprev.png" ALT="Previous" HEIGHT=20 WIDTH=82 BORDER=0></A><!--
+--><A HREF="index.htm" OnMouseOver='whomp(chap, "schap");' OnMouseOut='whomp(chap, "wchap");'
+title="Chapter Overview"><IMG SRC="../images/wchap.png" ALT="Chapter" NAME=chap HEIGHT=20 WIDTH=100 BORDER=0></A><A
+HREF="../index.htm" OnMouseOver='whomp(toc, "sbook");' OnMouseOut='whomp(toc, "wbook");' 
+title="Table of Contents"><IMG SRC="../images/wbook.png" ALT="Contents" NAME=toc HEIGHT=20 WIDTH=94 BORDER=0></A><A
+HREF="../glossary/index.htm" OnMouseOver='whomp(glos, "sglos");' OnMouseOut='whomp(glos, "wglos");' 
+title="Glossary"><IMG SRC="../images/wglos.png" ALT="Glossary" NAME=glos HEIGHT=20 WIDTH=94 BORDER=0></A><!--
+--><A HREF="5.htm"  OnMouseOver='whomp(next, "snext");' OnMouseOut='whomp(next, "wnext");'
+ title="Next Section"><IMG NAME=next SRC="../images/wnext.png" ALT="Next" HEIGHT=20 WIDTH=82 BORDER=0></A>
+<BR>
+<A NAME="1">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarered10x10.png" HEIGHT=10 WIDTH=10></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=4><B>Enabling the Internet Connection Firewall Between Your PC and the Internet</B></FONT>
+</TD>
+</TR>
+</TABLE></A>
+<P>
+Some people say the Internet is an evil place filled with miscreants, while other people that say the Internet is one of the safest places anyone can be. Neither group is right, but are more likely to be fulfilling some politically charged agenda. While the Internet contains pornography and social aberration, it also provides clean and wholesome fun for all who want it. However, there is still a dark side to the Internet, and you need to protect your computer (and yourself) from it.
+<P>
+A <A NAME="ddcracker"><I>cracker</I></A> is a programmer whose goal is to exploit gaps in Windows security to gain access to your files, take over your computer, or simply crash it. Fortunately, Microsoft has provided some protection against such malicious programmers by adding Internet Connection Firewall to Windows XP.
+<P>
+A <A NAME="ddfirewall"><I>firewall</I></A> is a program that stands between your computer (or your LAN) and the Internet. Each packet on the Internet is addressed to a specific <A NAME="ddportnumber"><I>port number</I></A> on a specific computer. Each computer connected to the Internet "listens" to packets addressed only to certain ports. As a general rule, most people use only a few ports: 21 (for FTP, or file transfer), 25 (for outgoing email), 80 (for Web pages), 110 (for incoming email), 119 (for newsgroup messagess), and sometimes 443 (for secure connections).
+<P>
+The Internet Connection Firewall (ICF) controls what ports are open, refusing to respond to packets addressed to other ports. We recommend that you enable the Internet Connection Firewall on all your Internet connections. Follow these steps:
+<OL>
+<LI  VALUE=1>
+Open the Network Connections window (choose Start | Control Panel | Network And Internet Connections | Network Connections)
+<LI  VALUE=2>
+Click the Internet connection.
+<LI  VALUE=3>
+Click Change Settings Of This Connection in the Network Tasks listed in the Task pane. You see the Properties dialog box for the Internet connection.
+<LI  VALUE=4>
+Click the Advanced tab. You see the Internet Connection Firewall and Internet Connection Sharing settings.
+<LI  VALUE=5>
+Select the Protect My Computer And Network By Limiting Or Preventing Access To This Computer From The Network check box.
+<LI  VALUE=6>
+Click OK to put the changes into effect.
+</OL>
+<P>
+<TABLE><TR><TD VALIGN="TOP"><IMG SRC="../images/tip.png" ALT="tip" WIDTH=95 HEIGHT=29></TD>
+<TD VALIGN="TOP">Once you have enabled the Internet Connection Firewall, go to Steve Gibson's Web site at <A HREF="http://grc.com"><B>http://grc.com</B></A>, click the link to his Shields Up free firewall-testing service, and follow the directions on the Web page. Shields Up can tell you whether the firewall is working correctly.
+
+</TD></TR></TABLE>
+<P><TABLE BORDER=2 CELLPADDING=10><TR>
+<TD BGCOLOR="#00ffff" WIDTH=2></TD><TD>
+<A NAME="2">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>MSN Explorer May Compromise Security</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+<A HREF="../browsing/2.htm#5">MSN Explorer</A> is a program that works with Internet Explorer and provides access to a bunch of MSN services like Hotmail. It's pretty cute. But we found the following line in the MSN Explorer Security Statement:
+</TD></TR></TABLE>
+<P>
+"If you have chosen security settings that will interfere with MSN Explorer, then your security settings are temporarily changed to allow MSN Explorer to work properly. In addition, while MSN Explorer is active on your computer, the special settings for MSN will apply to any Microsoft Internet Explorer window you may have open."
+<P><TABLE BORDER=2 CELLPADDING=10><TR>
+<TD BGCOLOR="#00ffff" WIDTH=2></TD><TD>
+<P>
+If Internet security is important to you, you may prefer to forego using MSN Explorer.
+</TD></TR></TABLE>
+<P>
+<A HREF="3.htm"  OnMouseOver='whomp(prevb, "sprev");' OnMouseOut='whomp(prevb, "wprev");'
+ title="Previous Section"><IMG NAME=prevb SRC="../images/wprev.png" ALT="Previous" HEIGHT=20 WIDTH=82 BORDER=0></A><!--
+--><A HREF="index.htm" OnMouseOver='whomp(chapb, "schap");' OnMouseOut='whomp(chapb, "wchap");'
+title="Chapter Overview"><IMG SRC="../images/wchap.png" ALT="Chapter" NAME=chapb HEIGHT=20 WIDTH=100 BORDER=0></A><A
+HREF="../index.htm" OnMouseOver='whomp(tocb, "sbook");' OnMouseOut='whomp(tocb, "wbook");' 
+title="Table of Contents"><IMG SRC="../images/wbook.png" ALT="Contents" NAME=tocb HEIGHT=20 WIDTH=94 BORDER=0></A><A
+HREF="../glossary/index.htm" OnMouseOver='whomp(glosb, "sglos");' OnMouseOut='whomp(glosb, "wglos");' 
+title="Glossary"><IMG SRC="../images/wglos.png" ALT="Glossary" NAME=glosb HEIGHT=20 WIDTH=94 BORDER=0></A><!--
+--><A HREF="5.htm"  OnMouseOver='whomp(nextb, "snext");' OnMouseOut='whomp(nextb, "wnext");'
+ title="Next Section"><IMG NAME=nextb SRC="../images/wnext.png" ALT="Next" HEIGHT=20 WIDTH=82 BORDER=0></A>
+<BR>
+</BLOCKQUOTE>
+</BODY>
+</HTML>

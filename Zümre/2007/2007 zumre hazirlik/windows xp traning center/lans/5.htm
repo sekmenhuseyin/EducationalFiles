@@ -1,0 +1,171 @@
+<!doctype html public "-//IETF//DTD HTML//EN">
+<HTML>
+<HEAD>
+<TITLE>Windows XP: The Complete Reference: Designing a Windows-Based Local Area Network</TITLE>
+<META NAME="GENERATOR" CONTENT="Web-O-Matic Deluxe 4.1">
+<META NAME="AUTHOR" CONTENT="John R. Levine, Margaret Levine Young">
+<META NAME="COPYRIGHT" CONTENTS="Copyright 2001 by The McGraw-Hill Companies. All rights reserved.">
+</HEAD>
+<BODY BACKGROUND="../images/background.png">
+<BLOCKQUOTE>
+<SCRIPT LANGUAGE="JavaScript">
+function whomp(i, file)
+{
+	i.src = "../images/" + file + ".png";
+}
+</SCRIPT>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarered3x3.png" HEIGHT=3 WIDTH=3></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=2>
+Chapter 27: Designing a Windows-Based Local Area Network
+</FONT></TD>
+</TR>
+</TABLE>
+<BR>
+<A HREF="4.htm"  OnMouseOver='whomp(prev, "sprev");' OnMouseOut='whomp(prev, "wprev");'
+ title="Previous Section"><IMG NAME=prev SRC="../images/wprev.png" ALT="Previous" HEIGHT=20 WIDTH=82 BORDER=0></A><!--
+--><A HREF="index.htm" OnMouseOver='whomp(chap, "schap");' OnMouseOut='whomp(chap, "wchap");'
+title="Chapter Overview"><IMG SRC="../images/wchap.png" ALT="Chapter" NAME=chap HEIGHT=20 WIDTH=100 BORDER=0></A><A
+HREF="../index.htm" OnMouseOver='whomp(toc, "sbook");' OnMouseOut='whomp(toc, "wbook");' 
+title="Table of Contents"><IMG SRC="../images/wbook.png" ALT="Contents" NAME=toc HEIGHT=20 WIDTH=94 BORDER=0></A><A
+HREF="../glossary/index.htm" OnMouseOver='whomp(glos, "sglos");' OnMouseOut='whomp(glos, "wglos");' 
+title="Glossary"><IMG SRC="../images/wglos.png" ALT="Glossary" NAME=glos HEIGHT=20 WIDTH=94 BORDER=0></A><!--
+--><A HREF="6.htm"  OnMouseOver='whomp(next, "snext");' OnMouseOut='whomp(next, "wnext");'
+ title="Next Section"><IMG NAME=next SRC="../images/wnext.png" ALT="Next" HEIGHT=20 WIDTH=82 BORDER=0></A>
+<BR>
+<A NAME="1">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarered10x10.png" HEIGHT=10 WIDTH=10></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=4><B>Buying Network Hardware</B></FONT>
+</TD>
+</TR>
+</TABLE></A>
+<P>
+You need the following hardware to set up your network:
+<BLOCKQUOTE><TABLE BORDER=2><TR><TD>
+<TABLE>
+<TR>
+<TD>
+<B>Cabled LAN</B>
+</TD>
+<TD>
+<B>Wireless LAN</B>
+</TD>
+</TR>
+<TR>
+<TD>
+A network interface card for each computer in the network.
+</TD>
+<TD>
+A wireless LAN adapter with an antenna.
+</TD>
+</TR>
+<TR>
+<TD>
+A connection among all the computers, most commonly, copper wires, but can also be fiber-optic cable, infrared, radio waves, or a mixture. The amount and type of cable you need depends on the topology you choose for your network.
+</TD>
+<TD>
+Nothing.
+</TD>
+</TR>
+<TR>
+<TD>
+A hub.
+</TD>
+<TD>
+A wireless access point.
+</TD>
+</TR>
+</TABLE></BLOCKQUOTE>
+</TABLE></BLOCKQUOTE>
+<P>
+<TABLE><TR><TD VALIGN="TOP"><IMG SRC="../images/note.png" ALT="note" WIDTH=95 HEIGHT=29></TD>
+<TD VALIGN="TOP">If you are connecting only two computers with no plans to add additional computers, you may not need a hub or access point. You can use a <A NAME="ddcrossovercable"><I>crossover cable</I></A> to connect the two computers.
+
+</TD></TR></TABLE>
+<P>
+Take inventory of every computer that will be on the LAN and make a note of the type of slot each has available. You have to buy a network interface card or wireless LAN adapter that fits a slot in each computer. The easiest way to determine slot types is to check the documentation for each computer. PCI slots are most common for desktop computers. Laptops usually have PC Card slots (also called PCMCIA) that look like they fit a credit card. Both laptops and desktops may have Universal Serial Bus (USB) ports (a narrow rectangular plug) that may be used for some models of network cards, especially wireless NICs. You may be able to tell what kind of slot your computer has by taking the cover off and looking, and then describing the slot to your local computer store expert. However, it's safer to check your documentation for the type of architecture the motherboard has for each computer that will be on the LAN. You can and probably will mix cards of different slot types so long as the network type is consistent. For example, one of our networks has PCI and PCMCIA interface cards connected to a 100 Mbps Fast Ethernet.
+<P>
+For a cabled network, the hardware is not expensive to install--often less than $50 per PC on the network. You may be able to buy a network kit with all the hardware you need to set up a small network: network interface cards, cable, and a hub. For a wireless network, look into the wireless kits that are readily available at office supply and computer stores.
+<A NAME="2">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Buying Network Interface Cards (NICs)</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+Many new computers come with <A NAME="ddnetworkinterfacecards"><I>network interface cards</I></A> (<A NAME="ddnics"><I>NICs</I></A> pre-installed. Check the back of the computer for a RJ-45 connector, which looks like a large phone jack. If you have to buy NICs, choose cards that:
+<UL>
+<LI >
+Match the speed you chose for your Ethernet LAN--the two most common speeds are 10 Mbps and 100 Mbps. A good choice is a <A NAME="dd10100baset"><I>10/100Base-T</I></A> card, which can handle both speeds and autonegotiates to choose the right one.
+<LI >
+Fit the cable you are using--usually Category-5 wire with a RJ-45 jack on the end that plugs into the computer.
+<LI >
+Fit the computer you buy it for--computers with PCI, ISA, PC Card, or other slots. If a computer doesn't have any available slots, consider a USB or parallel-port based network adapter, if either of those ports is free. Contact your computer's manufacturer if you're not sure.
+</UL>
+<P>
+All the network interface cards in each computer in the network must support the same standard--in an Ethernet network, for instance, all network interface cards must be Ethernet cards. Decide whether you want a speed of 10 Mbps or 100 Mbps (or expensive Gigabyte) and buy cards that are all the same speed (most people base their decision on price). You should be able to find 10/100Base-T cards for desktop computers for under $20 and for laptops for under $50 in the United States.
+<A NAME="3">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Buying a Hub</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+If you've chosen a standard Ethernet network--star topology with Category-5 cable--you need a <I>hub</I>, a small box with lots of cable connectors. Buy a hub with enough connections for all the computers on your network. You may want a few extra connections, so you can add additional computers to the network later. Hubs are widely available with 4, 8, 16, or 24 ports. Instead of a hub, you can install a <A NAME="ddswitch"><I>switch</I></A>, which distributes information faster than a hub. A cheap four-port hub can cost less than $50. If you plan to connect a small LAN to a DSL line, consider a <A HREF="../lans/1.htm#4">router</A>, which combines a hub with a small computer that provides Internet connection sharing.
+<P>
+<TABLE><TR><TD VALIGN="TOP"><IMG SRC="../images/caution.png" ALT="caution" WIDTH=95 HEIGHT=29></TD>
+<TD VALIGN="TOP">Although it's tempting, you cannot take a twisted-pair cable and connect two computers directly, unless you get a crossover cable. You need to connect the cable into a hub because the hub manages which pairs of wires inside your cable are used for transmitting and receiving data. If you try to connect two computers directly with a standard cable, the transmit and receive wires will be incorrect on one end, and your connection won't work. Even if you only have two computers, an inexpensive hub may be a good investment to ease network debugging and future upgrades.
+
+</TD></TR></TABLE>
+<A NAME="4">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Buying Wireless LAN Adapters and Access Points</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+ If you are planning a wireless LAN, you'll probably have better luck if all the computers on the LAN must use the same time of wireless LAN adapter--don't mix different wireless LAN adapters. A wireless LAN needs one access point (base station) as its hub. An access point costs about $200 and each computer's wireless LAN adapter costs from $100 to $150.
+<A NAME="5">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Buying Ethernet Cable</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+For a standard cabled Ethernet network, you need twisted-pair or Category-5 cable (as shown in Figure 27-1). The ends of these cables have RJ-45 connectors, which look like telephone cord connectors (the ones that plug into a telephone wall jack), but are about twice as big. When using twisted-pair cable, plug one end of each cable into a network interface card installed in a PC and plug the other end into the hub that's at the center of the star topology.
+<P>
+A general rule is not to run a cable more than 150 meters between computers (although the actual specifications for different types of cable in different types of networks may be greater). If you are connecting computers that are not close to each other, you need to do some research on how to create a network over medium distances.
+<P>
+To determine how much cable you need, decide where you are going to place the hub, and then measure from each computer to the hub's location. Remember to allocate extra cable to go around furniture and out of the way of office traffic, and add some slack to allow you to move the computer around--like pulling it away the wall for repairs.
+<P>
+<TABLE><TR><TD VALIGN="TOP"><IMG SRC="../images/note.png" ALT="note" WIDTH=95 HEIGHT=29></TD>
+<TD VALIGN="TOP">When you buy your cable, remember you will string it so people don't trip over the cable. Measure carefully and allow extra--you can always hide cable that's too long. If your cable is too short, you'll have to go shopping again.
+
+</TD></TR></TABLE>
+<P>
+<A HREF="4.htm"  OnMouseOver='whomp(prevb, "sprev");' OnMouseOut='whomp(prevb, "wprev");'
+ title="Previous Section"><IMG NAME=prevb SRC="../images/wprev.png" ALT="Previous" HEIGHT=20 WIDTH=82 BORDER=0></A><!--
+--><A HREF="index.htm" OnMouseOver='whomp(chapb, "schap");' OnMouseOut='whomp(chapb, "wchap");'
+title="Chapter Overview"><IMG SRC="../images/wchap.png" ALT="Chapter" NAME=chapb HEIGHT=20 WIDTH=100 BORDER=0></A><A
+HREF="../index.htm" OnMouseOver='whomp(tocb, "sbook");' OnMouseOut='whomp(tocb, "wbook");' 
+title="Table of Contents"><IMG SRC="../images/wbook.png" ALT="Contents" NAME=tocb HEIGHT=20 WIDTH=94 BORDER=0></A><A
+HREF="../glossary/index.htm" OnMouseOver='whomp(glosb, "sglos");' OnMouseOut='whomp(glosb, "wglos");' 
+title="Glossary"><IMG SRC="../images/wglos.png" ALT="Glossary" NAME=glosb HEIGHT=20 WIDTH=94 BORDER=0></A><!--
+--><A HREF="6.htm"  OnMouseOver='whomp(nextb, "snext");' OnMouseOut='whomp(nextb, "wnext");'
+ title="Next Section"><IMG NAME=nextb SRC="../images/wnext.png" ALT="Next" HEIGHT=20 WIDTH=82 BORDER=0></A>
+<BR>
+</BLOCKQUOTE>
+</BODY>
+</HTML>

@@ -1,0 +1,70 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>whack</title>
+</head>
+<body bgcolor="#cccccc">
+<!--url's used in the movie-->
+<!--text used in the movie-->
+<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,0,0" width="550" height="400" id="whack" align="middle">
+<param name="allowScriptAccess" value="sameDomain" />
+<param name="movie" value="whack.swf" />
+<param name="quality" value="high" />
+<param name="bgcolor" value="#00cccc" />
+<embed src="whack.swf" quality="high" bgcolor="#00cccc" width="550" height="400" name="whack" align="middle" allowScriptAccess="sameDomain" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" />
+</object>
+<h3>Code in frame 1 layer 1</h3>
+<pre>
+//whack.fla
+//By Andy Harris, Dummies Guide to Game Programming in Flash
+
+
+init();
+
+function init(){
+
+  for(i = 0; i < 10; i++){  
+    _root.attachMovie("target", "target_" + i, 100 + i);
+    theTarget = eval("target_" + i);
+    theTarget._x = i * (theTarget._width + 5) + 50;
+    theTarget._y = 200;
+    theTarget.state = "down";
+    theTarget.gotoAndStop("down");
+    //larger popUpRate makes targets pop up more frequently
+    theTarget.popUpRate = .01;
+    //larger resetFrames makes targets stay up longer
+    theTarget.resetFrames = 12;
+
+    theTarget.onEnterFrame = function(){
+      if (this.state == "down"){
+        //pop up randomly
+        if (Math.random() < this.popUpRate){
+          this.state = "up";
+          this.gotoAndStop("up");
+          this.counter = this.resetFrames;
+        } // end "pop up" if
+      } else {
+        //count down because target is currently up
+        this.counter--;
+        if (this.counter < 0){
+          //go back down
+          this.state = "down";
+          this.gotoAndStop("down");
+          misses++;
+        } // end if
+      } // end "up or down" if
+    } // end enterFrame
+
+    theTarget.onPress = function(){
+      if (this.state == "up"){
+        this.state = "down";
+        this.gotoAndStop("down");
+        hits++;
+      } // end if
+    } // end onRelease
+  } // end for loop
+} // end init
+</pre>
+</body>
+</html>

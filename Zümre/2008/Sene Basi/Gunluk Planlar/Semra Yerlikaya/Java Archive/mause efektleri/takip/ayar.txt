@@ -1,0 +1,7 @@
+Açýklamalar : 
+» <BODY ... tagý içerisine; onload="makesnake()" ibaresini ekleyin..
+Örneðin;
+<Body Onload="makesnake()" > 
+gibi.. 
+
+» Kolay gelsin :) 

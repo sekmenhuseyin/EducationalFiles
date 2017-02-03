@@ -1,0 +1,165 @@
+<!doctype html public "-//IETF//DTD HTML//EN">
+<HTML>
+<HEAD>
+<TITLE>Windows XP: The Complete Reference: Configuring Windows for a LAN</TITLE>
+<META NAME="GENERATOR" CONTENT="Web-O-Matic Deluxe 4.1">
+<META NAME="AUTHOR" CONTENT="John R. Levine, Margaret Levine Young">
+<META NAME="COPYRIGHT" CONTENTS="Copyright 2001 by The McGraw-Hill Companies. All rights reserved.">
+</HEAD>
+<BODY BACKGROUND="../images/background.png">
+<BLOCKQUOTE>
+<SCRIPT LANGUAGE="JavaScript">
+function whomp(i, file)
+{
+	i.src = "../images/" + file + ".png";
+}
+</SCRIPT>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarered3x3.png" HEIGHT=3 WIDTH=3></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=2>
+Chapter 28: Configuring Windows for a LAN
+</FONT></TD>
+</TR>
+</TABLE>
+<BR>
+<A HREF="0.htm"  OnMouseOver='whomp(prev, "sprev");' OnMouseOut='whomp(prev, "wprev");'
+ title="Previous Section"><IMG NAME=prev SRC="../images/wprev.png" ALT="Previous" HEIGHT=20 WIDTH=82 BORDER=0></A><!--
+--><A HREF="index.htm" OnMouseOver='whomp(chap, "schap");' OnMouseOut='whomp(chap, "wchap");'
+title="Chapter Overview"><IMG SRC="../images/wchap.png" ALT="Chapter" NAME=chap HEIGHT=20 WIDTH=100 BORDER=0></A><A
+HREF="../index.htm" OnMouseOver='whomp(toc, "sbook");' OnMouseOut='whomp(toc, "wbook");' 
+title="Table of Contents"><IMG SRC="../images/wbook.png" ALT="Contents" NAME=toc HEIGHT=20 WIDTH=94 BORDER=0></A><A
+HREF="../glossary/index.htm" OnMouseOver='whomp(glos, "sglos");' OnMouseOut='whomp(glos, "wglos");' 
+title="Glossary"><IMG SRC="../images/wglos.png" ALT="Glossary" NAME=glos HEIGHT=20 WIDTH=94 BORDER=0></A><!--
+--><A HREF="2.htm"  OnMouseOver='whomp(next, "snext");' OnMouseOut='whomp(next, "wnext");'
+ title="Next Section"><IMG NAME=next SRC="../images/wnext.png" ALT="Next" HEIGHT=20 WIDTH=82 BORDER=0></A>
+<BR>
+<A NAME="1">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarered10x10.png" HEIGHT=10 WIDTH=10></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=4><B>What Windows Components Are Needed for a Network?</B></FONT>
+</TD>
+</TR>
+</TABLE></A>
+<P>
+No matter what kind of network you're attaching your Windows machine to, you must take some steps to configure it for the network (usually using a Wizard). Specifically, you must identify the client and the protocol the network uses. If you want to share your local resources (your hard drive or the printer attached to your computer, for instance), you also need to install a service. You work with these three types of network components:
+<UL>
+<LI >
+<B>Client</B>  Specifies the type of network to which you are attaching: a Windows-compatible peer-to-peer network, a domain (a network managed by a Windows .NET, 2000, or NT Server), or another type of network (Novell NetWare, for example). Windows XP Home Edition doesn't support connecting to domains.
+<LI >
+<B>Protocol</B>  Identifies the way information is passed between computers on the network. TCP/IP is the protocol used by the Internet, for example. The most commonly used protocols are described in the next section.
+<LI >
+<B>Service</B>  Enables you to share resources on the computer (for example, file or printer sharing).
+</UL>
+<A NAME="2">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>What Is a Network Protocol?</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+Without a protocol, the computers on your network won't know how to talk to each other. The <I>protocol</I> is the language your computer uses on the network. More than one protocol may be installed on a single computer, because computers can speak more than one language. Networks that use Microsoft software (such as the peer-to-peer network described in this chapter) usually use one of these three protocols:
+<UL>
+<LI >
+<B>TCP/IP (Transmission Control Protocol/Internet Protocol)</B>  The language spoken by computers on the Internet. Any computer using the Internet through a direct connection needs to have TCP/IP installed. Microsoft is standardizing on this protocol for all networking. See the next section for more details.
+<LI >
+<A NAME="ddipxspx"><B>IPX/SPX</B></A> <B>(Internetwork Packet eXchange/Sequenced Packet eXchange)</B>  Used primarily by Novell in its NetWare operating system. IPX/SPX also works well for workgroup-based networks. Using IPX/SPX, rather than TCP/IP, for sharing files on networks that connect to the Internet provides more security. IPX/SPX isn't available in Windows XP 64-Bit Edition.
+<LI >
+<A NAME="ddnetbeui"><B>NetBEUI</B></A> <B>(NetBIOS Extended User Interface)</B>  Used primarily by Microsoft in its networking products. NetBEUI is fast and requires almost no configuration--it's by far the simplest protocol to use and configure. That simplicity has a drawback, however. NetBEUI is <A NAME="ddnonroutable"><I>nonroutable</I></A>, which means it works only on simple networks where routing devices aren't used to connect multiple segments of networks.
+</UL>
+<A NAME="3">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>How Does TCP/IP Work?</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+When you use TCP/IP on a LAN, the network interface card in each computer on the LAN has an IP address on the LAN. IP addresses are in the format <I>xxx</I>.<I>xxx</I>.<I>xxx</I>.<I>xxx</I>, where each <I>xxx</I> is a number from 0 to 254. IP addresses are used on the Internet to identify Internet host computers and on LANs to identify the computers on the LAN. When you connect directly to the Internet, you also use TCP/IP, and your computer has an IP address to identify it to other computers on the Internet.
+<P>
+On a LAN that uses TCP/IP, computers usually use "private" IP addresses that are not used on the Internet. Several ranges of IP addresses have been set aside for private use. The most commonly used private IP addresses are in the format 192.168.0.<I>xxx</I>, where <I>xxx</I> is a number from 1 to 253. If one computer on the LAN connects to the Internet, that computer has the address 192.168.0.1, and the rest of the computers have addresses from 192.168.0.2 up to 192.168.0.253. Figure 28-1 shows a LAN with an IP address assigned to each computer.
+<TABLE BORDER=2><TR><TD ALIGN=CENTER>
+<IMG SRC="ics.lan.png" WIDTH=724 HEIGHT=646 ALT="[figure]">
+</TD></TR><TR BGCOLOR="#00ffff"><TD><I>Figure 28-1:  Assigning IP addresses to computers on a LAN</I></TD></TR></TABLE>
+<P>
+How are IP addresses assigned? You can use one of three methods:
+<UL>
+<LI >
+<B><A NAME="ddstaticipaddressing">Static IP addressing</A></B>  You can assign the IP addresses yourself, using addresses in the format 192.168.0.<I>xxx</I>. You need to keep track of which addresses you've assigned, so that you don't give two computers the same address. Another problem is that ICS (Windows' Internet Connection Sharing program, described in <A HREF="../ics/index.htm">Chapter 30</A>) doesn't work with static IP addressing.
+<LI >
+<B><A NAME="ddautomaticprivateipaddressing">Automatic private IP addressing</A> (APIPA)</B>  This Windows system assigns IP addresses to the computers on a LAN automatically (called <A NAME="dddynamicaddressing"><I>dynamic addressing</I></A>). The addresses are in the format 169.254.<I>xxx</I>.<I>xxx</I>, where each <I>xxx</I> can be a number from 1 to 253. You can't use APIPA addresses with ICS or on LANs that use DHCP addressing.
+<LI >
+<B><A NAME="dddhcpdynamichostconfigurationprotocoladdressing">DHCP (Dynamic Host Configuration Protocol) addressing</A></B>  A <A NAME="dddhcpserver"><I>DHCP server</I></A> is software that assigns IP addresses for the LAN. Like APIPA, DHCP assigns an IP address to your computer automatically, but it is designed to work with much larger LANs. ICS, which is part of Windows XP, includes a simplified DHCP server. Microsoft's TCP/IP networking systems generally use DHCP addressing.
+</UL>
+<P>
+When you connect directly to the Internet, you don't have a choice about your address; your ISP assigns it for you. In the early days of dial-up connections, ISPs issued a static IP address with each Internet account. Now, most ISPs run DHCP-like servers that issue your computer an IP address each time you connect.
+<P>
+When setting up a LAN that uses TCP/IP, you must choose among these IP addressing methods. Use static addressing only for very small LANs (with fewer than 10 computers) that don't use ICS. If your network includes servers running Windows XP, 2000, NT, Linux, or Unix, it probably already uses DHCP. If you plan to share an Internet connection using <A HREF="../ics/index.htm">ICS</A>, it includes a DHCP server.
+<P>
+<TABLE><TR><TD VALIGN="TOP"><IMG SRC="../images/note.png" ALT="note" WIDTH=95 HEIGHT=29></TD>
+<TD VALIGN="TOP">If your computer has more than one TCP/IP connection, it needs more than one IP address. For example, your computer might have a network interface card that connects it to the LAN and another card that connects to a DSL modem that connects to the Internet. Each network interface card has one TCP/IP address.
+
+</TD></TR></TABLE>
+<P>
+The section "<A HREF="../peer2peer/1.htm#3">Configuring the TCP/IP Protocol</A>" later in this chapter describes how to configure Windows to communicate using TCP/IP.
+<A NAME="4">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Identifying the Computer</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+For your computer to communicate with the other computers in your workgroup, you need to give the computer a unique name, identify the workgroup, and, optionally, provide a description:
+<UL>
+<LI >
+<B>Computer Name</B>  Naming your computer lets the users of other computers to refer to your computer by name. Each computer on the LAN needs a unique name. If you are adding your computer to an existing LAN, check with the LAN administrator for the name to use. Some LAN administrators pick a convention to use to name all of their computers, such as names of cartoon characters, planets, friends, grade-school teachers, or each person using the computer. You may want to name your computers according to their primary function.
+<LI >
+<B>Workgroup</B>  The <A NAME="ddworkgroup"><I>workgroup</I></A> is a group of computers on your network. The computers in a workgroup don't need to be physically close to each other, but they should be used by people who work together. The workgroup is a way to organize your peer-to-peer network's computers, similar to the way folders and subfolders organize the files on your PC. Check with your LAN administrator for the name of an existing workgroup. For a new LAN, the default name is MSHOME (although we prefer to use WORKGROUP as the name).
+<LI >
+<B>Computer Description</B>  Optionally, you can enter a description of the computer. Windows doesn't use this description during logon, but it does display it in the My Network Places window.
+</UL>
+<P>
+For example, a small network of five computers may all belong to the same workgroup called WORKGROUP. Within the workgroup, the computers might be named Pluto, Neptune, Jupiter, Saturn, and Mars or Accounting, Sales, Marketing, Administration, and Shipping.
+<P>
+<TABLE><TR><TD VALIGN="TOP"><IMG SRC="../images/note.png" ALT="note" WIDTH=95 HEIGHT=29></TD>
+<TD VALIGN="TOP">Larger networks use domains to centralize network administration, and require a computer running Windows .NET Server, Windows 2000 Server, or Windows NT Server.
+
+</TD></TR></TABLE>
+<P>
+When you configure your LAN using the Network Setup Wizard (described in the next section), the Wizard asks you for the computer name, workgroup, and computer description. You can also <A HREF="../peer2peer/3.htm#10">change them later</A>.
+<P><TABLE BORDER=2 CELLPADDING=10><TR>
+<TD BGCOLOR="#00ffff" WIDTH=2></TD><TD>
+<A NAME="5">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Windows XP Home Edition and Domain-based LANs</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+You can use the Network Setup Wizard to connect to a domain-based LAN if you are running Windows XP Professional, but Windows XP Home Edition cannot log onto a domain. Either version can, however, dial into a company's domain-based network using a dial-up connection and your company's Remote Access Server (RAS). Or, if your office uses the Microsoft Exchange Server for e-mail, you can use Exchange's Web interface to read your mail. Check with your company's LAN administrator for instructions. Windows XP Home Edition can also connect to an Exchange server by using Outlook to send and receive mail without logging in to the domain.
+<P>
+If you need to access files on a shared folder on your company's domain-based LAN, and if the folder is stored on a computer that has a static IP address (unlikely--ask your LAN administrator), you can map that shared folder to a drive letter on your computer and then access your files. Connect to the Internet. Then choose Start | All Programs | Accessories | Command Prompt to open a <A HREF="../dos/2.htm#1">Command Prompt window </A>. Type <B>net use </B><B><I>t:</I></B><B> \\</B><B><I>xxx.xxx.xxx.xxx</I></B><B>\</B><B><I>sharename</I></B> and press E<SMALL>NTER</SMALL>. Replace <I>t:</I> with any drive letter you aren't currently using. Replace <I>xxx.xxx.xxx.xxx</I> with the IP address of the computer on which the shared folder is stored, and <I>sharename</I> with the <A HREF="../sharehw/3.htm#1">share name</A> of the folder. For example, you might type <B>net use t: \\215.26.128.137\helpdesk</B> to map your drive T: to the shared Helpdesk folder at work. When you see a prompt for your user name and password, type your user name and password on the domain. After a pause, during which the domain server authenticates your password, you connect. Now, drive T: (or whatever letter you used) on your computer is the shared folder on the computer at your office.</TD></TR></TABLE>
+<P>
+<A HREF="0.htm"  OnMouseOver='whomp(prevb, "sprev");' OnMouseOut='whomp(prevb, "wprev");'
+ title="Previous Section"><IMG NAME=prevb SRC="../images/wprev.png" ALT="Previous" HEIGHT=20 WIDTH=82 BORDER=0></A><!--
+--><A HREF="index.htm" OnMouseOver='whomp(chapb, "schap");' OnMouseOut='whomp(chapb, "wchap");'
+title="Chapter Overview"><IMG SRC="../images/wchap.png" ALT="Chapter" NAME=chapb HEIGHT=20 WIDTH=100 BORDER=0></A><A
+HREF="../index.htm" OnMouseOver='whomp(tocb, "sbook");' OnMouseOut='whomp(tocb, "wbook");' 
+title="Table of Contents"><IMG SRC="../images/wbook.png" ALT="Contents" NAME=tocb HEIGHT=20 WIDTH=94 BORDER=0></A><A
+HREF="../glossary/index.htm" OnMouseOver='whomp(glosb, "sglos");' OnMouseOut='whomp(glosb, "wglos");' 
+title="Glossary"><IMG SRC="../images/wglos.png" ALT="Glossary" NAME=glosb HEIGHT=20 WIDTH=94 BORDER=0></A><!--
+--><A HREF="2.htm"  OnMouseOver='whomp(nextb, "snext");' OnMouseOut='whomp(nextb, "wnext");'
+ title="Next Section"><IMG NAME=nextb SRC="../images/wnext.png" ALT="Next" HEIGHT=20 WIDTH=82 BORDER=0></A>
+<BR>
+</BLOCKQUOTE>
+</BODY>
+</HTML>

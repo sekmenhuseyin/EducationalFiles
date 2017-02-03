@@ -1,0 +1,177 @@
+<HTML><HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<TITLE>321046 - HOW TO: Use DNSLint to Troubleshoot Active Directory Replication Issues</TITLE>
+<!-- (c) 2001, 2002 Microsoft Corporation. All Rights Reserved -->
+<!-- CPMSFTWBSUP12 ASM: GSS, Version=3.7.4.0, Culture=neutral, PublicKeyToken=null FW: 1.1.4322.573 -->
+<!-- REGC: ISO-8859-1 DEFRC: utf-8 RESG: 2/23/2004 8:42:58 AM RESX: 1/1/0001 12:00:00 AM -->
+<META NAME="Keywords" CONTENT="kbHOWTOmaster kbNetwork KB321046  kbSBServ2003Pre kbSBServ2003Search kbSBServ2003St kbSBServSearch kbwin2000Search kbwin2000Serv kbwin2000ServSearch kbWinServ2003Data kbWinServ2003Data64bit kbWinServ2003Data64bitSearch kbWinServ2003DataSearch kbWinServ2003Ent kbWinServ2003Ent64bit kbWinServ2003Ent64bitSearch kbWinServ2003EntSearch kbWinServ2003Search kbWinServ2003St kbWinXPHome kbWinXPHomeSearch kbWinXPPro kbWinXPProSearch kbWinXPSearch " />
+<META NAME="Description" CONTENT="This article describes how to use the DNSLint utility to troubleshoot Active Directory replication issues. The Active Directory is a distributed database. It is used to store information about objects on a network and to permit users to access this..." />
+<META NAME="MS.LOCALE" CONTENT="EN" />
+<script language="Javascript" SRC="/common/script/gsfx/common.js"></script><link rel='stylesheet' type='text/css' href='/common/css/GN/EN-US/down-other/default.css' ></link><script src="/common/script/gsfx/searchui.js"></script><link rel='stylesheet' type='text/css' href='/common/css/GN/EN-US/down-other/SearchUI.css' ></link><link rel='stylesheet' type='text/css' href='/common/css/GN/EN-US/down-other/webparts.css' ></link><link rel='stylesheet' type='text/css' href='/common/css/GN/EN-US/down-other/KBArticleV2.css' ></link></HEAD>
+
+<BODY bgcolor="#FFFFFF" leftmargin="0" topmargin="0" marginheight="0" marginwidth="0" onLoad="thisLoad();" onUnload="thisUnload();">
+<table border="0" cellpadding="0" cellspacing="0" width="100%" height="100%"><tr><td>
+<TABLE width="100%" cellspacing="0" cellpadding="0" border="0" HSPACE="0" VSPACE="0"><TR><TD><A HREF="/isapi/gomscom.asp?target=/" TARGET="_top" ><IMG SRC="/library/images/support/bnr_microsoft.gif" 	HEIGHT="60" HSPACE="0" VSPACE="0" ALIGN="LEFT" ALT="Microsoft.com Home Page" BORDER="0" /></A></TD><TD width="100%" ><TABLE WIDTH="100%" CELLPADDING="0" CELLSPACING="0" BORDER="0" HSPACE="0" VSPACE="0"><TR><TD BGCOLOR="#0a6cce" VALIGN="TOP" HEIGHT="20" ALIGN="RIGHT" WIDTH="100%">
+<TABLE HEIGHT="20" BORDER="0"CELLPADDING="0" CELLSPACING="0" >
+<TR><TD><IMG SRC="/library/images/toolbar/images/curveLTR.gif" WIDTH="18" HEIGHT="20" HSPACE="0" VSPACE="0" ALT="" BORDER="0" /></TD><TD BGCOLOR="#000000" HEIGHT="20" NOWRAP>&nbsp;
+<a href="http://www.microsoft.com/products/info/default.aspx?view=22" STYLE="color:#FFFFFF;text-decoration:none;" TARGET="_top"><FONT COLOR="#FFFFFF" style="font-family:Verdana,Arial; font-size: 10px;"> All Products</FONT></a>
+</TD><TD BGCOLOR="#000000" HEIGHT="20" NOWRAP><font COLOR="#FFFFFF" style="font-family:Verdana,Arial; font-size: 10px;">&nbsp;|&nbsp;</font></TD><TD BGCOLOR="#000000" HEIGHT="20" NOWRAP>
+<a href="http://support.microsoft.com" STYLE="color:#FFFFFF;text-decoration:none;" TARGET="_top"><FONT COLOR="#FFFFFF" style="font-family:Verdana,Arial; font-size: 10px;"> Support</FONT></a>
+</TD><TD BGCOLOR="#000000" HEIGHT="20" NOWRAP><font COLOR="#FFFFFF" style="font-family:Verdana,Arial; font-size: 10px;">&nbsp;|&nbsp;</font></TD><TD BGCOLOR="#000000" HEIGHT="20" NOWRAP>
+<a href="/isapi/gosearch.asp?target=/us/default.asp" STYLE="color:#FFFFFF;text-decoration:none;" TARGET="_top"><FONT COLOR="#FFFFFF" style="font-family:Verdana,Arial; font-size: 10px;"> Search</FONT></a>
+</TD><TD BGCOLOR="#000000" HEIGHT="20" NOWRAP><font COLOR="#FFFFFF" style="font-family:Verdana,Arial; font-size: 10px;">&nbsp;|&nbsp;</font></TD><TD BGCOLOR="#000000" HEIGHT="20" NOWRAP>
+<a href="/isapi/gomscom.asp?target=/" STYLE="color:#FFFFFF;text-decoration:none;" TARGET="_top"><FONT COLOR="#FFFFFF" style="font-family:Verdana,Arial; font-size: 10px;"> Microsoft.com Guide</FONT></a>
+</TD></TR></TABLE>
+</TD></TR><TR><TD BGCOLOR=#0a6cce HEIGHT="40" align="right"><a href="/common/international.aspx" TARGET="_top"><IMG SRC="/library/images/support/EN-US/region_graphic.gif" ALT="International Support" HEIGHT="40" BORDER="0" HSPACE="0" VSPACE="0" /></A></TD></TR></TABLE>
+</TD></TR></TABLE>
+</td></tr><tr><td class="tpl_top_banner" valign="top"><table class="bbar_outer" border="0" cellpadding="0" cellspacing="0" height="18"><tr>
+<td nowrap class="bbar_cell" onmouseover="this.className='bbar_cell_hot';" onmouseout="this.className='bbar_cell';" onClick="top.location.href='http://support.microsoft.com/'"><a target ="_top" href='http://support.microsoft.com/' title='Return to Support Home Page' onclick='event.cancelBubble=true;'>&nbsp;&nbsp;Home&nbsp;&nbsp;</a></td><td class='bannerborder' width=1><img src='/library/images/support/1ptrans.gif' height=1 width=1></td>
+<td nowrap class="bbar_cell" onmouseover="this.className='bbar_cell_hot';" onmouseout="this.className='bbar_cell';" onClick="top.location.href='http://support.microsoft.com/default.aspx?pr=kbhowto'"><a target ="_top" href='http://support.microsoft.com/default.aspx?pr=kbhowto' title='Search the Knowledge Base' onclick='event.cancelBubble=true;'>&nbsp;&nbsp;Search&nbsp;&nbsp;</a></td><td class='bannerborder' width=1><img src='/library/images/support/1ptrans.gif' height=1 width=1></td>
+<td nowrap class="bbar_cell" onmouseover="this.className='bbar_cell_hot';" onmouseout="this.className='bbar_cell';" onClick="top.location.href='http://support.microsoft.com/default.aspx?pr=faqs'"><a target ="_top" href='http://support.microsoft.com/default.aspx?pr=faqs' title='Frequently Asked Questions and Product Support Centers' onclick='event.cancelBubble=true;'>&nbsp;&nbsp;FAQs&nbsp;&nbsp;</a></td><td class='bannerborder' width=1><img src='/library/images/support/1ptrans.gif' height=1 width=1></td>
+<td nowrap class="bbar_cell" onmouseover="this.className='bbar_cell_hot';" onmouseout="this.className='bbar_cell';" onClick="top.location.href='http://support.microsoft.com/default.aspx?pr=downloadover&style=home'"><a target ="_top" href='http://support.microsoft.com/default.aspx?pr=downloadover&style=home' title='Software Downloads, Updates, and Service Packs' onclick='event.cancelBubble=true;'>&nbsp;&nbsp;Downloads&nbsp;&nbsp;</a></td><td class='bannerborder' width=1><img src='/library/images/support/1ptrans.gif' height=1 width=1></td>
+<td nowrap class="bbar_cell" onmouseover="this.className='bbar_cell_hot';" onmouseout="this.className='bbar_cell';" onClick="top.location.href='http://support.microsoft.com/newsgroups/default.aspx'"><a target ="_top" href='http://support.microsoft.com/newsgroups/default.aspx' title='Community Newsgroups' onclick='event.cancelBubble=true;'>&nbsp;&nbsp;Newsgroups&nbsp;&nbsp;</a></td><td class='bannerborder' width=1><img src='/library/images/support/1ptrans.gif' height=1 width=1></td>
+<td nowrap class="bbar_cell" onmouseover="this.className='bbar_cell_hot';" onmouseout="this.className='bbar_cell';" onClick="top.location.href='http://support.microsoft.com/default.aspx?pr=csshome'"><a target ="_top" href='http://support.microsoft.com/default.aspx?pr=csshome' title='Customer Service' onclick='event.cancelBubble=true;'>&nbsp;&nbsp;Customer Service&nbsp;&nbsp;</a></td><td class='bannerborder' width=1><img src='/library/images/support/1ptrans.gif' height=1 width=1></td>
+</tr></table></td></tr><tr><td valign="top" height="100%"><table border="0" cellpadding="0" cellspacing="0" width="100%" height="100%"><tr><td valign="top"><table cellpadding="0" cellspacing="0" class="tpl_content_bar" width="100%"><tr><td class="tpl_content_title" valign="top" align="left">
+							Microsoft Knowledge Base Article - 321046
+						</td><td class="subBannerGif" valign="top" align="right">
+							<IMG src="/common/resources/Content_subban.gif" border="0" vspace="0" title="321046 - HOW TO: Use DNSLint to Troubleshoot Active Directory Replication Issues" />
+						</td></tr></table></td></tr><tr><td width="100%" valign="top"><XMLREADER><DIV class="OldIE">
+<DIV ID="LTRContent" class="LTRContent" DIR="LTR">
+<div class="KBPUBV2" name="KBPUBV2"><!-- - - - - - - - - - - PAGE TEXT BEGINS HERE : KBPUBV2 - - - - - - - - - - --><div class="kbContainer"><table border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td valign="top" width="100%"><table class="kbRightNav"><tr><td valign="top"><table class="GetHelpVert" width="165"><tr><td valign="middle"><a href="http://support.microsoft.com/default.aspx?scid=sz;EN-US;top&product=winsvr2003&prname=Windows%20Server%202003"><IMG src="http://support.microsoft.com/library/images/support/Get_Help_sml.gif" align="center" border="0" vspace="3" hspace="0" alt="Need More Help?" title="Need More Help?" /></a></td><td><table><tr><td align="center" class="GetHelpTitle" valign="top">Need More Help?</td></tr><tr><td align="center" valign="middle" class="GetHelpText"><a href="http://support.microsoft.com/default.aspx?scid=sz;EN-US;top&product=winsvr2003&prname=Windows%20Server%202003">Contact a Support Professional by E-Mail, Online or Phone</a></td></tr></table></td></tr></table>
+<!--SRCH START-->
+<DIV><TABLE CLASS="srch_mnpbgRt" WIDTH="163" BORDER="0" CELLPADDING="0" CELLSPACING="0">
+<TR><TD>
+<TABLE  WIDTH="163" BORDER="0" CELLPADDING="0" CELLSPACING="0" >
+<FORM NAME="gsfxSearchRtform" ACTION="/search/default.aspx" METHOD="GET" ONSUBMIT="gsfxSearchRt_onsubmit();" TARGET="_top" >
+<TR><TD>
+<DIV CLASS="srch_mnpheaderRt">Search Support (KB)<BR>Windows Server 2003</DIV><input type=hidden name=InCC_hdn value=True><input type=hidden name=Catalog value=LCID=1033&CDID=EN-US-KB&PRODLISTSRC=ON><input type=hidden name=Product value=><input type=hidden name=KeywordType value=ALL><input type=hidden name=Titles value=false><input type=hidden name=numDays value=><input type=hidden name=maxResults value=25><TABLE BORDER="0" CELLSPACING="2" CELLPADDING="0" CLASS="SrchQueryRtOuterTable" ><TR><TD WIDTH="100%" VALIGN="TOP"><INPUT class="SrchQueryRtInput" TYPE="text" NAME="Queryl" MAXLENGTH="255" SIZE="16" value=""><INPUT TYPE="HIDDEN" NAME="Query"></INPUT></TD><TD WIDTH="24" VALIGN="TOP"><A HREF="Javascript:gsfxSearchRt_onsubmit();gsfxSearchRt_DoSubmit();" onmouseover="window.status='Run the search'; return true;" onmouseout="window.status='';return true;" ><IMG SRC="http://support.microsoft.com/library/images/support/goright.gif" WIDTH="24" BORDER="0" HSPACE="0" TITLE="Run the search" ALT="Run the search" ></A></TD>
+</TR></TABLE>     <input type=hidden name="QuerySource" value="gsfxSearchRt_Query"></TD></TR><TR><TD>
+<!-- SRCH FOOTER -->
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="2" WIDTH="163" CLASS="srch_mnpFtRt"><TR><TD><span CLASS="SrchOptionText" ><A TARGET="_top" id="advLinkRt" name="advLinkRt" HREF="http://support.microsoft.com/default.aspx?scid=FH;EN-US;KBHOWTO">Advanced Search and Help</A></span></TD></TR></TABLE><!-- SRCHFOOTER --><input type=hidden name=srchExtraQry value=></TD></TR>
+</FORM></TABLE>
+</TD></TR></TABLE></DIV>
+<!-- SRCH END--><SCRIPT LANGUAGE="Javascript">
+
+function gsfxSearchRt_onsubmit()
+{
+SubmitText(document.gsfxSearchRtform.Query,document.gsfxSearchRtform.Queryl,"gsfxSearchRt","Query","","","");}
+
+function gsfxSearchRt_DoSubmit()
+{ document.gsfxSearchRtform.submit(); }
+AppendText(document.gsfxSearchRtform.Queryl,"gsfxSearchRt","Query","");
+
+</SCRIPT>
+<table cellspacing="0" cellpadding="0" border="0" id="SupportCenters" name="SupportCenters" class="ListNugget" width="165"><tr><td class="ListNuggetHeader">Support Centers</td></tr><tr><td id="SupportCentersBody" name="SupportCentersBody" class="ListNuggetBody" align="left">
+<TABLE CELLSPACING="0" CELLPADDING="2" BORDER="0">
+<TR><TD WIDTH="6" VALIGN="middle"><IMG SRC="http://support.microsoft.com/library/images/support/blue_bullet.gif" WIDTH="5" HEIGHT="5" BORDER="0" VALIGN="MIDDLE" HSPACE="0" ></TD>
+<TD CLASS="ListNuggetItem" VALIGN="top">
+	<A CLASS="ListNuggetItemLink" HREF="http://support.microsoft.com/default.aspx?scid=fh;EN-US;sbs">Small Business Server</A>
+</TD></TR>
+<TR><TD WIDTH="6" VALIGN="middle"><IMG SRC="http://support.microsoft.com/library/images/support/blue_bullet.gif" WIDTH="5" HEIGHT="5" BORDER="0" VALIGN="MIDDLE" HSPACE="0" ></TD>
+<TD CLASS="ListNuggetItem" VALIGN="top">
+	<A CLASS="ListNuggetItemLink" HREF="http://support.microsoft.com/default.aspx?scid=fh;EN-US;sbserv2003">Windows Small Business Server 2003</A>
+</TD></TR>
+<TR><TD WIDTH="6" VALIGN="middle"><IMG SRC="http://support.microsoft.com/library/images/support/blue_bullet.gif" WIDTH="5" HEIGHT="5" BORDER="0" VALIGN="MIDDLE" HSPACE="0" ></TD>
+<TD CLASS="ListNuggetItem" VALIGN="top">
+	<A CLASS="ListNuggetItemLink" HREF="http://support.microsoft.com/default.aspx?scid=fh;EN-US;win2000">Windows 2000</A>
+</TD></TR>
+<TR><TD WIDTH="6" VALIGN="middle"><IMG SRC="http://support.microsoft.com/library/images/support/blue_bullet.gif" WIDTH="5" HEIGHT="5" BORDER="0" VALIGN="MIDDLE" HSPACE="0" ></TD>
+<TD CLASS="ListNuggetItem" VALIGN="top">
+	<A CLASS="ListNuggetItemLink" HREF="http://support.microsoft.com/default.aspx?scid=fh;EN-US;Win2000Dev">Windows 2000 - Developer</A>
+</TD></TR>
+<TR><TD WIDTH="6" VALIGN="middle"><IMG SRC="http://support.microsoft.com/library/images/support/blue_bullet.gif" WIDTH="5" HEIGHT="5" BORDER="0" VALIGN="MIDDLE" HSPACE="0" ></TD>
+<TD CLASS="ListNuggetItem" VALIGN="top">
+	<A CLASS="ListNuggetItemLink" HREF="http://support.microsoft.com/default.aspx?scid=fh;EN-US;winsvr2003">Windows Server 2003</A>
+</TD></TR>
+<TR><TD WIDTH="6" VALIGN="middle"><IMG SRC="http://support.microsoft.com/library/images/support/blue_bullet.gif" WIDTH="5" HEIGHT="5" BORDER="0" VALIGN="MIDDLE" HSPACE="0" ></TD>
+<TD CLASS="ListNuggetItem" VALIGN="top">
+	<A CLASS="ListNuggetItemLink" HREF="http://support.microsoft.com/default.aspx?scid=fh;EN-US;winxp">Windows XP</A>
+</TD></TR>
+</TABLE><img src="http://support.microsoft.com/library/images/support/1ptrans.gif" height="6" width="100" border="0" /></td></tr></table><table cellspacing="0" cellpadding="0" border="0" id="GeneralInfo" name="GeneralInfo" class="ListNugget" width="165"><tr><td class="ListNuggetHeader">Other Support Options</td></tr><tr><td id="GeneralInfoBody" name="GeneralInfoBody" class="ListNuggetBody" align="left"><TABLE CELLSPACING="0" CELLPADDING="2" BORDER="0"><TR><TD WIDTH="6" VALIGN="top"><IMG SRC="http://support.microsoft.com/library/images/support/blue_bullet.gif" WIDTH="5" HEIGHT="5" BORDER="0" VALIGN="MIDDLE" VSPACE="4" HSPACE="0" ></TD><TD CLASS="ListNuggetItem" VALIGN="top"><A CLASS="ListNuggetItemLink" HREF="http://support.microsoft.com/default.aspx?scid=fh;EN-US;cntactms&amp;style=home" >Contact Microsoft</A><BR>Phone Numbers, Support Options and Pricing, Online Help, and more.</TD></TR><TR><TD WIDTH="6" VALIGN="top"><IMG SRC="http://support.microsoft.com/library/images/support/blue_bullet.gif" WIDTH="5" HEIGHT="5" BORDER="0" VALIGN="MIDDLE" VSPACE="4" HSPACE="0" ></TD><TD CLASS="ListNuggetItem" VALIGN="top"><A CLASS="ListNuggetItemLink" HREF="http://support.microsoft.com/default.aspx?scid=fh;EN-US;csshome&amp;style=home" >Customer Service</A><BR>For non-technical assistance with product purchases, subscriptions, online services, events, training courses, corporate sales, piracy issues, and more.</TD></TR><TR><TD WIDTH="6" VALIGN="top"><IMG SRC="http://support.microsoft.com/library/images/support/blue_bullet.gif" WIDTH="5" HEIGHT="5" BORDER="0" VALIGN="MIDDLE" VSPACE="4" HSPACE="0" ></TD><TD CLASS="ListNuggetItem" VALIGN="top"><A CLASS="ListNuggetItemLink" HREF="http://support.microsoft.com/newsgroups" >Newsgroups</A><BR>Pose a question to other users.  Discussion groups and Forums about specific Microsoft products, technologies, and services.</TD></TR></TABLE><img src="http://support.microsoft.com/library/images/support/1ptrans.gif" height="6" width="100" border="0" /></td></tr></table><table cellspacing="0" cellpadding="0" border="0" id="PageOptions" name="PageOptions" class="ListNugget" width="165"><tr><td class="ListNuggetHeader">Page Options</td></tr><tr><td id="PageOptionsBody" name="PageOptionsBody" class="ListNuggetBody" align="left"><TABLE CELLSPACING="0" CELLPADDING="2" BORDER="0"><TR><TD WIDTH="6" VALIGN="top"><A HREF="mailto:?body=http%3a%2f%2fsupport.microsoft.com%2fdefault.aspx%3fkbid%3d321046%26product%3dwinsvr2003" ><IMG SRC="http://support.microsoft.com/library/images/support/emailicon.gif" BORDER="0" HSPACE="0" Title="Send the contents of this page to a Friend" ></A></TD><TD CLASS="ListNuggetItem" VALIGN="top"><A CLASS="ListNuggetItemLink" HREF="mailto:?body=http%3a%2f%2fsupport.microsoft.com%2fdefault.aspx%3fkbid%3d321046%26product%3dwinsvr2003" >Send</A></TD></TR><TR><TD WIDTH="6" VALIGN="top"><A HREF="Javascript:PrintContents();" ><IMG SRC="http://support.microsoft.com/library/images/support/printicon.gif" BORDER="0" HSPACE="0" Title="Print the contents of this page" ></A></TD><TD CLASS="ListNuggetItem" VALIGN="top"><A CLASS="ListNuggetItemLink" HREF="Javascript:PrintContents();" >Print</A></TD></TR></TABLE><img src="http://support.microsoft.com/library/images/support/1ptrans.gif" height="6" width="100" border="0" /></td></tr></table></td></tr></table><!-- - - - - - - - - - - KB CONTENT BEGINS BELOW HERE - - - - - - - - - - --><H1 class="title">HOW TO: Use DNSLint to Troubleshoot Active Directory Replication Issues</H1><a href="#appliesto">View products that this article applies to.</a><div class="notice">This article was previously published under Q321046 </div><div class="notice"> </div><div class="summary"><H2>SUMMARY</H2>
+This article describes how to use the DNSLint utility to troubleshoot Active Directory replication issues.<BR /><BR />
+The Active Directory is a distributed database. It is used to store information about objects on a network and to permit users to access this information. Active Directory replication is used to synchronize partition replicas among domain controllers in an Active Directory forest. This replication process permits users to access information from wherever they are on the network. When this replication process does not work as designed, users may experience an interruption in the services that rely on information from the Active Directory: domain logon and access to network resources, such as files and printers.<BR /><BR />
+Active Directory replication relies on the Domain Name System (DNS) to resolve names to IP addresses as needed. An Active Directory domain controller typically registers a variety of DNS records with its configured DNS server when its netlogon service starts. DNSLint is a Microsoft Windows utility that runs on Windows 2000-and-later operating systems. Among other uses, it can help you troubleshoot Active Directory replication issues.  Specifically, it can help you determine two things:
+
+<UL><LI>Whether all DNS servers that are supposed to be authoritative for the root of an Active Directory forest actually have the necessary DNS records to successfully synchronize partition replicas among domain controllers in an Active Directory forest. DNSLint identifies which DNS records are missing from each authoritative DNS server.</LI><LI>Whether a particular Active Directory domain controller can resolve all of the necessary DNS records to successfully synchronizing partition replicas among domain controllers in an Active Directory forest. DNSLint identifies which DNS records cannot be resolved by the domain controller being tested.</LI></UL><H3><a class="bookmark" NAME="3"></a>Troubleshooting</H3>
+If an Active Directory domain controller wants to replicate with another domain controller, it uses DNS to find other domain controllers. This process works as follows:
+
+<OL class="dec"><LI>The domain controller initiating the replication (DC1) queries the Active Directory in searching for its configured replication partners.  These replication partners are typically defined by the Knowledge Consistency Checker (KCC), but can also be defined manually.  
+
+For additional information, click the article number below 
+to view the article in the Microsoft Knowledge Base:
+
+<p class="indent"><a class="KBlink" HREF="http://support.microsoft.com/default.aspx?scid=kb;EN-US;244368">244368</a> How to Optimize Active Directory Replication in a Large Network
+</p>
+
+DC1 knows only the name of the domain controller that it wants to replicate with (DC2). It finds a GUID in the Active Directory that matches the target domain controller's name (DC2). Note that each domain controller in the forest should have its own unique GUID.
+</LI><LI>Now that DC1 knows DC2's GUID, it must find DC2's IP address so that it can connect to it across the network. To do this, DC1 uses DNS.  DC1 sends a recursive DNS query to its locally configured DNS server for a CNAME record. The format of this record always matches the following 
+
+<p class="indent"><VAR>guid</VAR>._msdcs.<VAR>root of Active Directory forest</VAR></p>
+
+Where <VAR>guid</VAR> is the GUID that DC1 found in the Active Directory, and <VAR>root of Active Directory forest</VAR> is the root of the Active Directory forest. For example
+
+<p class="indent">
+91f9b084-4876-4b59-be17-59e74c340221._msdcs.reskit.com
+</p>
+
+where 91f9b084-4876-4b59-be17-59e74c340221 is a GUID and reskit.com is the root of the Active Directory forest.<BR /><BR />
+DC1's locally configured DNS server should respond to the query for the CNAME with an alias. The alias is another name for the GUID. For example, the GUID 91f9b084-4876-4b59-be17-59e74c340221 is resolved to dc-02.reskit.com.
+</LI><LI>Now that DC1 knows the alias for the GUID, it must resolve the alias to an IP address so that it can connect to DC2 across the network.  DC1 sends a recursive DNS query to its locally configured DNS server for a Host (A) record that matches the name of the alias. The DNS server should respond with the IP address that has been mapped to the alias -- for example, 169.254.66.7
+</LI><LI>Now that DC1 knows DC2's IP address, it can connect to DC2 over the network and replicate Active Directory data.
+</LI></OL>
+If this process is unsuccessful, Active Directory replication between the domain controllers is also unsuccessful, and data may become inconsistent on the domain controllers. DNSLint can help to determine whether the DNS records used in this process are in place and can be resolved.
+
+<OL class="dec"><LI>
+To determine whether DNS is causing an Active Directory replication problem among domain controllers in an Active Directory forest, run the following command 
+
+<p class="indent"><KBD>dnslint /ad 169.254.32.1 /s 169.254.10.22</KBD></p> 
+
+where the <STRONG>/ad</STRONG> parameter is used to specify an Active Directory domain controller that can be used to find the GUIDs for all the domain controllers in the Active Directory forest. By default, all domain controllers in a forest should have this information. The <STRONG>/s</STRONG> option is required when you use the <STRONG>/ad</STRONG> function. The <STRONG>/s</STRONG> option is used to tell DNSLint the IP address of a DNS server that is authoritative for the _msdcs.<EM>forest root</EM> zone.<BR /><BR />
+When you run this command, DNSLint first contacts the Active Directory domain controller specified after the <STRONG>/ad</STRONG> switch (169.254.32.1).  This command causes DNSLint to query the Active Directory on this domain controller for all the GUIDs in the Active Directory forest. Specifically, it queries the following location in the Active Directory
+
+<p class="indent">
+CN=NTDS Settings, CN=Sites,CN=Configuration,DC=reskit,DC=com
+</p>
+
+where DC=reskit,DC=com is the root of the Active Directory forest.<BR /><BR />
+This type of Lightweight Directory Access Protocol (LDAP) query requires authentication to the Active Directory.  Typically, DNSLint runs under the security context of the user who ran the command. This user's credentials are used to authenticate to the Active Directory during the LDAP bind operation. If the credentials are valid and the user has access to this information in the Active Directory, the bind succeeds and the Active Directory is searched for the GUIDs. If the bind is unsuccessful, the search is not performed and the whole operation is unsuccessful. DNSLint returns an error to the user in these cases.<BR /><BR />
+If a list of GUIDs is returned from the specified domain controller, DNSLint sends a DNS query to the DNS server, specified by using the <STRONG>/s</STRONG> option. In the example provided earlier in this step, DNS queries would be sent to 169.254.10.22. If this DNS server is not authoritative for the _msdcs.<VAR>root of Active Directory forest</VAR>, the operation may end without finding any DNS records for the GUIDs found earlier. The <STRONG>/s</STRONG> option must specify the IP address of a DNS server that is authoritative for the _msdcs.<VAR>root of Active Directory forest</VAR> subdomain.<BR /><BR />
+In some environments, such as those in which a DNS server that does not accept dynamic updates hosts the root zone, the _msdcs zone has been delegated to a DNS server that is not authoritative for the root of the Active Directory forest. DNSLint checks for this delegation before proceeding with next DNS queries. This step helps to avoid sending DNS queries to DNS servers that should not be tested.<BR /><BR />
+DNSLint tries to discover other DNS servers that are authoritative for the root of Active Directory forest as it processes the DNS queries. After DNSLint has found DNS servers that are authoritative for the root of Active Directory forest, it queries the DNS server (or servers) for the CNAME records that it finds in the Active Directory. As it resolves each CNAME record to an alias, DNSLint also tries to resolve the glue (A) record for each alias. As mentioned earlier in this article, these DNS records are required for Active Directory replication.<BR /><BR />
+DNSLint then creates a report in HTML format (and optionally a text report). The report includes all of the GUIDs found in the Active Directory, the DNS servers found to be authoritative for the root of 
+Active Directory forest, and the results of all the CNAME and glue (A) record queries to those servers. It reports which CNAME records and which glue (A) records were missing on each DNS server. This report can be used to correct any DNS issues that may be causing Active Directory replication problems, such as missing or incorrect DNS records.
+</LI><LI>
+To determine whether a particular Active Directory domain controller can resolve all of the DNS records needed to successfully synchronize partition replicas among domain controllers in an Active Directory forest, run the following command on the domain controller being tested:
+
+<p class="indent"><KBD>dnslint /ad /s localhost</KBD></p>
+
+Because no IP address is specified after the <STRONG>/ad</STRONG> option, 127.0.0.1 is be used. This means that the domain controller will query itself for the list of GUID records. You can specify an alternative domain controller LDAP server if you want. If you specify <KBD>localhost</KBD> after the <STRONG>/s</STRONG> option, this tells DNSLint to use the DNS server (or servers) configured on the domain controller that is being tested to resolve the CNAME and glue (A) records used for Active Directory replication. This specification sends recursive DNS queries to the domain controller's locally configured DNS server (or servers) to determine whether the domain controller can resolve the necessary records. This does not mean that all of the local domain controller's DNS servers are checked for these records. The domain controller's DNS server list is managed according to its default behavior. This means that the second DNS server in the list is used only if the first one does not respond. This test only determines whether a domain controller can resolve the DNS records used for Active Directory replication. No specific DNS server is tested.<BR /><BR />
+The report that DNSLint generates can then be used to correct any DNS issues that may cause Active Directory replication problems, such as missing or incorrect DNS records.
+</LI></OL><BR />
+The DNSLint Utility is available for download from the Microsoft Download Center:<BR /><BR /><a class="URLLink" TARGET="_top" HREF="http://download.microsoft.com/download/win2000srv/Utility/Q321045/NT5XP/EN-US/dnslint.exe">Download DNSLint now</a><BR /><BR />For additional information about the DNSLint utility, click the article number below 
+to view the article in the Microsoft Knowledge Base:
+
+<p class="indent"><a class="KBlink" HREF="http://support.microsoft.com/default.aspx?scid=kb;EN-US;321045">321045</a> Description of the DNSLint Untility
+</p> </div><div name="appliesto" id="appliesto" class="appliesto"><H3>The information in this article applies to:</H3><UL><LI>Microsoft Windows Server 2003, Datacenter Edition</LI><LI>Microsoft Windows Server 2003, Enterprise Edition</LI><LI>Microsoft Windows Server 2003, Standard Edition</LI><LI>Microsoft Windows Server 2003, 64-Bit Datacenter Edition</LI><LI>Microsoft Windows Server 2003, 64-Bit Enterprise Edition</LI><LI>Microsoft Windows XP Home Edition</LI><LI>Microsoft Windows XP Professional</LI><LI>Microsoft Windows 2000 Server</LI><LI>Microsoft Windows Small Business Server 2003, Premium Edition</LI><LI>Microsoft Windows Small Business Server 2003, Standard Edition</LI></UL></div><TABLE class="docinfo" cellspacing="1" cellpadding="3" align="center"><TR><TD align="right" width="5%" class="label" valign="top" nowrap="1">Last Reviewed:</TD><TD align="left" class="data" valign="top">10/10/2003
+			 (7.0)
+		</TD></TR><TR class="composite"><TD align="right" width="5%" class="label" valign="top" nowrap="1">Keywords:</TD><TD align="left" class="data" valign="top">kbHOWTOmaster kbNetwork KB321046</TD></TR></TABLE><BR /><div class="disclaimer"></div><!-- - - - - - - - - - - - PAGE TEXT ENDS ABOVE HERE - - - - - - - - - - - --></td></tr><tr><td align="center"><table class="GetHelpHori" ><tr><td valign="middle"><a href="http://support.microsoft.com/default.aspx?scid=sz;EN-US;top&product=winsvr2003&prname=Windows%20Server%202003"><IMG src="http://support.microsoft.com/library/images/support/Get_Help_sml.gif" align="center" border="0" vspace="3" hspace="0" alt="Need More Help?" title="Need More Help?" /></a></td><td><table><tr><td align="left" class="GetHelpTitle" valign="top">Need More Help?</td></tr><tr><td align="left" valign="middle" class="GetHelpText"><a href="http://support.microsoft.com/default.aspx?scid=sz;EN-US;top&product=winsvr2003&prname=Windows%20Server%202003">Contact a Support Professional by E-Mail, Online or Phone</a></td></tr></table></td></tr></table></td></tr></table></div></div>
+<script>d.gsfxSearchRtform.srchExtraQry.value ='Windows Server 2003';
+ ChangeLink('winsvr2003')</script>
+
+</DIV>
+
+</DIV>
+</XMLREADER></td></tr></table></td></tr><tr><td valign="top" class="tpl_footer"><table class="tpl_footer_row1"><tr><td class="fbtn_cell">&nbsp;<A HREF="http://support.microsoft.com/default.aspx?pr=cntactms&style=home" TARGET="_top" >Contact Us</A>&nbsp;</td></tr></table><BR><div class="tpl_footer_row2">© 2004 Microsoft Corporation. All rights reserved.&nbsp;&nbsp;<A HREF="http://support.microsoft.com/default.aspx?scid=%2fsupport%2fmisc%2fcpyright.asp" TARGET="http://support.microsoft.com/default.aspx?scid=%2fsupport%2fmisc%2fcpyright.asp" class="ftr_copyright_text">Terms of use</A>&nbsp;&nbsp;<A HREF="http://www.microsoft.com/security/default.asp" TARGET="http://www.microsoft.com/security/default.asp" class="ftr_copyright_text">Security & Privacy</A>&nbsp;&nbsp;<A HREF="http://support.microsoft.com/default.aspx?scid=%2fisapi%2fgomscom.asp%3ftarget%3d%2fenable%2fdefault.htm" TARGET="http://support.microsoft.com/default.aspx?scid=%2fisapi%2fgomscom.asp%3ftarget%3d%2fenable%2fdefault.htm" class="ftr_copyright_text">Accessibility</A>&nbsp;&nbsp;</div></td></tr></table><IMG style="display:none;" name="metrixgif" SRC="/library/images/support/1ptrans.gif"></BODY>
+
+<script language="JavaScript" >
+   function thisLoad(){
+setcookieval("SITE","GN");
+
+   g_reSupportedHostnames = new RegExp(".msn.com$|.passport.com$|.xbox.com$|.microsoft.com$|.microsoft.cz$|.msbpn.com$|.microsoft.co.*", "i");
+  ForeignLink_Hookup(true);LogHit('http://c.microsoft.com/trans_pixel.asp?TYPE=SSPV&SOURCE=SUPPORT&URI=/GN/EN-US/kb_en-us_321046&GUID=1F4FC18C-F71E-47fb-8FC9-612F8EE59C61&R=');
+   }
+
+function thisUnload(){
+;   }
+</script>
+</HTML>

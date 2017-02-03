@@ -1,0 +1,200 @@
+<!doctype html public "-//IETF//DTD HTML//EN">
+<HTML>
+<HEAD>
+<TITLE>Windows XP: The Complete Reference: Backing Up Your Files with the Backup Utility</TITLE>
+<META NAME="GENERATOR" CONTENT="Web-O-Matic Deluxe 4.1">
+<META NAME="AUTHOR" CONTENT="John R. Levine, Margaret Levine Young">
+<META NAME="COPYRIGHT" CONTENTS="Copyright 2001 by The McGraw-Hill Companies. All rights reserved.">
+</HEAD>
+<BODY BACKGROUND="../images/background.png">
+<BLOCKQUOTE>
+<SCRIPT LANGUAGE="JavaScript">
+function whomp(i, file)
+{
+	i.src = "../images/" + file + ".png";
+}
+</SCRIPT>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarered3x3.png" HEIGHT=3 WIDTH=3></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=2>
+Chapter 9: Backing Up Your Files with the Backup Utility
+</FONT></TD>
+</TR>
+</TABLE>
+<BR>
+<A HREF="5.htm"  OnMouseOver='whomp(prev, "sprev");' OnMouseOut='whomp(prev, "wprev");'
+ title="Previous Section"><IMG NAME=prev SRC="../images/wprev.png" ALT="Previous" HEIGHT=20 WIDTH=82 BORDER=0></A><!--
+--><A HREF="index.htm" OnMouseOver='whomp(chap, "schap");' OnMouseOut='whomp(chap, "wchap");'
+title="Chapter Overview"><IMG SRC="../images/wchap.png" ALT="Chapter" NAME=chap HEIGHT=20 WIDTH=100 BORDER=0></A><A
+HREF="../index.htm" OnMouseOver='whomp(toc, "sbook");' OnMouseOut='whomp(toc, "wbook");' 
+title="Table of Contents"><IMG SRC="../images/wbook.png" ALT="Contents" NAME=toc HEIGHT=20 WIDTH=94 BORDER=0></A><A
+HREF="../glossary/index.htm" OnMouseOver='whomp(glos, "sglos");' OnMouseOut='whomp(glos, "wglos");' 
+title="Glossary"><IMG SRC="../images/wglos.png" ALT="Glossary" NAME=glos HEIGHT=20 WIDTH=94 BORDER=0></A><!--
+--><A HREF="7.htm"  OnMouseOver='whomp(next, "snext");' OnMouseOut='whomp(next, "wnext");'
+ title="Next Section"><IMG NAME=next SRC="../images/wnext.png" ALT="Next" HEIGHT=20 WIDTH=82 BORDER=0></A>
+<BR>
+<A NAME="1">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarered10x10.png" HEIGHT=10 WIDTH=10></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=4><B>Restoring Files with the Backup Utility</B></FONT>
+</TD>
+</TR>
+</TABLE></A>
+<P>
+To restore files that you have backed up with the Backup Utility, you can use the Restore Wizard or you can select options yourself.
+<P>
+<TABLE><TR><TD VALIGN="TOP"><IMG SRC="../images/note.png" ALT="note" WIDTH=95 HEIGHT=29></TD>
+<TD VALIGN="TOP">The Backup Utility stores backed-up files in a special format, and you need to use Backup Utility to restore them. You can't just copy the files from an Explorer window back to where you want to use them. The Backup Utility can't restore backups made by other backup programs, either, including those made by the Windows Me/9x backup utilities.
+
+</TD></TR></TABLE>
+<A NAME="2">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Restoring Files Using the Restore Wizard</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+To run the Backup Or Restore Wizard to help you restore one or more files, follow these steps:
+<OL>
+<LI  VALUE=1>
+Start the Backup Utility. If the wizard doesn't start automatically, choose Tools | Switch To Wizard Mode from the menu bar.
+<LI  VALUE=2>
+When the wizard runs, choose Restore Files And Settings and click Next. You see the What To Restore window, containing two boxes: the one on the left shows the backup files and tapes available (Figure 9-11). Backups to file are listed under the File heading. Tape backups are listed under a heading that reflects the type of type (like miniQIC or Travan), and then by the tape.
+</OL>
+<TABLE BORDER=2><TR><TD ALIGN=CENTER>
+<IMG SRC="backup.restore.png" WIDTH=506 HEIGHT=392 ALT="[figure]">
+</TD></TR><TR BGCOLOR="#00ffff"><TD><I>Figure 9-11:  Restoring files from a backup</I></TD></TR></TABLE>
+<OL>
+<LI  VALUE=3>
+Double-click an item on the left to see the files and folders that it contains on the right. Click the boxes next to files and folders to put a check mark by those that you want to restore. Click Next when you have finished. You see the Completing The Backup Or Restore Wizard, but you're not done.
+<LI  VALUE=4>
+Click the Advanced button to display the Where To Restore window.
+<LI  VALUE=5>
+Set the Restore Files To box to Original Location to put the files back where they came from; Alternate Location to put the structure of restored files and folders in a folder you specify; or Single Folder to put all the restored files into a single folder, without restoring the structure of the folders that they used to be in. Click Next.
+<LI  VALUE=6>
+In the How To Restore window, choose what to do if restoring a file would overwrite an existing file. Choose Leave Existing Files, Replace Existing Files If They Are Older Than The Backup Files, or Replace Existing Files. Click Next. You see the Advanced Restore Options window.
+<LI  VALUE=7>
+If you are restoring files that were stored on an NTFS partition, you can select the Restore Security Settings check box to restore the permissions and ownership for the folders and files. (See Table 9-4 in the following section for information about the settings in steps 7-9.)
+<LI  VALUE=8>
+If you are restoring a <A HREF="../harddisks/3.htm#3">mounted drive</A>, select the Restore Junction Points But Not The Folders And File Data They Reference check box.
+<LI  VALUE=9>
+If you are restoring files and folders that contain mount points for mounted drives, deselect the Preserve Existing Volume Mount Points check box. If you have already set up the mount points for mounted drives and you don't want to disturb them, select this check box. Click Next.
+<LI  VALUE=10>
+You see the Completing The Backup Or Restore Wizard window again. Click Finish to restore the files.
+</OL>
+<P>
+While the Backup Utility is restoring files, you see a Restore Progress window showing how many files have been restored and how many are yet to be restored. When it is finished, click the Report button to see the log file, or the Close button to close the window.
+<A NAME="3">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Restoring Files by Using the Restore And Manage Media Tab</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+Alternatively, you can use the Restore And Manage Media tab on the main Backup Utility window to select what to restore. Follow these steps:
+<OL>
+<LI  VALUE=1>
+Click the Restore And Manage Media tab in the main Backup Utility window, as shown in Figure 9-12.
+</OL>
+<TABLE BORDER=2><TR><TD ALIGN=CENTER>
+<IMG SRC="backup.restoretab.png" WIDTH=642 HEIGHT=479 ALT="[figure]">
+</TD></TR><TR BGCOLOR="#00ffff"><TD><I>Figure 9-12:  The Restore And Manage Media tab of the main Backup window</I></TD></TR></TABLE>
+<OL>
+<LI  VALUE=2>
+Choose the files and folders to restore, as described in step 3 of the previous section.
+<LI  VALUE=3>
+The Restore Files To box is normally set to Original Location to restore the files and folders to the location from which they were backed up, in the same folder structure. You can change this setting to Alternate Location (to put the structure of restored files and folders in a folder you specify) or Single Folder (to put all the restored files into a single folder, without restoring the structure of the folders that they used to be in).
+<LI  VALUE=4>
+If you chose Alternate Location or Single Folder in the last step, set the Alternate Location box to the folder where you want to restore the files and folders.
+<LI  VALUE=5>
+Click the Start Restore button (you still have some other options to set). You see the Confirm Restore dialog box.
+<LI  VALUE=6>
+Click the Advanced button to choose other options for restoring files. Table 9-4 shows the advanced options available when restoring files. Click OK when you have finished.
+</OL>
+<BLOCKQUOTE><TABLE BORDER=2><TR><TD>
+<TABLE>
+<TR>
+<TD>
+Setting
+</TD>
+<TD>
+Description
+</TD>
+</TR>
+<TR>
+<TD>
+Restore security
+</TD>
+<TD>
+For files and folders that were backed up from an NTFS partition and that are to be restored to an NTFS partition, restores the permissions and ownership information with the files and folders.
+</TD>
+</TR>
+<TR>
+<TD>
+Restore junction points, and restore file and folder data under junction points to the original location
+</TD>
+<TD>
+When restoring files to a disk with <A NAME="ddjunctionpoints"><I>junction points</I></A> (which are like <A HREF="../harddisks/3.htm#3">mount points</A>, restores the files and folders that are stored on the hard disk to which the junction point points. When restoring a mounted drive, restores only the folder that contains the mounted drive (unselect this option to restore the folders and files stored on the mounted drive.
+</TD>
+</TR>
+<TR>
+<TD>
+When restoring replicated data, mark the restored data as the primary data for all replicas
+</TD>
+<TD>
+When restoring files that are managed by the File Replication Service (FRS), specifies that this copy of the files is the primary copy. (See <I>Windows .NET Server: The Complete Reference</I>, by Kathy Ivens (published by Osborne/McGraw-Hill) for information about FRS.)
+</TD>
+</TR>
+<TR>
+<TD>
+Restore the Cluster Registry to the quorum disk and all other nodes
+</TD>
+<TD>
+Not available in Windows XP Home and Professional.
+</TD>
+</TR>
+<TR>
+<TD>
+Preserve existing volume mount points
+</TD>
+<TD>
+Doesn't restore mount points from the backup, leaving the existing mount points. If you want to restore backed-up mount points, deselect this check box.
+</TD>
+</TR>
+</TABLE></BLOCKQUOTE>
+<TR BGCOLOR="#00ffff"><TD>
+<I>Table 4:  Advanced Options for Restoring Backed-Up Files</I>
+</TD></TR></TABLE></BLOCKQUOTE>
+<OL>
+<LI  VALUE=7>
+Click OK to being restoring your files and folders. If you are restoring from a tape or other removable media, Backup prompts you to put in the necessary tape or disk; do so and click OK. Then Backup restores the folders and files.
+<LI  VALUE=8>
+When Backup has finished, the Restore Progress window displays information about how many files and folders were restored. You can click the Report button to see the log file. Click Close when you are finished.
+</OL>
+<P>
+<TABLE><TR><TD VALIGN="TOP"><IMG SRC="../images/note.png" ALT="note" WIDTH=95 HEIGHT=29></TD>
+<TD VALIGN="TOP">When restoring files to a FAT or FAT32 partition, Backup may warn you that not all security features are available. FAT and FAT32 partitions don't allow you to set passwords for files (only NTFS partitions support this).
+
+</TD></TR></TABLE>
+<P>
+<A HREF="5.htm"  OnMouseOver='whomp(prevb, "sprev");' OnMouseOut='whomp(prevb, "wprev");'
+ title="Previous Section"><IMG NAME=prevb SRC="../images/wprev.png" ALT="Previous" HEIGHT=20 WIDTH=82 BORDER=0></A><!--
+--><A HREF="index.htm" OnMouseOver='whomp(chapb, "schap");' OnMouseOut='whomp(chapb, "wchap");'
+title="Chapter Overview"><IMG SRC="../images/wchap.png" ALT="Chapter" NAME=chapb HEIGHT=20 WIDTH=100 BORDER=0></A><A
+HREF="../index.htm" OnMouseOver='whomp(tocb, "sbook");' OnMouseOut='whomp(tocb, "wbook");' 
+title="Table of Contents"><IMG SRC="../images/wbook.png" ALT="Contents" NAME=tocb HEIGHT=20 WIDTH=94 BORDER=0></A><A
+HREF="../glossary/index.htm" OnMouseOver='whomp(glosb, "sglos");' OnMouseOut='whomp(glosb, "wglos");' 
+title="Glossary"><IMG SRC="../images/wglos.png" ALT="Glossary" NAME=glosb HEIGHT=20 WIDTH=94 BORDER=0></A><!--
+--><A HREF="7.htm"  OnMouseOver='whomp(nextb, "snext");' OnMouseOut='whomp(nextb, "wnext");'
+ title="Next Section"><IMG NAME=nextb SRC="../images/wnext.png" ALT="Next" HEIGHT=20 WIDTH=82 BORDER=0></A>
+<BR>
+</BLOCKQUOTE>
+</BODY>
+</HTML>

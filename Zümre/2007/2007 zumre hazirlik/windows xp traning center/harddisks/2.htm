@@ -1,0 +1,177 @@
+<!doctype html public "-//IETF//DTD HTML//EN">
+<HTML>
+<HEAD>
+<TITLE>Windows XP: The Complete Reference: Formatting and Partitioning Disks</TITLE>
+<META NAME="GENERATOR" CONTENT="Web-O-Matic Deluxe 4.1">
+<META NAME="AUTHOR" CONTENT="John R. Levine, Margaret Levine Young">
+<META NAME="COPYRIGHT" CONTENTS="Copyright 2001 by The McGraw-Hill Companies. All rights reserved.">
+</HEAD>
+<BODY BACKGROUND="../images/background.png">
+<BLOCKQUOTE>
+<SCRIPT LANGUAGE="JavaScript">
+function whomp(i, file)
+{
+	i.src = "../images/" + file + ".png";
+}
+</SCRIPT>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarered3x3.png" HEIGHT=3 WIDTH=3></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=2>
+Chapter 32: Formatting and Partitioning Disks
+</FONT></TD>
+</TR>
+</TABLE>
+<BR>
+<A HREF="1.htm"  OnMouseOver='whomp(prev, "sprev");' OnMouseOut='whomp(prev, "wprev");'
+ title="Previous Section"><IMG NAME=prev SRC="../images/wprev.png" ALT="Previous" HEIGHT=20 WIDTH=82 BORDER=0></A><!--
+--><A HREF="index.htm" OnMouseOver='whomp(chap, "schap");' OnMouseOut='whomp(chap, "wchap");'
+title="Chapter Overview"><IMG SRC="../images/wchap.png" ALT="Chapter" NAME=chap HEIGHT=20 WIDTH=100 BORDER=0></A><A
+HREF="../index.htm" OnMouseOver='whomp(toc, "sbook");' OnMouseOut='whomp(toc, "wbook");' 
+title="Table of Contents"><IMG SRC="../images/wbook.png" ALT="Contents" NAME=toc HEIGHT=20 WIDTH=94 BORDER=0></A><A
+HREF="../glossary/index.htm" OnMouseOver='whomp(glos, "sglos");' OnMouseOut='whomp(glos, "wglos");' 
+title="Glossary"><IMG SRC="../images/wglos.png" ALT="Glossary" NAME=glos HEIGHT=20 WIDTH=94 BORDER=0></A><!--
+--><A HREF="3.htm"  OnMouseOver='whomp(next, "snext");' OnMouseOut='whomp(next, "wnext");'
+ title="Next Section"><IMG NAME=next SRC="../images/wnext.png" ALT="Next" HEIGHT=20 WIDTH=82 BORDER=0></A>
+<BR>
+<A NAME="1">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarered10x10.png" HEIGHT=10 WIDTH=10></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=4><B>Partitioning a Disk Using Disk Management</B></FONT>
+</TD>
+</TR>
+</TABLE></A>
+<P>
+When you buy a new computer or hard disk, you receive it ready for use--already partitioned (usually with one partition) and formatted. If you are adding new unformatted, unpartitioned disk drives, or if you want to create a computer system that can run one of several operating systems--such as switching between Windows XP and UNIX or Linux--you may need to partition a disk yourself. However, formatting destroys the data in the areas of the disk it partitions, so be sure to make a <A HREF="../backup/index.htm">backup copy</A> of all the information on your disk before formatting a disk or partition.
+<P>
+<TABLE><TR><TD VALIGN="TOP"><IMG SRC="../images/caution.png" ALT="caution" WIDTH=95 HEIGHT=29></TD>
+<TD VALIGN="TOP">Most of the commands in this chapter are available only to users who have <A HREF="../users/index.htm">administrator user accounts</A>--user accounts that give them permission to make changes to the system itself. Before working with partitions and drives, be sure to <A HREF="../backup/index.htm">back up</A> the important files on your system.
+
+</TD></TR></TABLE>
+<P>
+To partition a hard disk, you use the Disk Management tool, a tool straight from Windows 2000. To run Disk Management, choose Start, right-click My Computer, and select Manage from the menu that appears. When you see the Computer Management window, click the Disk Management item listed underneath the Storage heading. You then see the main <A HREF="../harddisks/1.htm#10">Disk Management</A> pane in the right side of the Computer Management window, as shown in Figure 32-4.
+<TABLE BORDER=2><TR><TD ALIGN=CENTER>
+<IMG SRC="harddisks.diskmanmain.png" WIDTH=739 HEIGHT=504 ALT="[figure]">
+</TD></TR><TR BGCOLOR="#00ffff"><TD><I>Figure 32-4:  The Disk Management pane of the Computer Management window</I></TD></TR></TABLE>
+<P>
+Many computer systems have only one hard disk and one CD-ROM (CD-R/RW, DVD, or what have you), which appear as Disk 0 and CD-ROM 0 in the left column of the lower pane. Figure 32-4 shows two hard disks, Disk 0 and Disk 1, and two removable storage drives, CD-ROM 0 and CD-ROM 1. Disk 0 is a 40GB drive that has three primary partitions and one logical partition; Disk 1 is an 8GB drive that has no space allocated.
+<P>
+<TABLE><TR><TD VALIGN="TOP"><IMG SRC="../images/note.png" ALT="note" WIDTH=95 HEIGHT=29></TD>
+<TD VALIGN="TOP">The Disk Management program replaces the Fdisk program that was part of previous versions of Windows.
+
+</TD></TR></TABLE>
+<A NAME="2">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Creating a New Partition</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+If you have unallocated space (which appears as an Unknown Partition in the Disk Management diagram), you can create a new partition in some or all of that space. For example, you could create a new partition for Windows on the 8GB drive in Figure 32-4. To create a new partition, right-click the part of the diagram that represents the unallocated space (unallocated space has a black stripe running along the top), and choose New Partition from the menu that appears. To create a new logical drive in an extended partition that contains free space (free space has a light green strip along the top), right-click the free space and choose New Logical Drive from the menu that appears. Either way, you see the New Partition Wizard.
+<P>
+The New Partition Wizard asks you to specify the following:
+<UL>
+<LI >
+<B>Type</B>  Primary, extended, or logical partition. A disk drive can contain up to four primary partitions, or three primary partitions and one extended partition. The logical partition type is available only if you choose to create the new partition in an extended partition with some free space. Choose a primary partition if you are created a partition in which you will install an operating system (an unusual situation). Choose extended if you plan to create several logical partitions within it.
+<LI >
+<B>Size  </B>The Wizard displays the minimum and maximum size for the partition, based on its type and the space where it will be stored. You can use the entire available space, or leave room for other partitions. Windows XP doesn't provide a way to resize partitions later, but you can use a third-party program like <A HREF="../harddisks/1.htm#5">PartitionMagic</A> to do so.<B></B>
+<LI >
+<B>Drive letter or path</B>  The Wizard offers the next available drive letter, but you may select any unused letter. To use the Mount In The Following Empty NTFS Folder option, you must have an NTFS partition with a drive letter on the same machine. If you plan on installing more than one operating system on your computer, you may select the Do Not Assign A Drive Letter Or Drive Path option, and let Windows assign a letter later. We usually take the default drive letter assignment.
+<LI >
+<B>File system</B>  The default is NTFS, but you can feel good about using <A HREF="../harddisks/1.htm#7">FAT32</A> as well. Both efficiently utilize space on large drives, but NTFS has more security features, better recovery capabilities after a crash, and file-level compression built in. If you select NTFS, you are also given the option to enable compression. Leave the Allocation unit size as Default.
+<LI >
+<B>Label</B>  Type a name for the partition, indicating what you will use it for.
+</UL>
+<P>
+Figure 32-5 shows the final screen of the New Partition Wizard, summarizing your choices before Windows creates the partition. <A HREF="../harddisks/4.htm#1">Formatting a new partition</A> can take several minutes.
+<TABLE BORDER=2><TR><TD ALIGN=CENTER>
+<IMG SRC="harddisks.newpartwiz.png" WIDTH=503 HEIGHT=393 ALT="[figure]">
+</TD></TR><TR BGCOLOR="#00ffff"><TD><I>Figure 32-5:  Creating a new partition with the New Partition Wizard</I></TD></TR></TABLE>
+<A NAME="3">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Selecting the Active Partition</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+If you partition your disk among multiple operating systems, one of the partitions is the active partition, the partition from which your computer starts. If you run Windows only, the primary partition is always active. In Windows XP you can change this behavior manually by selecting another partition as active using the <A HREF="../harddisks/2.htm#1">Disk Management</A> pane in the Computer Management window. Right-click the disk or partition that you want to make active and select Mark Partition As Active from the menu that appears. You can only make this change to primary partitions. Extended partitions and logical drives cannot be made active. Only one partition is active at a time--and make sure it's a partition that contains a bootable operating system!
+<A NAME="4">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Deleting a Partition</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+You can delete a partition using the Disk Management pane of the Computer Management window. Right-click the partition and choose Delete Partition (for a primary or extended partition) or Delete Logical Drive (for a logical drive). If you want to delete an extended partition, you first have to delete all the logical drives in the partition.
+<P>
+<TABLE><TR><TD VALIGN="TOP"><IMG SRC="../images/caution.png" ALT="caution" WIDTH=95 HEIGHT=29></TD>
+<TD VALIGN="TOP">When you delete a partition, all the files and folders on the partition are deleted for good--they don't go to the Recycle Bin. There's no way to get them back (unless you have a backup copy).
+
+</TD></TR></TABLE>
+<A NAME="5">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Repartitioning a Disk</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+Repartitioning a disk with Windows XP is unpleasant at best. Windows can only create and delete partitions--it can't move, resize, or copy them, and converting them requires using a DOS command. To rearrange the partitions on your system using only the Windows' Disk Management program, you delete the partitions that are the wrong size or in the wrong location. Then create new partitions. Follow these steps:
+<OL>
+<LI  VALUE=1>
+<A HREF="../backup/index.htm">Back up</A> all the files on the partitions that you need to delete.
+<LI  VALUE=2>
+Open the Disk Management pane in the Computer Management window--choose Start, right-click My Computer, choose Manage, and click Disk Management under the Storage heading in the Computer Management window. You see the Disk Management pane shown in Figure 32-4.
+<LI  VALUE=3>
+Delete the partitions that are in the wrong place or are the wrong size by right-clicking each one and choosing Delete Partition or Delete Logical Drive from the menu that appears.
+<LI  VALUE=4>
+Create new ones by right-clicking the unallocated space (or free space in an extended partition) and choosing New Partition or New Logical Drive from the menu that appears.
+<LI  VALUE=5>
+Reload the backed up data.
+</OL>
+<P>
+Third-party disk utilities, such as <A HREF="../harddisks/1.htm#5">PartitionMagic</A>, make this process safer and easier and permit many kinds of changes without backing up and reloading everything. PartitionMagic can move, copy, and resize partitions without deleting them (it's amazing, actually). Utilities such as Drive Image make it easy to create a copy of a partition so you can reload it later. If you plan to use multiple partitions, we recommend you look into third-party partitioning programs (see the section "<A HREF="../harddisks/1.htm#5">Installing Multiple Versions of Windows with PartitionMagic</A>" earlier in this chapter).
+<A NAME="6">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Converting Partitions to NTFS</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+Windows comes with a Convert command that can convert a FAT or FAT32 partition to NTFS (the Convert command can't convert anything to FAT or FAT32). To convert a partition to NTFS (after backing it up!), follow these steps:
+<OL>
+<LI  VALUE=1>
+Choose Start | All Programs | Accessories | Command Prompt to open a <A HREF="../dos/3.htm#2">Command Prompt window</A>.
+<LI  VALUE=2>
+Type <B>convert </B><B><I>n</I></B><B>: /FS:NTFS</B> and press E<SMALL>NTER</SMALL>, replacing <I>n:</I> with the drive letter of the partition you want to convert. If you want verbose mode, in which you see extra explanatory messages, type <B>/v </B>at the end of the command.</OL>
+<P>
+<TABLE><TR><TD VALIGN="TOP"><IMG SRC="../images/tip.png" ALT="tip" WIDTH=95 HEIGHT=29></TD>
+<TD VALIGN="TOP">If you need to convert to a file system other than NTFS, try PartitionMagic. Be sure to get the latest version, since earlier versions don't support NTFS 5.0, which is new in Windows XP.
+
+</TD></TR></TABLE>
+<P>
+<A HREF="1.htm"  OnMouseOver='whomp(prevb, "sprev");' OnMouseOut='whomp(prevb, "wprev");'
+ title="Previous Section"><IMG NAME=prevb SRC="../images/wprev.png" ALT="Previous" HEIGHT=20 WIDTH=82 BORDER=0></A><!--
+--><A HREF="index.htm" OnMouseOver='whomp(chapb, "schap");' OnMouseOut='whomp(chapb, "wchap");'
+title="Chapter Overview"><IMG SRC="../images/wchap.png" ALT="Chapter" NAME=chapb HEIGHT=20 WIDTH=100 BORDER=0></A><A
+HREF="../index.htm" OnMouseOver='whomp(tocb, "sbook");' OnMouseOut='whomp(tocb, "wbook");' 
+title="Table of Contents"><IMG SRC="../images/wbook.png" ALT="Contents" NAME=tocb HEIGHT=20 WIDTH=94 BORDER=0></A><A
+HREF="../glossary/index.htm" OnMouseOver='whomp(glosb, "sglos");' OnMouseOut='whomp(glosb, "wglos");' 
+title="Glossary"><IMG SRC="../images/wglos.png" ALT="Glossary" NAME=glosb HEIGHT=20 WIDTH=94 BORDER=0></A><!--
+--><A HREF="3.htm"  OnMouseOver='whomp(nextb, "snext");' OnMouseOut='whomp(nextb, "wnext");'
+ title="Next Section"><IMG NAME=nextb SRC="../images/wnext.png" ALT="Next" HEIGHT=20 WIDTH=82 BORDER=0></A>
+<BR>
+</BLOCKQUOTE>
+</BODY>
+</HTML>

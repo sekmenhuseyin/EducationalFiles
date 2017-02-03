@@ -1,0 +1,43 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>dxdyToVec</title>
+</head>
+<body bgcolor="#cccccc">
+<!--url's used in the movie-->
+<!--text used in the movie-->
+<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,0,0" width="550" height="400" id="dxdyToVec" align="middle">
+<param name="allowScriptAccess" value="sameDomain" />
+<param name="movie" value="dxdyToVec.swf" />
+<param name="quality" value="high" />
+<param name="bgcolor" value="#ffffff" />
+<embed src="dxdyToVec.swf" quality="high" bgcolor="#ffffff" width="550" height="400" name="dxdyToVec" align="middle" allowScriptAccess="sameDomain" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" />
+</object>
+<h3>Code in frame 1 layer 1</h3>
+<pre>
+btnCalc.onRelease = function(){
+  //calculate angle and length from dx and dy
+  //use atan to get angle, pythagoras to get length
+
+  radians = Math.atan(dy/dx);
+  
+  //convert to degrees
+  degrees = radians * 180 / Math.PI;
+  //offset the angle
+  degrees += 90;
+
+  //handle negative dx angles
+  if (dx &lt;0) {
+    degrees -=180;
+  } // end if
+  
+  angle = degrees;
+
+  //use pythagorean theorom to calculate length
+  length = Math.sqrt(dx*dx + dy*dy);
+
+} // end btnCalc
+</pre>
+</body>
+</html>

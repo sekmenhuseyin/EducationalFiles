@@ -1,0 +1,204 @@
+<!doctype html public "-//IETF//DTD HTML//EN">
+<HTML>
+<HEAD>
+<TITLE>Windows XP: The Complete Reference: Designing a Windows-Based Local Area Network</TITLE>
+<META NAME="GENERATOR" CONTENT="Web-O-Matic Deluxe 4.1">
+<META NAME="AUTHOR" CONTENT="John R. Levine, Margaret Levine Young">
+<META NAME="COPYRIGHT" CONTENTS="Copyright 2001 by The McGraw-Hill Companies. All rights reserved.">
+</HEAD>
+<BODY BACKGROUND="../images/background.png">
+<BLOCKQUOTE>
+<SCRIPT LANGUAGE="JavaScript">
+function whomp(i, file)
+{
+	i.src = "../images/" + file + ".png";
+}
+</SCRIPT>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarered3x3.png" HEIGHT=3 WIDTH=3></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=2>
+Chapter 27: Designing a Windows-Based Local Area Network
+</FONT></TD>
+</TR>
+</TABLE>
+<BR>
+<A HREF="1.htm"  OnMouseOver='whomp(prev, "sprev");' OnMouseOut='whomp(prev, "wprev");'
+ title="Previous Section"><IMG NAME=prev SRC="../images/wprev.png" ALT="Previous" HEIGHT=20 WIDTH=82 BORDER=0></A><!--
+--><A HREF="index.htm" OnMouseOver='whomp(chap, "schap");' OnMouseOut='whomp(chap, "wchap");'
+title="Chapter Overview"><IMG SRC="../images/wchap.png" ALT="Chapter" NAME=chap HEIGHT=20 WIDTH=100 BORDER=0></A><A
+HREF="../index.htm" OnMouseOver='whomp(toc, "sbook");' OnMouseOut='whomp(toc, "wbook");' 
+title="Table of Contents"><IMG SRC="../images/wbook.png" ALT="Contents" NAME=toc HEIGHT=20 WIDTH=94 BORDER=0></A><A
+HREF="../glossary/index.htm" OnMouseOver='whomp(glos, "sglos");' OnMouseOut='whomp(glos, "wglos");' 
+title="Glossary"><IMG SRC="../images/wglos.png" ALT="Glossary" NAME=glos HEIGHT=20 WIDTH=94 BORDER=0></A><!--
+--><A HREF="3.htm"  OnMouseOver='whomp(next, "snext");' OnMouseOut='whomp(next, "wnext");'
+ title="Next Section"><IMG NAME=next SRC="../images/wnext.png" ALT="Next" HEIGHT=20 WIDTH=82 BORDER=0></A>
+<BR>
+<A NAME="1">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarered10x10.png" HEIGHT=10 WIDTH=10></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=4><B>What Types of Networks Exist?</B></FONT>
+</TD>
+</TR>
+</TABLE></A>
+<P>
+Networks are either peer-to-peer or client-server. We describe these two types in the next two sections.
+<P>
+Understanding either kind of network requires having at least a passing familiarity with two terms: client and server. A <A NAME="ddclient"><I>client</I></A> is a computer that uses resources on the network. A printer client, for instance, is a computer that uses a network printer. A <A NAME="ddserver"><I>server</I></A> is a computer (or a device with a computer hidden inside) that has resources used by other devices on the network. For instance, a file server is a computer that stores files used by other computers; a print server is a computer with a printer attached to it--the print server lets other computers on the network send print jobs to the printer. The server makes a resource available to the network, and a client uses the resource.
+<A NAME="2">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Peer-to-Peer (Workgroup-Based) Networks</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+In a <A NAME="ddpeertopeernetwork"><I>peer-to-peer network</I></A>, as the term implies, all computers are equal. All computers can function as both clients and servers. Security and permissions are administered from each computer in the network. Each computer in a peer-to-peer network can both request resources from other computers and share its own resources with other computers in the network. You can also configure the network so that some computers only share their resources and others only use resources. Even in this situation, however, the network is still a peer-to-peer network because each computer on the network is administered individually.
+<P>
+Versions of Windows since Windows 3.11 have included support for peer-to-peer networks. Microsoft calls a group of computers on a peer-to-peer network a <A NAME="ddworkgroup"><I>workgroup</I></A>, and a the network itself a <A NAME="ddworkgroupbased"><I>workgroup-based </I></A> network. When you configure Windows to connect to a workgroup-based LAN, you tell it the name of the workgroup (we like to use the name WORKGROUP).
+<P>
+A peer-to-peer workgroup-based network is relatively easy to set up--any small office with more than one computer can create a small peer-to-peer network by using Windows to share printers and files. Only a small amount of hardware is required. The rest of this chapter explains how to choose, install, and configure the hardware to create a peer-to-peer network, and Chapter 28 describes how to configure Windows XP for a LAN.
+<A NAME="3">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Client-Server Networks</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+In a <A NAME="ddclientservernetwork"><I>client-server network</I></A>, server computers provide resources for the rest of the network, and client computers (also called <A NAME="ddworkstations"><I>workstations</I></A>) use these resources. Client-server networks typically are more difficult and expensive to set up and administer than peer-to-peer networks, but they also have many advantages: they can handle more computers, they provide more-sophisticated administration and security options, and all resources are managed centrally on dedicated servers.
+<P>
+Client-server networks require a <A NAME="ddnetworkoperatingsystem"><I>network operating system</I></A> (<I>NOS</I>)--Windows .NET Server, Windows 2000 Server, Windows NT, Novell Netware, Linux, and UNIX are common NOSs--as well as a greater initial outlay of time and money for setup and equipment and a network administrator to create and maintain user IDs and permissions.
+<P>
+Microsoft's client-server network system uses domains to organize the large numbers of computers that can be on corporate networks. A <A NAME="dddomain"><I>domain</I></A> (when used in reference to Microsoft LANs) is a group of user accounts administered together. Microsoft's server versions of Windows (such as Windows .NET Server, which is based on Windows XP) includes Active Directory (AD), which provides centralized administration to the user accounts and groups in the domain. Microsoft calls a client-server network managed by Active Directory a <A NAME="dddomainbased"><I>domain-based</I></A> network.
+<P>
+Table 27-1 lists differences between peer-to-peer and client-server networks. To set up your Windows computer on an already-existing Novell or Windows NT network, contact your LAN administrator. For information on creating your own domain-based network with Windows .NET Server, read <I>Windows .NET Server: The Complete Reference</I>, by Kathy Ivens (published by Osborne/McGraw-Hill).
+<P>
+<TABLE><TR><TD VALIGN="TOP"><IMG SRC="../images/caution.png" ALT="caution" WIDTH=95 HEIGHT=29></TD>
+<TD VALIGN="TOP">Windows XP Home Edition cannot log into a domain-based network. If you plan to connect to a domain-based network, you need Windows XP Professional.
+
+</TD></TR></TABLE>
+<BLOCKQUOTE><TABLE BORDER=2><TR><TD>
+<TABLE>
+<TR>
+<TD>
+<B></B>
+</TD>
+<TD>
+<B>Peer-to-Peer (Workgroup-Based)</B>
+</TD>
+<TD>
+<B>Client-Server (Domain-Based)</B>
+</TD>
+</TR>
+<TR>
+<TD>
+Size
+</TD>
+<TD>
+Good for small networks (under 12 computers, depending on the uses for the network). Keeping track of available resources and passwords for each resource becomes difficult on a large peer-to-peer network.
+</TD>
+<TD>
+Good for medium-to-large networks. Because administration of network resources is central, the user can access all available resources with only one password (more passwords may be necessary if the network has more than one server).
+</TD>
+</TR>
+<TR>
+<TD>
+Hardware
+</TD>
+<TD>
+No dedicated file server is needed.
+</TD>
+<TD>
+At least one computer must be a server.
+</TD>
+</TR>
+<TR>
+<TD>
+Operating system
+</TD>
+<TD>
+Windows XP Home Edition or Professional, Me/9x, NT Workstation, or 2000 Professional on all computers.
+</TD>
+<TD>
+Requires a network operating system (NOS) on the server. Workstations can run Windows XP Professional, but not XP Home Edition.
+</TD>
+</TR>
+<TR>
+<TD>
+Administrator training
+</TD>
+<TD>
+Little training needed for users to administer their own computers' resources for all users on the network.
+</TD>
+<TD>
+System administrator must be trained.
+</TD>
+</TR>
+<TR>
+<TD>
+Resource control
+</TD>
+<TD>
+Each computer's user has full control of that computer's resources.
+</TD>
+<TD>
+The system administrator is in control of shared resources.
+</TD>
+</TR>
+<TR>
+<TD>
+Resource administration
+</TD>
+<TD>
+Administered by the owner of each workstation.
+</TD>
+<TD>
+Administered by network administrator.
+</TD>
+</TR>
+<TR>
+<TD>
+Resource security
+</TD>
+<TD>
+Password is assigned to each resource.
+</TD>
+<TD>
+Password is assigned to each user of a server. Each user is given permission to use certain resources by the network administrator.
+</TD>
+</TR>
+<TR>
+<TD>
+Security administration
+</TD>
+<TD>
+The owner of each computer grants permissions.
+</TD>
+<TD>
+Only one password per user is required for the use of the resources associated with one server. A network administrator manages security.
+</TD>
+</TR>
+</TABLE></BLOCKQUOTE>
+<TR BGCOLOR="#00ffff"><TD>
+<I>Table 1:  Differences Between Peer-to-Peer and Client-Server Networks</I>
+</TD></TR></TABLE></BLOCKQUOTE>
+<P>
+<A HREF="1.htm"  OnMouseOver='whomp(prevb, "sprev");' OnMouseOut='whomp(prevb, "wprev");'
+ title="Previous Section"><IMG NAME=prevb SRC="../images/wprev.png" ALT="Previous" HEIGHT=20 WIDTH=82 BORDER=0></A><!--
+--><A HREF="index.htm" OnMouseOver='whomp(chapb, "schap");' OnMouseOut='whomp(chapb, "wchap");'
+title="Chapter Overview"><IMG SRC="../images/wchap.png" ALT="Chapter" NAME=chapb HEIGHT=20 WIDTH=100 BORDER=0></A><A
+HREF="../index.htm" OnMouseOver='whomp(tocb, "sbook");' OnMouseOut='whomp(tocb, "wbook");' 
+title="Table of Contents"><IMG SRC="../images/wbook.png" ALT="Contents" NAME=tocb HEIGHT=20 WIDTH=94 BORDER=0></A><A
+HREF="../glossary/index.htm" OnMouseOver='whomp(glosb, "sglos");' OnMouseOut='whomp(glosb, "wglos");' 
+title="Glossary"><IMG SRC="../images/wglos.png" ALT="Glossary" NAME=glosb HEIGHT=20 WIDTH=94 BORDER=0></A><!--
+--><A HREF="3.htm"  OnMouseOver='whomp(nextb, "snext");' OnMouseOut='whomp(nextb, "wnext");'
+ title="Next Section"><IMG NAME=nextb SRC="../images/wnext.png" ALT="Next" HEIGHT=20 WIDTH=82 BORDER=0></A>
+<BR>
+</BLOCKQUOTE>
+</BODY>
+</HTML>

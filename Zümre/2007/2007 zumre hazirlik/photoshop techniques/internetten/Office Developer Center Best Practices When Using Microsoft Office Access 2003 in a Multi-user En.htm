@@ -1,0 +1,567 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0104)http://msdn.microsoft.com/office/default.aspx?pull=/library/en-us/odc_ac2003_ta/html/odc_acmultibest.asp -->
+<HTML><HEAD><TITLE>Office Developer Center: Best Practices When Using Microsoft Office Access 2003 in a Multi-user Environment</TITLE><!--Enter title and description-->
+<META content=en-us name=ms.locale>
+<META content="text/html; charset=utf-8" http-equiv=Content-Type>
+<META 
+content="Learn about some of the techniques you can use to improve the performance and efficiency of working with your multi-user Access applications.  " 
+name=Description><LINK href="/office/rss.xml" rel=alternate 
+title="Office Developer Center" type=application/rss+xml>
+<META content="noindex, nofollow" name=robots><LINK 
+href="Office Developer Center Best Practices When Using Microsoft Office Access 2003 in a Multi-user Environment_files/css.aspx" 
+rel=Stylesheet type=text/css>
+<SCRIPT language=Javascript 
+src="Office Developer Center Best Practices When Using Microsoft Office Access 2003 in a Multi-user Environment_files/menujs" 
+type=text/javascript></SCRIPT>
+<LINK 
+href="Office Developer Center Best Practices When Using Microsoft Office Access 2003 in a Multi-user Environment_files/dc2e.css" 
+rel=Stylesheet type=text/css><LINK 
+href="E:\netten\Office Developer Center Best Practices When Using Microsoft Office Access 2003 in a Multi-user Environment_files\css(1).aspx" 
+rel=stylesheet type=text/css>
+<SCRIPT language=JavaScript>var doImage = doImage;
+var TType = TType;
+
+function mhHover(tbl, idx, cls)
+{
+	var t, d;
+	if (document.getElementById)
+		t = document.getElementById(tbl);
+	else
+		t = document.all(tbl);
+	if (t == null) return;
+	if (t.getElementsByTagName)
+		d = t.getElementsByTagName("TD");
+	else
+		d = t.all.tags("TD");
+	if (d == null) return;
+	if (d.length <= idx) return;
+	d[idx].className = cls;
+}
+
+function setMSResearch() {
+  var time = new Date();
+  if( document.cookie.indexOf( 'msresearch=1 ') == -1 ) {
+    document.cookie = 'msresearch=' + time.getTime() + ':' + escape( document.location) + ':' + escape( document.referrer) + '; path=/; domain=.microsoft.com; ';
+  }
+}
+
+function footerjs(doc)
+{
+	if (doImage == null)
+	{
+		var tt = TType == null ? "PV" : TType;
+		doc.write('<layer visibility="hide"><div style="display:none"><img src="http://c.microsoft.com/trans_pixel.asp?source=msdn&TYPE=' + tt + '&p=office&r=http%3a%2f%2fmsdn.microsoft.com%2fnhp%2fdefault.asp%3fcontentid%3d28000546%26frame%3dtrue" width=0 height=0 hspace=0 vspace=0 border=0 /></div></layer>');
+	}
+
+	if( ( document.cookie.indexOf( 'msresearch=1 ') == -1 ) 
+	 && ( document.cookie.indexOf( 'msresearch=')   != -1 ) ) {
+	  setInterval( "setMSResearch()", 1000 );
+	}
+}</SCRIPT>
+
+<SCRIPT language=JavaScript 
+src="Office Developer Center Best Practices When Using Microsoft Office Access 2003 in a Multi-user Environment_files/logicaluri.js"></SCRIPT>
+
+<SCRIPT language=JavaScript>setLogicalURI("Office");</SCRIPT>
+
+<SCRIPT language=JavaScript>
+function MakeHomePage()
+{
+   document.body.style.behavior='url(#default#homepage)';
+   document.body.setHomePage(window.location.href);
+}
+</SCRIPT>
+
+<META content="MSHTML 5.00.2920.0" name=GENERATOR></HEAD>
+<BODY><A name=top></A>
+<SCRIPT language=Javascript>
+				if (self.name == "MNPMainFrame")
+					top.location.href = self.location.href;
+			</SCRIPT>
+
+<DIV id=msviMasthead 
+xmlns:Utility="http://www.microsoft.com/MSCOM/VisualIdentity/Utility">
+<TABLE border=0 cellPadding=0 cellSpacing=0 width="100%">
+  <TBODY>
+  <TR>
+    <TD width="100%">
+      <TABLE border=0 cellPadding=0 cellSpacing=0 height=22 width="100%">
+        <TBODY>
+        <TR>
+          <TD bgColor=#ffffff id=msviRegionIdGraphic></TD>
+          <TD bgColor=#3568cc width="100%"><IMG alt=* height=22 
+            src="Office Developer Center Best Practices When Using Microsoft Office Access 2003 in a Multi-user Environment_files/gradient.jpg" 
+            title="" width=250></TD></TR></TBODY></TABLE></TD>
+    <TD align=left bgColor=#3568cc dir=ltr height=22 id=msviGlobalToolbar 
+noWrap>
+      <TABLE border=0 cellPadding=0 cellSpacing=0>
+        <TBODY>
+        <TR>
+          <TD class=gt0 noWrap 
+          onmouseout="mhHover('msviGlobalToolbar', 0, 'gt0')" 
+          onmouseover="mhHover('msviGlobalToolbar', 0, 'gt1')"><A 
+            href="http://www.microsoft.com/">Microsoft.com Home</A></TD>
+          <TD class=gtsep>|</TD>
+          <TD class=gt0 noWrap 
+          onmouseout="mhHover('msviGlobalToolbar', 2, 'gt0')" 
+          onmouseover="mhHover('msviGlobalToolbar', 2, 'gt1')"><A 
+            href="http://msdn.microsoft.com/library/toolbar/3.0/sitemap/en-us.mspx">Site 
+            Map</A></TD></TR></TBODY></TABLE></TD></TR>
+  <TR vAlign=top>
+    <TD width="100%">
+      <TABLE border=0 cellPadding=0 cellSpacing=0 height=42 width="100%">
+        <TBODY>
+        <TR vAlign=top>
+          <TD bgColor=#ffffff id=msviBrandBanner><A 
+            href="http://www.microsoft.com/msdn"><IMG alt=MSDN border=0 
+            height=42 
+            src="Office Developer Center Best Practices When Using Microsoft Office Access 2003 in a Multi-user Environment_files/msdn_masthead_ltr.gif" 
+            title="" width=225></A></TD>
+          <TD bgColor=#6799ff width="100%"><IMG alt=* height=42 
+            src="E:\netten\Office Developer Center Best Practices When Using Microsoft Office Access 2003 in a Multi-user Environment_files\gradient(1).jpg" 
+            title="" width=250></TD></TR></TBODY></TABLE></TD>
+    <TD bgColor=#6799ff id=msviGlobalSearch>
+      <DIV id=msviNoSearch></DIV></TD></TR></TBODY></TABLE>
+<DIV id=msviLocalToolbar>
+<TABLE border=0 cellPadding=0 cellSpacing=0 height=19 width="100%">
+  <TBODY>
+  <TR>
+    <TD id=msviHomePageLink noWrap><A href="http://msdn.microsoft.com/">MSDN 
+      Home</A></TD>
+    <TD><SPAN class=ltsep>|</SPAN></TD>
+    <TD class=lt0 noWrap onmouseout="mhHover('msviLocalToolbar', 2, 'lt0')" 
+    onmouseover="mhHover('msviLocalToolbar', 2, 'lt1')"><A 
+      href="http://msdn.microsoft.com/developercenters/">Developer 
+Centers</A></TD>
+    <TD><SPAN class=ltsep>|</SPAN></TD>
+    <TD class=lt0 noWrap onmouseout="mhHover('msviLocalToolbar', 4, 'lt0')" 
+    onmouseover="mhHover('msviLocalToolbar', 4, 'lt1')"><A 
+      href="http://msdn.microsoft.com/library/default.asp">Library</A></TD>
+    <TD><SPAN class=ltsep>|</SPAN></TD>
+    <TD class=lt0 noWrap onmouseout="mhHover('msviLocalToolbar', 6, 'lt0')" 
+    onmouseover="mhHover('msviLocalToolbar', 6, 'lt1')"><A 
+      href="http://msdn.microsoft.com/downloads/">Downloads</A></TD>
+    <TD><SPAN class=ltsep>|</SPAN></TD>
+    <TD class=lt0 noWrap onmouseout="mhHover('msviLocalToolbar', 8, 'lt0')" 
+    onmouseover="mhHover('msviLocalToolbar', 8, 'lt1')"><A 
+      href="http://msdn.microsoft.com/code/">Code Center</A></TD>
+    <TD><SPAN class=ltsep>|</SPAN></TD>
+    <TD class=lt0 noWrap onmouseout="mhHover('msviLocalToolbar', 10, 'lt0')" 
+    onmouseover="mhHover('msviLocalToolbar', 10, 'lt1')"><A 
+      href="http://msdn.microsoft.com/subscriptions/">Subscriptions</A></TD>
+    <TD><SPAN class=ltsep>|</SPAN></TD>
+    <TD class=lt0 noWrap onmouseout="mhHover('msviLocalToolbar', 12, 'lt0')" 
+    onmouseover="mhHover('msviLocalToolbar', 12, 'lt1')"><A 
+      href="http://msdn.microsoft.com/worldwide.aspx">MSDN Worldwide</A></TD>
+    <TD width="100%"></TD></TR></TBODY></TABLE></DIV></DIV>
+<TABLE border=0 cellPadding=0 cellSpacing=0 dir=ltr width="100%">
+  <TBODY>
+  <TR vAlign=top>
+    <TD height="100%" style="OVERFLOW-X: hidden" width=181>
+      <TABLE border=0 cellPadding=0 cellSpacing=0 width="100%">
+        <TBODY>
+        <TR>
+          <TD class=mnpQuickSearch dir=ltr 
+          style="BACKGROUND: #cccccc; COLOR: #000000">
+            <FORM action=/msdn-online/shared/components/mscomsearch30.aspx 
+            style="MARGIN: 0px"><NOBR><FONT color=#000000>Search 
+            for</FONT><BR><INPUT class=mnpSearchBox id=qu maxLength=255 name=qu 
+            style="WIDTH: 165px"><BR>
+            <TABLE border=0 cellPadding=0 cellSpacing=0 style="MARGIN-TOP: 2px" 
+            width="100%">
+              <TBODY>
+              <TR>
+                <TD class=mnpQuickSearch 
+                style="PADDING-BOTTOM: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px" 
+                width="100%"><SELECT class=mnpSearchScopes name=SearchScope 
+                  style="WIDTH: 137px"><OPTION selected value=1>All 
+                    MSDN</OPTION><OPTION value=2>All Library</OPTION><OPTION 
+                    value=3>Code &amp; Downloads</OPTION><OPTION value=4>Product 
+                    Information</OPTION><OPTION value=5>Knowledge 
+                  Base</OPTION></SELECT></TD>
+                <TD><INPUT class=mnpSearchButton type=submit value=Go><BR></TD></TR></TBODY></TABLE><A 
+            href="http://search.microsoft.com/search/search.aspx?View=msdn&amp;st=a&amp;c=0&amp;s=1" 
+            onmouseout="style.color='#000000';" 
+            onmouseover="style.color='#0033CC';" style="COLOR: #000000">Advanced 
+            Search</A></NOBR></FORM></TD></TR></TBODY></TABLE>
+      <DIV class=mnpMenuTop dir=ltr id=mnpMenuTop 
+      style="OVERFLOW-X: hidden; WIDTH: 181px" parent="/" 
+      url="/office/default.aspx">
+      <DIV class=mnpInherit>
+      <DIV class=mnpMenuRow 
+      style="BACKGROUND: #f1f1f1; BORDER-BOTTOM-COLOR: #f1f1f1; BORDER-LEFT-COLOR: #f1f1f1; BORDER-RIGHT-COLOR: #f1f1f1; BORDER-TOP-COLOR: #f1f1f1; OVERFLOW-X: hidden; WIDTH: 176px"><IMG 
+      alt=* border=0 class=mnpMenuArrow height=7 
+      src="Office Developer Center Best Practices When Using Microsoft Office Access 2003 in a Multi-user Environment_files/arrowLTR.gif" 
+      style="LEFT: 166px; VISIBILITY: hidden" title="" width=4><A 
+      href="Office Developer Center Best Practices When Using Microsoft Office Access 2003 in a Multi-user Environment_files/office">Office 
+      Developer Center</A></DIV>
+      <DIV class=mnpMenuRow 
+      style="BACKGROUND: #f1f1f1; BORDER-BOTTOM-COLOR: #f1f1f1; BORDER-LEFT-COLOR: #f1f1f1; BORDER-RIGHT-COLOR: #f1f1f1; BORDER-TOP-COLOR: #f1f1f1; OVERFLOW-X: hidden; WIDTH: 176px" 
+      menu="ma996d9e6af7c458b9aeda17ffae63052"><IMG alt=* border=0 
+      class=mnpMenuArrow height=7 
+      src="Office Developer Center Best Practices When Using Microsoft Office Access 2003 in a Multi-user Environment_files/arrowLTR.gif" 
+      style="LEFT: 166px; VISIBILITY: hidden" title="" width=4><A 
+      href="http://msdn.microsoft.com/office/technologyinfo/default.aspx">Product 
+      &amp; Technology Information</A></DIV>
+      <DIV class=mnpMenuRow 
+      style="BACKGROUND: #f1f1f1; BORDER-BOTTOM-COLOR: #f1f1f1; BORDER-LEFT-COLOR: #f1f1f1; BORDER-RIGHT-COLOR: #f1f1f1; BORDER-TOP-COLOR: #f1f1f1; OVERFLOW-X: hidden; WIDTH: 176px"><IMG 
+      alt=* border=0 class=mnpMenuArrow height=7 
+      src="Office Developer Center Best Practices When Using Microsoft Office Access 2003 in a Multi-user Environment_files/arrowLTR.gif" 
+      style="LEFT: 166px; VISIBILITY: hidden" title="" width=4><A 
+      href="http://msdn.microsoft.com/office/howtobuy/default.aspx">How to 
+      Buy</A></DIV>
+      <DIV class=mnpMenuRow 
+      style="BACKGROUND: #f1f1f1; BORDER-BOTTOM-COLOR: #f1f1f1; BORDER-LEFT-COLOR: #f1f1f1; BORDER-RIGHT-COLOR: #f1f1f1; BORDER-TOP-COLOR: #f1f1f1; OVERFLOW-X: hidden; WIDTH: 176px" 
+      menu="m8f229ec104a8456b8be1d8ee2739a3ab"><IMG alt=* border=0 
+      class=mnpMenuArrow height=7 
+      src="Office Developer Center Best Practices When Using Microsoft Office Access 2003 in a Multi-user Environment_files/arrowLTR.gif" 
+      style="LEFT: 166px; VISIBILITY: hidden" title="" width=4><A 
+      href="http://msdn.microsoft.com/office/understanding/default.aspx">Understanding 
+      Office Development</A></DIV>
+      <DIV class=mnpMenuRow 
+      style="BACKGROUND: #f1f1f1; BORDER-BOTTOM-COLOR: #f1f1f1; BORDER-LEFT-COLOR: #f1f1f1; BORDER-RIGHT-COLOR: #f1f1f1; BORDER-TOP-COLOR: #f1f1f1; OVERFLOW-X: hidden; WIDTH: 176px" 
+      menu="m0fdcb46126224678a39db765c0d6a68a"><IMG alt=* border=0 
+      class=mnpMenuArrow height=7 
+      src="Office Developer Center Best Practices When Using Microsoft Office Access 2003 in a Multi-user Environment_files/arrowLTR.gif" 
+      style="LEFT: 166px; VISIBILITY: hidden" title="" width=4><A 
+      href="http://msdn.microsoft.com/office/downloads/default.aspx">Downloads</A></DIV>
+      <DIV class=mnpMenuRow 
+      style="BACKGROUND: #f1f1f1; BORDER-BOTTOM-COLOR: #f1f1f1; BORDER-LEFT-COLOR: #f1f1f1; BORDER-RIGHT-COLOR: #f1f1f1; BORDER-TOP-COLOR: #f1f1f1; OVERFLOW-X: hidden; WIDTH: 176px" 
+      menu="m1fd5b80ee67e4152a43e7eb4472ac230"><IMG alt=* border=0 
+      class=mnpMenuArrow height=7 
+      src="Office Developer Center Best Practices When Using Microsoft Office Access 2003 in a Multi-user Environment_files/arrowLTR.gif" 
+      style="LEFT: 166px; VISIBILITY: hidden" title="" width=4><A 
+      href="http://msdn.microsoft.com/office/support/default.aspx">Support</A></DIV>
+      <DIV class=mnpMenuRow 
+      style="BACKGROUND: #f1f1f1; BORDER-BOTTOM-COLOR: #f1f1f1; BORDER-LEFT-COLOR: #f1f1f1; BORDER-RIGHT-COLOR: #f1f1f1; BORDER-TOP-COLOR: #f1f1f1; OVERFLOW-X: hidden; WIDTH: 176px" 
+      menu="m5305bc19eb21428c932b1e4691706b7e"><IMG alt=* border=0 
+      class=mnpMenuArrow height=7 
+      src="Office Developer Center Best Practices When Using Microsoft Office Access 2003 in a Multi-user Environment_files/arrowLTR.gif" 
+      style="LEFT: 166px; VISIBILITY: hidden" title="" width=4><A 
+      href="http://msdn.microsoft.com/office/community/default.aspx">Community</A></DIV>
+      <DIV class=mnpMenuRow 
+      style="BACKGROUND: #f1f1f1; BORDER-BOTTOM-COLOR: #f1f1f1; BORDER-LEFT-COLOR: #f1f1f1; BORDER-RIGHT-COLOR: #f1f1f1; BORDER-TOP-COLOR: #f1f1f1; OVERFLOW-X: hidden; WIDTH: 176px" 
+      menu="mffadb2f575f54016adea902d7223bd18"><IMG alt=* border=0 
+      class=mnpMenuArrow height=7 
+      src="Office Developer Center Best Practices When Using Microsoft Office Access 2003 in a Multi-user Environment_files/arrowLTR.gif" 
+      style="LEFT: 166px; VISIBILITY: hidden" title="" width=4><A 
+      href="http://msdn.microsoft.com/office/previous/default.aspx">Previous 
+      Versions</A></DIV>
+      <DIV class=mnpMenuRow 
+      style="BACKGROUND: #f1f1f1; BORDER-BOTTOM-COLOR: #f1f1f1; BORDER-LEFT-COLOR: #f1f1f1; BORDER-RIGHT-COLOR: #f1f1f1; BORDER-TOP-COLOR: #f1f1f1; OVERFLOW-X: hidden; WIDTH: 176px"><IMG 
+      alt=* border=0 class=mnpMenuArrow height=7 
+      src="Office Developer Center Best Practices When Using Microsoft Office Access 2003 in a Multi-user Environment_files/arrowLTR.gif" 
+      style="LEFT: 166px; VISIBILITY: hidden" title="" width=4><A 
+      href="http://msdn.microsoft.com/office/homepagecommunity.xml"></A></DIV>
+      <DIV class=mnpMenuBorder style="WIDTH: 180px"></DIV>
+      <DIV class=mnpMenuRow 
+      style="BACKGROUND: #f1f1f1; BORDER-BOTTOM-COLOR: #f1f1f1; BORDER-LEFT-COLOR: #f1f1f1; BORDER-RIGHT-COLOR: #f1f1f1; BORDER-TOP-COLOR: #f1f1f1; OVERFLOW-X: hidden; WIDTH: 176px"><IMG 
+      alt=* border=0 class=mnpMenuArrow height=7 
+      src="Office Developer Center Best Practices When Using Microsoft Office Access 2003 in a Multi-user Environment_files/arrowLTR.gif" 
+      style="LEFT: 166px; VISIBILITY: hidden" title="" width=4><A 
+      href="http://msdn.microsoft.com/products">Products &amp; 
+      Technologies</A></DIV>
+      <DIV class=mnpMenuBorder 
+      style="MARGIN-BOTTOM: 0px; WIDTH: 180px"></DIV></DIV></DIV>
+      <DIV class=mnpAds 
+      style="BACKGROUND: #f1f1f1; BORDER-BOTTOM: #999999 0px solid; BORDER-LEFT: #999999 0px solid; BORDER-RIGHT: #999999 1px solid; BORDER-TOP: #999999 0px solid; HEIGHT: 100%; MARGIN-BOTTOM: 20px; WIDTH: 181px">
+      <P>
+      <CENTER><A href="http://www.msdnevents.com/" id=ad1 target=_top><IMG 
+      alt="MSDN Events" border=0 
+      src="Office Developer Center Best Practices When Using Microsoft Office Access 2003 in a Multi-user Environment_files/msdnevents.gif"></A></CENTER></DIV>
+      <DIV class=mnpAds style="HEIGHT: 100%; MARGIN-BOTTOM: 20px; WIDTH: 181px">
+      <CENTER></CENTER></DIV></TD>
+    <TD dir=ltr width="100%">
+      <TABLE bgColor=#3366cc cellPadding=0 cellSpacing=0 height=46 
+        width="100%"><TBODY>
+        <TR>
+          <TD width=419><IMG alt="MSDN Home" border=0 height=46 
+            src="Office Developer Center Best Practices When Using Microsoft Office Access 2003 in a Multi-user Environment_files/left_bnr_office.jpg" 
+            width=419></TD>
+          <TD 
+          background="Office Developer Center Best Practices When Using Microsoft Office Access 2003 in a Multi-user Environment_files/office" 
+          bgColor=#3366cc title="MSDN Home" width="100%">&nbsp;</TD>
+          <TD width=175><IMG alt="MSDN Home" border=0 height=46 
+            src="Office Developer Center Best Practices When Using Microsoft Office Access 2003 in a Multi-user Environment_files/right_bnr_office.jpg" 
+            width=175></TD></TR></TBODY></TABLE><!-----------------><!--BEGIN_CONTENT--><!----------------->
+      <DIV class=clsDocBody id=pageContainer><!--pull table-->
+      <TABLE border=0 cellPadding=0 id=hppulltable style="HEIGHT: 100%">
+        <TBODY>
+        <TR>
+          <TD vAlign=top>
+            <TABLE border=0 cellPadding=0 cellSpacing=0 
+            style="BORDER-COLLAPSE: collapse; WIDTH: 100%">
+              <TBODY>
+              <TR align=right style="PADDING-RIGHT: 15px; WIDTH: 100%" 
+              vAlign=top>
+                <TD style="TEXT-ALIGN: left" vAlign=top><IMG align=left 
+                  alt="See this in the MSDN Library" border=0 id=PullImage 
+                  src="Office Developer Center Best Practices When Using Microsoft Office Access 2003 in a Multi-user Environment_files/library.gif"><SPAN 
+                  id=PullLabel><A 
+                  href="http://msdn.microsoft.com/library/en-us/odc_ac2003_ta/html/odc_acmultibest.asp">See 
+                  This in MSDN Library</A></SPAN></TD></TR></TBODY></TABLE>
+            <DIV style="FLOAT: right">
+            <DIV class=MNPPart id=pageoptions1_OptionsPanel>
+            <H4>Page Options</H4><IFRAME frameBorder=0 height=150 
+            id=frmRatingsOptions scrolling=no 
+            src="Office Developer Center Best Practices When Using Microsoft Office Access 2003 in a Multi-user Environment_files/ratings.aspx" 
+            width="95%"></IFRAME></DIV></DIV>
+            <DIV id=nsbanner>
+            <DIV id=TitleRow>
+            <H1 class=dtH1><A name=odc_acmultibest></A>Best Practices When Using 
+            Microsoft Office Access 2003 in a Multi-user 
+            Environment</H1></DIV></DIV>
+            <P>Frank C. Rice<BR>Microsoft Corporation</P>
+            <P>January 2004</P>
+            <P>Applies to:<BR>&nbsp;&nbsp;&nbsp;&nbsp;Microsoft® Office Access 
+            2003</P>
+            <P><B>Summary:</B> Learn techniques you can use to improve the 
+            performance and efficiency of working with your multi-user Access 
+            applications. (5 printed pages)</P>
+            <H4 class=dtH1>Contents</H4>
+            <P><A 
+            href="http://msdn.microsoft.com/office/default.aspx?pull=/library/en-us/odc_ac2003_ta/html/odc_acmultibest.asp#odc_acmultibest_generalbestpractices" 
+            target=_self>General Best Practices</A><BR><A 
+            href="http://msdn.microsoft.com/office/default.aspx?pull=/library/en-us/odc_ac2003_ta/html/odc_acmultibest.asp#odc_acmultibest_openinganaccessproject" 
+            target=_self>Opening an Access Project </A><BR><A 
+            href="http://msdn.microsoft.com/office/default.aspx?pull=/library/en-us/odc_ac2003_ta/html/odc_acmultibest.asp#odc_acmultibest_changesmaybediscardedinmdbs" 
+            target=_self>Changes May Be Discarded in MDBs</A><BR><A 
+            href="http://msdn.microsoft.com/office/default.aspx?pull=/library/en-us/odc_ac2003_ta/html/odc_acmultibest.asp#odc_acmultibest_excessivenumberofconnectionstodatabasemaydegenerateperformance" 
+            target=_self>Excessive Number of Connections to Database May 
+            Degenerate Performance</A><BR><A 
+            href="http://msdn.microsoft.com/office/default.aspx?pull=/library/en-us/odc_ac2003_ta/html/odc_acmultibest.asp#odc_acmultibest_optimizetherefreshinterval" 
+            target=_self>Optimize the Refresh Interval</A><BR><A 
+            href="http://msdn.microsoft.com/office/default.aspx?pull=/library/en-us/odc_ac2003_ta/html/odc_acmultibest.asp#odc_acmultibest_settingupyouraccessdatabasetoautomaticallycompactandrepair" 
+            target=_self>Setting Up Your Access Database to Automatically 
+            Compact and Repair</A><BR><A 
+            href="http://msdn.microsoft.com/office/default.aspx?pull=/library/en-us/odc_ac2003_ta/html/odc_acmultibest.asp#odc_acmultibest_usingtransactions" 
+            target=_self>Using Transactions</A><BR><A 
+            href="http://msdn.microsoft.com/office/default.aspx?pull=/library/en-us/odc_ac2003_ta/html/odc_acmultibest.asp#odc_acmultibest_conclusion" 
+            target=_self>Conclusion</A></P>
+            <H2 class=dtH1><A 
+            name=odc_acmultibest_generalbestpractices></A>General Best 
+            Practices</H2>
+            <P>The following points represent items you should keep in mind when 
+            working with Microsoft® Access databases in a multi-user 
+            environment: </P>
+            <UL>
+              <LI>Toggling the default open mode between shared and exclusive 
+              does not take effect until the next time the database is opened. 
+              <LI>Be sure to locate shared multi-user database files in shared 
+              file directory folders. 
+              <LI>Split the database file into a front-end application database, 
+              consisting of the Access objects such as queries, forms, and 
+              reports, and a back-end data database, consisting of the tables. 
+              The back-end database is saved to the shared file directory and 
+              the front-end database is saved on each client computer. 
+              <LI>You can set user-level security so that a user can open the 
+              database exclusively. This prevents other users from opening the 
+              database. As you will see shortly, this is necessary if you plan 
+              on making minor changes to Access objects. </LI></UL>
+            <H2 class=dtH1><A 
+            name=odc_acmultibest_openinganaccessproject></A>Opening an Access 
+            Project </H2>
+            <P>If you try to open an Access project (.adp) file or an Access 
+            project extension (.ade) file in a multi-user environment, you may 
+            receive an error message similar to the following:</P>
+            <BLOCKQUOTE class=dtBlock>"The database <I>DatabaseName</I> will 
+              be opened read-only because one of the following occurred: The 
+              file is locked for editing by another user, or the file (or the 
+              folder in which it is located) is marked as read-only, or you 
+              specified that you wanted to open this file read-only."</BLOCKQUOTE>
+            <P>This error message occurs because an Access project is strictly a 
+            client and has no multi-user capability. The workaround for this 
+            issue is to deploy a copy of the .adp file or .ade file to each 
+            computer.</P>
+            <H2 class=dtH1><A 
+            name=odc_acmultibest_changesmaybediscardedinmdbs></A>Changes May Be 
+            Discarded in MDBs</H2>
+            <P>Minor design changes made to Access-specific objects, such as 
+            forms, reports, macros, modules, or command bars, may be discarded 
+            without warning. The reason is that multiple users may open the 
+            database (.mdb), and Access cannot obtain an exclusive lock on the 
+            database. You can overcome this limitation by opening the database 
+            exclusively as a single user. To open a database exclusively: </P>
+            <OL>
+              <LI>On the <B>File</B> menu, click <B>Open</B>. 
+              <LI>In the <B>Look in</B> box, click the drive or folder that 
+              contains the Access database. 
+              <LI>Click the arrow next to the <B>Open</B> button, and then click 
+              <B>Open Exclusive</B>. </LI></OL>
+            <BLOCKQUOTE class=dtBlock><B 
+              class=le>Note</B>&nbsp;&nbsp;&nbsp;You can also open a database by 
+              including the /Excl or /Ro parameters on the command line. These 
+              open the database in exclusive or read-only mode, 
+            respectively.</BLOCKQUOTE>
+            <P>For more information on this limitation and on what qualifies as 
+            a minor change as opposed to a major change, see the Microsoft 
+            Knowledge Base article — (285828) <A 
+            href="http://support.microsoft.com/default.aspx?scid=kb;EN-US;285828">ACC2002: 
+            Silent Design Changes May Be Discarded in a Multiuser 
+            Environment</A>.</P>
+            <H2 class=dtH1><A 
+            name=odc_acmultibest_excessivenumberofconnectionstodatabasemaydegenerateperformance></A>Excessive 
+            Number of Connections to Database May Decrease Performance</H2>
+            <P>Each connection to a Jet database represents an independent 
+            client to the database, even when these connections come from the 
+            same client process. To optimize performance and network I/O and to 
+            reduce the multi-user stress on the back-end database, design the 
+            client application to use a single connection to the Jet database, 
+            and then share this connection over multiple record sets as needed. 
+            This has the added benefit of preventing read/write delays in the 
+            client application. By default, there is a slight delay between 
+            writing a value to the database and being able to read this updated 
+            value when writing and reading on two different Jet connections, 
+            even if the two connections reside in the same client process. If 
+            you use a single connection, you avoid this issue.</P>
+            <P>One of the features of Jet 4.0 is called <I>connection 
+            control</I>. This feature allows you to control the number of 
+            connections to a database. This is useful for limiting the number of 
+            simultaneous users of a database. It should be noted that connection 
+            control cannot be used to disconnect users from a database. With 
+            connection control, you control connections using the <B>Jet 
+            OLEDB:Control Control</B> property of the ADO <B>Connection</B> 
+            object. To disallow any new users of the database, set the property 
+            to 1. To allow new users, set the property to 2.</P>
+            <P>An example of the code to do this is as follows:</P><PRE class=code>Const AllowUsers = "Allow New Users"
+Const DisallowUsers = "Disallow New Users"
+
+Private Sub cmdShutDown_Click()
+    If cmdShutdown.Caption = DisallowUsers Then
+        CurrentProject.Connection. _
+            Properties("Jet OLEDB:Connection Control") = 1
+        cmdShutdown.Caption = AllowUsers
+    Else
+        CurrentProject.Connection. _
+            Properties("Jet OLEDB:Connection Control") = 2
+        cmdShutdown.Caption = DisallowUsers
+    End If
+End Sub
+</PRE>
+            <H2 class=dtH1><A 
+            name=odc_acmultibest_optimizetherefreshinterval></A>Optimize the 
+            Refresh Interval</H2>
+            <P>As you make changes to the objects in the database, Access 
+            refreshes the database based on a preset interval. You can set the 
+            default refresh interval for the database by using that 
+            <B>Advanced</B> option tab of the <B>Options</B> dialog box, 
+            available from the <B>Tools</B> menu. The default for this option is 
+            60 seconds, which may be too long for some applications. Setting the 
+            right interval for the application may involve some experimentation. 
+            If you set the value too low, you may create excessive network 
+            traffic. For smaller networks, setting the interval at lower values 
+            should have no adverse effects.</P>
+            <BLOCKQUOTE class=dtBlock><B 
+              class=le>Note</B>&nbsp;&nbsp;&nbsp;Setting the interval to a long 
+              value, Access automatically refreshes the current record whenever 
+              you attempt to edit it. This may reduce performance and increase 
+              network traffic.</BLOCKQUOTE>
+            <H2 class=dtH1><A 
+            name=odc_acmultibest_settingupyouraccessdatabasetoautomaticallycompactandrepair></A>Setting 
+            Up Your Access Database to Automatically Compact and Repair</H2>
+            <P>As you work with the data in your database, the records can 
+            become discontiguous as they are saved. This increases the size of 
+            your database. To ensure optimal performance from your database, you 
+            should compact and repair your Access files regularly. On the 
+            <B>Tools</B> menu, point to <B>Database Utilities</B>, and then 
+            click <B>Compact and Repair Database</B>. But don't stop there! You 
+            can also automate this task.</P>
+            <BLOCKQUOTE class=dtBlock><B 
+              class=le>Note</B>&nbsp;&nbsp;&nbsp;The compact and repair will 
+              only occur when the last person has closed the database. It does 
+              not occur when others have the database open.</BLOCKQUOTE>
+            <BLOCKQUOTE class=dtBlock>In a front-end/back-end database 
+              scenario, only the front-end database is compacted and repaired. 
+              The back-end database is not touched.</BLOCKQUOTE>
+            <P>Do the following: </P>
+            <OL>
+              <LI>Open the Access database or Access project that you want 
+              Access to compact automatically. 
+              <BLOCKQUOTE class=dtBlock><B 
+                class=le>Note</B>&nbsp;&nbsp;&nbsp;In the case of an Access 
+                project, only the project file is compacted. This does not 
+                affect the data that is stored in the Microsoft SQL Server™ 
+                database.</BLOCKQUOTE>
+              <LI>On the <B>Tools</B> menu, click <B>Options</B>. 
+              <LI>Click the <B>General</B> tab. 
+              <LI>Select the <B>Compact on Close</B> check box. </LI></OL>
+            <H2 class=dtH1><A name=odc_acmultibest_usingtransactions></A>Using 
+            Transactions</H2>
+            <P>You can use transactions to group record updates in units that 
+            can be committed or rolled back as a whole. Transactions also have 
+            the additional characteristic of saving updates in a temporary file 
+            instead of in tables. This provides benefits in a multi-user 
+            environment. For example, a common use of transactions in a 
+            multi-user environment is to make sure users do not see an 
+            incomplete view of shared data as it is changed. To illustrate:</P>
+            <BLOCKQUOTE class=dtBlock>Suppose your application is executing 
+              code that is updating data while another user is running a report 
+              on the data. If you update is not wrapped in a transaction, the 
+              other user could receive inconsistent data if some of your data 
+              was updated and other data was not. If you are using transactions, 
+              this cannot happen as all of the records are updated all at 
+            once.</BLOCKQUOTE>
+            <P>Try not to keep your transactions open too long. All record-level 
+            and page-level locks that result from the transaction are kept in 
+            place until the transaction is committed or rolled back. This can 
+            help reduce concurrency in your multi-user application. Problems in 
+            concurrency can occur in a multi-user environment when multiple 
+            users are making changes to records that can affect other users. 
+            Whether record-level or page-level locking is affected depends on 
+            the setting for "Open databases using record-level locking" and the 
+            type of data being updated. For instance, large Memo or OLE Object 
+            fields would lock entire pages when updated regardless of the 
+            record-level locking setting.</P>
+            <P>For more information on transactions, see Chapter 12 of the book 
+            <A 
+            href="http://www.microsoft.com/mspress/books/5241.asp">Programming 
+            Microsoft Access Version 2002</A> by Rick Dobson from Microsoft 
+            Press.</P>
+            <H2 class=dtH1><A 
+name=odc_acmultibest_conclusion></A>Conclusion</H2>
+            <P>This article looks at ways you can improve the way you work in a 
+            multi-user environment with Access applications. By utilizing some 
+            of these techniques, you can reduce the chance for errors and 
+            improve the performance of you databases.</P></TD></TR></TBODY></TABLE><A 
+      href="http://msdn.microsoft.com/office/default.aspx?pull=/library/en-us/odc_ac2003_ta/html/odc_acmultibest.asp#top"><IMG 
+      alt="Top of Page" border=0 
+      src="Office Developer Center Best Practices When Using Microsoft Office Access 2003 in a Multi-user Environment_files/top.gif"></A> 
+      <A 
+      href="http://msdn.microsoft.com/office/default.aspx?pull=/library/en-us/odc_ac2003_ta/html/odc_acmultibest.asp#top" 
+      title="Top of Page">Top of Page</A> 
+      <P></P></DIV>
+      <P><!-----------------><!--END_CONTENT--><!----------------->
+      <TABLE border=0 cellPadding=0 cellSpacing=0 style="WIDTH: 100%">
+        <TBODY>
+        <TR>
+          <TD noWrap style="WIDTH: 500px"></TD></TR>
+        <TR>
+          <TD><IFRAME frameBorder=0 height=250 id=frmRatings scrolling=no 
+            src="E:\netten\Office Developer Center Best Practices When Using Microsoft Office Access 2003 in a Multi-user Environment_files\ratings(1).aspx" 
+            width="100%"></IFRAME></TD></TR></TBODY></TABLE></P></TD></TR></TBODY></TABLE><BR 
+clear=all style="LINE-HEIGHT: 1px; OVERFLOW: hidden">
+<TABLE cellPadding=0 cellSpacing=0 id=msviFooter width="100%">
+  <TBODY>
+  <TR vAlign=bottom>
+    <TD id=msviFooter2 
+    style="FILTER: progid:DXImageTransform.Microsoft.Gradient(startColorStr='#FFFFFF', endColorStr='#669AFF', gradientType='1')">
+      <DIV id=msviLocalFooter><NOBR><A 
+      href="http://go.microsoft.com/?linkid=317027">Manage Your Profile</A> 
+      |</NOBR><WBR><NOBR><A 
+      href="http://msdn.microsoft.com/isapi/gomscom.asp?target=/legal/">Legal</A> 
+      |</NOBR><WBR><NOBR><A 
+      href="http://register.microsoft.com/contactus30/contactus.asp?domain=msdn">Contact 
+      Us</A> |</NOBR><WBR><NOBR><A href="http://msdn.microsoft.com/flash/">MSDN 
+      Flash Newsletter</A></NOBR></DIV>
+      <DIV id=msviGlobalFooter><SPAN dir=ltr>©2004 Microsoft Corporation. All 
+      rights reserved.&nbsp;</SPAN><NOBR><A 
+      href="http://www.microsoft.com/info/cpyright.mspx">Terms of Use</A> 
+      |</NOBR><WBR><NOBR><A 
+      href="http://www.microsoft.com/info/privacy.mspx">Privacy 
+      Statement</A></NOBR></DIV></TD>
+    <TD bgColor=#669aff width=105><IMG alt=Microsoft border=0 height=29 
+      src="Office Developer Center Best Practices When Using Microsoft Office Access 2003 in a Multi-user Environment_files/text.jpg" 
+      title="" width=105></TD></TR></TBODY></TABLE><LAYER visibility="hide">
+<DIV style="DISPLAY: none"><IMG border=0 height=0 hspace=0 
+src="Office Developer Center Best Practices When Using Microsoft Office Access 2003 in a Multi-user Environment_files/trans_pixel.gif" 
+width=0></DIV></LAYER></BODY></HTML>

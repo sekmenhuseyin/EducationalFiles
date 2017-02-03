@@ -1,0 +1,71 @@
+<!doctype html public "-//IETF//DTD HTML//EN">
+<HTML>
+<HEAD>
+<TITLE>Windows XP: The Complete Reference: Formatting and Partitioning Disks</TITLE>
+<META NAME="GENERATOR" CONTENT="Web-O-Matic Deluxe 4.1">
+<META NAME="AUTHOR" CONTENT="John R. Levine, Margaret Levine Young">
+<META NAME="COPYRIGHT" CONTENTS="Copyright 2001 by The McGraw-Hill Companies. All rights reserved.">
+</HEAD>
+<BODY BACKGROUND="../images/background.png">
+<BLOCKQUOTE>
+<SCRIPT LANGUAGE="JavaScript">
+function whomp(i, file)
+{
+	i.src = "../images/" + file + ".png";
+}
+</SCRIPT>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarered3x3.png" HEIGHT=3 WIDTH=3></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=2>
+Chapter 32: Formatting and Partitioning Disks
+</FONT></TD>
+</TR>
+</TABLE>
+<BR>
+<IMG SRC="../images/bprev.png" ALT="Previous" HEIGHT=20 WIDTH=82 BORDER=0><!--
+--><A HREF="index.htm" OnMouseOver='whomp(chap, "schap");' OnMouseOut='whomp(chap, "wchap");'
+title="Chapter Overview"><IMG SRC="../images/wchap.png" ALT="Chapter" NAME=chap HEIGHT=20 WIDTH=100 BORDER=0></A><A
+HREF="../index.htm" OnMouseOver='whomp(toc, "sbook");' OnMouseOut='whomp(toc, "wbook");' 
+title="Table of Contents"><IMG SRC="../images/wbook.png" ALT="Contents" NAME=toc HEIGHT=20 WIDTH=94 BORDER=0></A><A
+HREF="../glossary/index.htm" OnMouseOver='whomp(glos, "sglos");' OnMouseOut='whomp(glos, "wglos");' 
+title="Glossary"><IMG SRC="../images/wglos.png" ALT="Glossary" NAME=glos HEIGHT=20 WIDTH=94 BORDER=0></A><!--
+--><A HREF="1.htm"  OnMouseOver='whomp(next, "snext");' OnMouseOut='whomp(next, "wnext");'
+ title="Next Section"><IMG NAME=next SRC="../images/wnext.png" ALT="Next" HEIGHT=20 WIDTH=82 BORDER=0></A>
+<BR>
+<A NAME="0">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarered10x10.png" HEIGHT=10 WIDTH=10></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=4><B>Chapter Introduction</B></FONT>
+</TD>
+</TR>
+</TABLE></A>
+<P>
+Before Windows XP can use a hard disk or a removable disk (including floppy disks), the disk must be prepared for use. Hard disks have to be <A HREF="../harddisks/1.htm#1"><I>partitioned</I></A>, divided into one or more logical sections, using the <A HREF="../harddisks/2.htm#1">Disk Management</A> or compatible program. Both hard disks and removable disks must be <A HREF="../harddisks/4.htm#1">formatted</A> with a <A HREF="../harddisks/1.htm#6"><I>file system</I></A>, the information that keeps track of which files are stored where on the disk. Windows XP supports <A HREF="../harddisks/1.htm#7">three file systems</A>: FAT (the file system used in DOS and Windows 95), FAT32 (file system introduced with Windows 95 OSR2 and used in Windows 98, 98SE, and Me), and NTFS 5.0 (the latest version of the file system designed for Windows NT/2000).
+<P>
+On computers with Windows preinstalled, the hard disk has already been partitioned (usually into a single large partition) and formatted. However, if you install an additional hard disk or replace the original hard disk, you have to partition and format the new disk. Some disks (both hard disks and removable disks) come preformatted and some don't. Whether or not a disk is preformatted, you can reformat it to remove any existing files and make it a "clean" empty disk.
+<P>
+Each disk drive, including floppy disk and <A HREF="../harddisks/6.htm#1">CD drives</A>, has a <A HREF="../harddisks/1.htm#9">drive letter</A> assigned to it by Windows, but you can <A HREF="../harddisks/3.htm#1">change these letters</A>, or <A HREF="../harddisks/3.htm#4">assign drive letters to folders</A>, if you must. You can also <A HREF="../harddisks/5.htm#1">check how much free space</A> is on any disk and look at the <A HREF="../harddisks/1.htm#10">properties of a disk</A>.
+<P>
+This chapter describes <A HREF="../harddisks/2.htm#1">how to partition</A> and <A HREF="../harddisks/4.htm#1">format</A> hard disks: how to decide whether to use FAT, FAT32, or NTFS (and <A HREF="../harddisks/2.htm#6">how to convert partitions to NTFS</A>): <A HREF="../harddisks/3.htm#1">how to assign drive letters</A> to disk drives: <A HREF="../harddisks/5.htm#1">how to check for free space</A>: and how to control the way in which Windows uses <A HREF="../harddisks/6.htm#1">CD-ROMs</A>. It also covers how to <A HREF="../harddisks/4.htm#3">format and copy floppy disks</A>.
+<P>
+<TABLE><TR><TD VALIGN="TOP"><IMG SRC="../images/note.png" ALT="note" WIDTH=95 HEIGHT=29></TD>
+<TD VALIGN="TOP">For information on dividing your hard disk into separate partitions for Windows XP and other operating systems, see the section "<A HREF="../wininst/6.htm#4">Creating Multiboot Installations</A>" in the <A HREF="../wininst/index.htm">Appendix</A>.
+
+</TD></TR></TABLE>
+<P>
+<IMG SRC="../images/bprev.png" ALT="Previous" HEIGHT=20 WIDTH=82 BORDER=0><!--
+--><A HREF="index.htm" OnMouseOver='whomp(chapb, "schap");' OnMouseOut='whomp(chapb, "wchap");'
+title="Chapter Overview"><IMG SRC="../images/wchap.png" ALT="Chapter" NAME=chapb HEIGHT=20 WIDTH=100 BORDER=0></A><A
+HREF="../index.htm" OnMouseOver='whomp(tocb, "sbook");' OnMouseOut='whomp(tocb, "wbook");' 
+title="Table of Contents"><IMG SRC="../images/wbook.png" ALT="Contents" NAME=tocb HEIGHT=20 WIDTH=94 BORDER=0></A><A
+HREF="../glossary/index.htm" OnMouseOver='whomp(glosb, "sglos");' OnMouseOut='whomp(glosb, "wglos");' 
+title="Glossary"><IMG SRC="../images/wglos.png" ALT="Glossary" NAME=glosb HEIGHT=20 WIDTH=94 BORDER=0></A><!--
+--><A HREF="1.htm"  OnMouseOver='whomp(nextb, "snext");' OnMouseOut='whomp(nextb, "wnext");'
+ title="Next Section"><IMG NAME=nextb SRC="../images/wnext.png" ALT="Next" HEIGHT=20 WIDTH=82 BORDER=0></A>
+<BR>
+</BLOCKQUOTE>
+</BODY>
+</HTML>

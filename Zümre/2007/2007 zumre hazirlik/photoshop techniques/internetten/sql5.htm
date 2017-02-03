@@ -1,0 +1,2162 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+  <HEAD>
+    <title>P-104 : SQL Dili Deyimleri - Dersler</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-9">
+    <meta name="GENERATOR" content="Microsoft Visual Studio .NET 7.1">
+    <meta name="CODE_LANGUAGE" content="Visual Basic .NET 7.1">
+    <meta name=vs_defaultClientScript content="JavaScript">
+    <LINK rel="stylesheet" href="../css/farukcubukcu.css">
+<LINK rel="stylesheet" href="../css/style.css">
+  </HEAD>
+   <body MS_POSITIONING="GridLayout">
+  <script language="javascript">
+  window.focus();
+  </script>
+  
+    <form name="Form1" method="post" action="ders.aspx?kursID=9&amp;dersID=102" id="Form1">
+<input type="hidden" name="__VIEWSTATE" value="dDwtODkxMzIyODc7dDw7bDxpPDA+O2k8MT47PjtsPHQ8cDxsPFRleHQ7PjtsPFAtMTA0IDogU1FMIERpbGkgRGV5aW1sZXJpIC0gRGVyc2xlcjs+Pjs7Pjt0PDtsPGk8MT47aTwzPjtpPDU+Oz47bDx0PHA8bDxUZXh0Oz47bDxQLTEwNCA6IFNRTCBEaWxpIERleWltbGVyaTs+Pjs7Pjt0PHQ8cDxwPGw8RGF0YVRleHRGaWVsZDtEYXRhVmFsdWVGaWVsZDs+O2w8bm90ZV90aXRsZTtub3RlX2lkOz4+O3A8bDxvbmNoYW5nZTs+O2w8bWVudVNlYyh0aGlzKTs+Pj47dDxpPDU+O0A8REVSUyAxOiBTUUwgREVZxLBNTEVSxLA7REVSUyAyLiBTUUwgRMSwTMSwIEZPTktTxLBZT05MQVJJO0RFUlMgMzogREVZxLBNIEJMT0tMQVJJO0RFUlMgNDogVklFVyBLVUxMQU5JTUkNCjtERVJTIDU6IFNUT1JFRCBQUk9DRURVUkU7PjtAPDk4Ozk5OzEwMDsxMDE7MTAyOz4+Oz47Oz47dDxwPGw8VGV4dDs+O2w8OTs+Pjs7Pjs+Pjs+Pjs+hpdyH7b4lsFf7o7a+dFWGAplOZ4=" />
+
+    <table width="100%">
+    	<tr>
+			<td><img src="../images/dersLogo.gif" border=0></td>
+			<td align="right"><input type="button"  value="Pencereyi Kapat" onclick="window.self.close();"></td>
+		</tr>
+	</table>
+    
+      <TABLE cellSpacing=0 cellPadding=0  border=0>
+          <TR vAlign=top>
+			<TD >
+	
+	<font color="#1e90ff" size="5">
+	<b>P-104 : SQL Dili Deyimleri</b>
+	</font>
+	
+	</TD></TR>
+        <TR vAlign=top>
+          
+          <TD><b>Ders Listesi : </b><select name="dersListesi" id="dersListesi" onchange="menuSec(this)">
+	<option value="98">DERS 1: SQL DEYİMLERİ</option>
+	<option value="99">DERS 2. SQL DİLİ FONKSİYONLARI</option>
+	<option value="100">DERS 3: DEYİM BLOKLARI</option>
+	<option value="101">DERS 4: VIEW KULLANIMI
+</option>
+	<option selected="selected" value="102">DERS 5: STORED PROCEDURE</option>
+
+</select></TD></TR>
+        <TR vAlign=top>
+          <TD>
+			<h3 style="color:#1e90ff;">
+			
+			</h3>
+		  </TD>
+		</TR>
+        <TR vAlign=top>
+          <TD> 
+			<html xmlns:v="urn:schemas-microsoft-com:vml"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns:st1="urn:schemas-microsoft-com:office:smarttags"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=ProgId content=Word.Document>
+<meta name=Generator content="Microsoft Word 10">
+<meta name=Originator content="Microsoft Word 10">
+<link rel=File-List href="p-104-d5_dosyalar/filelist.xml">
+<title>&#304;li&#351;kisel (relational) database modeli 1970'li y&#305;llarda
+Dr</title>
+<o:SmartTagType namespaceuri="urn:schemas-microsoft-com:office:smarttags"
+ name="PersonName"/>
+<!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>faruk</o:Author>
+  <o:LastAuthor>faruk.cubukcu</o:LastAuthor>
+  <o:Revision>3</o:Revision>
+  <o:TotalTime>90</o:TotalTime>
+  <o:Created>2003-07-27T09:24:00Z</o:Created>
+  <o:LastSaved>2003-07-27T09:26:00Z</o:LastSaved>
+  <o:Pages>1</o:Pages>
+  <o:Words>497</o:Words>
+  <o:Characters>2837</o:Characters>
+  <o:Company>akser-faruk</o:Company>
+  <o:Lines>23</o:Lines>
+  <o:Paragraphs>6</o:Paragraphs>
+  <o:CharactersWithSpaces>3328</o:CharactersWithSpaces>
+  <o:Version>10.2625</o:Version>
+ </o:DocumentProperties>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:HideSpellingErrors/>
+  <w:HideGrammaticalErrors/>
+  <w:Compatibility>
+   <w:BreakWrappedTables/>
+   <w:SnapToGridInCell/>
+   <w:WrapTextWithPunct/>
+   <w:UseAsianBreakRules/>
+   <w:UseFELayout/>
+  </w:Compatibility>
+  <w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel>
+ </w:WordDocument>
+</xml><![endif]--><!--[if !mso]><object
+ classid="clsid:38481807-CA0E-42D2-BF39-B33AF135CC4D" id=ieooui></object>
+<style>
+st1\:*{behavior:url(#ieooui) }
+</style>
+<![endif]-->
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;
+	mso-font-charset:2;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:0 268435456 0 0 -2147483648 0;}
+@font-face
+	{font-family:SimSun;
+	panose-1:2 1 6 0 3 1 1 1 1 1;
+	mso-font-alt:\5B8B\4F53;
+	mso-font-charset:134;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:3 135135232 16 0 262145 0;}
+@font-face
+	{font-family:"\@SimSun";
+	panose-1:2 1 6 0 3 1 1 1 1 1;
+	mso-font-charset:134;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:3 135135232 16 0 262145 0;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-parent:"";
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:Arial;
+	mso-fareast-font-family:SimSun;
+	mso-bidi-font-family:"Times New Roman";
+	mso-ansi-language:TR;
+	mso-fareast-language:ZH-CN;}
+h1
+	{mso-style-next:Normal;
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:1;
+	font-size:16.0pt;
+	font-family:Arial;
+	mso-font-kerning:16.0pt;
+	mso-ansi-language:TR;
+	mso-fareast-language:ZH-CN;
+	font-weight:bold;}
+h2
+	{mso-style-next:Normal;
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:2;
+	font-size:12.0pt;
+	mso-bidi-font-size:14.0pt;
+	font-family:Arial;
+	mso-ansi-language:TR;
+	mso-fareast-language:ZH-CN;
+	font-weight:bold;
+	mso-bidi-font-style:italic;}
+h3
+	{mso-style-next:Normal;
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:3;
+	font-size:12.0pt;
+	font-family:Arial;
+	mso-ansi-language:TR;
+	mso-fareast-language:ZH-CN;
+	font-weight:bold;}
+h4
+	{mso-style-next:Normal;
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:4;
+	font-size:8.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Arial;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";
+	mso-ansi-language:TR;
+	mso-fareast-language:ZH-CN;
+	font-weight:bold;
+	mso-bidi-font-weight:normal;}
+h5
+	{mso-style-next:Normal;
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	mso-outline-level:5;
+	font-size:13.0pt;
+	font-family:Arial;
+	mso-bidi-font-family:"Times New Roman";
+	mso-ansi-language:TR;
+	mso-fareast-language:ZH-CN;
+	font-weight:bold;
+	font-style:italic;}
+h6
+	{mso-style-next:Normal;
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	mso-outline-level:6;
+	font-size:11.0pt;
+	font-family:Arial;
+	mso-bidi-font-family:"Times New Roman";
+	mso-ansi-language:TR;
+	mso-fareast-language:ZH-CN;
+	font-weight:bold;}
+p.MsoToc1, li.MsoToc1, div.MsoToc1
+	{mso-style-update:auto;
+	mso-style-noshow:yes;
+	mso-style-next:Normal;
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:Arial;
+	mso-fareast-font-family:SimSun;
+	mso-bidi-font-family:"Times New Roman";
+	mso-ansi-language:TR;
+	mso-fareast-language:ZH-CN;}
+p.MsoToc2, li.MsoToc2, div.MsoToc2
+	{mso-style-update:auto;
+	mso-style-noshow:yes;
+	mso-style-next:Normal;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:12.0pt;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:Arial;
+	mso-fareast-font-family:SimSun;
+	mso-bidi-font-family:"Times New Roman";
+	mso-ansi-language:TR;
+	mso-fareast-language:ZH-CN;}
+p.MsoToc3, li.MsoToc3, div.MsoToc3
+	{mso-style-update:auto;
+	mso-style-noshow:yes;
+	mso-style-next:Normal;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:24.0pt;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:Arial;
+	mso-fareast-font-family:SimSun;
+	mso-bidi-font-family:"Times New Roman";
+	mso-ansi-language:TR;
+	mso-fareast-language:ZH-CN;}
+p.MsoFootnoteText, li.MsoFootnoteText, div.MsoFootnoteText
+	{mso-style-noshow:yes;
+	margin:0in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:Arial;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";
+	mso-ansi-language:EN-AU;
+	mso-fareast-language:ZH-CN;}
+span.MsoFootnoteReference
+	{mso-style-noshow:yes;
+	vertical-align:super;}
+p.MsoListBullet, li.MsoListBullet, div.MsoListBullet
+	{mso-style-update:auto;
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan lines-together;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Arial;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";
+	mso-ansi-language:TR;
+	mso-fareast-language:ZH-CN;
+	font-weight:bold;
+	mso-bidi-font-weight:normal;}
+a:link, span.MsoHyperlink
+	{mso-style-parent:"";
+	color:blue;
+	text-decoration:underline;
+	text-underline:single;}
+a:visited, span.MsoHyperlinkFollowed
+	{mso-style-parent:"";
+	color:purple;
+	text-decoration:underline;
+	text-underline:single;}
+strong
+	{mso-style-parent:"";
+	mso-bidi-font-weight:normal;}
+em
+	{mso-style-parent:"";
+	mso-bidi-font-style:normal;}
+p
+	{mso-margin-top-alt:auto;
+	margin-right:0in;
+	mso-margin-bottom-alt:auto;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:Arial;
+	mso-fareast-font-family:SimSun;
+	mso-bidi-font-family:"Times New Roman";
+	mso-fareast-language:ZH-CN;}
+code
+	{font-family:"Courier New";
+	mso-ascii-font-family:"Courier New";
+	mso-fareast-font-family:SimSun;
+	mso-hansi-font-family:"Courier New";
+	mso-bidi-font-family:"Courier New";}
+pre
+	{margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt;
+	font-size:10.0pt;
+	font-family:"Courier New";
+	mso-fareast-font-family:SimSun;
+	mso-fareast-language:ZH-CN;}
+p.H5, li.H5, div.H5
+	{mso-style-name:H5;
+	mso-style-next:Normal;
+	margin-top:5.0pt;
+	margin-right:0in;
+	margin-bottom:5.0pt;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:6;
+	font-size:10.0pt;
+	font-family:Arial;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";
+	mso-ansi-language:TR;
+	mso-fareast-language:EN-US;
+	layout-grid-mode:line;
+	font-weight:bold;
+	mso-bidi-font-weight:normal;}
+span.CODE
+	{mso-style-name:CODE;
+	mso-style-parent:"";
+	mso-ansi-font-size:10.0pt;
+	font-family:"Courier New";
+	mso-ascii-font-family:"Courier New";
+	mso-hansi-font-family:"Courier New";}
+p.H4, li.H4, div.H4
+	{mso-style-name:H4;
+	mso-style-next:Normal;
+	margin-top:5.0pt;
+	margin-right:0in;
+	margin-bottom:5.0pt;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:5;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Arial;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";
+	mso-ansi-language:TR;
+	mso-fareast-language:EN-US;
+	layout-grid-mode:line;
+	font-weight:bold;
+	mso-bidi-font-weight:normal;}
+p.H1, li.H1, div.H1
+	{mso-style-name:H1;
+	mso-style-next:Normal;
+	margin-top:5.0pt;
+	margin-right:0in;
+	margin-bottom:5.0pt;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:2;
+	font-size:24.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Arial;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";
+	mso-font-kerning:18.0pt;
+	mso-ansi-language:TR;
+	mso-fareast-language:EN-US;
+	layout-grid-mode:line;
+	font-weight:bold;
+	mso-bidi-font-weight:normal;}
+p.TanmTerimi, li.TanmTerimi, div.TanmTerimi
+	{mso-style-name:"Tan\0131m Terimi";
+	mso-style-next:"Tan\0131m Listesi";
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Arial;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";
+	mso-ansi-language:TR;
+	mso-fareast-language:EN-US;
+	layout-grid-mode:line;}
+p.TanmListesi, li.TanmListesi, div.TanmListesi
+	{mso-style-name:"Tan\0131m Listesi";
+	mso-style-next:"Tan\0131m Terimi";
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.25in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Arial;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";
+	mso-ansi-language:TR;
+	mso-fareast-language:EN-US;
+	layout-grid-mode:line;}
+p.H3, li.H3, div.H3
+	{mso-style-name:H3;
+	mso-style-next:Normal;
+	margin-top:5.0pt;
+	margin-right:0in;
+	margin-bottom:5.0pt;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:4;
+	font-size:14.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Arial;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";
+	mso-fareast-language:EN-US;
+	layout-grid-mode:line;
+	font-weight:bold;
+	mso-bidi-font-weight:normal;}
+p.DefinitionTerm, li.DefinitionTerm, div.DefinitionTerm
+	{mso-style-name:"Definition Term";
+	mso-style-next:"Definition List";
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Arial;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";
+	mso-fareast-language:EN-US;
+	layout-grid-mode:line;}
+p.DefinitionList, li.DefinitionList, div.DefinitionList
+	{mso-style-name:"Definition List";
+	mso-style-next:"Definition Term";
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.25in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Arial;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";
+	mso-fareast-language:EN-US;
+	layout-grid-mode:line;}
+span.Definition
+	{mso-style-name:Definition;
+	mso-style-parent:"";
+	font-style:italic;
+	mso-bidi-font-style:normal;}
+p.H2, li.H2, div.H2
+	{mso-style-name:H2;
+	mso-style-next:Normal;
+	margin-top:5.0pt;
+	margin-right:0in;
+	margin-bottom:5.0pt;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:3;
+	font-size:18.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Arial;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";
+	mso-fareast-language:EN-US;
+	layout-grid-mode:line;
+	font-weight:bold;
+	mso-bidi-font-weight:normal;}
+p.H6, li.H6, div.H6
+	{mso-style-name:H6;
+	mso-style-next:Normal;
+	margin-top:5.0pt;
+	margin-right:0in;
+	margin-bottom:5.0pt;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:7;
+	font-size:8.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Arial;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";
+	mso-fareast-language:EN-US;
+	layout-grid-mode:line;
+	font-weight:bold;
+	mso-bidi-font-weight:normal;}
+p.Address, li.Address, div.Address
+	{mso-style-name:Address;
+	mso-style-next:Normal;
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Arial;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";
+	mso-fareast-language:EN-US;
+	layout-grid-mode:line;
+	font-style:italic;
+	mso-bidi-font-style:normal;}
+p.Blockquote, li.Blockquote, div.Blockquote
+	{mso-style-name:Blockquote;
+	margin-top:5.0pt;
+	margin-right:.25in;
+	margin-bottom:5.0pt;
+	margin-left:.25in;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Arial;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";
+	mso-fareast-language:EN-US;
+	layout-grid-mode:line;}
+span.CITE
+	{mso-style-name:CITE;
+	mso-style-parent:"";
+	font-style:italic;
+	mso-bidi-font-style:normal;}
+span.Keyboard
+	{mso-style-name:Keyboard;
+	mso-style-parent:"";
+	mso-ansi-font-size:10.0pt;
+	font-family:"Courier New";
+	mso-ascii-font-family:"Courier New";
+	mso-hansi-font-family:"Courier New";
+	font-weight:bold;
+	mso-bidi-font-weight:normal;}
+p.Preformatted, li.Preformatted, div.Preformatted
+	{mso-style-name:Preformatted;
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	tab-stops:0in 47.95pt 95.9pt 143.85pt 191.8pt 239.75pt 287.7pt 335.65pt 383.6pt 431.55pt 479.5pt;
+	font-size:10.0pt;
+	font-family:"Courier New";
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";
+	mso-fareast-language:EN-US;
+	layout-grid-mode:line;}
+p.z-BottomofForm, li.z-BottomofForm, div.z-BottomofForm
+	{mso-style-name:"z-Bottom of Form";
+	mso-style-parent:"";
+	mso-style-next:Normal;
+	margin:0in;
+	margin-bottom:.0001pt;
+	text-align:center;
+	mso-pagination:widow-orphan;
+	border:none;
+	mso-border-top-alt:double black .75pt;
+	padding:0in;
+	mso-padding-alt:0in 0in 0in 0in;
+	font-size:8.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Arial;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";
+	display:none;
+	mso-hide:all;
+	mso-fareast-language:EN-US;
+	layout-grid-mode:line;}
+p.z-TopofForm, li.z-TopofForm, div.z-TopofForm
+	{mso-style-name:"z-Top of Form";
+	mso-style-parent:"";
+	mso-style-next:Normal;
+	margin:0in;
+	margin-bottom:.0001pt;
+	text-align:center;
+	mso-pagination:widow-orphan;
+	border:none;
+	mso-border-bottom-alt:double black .75pt;
+	padding:0in;
+	mso-padding-alt:0in 0in 0in 0in;
+	font-size:8.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Arial;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";
+	display:none;
+	mso-hide:all;
+	mso-fareast-language:EN-US;
+	layout-grid-mode:line;}
+span.Sample
+	{mso-style-name:Sample;
+	mso-style-parent:"";
+	font-family:"Courier New";
+	mso-ascii-font-family:"Courier New";
+	mso-hansi-font-family:"Courier New";}
+span.Typewriter
+	{mso-style-name:Typewriter;
+	mso-style-parent:"";
+	mso-ansi-font-size:10.0pt;
+	font-family:"Courier New";
+	mso-ascii-font-family:"Courier New";
+	mso-hansi-font-family:"Courier New";}
+span.Variable
+	{mso-style-name:Variable;
+	mso-style-parent:"";
+	font-style:italic;
+	mso-bidi-font-style:normal;}
+span.HTMLMarkup
+	{mso-style-name:"HTML Markup";
+	mso-style-parent:"";
+	color:red;
+	display:none;
+	mso-hide:all;}
+span.Comment
+	{mso-style-name:Comment;
+	mso-style-parent:"";
+	display:none;
+	mso-hide:all;}
+p.Kod, li.Kod, div.Kod
+	{mso-style-name:Kod;
+	margin:0in;
+	margin-bottom:.0001pt;
+	line-height:12.0pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Courier New";
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";
+	mso-fareast-language:ZH-CN;}
+p.kod0, li.kod0, div.kod0
+	{mso-style-name:kod;
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Courier New";
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";
+	mso-fareast-language:ZH-CN;}
+p.CodeExample, li.CodeExample, div.CodeExample
+	{mso-style-name:"Code\/Example\,EST 4";
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan lines-together;
+	page-break-after:avoid;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Courier New";
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";
+	mso-fareast-language:ZH-CN;
+	mso-no-proof:yes;}
+span.Tanm
+	{mso-style-name:Tan\0131m;
+	mso-style-parent:"";
+	font-style:italic;
+	mso-bidi-font-style:normal;}
+p.Adres, li.Adres, div.Adres
+	{mso-style-name:Adres;
+	mso-style-next:Normal;
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Arial;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";
+	mso-ansi-language:TR;
+	mso-fareast-language:EN-US;
+	layout-grid-mode:line;
+	font-style:italic;
+	mso-bidi-font-style:normal;}
+p.bek, li.bek, div.bek
+	{mso-style-name:Öbek;
+	margin-top:5.0pt;
+	margin-right:.25in;
+	margin-bottom:5.0pt;
+	margin-left:.25in;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Arial;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";
+	mso-ansi-language:TR;
+	mso-fareast-language:EN-US;
+	layout-grid-mode:line;}
+span.Klavye
+	{mso-style-name:Klavye;
+	mso-style-parent:"";
+	mso-ansi-font-size:10.0pt;
+	font-family:"Courier New";
+	mso-ascii-font-family:"Courier New";
+	mso-hansi-font-family:"Courier New";
+	font-weight:bold;
+	mso-bidi-font-weight:normal;}
+p.ncedenBiimlendirilmi, li.ncedenBiimlendirilmi, div.ncedenBiimlendirilmi
+	{mso-style-name:"Önceden Biçimlendirilmi\015F";
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	tab-stops:0in 47.95pt 95.9pt 143.85pt 191.8pt 239.75pt 287.7pt 335.65pt 383.6pt 431.55pt 479.5pt;
+	font-size:10.0pt;
+	font-family:"Courier New";
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";
+	mso-ansi-language:TR;
+	mso-fareast-language:EN-US;
+	layout-grid-mode:line;}
+span.rnek
+	{mso-style-name:Örnek;
+	mso-style-parent:"";
+	font-family:"Courier New";
+	mso-ascii-font-family:"Courier New";
+	mso-hansi-font-family:"Courier New";}
+span.Daktilo
+	{mso-style-name:Daktilo;
+	mso-style-parent:"";
+	mso-ansi-font-size:10.0pt;
+	font-family:"Courier New";
+	mso-ascii-font-family:"Courier New";
+	mso-hansi-font-family:"Courier New";}
+span.Deiken
+	{mso-style-name:De\011Fi\015Fken;
+	mso-style-parent:"";
+	font-style:italic;
+	mso-bidi-font-style:normal;}
+span.HTMLBiimlendirme
+	{mso-style-name:"HTML Biçimlendirme";
+	mso-style-parent:"";
+	color:red;
+	display:none;
+	mso-hide:all;}
+span.Aklama
+	{mso-style-name:Aç\0131klama;
+	mso-style-parent:"";
+	display:none;
+	mso-hide:all;}
+p.Sekil, li.Sekil, div.Sekil
+	{mso-style-name:Sekil;
+	margin:0in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	mso-pagination:widow-orphan;
+	font-size:9.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Arial;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";
+	mso-fareast-language:ZH-CN;
+	font-weight:bold;
+	mso-bidi-font-weight:normal;}
+p.indent, li.indent, div.indent
+	{mso-style-name:indent;
+	mso-margin-top-alt:auto;
+	margin-right:0in;
+	mso-margin-bottom-alt:auto;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:Arial;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";
+	mso-ansi-language:TR;
+	mso-fareast-language:TR;}
+p.level2, li.level2, div.level2
+	{mso-style-name:level2;
+	mso-margin-top-alt:auto;
+	margin-right:0in;
+	mso-margin-bottom-alt:auto;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:Arial;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";
+	mso-ansi-language:TR;
+	mso-fareast-language:TR;}
+p.tl, li.tl, div.tl
+	{mso-style-name:tl;
+	mso-margin-top-alt:auto;
+	margin-right:0in;
+	mso-margin-bottom-alt:auto;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:Arial;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";
+	mso-ansi-language:TR;
+	mso-fareast-language:TR;}
+p.label, li.label, div.label
+	{mso-style-name:label;
+	mso-margin-top-alt:auto;
+	margin-right:0in;
+	mso-margin-bottom-alt:auto;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:Arial;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";
+	mso-ansi-language:TR;
+	mso-fareast-language:TR;}
+@page Section1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.25in 1.0in 1.25in;
+	mso-header-margin:.5in;
+	mso-footer-margin:.5in;
+	mso-paper-source:0;}
+div.Section1
+	{page:Section1;}
+ /* List Definitions */
+ @list l0
+	{mso-list-id:-119;
+	mso-list-type:simple;
+	mso-list-template-ids:322723478;}
+@list l0:level1
+	{mso-level-number-format:bullet;
+	mso-level-style-link:"Definition Term";
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l1
+	{mso-list-id:-2;
+	mso-list-type:simple;
+	mso-list-template-ids:-1;}
+@list l1:level1
+	{mso-level-start-at:0;
+	mso-level-text:*;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:0in;
+	text-indent:0in;}
+@list l2
+	{mso-list-id:2;
+	mso-list-template-ids:0;}
+@list l2:level1
+	{mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l2:level2
+	{mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l2:level3
+	{mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l2:level4
+	{mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l2:level5
+	{mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l2:level6
+	{mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l2:level7
+	{mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l2:level8
+	{mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l2:level9
+	{mso-level-start-at:0;
+	mso-level-text:"";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:0in;
+	text-indent:0in;}
+@list l3
+	{mso-list-id:25060142;
+	mso-list-template-ids:70023574;}
+@list l3:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Symbol;}
+@list l3:level2
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:1.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Symbol;}
+@list l4
+	{mso-list-id:53433003;
+	mso-list-type:simple;
+	mso-list-template-ids:201916417;}
+@list l4:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l5
+	{mso-list-id:88474043;
+	mso-list-template-ids:907340908;}
+@list l5:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Symbol;}
+@list l6
+	{mso-list-id:148256273;
+	mso-list-template-ids:-881310390;}
+@list l6:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Symbol;}
+@list l7
+	{mso-list-id:162548324;
+	mso-list-type:simple;
+	mso-list-template-ids:1372196076;}
+@list l7:level1
+	{mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;}
+@list l8
+	{mso-list-id:295066829;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-985768004 69140481 69140483 69140485 69140481 69140483 69140485 69140481 69140483 69140485;}
+@list l8:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l9
+	{mso-list-id:350449410;
+	mso-list-type:simple;
+	mso-list-template-ids:1372196076;}
+@list l9:level1
+	{mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;}
+@list l10
+	{mso-list-id:394666866;
+	mso-list-type:hybrid;
+	mso-list-template-ids:1882610420 67698689 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l10:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l11
+	{mso-list-id:404422841;
+	mso-list-type:simple;
+	mso-list-template-ids:-555296556;}
+@list l11:level1
+	{mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	mso-level-legacy:yes;
+	mso-level-legacy-indent:.25in;
+	mso-level-legacy-space:0in;
+	margin-left:.75in;
+	text-indent:-.25in;}
+@list l12
+	{mso-list-id:427234373;
+	mso-list-type:simple;
+	mso-list-template-ids:67698709;}
+@list l12:level1
+	{mso-level-number-format:alpha-upper;
+	mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;}
+@list l13
+	{mso-list-id:552619194;
+	mso-list-type:simple;
+	mso-list-template-ids:-1653431048;}
+@list l13:level1
+	{mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;}
+@list l14
+	{mso-list-id:570694887;
+	mso-list-type:simple;
+	mso-list-template-ids:-201931324;}
+@list l14:level1
+	{mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	mso-level-legacy:yes;
+	mso-level-legacy-indent:14.15pt;
+	mso-level-legacy-space:0in;
+	margin-left:14.15pt;
+	text-indent:-14.15pt;}
+@list l15
+	{mso-list-id:592469844;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-668313112 67698689 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l15:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l16
+	{mso-list-id:670255461;
+	mso-list-type:simple;
+	mso-list-template-ids:-321198538;}
+@list l16:level1
+	{mso-level-text:"%1\) ";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	mso-level-legacy:yes;
+	mso-level-legacy-indent:14.15pt;
+	mso-level-legacy-space:0in;
+	margin-left:50.15pt;
+	text-indent:-14.15pt;
+	mso-ansi-font-size:11.0pt;
+	font-family:"Times New Roman";
+	mso-ansi-font-weight:normal;
+	mso-ansi-font-style:normal;
+	text-decoration:none;
+	text-underline:none;}
+@list l17
+	{mso-list-id:701443496;
+	mso-list-type:hybrid;
+	mso-list-template-ids:1787564936 67698689 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l17:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l18
+	{mso-list-id:715928129;
+	mso-list-type:simple;
+	mso-list-template-ids:67698703;}
+@list l18:level1
+	{mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;}
+@list l19
+	{mso-list-id:811482677;
+	mso-list-type:simple;
+	mso-list-template-ids:67698703;}
+@list l19:level1
+	{mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;}
+@list l20
+	{mso-list-id:812715266;
+	mso-list-type:simple;
+	mso-list-template-ids:-81217768;}
+@list l20:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l21
+	{mso-list-id:819660263;
+	mso-list-type:simple;
+	mso-list-template-ids:201916417;}
+@list l21:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l22
+	{mso-list-id:872380928;
+	mso-list-type:simple;
+	mso-list-template-ids:1768968664;}
+@list l22:level1
+	{mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	mso-level-legacy:yes;
+	mso-level-legacy-indent:14.15pt;
+	mso-level-legacy-space:0in;
+	margin-left:14.15pt;
+	text-indent:-14.15pt;}
+@list l23
+	{mso-list-id:916792439;
+	mso-list-type:simple;
+	mso-list-template-ids:201916431;}
+@list l23:level1
+	{mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;}
+@list l24
+	{mso-list-id:949312687;
+	mso-list-type:simple;
+	mso-list-template-ids:201916417;}
+@list l24:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l25
+	{mso-list-id:955676642;
+	mso-list-type:simple;
+	mso-list-template-ids:-84371344;}
+@list l25:level1
+	{mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	mso-level-legacy:yes;
+	mso-level-legacy-indent:.25in;
+	mso-level-legacy-space:0in;
+	margin-left:.25in;
+	text-indent:-.25in;}
+@list l26
+	{mso-list-id:1102996551;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-1671531848 69140481 69140483 69140485 69140481 69140483 69140485 69140481 69140483 69140485;}
+@list l26:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l27
+	{mso-list-id:1120300440;
+	mso-list-type:simple;
+	mso-list-template-ids:1372196076;}
+@list l27:level1
+	{mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;}
+@list l28
+	{mso-list-id:1148547357;
+	mso-list-type:hybrid;
+	mso-list-template-ids:1330571630 67698689 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l28:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l29
+	{mso-list-id:1205874261;
+	mso-list-type:simple;
+	mso-list-template-ids:-1403211176;}
+@list l29:level1
+	{mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;}
+@list l30
+	{mso-list-id:1216970033;
+	mso-list-type:simple;
+	mso-list-template-ids:945201670;}
+@list l30:level1
+	{mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	mso-level-legacy:yes;
+	mso-level-legacy-indent:.25in;
+	mso-level-legacy-space:0in;
+	margin-left:.25in;
+	text-indent:-.25in;}
+@list l31
+	{mso-list-id:1251425424;
+	mso-list-type:simple;
+	mso-list-template-ids:-1042356238;}
+@list l31:level1
+	{mso-level-text:"%1\. ";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	mso-level-legacy:yes;
+	mso-level-legacy-indent:14.15pt;
+	mso-level-legacy-space:0in;
+	margin-left:50.15pt;
+	text-indent:-14.15pt;
+	mso-ansi-font-size:11.0pt;
+	font-family:"Times New Roman";
+	mso-ansi-font-weight:normal;
+	mso-ansi-font-style:normal;
+	text-decoration:none;
+	text-underline:none;}
+@list l32
+	{mso-list-id:1284386664;
+	mso-list-type:simple;
+	mso-list-template-ids:201916431;}
+@list l32:level1
+	{mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;}
+@list l33
+	{mso-list-id:1289437621;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-676179662 67698689 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l33:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l34
+	{mso-list-id:1297179311;
+	mso-list-type:hybrid;
+	mso-list-template-ids:658439980 67698689 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l34:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l35
+	{mso-list-id:1331131273;
+	mso-list-template-ids:1372354082;}
+@list l35:level1
+	{mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	mso-level-legacy:yes;
+	mso-level-legacy-indent:35.4pt;
+	mso-level-legacy-space:0in;
+	margin-left:35.4pt;
+	text-indent:-35.4pt;}
+@list l35:level2
+	{mso-level-number-format:alpha-lower;
+	mso-level-text:"%2\)";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	mso-level-legacy:yes;
+	mso-level-legacy-indent:35.4pt;
+	mso-level-legacy-space:0in;
+	margin-left:70.8pt;
+	text-indent:-35.4pt;}
+@list l35:level3
+	{mso-level-number-format:roman-lower;
+	mso-level-text:"%3\)";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	mso-level-legacy:yes;
+	mso-level-legacy-indent:35.4pt;
+	mso-level-legacy-space:0in;
+	margin-left:106.2pt;
+	text-indent:-35.4pt;}
+@list l35:level4
+	{mso-level-number-format:alpha-lower;
+	mso-level-text:"%4\)";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	mso-level-legacy:yes;
+	mso-level-legacy-indent:35.4pt;
+	mso-level-legacy-space:0in;
+	margin-left:141.6pt;
+	text-indent:-35.4pt;}
+@list l35:level5
+	{mso-level-text:"\(%5\)";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	mso-level-legacy:yes;
+	mso-level-legacy-indent:35.4pt;
+	mso-level-legacy-space:0in;
+	margin-left:177.0pt;
+	text-indent:-35.4pt;}
+@list l35:level6
+	{mso-level-number-format:alpha-lower;
+	mso-level-text:"\(%6\)";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	mso-level-legacy:yes;
+	mso-level-legacy-indent:35.4pt;
+	mso-level-legacy-space:0in;
+	margin-left:2.95in;
+	text-indent:-35.4pt;}
+@list l35:level7
+	{mso-level-number-format:roman-lower;
+	mso-level-text:"\(%7\)";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	mso-level-legacy:yes;
+	mso-level-legacy-indent:35.4pt;
+	mso-level-legacy-space:0in;
+	margin-left:247.8pt;
+	text-indent:-35.4pt;}
+@list l35:level8
+	{mso-level-number-format:alpha-lower;
+	mso-level-text:"\(%8\)";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	mso-level-legacy:yes;
+	mso-level-legacy-indent:35.4pt;
+	mso-level-legacy-space:0in;
+	margin-left:283.2pt;
+	text-indent:-35.4pt;}
+@list l35:level9
+	{mso-level-number-format:roman-lower;
+	mso-level-text:"\(%9\)";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	mso-level-legacy:yes;
+	mso-level-legacy-indent:35.4pt;
+	mso-level-legacy-space:0in;
+	margin-left:318.6pt;
+	text-indent:-35.4pt;}
+@list l36
+	{mso-list-id:1340815366;
+	mso-list-type:simple;
+	mso-list-template-ids:67698703;}
+@list l36:level1
+	{mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;}
+@list l37
+	{mso-list-id:1474908714;
+	mso-list-type:simple;
+	mso-list-template-ids:-1042356238;}
+@list l37:level1
+	{mso-level-text:"%1\. ";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	mso-level-legacy:yes;
+	mso-level-legacy-indent:14.15pt;
+	mso-level-legacy-space:0in;
+	margin-left:14.15pt;
+	text-indent:-14.15pt;
+	mso-ansi-font-size:11.0pt;
+	font-family:"Times New Roman";
+	mso-ansi-font-weight:normal;
+	mso-ansi-font-style:normal;
+	text-decoration:none;
+	text-underline:none;}
+@list l38
+	{mso-list-id:1476682985;
+	mso-list-type:hybrid;
+	mso-list-template-ids:794331282;}
+@list l38:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l39
+	{mso-list-id:1563323325;
+	mso-list-type:simple;
+	mso-list-template-ids:69140481;}
+@list l39:level1
+	{mso-level-start-at:0;
+	mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l40
+	{mso-list-id:1578250927;
+	mso-list-type:simple;
+	mso-list-template-ids:67698703;}
+@list l40:level1
+	{mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;}
+@list l41
+	{mso-list-id:1708406802;
+	mso-list-type:hybrid;
+	mso-list-template-ids:2014107412;}
+@list l41:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.75in;
+	mso-level-number-position:left;
+	margin-left:.75in;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l42
+	{mso-list-id:1728411415;
+	mso-list-type:simple;
+	mso-list-template-ids:-136261302;}
+@list l42:level1
+	{mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	mso-level-legacy:yes;
+	mso-level-legacy-indent:.25in;
+	mso-level-legacy-space:0in;
+	margin-left:.75in;
+	text-indent:-.25in;}
+@list l43
+	{mso-list-id:1739015139;
+	mso-list-type:simple;
+	mso-list-template-ids:807065610;}
+@list l43:level1
+	{mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	mso-level-legacy:yes;
+	mso-level-legacy-indent:14.15pt;
+	mso-level-legacy-space:0in;
+	margin-left:50.15pt;
+	text-indent:-14.15pt;}
+@list l44
+	{mso-list-id:1787894717;
+	mso-list-type:simple;
+	mso-list-template-ids:67698703;}
+@list l44:level1
+	{mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;}
+@list l45
+	{mso-list-id:1813330420;
+	mso-list-type:simple;
+	mso-list-template-ids:67698703;}
+@list l45:level1
+	{mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;}
+@list l46
+	{mso-list-id:1958945555;
+	mso-list-type:simple;
+	mso-list-template-ids:1372196076;}
+@list l46:level1
+	{mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;}
+@list l47
+	{mso-list-id:1972006878;
+	mso-list-type:simple;
+	mso-list-template-ids:-2120591798;}
+@list l47:level1
+	{mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;}
+@list l48
+	{mso-list-id:1987972769;
+	mso-list-type:simple;
+	mso-list-template-ids:-1042356238;}
+@list l48:level1
+	{mso-level-text:"%1\. ";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	mso-level-legacy:yes;
+	mso-level-legacy-indent:14.15pt;
+	mso-level-legacy-space:0in;
+	margin-left:14.15pt;
+	text-indent:-14.15pt;
+	mso-ansi-font-size:11.0pt;
+	font-family:"Times New Roman";
+	mso-ansi-font-weight:normal;
+	mso-ansi-font-style:normal;
+	text-decoration:none;
+	text-underline:none;}
+@list l49
+	{mso-list-id:2001352400;
+	mso-list-type:hybrid;
+	mso-list-template-ids:590377512 69140481 69140483 69140485 69140481 69140483 69140485 69140481 69140483 69140485;}
+@list l49:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l1:level1 lfo8
+	{mso-level-number-format:bullet;
+	mso-level-numbering:continue;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	mso-level-legacy:yes;
+	mso-level-legacy-indent:.25in;
+	mso-level-legacy-space:0in;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l1:level1 lfo20
+	{mso-level-number-format:bullet;
+	mso-level-numbering:continue;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	mso-level-legacy:yes;
+	mso-level-legacy-indent:.25in;
+	mso-level-legacy-space:0in;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l1:level1 lfo34
+	{mso-level-start-at:1;
+	mso-level-number-format:bullet;
+	mso-level-numbering:continue;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	mso-level-legacy:yes;
+	mso-level-legacy-indent:.25in;
+	mso-level-legacy-space:0in;
+	margin-left:.75in;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l1:level1 lfo35
+	{mso-level-start-at:1;
+	mso-level-number-format:bullet;
+	mso-level-numbering:continue;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	mso-level-legacy:yes;
+	mso-level-legacy-indent:14.15pt;
+	mso-level-legacy-space:0in;
+	margin-left:50.15pt;
+	text-indent:-14.15pt;
+	font-family:Symbol;}
+@list l43:level1 lfo37
+	{mso-level-numbering:continue;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	mso-level-legacy:yes;
+	mso-level-legacy-indent:14.15pt;
+	mso-level-legacy-space:0in;
+	margin-left:50.15pt;
+	text-indent:-14.15pt;}
+@list l25:level1 lfo40
+	{mso-level-numbering:continue;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	mso-level-legacy:yes;
+	mso-level-legacy-indent:.25in;
+	mso-level-legacy-space:0in;
+	margin-left:.25in;
+	text-indent:-.25in;}
+@list l42:level1 lfo43
+	{mso-level-numbering:continue;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	mso-level-legacy:yes;
+	mso-level-legacy-indent:.25in;
+	mso-level-legacy-space:0in;
+	margin-left:.75in;
+	text-indent:-.25in;}
+@list l30:level1 lfo45
+	{mso-level-numbering:continue;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	mso-level-legacy:yes;
+	mso-level-legacy-indent:.25in;
+	mso-level-legacy-space:0in;
+	margin-left:.25in;
+	text-indent:-.25in;}
+@list l11:level1 lfo47
+	{mso-level-numbering:continue;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	mso-level-legacy:yes;
+	mso-level-legacy-indent:.25in;
+	mso-level-legacy-space:0in;
+	margin-left:.75in;
+	text-indent:-.25in;}
+@list l48:level1 lfo49
+	{mso-level-start-at:3;
+	mso-level-numbering:continue;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	mso-level-legacy:yes;
+	mso-level-legacy-indent:14.15pt;
+	mso-level-legacy-space:0in;
+	margin-left:14.15pt;
+	text-indent:-14.15pt;
+	mso-ansi-font-size:11.0pt;
+	font-family:"Times New Roman";
+	mso-ansi-font-weight:normal;
+	mso-ansi-font-style:normal;
+	text-decoration:none;
+	text-underline:none;}
+@list l22:level1 lfo52
+	{mso-level-numbering:continue;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	mso-level-legacy:yes;
+	mso-level-legacy-indent:14.15pt;
+	mso-level-legacy-space:0in;
+	margin-left:14.15pt;
+	text-indent:-14.15pt;}
+@list l14:level1 lfo54
+	{mso-level-numbering:continue;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	mso-level-legacy:yes;
+	mso-level-legacy-indent:14.15pt;
+	mso-level-legacy-space:0in;
+	margin-left:14.15pt;
+	text-indent:-14.15pt;}
+@list l1:level1 lfo58
+	{mso-level-start-at:1;
+	mso-level-number-format:bullet;
+	mso-level-numbering:continue;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	mso-level-legacy:yes;
+	mso-level-legacy-indent:.25in;
+	mso-level-legacy-space:0in;
+	margin-left:.75in;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l1:level1 lfo59
+	{mso-level-start-at:1;
+	mso-level-number-format:bullet;
+	mso-level-numbering:continue;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	mso-level-legacy:yes;
+	mso-level-legacy-indent:14.15pt;
+	mso-level-legacy-space:0in;
+	margin-left:50.15pt;
+	text-indent:-14.15pt;
+	font-family:Symbol;}
+@list l43:level1 lfo60
+	{mso-level-numbering:continue;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	mso-level-legacy:yes;
+	mso-level-legacy-indent:14.15pt;
+	mso-level-legacy-space:0in;
+	margin-left:50.15pt;
+	text-indent:-14.15pt;}
+@list l25:level1 lfo61
+	{mso-level-numbering:continue;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	mso-level-legacy:yes;
+	mso-level-legacy-indent:.25in;
+	mso-level-legacy-space:0in;
+	margin-left:.25in;
+	text-indent:-.25in;}
+@list l42:level1 lfo62
+	{mso-level-numbering:continue;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	mso-level-legacy:yes;
+	mso-level-legacy-indent:.25in;
+	mso-level-legacy-space:0in;
+	margin-left:.75in;
+	text-indent:-.25in;}
+@list l30:level1 lfo63
+	{mso-level-numbering:continue;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	mso-level-legacy:yes;
+	mso-level-legacy-indent:.25in;
+	mso-level-legacy-space:0in;
+	margin-left:.25in;
+	text-indent:-.25in;}
+@list l11:level1 lfo64
+	{mso-level-numbering:continue;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	mso-level-legacy:yes;
+	mso-level-legacy-indent:.25in;
+	mso-level-legacy-space:0in;
+	margin-left:.75in;
+	text-indent:-.25in;}
+@list l48:level1 lfo65
+	{mso-level-start-at:3;
+	mso-level-numbering:continue;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	mso-level-legacy:yes;
+	mso-level-legacy-indent:14.15pt;
+	mso-level-legacy-space:0in;
+	margin-left:14.15pt;
+	text-indent:-14.15pt;
+	mso-ansi-font-size:11.0pt;
+	font-family:"Times New Roman";
+	mso-ansi-font-weight:normal;
+	mso-ansi-font-style:normal;
+	text-decoration:none;
+	text-underline:none;}
+@list l22:level1 lfo66
+	{mso-level-numbering:continue;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	mso-level-legacy:yes;
+	mso-level-legacy-indent:14.15pt;
+	mso-level-legacy-space:0in;
+	margin-left:14.15pt;
+	text-indent:-14.15pt;}
+@list l14:level1 lfo67
+	{mso-level-numbering:continue;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	mso-level-legacy:yes;
+	mso-level-legacy-indent:14.15pt;
+	mso-level-legacy-space:0in;
+	margin-left:14.15pt;
+	text-indent:-14.15pt;}
+ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+-->
+</style>
+<!--[if gte mso 10]>
+<style>
+ /* Style Definitions */
+ table.MsoNormalTable
+	{mso-style-name:"Normal Tablo";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-parent:"";
+	mso-padding-alt:0in 5.4pt 0in 5.4pt;
+	mso-para-margin:0in;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman";}
+</style>
+<![endif]--><!--[if gte mso 9]><xml>
+ <o:shapedefaults v:ext="edit" spidmax="2050"/>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <o:shapelayout v:ext="edit">
+  <o:idmap v:ext="edit" data="1"/>
+ </o:shapelayout></xml><![endif]-->
+</head>
+
+<body lang=EN-US link=blue vlink=purple style='tab-interval:.5in'>
+
+<div class=Section1>
+
+<h1><a name="_Toc40071425"><span lang=TR>DERS 5: STORED PROCEDURE</span></a></h1>
+
+<p class=MsoNormal><span lang=TR><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=TR>Amaçlar: </span></p>
+
+<p class=MsoNormal><span lang=TR><o:p>&nbsp;</o:p></span></p>
+
+<ul style='margin-top:0in' type=disc>
+ <li class=MsoNormal style='mso-list:l10 level1 lfo82;tab-stops:list .5in'><span
+     lang=TR>Stored Procedure olu&#351;turmay&#305; ve
+     kullan&#305;m&#305;n&#305; aç&#305;klamak. </span></li>
+</ul>
+
+<p class=MsoNormal><span lang=TR><o:p>&nbsp;</o:p></span></p>
+
+<h1><span lang=TR>I. STORED PROCEDURE</span></h1>
+
+<p class=MsoNormal><span lang=TR>SQL Server'daki Stored procedure'lar ayn&#305;
+di&#287;er programlama dillerindeki procedure'lara benzer. SQL deyimlerini
+içeren komut doayalar&#305; haz&#305;rlan&#305;r ve sunucu üzerinde
+saklan&#305;r. </span></p>
+
+<p class=MsoNormal><span lang=TR><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=TR>Stored procedure
+arac&#305;l&#305;&#287;&#305;yla &#351;u i&#351;lemler yap&#305;lablir: <o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=TR><o:p>&nbsp;</o:p></span></p>
+
+<ul style='margin-top:0in' type=disc>
+ <li class=MsoNormal style='mso-list:l10 level1 lfo82;tab-stops:list .5in'><span
+     lang=TR>Input parametrelerini kabul ederek ve birçok de&#287;erin geri
+     dönmesini sa&#287;lar. <o:p></o:p></span></li>
+ <li class=MsoNormal style='mso-list:l10 level1 lfo82;tab-stops:list .5in'><span
+     lang=TR>Database içindeki i&#351;lemleri yapmak için programlama deyimleri
+     içerir. <o:p></o:p></span></li>
+</ul>
+
+<p class=MsoNormal><span lang=TR><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=TR>Stored procedure'lar genellikle rutin hale
+gelmi&#351; i&#351;leri kolayca yapmak için geli&#351;tirilirler. SQL deyimleriyle
+yaz&#305;lan stored procedure'lar sadece ilk kez
+çal&#305;&#351;t&#305;r&#305;ld&#305;klar&#305;nda derlenirler. Daha sonraki
+çal&#305;&#351;t&#305;rma i&#351;lemlerinde derlenmezler ve böylece
+h&#305;zl&#305; bir biçimde çal&#305;&#351;ma sa&#287;lanm&#305;&#351; olur. <o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=TR><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=TR>Örnek
+bir stored procedure tasar&#305;m&#305;: <o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span lang=TR><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span class=CODE><span lang=TR style='font-size:10.0pt;
+mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman"'>USE Northwind<o:p></o:p></span></span></p>
+
+<p class=MsoNormal><span class=CODE><span lang=TR style='font-size:10.0pt;
+mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman"'>GO<o:p></o:p></span></span></p>
+
+<p class=MsoNormal><span class=CODE><span lang=TR style='font-size:10.0pt;
+mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman"'>CREATE PROC
+pahali_kitaplar<o:p></o:p></span></span></p>
+
+<p class=MsoNormal><span class=CODE><span lang=TR style='font-size:10.0pt;
+mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman"'>AS<o:p></o:p></span></span></p>
+
+<p class=MsoNormal><span class=CODE><span lang=TR style='font-size:10.0pt;
+mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman"'><span
+style='mso-spacerun:yes'>  </span>SELECT *<o:p></o:p></span></span></p>
+
+<p class=MsoNormal><span class=CODE><span lang=TR style='font-size:10.0pt;
+mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman"'><span
+style='mso-spacerun:yes'>  </span>FROM products<o:p></o:p></span></span></p>
+
+<p class=MsoNormal><span class=CODE><span lang=TR style='font-size:10.0pt;
+mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman"'><span
+style='mso-spacerun:yes'>  </span>WHERE unitprice &gt; 30<o:p></o:p></span></span></p>
+
+<p class=MsoNormal><span class=CODE><span lang=TR style='font-size:10.0pt;
+mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman"'><span
+style='mso-spacerun:yes'> </span>GO<o:p></o:p></span></span></p>
+
+<p class=MsoNormal><span class=CODE><span lang=TR style='font-size:10.0pt;
+mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman"'><o:p>&nbsp;</o:p></span></span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=TR>Stored
+procedure'&#305; Çal&#305;&#351;t&#305;rma:<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span lang=TR><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span class=CODE><span lang=TR style='font-size:10.0pt;
+mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman"'>EXEC
+pahal&#305;_kitaplar<o:p></o:p></span></span></p>
+
+<p class=MsoNormal><span lang=TR><o:p>&nbsp;</o:p></span></p>
+
+<h2><a name="_Toc40071427"><span lang=TR>A. CREATE PROCEDURE Deyimi</span></a><span
+lang=TR><o:p></o:p></span></h2>
+
+<p class=MsoNormal><span lang=TR>Bir SQL Server stored procedure'&#305; <b
+style='mso-bidi-font-weight:normal'>CREATE PROCEDURE</b> deyimi ile
+olu&#351;turulur. &#304;stenirse daha sonra <b style='mso-bidi-font-weight:
+normal'>ALTER PROCEDURE</b> deyim ile de&#287;i&#351;tirilir. Bir stored
+procedure yaratma deyimi tek bir batch olarak düzenlenir. Di&#287;er bir
+deyi&#351;le di&#287;er SQL deyimleriyle ayn&#305; batch içinde yer alamaz. <o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=TR><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><u><span lang=TR>Kullan&#305;m Biçimi</span></u><span
+lang=TR>: <o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=TR><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=TR>CREATE
+PROC</span></b><span lang=TR>[<b style='mso-bidi-font-weight:normal'>EDURE</b>]
+<i style='mso-bidi-font-style:normal'>procedure_ad&#305;</i>[<b
+style='mso-bidi-font-weight:normal'>;</b><i style='mso-bidi-font-style:normal'>say&#305;</i>]<br>
+[<br>
+{@<i style='mso-bidi-font-style:normal'>parameter data_tipi</i>}<i
+style='mso-bidi-font-style:normal'> </i>[VARYING] [<b style='mso-bidi-font-weight:
+normal'>= </b><i style='mso-bidi-font-style:normal'>varsay&#305;m</i>] [OUTPUT]<b
+style='mso-bidi-font-weight:normal'><br>
+</b>]<br>
+[<b style='mso-bidi-font-weight:normal'>,</b>...<i style='mso-bidi-font-style:
+normal'>n</i>]<br>
+[WITH <br>
+{<br>
+RECOMPILE <br>
+| ENCRYPTION <br>
+| RECOMPILE<b style='mso-bidi-font-weight:normal'>,</b> ENCRYPTION<br>
+}<br>
+]<br>
+[FOR REPLICATION]<br>
+AS<br>
+<i style='mso-bidi-font-style:normal'>sql_deyimleri </i>[...<i
+style='mso-bidi-font-style:normal'>n</i>]<o:p></o:p></span></p>
+
+<p class=H5><span lang=TR><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><u><span lang=TR>Örnekler:<o:p></o:p></span></u></p>
+
+<p class=MsoNormal><span lang=TR>A&#351;a&#287;&#305;daki stored procedure ile
+sadece belirtilen yazar&#305;n bilgileri ve kitaplar&#305; listelenir.<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=TR><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span class=CODE><span lang=TR style='font-size:10.0pt;
+mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman"'>USE pubs</span></span><span
+lang=TR><o:p></o:p></span></p>
+
+<p class=MsoNormal><span class=CODE><span lang=TR style='font-size:10.0pt;
+mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman"'>GO</span></span><span
+lang=TR><o:p></o:p></span></p>
+
+<p class=MsoNormal><span class=CODE><span lang=TR style='font-size:10.0pt;
+mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman"'>CREATE
+PROCEDURE yazar</span></span><span lang=TR><o:p></o:p></span></p>
+
+<p class=MsoNormal><span class=CODE><span lang=TR style='font-size:10.0pt;
+mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman"'>@lastname
+varchar(40), </span></span><span lang=TR><o:p></o:p></span></p>
+
+<p class=MsoNormal><span class=CODE><span lang=TR style='font-size:10.0pt;
+mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman"'>@firstname
+varchar(20) </span></span><span lang=TR><o:p></o:p></span></p>
+
+<p class=MsoNormal><span class=CODE><span lang=TR style='font-size:10.0pt;
+mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman"'>AS </span></span><span
+lang=TR><o:p></o:p></span></p>
+
+<p class=MsoNormal><span class=CODE><span lang=TR style='font-size:10.0pt;
+mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman"'>SELECT
+au_lname, au_fname, title, pub_name</span></span><span lang=TR><o:p></o:p></span></p>
+
+<p class=MsoNormal><span class=CODE><span lang=TR style='font-size:10.0pt;
+mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman"'>FROM authors
+a INNER JOIN titleauthor ta</span></span><span lang=TR><o:p></o:p></span></p>
+
+<p class=MsoNormal><span class=CODE><span lang=TR style='font-size:10.0pt;
+mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman"'>ON a.au_id =
+ta.au_id INNER JOIN titles t</span></span><span lang=TR><o:p></o:p></span></p>
+
+<p class=MsoNormal><span class=CODE><span lang=TR style='font-size:10.0pt;
+mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman"'>ON t.title_id
+= ta.title_id INNER JOIN publishers p</span></span><span lang=TR><o:p></o:p></span></p>
+
+<p class=MsoNormal><span class=CODE><span lang=TR style='font-size:10.0pt;
+mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman"'>ON t.pub_id =
+p.pub_id</span></span><span lang=TR><o:p></o:p></span></p>
+
+<p class=MsoNormal><span class=CODE><span lang=TR style='font-size:10.0pt;
+mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman"'>WHERE
+au_fname = @firstname</span></span><span lang=TR><o:p></o:p></span></p>
+
+<p class=MsoNormal><span class=CODE><span lang=TR style='font-size:10.0pt;
+mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman"'>AND au_lname
+= @lastname</span></span><span lang=TR><o:p></o:p></span></p>
+
+<p class=MsoNormal><span class=CODE><span lang=TR style='font-size:10.0pt;
+mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman"'>GO</span></span><span
+lang=TR><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=TR><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=TR>Çal&#305;&#351;t&#305;r&#305;lmas&#305;:<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=TR><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span class=CODE><span lang=TR style='font-size:10.0pt;
+mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman"'>EXECUTE yazar
+'White, 'Jhonson'</span></span><span lang=TR><o:p></o:p></span></p>
+
+<p class=MsoNormal><span class=CODE><span lang=TR style='font-size:10.0pt;
+mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman"'><o:p>&nbsp;</o:p></span></span></p>
+
+<p class=MsoNormal><span class=CODE><span lang=TR style='font-size:10.0pt;
+mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman"'>Ayr&#305;ca
+a&#351;a&#287;&#305;daki biçimde de çal&#305;&#351;t&#305;r&#305;labilir: <o:p></o:p></span></span></p>
+
+<p class=MsoNormal><span class=CODE><span lang=TR style='font-size:10.0pt;
+mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman"'><o:p>&nbsp;</o:p></span></span></p>
+
+<p class=MsoNormal><span class=CODE><span lang=TR style='font-size:10.0pt;
+mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman"'>EXECUTE yazar
+@lastname = 'White', @firstname = 'Johnson'</span></span><span lang=TR><o:p></o:p></span></p>
+
+<p class=MsoNormal><span class=CODE><span lang=TR style='font-size:10.0pt;
+mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman"'><o:p>&nbsp;</o:p></span></span></p>
+
+<p class=MsoNormal><span lang=TR><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=TR>NOT: Bu dokümanlar </span><st1:PersonName><span
+ lang=TR>Faruk Çubukçu</span></st1:PersonName><span lang=TR> taraf&#305;ndan
+haz&#305;rlanm&#305;&#351;t&#305;r. Bütün haklar&#305; sakl&#305;d&#305;r.
+Ticari olarak kullan&#305;lamaz. Bak&#305;n&#305;z: <a
+href="http://www.farukcubukcu.com/">www.farukcubukcu.com</a><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=TR>Ad&#305; geçen ve telif hakl&#305; olan
+ürünler bilgi amaçl&#305; olarak kullan&#305;lm&#305;&#351;t&#305;r. <o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=TR><o:p>&nbsp;</o:p></span></p>
+
+<h3><a name="_Toc40071461"><span lang=TR>B. B&#304;R STORED PROCEDURE'I
+&#304;&#350;LETMEK</span></a><span lang=TR><o:p></o:p></span></h3>
+
+<p class=MsoNormal><span lang=TR>Bir stored procedure'&#305; i&#351;letmek için
+Transact-SQL <b style='mso-bidi-font-weight:normal'>EXECUTE </b>deyimi
+kullan&#305;l&#305;r. Bunun d&#305;&#351;&#305;nda e&#287;er stored
+procedure'&#305;n parametresi varsa o da EXECUTE deyimi ile belirtilir.<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=TR><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=TR><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=TR>EXECUTE
+(T-SQL) Deyimi<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span lang=TR>Bir stored procedure'&#305; i&#351;letmek için
+EXECUTE deyimi kullan&#305;l&#305;r:<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=TR><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><u><span lang=TR>Kullan&#305;m Biçimi: <o:p></o:p></span></u></p>
+
+<p class=MsoNormal><span lang=TR><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=TR>[[<b style='mso-bidi-font-weight:normal'>EXEC</b>[UTE]]
+<br>
+{<br>
+{<i style='mso-bidi-font-style:normal'>procedure_ad&#305;</i>[<b
+style='mso-bidi-font-weight:normal'>;</b><i style='mso-bidi-font-style:normal'>say&#305;</i>]
+| <i style='mso-bidi-font-style:normal'>@procedure_ad&#305;_de&#287;i&#351;keni</i><br>
+}<br>
+[[<i style='mso-bidi-font-style:normal'>@parameter</i> <b style='mso-bidi-font-weight:
+normal'>=</b>] {<i style='mso-bidi-font-style:normal'>de&#287;er</i>| <i
+style='mso-bidi-font-style:normal'>@de&#287;i&#351;ken </i>[OUTPUT] |
+[DEFAULT]] <br>
+[<b style='mso-bidi-font-weight:normal'>,</b>...<i style='mso-bidi-font-style:
+normal'>n</i>]<br>
+[WITH RECOMPILE]<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=TR><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><u><span lang=TR>Örnekler: <o:p></o:p></span></u></p>
+
+<p class=MsoNormal><span lang=TR><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=TR>A&#351;a&#287;&#305;daki örnekte bir komut
+i&#351;letilir: <o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=TR><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span class=CODE><span lang=TR style='font-size:10.0pt;
+mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman"'>USE master</span></span><span
+lang=TR><o:p></o:p></span></p>
+
+<p class=MsoNormal><span class=CODE><span lang=TR style='font-size:10.0pt;
+mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman"'>EXECUTE
+xp_cmdshell 'dir *.exe'</span></span><span lang=TR><o:p></o:p></span></p>
+
+<p class=H5><span lang=TR><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=TR>A&#351;a&#287;&#305;daki örnekte ise bir
+stored procedure parametre ile ça&#287;&#305;r&#305;larak
+çal&#305;&#351;t&#305;r&#305;l&#305;r: <o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=TR><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span class=CODE><span lang=TR style='font-size:10.0pt;
+mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman"'>EXECUTE yazar
+'White, 'Jhonson'</span></span><span lang=TR><o:p></o:p></span></p>
+
+<p class=MsoNormal><span class=CODE><span lang=TR style='font-size:10.0pt;
+mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman"'><o:p>&nbsp;</o:p></span></span></p>
+
+<p class=MsoNormal><span lang=TR>NOT: Bu dokümanlar </span><st1:PersonName><span
+ lang=TR>Faruk Çubukçu</span></st1:PersonName><span lang=TR> taraf&#305;ndan
+haz&#305;rlanm&#305;&#351;t&#305;r. Bütün haklar&#305; sakl&#305;d&#305;r.
+Ticari olarak kullan&#305;lamaz. Bak&#305;n&#305;z: <a
+href="http://www.farukcubukcu.com/">www.farukcubukcu.com</a><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=TR>Ad&#305; geçen ve telif hakl&#305; olan
+ürünler bilgi amaçl&#305; olarak kullan&#305;lm&#305;&#351;t&#305;r. <o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=TR><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=TR><o:p>&nbsp;</o:p></span></p>
+
+</div>
+
+</body>
+
+</html>
+
+		  </TD>
+		</TR>
+	</TABLE>
+
+    </form>
+<script language="javascript">
+function menuSec(seciliMenu){
+location.href='ders.aspx?kursID=9&dersID=' + seciliMenu.options[seciliMenu.selectedIndex].value};
+</script>
+  </body>
+</HTML>

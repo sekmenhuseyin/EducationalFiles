@@ -1,0 +1,550 @@
+<HTML><HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<TITLE>304718 - Administering Windows Server-Based Computers Using Windows XP Professional-Based Clients</TITLE>
+<!-- (c) 2001, 2002 Microsoft Corporation. All Rights Reserved -->
+<!-- CPMSFTWBSUP12 ASM: GSS, Version=3.7.4.0, Culture=neutral, PublicKeyToken=null FW: 1.1.4322.573 -->
+<!-- REGC: ISO-8859-1 DEFRC: utf-8 RESG: 2/23/2004 8:43:10 AM RESX: 1/1/0001 12:00:00 AM -->
+<META NAME="Keywords" CONTENT="kbenv kbinfo KB304718  kbwin2000AdvServ kbwin2000AdvServSearch kbwin2000DataServ kbwin2000DataServSearch kbwin2000Pro kbwin2000ProSearch kbwin2000Search kbwin2000Serv kbwin2000ServSearch kbWinAdvServSearch kbWinDataServSearch kbWinServ2003Data kbWinServ2003DataSearch kbWinServ2003Ent kbWinServ2003EntSearch kbWinServ2003Search kbWinServ2003St kbWinXPPro kbWinXPProSearch kbWinXPSearch " />
+<META NAME="Description" CONTENT="This article describes how to use the Windows Server 2003 Administration Tools package on Windows XP Professional or how to use the Windows Server 2003 family to remotely administer Microsoft Windows 2000 Server family-based and Windows Server 2003..." />
+<META NAME="MS.LOCALE" CONTENT="EN" />
+<script language="Javascript" SRC="/common/script/gsfx/common.js"></script><link rel='stylesheet' type='text/css' href='/common/css/GN/EN-US/down-other/default.css' ></link><script src="/common/script/gsfx/searchui.js"></script><link rel='stylesheet' type='text/css' href='/common/css/GN/EN-US/down-other/SearchUI.css' ></link><link rel='stylesheet' type='text/css' href='/common/css/GN/EN-US/down-other/webparts.css' ></link><link rel='stylesheet' type='text/css' href='/common/css/GN/EN-US/down-other/KBArticleV2.css' ></link></HEAD>
+
+<BODY bgcolor="#FFFFFF" leftmargin="0" topmargin="0" marginheight="0" marginwidth="0" onLoad="thisLoad();" onUnload="thisUnload();">
+<table border="0" cellpadding="0" cellspacing="0" width="100%" height="100%"><tr><td>
+<TABLE width="100%" cellspacing="0" cellpadding="0" border="0" HSPACE="0" VSPACE="0"><TR><TD><A HREF="/isapi/gomscom.asp?target=/" TARGET="_top" ><IMG SRC="/library/images/support/bnr_microsoft.gif" 	HEIGHT="60" HSPACE="0" VSPACE="0" ALIGN="LEFT" ALT="Microsoft.com Home Page" BORDER="0" /></A></TD><TD width="100%" ><TABLE WIDTH="100%" CELLPADDING="0" CELLSPACING="0" BORDER="0" HSPACE="0" VSPACE="0"><TR><TD BGCOLOR="#0a6cce" VALIGN="TOP" HEIGHT="20" ALIGN="RIGHT" WIDTH="100%">
+<TABLE HEIGHT="20" BORDER="0"CELLPADDING="0" CELLSPACING="0" >
+<TR><TD><IMG SRC="/library/images/toolbar/images/curveLTR.gif" WIDTH="18" HEIGHT="20" HSPACE="0" VSPACE="0" ALT="" BORDER="0" /></TD><TD BGCOLOR="#000000" HEIGHT="20" NOWRAP>&nbsp;
+<a href="http://www.microsoft.com/products/info/default.aspx?view=22" STYLE="color:#FFFFFF;text-decoration:none;" TARGET="_top"><FONT COLOR="#FFFFFF" style="font-family:Verdana,Arial; font-size: 10px;"> All Products</FONT></a>
+</TD><TD BGCOLOR="#000000" HEIGHT="20" NOWRAP><font COLOR="#FFFFFF" style="font-family:Verdana,Arial; font-size: 10px;">&nbsp;|&nbsp;</font></TD><TD BGCOLOR="#000000" HEIGHT="20" NOWRAP>
+<a href="http://support.microsoft.com" STYLE="color:#FFFFFF;text-decoration:none;" TARGET="_top"><FONT COLOR="#FFFFFF" style="font-family:Verdana,Arial; font-size: 10px;"> Support</FONT></a>
+</TD><TD BGCOLOR="#000000" HEIGHT="20" NOWRAP><font COLOR="#FFFFFF" style="font-family:Verdana,Arial; font-size: 10px;">&nbsp;|&nbsp;</font></TD><TD BGCOLOR="#000000" HEIGHT="20" NOWRAP>
+<a href="/isapi/gosearch.asp?target=/us/default.asp" STYLE="color:#FFFFFF;text-decoration:none;" TARGET="_top"><FONT COLOR="#FFFFFF" style="font-family:Verdana,Arial; font-size: 10px;"> Search</FONT></a>
+</TD><TD BGCOLOR="#000000" HEIGHT="20" NOWRAP><font COLOR="#FFFFFF" style="font-family:Verdana,Arial; font-size: 10px;">&nbsp;|&nbsp;</font></TD><TD BGCOLOR="#000000" HEIGHT="20" NOWRAP>
+<a href="/isapi/gomscom.asp?target=/" STYLE="color:#FFFFFF;text-decoration:none;" TARGET="_top"><FONT COLOR="#FFFFFF" style="font-family:Verdana,Arial; font-size: 10px;"> Microsoft.com Guide</FONT></a>
+</TD></TR></TABLE>
+</TD></TR><TR><TD BGCOLOR=#0a6cce HEIGHT="40" align="right"><a href="/common/international.aspx" TARGET="_top"><IMG SRC="/library/images/support/EN-US/region_graphic.gif" ALT="International Support" HEIGHT="40" BORDER="0" HSPACE="0" VSPACE="0" /></A></TD></TR></TABLE>
+</TD></TR></TABLE>
+</td></tr><tr><td class="tpl_top_banner" valign="top"><table class="bbar_outer" border="0" cellpadding="0" cellspacing="0" height="18"><tr>
+<td nowrap class="bbar_cell" onmouseover="this.className='bbar_cell_hot';" onmouseout="this.className='bbar_cell';" onClick="top.location.href='http://support.microsoft.com/'"><a target ="_top" href='http://support.microsoft.com/' title='Return to Support Home Page' onclick='event.cancelBubble=true;'>&nbsp;&nbsp;Home&nbsp;&nbsp;</a></td><td class='bannerborder' width=1><img src='/library/images/support/1ptrans.gif' height=1 width=1></td>
+<td nowrap class="bbar_cell" onmouseover="this.className='bbar_cell_hot';" onmouseout="this.className='bbar_cell';" onClick="top.location.href='http://support.microsoft.com/default.aspx?pr=kbhowto'"><a target ="_top" href='http://support.microsoft.com/default.aspx?pr=kbhowto' title='Search the Knowledge Base' onclick='event.cancelBubble=true;'>&nbsp;&nbsp;Search&nbsp;&nbsp;</a></td><td class='bannerborder' width=1><img src='/library/images/support/1ptrans.gif' height=1 width=1></td>
+<td nowrap class="bbar_cell" onmouseover="this.className='bbar_cell_hot';" onmouseout="this.className='bbar_cell';" onClick="top.location.href='http://support.microsoft.com/default.aspx?pr=faqs'"><a target ="_top" href='http://support.microsoft.com/default.aspx?pr=faqs' title='Frequently Asked Questions and Product Support Centers' onclick='event.cancelBubble=true;'>&nbsp;&nbsp;FAQs&nbsp;&nbsp;</a></td><td class='bannerborder' width=1><img src='/library/images/support/1ptrans.gif' height=1 width=1></td>
+<td nowrap class="bbar_cell" onmouseover="this.className='bbar_cell_hot';" onmouseout="this.className='bbar_cell';" onClick="top.location.href='http://support.microsoft.com/default.aspx?pr=downloadover&style=home'"><a target ="_top" href='http://support.microsoft.com/default.aspx?pr=downloadover&style=home' title='Software Downloads, Updates, and Service Packs' onclick='event.cancelBubble=true;'>&nbsp;&nbsp;Downloads&nbsp;&nbsp;</a></td><td class='bannerborder' width=1><img src='/library/images/support/1ptrans.gif' height=1 width=1></td>
+<td nowrap class="bbar_cell" onmouseover="this.className='bbar_cell_hot';" onmouseout="this.className='bbar_cell';" onClick="top.location.href='http://support.microsoft.com/newsgroups/default.aspx'"><a target ="_top" href='http://support.microsoft.com/newsgroups/default.aspx' title='Community Newsgroups' onclick='event.cancelBubble=true;'>&nbsp;&nbsp;Newsgroups&nbsp;&nbsp;</a></td><td class='bannerborder' width=1><img src='/library/images/support/1ptrans.gif' height=1 width=1></td>
+<td nowrap class="bbar_cell" onmouseover="this.className='bbar_cell_hot';" onmouseout="this.className='bbar_cell';" onClick="top.location.href='http://support.microsoft.com/default.aspx?pr=csshome'"><a target ="_top" href='http://support.microsoft.com/default.aspx?pr=csshome' title='Customer Service' onclick='event.cancelBubble=true;'>&nbsp;&nbsp;Customer Service&nbsp;&nbsp;</a></td><td class='bannerborder' width=1><img src='/library/images/support/1ptrans.gif' height=1 width=1></td>
+</tr></table></td></tr><tr><td valign="top" height="100%"><table border="0" cellpadding="0" cellspacing="0" width="100%" height="100%"><tr><td valign="top"><table cellpadding="0" cellspacing="0" class="tpl_content_bar" width="100%"><tr><td class="tpl_content_title" valign="top" align="left">
+							Microsoft Knowledge Base Article - 304718
+						</td><td class="subBannerGif" valign="top" align="right">
+							<IMG src="/common/resources/Content_subban.gif" border="0" vspace="0" title="304718 - Administering Windows Server-Based Computers Using Windows XP Professional-Based Clients" />
+						</td></tr></table></td></tr><tr><td width="100%" valign="top"><XMLREADER><DIV class="OldIE">
+<DIV ID="LTRContent" class="LTRContent" DIR="LTR">
+<div class="KBPUBV2" name="KBPUBV2"><!-- - - - - - - - - - - PAGE TEXT BEGINS HERE : KBPUBV2 - - - - - - - - - - --><div class="kbContainer"><table border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td valign="top" width="100%"><table class="kbRightNav"><tr><td valign="top"><table class="GetHelpVert" width="165"><tr><td valign="middle"><a href="http://support.microsoft.com/default.aspx?scid=sz;EN-US;top&product=winsvr2003&prname=Windows%20Server%202003"><IMG src="http://support.microsoft.com/library/images/support/Get_Help_sml.gif" align="center" border="0" vspace="3" hspace="0" alt="Need More Help?" title="Need More Help?" /></a></td><td><table><tr><td align="center" class="GetHelpTitle" valign="top">Need More Help?</td></tr><tr><td align="center" valign="middle" class="GetHelpText"><a href="http://support.microsoft.com/default.aspx?scid=sz;EN-US;top&product=winsvr2003&prname=Windows%20Server%202003">Contact a Support Professional by E-Mail, Online or Phone</a></td></tr></table></td></tr></table>
+<!--SRCH START-->
+<DIV><TABLE CLASS="srch_mnpbgRt" WIDTH="163" BORDER="0" CELLPADDING="0" CELLSPACING="0">
+<TR><TD>
+<TABLE  WIDTH="163" BORDER="0" CELLPADDING="0" CELLSPACING="0" >
+<FORM NAME="gsfxSearchRtform" ACTION="/search/default.aspx" METHOD="GET" ONSUBMIT="gsfxSearchRt_onsubmit();" TARGET="_top" >
+<TR><TD>
+<DIV CLASS="srch_mnpheaderRt">Search Support (KB)<BR>Windows Server 2003</DIV><input type=hidden name=InCC_hdn value=True><input type=hidden name=Catalog value=LCID=1033&CDID=EN-US-KB&PRODLISTSRC=ON><input type=hidden name=Product value=><input type=hidden name=KeywordType value=ALL><input type=hidden name=Titles value=false><input type=hidden name=numDays value=><input type=hidden name=maxResults value=25><TABLE BORDER="0" CELLSPACING="2" CELLPADDING="0" CLASS="SrchQueryRtOuterTable" ><TR><TD WIDTH="100%" VALIGN="TOP"><INPUT class="SrchQueryRtInput" TYPE="text" NAME="Queryl" MAXLENGTH="255" SIZE="16" value=""><INPUT TYPE="HIDDEN" NAME="Query"></INPUT></TD><TD WIDTH="24" VALIGN="TOP"><A HREF="Javascript:gsfxSearchRt_onsubmit();gsfxSearchRt_DoSubmit();" onmouseover="window.status='Run the search'; return true;" onmouseout="window.status='';return true;" ><IMG SRC="http://support.microsoft.com/library/images/support/goright.gif" WIDTH="24" BORDER="0" HSPACE="0" TITLE="Run the search" ALT="Run the search" ></A></TD>
+</TR></TABLE>     <input type=hidden name="QuerySource" value="gsfxSearchRt_Query"></TD></TR><TR><TD>
+<!-- SRCH FOOTER -->
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="2" WIDTH="163" CLASS="srch_mnpFtRt"><TR><TD><span CLASS="SrchOptionText" ><A TARGET="_top" id="advLinkRt" name="advLinkRt" HREF="http://support.microsoft.com/default.aspx?scid=FH;EN-US;KBHOWTO">Advanced Search and Help</A></span></TD></TR></TABLE><!-- SRCHFOOTER --><input type=hidden name=srchExtraQry value=></TD></TR>
+</FORM></TABLE>
+</TD></TR></TABLE></DIV>
+<!-- SRCH END--><SCRIPT LANGUAGE="Javascript">
+
+function gsfxSearchRt_onsubmit()
+{
+SubmitText(document.gsfxSearchRtform.Query,document.gsfxSearchRtform.Queryl,"gsfxSearchRt","Query","","","");}
+
+function gsfxSearchRt_DoSubmit()
+{ document.gsfxSearchRtform.submit(); }
+AppendText(document.gsfxSearchRtform.Queryl,"gsfxSearchRt","Query","");
+
+</SCRIPT>
+<table cellspacing="0" cellpadding="0" border="0" id="SupportCenters" name="SupportCenters" class="ListNugget" width="165"><tr><td class="ListNuggetHeader">Support Centers</td></tr><tr><td id="SupportCentersBody" name="SupportCentersBody" class="ListNuggetBody" align="left">
+<TABLE CELLSPACING="0" CELLPADDING="2" BORDER="0">
+<TR><TD WIDTH="6" VALIGN="middle"><IMG SRC="http://support.microsoft.com/library/images/support/blue_bullet.gif" WIDTH="5" HEIGHT="5" BORDER="0" VALIGN="MIDDLE" HSPACE="0" ></TD>
+<TD CLASS="ListNuggetItem" VALIGN="top">
+	<A CLASS="ListNuggetItemLink" HREF="http://support.microsoft.com/default.aspx?scid=fh;EN-US;sbs">Small Business Server</A>
+</TD></TR>
+<TR><TD WIDTH="6" VALIGN="middle"><IMG SRC="http://support.microsoft.com/library/images/support/blue_bullet.gif" WIDTH="5" HEIGHT="5" BORDER="0" VALIGN="MIDDLE" HSPACE="0" ></TD>
+<TD CLASS="ListNuggetItem" VALIGN="top">
+	<A CLASS="ListNuggetItemLink" HREF="http://support.microsoft.com/default.aspx?scid=fh;EN-US;win2000">Windows 2000</A>
+</TD></TR>
+<TR><TD WIDTH="6" VALIGN="middle"><IMG SRC="http://support.microsoft.com/library/images/support/blue_bullet.gif" WIDTH="5" HEIGHT="5" BORDER="0" VALIGN="MIDDLE" HSPACE="0" ></TD>
+<TD CLASS="ListNuggetItem" VALIGN="top">
+	<A CLASS="ListNuggetItemLink" HREF="http://support.microsoft.com/default.aspx?scid=fh;EN-US;Win2000Dev">Windows 2000 - Developer</A>
+</TD></TR>
+<TR><TD WIDTH="6" VALIGN="middle"><IMG SRC="http://support.microsoft.com/library/images/support/blue_bullet.gif" WIDTH="5" HEIGHT="5" BORDER="0" VALIGN="MIDDLE" HSPACE="0" ></TD>
+<TD CLASS="ListNuggetItem" VALIGN="top">
+	<A CLASS="ListNuggetItemLink" HREF="http://support.microsoft.com/default.aspx?scid=fh;EN-US;winsvr2003">Windows Server 2003</A>
+</TD></TR>
+<TR><TD WIDTH="6" VALIGN="middle"><IMG SRC="http://support.microsoft.com/library/images/support/blue_bullet.gif" WIDTH="5" HEIGHT="5" BORDER="0" VALIGN="MIDDLE" HSPACE="0" ></TD>
+<TD CLASS="ListNuggetItem" VALIGN="top">
+	<A CLASS="ListNuggetItemLink" HREF="http://support.microsoft.com/default.aspx?scid=fh;EN-US;winxp">Windows XP</A>
+</TD></TR>
+</TABLE><img src="http://support.microsoft.com/library/images/support/1ptrans.gif" height="6" width="100" border="0" /></td></tr></table><table cellspacing="0" cellpadding="0" border="0" id="GeneralInfo" name="GeneralInfo" class="ListNugget" width="165"><tr><td class="ListNuggetHeader">Other Support Options</td></tr><tr><td id="GeneralInfoBody" name="GeneralInfoBody" class="ListNuggetBody" align="left"><TABLE CELLSPACING="0" CELLPADDING="2" BORDER="0"><TR><TD WIDTH="6" VALIGN="top"><IMG SRC="http://support.microsoft.com/library/images/support/blue_bullet.gif" WIDTH="5" HEIGHT="5" BORDER="0" VALIGN="MIDDLE" VSPACE="4" HSPACE="0" ></TD><TD CLASS="ListNuggetItem" VALIGN="top"><A CLASS="ListNuggetItemLink" HREF="http://support.microsoft.com/default.aspx?scid=fh;EN-US;cntactms&amp;style=home" >Contact Microsoft</A><BR>Phone Numbers, Support Options and Pricing, Online Help, and more.</TD></TR><TR><TD WIDTH="6" VALIGN="top"><IMG SRC="http://support.microsoft.com/library/images/support/blue_bullet.gif" WIDTH="5" HEIGHT="5" BORDER="0" VALIGN="MIDDLE" VSPACE="4" HSPACE="0" ></TD><TD CLASS="ListNuggetItem" VALIGN="top"><A CLASS="ListNuggetItemLink" HREF="http://support.microsoft.com/default.aspx?scid=fh;EN-US;csshome&amp;style=home" >Customer Service</A><BR>For non-technical assistance with product purchases, subscriptions, online services, events, training courses, corporate sales, piracy issues, and more.</TD></TR><TR><TD WIDTH="6" VALIGN="top"><IMG SRC="http://support.microsoft.com/library/images/support/blue_bullet.gif" WIDTH="5" HEIGHT="5" BORDER="0" VALIGN="MIDDLE" VSPACE="4" HSPACE="0" ></TD><TD CLASS="ListNuggetItem" VALIGN="top"><A CLASS="ListNuggetItemLink" HREF="http://support.microsoft.com/newsgroups" >Newsgroups</A><BR>Pose a question to other users.  Discussion groups and Forums about specific Microsoft products, technologies, and services.</TD></TR></TABLE><img src="http://support.microsoft.com/library/images/support/1ptrans.gif" height="6" width="100" border="0" /></td></tr></table><table cellspacing="0" cellpadding="0" border="0" id="PageOptions" name="PageOptions" class="ListNugget" width="165"><tr><td class="ListNuggetHeader">Page Options</td></tr><tr><td id="PageOptionsBody" name="PageOptionsBody" class="ListNuggetBody" align="left"><TABLE CELLSPACING="0" CELLPADDING="2" BORDER="0"><TR><TD WIDTH="6" VALIGN="top"><A HREF="mailto:?body=http%3a%2f%2fsupport.microsoft.com%2fdefault.aspx%3fkbid%3d304718%26product%3dwinsvr2003" ><IMG SRC="http://support.microsoft.com/library/images/support/emailicon.gif" BORDER="0" HSPACE="0" Title="Send the contents of this page to a Friend" ></A></TD><TD CLASS="ListNuggetItem" VALIGN="top"><A CLASS="ListNuggetItemLink" HREF="mailto:?body=http%3a%2f%2fsupport.microsoft.com%2fdefault.aspx%3fkbid%3d304718%26product%3dwinsvr2003" >Send</A></TD></TR><TR><TD WIDTH="6" VALIGN="top"><A HREF="Javascript:PrintContents();" ><IMG SRC="http://support.microsoft.com/library/images/support/printicon.gif" BORDER="0" HSPACE="0" Title="Print the contents of this page" ></A></TD><TD CLASS="ListNuggetItem" VALIGN="top"><A CLASS="ListNuggetItemLink" HREF="Javascript:PrintContents();" >Print</A></TD></TR></TABLE><img src="http://support.microsoft.com/library/images/support/1ptrans.gif" height="6" width="100" border="0" /></td></tr></table></td></tr></table><!-- - - - - - - - - - - KB CONTENT BEGINS BELOW HERE - - - - - - - - - - --><H1 class="title">Administering Windows Server-Based Computers Using Windows XP Professional-Based Clients</H1><a href="#appliesto">View products that this article applies to.</a><div class="notice">This article was previously published under Q304718 </div><div class="idea"><H3><a class="bookref" HREF="#toc">Contents</a></H3><UL><LI><a class="bookref" HREF="#1">SUMMARY</a><UL><LI><a class="bookref" HREF="#2">Remote Administration Options</a></LI><LI><a class="bookref" HREF="#3">Windows Server 2003 Administration Tools Pack Adminpak.msi)</a></LI><LI><a class="bookref" HREF="#4">Windows 2000 and the Windows Server 2003  Administration Tools Package</a></LI><LI><a class="bookref" HREF="#5">Upgrading Windows 2000 Computers to Windows XP or to Windows Server 2003</a></LI><LI><a class="bookref" HREF="#7">Windows Server 2003  Member Computers and the Windows Server 2003  Administration Tools Package</a></LI><LI><a class="bookref" HREF="#7">Downloading and Installing the Windows Server 2003 RTM   Administration Tools package on Windows XP Professional</a></LI><LI><a class="bookref" HREF="#8">Applying Windows XP SP1 to Windows XP-Based Computers That Have the Beta 3 Version of the Administration Tools Package Installed</a></LI><LI><a class="bookref" HREF="#9">What to Expect from the RTM Version of the Windows Server 2003 Administration Tools Package</a></LI><LI><a class="bookref" HREF="#10">What to Do When You Encounter Remote Administration Problems</a></LI></UL></LI><LI><a class="bookref" HREF="#14">MORE INFORMATION</a><UL><LI><a class="bookref" HREF="#13">Known Issues for Windows Server 2003 RTM Adminpak.msi</a></LI></UL></LI></UL> </div><div class="notice"><a class="bookmark" NAME="1"></a> </div><div class="summary"><H2>SUMMARY</H2> This article describes how to use the Windows Server 2003
+		  Administration Tools package on Windows XP Professional or how to use the
+		  Windows Server 2003 family to remotely administer Microsoft Windows 2000 Server
+		  family-based and Windows Server 2003 family-based computers. The following
+		  topics are discussed in this article: 
+		  <UL><LI>How to remotely administer computers that are running
+				Windows 2000 Server family products or Windows Server 2003 family products from
+				Windows Server 2003 and Windows XP-based clients that are using the Release to
+				Manufacturing (RTM) version of the Adminpak.msi file from the Windows Server
+				2003 media. </LI><LI>How to download the RTM version of the Windows Server 2003
+				Administration Tools Pack from the Microsoft Web site. </LI><LI>Known issues that may occur when you use Administration
+				tools from the Windows Server 2003 Adminpack.msi file to manage Windows
+				2000-based and Windows Server 2003-based computers. </LI><LI>Compatibility issues that occur when Windows 2000
+				Professional-based computers that have Windows 2000 Administration tools
+				installed are upgraded to Windows XP. </LI><LI>Compatibility issues that occur when Windows 2000 domain
+				controllers are upgraded to Windows Server 2003 domain controllers </LI><LI>Other procedures to remotely administer Windows-based
+				servers.</LI></UL><a class="bookmark" NAME="toc">Back to the top</a><H3><a class="bookmark" NAME="2"></a>Remote Administration Options</H3>To use Windows Server 2003 and Windows XP-based clients to
+		  remotely administer computers that are running either Windows 2000 Server
+		  family products or Windows Server 2003 family products, use any of the
+		  following methods: : 
+		  <UL><LI>Use Terminal Services to remotely administer the computers.
+				You can install a Windows 2000 Server-based computer that is running Terminal
+				Services in Application Server mode to avoid the two-session limit.</LI><LI>Run Windows 2000 on one or more computers in the IT group
+				so that you can use the Windows 2000 Administration Tools package tools to
+				remotely administer Windows 2000-based computers. </LI><LI>• Install the RTM version of Windows Server 2003
+				Administration Tools Pack (Adminpak.msi) from the Microsoft web site or the
+				Windows Server 2003 installation media on a computer that is running Windows XP
+				or a Windows Server 2003 family product.</LI></UL><a class="bookmark" NAME="toc">Back to the top</a><H3><a class="bookmark" NAME="3"></a>Windows Server 2003 Administration Tools Pack Adminpak.msi)</H3>To make the remote management of your servers easier, Microsoft
+		  has included the Windows Server 2003 Administration Tools Pack on the Microsoft
+		  Windows Server 2003 family product CDs. Using this CD, you can install the
+		  Windows Server 2003 Administration Tools Pack onto computers that are running
+		  the following operating systems: 
+		  <UL><LI>The Windows Server 2003 family</LI><LI>Windows XP Professional with Service Pack 1 (SP1) or
+				later</LI><LI>Windows XP Professional with QFE patch Q329357</LI></UL>With the RTM version of the Windows Server 2003 Administration
+		  Tools Pack, you can manage the following operating systems: 
+		  <UL><LI>The Windows Server 2003 family </LI><LI>The Windows 2000 Server family</LI></UL>The Adminpak.msi (Adminpak) file is a self-extracting file that
+		  contains commonly used administrative tools. The Adminpak.msi file is located
+		  in the \I386 folder on the Windows Server 2003 CD-ROM or as a separate Web
+		  download package. To download the Adminpak.exe file, visit the following
+		  Microsoft Web site: <p class="indent"><a class="URLLink" TARGET="_top" HREF="http://www.microsoft.com/downloads">http://www.microsoft.com/downloads</a></p> If you want to remotely administer Windows 2000 Server or Windows
+		  Server 2003 family member-based computers and domain controllers from Windows
+		  XP Professional or Windows Server 2003 family-based clients, note the following
+		  issues: 
+		  <UL><LI>You must completely remove previous beta versions of the
+				Windows Server 2003 Administration Tools package before you install the final
+				release version. See the "Applying Windows XP SP1 to Windows XP-Based Computers
+				That Have the Beta 3 Version of the Administration Tools Package Installed"
+				section of this article for more details.<BR /><BR /><STRONG>Note</STRONG> In some limited cases, servers must be administered from clients
+				that are running the same operating system version. For example, some remote
+				administration operations against Windows 2000-based servers can be
+				accomplished only from Windows 2000-based clients. Similarly, some operations
+				against Windows Server 2003-based computers can be accomplished only from
+				Windows XP-based or Windows Server 2003 clients. This article documents these
+				limitations or restrictions for each tool that is included in the
+				Administration Tools package. </LI><LI>The administration tools from the Windows 2000 Adminpak.msi
+				file that are installed on Windows 2000-based computers that are later upgraded
+				to Windows XP Professional do not start or operate correctly. The Winnt32.exe
+				upgrade process warns you to remove the Windows 2000 version of Adminpak.msi.
+				Either remove the Windows 2000 Adminpak.msi file before the upgrade or
+				reinstall the Windows Server 2003 Administration Tools Pack after the upgrade.
+				You can use the Winnt32.exe <STRONG>/checkupgradeonly</STRONG> flag to determine if the Windows 2000 Adminpak is installed
+				before you upgrade any computer.</LI><LI>You cannot install the Windows 2000 Adminpak.msi file on
+				Windows XP-based clients or on Windows Server 2003 family-based computers.
+				These tools no longer work on these platforms and are not supported. Please use
+				the Windows Server 2003 version of the Administration Tools pack.</LI><LI>The Windows Server 2003 RTM version of Adminpak.msi can
+				only be installed on computers that are running the Windows Server 2003 family,
+				Windows XP Professional with SP1 or later, and Windows XP Professional build
+				2600 with QFE Q329357. </LI><LI>If you are using Windows XP Professional with QFE Q329357
+				and the Windows Server2003 Administration Tools pack, you cannot administer
+				Cluster servers. However, if you are using Windows XP Professional with SP1 and
+				the Windows Server 2003 Administration Tools Pack, you can manage Cluster
+				servers. </LI><LI>Windows XP Professional does not include the Windows Server
+				2003 Adminpak.msi file because these tools are part of the Windows Server 2003
+				product and are shipped when that product is released</LI><LI>The majority of the Windows Server 2003 Administration
+				tools work the same as the Windows 2000 counterparts. Sometimes, the Windows
+				Server 2003 Administration tools offer enhanced functionality over their
+				Windows 2000 counterparts. For example, the new drag-and-drop feature of the
+				Windows Server 2003 Users and Computers snap-in is fully functional against
+				Windows 2000-based domain controllers. In rare cases, Windows Server 2003 tools
+				are incompatible and unsupported for managing Windows 2000 Server-based
+				computers. Similarly, in rare cases, Windows 2000 tools are incompatible with
+				Windows Server 2003-based family computers. </LI><LI>Enhanced functionality in Windows Server 2003
+				Administration tools may not be turned on or supported when you administer
+				Windows 2000-based computers. For example, Administration tools features that
+				depend on functionality in Windows Server 2003, such as the "Saved query for
+				last logon time" functionality, are not supported against Windows 2000
+				Server-based computers because earlier version servers do not have the required
+				attributes. Generally, these advanced features are not visible or are not
+				turned on when Administration tools are used against Windows 2000-based
+				computers.</LI></UL><a class="bookmark" NAME="toc">Back to the top</a><H3><a class="bookmark" NAME="4"></a>Windows 2000 and the Windows Server 2003  Administration Tools Package</H3> The Windows Server 2003 Administration Tools package cannot be
+		  installed or run on Windows 2000-based computers. If you try to install the
+		  Windows Server 2003 Administration Tools package on a Windows 2000-based
+		  computer, you receive the following error message: <BR /><div class="errormsg">Windows Server2003 Administration Tools Pack can only be installed
+		  on Windows XP Professional with QFE Q329357 applied, or on Windows XP
+		  Professional SP1 or later, or on computers running Windows Server 2003
+		  operating systems. <BR /><BR />Service pack level mismatch. Please obtain the
+		  Administration Tools Pack that matches the service pack level of your operating
+		  system.</div> Similarly, the command-line utilities from the Windows Server
+		  2003 Administration Tools package are designed to run on Windows XP and the
+		  Windows Server 2003 family only. Command-line utilities in the Windows Server
+		  2003 Administration Tools package do not run if there is a DLL mismatch or an
+		  entry point error (if you copy the utilities to a Windows 2000-based computer).
+		  If you try to install Windows 2000 Administration Tools package on a Windows
+		  Server 2003-based computer, you receive the following error message:<BR /><div class="errormsg"> Windows 2000 Administration Tools are incompatible with Windows
+		  Server 2003 family operating systems. Install Windows Server 2003
+		  Administration Tools Pack. </div><a class="bookmark" NAME="toc">Back to the top</a><H3><a class="bookmark" NAME="5"></a>Upgrading Windows 2000 Computers to Windows XP or to Windows Server 2003</H3> When a Windows 2000-based computer that has the Windows 2000
+		  Adminpak.msi file installed is upgraded to Windows XP or Windows Server 2003,
+		  the System Compatibility Report window that is displayed in the upgrade process
+		  reports that Windows 2000 Administration tools are not compatible with Windows
+		  XP or Windows Server 2003. If you click <STRONG class="uiterm">Details</STRONG>, the following
+		  message appears:<BR /><div class="errormsg">Setup has detected Windows 2000
+		  Administration Tools on your computer. Windows 2000 Administration Tools are
+		  incompatible with Windows Server 2003 family operating systems. Do one of the
+		  following: 
+		  <UL><LI>Cancel this upgrade, uninstall Windows 2000 Administration
+				Tools, and then restart the upgrade. </LI><LI>Complete this upgrade, and then immediately install the
+				Windows Server 2003 Administration Tools Pack by running the Adminpak.msi
+				Windows Installer package file. Adminpak.msi is located in the \i386 directory
+				of your Windows Server 2003 compact disc. </LI></UL></div><STRONG>Note</STRONG> If the Windows 2000 Administration tools were left in place when
+		  the Windows 2000-based computer was upgraded to Windows Server 2003, do not try
+		  to remove the <STRONG class="uiterm">Windows 2000 Administration Tools</STRONG> icon that
+		  appears in the Add or Remove Programs tool in Control Panel. <BR /><BR />If you
+		  try to remove the Windows 2000 Administration Tools by using the Add or Remove
+		  Programs tool, you may receive the following error message:
+		  <BR /><div class="errormsg"> apphelp dialog cancelled thus preventing the application
+		  from starting.</div>Ignore this error message. When you install the Windows
+		  Server 2003 Administration Tools package, the <STRONG class="uiterm">Windows 2000
+		  Administration Tools</STRONG> icon is replaced by the <STRONG class="uiterm">Windows Server
+		  2003 Administration Tools Package</STRONG> icon.<BR /><BR /><a class="bookmark" NAME="toc">Back to the top</a><H3><a class="bookmark" NAME="6"></a>Windows Server 2003  Member Computers and the Windows Server 2003  Administration Tools Package</H3>Starting with the RC2 version, you can now install the Windows
+		  Server 2003 Administration Tools package on Windows Server 2003 family-based
+		  computers.<BR /><BR /><a class="bookmark" NAME="toc">Back to the top</a><H3><a class="bookmark" NAME="7"></a>Downloading and Installing the Windows Server 2003 RTM   Administration Tools package on Windows XP Professional</H3>You can install the Windows Server 2003 Administration Tools Pack
+		  onto computers running the following operating systems: 
+		  <UL><LI>Windows Server 2003 family </LI><LI>Windows XP Professional with Service Pack 1 or
+				later</LI><LI>Windows XP Professional with QFE Q329357</LI></UL>The Windows Server 2003 Adminpak.msi file was repackaged on the
+		  Microsoft Web site as Adminpak.exe after the release of Windows Server 2003
+		  Beta 3. The latest revision of the Administration Tools package is the final
+		  Release to Manufacturing (RTM) version. <BR /><BR />To install Windows Server
+		  2003 RTM Administration Tools package: 
+		  <OL class="dec"><LI>Download the Windows Server 2003 RTM Administration Tools
+				package. To download the file (Adminpak.exe), visit the following Microsoft Web
+				site:<p class="indent"><a class="URLLink" TARGET="_top" HREF="http://www.microsoft.com/downloads/search.asp">http://www.microsoft.com/downloads/search.asp</a></p> Perform a keyword search for "adminpak" for the Windows XP
+				operating system.<BR /><BR /> You can also download Adminpak.exe directly. To do
+				so, visit the following Microsoft Web site: <p class="indent"><a class="URLLink" TARGET="_top" HREF="http://www.microsoft.com/downloads/details.aspx?FamilyID=d232481f-28ea-4ba6-919b-95a8d757eff9">http://download.microsoft.com/download/c/7/5/c750f1af-8940-44b6-b9eb-d74014e552cd/adminpak.exe</a></p></LI><LI>Log on with administrator credentials on the local
+				computer.</LI><LI>Remove previous versions of the Administration Tools
+				package. <BR /><BR />You must remove older version of the Administration Tools
+				package before you can install a newer version, including the final
+				release.<BR /><BR /> If you cannot use the Add or Remove Programs tool in Control
+				Panel to remove previous versions of the Administration Tools package, you can
+				use the MSIZap tool from the Support\Tools\Suptools.msi package to remove the
+				older cached package. <BR /><BR /> If the Beta 3 version of the Administration
+				Tools package is installed, follow these additional steps: 
+				<OL class="alpha"><LI>Save the following text as a file that is named
+					 Rrasreg.cmd: <p class="indent">rem <BR /> rem RAS user snap-in extension - registry key cleanup,
+					 Beta 3 to RC1 <BR /> rem upgrades only.<BR /> rem <BR /> rem use Reg.exe to delete
+					 the old key that was created by the Beta 3 <BR /> rem RAS user extension
+					 snapin.<BR /> rem <BR /> reg delete HKEY_CLASSES_ROOT\RasDialin.UserAdminExt /f
+					 <BR /> reg delete HKEY_CLASSES_ROOT\RasDialin.UserAdminExt.1 /f<BR /> reg delete
+					 HKLM\SOFTWARE\Microsoft\MMC\NodeTypes\{19195a5b-6da0-11d0-afd3-00c04fd930c9}\Extensions\NameSpace
+					 /f </p></LI><LI>Run Rrasreg.cmd from a command prompt.</LI></OL></LI><LI>Install the Administration Tools
+				package.<BR /><BR />Adminpak.exe is a self-extracting file that creates the
+				Adminpak-readme.txt file and the adminpak.msi file in a folder that you specify
+				when you install the file. To install the Administration Tools package, either
+				right-click the .msi file and click <STRONG class="uiterm">Install</STRONG> or double-click
+				the .msi file. Alternatively, you can use Active Directory to assign or publish
+				the file using Group Policy to Windows XP-based or Windows Server 2003
+				family-based computers.</LI></OL><STRONG>Note</STRONG> When you upgrade a Windows 2000-based server to Windows Server
+		  2003, the system compatibility check in the Windows Server 2003 Winnt32 or the
+		  Winnt32 /checkupgradeonly process may incorrectly detect that the
+		  Administration Tools package has been installed on your Windows 2000 domain
+		  controller. This issue occurs because the Dcpromo process on Windows 2000 uses
+		  a feature within the Windows 2000 Adminpak file to create shortcut menu items
+		  for the domain administration tools. You may safely ignore this message and
+		  continue with the upgrade process from Windows 2000 to Windows Server 2003.<BR /><BR /><a class="bookmark" NAME="toc">Back to the top</a> </div><div class="summary"><H3><a class="bookmark" NAME="8"></a>Applying Windows XP SP1 to Windows XP-Based Computers That Have the Beta 3 Version of the Administration Tools Package Installed</H3>If you are applying Windows XP SP1 to Windows XP-based computers
+		  that have the beta 3 version of the Administration Tools package installed, you
+		  must remove the Beta 3 version of the Administration Tools package before you
+		  install Windows XP SP1 on your Windows XP-based computer.<BR /><BR />If you have
+		  installed Windows XP SP1 on the Windows XP-based computer that has the
+		  Administration Tools package Beta 3 already installed, you cannot use the Add
+		  or Remove Programs tool in Control Panel to remove previous versions of the
+		  Administration Tools package. Instead, you can use the MSIZap tool from the
+		  Support\Tools\Suptools.msi package to remove the older cached .msi package.<BR /><BR /><a class="bookmark" NAME="toc">Back to the top</a><H3><a class="bookmark" NAME="9"></a>What to Expect from the RTM Version of the Windows Server 2003 Administration Tools Package</H3><UL><LI>Refer to this article for known compatibility issues and
+				the release date of their resolution before you contact Microsoft Product
+				Support Services (PSS).</LI><LI>You must remove older versions of Adminpak.msi (Beta 3,
+				RC1, RC2) before you install SP1 on your Windows XP-based computer. If you have
+				installed Windows XP SP1 on the Windows XP-based computer that has the
+				Administration Tools package Beta 3 installed, you cannot use the "Add or
+				Remove Programs" tool in Control Panel to remove previous versions of the
+				Administration Tools package. Refer to the "Applying Windows XP SP1 to Windows
+				XP-Based Computers with Beta 3" section earlier in this article</LI><LI>Microsoft Windows XP Home Edition-based computers cannot
+				join Microsoft Windows NT 4.0-based, Windows 2000-based, or Windows Server
+				2003-based domains, and are not a supported platform for Administration Tools
+				package installations. </LI></UL><a class="bookmark" NAME="toc">Back to the top</a><H3><a class="bookmark" NAME="10"></a>What to Do When You Encounter Remote Administration Problems</H3><OL class="dec"><LI>Confirm that you are using the latest supported version of
+				the Adminpak.msi snap-ins and the DLL files that are available from the
+				Microsoft Web site. You can use the APVer.vbs script that is included with the
+				RTM Adminpak Web download package to determine the version of the
+				Administration Tools package that you have installed on your computer. To do
+				so, go to the folder where you expanded the Adminpak.exe file and type
+				<KBD>apver /?</KBD> to see a list of options for this diagnostic
+				script. </LI><LI>Refer to this article to determine if the issue is
+				known.</LI><LI>Notify PSS or your support provider.</LI></OL><a class="bookmark" NAME="toc">Back to the top</a> </div><div class="notice"><a class="bookmark" NAME="13"></a> </div><div class="moreinformation"><H2>MORE INFORMATION</H2><H3><a class="bookmark" NAME="14"></a>Known Issues for Windows Server 2003 RTM Adminpak.msi</H3><H4>All</H4><UL><LI>The RTM version of the Administration Tools package is
+				supported on the following operating systems: 
+				<UL><LI>Windows Server 2003 family </LI><LI>Windows XP Professional with SP1 or later </LI><LI>Windows XP Professional build 2600 with QFE
+					 Q329357</LI></UL></LI><LI>Windows Server 2003 Administration Tools Pack tools will
+				not install or run on computers that are running Windows 2000.<BR /><BR /><STRONG>Note</STRONG> By default, starting with RC1, the Active Directory
+				administration tools have turned on LDAP signing. Windows 2000 domain
+				controllers that are being remotely administered by Windows 2000-based
+				computers that are running Service Pack 4 (SP4), Windows XP-based computers, or
+				Windows Server 2003-based computers that are using NTLM authentication must
+				either have Windows 2000 Service Pack 3 (SP3) installed, or these clients must
+				have the registry change that is described in the following Microsoft Knowledge
+				Base article: 
+				<p class="indent"><a class="KBlink" HREF="http://support.microsoft.com/default.aspx?scid=kb;EN-US;325465">325465</a> Windows 2000 Domain Controllers
+				  Require SP3 or Later When Using Windows  Server 2003 Administration
+				  Tools
+</p></LI></UL><a class="bookmark" NAME="toc">Back to the top</a> </div><div class="moreinformation"><H4>Installation and Upgrade Issues</H4><UL><LI>Windows Server 2003 Winnt32.exe and the Winnt32
+				/checkupgradeonly process on Windows 2000 domain controllers report that
+				Adminpak is installed when it was never installed or if it has already been
+				removed.<BR /><BR /> This issue occurs because the Dcpromo utility in Windows
+				2000 uses an internal feature of the Windows 2000 version of Adminpak to
+				install menu shortcuts on domain controllers. You can ignore this warning in
+				WINNT32 and continue the upgrade. After the upgrade is finished you should
+				install the Windows Server 2003 version of Adminpak.msi from the \I386 folder
+				of the installation media to make sure that you have the latest version of the
+				domain administration tools. </LI></UL><a class="bookmark" NAME="toc">Back to the top</a> </div><div class="moreinformation"><H4>Active Directory Domains and Trusts</H4><UL><LI>The Windows Server 2003 RC version of the Administration
+				Tools package introduces LDAP signing. Windows 2000 domain controllers being
+				remotely administered by Windows 2000-based computers that are running Service
+				Pack 4 (SP4), Windows XP-based computers, or Windows Server 2003-based
+				computers that are using NTLM authentication must either have Windows 2000
+				Service Pack 3 installed, or these clients must have the registry change that
+				is described in the following Microsoft Knowledge Base article: 
+				<p class="indent"><a class="KBlink" HREF="http://support.microsoft.com/default.aspx?scid=kb;EN-US;325465">325465</a> Windows 2000 Domain Controllers
+				  Require SP3 or Later When Using Windows  Server 2003 Administration
+				  Tools
+</p></LI><LI>If you use a Windows 2000-based computer to administer
+				Windows Server 2003-based domains, you do not see advanced user interface (UI)
+				features such as behavior versioning or advanced trusts that are supported by
+				Windows Server 2003-based domains.</LI></UL><a class="bookmark" NAME="toc">Back to the top</a> </div><div class="moreinformation"><H4>Active Directory Schema</H4><UL><LI>The Windows Server 2003 RC version of the Administration
+				Tools package tools introduces LDAP signing. Windows 2000 domain controllers
+				that are being remotely administered by Windows 2000-based computers that are
+				running Service Pack 4 (SP4), Windows XP-based computers, or Windows Server
+				2003-based computers that are using NTLM authentication must either have
+				Windows 2000 SP3 installed, or these clients must have the registry change that
+				is described in the following Microsoft Knowledge Base article: 
+				<p class="indent"><a class="KBlink" HREF="http://support.microsoft.com/default.aspx?scid=kb;EN-US;325465">325465</a> Windows 2000 Domain Controllers
+				  Require SP3 or Later When Using Windows Server 2003 Administration
+				  Tools
+</p></LI><LI>The <STRONG class="uiterm">Schema may be modified on this Domain
+				Controller</STRONG> check box has been removed from the <STRONG class="uiterm">Change Schema
+				Master</STRONG> dialog box because schema updates are enabled by default on
+				Windows Server 2003-based domain controllers. Enable schema updates on Windows
+				2000-based domain controllers by modifying the registry as described in the
+				following Microsoft Knowledge Base article:<p class="indent"><a class="KBlink" HREF="http://support.microsoft.com/default.aspx?scid=kb;EN-US;285172">285172</a> Schema Update Require Write Access to Schema in Active Directory
+</p></LI></UL><a class="bookmark" NAME="toc">Back to the top</a> </div><div class="moreinformation"><H4>Active Directory Sites and Services</H4><UL><LI>The RTM version of the Windows Server 2003 Administration
+				Tools package tools includes LDAP signing. Windows 2000 domain controllers that
+				are being remotely administered by Windows 2000-based computers that are
+				running Service Pack 4 (SP4), Windows XP-based computers, or Windows Server
+				2003-based computers that are using NTLM authentication must either have
+				Windows 2000 SP3 installed, or these clients must have the registry change that
+				is described in the following Microsoft Knowledge Base article: 
+				<p class="indent"><a class="KBlink" HREF="http://support.microsoft.com/default.aspx?scid=kb;EN-US;325465">325465</a> Windows 2000 Domain Controllers
+				  Require SP3 or Later When Using Windows  Server 2003 Administration
+				  Tools
+</p></LI><LI>There is no support for editing certificate templates.
+				</LI><LI>The <STRONG class="uiterm">Services Node enabled</STRONG> command when you
+				click <STRONG class="uiterm">Show Services Node</STRONG> on the <STRONG class="uiterm">View</STRONG> menu has
+				been removed on Windows XP clients.</LI><LI>There are no known issues when Windows 2000-based forests
+				are administered from Windows XP Professional and Windows Server 2003-based
+				clients.</LI></UL><a class="bookmark" NAME="toc">Back to the top</a> </div><div class="moreinformation"><H4>Active Directory Users and Computers</H4> </div><div class="moreinformation"><UL><LI> The RTM version of the Windows Server 2003 Administration
+				Tools package tools includes LDAP signing. Windows 2000 domain controllers that
+				are being remotely administered by Windows 2000-based computers that are
+				running Service Pack 4 (SP4), Windows XP-based computers, or Windows Server
+				2003-based computers that are using NTLM authentication must either have
+				Windows 2000 SP3 installed, or these clients must have the registry change that
+				is described in the following Microsoft Knowledge Base article: 
+				<p class="indent"><a class="KBlink" HREF="http://support.microsoft.com/default.aspx?scid=kb;EN-US;325465">325465</a> Windows 2000 Domain Controllers
+				  Require SP3 or Later When Using Windows Server 2003 Administration
+				  Tools
+</p></LI><LI>The <STRONG class="uiterm">Dial-in</STRONG> tab that configures Routing
+				and Remote Access dial-in or VPN access and callback settings is removed when
+				the Administration Tools package is installed on Windows XP
+				clients.<BR /><BR />To manage dial-in properties on the user account, use the
+				remote access policy administration model. The remote access policy
+				administration model was introduced in Windows 2000 to address the limitations
+				in the older dial-in account permission model. The remote access policy
+				administration model uses Windows groups to manage remote access permissions.
+				<BR /><BR />Customers who use the recommended administration model, named remote
+				access policy administration model, should be able to use the Administration
+				package from Windows XP to manage remote access permission for users in Active
+				Directory. Settings on the <STRONG class="uiterm">Dial-in</STRONG> tab are not typically used
+				for VPN or wireless deployments. There are several exceptions. For example,
+				administrators who deploy dial-up networks may use callback number. In these
+				cases, use Terminal Services or Remote Desktop to access a Windows 2000-based
+				or a Windows Server 2003-based computer, or log on to the console of a Windows
+				2000-based or Windows Server 2003-based computer to manage the
+				<STRONG class="uiterm">Dial-in</STRONG> tab. The remote access policy administration model has
+				the following benefits: 
+				<UL><LI>Granular Administration<BR /><BR /> Administrators who
+					 manage dial-in permission also must have access to the entire user account
+					 (which has many more security properties). In the policy administrative model,
+					 a separate group can be created to grant dial-in permissions, and permissions
+					 to manage access to that group can be granted to a different
+					 administrator.</LI><LI>Groups for Access Control<BR /><BR />Most Windows
+					 programs use groups for access control. Groups reduce the additional effort of
+					 managing separate permissions network access. You can use the same groups for
+					 controlling access to dial-up, VPN, or wireless network or file
+					 shares.</LI><LI>Granular Connection-Specific Access Policy Control
+					 <BR /><BR />There are many challenges introduced when you are deploying more than
+					 one access technology at the same time. The permissions and settings for
+					 dial-up, VPN, and wireless technologies may be different. For example,
+					 contractors may be allowed to access wireless networks but not connect from
+					 home by VPN. Wireless may require different security settings compared to VPN
+					 and dial-up. Callback settings may be useful when you are connecting from local
+					 area code, but you may want to disable callback when the user is connecting
+					 from an international phone number. </LI></UL>You can configure the remote access policy administration
+				model in the Remote Access Policies node of the Routing and Remote Access
+				snap-in when the domain is configured in Windows 2000 native mode or later. To
+				remotely manage the <STRONG class="uiterm">RAS dial-in</STRONG> tab in Active Directory Users
+				or Computers or Internet Authentication Server (IAS) from a Windows XP-based
+				computer, use Terminal Services or Remote Desktop to access a Windows
+				2000-based or Windows Server 2003-based computer. Alternatively, log on to the
+				console of a Windows 2000-based or Windows Server 2003-based computer to
+				configure these settings directly. </LI><LI>Windows XP-based computers that are joined to Windows
+				2000-based domain controller domains do not support the enhanced functionality
+				to select multiple users and to make bulk edits for attributes such as the home
+				folder or the profile path. The multiple-select functionality is supported in
+				forests in which the schema version is 15 or later (for example, Windows Server
+				2003 ADDPREP /ForestPrep and /DomainPrep have been run in the Windows
+				2000-based forest and domain).</LI></UL><a class="bookmark" NAME="toc">Back to the top</a> </div><div class="moreinformation"><H4>Authorization Manager</H4><UL><LI>This has been added to the Administration Tools package as
+				of the RC1 version.</LI></UL><a class="bookmark" NAME="toc">Back to the top</a> </div><div class="moreinformation"><H4>Certification Authority</H4><UL><LI>Because of extensive schema changes, you cannot use Windows
+				XP Professional-based clients to administer Windows 2000-based computers, and
+				you cannot use Windows 2000-based clients to administer Windows Server
+				2003-based computers. To administer Windows Server 2003-based computers,
+				perform remote administration from the console or from a Terminal Services
+				session on the target computer, or use Windows 2000-based clients to manage
+				Windows 2000 Server-based computers and Windows XP-based and Windows Server
+				2003 -based clients.</LI></UL><a class="bookmark" NAME="toc">Back to the top</a> </div><div class="moreinformation"><H4>Cluster Administrator</H4><UL><LI>If you are using Windows XP Professional with QFE Q329357
+				and the Windows Server 2003 Administration Tools package, you cannot administer
+				Cluster servers. However, if you use Windows XP Professional with SP1 and
+				Windows Server 2003 Administration Tools package, you can manage Cluster
+				servers. </LI></UL><a class="bookmark" NAME="toc">Back to the top</a> </div><div class="moreinformation"><H4>Connection Manager Administration Kit</H4><UL><LI>Microsoft does not recommend Windows 2000 to Windows Server
+				2003 cross-version administration because this does not produce Windows XP
+				profiles.</LI></UL><a class="bookmark" NAME="toc">Back to the top</a> </div><div class="moreinformation"><H4>Delegation Wizard</H4><UL><LI>No known issues.</LI></UL><a class="bookmark" NAME="toc">Back to the top</a> </div><div class="moreinformation"><H4>DHCP</H4><UL><LI>Windows 2000 tools cannot dump Windows Server 2003 DHCP
+				configurations because of code changes. </LI></UL><a class="bookmark" NAME="toc">Back to the top</a> </div><div class="moreinformation"><H4>Distributed File System (DFS)</H4><UL><LI>Adds ring, hub and spoke, and custom topology support for
+				FRS replication of DFS roots and links.</LI><LI>Configures connection priority in the Q321557 and SP3
+				release of Windows 2000 Ntfrs.exe. 
+				For additional information, click the article number below to
+				  view the article in the Microsoft Knowledge Base: <p class="indent"><a class="KBlink" HREF="http://support.microsoft.com/default.aspx?scid=kb;EN-US;321557">321557</a> Improvements in the Post-SP2 Release of Ntfrs.exe That Is Packaged with an Updated Ntfs.sys Driver
+</p></LI><LI>If you are using a Windows XP-based client, you must use
+				the Windows XP SP1 update to administer Windows Server 2003 DFS.</LI><LI>Adminpak now includes the Windows Server 2003 DFS Server
+				Help file.</LI></UL><a class="bookmark" NAME="toc">Back to the top</a> </div><div class="moreinformation"><H4>DNS</H4><UL><LI>No known issues.</LI></UL><a class="bookmark" NAME="toc">Back to the top</a> </div><div class="moreinformation"><H4>Directory Service Command-Line Utilities</H4><UL><LI> The RTM version of the Windows Server 2003 Administration
+				Tools package includes LDAP signing. Windows 2000 domain controllers that are
+				being remotely administered by Windows 2000-based computers that are running
+				Service Pack 4 (SP4), Windows XP-based computers, or Windows Server 2003-based
+				computers that are using NTLM authentication must either have Windows 2000 SP3
+				installed, or these clients must have the registry change that is described in
+				the following Microsoft Knowledge Base article: 
+				<p class="indent"><a class="KBlink" HREF="http://support.microsoft.com/default.aspx?scid=kb;EN-US;325465">325465</a> Windows 2000 Domain Controllers
+				  Require SP3 or Later When Using Windows Server 2003 Administration
+				  Tools
+</p></LI></UL><a class="bookmark" NAME="toc">Back to the top</a> </div><div class="moreinformation"><H4>Exchange</H4><UL><LI>The Microsoft Exchange SMTP and NNTP DLL files were added to
+				Adminpak.msi. The additional Staxmem.dll, Smtpapi.dll, Smtpadm.dll,
+				Smtpsnap.hlp, and Nntpsnap.hlp files were added to Adminpak.msi to permit
+				32-bit Windows XP Professional-based clients to administer the release of
+				Exchange after Microsoft Exchange 2000. </LI><LI>Administration of Exchange-based servers after the Exchange
+				2000 version from 64-bit clients is not supported.</LI></UL><a class="bookmark" NAME="toc">Back to the top</a> </div><div class="moreinformation"><H4>Help</H4><UL><LI>The Ntcmds.chm Help file was added to support command-line
+				administration. </LI><LI>The Windows XP Professional Help files are reinstalled when
+				the Administration Tools package is removed. Windows XP Professional versions
+				of the Ntart.chm and Ntcmds.chm files are backed up during the installation of
+				the Administration Tools package and are restored during removal.</LI></UL><a class="bookmark" NAME="toc">Back to the top</a> </div><div class="moreinformation"><H4>Internet Information Services Command-Line Utilities</H4> This section applies to the following utilities: 
+		  <UL><LI>IisApp.vbs</LI><LI>Iisback.vbs</LI><LI>IisCnfg.vbs</LI><LI>IisFtp.vbs</LI><LI>IisFtpdr.vbs</LI><LI>Iisvdir.vbs</LI><LI>Iisweb.vbs</LI></UL> The following issues have been reported: 
+		  <UL><LI>All scripts are compatible with Microsoft Internet
+				Information Services (IIS) 6.0 only.</LI><LI>IISCnfg: When you use the <STRONG>iiscnfg /export</STRONG> command, the destination file (the file that you specify after
+				the <STRONG>/f</STRONG> switch) is created on the remote computer (the Windows
+				Server-based computer). For example, to export the metabase, type the following
+				command:<p class="indent"><KBD>iiscnfg /s <VAR>RemoteServer</VAR> /u <VAR>UserName</VAR> /p <VAR>UserPwd</VAR> /export /f d:\Config.xml /sp /LM/W3SVC/1</KBD></p> When you run this command, D:\Config.xml is created on the remote
+				server. To import the metabase, type the following command: <p class="indent"><KBD>iiscnfg /s <VAR>RemoteServer</VAR> /u <VAR>UserName</VAR> /p <VAR>UserPwd</VAR> /import /f d:\Config.xml /sp /LM/W3SVC/1 /dp /LM/W3SVC/2</KBD></p><STRONG>Note</STRONG> These commands are one line each. They have been wrapped for
+				readability.<BR /><BR /> IISCnfg checks that the D:\Config.xml file (the file
+				that you specify after the <STRONG>/f</STRONG> switch) exists on both the local and the remote computer
+				(<VAR>RemoteServer</VAR>). However, the actual import uses only
+				the file on the remote server. When you import or copy the Config.xml file from
+				the remote server to the same path on the local computer. </LI></UL><a class="bookmark" NAME="toc">Back to the top</a> </div><div class="moreinformation"><H4>Internet Authentication Service</H4><UL><LI>The Internet Authentication Service (IAS) snap-in has been
+				removed from the Administration Tools Package</LI></UL><a class="bookmark" NAME="toc">Back to the top</a> </div><div class="moreinformation"><H4>Netsh</H4><UL><LI>The <STRONG>netsh dhcp server <VAR>ip</VAR>
+				dump</STRONG> command output is truncated. The output from this command issued
+				from a Windows Server 2003-based computer against a Windows Server 2003-based
+				DHCP server returns the following output:<PRE class="in_text">
+Dhcp Server 157.59.136.135 Add Optiondef 100 "Byte Array" BYTE 1 comment="" 4 3 2 1 0
+
+Dhcp Server 157.59.136.135 Add Optiondef 101 "String Array" STRING 1 comment="" "hello" "cathy" "jim" "bob"
+
+Dhcp Server 157.59.136.135 Add Optiondef 102 "IP Array" IPADDRESS 1 comment="" 4.4.4.4 3.3.3.3 2.2.2.2 1.1.1.1
+						</PRE> The same command issued from a Windows XP-based client is
+				truncated as follows: <PRE class="in_text">
+Dhcp Server 220.0.80.23 Add Optiondef 100 "Byte Array" BYTE 1 comment="" 4
+
+Dhcp Server 220.0.80.23 Add Optiondef 101 "String Array" STRING 1 comment="" hello
+
+Dhcp Server 220.0.80.23 Add Optiondef 102 "IP Array" IPADDRESS 1 comment="" 4.4.4.4
+						</PRE></LI><LI>The <STRONG>netsh dhcp server</STRONG> command does not run from Windows XP-based clients. For example,
+				the following command runs successfully from a Windows Server 2003-based
+				computer, but does not run from a Windows XP-based client:<p class="indent"><STRONG>Dhcp Server 157.59.136.135 Add Optiondef 101 "String Array" STRING 1 comment="" "hello" "cathy" "jim" "bob"</STRONG></p> If you run this command from a Windows XP-based
+				client, you receive the following error message: <BR /><div class="errormsg"> DHCP
+				Server Add OptionDef failed. <BR /><BR /> Parameter(s) passed are either
+				incomplete or invalid. </div></LI></UL><a class="bookmark" NAME="toc">Back to the top</a> </div><div class="moreinformation"><H4>Network Load Balancing Manager</H4><UL><LI>No known issues.</LI></UL><a class="bookmark" NAME="toc">Back to the top</a> </div><div class="moreinformation"><H4>Ntdsutil.exe</H4><UL><LI>The <STRONG class="uiterm">authoritative restore</STRONG> command in
+				Ntdsutil depends on Ntdsbsrv.dll, which is not included in Windows XP
+				Professional or the Windows Server 2003 Administration Tools package. Perform
+				authoritative restores from the console of Active Directory-based domain
+				controllers. Copy the Ntdsbsrv.dll file from a release version of a Windows
+				Server 2003 installation if you must run this command on Windows XP-based
+				clients. </LI></UL><a class="bookmark" NAME="toc">Back to the top</a> </div><div class="moreinformation"><H4>Object Picker</H4><UL><LI> The RTM version of the Windows Server 2003 Administration
+				Tools package includes LDAP signing. Windows 2000 domain controllers must
+				either have Windows 2000 Service SP3 installed, or Windows XP-based and Windows
+				Server 2003-based clients must have the registry change that is described in
+				the following Microsoft Knowledge Base article:<p class="indent"><a class="KBlink" HREF="http://support.microsoft.com/default.aspx?scid=kb;EN-US;325465">325465</a> Windows
+				  2000 Domain Controllers Require SP3 or Later When Using Windows  Server 2003
+				  Administration Tools
+</p></LI></UL><a class="bookmark" NAME="toc">Back to the top</a> </div><div class="moreinformation"><H4>Remote Access User Extension</H4><UL><LI>Remote Access User Extension have been removed from the RTM
+				version of Windows Server 2003 Administration Tools package.</LI></UL><a class="bookmark" NAME="toc">Back to the top</a> </div><div class="moreinformation"><H4>Remote Desktop</H4><UL><LI>Connect to Console mode is supported against Windows
+				XP-based and Windows Server 2003-based computers only. 
+				 For additional
+				  information, click the following article number to view the article in the
+				  Microsoft Knowledge Base: <p class="indent"><a class="KBlink" HREF="http://support.microsoft.com/default.aspx?scid=kb;EN-US;309375">309375</a>
+ Remote Desktops MMC Snap-In from
+				  Windows Server 2003 Administrative Tools
+</p></LI></UL><a class="bookmark" NAME="toc">Back to the top</a> </div><div class="moreinformation"><H4>Remote Storage</H4><UL><LI>Cross-version administration is not supported. Remote
+				Storage administration from Windows 2000-based computers is not supported
+				against Windows XP-based and Windows Server 2003-based computers. Perform
+				remote administration from a Windows 2000-based computer, from the console of
+				the target computer, or over a Terminal Services session.</LI><LI>Cross-version administration is not supported. Versions of
+				Windows XP and Windows Server 2003 that are running the Windows Server 2003
+				Administration Tools package cannot administer Windows 2000-based computers.
+				Perform remote administration from a Windows XP-based or Windows Server
+				2003-based computer, from the console of the target computer, or from a
+				Terminal Services session.</LI></UL><a class="bookmark" NAME="toc">Back to the top</a> </div><div class="moreinformation"><H4>Remote Installation Services (RIS) UI Administration Extension</H4><UL><LI>No known issues.</LI></UL><a class="bookmark" NAME="toc">Back to the top</a> </div><div class="moreinformation"><H4>Routing and Remote Access</H4><UL><LI> This has been removed from the Administration Tools
+				package.</LI></UL><a class="bookmark" NAME="toc">Back to the top</a> </div><div class="moreinformation"><H4>Telephony</H4><UL><LI>Telephony administrators cannot administer remote lines on
+				a Windows 2000 Server-based computer from a Windows XP Professional-based
+				computer. Specifically, the <STRONG class="uiterm">Edit users</STRONG> option is unavailable.
+				</LI></UL><a class="bookmark" NAME="toc">Back to the top</a> </div><div class="moreinformation"><H4>Terminal Services License Manager</H4><UL><LI>No known issues.</LI></UL><a class="bookmark" NAME="toc">Back to the top</a> </div><div class="moreinformation"><H4>UDDI</H4><UL><LI>No known issues</LI></UL><a class="bookmark" NAME="toc">Back to the top</a> </div><div class="moreinformation"><H4>WINS</H4><UL><LI>The change to the WINS Remote Procedure Call (RPC)
+				Application Programming Interface (API) among Windows 2000, Windows XP
+				Professional, Windows Server 2003, and Windows NT 4.0 prevents remotely
+				administering Windows NT 4.0-based WINS servers from Windows 2000 and Windows
+				Server 2003 versions of the WINS MMC snap-in. This is not a regression because
+				Windows 2000 shares the same limitation. The resolving fix would be a QFE in
+				Windows NT 4.0. </LI></UL><a class="bookmark" NAME="toc">Back to the top</a> </div><div name="appliesto" id="appliesto" class="appliesto"><H3>The information in this article applies to:</H3><UL><LI>Microsoft Windows Server 2003, Datacenter Edition</LI><LI>Microsoft Windows Server 2003, Enterprise Edition</LI><LI>Microsoft Windows Server 2003, Standard Edition</LI><LI>Microsoft Windows XP Professional</LI><LI>Microsoft Windows 2000 Advanced Server</LI><LI>Microsoft Windows 2000 Datacenter Server</LI><LI>Microsoft Windows 2000 Professional</LI><LI>Microsoft Windows 2000 Server</LI></UL></div><TABLE class="docinfo" cellspacing="1" cellpadding="3" align="center"><TR><TD align="right" width="5%" class="label" valign="top" nowrap="1">Last Reviewed:</TD><TD align="left" class="data" valign="top">2/13/2004
+			 (15.0)
+		</TD></TR><TR class="composite"><TD align="right" width="5%" class="label" valign="top" nowrap="1">Keywords:</TD><TD align="left" class="data" valign="top">kbenv kbinfo KB304718</TD></TR></TABLE><BR /><div class="disclaimer"></div><!-- - - - - - - - - - - - PAGE TEXT ENDS ABOVE HERE - - - - - - - - - - - --></td></tr><tr><td align="center"><table class="GetHelpHori" ><tr><td valign="middle"><a href="http://support.microsoft.com/default.aspx?scid=sz;EN-US;top&product=winsvr2003&prname=Windows%20Server%202003"><IMG src="http://support.microsoft.com/library/images/support/Get_Help_sml.gif" align="center" border="0" vspace="3" hspace="0" alt="Need More Help?" title="Need More Help?" /></a></td><td><table><tr><td align="left" class="GetHelpTitle" valign="top">Need More Help?</td></tr><tr><td align="left" valign="middle" class="GetHelpText"><a href="http://support.microsoft.com/default.aspx?scid=sz;EN-US;top&product=winsvr2003&prname=Windows%20Server%202003">Contact a Support Professional by E-Mail, Online or Phone</a></td></tr></table></td></tr></table></td></tr></table></div></div>
+<script>d.gsfxSearchRtform.srchExtraQry.value ='Windows Server 2003';
+ ChangeLink('winsvr2003')</script>
+
+</DIV>
+
+</DIV>
+</XMLREADER></td></tr></table></td></tr><tr><td valign="top" class="tpl_footer"><table class="tpl_footer_row1"><tr><td class="fbtn_cell">&nbsp;<A HREF="http://support.microsoft.com/default.aspx?pr=cntactms&style=home" TARGET="_top" >Contact Us</A>&nbsp;</td></tr></table><BR><div class="tpl_footer_row2">© 2004 Microsoft Corporation. All rights reserved.&nbsp;&nbsp;<A HREF="http://support.microsoft.com/default.aspx?scid=%2fsupport%2fmisc%2fcpyright.asp" TARGET="http://support.microsoft.com/default.aspx?scid=%2fsupport%2fmisc%2fcpyright.asp" class="ftr_copyright_text">Terms of use</A>&nbsp;&nbsp;<A HREF="http://www.microsoft.com/security/default.asp" TARGET="http://www.microsoft.com/security/default.asp" class="ftr_copyright_text">Security & Privacy</A>&nbsp;&nbsp;<A HREF="http://support.microsoft.com/default.aspx?scid=%2fisapi%2fgomscom.asp%3ftarget%3d%2fenable%2fdefault.htm" TARGET="http://support.microsoft.com/default.aspx?scid=%2fisapi%2fgomscom.asp%3ftarget%3d%2fenable%2fdefault.htm" class="ftr_copyright_text">Accessibility</A>&nbsp;&nbsp;</div></td></tr></table><IMG style="display:none;" name="metrixgif" SRC="/library/images/support/1ptrans.gif"></BODY>
+
+<script language="JavaScript" >
+   function thisLoad(){
+setcookieval("SITE","GN");
+
+   g_reSupportedHostnames = new RegExp(".msn.com$|.passport.com$|.xbox.com$|.microsoft.com$|.microsoft.cz$|.msbpn.com$|.microsoft.co.*", "i");
+  ForeignLink_Hookup(true);LogHit('http://c.microsoft.com/trans_pixel.asp?TYPE=SSPV&SOURCE=SUPPORT&URI=/GN/EN-US/kb_en-us_304718&GUID=1F4FC18C-F71E-47fb-8FC9-612F8EE59C61&R=');
+   }
+
+function thisUnload(){
+;   }
+</script>
+</HTML>

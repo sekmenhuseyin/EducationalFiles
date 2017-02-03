@@ -1,0 +1,169 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>adventure</title>
+</head>
+<body bgcolor="#ffff99">
+<!--url's used in the movie-->
+<!--text used in the movie-->
+<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,0,0" width="550" height="400" id="adventure" align="middle">
+<param name="allowScriptAccess" value="sameDomain" />
+<param name="movie" value="adventure.swf" />
+<param name="quality" value="high" />
+<param name="bgcolor" value="#ffff99" />
+<embed src="adventure.swf" quality="high" bgcolor="#ffff99" width="550" height="400" name="adventure" align="middle" allowScriptAccess="sameDomain" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" />
+</object>
+<h3>Code in <i>title</i> frame</h3>
+<pre>
+//Adventure.fla
+//Andy Harris, Dec '04
+//Basic text-style adventure game
+
+stop();
+
+btnStart.onRelease = function(){
+  _root.gotoAndStop("start");
+} // end onRelease
+</pre>
+
+<h3>Code in <i>start</i> frame</h3>
+<pre>
+btnPutOutFire.onRelease = function(){
+  _root.gotoAndStop("sink");
+} // end release
+
+btnJump.onRelease = function(){
+  _root.gotoAndStop("jump");
+} // end release
+</pre>
+
+<h3>Code in <i>sink</i> frame</h3>
+<pre>
+btnTryAgain.onRelease = function(){
+  _root.gotoAndStop("title");
+} // end try again
+</pre>
+
+<h3>Code in <i>jump</i> frame</h3>
+<pre>
+btnLifeboat.onRelease = function(){
+  _root.gotoAndStop("lifeboat");
+} // end release
+
+btnDebris.onRelease = function(){
+  _root.gotoAndStop("shore");
+} // end release
+</pre>
+
+<h3>Code in <i>lifeboat</i> frame</h3>
+<pre>
+btnTryAgain.onRelease = function(){
+  _root.gotoAndStop("title");
+} // end release
+</pre>
+
+<h3>Code in <i>shore</i> frame</h3>
+<pre>
+btnRest.onRelease = function(){
+  _root.gotoAndStop("rested");
+} // end release
+
+btnBuildFire.onRelease = function(){
+  _root.gotoAndStop("buildFire");
+} // end release
+</pre>
+
+<h3>Code in <i>buildFire</i> frame</h3>
+<pre>
+btnKeepTrying.onRelease = function(){
+  _root.gotoAndStop("buildFire");
+} // end release
+
+btnGiveUp.onRelease = function(){
+  _root.gotoAndStop("giveUp");
+} // end release
+</pre>
+
+<h3>Code in <i>rested</i> frame</h3>
+<pre>
+btnExplore.onRelease = function(){
+  _root.gotoAndStop("supplies");
+} // end release
+
+btnBuildFire.onRelease = function(){
+  _root.gotoAndStop("buildFire");
+} // end release
+
+</pre>
+
+<h3>Code in <i>supplies</i> frame</h3>
+<pre>
+btnBuildShelter.onRelease = function(){
+  _root.gotoAndStop("ship");
+} // end release
+
+btnGoHunting.onRelease = function(){
+  _root.gotoAndStop("wildPig");
+} // end release
+</pre>
+
+<h3>Code in <i>ship</i> frame</h3>
+<pre>
+btnSwim.onRelease = function(){
+  _root.gotoAndStop("drown");
+} // end release
+
+btnMakeSignal.onRelease = function(){
+  _root.gotoAndStop("win");
+} // end release
+</pre>
+
+<h3>Code in <i>wildPig</i> frame</h3>
+<pre>
+btnTacklePig.onRelease = function(){
+  _root.gotoAndStop("miss");
+} // end release
+
+btnRunAway.onRelease = function(){
+  _root.gotoAndStop("campGone");
+} // end release
+</pre>
+
+<h3>Code in <i>drown</i> frame</h3>
+<pre>
+btnStartOver.onRelease = function(){
+  _root.gotoAndStop("start");
+} // end release
+</pre>
+
+<h3>Code in <i>win</i> frame</h3>
+<pre>
+btnStartOver.onRelease = function(){
+  _root.gotoAndStop("start");
+} // end release
+</pre>
+
+<h3>Code in <i>miss</i> frame</h3>
+<pre>
+btnReturn.onRelease = function(){
+  _root.gotoAndStop("campGone");
+} // end release
+</pre>
+
+<h3>Code in <i>campGone</i> frame</h3>
+<pre>
+btnStartOver.onRelease = function(){
+  _root.gotoAndStop("start");
+} // end release
+</pre>
+
+<h3>Code in <i>giveUp</i> frame</h3>
+<pre>
+btnStartOver.onRelease = function(){
+  _root.gotoAndStop("start");
+} // end release
+</pre>
+
+</body>
+</html>

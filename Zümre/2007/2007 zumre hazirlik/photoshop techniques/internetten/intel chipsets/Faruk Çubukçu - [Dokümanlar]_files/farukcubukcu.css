@@ -1,0 +1,105 @@
+.yazikutusu {
+	scrollbar-3dlight-color: Transparent; scrollbar-arrow-color: Transparent; scrollbar-base-color: Transparent; scrollbar-darkshadow-color: Transparent; scrollbar-face-color: Transparent; scrollbar-highlight-color: Transparent; scrollbar-shadow-color: Transparent; scrollbar-track-color: Transparent
+}
+.cengizforumSoruTitle {
+	BACKGROUND-COLOR: #00c0ff; COLOR: black; FONT-WEIGHT: bold
+}
+.cengizForumSoru {
+	BORDER-BOTTOM: silver 1px solid; BORDER-LEFT: silver 1px solid; BORDER-RIGHT: silver 1px solid; BORDER-TOP: silver 1px solid
+}
+.cengizForumKategoriTabloBaslik {
+	BACKGROUND-COLOR: #00c0ff; BORDER-BOTTOM: #00c0ff 2px outset; BORDER-LEFT: #00c0ff 2px outset; BORDER-RIGHT: #00c0ff 2px outset; BORDER-TOP: #00c0ff 2px outset; FONT-WEIGHT: bold
+}
+.cengizForumKategoriTablo {
+	BORDER-BOTTOM: black 1px solid; BORDER-LEFT: black 1px solid; BORDER-RIGHT: black 1px solid; BORDER-TOP: black 1px solid
+}
+.cDate {
+	FONT-FAMILY: arial, Helvetica, sans-serif; FONT-SIZE: 10px; FONT-WEIGHT: bold; TEXT-ALIGN: center
+}
+LI {
+	COLOR: #000000
+}
+.cImg {
+	BORDER-BOTTOM: 0px; BORDER-LEFT: 0px; BORDER-RIGHT: 0px; BORDER-TOP: 0px; CURSOR: hand
+}
+.cB1 {
+	COLOR: #333399; FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif; FONT-SIZE: 18px; FONT-WEIGHT: bold; TEXT-ALIGN: center
+}
+.cTBox {
+	COLOR: #434343; FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif; FONT-SIZE: 11px
+}
+.cExam {
+	DISPLAY: none; FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif; FONT-SIZE: 11px; FONT-STYLE: normal
+}
+.cDP {
+	BACKGROUND-COLOR: #ffffcc; FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif; FONT-SIZE: 9px; FONT-STYLE: normal; VERTICAL-ALIGN: top
+}
+.cCH {
+	BACKGROUND-COLOR: #ffa500; COLOR: #800000; FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif; FONT-SIZE: 11px; FONT-STYLE: normal; TEXT-ALIGN: center; VERTICAL-ALIGN: top
+}
+.cCD {
+	BACKGROUND-COLOR: #ffffff; FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif; FONT-SIZE: 11px; FONT-STYLE: normal; VERTICAL-ALIGN: top
+}
+.cUDers {
+	COLOR: #6a5acd; CURSOR: hand; FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif; FONT-SIZE: 11px
+}
+.cBasit {
+	FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif; FONT-SIZE: 11px; FONT-STYLE: normal; TEXT-ALIGN: justify
+}
+.cMain {
+	FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif; FONT-SIZE: 11px; FONT-STYLE: normal; TEXT-ALIGN: justify
+}
+.cAdres {
+	COLOR: #ffffff; FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif; FONT-SIZE: 11px; FONT-STYLE: normal; FONT-WEIGHT: bold
+}
+.cUL {
+	COLOR: #000063
+}
+.cMM {
+	BORDER-RIGHT: #ffffff thin solid; COLOR: #000000; CURSOR: hand; FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif; FONT-SIZE: 12px; FONT-STYLE: normal; FONT-WEIGHT: bold; LETTER-SPACING: -1px; TEXT-ALIGN: center; TEXT-DECORATION: none
+}
+.cMM:hover {
+	COLOR: #696969
+}
+.cSM {
+	COLOR: #000000; CURSOR: hand; FONT-FAMILY: Arial, Helvetica, sans-serif; FONT-SIZE: 12px; FONT-STYLE: normal; FONT-WEIGHT: bold; TEXT-ALIGN: left; TEXT-DECORATION: none; WIDTH: 150px
+}
+.cSM:hover {
+	COLOR: #696969
+}
+.cTMH {
+	BACKGROUND-COLOR: transparent; COLOR: #ff6600; FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif; FONT-SIZE: 16px; FONT-WEIGHT: bold; TEXT-ALIGN: left
+}
+.cTH {
+	FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif; FONT-SIZE: 12px; FONT-WEIGHT: bold; LETTER-SPACING: -1px; TEXT-ALIGN: left
+}
+.cTD {
+	FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif; FONT-SIZE: 10px; FONT-STYLE: normal; LETTER-SPACING: -1px; TEXT-ALIGN: left
+}
+TD {
+	FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif; FONT-SIZE: 11px; FONT-STYLE: normal
+}
+INPUT {
+	BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; BORDER-TOP: #000000 1px solid; FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif; FONT-SIZE: 11px
+}
+SELECT {
+	BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; BORDER-TOP: #000000 1px solid; FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif; FONT-SIZE: 11px
+}
+TEXTAREA {
+	BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; BORDER-TOP: #000000 1px solid; FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif; FONT-SIZE: 11px
+}
+.cMar A {
+	COLOR: #000066; FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif; FONT-SIZE: 11px; FONT-WEIGHT: bold; TEXT-DECORATION: none
+}
+.cMar A:hover {
+	COLOR: #3300cc; FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif; FONT-SIZE: 11px; FONT-WEIGHT: bold; TEXT-DECORATION: none
+}
+.cForum INPUT {
+	BACKGROUND-COLOR: transparent; BORDER-BOTTOM: #0086cc 1px solid; BORDER-LEFT: #0086cc 1px solid; BORDER-RIGHT: #0086cc 1px solid; BORDER-TOP: #0086cc 1px solid; FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif; FONT-SIZE: 11px
+}
+SELECT {
+	BACKGROUND-COLOR: transparent; BORDER-BOTTOM: #0086cc 1px solid; BORDER-LEFT: #0086cc 1px solid; BORDER-RIGHT: #0086cc 1px solid; BORDER-TOP: #0086cc 1px solid; FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif; FONT-SIZE: 11px
+}
+.cForum {
+	COLOR: #0086cc; FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif; FONT-SIZE: 11px; FONT-WEIGHT: bold
+}

@@ -1,0 +1,137 @@
+<!doctype html public "-//IETF//DTD HTML//EN">
+<HTML>
+<HEAD>
+<TITLE>Windows XP: The Complete Reference: Sharing Drives and Printers on a LAN</TITLE>
+<META NAME="GENERATOR" CONTENT="Web-O-Matic Deluxe 4.1">
+<META NAME="AUTHOR" CONTENT="John R. Levine, Margaret Levine Young">
+<META NAME="COPYRIGHT" CONTENTS="Copyright 2001 by The McGraw-Hill Companies. All rights reserved.">
+</HEAD>
+<BODY BACKGROUND="../images/background.png">
+<BLOCKQUOTE>
+<SCRIPT LANGUAGE="JavaScript">
+function whomp(i, file)
+{
+	i.src = "../images/" + file + ".png";
+}
+</SCRIPT>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarered3x3.png" HEIGHT=3 WIDTH=3></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=2>
+Chapter 29: Sharing Drives and Printers on a LAN
+</FONT></TD>
+</TR>
+</TABLE>
+<BR>
+<A HREF="3.htm"  OnMouseOver='whomp(prev, "sprev");' OnMouseOut='whomp(prev, "wprev");'
+ title="Previous Section"><IMG NAME=prev SRC="../images/wprev.png" ALT="Previous" HEIGHT=20 WIDTH=82 BORDER=0></A><!--
+--><A HREF="index.htm" OnMouseOver='whomp(chap, "schap");' OnMouseOut='whomp(chap, "wchap");'
+title="Chapter Overview"><IMG SRC="../images/wchap.png" ALT="Chapter" NAME=chap HEIGHT=20 WIDTH=100 BORDER=0></A><A
+HREF="../index.htm" OnMouseOver='whomp(toc, "sbook");' OnMouseOut='whomp(toc, "wbook");' 
+title="Table of Contents"><IMG SRC="../images/wbook.png" ALT="Contents" NAME=toc HEIGHT=20 WIDTH=94 BORDER=0></A><A
+HREF="../glossary/index.htm" OnMouseOver='whomp(glos, "sglos");' OnMouseOut='whomp(glos, "wglos");' 
+title="Glossary"><IMG SRC="../images/wglos.png" ALT="Glossary" NAME=glos HEIGHT=20 WIDTH=94 BORDER=0></A><!--
+--><IMG SRC="../images/bnext.png" ALT="Next" HEIGHT=20 WIDTH=82 BORDER=0>
+<BR>
+<A NAME="1">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarered10x10.png" HEIGHT=10 WIDTH=10></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=4><B>Sharing Printers on a LAN</B></FONT>
+</TD>
+</TR>
+</TABLE></A>
+<P>
+Sharing a printer on a LAN has two steps. First you sit at the computer that is directly attached to the printer and configure the printer to be a <A NAME="ddnetworkprinter"><I>network printer</I></A> or <A NAME="ddsharedprinter"><I>shared printer</I></A> so that other computers on the network can print to it. Then you configure the other computers on the LAN so that they know about the network printer--with luck, Windows on each computer automatically detects the existence of the newly sharable printer and installs the new printer driver itself.
+<P>
+<TABLE><TR><TD VALIGN="TOP"><IMG SRC="../images/caution.png" ALT="caution" WIDTH=95 HEIGHT=29></TD>
+<TD VALIGN="TOP">Not all printers come with printer drivers that work for sharing the printer on a LAN.
+
+</TD></TR></TABLE>
+<A NAME="2">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Making Your Printer Sharable</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+If you want other people on the LAN to be able to print on your printer, the first step is to <A HREF="../printing/5.htm#1">install the printer</A> on your own computer and make sure that you can print to it. Once the printer is correctly installed, you can share it.
+<P>
+The computer that the printer is attached to is called a <A HREF="../lans/2.htm#1"><A NAME="ddprintserver"><I>print server</I></A></A>. The print server can also be someone's PC, the usual arrangement on a small network, or a computer that does nothing else. You give the printer a share name, the name that other people will see when they connect to the printer. The share name can be the type of printer (for example, HP1100A), the group that uses the printer (for example, Accounting), or some other name. A straightforward name makes it easier for others on the network to figure out which printer they are using.
+<P>
+To share the printer so that other computers on the LAN can print to it, follow these steps:
+<OL>
+<LI  VALUE=1>
+Choose Start | Printers And Faxes to see the Printers folder. (If this command doesn't appear on your Start menu, choose Start | Control Panel | Printers And Other Hardware | Printers And Faxes.)
+<LI  VALUE=2>
+Right-click the printer you want to share and choose Sharing from the Shortcut menu (or select the printer icon and click Share This Printer in the task pane). You see the Properties dialog box for the printer, with the Sharing tab displayed, as shown in Figure 29-9. (Depending on what type of network you use, you might see different settings.)
+</OL>
+<TABLE BORDER=2><TR><TD ALIGN=CENTER>
+<IMG SRC="sharehw.properties.png" WIDTH=409 HEIGHT=473 ALT="[figure]">
+</TD></TR><TR BGCOLOR="#00ffff"><TD><I>Figure 29-9:  Giving the printer a name and description when you share it</I></TD></TR></TABLE>
+<OL>
+<LI  VALUE=3>
+Click the Shared This Printer radio button.
+<LI  VALUE=4>
+Give your printer a share name.
+<LI  VALUE=5>
+If you have turned off <A HREF="../sharehw/3.htm#2">Simple File Sharing</A>, you see the Security tab on the Properties dialog box. Click it to limit use of the shared printer by user. Print is the default setting--it allows users to print to the shared printer. Manage Printers does not allow the user to print but gives the user administrative control of the printer. Manage Documents allows the user to start, cancel, and rearrange the order that documents are printed.
+<LI  VALUE=6>
+Close the printer's Properties dialog box. The icon for the printer you just shared now has a tiny hand under it, indicating that the printer is shared.
+</OL>
+<P>
+To turn sharing off, open the Properties dialog box for the printer and select the Do Not Share This Printer radio button on the Sharing tab.
+<A NAME="3">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Printing to a Network Printer from Another Computer</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+When Windows detects a shared printer on another computer on the LAN, it tries to install the printer's driver automatically. When you print from an application, check the list of available printers--the list may already include shared printers on other computers. To see the list of printers you can use, choose Start | Printers And Faxes (or Start | Control Panel | Printers And Other Hardware | Printers And Faxes) to display the Printers And Faxes folder. The icon for a shared printer has a cable beneath it.
+<BR><IMG ALIGN=TOP SRC="sharehw.sharedprinter.png" WIDTH=59 HEIGHT=66 ALT="[image]">
+<P>
+If the printer doesn't appear on the list, you need to install a driver for the printer. Here's how:
+<OL>
+<LI  VALUE=1>
+Open the Printers And Faxes window.
+<LI  VALUE=2>
+Click Add A Printer. You see the Add Printer Wizard. The Wizard asks the following:
+</OL>
+<UL>
+<LI >
+<B>Whether you</B><B>'</B><B>re installing a local or network printer  </B>You're installing a network printer.
+<LI >
+<B>The network path for the printer  </B>Unless you can type the path for the printer from memory, use the Browse button to find it. To find the printer, first find the computer to which it is attached by expanding the My Network Places hierarchy; click My Network Places, then Entire Network, then the computer to which the printer is attached, then the name of the printer.
+<LI >
+<B>Which driver to install  </B>If you already have a driver installed for this type of printer, the Wizard asks whether you want to keep the existing driver or install a new one (one of these options will be recommended). If you don't have a driver installed, the Wizard prompts you to install one--you'll probably need your Windows XP CD-ROM or a printer driver from another source (many can be found on the Internet).<B></B>
+<LI >
+<B>What name you want to call the printer  </B>This should be a name that enables you to identify the printer. If you have six LaserJets on your network, you probably don't want to call it just "LaserJet"--instead, you might want to call it "Cindy's LaserJet" since it's attached to Cindy's machine. That way, when you print to this printer, you'll know where to go to pick up your printout.<B></B>
+<LI >
+<B>Whether you want this printer to be your default printer  </B>If you want to print automatically to this printer every time you print, then the answer is Yes. If you usually want to print to another printer, choose No.<B></B>
+</UL>
+<P>
+Once you've completed these steps, you can print to the shared printer from this computer any time you want. If you defined the shared printer as your default printer, then anything you print automatically goes to that printer. If you didn't define the network printer as the default printer, then you have to choose it from the list of defined printers before you print. This is usually done on the Print dialog box of the application you are using.
+<P>
+If the network printer is unavailable, any print jobs will be held on your computer until the printer is again available.
+<P>
+For more information about printing, installing and configuring a printer and changing the default printer, refer to <A HREF="../printing/index.htm">Chapter 14</A>.
+<P>
+<A HREF="3.htm"  OnMouseOver='whomp(prevb, "sprev");' OnMouseOut='whomp(prevb, "wprev");'
+ title="Previous Section"><IMG NAME=prevb SRC="../images/wprev.png" ALT="Previous" HEIGHT=20 WIDTH=82 BORDER=0></A><!--
+--><A HREF="index.htm" OnMouseOver='whomp(chapb, "schap");' OnMouseOut='whomp(chapb, "wchap");'
+title="Chapter Overview"><IMG SRC="../images/wchap.png" ALT="Chapter" NAME=chapb HEIGHT=20 WIDTH=100 BORDER=0></A><A
+HREF="../index.htm" OnMouseOver='whomp(tocb, "sbook");' OnMouseOut='whomp(tocb, "wbook");' 
+title="Table of Contents"><IMG SRC="../images/wbook.png" ALT="Contents" NAME=tocb HEIGHT=20 WIDTH=94 BORDER=0></A><A
+HREF="../glossary/index.htm" OnMouseOver='whomp(glosb, "sglos");' OnMouseOut='whomp(glosb, "wglos");' 
+title="Glossary"><IMG SRC="../images/wglos.png" ALT="Glossary" NAME=glosb HEIGHT=20 WIDTH=94 BORDER=0></A><!--
+--><IMG SRC="../images/bnext.png" ALT="Next" HEIGHT=20 WIDTH=82 BORDER=0>
+<BR>
+</BLOCKQUOTE>
+</BODY>
+</HTML>

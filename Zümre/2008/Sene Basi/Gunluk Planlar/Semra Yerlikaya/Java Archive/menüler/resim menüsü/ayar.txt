@@ -1,0 +1,17 @@
+Açýklamalar : 
+<Head> . . . </Head> taglari arasina ekledigimiz kodlardaki;
+mylinks[0]="resim1.jpg" ile baslayan satirlarda resimlere tiklandiginda gidilecek linkleri ayarliyoruz. mylinks isimli dizi degiskenine dizi degerleri aktariyoruz. Bu degerlerin sayisi size kalmis. 0,1,2,.. Diye gidiyor bu sira.
+mylinks[0]="resim1.jpg" demek 0. yani ilk resmimizin tiklandiginda hangi adrese gidilecegi demek oluyor. 
+Burada biz resim1.jpg dosyasini açmasini söyledik. Siz ister http:// verin ister baska bir adres verin. Orasi beni enterese etmez :)) Keyfinize kalmis bi olay :)
+Bu sira;
+mylinks[0]="..."
+mylinks[1]="..."
+mylinks[2]="..."
+diye gidiyor.. Istediginiz kadar seçenek koyabilirsiniz. Tabi tagina ekledigimiz kodlarda seçenek ekleyerek.
+Biz 5 tane yaptik :)
+
+<BODY> . . . </BODY> arasina ekledigimiz kodlarda ise;
+<option value="kucukresim2.jpg">Resim #2</option> diye basliyan satirlar var. Bu satirlarda ise panelimizde çikacak olan seçeneklerle ilgili resimleri ayarliyoruz.
+Burada Resim #2 seçenegine tiklandiginda kucukresim2.jpg görünecek.
+Bu 2. Resime tiklandiginda ise mylinks[1]="resim2.jpg" satirinda belirttigimiz resim2.jpg resmi açilacak. Olay bu yane. :)
+Kolay gelsin.. 

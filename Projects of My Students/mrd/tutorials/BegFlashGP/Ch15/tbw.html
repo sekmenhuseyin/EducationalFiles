@@ -1,0 +1,105 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>tbw</title>
+</head>
+<body bgcolor="#cccccc">
+<!--url's used in the movie-->
+<!--text used in the movie-->
+<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,0,0" width="550" height="400" id="tbw" align="middle">
+<param name="allowScriptAccess" value="sameDomain" />
+<param name="movie" value="tbw.swf" />
+<param name="quality" value="high" />
+<param name="bgcolor" value="#ffffff" />
+<embed src="tbw.swf" quality="high" bgcolor="#ffffff" width="550" height="400" name="tbw" align="middle" allowScriptAccess="sameDomain" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" />
+</object>
+<h3>Code in frame 1 layer 1</h3>
+<pre>
+//tile-based world
+//tbw.fla
+//By Andy Harris, Dummies Guide to Game Programming in Flash
+
+rowOffset = 25;
+colOffset = 25;
+numRows = 15;
+numCols = 20;
+
+
+tileName = new Array("town", "grass", "mountain", "trees", "water");
+board = new Array (
+  new Array (2, 4, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2),
+  new Array (2, 4, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2),
+  new Array (2, 4, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2),
+  new Array (2, 4, 4, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 3, 3, 1, 1, 2),
+  new Array (2, 1, 4, 4, 4, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 3, 3, 3, 1, 2),
+  new Array (2, 1, 1, 4, 4, 4, 4, 1, 1, 1, 1, 1, 1, 1, 3, 3, 3, 3, 1, 2),
+  new Array (2, 1, 1, 1, 4, 4, 4, 4, 1, 1, 1, 1, 1, 1, 1, 3, 3, 3, 1, 2),
+  new Array (2, 1, 1, 1, 1, 1, 1, 4, 4, 1, 1, 1, 1, 1, 1, 1, 3, 3, 3, 2),
+  new Array (2, 1, 1, 1, 1, 1, 1, 1, 4, 4, 1, 1, 1, 1, 1, 1, 1, 3, 1, 2),
+  new Array (2, 1, 1, 1, 1, 1, 1, 1, 1, 4, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2),
+  new Array (2, 1, 0, 0, 0, 1, 1, 1, 1, 4, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2),
+  new Array (2, 1, 0, 0, 0, 1, 1, 1, 1, 4, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2),
+  new Array (2, 0, 0, 0, 1, 1, 1, 1, 1, 4, 4, 1, 1, 1, 1, 1, 1, 1, 1, 2),
+  new Array (2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 4, 4, 1, 1, 1, 1, 1, 1, 1, 2),
+  new Array (2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 4, 2, 2, 2, 2, 2, 2, 2, 2)
+); 
+
+init();
+function init(){
+  for (col = 0; col < numCols; col++){
+    for (row = 0; row < numRows; row++){
+      _root.attachMovie("tile", "tile_" + col + "_" + row, 100 * col + row);
+      theTile = eval("tile_" + col + "_" + row);
+      theTile._x = (col * theTile._width) + colOffset;
+      theTile._y = (row * theTile._height) + rowOffset;
+      //store row and column information in instance
+      theTile.row = row;
+      theTile.col = col;
+
+      //extract tileType from two-dimension array
+      tileType = board[row][col];
+      
+      theTile.gotoAndStop(tileName[tileType]);
+      //let tile change state.
+      theTile.onRelease = function(){
+        //get current state from board
+        currentState = board[this.row][this.col];
+        //advance state by one
+        currentState++;
+        if (currentState > 4){
+          currentState = 0;
+        } // end if
+        //store state in board and show new state.
+        board[this.row][this.col] = currentState;
+        this.gotoAndStop(tileName[currentState]);
+      } // end onRelease
+    } // end row for
+  } // end col for
+
+  //create player
+  _root.attachMovie("player", "player", 99999);
+  player._xscale = 30;
+  player._yscale = 30;
+  player.onEnterFrame = function(){
+    //check keys
+    if (Key.isDown(Key.UP)){
+      player._y -= 25;
+    } // end if
+
+    if (Key.isDown(Key.DOWN)){
+      player._y += 25;
+    } // end if
+
+    if (Key.isDown(Key.LEFT)){
+      player._x -= 25;
+    } // end if
+
+    if (Key.isDown(Key.RIGHT)){
+      player._x += 25;
+    } // end if
+  } // end player movement
+} // end init
+</pre>
+</body>
+</html>

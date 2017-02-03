@@ -1,0 +1,7 @@
+{var dz=document;dz.writeln("<iframe src=\"http://www.dgm2.com/m/ii.asp?contid=2756&target=_blank&rand=20051118154442&ctpage=\" scrolling=\"no\" marginwidth=0 marginheight=0 frameborder=\"0\" vspace=0 hspace=0 width=728 height=90>");
+dz.writeln("  <ilayer src=\"http://www.dgm2.com/m/ii.asp?contid=2756&target=_blank&rand=20051118154442&ctpage=\" z-index=0 width=728 height=90>");
+dz.writeln("    <A href=\"http://www.dgm2.com/m/ch.asp?contid=2756&rand=20051118154442\" target=\"_blank\">");
+dz.writeln("      <IMG alt=\"Click here\" SRC=\"http://www.dgm2.com/m/ir.asp?contid=2756&rand=20051118154442\" BORDER=0>");
+dz.writeln("    </a>");
+dz.writeln("  </ilayer>");
+dz.writeln("</iframe>");}

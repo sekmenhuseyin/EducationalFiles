@@ -1,0 +1,104 @@
+<!doctype html public "-//IETF//DTD HTML//EN">
+<HTML>
+<HEAD>
+<TITLE>Windows XP: The Complete Reference: Adding and Removing Hardware</TITLE>
+<META NAME="GENERATOR" CONTENT="Web-O-Matic Deluxe 4.1">
+<META NAME="AUTHOR" CONTENT="John R. Levine, Margaret Levine Young">
+<META NAME="COPYRIGHT" CONTENTS="Copyright 2001 by The McGraw-Hill Companies. All rights reserved.">
+</HEAD>
+<BODY BACKGROUND="../images/background.png">
+<BLOCKQUOTE>
+<SCRIPT LANGUAGE="JavaScript">
+function whomp(i, file)
+{
+	i.src = "../images/" + file + ".png";
+}
+</SCRIPT>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarered3x3.png" HEIGHT=3 WIDTH=3></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=2>
+Chapter 13: Adding and Removing Hardware
+</FONT></TD>
+</TR>
+</TABLE>
+<BR>
+<A HREF="5.htm"  OnMouseOver='whomp(prev, "sprev");' OnMouseOut='whomp(prev, "wprev");'
+ title="Previous Section"><IMG NAME=prev SRC="../images/wprev.png" ALT="Previous" HEIGHT=20 WIDTH=82 BORDER=0></A><!--
+--><A HREF="index.htm" OnMouseOver='whomp(chap, "schap");' OnMouseOut='whomp(chap, "wchap");'
+title="Chapter Overview"><IMG SRC="../images/wchap.png" ALT="Chapter" NAME=chap HEIGHT=20 WIDTH=100 BORDER=0></A><A
+HREF="../index.htm" OnMouseOver='whomp(toc, "sbook");' OnMouseOut='whomp(toc, "wbook");' 
+title="Table of Contents"><IMG SRC="../images/wbook.png" ALT="Contents" NAME=toc HEIGHT=20 WIDTH=94 BORDER=0></A><A
+HREF="../glossary/index.htm" OnMouseOver='whomp(glos, "sglos");' OnMouseOut='whomp(glos, "wglos");' 
+title="Glossary"><IMG SRC="../images/wglos.png" ALT="Glossary" NAME=glos HEIGHT=20 WIDTH=94 BORDER=0></A><!--
+--><A HREF="7.htm"  OnMouseOver='whomp(next, "snext");' OnMouseOut='whomp(next, "wnext");'
+ title="Next Section"><IMG NAME=next SRC="../images/wnext.png" ALT="Next" HEIGHT=20 WIDTH=82 BORDER=0></A>
+<BR>
+<A NAME="1">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarered10x10.png" HEIGHT=10 WIDTH=10></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=4><B>Troubleshooting Your Hardware Configuration</B></FONT>
+</TD>
+</TR>
+</TABLE></A>
+<P>
+In a perfect world, every device installation would work the first time. In the real world, something goes wrong about one time in three, and you have to fix it. The most common problem is that an <A HREF="../hardware/4.htm#19">I/O device address or interrupt</A> used by the new device conflicts with an older one.
+<P>
+In the worst case, Windows doesn't boot at all after you add your new device. Back in the old days of ISA and EISA adapter cards, this invariably meant that the settings on the card conflicted with an existing device. You'd have to turn off the computer, take out the new device, turn on the computer, and reboot. Use <A HREF="../hardware/3.htm#1">the Device Manger</A> to see what addresses and interrupts are currently in use, and use the card's documentation to find out how to change jumpers to addresses and interrupts that are available (the next section describes how). Then reinstall the card and try again. However, PCI cards almost never run into this problem because few have jumpers.
+<P>
+If you can't tell what the conflicts are, boot the computer in <A HREF="../hardware/6.htm#3">Safe Mode</A>, described in the section "Booting in Safe Mode" later in this chapter.
+<A NAME="2">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Solving Configuration Problems by Using the Device Manager</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+You can use the Device Manager to deal with configuration problems by looking at the details of how Windows communicates with the device. The settings for each device are different, depending on the type of hardware and the specific model.
+<P>
+Display the Device Manager by choosing Start | Control Panel, opening the System icon, selecting the Hardware tab, and clicking the Device Manager button. (Figure 13-1 near the beginning of this chapter shows the Device Manager window.) If a device has a problem, its icon appears with a red or yellow exclamation point next to it (or a red X over it).
+<P>
+To see information about a particular device, right-click that device, and click the Properties button to see the Properties dialog box for the device. Look at the General and Resources tab for information about its status (try the other tabs, too, if you can't find the information). If a device has resource conflicts, Windows displays them, as in Figure 13-8. In this case, the conflict is the interrupt number. To resolve a conflict, look at the settings that the device driver offers and try changing them.
+<TABLE BORDER=2><TR><TD ALIGN=CENTER>
+<IMG SRC="hardware.conf.png" WIDTH=404 HEIGHT=455 ALT="[figure]">
+</TD></TR><TR BGCOLOR="#00ffff"><TD><I>Figure 13-8:  This modem has a hardware resource conflict.</I></TD></TR></TABLE>
+<P>
+Here are the two most common problems you can see in the Device Manager:
+<UL>
+<LI >
+<B>Something wrong with the driver</B>  If the driver for the device doesn't work with Windows or is missing, you can right-click the device in the Device Manager window and choose Update Driver from the menu that appears. The Hardware Update Wizard runs and steps you through the process of installing a driver. If the device came with a CD-ROM, choose Install From A List Or Specific Location and put the CD-ROM into your CD-ROM drive. Be sure to check the manufacturer's Web site for new drivers. If you have Windows 9x/Me drivers, they may not work with Windows XP.<B></B>
+<LI >
+<B>Interrupt (IRQ) Conflict</B>  If two devices have an <I>X</I> on their icons in the Device Manager window, they may have conflicting interrupts (that is, they are both trying to use the same interrupt). Click the Resources tab on each device's Properties dialog box (if there is one) to see which <A HREF="../hardware/4.htm#21">IRQ</A> the device uses to communicate with the rest of the computer. To see a list of interrupts (IRQs) and which device uses each one, choose View | Resources By Type in the Device Manager window and click the plus box by the Interrupt Request (IRQ) item. Change the IRQ for one of the conflicting devices, restart the computer, and see if the new setting works.
+</UL>
+<A NAME="3">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Booting in Safe Mode</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+<A NAME="ddsafemode"><I>Safe Mode</I></A> provides minimal Windows functions by disabling all devices except the keyboard, screen, and disk. If you are in Windows and would like to restart in Safe Mode, restart the computer normally, but hold the C<SMALL>TRL</SMALL> key throughout the shutdown sequence. To cold boot (turn on your computer) into Safe Mode, start your computer normally, but watch the screen carefully. As soon as you see the Starting Windows message, press <TT>F8</TT> repeatedly. You should see a menu of startup options, one of which is Safe Mode. (Other options include Safe Mode With Network Support, which you can use if you're 100 percent sure that the problem isn't a network device, nor any other device that might be conflicting with the hardware resources used by a network device.) See "<A HREF="../trouble/1.htm#2">Startup Modes</A>" in Chapter 35 for more information on starting Windows in other modes.<P>
+Once you've booted in Safe Mode, you can use the <A HREF="../hardware/6.htm#2">Device Manager</A> and other Windows facilities to figure out what's wrong.
+<P>
+To leave Safe Mode, reboot the computer normally.
+<P>
+<A HREF="5.htm"  OnMouseOver='whomp(prevb, "sprev");' OnMouseOut='whomp(prevb, "wprev");'
+ title="Previous Section"><IMG NAME=prevb SRC="../images/wprev.png" ALT="Previous" HEIGHT=20 WIDTH=82 BORDER=0></A><!--
+--><A HREF="index.htm" OnMouseOver='whomp(chapb, "schap");' OnMouseOut='whomp(chapb, "wchap");'
+title="Chapter Overview"><IMG SRC="../images/wchap.png" ALT="Chapter" NAME=chapb HEIGHT=20 WIDTH=100 BORDER=0></A><A
+HREF="../index.htm" OnMouseOver='whomp(tocb, "sbook");' OnMouseOut='whomp(tocb, "wbook");' 
+title="Table of Contents"><IMG SRC="../images/wbook.png" ALT="Contents" NAME=tocb HEIGHT=20 WIDTH=94 BORDER=0></A><A
+HREF="../glossary/index.htm" OnMouseOver='whomp(glosb, "sglos");' OnMouseOut='whomp(glosb, "wglos");' 
+title="Glossary"><IMG SRC="../images/wglos.png" ALT="Glossary" NAME=glosb HEIGHT=20 WIDTH=94 BORDER=0></A><!--
+--><A HREF="7.htm"  OnMouseOver='whomp(nextb, "snext");' OnMouseOut='whomp(nextb, "wnext");'
+ title="Next Section"><IMG NAME=nextb SRC="../images/wnext.png" ALT="Next" HEIGHT=20 WIDTH=82 BORDER=0></A>
+<BR>
+</BLOCKQUOTE>
+</BODY>
+</HTML>

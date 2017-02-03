@@ -1,0 +1,115 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>carVectorOOP</title>
+</head>
+<body bgcolor="#cccccc">
+<!--url's used in the movie-->
+<!--text used in the movie-->
+<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,0,0" width="550" height="400" id="carVectorOOP" align="middle">
+<param name="allowScriptAccess" value="sameDomain" />
+<param name="movie" value="carVectorOOP.swf" />
+<param name="quality" value="high" />
+<param name="bgcolor" value="#ffffff" />
+<embed src="carVectorOOP.swf" quality="high" bgcolor="#ffffff" width="550" height="400" name="carVectorOOP" align="middle" allowScriptAccess="sameDomain" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" />
+</object>
+<h3>Code in frame 1 layer 1</h3>
+<pre>
+//carVectorOOP
+//convert carVector to OOP notation
+//by changing all functions to methods
+
+init();
+function init(){
+  car.speed = 0;
+  //direction is now in degrees
+  car.dir = 33;
+}
+
+car.onEnterFrame = function(){
+  this.checkKeys();
+  this.turn();
+  this.move();
+} // end enterFrame
+
+car.turn = function(){
+  //use vector projection to get DX and DY
+
+  //offset the angle
+  degrees = this.dir -90;
+
+  //convert to radians
+  radians = degrees / 180 * Math.PI;
+
+  //get DX and DY (normalized: length is one)
+  this.dx = Math.cos(radians);
+  this.dy = Math.sin(radians);
+
+  //compensate for speed
+  this.dx *= this.speed;
+  this.dy *= this.speed;
+} // end turn;
+
+car.move = function(){
+  //moves any this, wrapping around boundaries
+
+  //move
+  this._x += this.dx;
+  this._y += this.dy;
+
+  //rotate changed slightly.
+  this._rotation = this.dir;
+  
+  //check boundaries - wrap all directions
+  if (this._x > Stage.width){
+    this._x = 0;
+  } // end if
+
+  if (this._x < 0){
+    this._x = Stage.width;
+  } // end if
+
+  if (this._y > Stage.height){
+    this._y = 0;
+  } // end if
+
+  if (this._y < 0){
+    this._y = Stage.height;
+  } // end if
+} // end move
+ 
+car.checkKeys = function(){
+  //check keyboard to move car
+  if (Key.isDown(Key.UP)){
+    car.speed++;
+    if (car.speed > 8){
+      car.speed = 8;
+    } // end if
+  } // end if
+
+  if (Key.isDown(Key.DOWN)){
+    car.speed--;
+    if (car.speed < -3){
+      car.speed = -3;
+    } // end if
+  } // end if
+
+  if (Key.isDown(Key.RIGHT)){
+    car.dir += 5;
+    if (car.dir > 360){
+      car.dir = 0;
+    } // end if
+  } // end if
+
+  if (Key.isDown(Key.LEFT)){
+    car.dir -= 5;
+    if (car.dir < 0){
+      car.dir = 360;
+    } // end if
+  } // end if
+
+} // end checkKeys
+</pre>
+</body>
+</html>

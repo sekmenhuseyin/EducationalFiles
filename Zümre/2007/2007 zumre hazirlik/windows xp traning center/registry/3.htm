@@ -1,0 +1,236 @@
+<!doctype html public "-//IETF//DTD HTML//EN">
+<HTML>
+<HEAD>
+<TITLE>Windows XP: The Complete Reference: Registering Programs and File Types</TITLE>
+<META NAME="GENERATOR" CONTENT="Web-O-Matic Deluxe 4.1">
+<META NAME="AUTHOR" CONTENT="John R. Levine, Margaret Levine Young">
+<META NAME="COPYRIGHT" CONTENTS="Copyright 2001 by The McGraw-Hill Companies. All rights reserved.">
+</HEAD>
+<BODY BACKGROUND="../images/background.png">
+<BLOCKQUOTE>
+<SCRIPT LANGUAGE="JavaScript">
+function whomp(i, file)
+{
+	i.src = "../images/" + file + ".png";
+}
+</SCRIPT>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarered3x3.png" HEIGHT=3 WIDTH=3></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=2>
+Chapter 38: Registering Programs and File Types
+</FONT></TD>
+</TR>
+</TABLE>
+<BR>
+<A HREF="2.htm"  OnMouseOver='whomp(prev, "sprev");' OnMouseOut='whomp(prev, "wprev");'
+ title="Previous Section"><IMG NAME=prev SRC="../images/wprev.png" ALT="Previous" HEIGHT=20 WIDTH=82 BORDER=0></A><!--
+--><A HREF="index.htm" OnMouseOver='whomp(chap, "schap");' OnMouseOut='whomp(chap, "wchap");'
+title="Chapter Overview"><IMG SRC="../images/wchap.png" ALT="Chapter" NAME=chap HEIGHT=20 WIDTH=100 BORDER=0></A><A
+HREF="../index.htm" OnMouseOver='whomp(toc, "sbook");' OnMouseOut='whomp(toc, "wbook");' 
+title="Table of Contents"><IMG SRC="../images/wbook.png" ALT="Contents" NAME=toc HEIGHT=20 WIDTH=94 BORDER=0></A><A
+HREF="../glossary/index.htm" OnMouseOver='whomp(glos, "sglos");' OnMouseOut='whomp(glos, "wglos");' 
+title="Glossary"><IMG SRC="../images/wglos.png" ALT="Glossary" NAME=glos HEIGHT=20 WIDTH=94 BORDER=0></A><!--
+--><IMG SRC="../images/bnext.png" ALT="Next" HEIGHT=20 WIDTH=82 BORDER=0>
+<BR>
+<A NAME="1">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarered10x10.png" HEIGHT=10 WIDTH=10></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=4><B>Editing the Registry</B></FONT>
+</TD>
+</TR>
+</TABLE></A>
+<P>
+The Windows <A HREF="../registry/1.htm#1">Registry</A> contains a great deal of information beyond the file associations discussed in the <A HREF="../registry/2.htm#1">previous section</A>. For the most part, you won't need to do any editing yourself, but occasionally, a bug fix or parameter change requires a change to the Registry, so you need to be prepared to do a little editing now and then. If you're interested in how Windows works, you can also spend as much time as you want nosing around the Registry with the Registry Editor program.
+<P>
+<TABLE><TR><TD VALIGN="TOP"><IMG SRC="../images/caution.png" ALT="caution" WIDTH=95 HEIGHT=29></TD>
+<TD VALIGN="TOP">Never make changes to the Registry without first making a backup! Better yet, include the Registry in your daily <A HREF="../backup/index.htm">backups</A>.
+
+</TD></TR></TABLE>
+<A NAME="2">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Restoring the Registry</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+If the Registry is damaged, you can restore it from a backup. Follow these steps:
+<OL>
+<LI  VALUE=1>
+Save your files and close all your programs.
+<LI  VALUE=2>
+Choose Start | Turn Off Computer | Restart. Windows shuts down and restarts.
+<LI  VALUE=3>
+When you see the message Please Select The Operating System To Start, press <TT>F8</TT>. Windows displays a <A HREF="../trouble/1.htm#2">list of options</A>.
+<LI  VALUE=4>
+Press the U<SMALL>P</SMALL>-A<SMALL>RROW</SMALL> or D<SMALL>OWN</SMALL>-A<SMALL>RROW</SMALL> until you highlight the Last Known Good Configuration option, and press E<SMALL>NTER</SMALL>. (If the arrow keys don't work, press N<SMALL>UM</SMALL> L<SMALL>OCK</SMALL> to enable them.)<LI  VALUE=5>
+Choose the operating system (either Windows XP Professional or Windows XP Home Edition). Windows then restores your most recentlybacked up values for the HKEY_LOCAL_MACHINE\System\CurrentControlSet hive in the Registry, and restarts Windows.
+</OL>
+<P>
+If the Registry entries for an application get damaged, consider uninstalling and reinstalling the program. If restoring a backup of the Registry still doesn't fix your problem, you may have to back up your data, reformat the disk (or partition) on which Windows is installed, and reinstall Windows and all your programs.
+<P>
+<TABLE><TR><TD VALIGN="TOP"><IMG SRC="../images/note.png" ALT="note" WIDTH=95 HEIGHT=29></TD>
+<TD VALIGN="TOP"><A HREF="../trouble/6.htm#1">System Restore</A> can also restore a previous version of the Registry.
+
+</TD></TR></TABLE>
+<A NAME="3">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Running Registry Editor</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+Registry Editor (Regedit for short) lets you edit anything in the Registry. To run Registry Editor, select Start | Run, type <B>regedit</B>, and press E<SMALL>NTER</SMALL>. This chapter describes Registry Editor version 5.<P>
+<TABLE><TR><TD VALIGN="TOP"><IMG SRC="../images/caution.png" ALT="caution" WIDTH=95 HEIGHT=29></TD>
+<TD VALIGN="TOP">Registry Editor has almost no built-in checks or validation, so be very sure that you make any changes correctly. Incorrect Registry entries can lead to anything from occasional flaky behavior to complete system failure. We suggest that you export the keys that you plan to edit before making any changes, so that you can re-import them if the changes cause problems.
+
+</TD></TR></TABLE>
+<A NAME="4">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Finding Registry Entries</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+Registry Editor has a two-part window, shown in Figure 38-1, much like <A HREF="../files/5.htm#1">Windows Explorer</A>. Each key is shown as a folder in the left pane of the Registry Editor window. When you select a key in the left pane, the name and data of each of its values appear in the right pane. You can expand and contract parts of the name tree by clicking the + and - icons in the key area. Select any key to see the names and data of the values, if any, associated with that key.
+<TABLE BORDER=2><TR><TD ALIGN=CENTER>
+<IMG SRC="registry.edit.png" WIDTH=638 HEIGHT=427 ALT="[figure]">
+</TD></TR><TR BGCOLOR="#00ffff"><TD><I>Figure 38-1:  Looking at the Registry</I></TD></TR></TABLE>
+<P>
+If you know the name of the key you want, you can navigate through the key names similar to the way you navigate through files in Windows Explorer.
+<P>
+If you don't know the name of the key, you can search for it by choosing Edit | Find (or pressing C<SMALL>TRL</SMALL>-F). You can search for any combination of keys, value names, and value data. For example, if you mistyped your name at the time you set up Windows and want to correct it, search for the mistyped name as value data. Press <TT>F3</TT> to step from one match to the next.<P>
+<TABLE><TR><TD VALIGN="TOP"><IMG SRC="../images/tip.png" ALT="tip" WIDTH=95 HEIGHT=29></TD>
+<TD VALIGN="TOP">As you edit Registry entries, Registry Editor makes the changes right away--there's no Save, Cancel, or Undo command. You can edit the Registry and leave the Registry Editor window open while you check whether your changes produce the desired effect. Some programs aren't affected by Registry changes until they are restarted; others reflect the changes immediately.
+
+</TD></TR></TABLE>
+<P>
+When you run Registry Editor again, it displays the key that you were looking at when you last exited the program, so it's easy to continue making changes to the same key.
+<A NAME="5">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Adding and Changing Registry Entries</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+You can add, edit, and delete Registry entries (but be sure you back them up first):
+<UL>
+<LI >
+<B>Changing the data of a value  </B>Double-click the name of the value (in the Name column of the right pane of the Registry Editor window). Registry Editor displays a dialog box in which you can enter the new data for the value. You see the Edit String dialog box, which looks different depending on the data type of the value you are changing:
+</UL>
+<BR><IMG ALIGN=TOP SRC="registry.editstring.png" WIDTH=384 HEIGHT=169 ALT="[image]">
+<P>
+You can't change the type of a value, so you have to enter a text string, a numeric value, or a string of hexadecimal digits, depending on the type of the data.
+<UL>
+<LI >
+<B>Renaming a key or a value  </B>Right-click its name and choose Rename from the menu that appears. (Don't rename a value that Windows or another program uses, because Windows won't be able to find the key under its new name.)
+<LI >
+<B>Creating a new key  </B>Right-click the folder (key) into which you want to add the new key and choose New | Key from the menu that appears. As in Windows Explorer, the new key is created with a dummy name. Type the name you actually want and press E<SMALL>NTER</SMALL>.<LI >
+<B>Creating a new value  </B>Right-click the key in which you want store the new value, choose New from the menu that appears, and choose the type of value (String Value, Binary Value, or DWORD). Once you've created a value, double-click the value's name to enter its data.
+<LI >
+<B>Deleting a value or key  </B>Select the value or key and press D<SMALL>ELETE</SMALL>.</UL>
+<P>
+<TABLE><TR><TD VALIGN="TOP"><IMG SRC="../images/tip.png" ALT="tip" WIDTH=95 HEIGHT=29></TD>
+<TD VALIGN="TOP">If you're not absolutely sure about deleting a key, rename it. Add an underscore or number to the end, so that the Registry doesn't recognize it, but you will if you need to change it back later.
+
+</TD></TR></TABLE>
+<P>
+You can also rename and delete keys and values by using the Edit menu.
+<P>
+<TABLE><TR><TD VALIGN="TOP"><IMG SRC="../images/tip.png" ALT="tip" WIDTH=95 HEIGHT=29></TD>
+<TD VALIGN="TOP">If you want to remember the name of a Registry key--or tell a friend about it--you can copy it to the Clipboard. Select the key whose complete name you want, and choose Edit | Copy Key Name from the menu bar.
+
+</TD></TR></TABLE>
+<A NAME="6">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Editing the Registry as a Text File</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+Another way to edit the Registry is to export all or part of the Registry to a text file, edit the text file, and then import the changed values back into the Registry. You can export and import the entire Registry or one "branch" of the Registry's tree of keys. Registry Editor stores the exported Registry entries in a <A NAME="ddregistrationfile"><I>registration file</I></A> with the extension .reg.
+<P>
+A registration file consists of a series of lines that look like this:
+<P><PRE>
+[HKEY_CLASSES_ROOT\.bfc\ShellNew\Config]<BR>
+"NoExtension"="Temp"
+</PRE>
+<P>
+The first line is the name of the key (enclosed in square brackets) and the lines that follow are the values in the key, in the format <I>"name"="value"</I>.
+<P>
+<TABLE><TR><TD VALIGN="TOP"><IMG SRC="../images/note.png" ALT="note" WIDTH=95 HEIGHT=29></TD>
+<TD VALIGN="TOP">Windows XP (like Windows NT and2000) exports the Registry using Unicode rather than plain text. You can't export keys from the Windows XP Registry and import them into a Windows Me/9x Registry.
+
+</TD></TR></TABLE>
+<P>
+Follow these steps to edit the Registry by using a text editor:
+<OL>
+<LI  VALUE=1>
+Select a hive or key in the left pane, choosing one that contains all the keys that you want to edit. To export the entire Registry, select the My Computer item at the root of the Registry tree.
+<LI  VALUE=2>
+Choose File | Export to write the text file. Registry Editor asks you for the folder and filename to use for the registration file. Then it writes the data into the new file, which may take a few minutes.
+<LI  VALUE=3>
+Edit the registration file in any text editor. (<A HREF="../docs/1.htm#1">Notepad</A> works fine.) Right-click the .reg file in Windows Explorer and choose Edit from the shortcut menu that appears. Notepad runs (or another text editor, if you choose it). Make as few changes as possible to the file and save the file.
+<LI  VALUE=4>
+In Registry Editor, choose File | Import to read the edited file back into the Registry. The keys and values in the imported file replace the corresponding keys and values in the Registry. Note that if you delete a key or value in the text file, importing the file doesn't delete the key or value in the Registry.
+</OL>
+<P>
+<TABLE><TR><TD VALIGN="TOP"><IMG SRC="../images/tip.png" ALT="tip" WIDTH=95 HEIGHT=29></TD>
+<TD VALIGN="TOP">The Registry is quite large--an exported version of the whole thing can be 30MB or more. If you do plan to edit it, just export the branch you plan to work on.
+
+</TD></TR></TABLE>
+<P><TABLE BORDER=2 CELLPADDING=10><TR>
+<TD BGCOLOR="#00ffff" WIDTH=2></TD><TD>
+<A NAME="7">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Running Programs on Start-up</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+You can tell Windows to start a program automatically when Windows starts up by including a shortcut to it in the <A HREF="../running/2.htm#10">Startup folder of your Start Menu</A>. However, there are two other ways to run a program automatically when Windows starts: lines in the Win.ini file and keys in the Registry.
+<P>
+The <A HREF="../internals/1.htm#5">Win.ini</A> file (which is stored in C:\Windows, assuming that Windows in installed on C:), can include lines like this:
+<P><PRE>
+run=<I>program</I><BR>
+load=<I>program</I>
+</PRE>
+<P>
+Replace <I>program</I> with the pathname of the file that contains the program. To stop a program from running, remove this line from the Win.ini file, or add a semicolon at the beginning of the line.
+<P>
+Two places in the Registry can contain entries that run programs at Windows start-up. Look in these two keys:
+<P><PRE>
+HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\Current Version<BR>
+HKEY_CURRENT_USER\Software\Microsoft\Windows\Current Version
+</PRE>
+<P>
+These keys can contain keys named Run, RunOnce, or RunOnceEx, which contain values that start programs when Windows starts. To stop the program from running, remove or rename the key.
+</TD></TR></TABLE>
+<P>
+<A HREF="2.htm"  OnMouseOver='whomp(prevb, "sprev");' OnMouseOut='whomp(prevb, "wprev");'
+ title="Previous Section"><IMG NAME=prevb SRC="../images/wprev.png" ALT="Previous" HEIGHT=20 WIDTH=82 BORDER=0></A><!--
+--><A HREF="index.htm" OnMouseOver='whomp(chapb, "schap");' OnMouseOut='whomp(chapb, "wchap");'
+title="Chapter Overview"><IMG SRC="../images/wchap.png" ALT="Chapter" NAME=chapb HEIGHT=20 WIDTH=100 BORDER=0></A><A
+HREF="../index.htm" OnMouseOver='whomp(tocb, "sbook");' OnMouseOut='whomp(tocb, "wbook");' 
+title="Table of Contents"><IMG SRC="../images/wbook.png" ALT="Contents" NAME=tocb HEIGHT=20 WIDTH=94 BORDER=0></A><A
+HREF="../glossary/index.htm" OnMouseOver='whomp(glosb, "sglos");' OnMouseOut='whomp(glosb, "wglos");' 
+title="Glossary"><IMG SRC="../images/wglos.png" ALT="Glossary" NAME=glosb HEIGHT=20 WIDTH=94 BORDER=0></A><!--
+--><IMG SRC="../images/bnext.png" ALT="Next" HEIGHT=20 WIDTH=82 BORDER=0>
+<BR>
+</BLOCKQUOTE>
+</BODY>
+</HTML>

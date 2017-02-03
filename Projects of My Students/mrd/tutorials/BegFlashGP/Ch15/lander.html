@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>lander</title>
+</head>
+<body bgcolor="#cccccc">
+<!--url's used in the movie-->
+<!--text used in the movie-->
+<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,0,0" width="550" height="400" id="lander" align="middle">
+<param name="allowScriptAccess" value="sameDomain" />
+<param name="movie" value="lander.swf" />
+<param name="quality" value="high" />
+<param name="bgcolor" value="#000000" />
+<embed src="lander.swf" quality="high" bgcolor="#000000" width="550" height="400" name="lander" align="middle" allowScriptAccess="sameDomain" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" />
+</object>
+<h3>code in frame 1 layer 1</h3>
+<pre>
+//lunar lander game
+//lander.fla
+//By Andy Harris, Dummies Guide to Game Programming in Flash
+
+init();
+gravity = .2;
+
+function init(){
+  lander.dx = 0;
+  lander.dy = 0;
+  lander.onGround = false;
+} // end init
+
+lander.onEnterFrame = function(){
+  lander.checkKeys();
+  lander.move();
+  lander.checkLanding();
+} // end enterFrame
+
+lander.move = function(){
+  //if lander is currently on ground, do nothing
+  if (lander.onGround == false){
+    lander.dy += gravity;
+
+    lander._x += lander.dx;
+    lander._y += lander.dy;
+    if (lander._y > Stage.height){
+      lander._y = 0;
+      lander.dy = 0;
+    } // end if
+  } // end if
+} // end move
+
+lander.checkKeys = function(){
+  if (Key.isDown(Key.UP)){
+    lander.onGround = false;
+    lander.dy -= .5;
+  } // end if
+
+  if (Key.isDown(Key.LEFT)){
+    lander.dx += .1;
+  } // end if
+    
+  if (Key.isDown(Key.RIGHT)){
+    lander.dx -= .1;
+  } // end if
+    
+} // end checkKeys
+
+lander.checkLanding = function(){
+  if (lander.hitTest(platform)){
+    if (lander.dy > 0){
+      if (lander.dy  < 2){
+        if (lander.dx > -1){
+          if (lander.dx < 1){
+            lander.dx = 0;
+            lander.dy = 0;
+            lander.onGround = true;
+          } // end if
+        } // end if
+      } // end if
+    } // end if
+  } // end if
+} // end checkLanding
+
+</pre>
+</body>
+</html>

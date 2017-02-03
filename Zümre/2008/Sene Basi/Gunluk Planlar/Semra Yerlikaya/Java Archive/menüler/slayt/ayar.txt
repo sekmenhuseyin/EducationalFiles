@@ -1,0 +1,14 @@
+Açýklamalar : 
+» Ýlk önce sayfanýn üstündeki sliding_menu.js baðlantýsýna týklayarak javascript(.js) dosyasýný indirin. (Sað týklayýp Hedefi Farklý Kaydet)
+Bu dosyayý sayfayla ayný klasöre koyacaksýnýz..
+» Kodlarda ;
+Link[0] = "0|Baþlýk 1";    ile baþlayan satýrlarda, Baþlýklarý tanýmlýyoruz. Baþlýk olduðunu belirtmek için ise; 0 ibaresine dikkat edin.
+» Hemen alt satýrýnda ise;
+Link[1] = "1|Anasayfa|index.htm|";    ile baþlayan satýrlar var. Burdada o baþlýða ait linkleri tanýmlýyoruz. Link olduðunu ise 1 ibaresi ile belirtiyoruz.. 
+» Belirtimleri    |    karakteri ile yapýyoruz. Ýlk belirtimde link mi yoksa baþlýkmý olduðunu, ikinci belirtimde ise sayfada görünecek ismini, üçüncü belirtimde ise link ise adresini yazýyoruz.. Dördüncü belirtimde ise link ise hangi hedef frame de açýlacaðýný belirtiyoruz. Bu kýsým zorunlu deðil.
+» Yani;    Link[Numara] = "0 veya 1 | Ýsim | link ise adresi"    þeklinde yapabilirsiniz.. 
+
+Menümüzü,   Link[0], Link[1], ... þeklinde dizi deðiþkeni oluþturup çoðaltabiliyoruz.. Sýra önemli. 
+
+Menü mantýðý ;     0 ile baþlýklarý tanýmladýktan sonra, bir dahaki 0 ile baþlýk tanýmlayýncaya kadarki 1 ile tanýmladýðýmýz tüm linkler o baþlýðýn altýnda görünüyor.. 
+Gayet basit yani.. 

@@ -1,0 +1,88 @@
+<html>
+
+<head>
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1254">
+<title>Yeni Sayfa 1</title>
+
+<SCRIPT language="JavaScript"> 
+<!--
+/*Bu script http://javascriptcity.com adresinden temin edilmiştir.
+JavaSayfası - Türkçe JavaScript aRşivi
+http://www.javasayfasi.com - ©2000-2002 Isparta
+*/
+
+/* 
+TÜM RESİMLER AYNI BOYUTTA OLMAK ZORUNDA
+RESİM BOYUTLARINI AŞAĞIDA AYARLIYORUZ.
+*/
+var pic_width=145;
+var pic_height=141;
+
+// DÜĞMEDEKİ METİNİ BURADA TANIMLIYORUZ..
+button_text="Sonraki Resim";
+
+
+// RESİMLERİN ADRESLERİNİ AŞAĞIDA TANIMLIYORUZ..
+if (document.images)
+ {
+     pic1= new Image(pic_width,pic_height);
+     pic1.src="script/ece01.gif";  
+     pic2= new Image(pic_width,pic_height); 
+     pic2.src="script/ece02.gif"; 
+     pic3= new Image(pic_width,pic_height);
+     pic3.src="script/ece03.jpg";  
+ }    
+ 
+// KAÇ RESİM KULLANACAK İSEK AŞAĞIDA YAZIYORUZ..
+var pics= new Array(3) 
+   pics[0]=pic1.src;
+   pics[1]=pic2.src;
+   pics[2]=pic3.src;
+
+// KAÇ RESİM OLACAĞINI YİNE AŞAĞIDA TANIMLIYOZZZ
+var numpics=3;
+
+var thenum=0;
+imgName="img1";
+
+function change_it()
+ {
+   if (document.images)
+    {
+      document.write("<IMG SRC='"+pics[thenum]+"' border='0' width='"+pic_width+"' height='"+pic_height+"' name='img1'>\n");
+      document.write("<BR><FORM><INPUT TYPE='button' value='"+button_text+"' onClick='change_it2()' style='cursor:hand;'></FORM>");
+   }
+}
+
+function change_it2()
+ {
+         var x=0;
+         thenum+=1;
+
+         if (thenum>numpics-1)
+         { 
+           document[imgName].src=pics[0];
+           thenum=0;
+           }
+         else
+         {
+           document[imgName].src=pics[thenum];
+           x+=1;
+          }
+ }
+//-->
+</SCRIPT>
+
+</head>
+
+<body>
+<SCRIPT language="JavaScript">
+<!--
+ change_it()
+//-->
+</SCRIPT>
+</body>
+
+</html>

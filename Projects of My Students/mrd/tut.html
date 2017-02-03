@@ -1,0 +1,122 @@
+<html>
+<head>
+	<title>Tutorial Template</title>
+	<STYLE TYPE="text/css">	
+	<!--
+	body 			{color: #000000; font-family: Verdana, Arial, helvetica, sans-serif; font-size: 13px;}
+	td	 			{color: #000000; font-family: Verdana, Arial, helvetica, sans-serif; font-size: 10px;}
+	
+	div.small 		{color: #000000; font-size: 11px; font-family: Verdana, Arial, helvetica, sans-serif; }	
+	div.text 		{color: #000000; font-size: 13px; font-family: Verdana, Arial, helvetica, sans-serif; }
+	div.margin 		{ margin-left: 60px;}
+	
+	.text			{color: #000000; font-size: 13px;}
+	.textbold		{color: #000000; font-size: 13px; font-weight: bold;}
+	.textwhite		{color: #ffffff; font-size: 13px;}
+	.textboldwhite	{color: #ffffff; font-size: 13px; font-weight: bold;}
+	.translate		{color: #ffffff; background-color: #ff8300; font-size: 11px;}
+	
+	h2 				{color: #333333; font-size: 18 px; font-weight: bold; }
+	h3				{color: #333333; font-size: 16 px; font-weight: bold; }
+	h4				{color: #0000dd; font-size: 14px; font-weight: bold;}
+	
+	.smallbold		{color: #000000; font-weight: bold;}
+	.smallboldgrey	{color: #333333; font-weight: bold;}
+	.smallboldwhite	{color: #ffffff; font-weight: bold;}
+	.small			{color: #000000;}
+	.smallwhite		{color: #ffffff;}
+	.smallgrey		{color: #777777;}
+	div.notes 		{background: #dddddd; font-size: 12px; margin-left: 40px; margin-right: 40px; padding: 10px; border-color: #000000;}
+	
+	pre 			{color: #3366CC; margin-left: 40px; margin-right: 40px; padding: 10px; font-size: 12px;}
+	.code 			{color: #3366CC; font-size: 12px;}	
+	-->
+	</STYLE>	
+</head>
+<body>
+<pre>
+<h2>Flash Labirynth Tutorial</h2>
+<h4>Step 1.</h4>
+First thing that I did was to create a small circle which will represent the hero in the labirynth. The size is 28x28, 
+I’ve converted it into an MC (instance name “man” on stage) and within the MC, I’ve created another MC (instance name 
+“mask” withing the man MC) with the same center, but smaller radius, to be used as the mask for detecting collisions 
+later on. This allows for greater precision when going through the labirynth around the walls.
+<%BRK%>
+<h4>Step 2.</h4>
+Create a grid of lines covering the whole area of the stage and convert it to an MC. The grid is used to fill with 
+a certain color the areas between the grids, which allows easy drawing of labirynth walls. Later you can just erase 
+the lines, or put their alpha to 0. In order to make the walls convenient for collision detection, one should select 
+separate sections constrained to rectangular shapes, or other wise colision detection won’t work properly since some 
+of the white (non-wall) areas will be considered as walls by the algorithm. These separate shapes should be converted 
+to symbols, and I’ve been naming all of the instances as “part1”, “part2”, “part3”, etc. so that I can loop through 
+them easily by name reference.
+<%BRK%>
+<h4>Step 3.</h4>
+You should create two instances of the labirynth, one being the original size (the size of the stage) and the other 
+one being 200% of it’s size (instance name “big_lab). The one with the original size will remain static, and I’ve 
+reduced it’s alpha so that it doesn’t seem to confusing. The double sized labirynth’s instance should be put on a 
+separate layer and masked with a circle, this cirlce should be converted to an MC and named “mask” so that it can be 
+animated together with the hero. I’ve also put a white circle with the same size and position as the mask so that the 
+bleached out labirynth’s lines don’t confuse the player in the “zoomed in” area. The mask and the big labirynth will 
+give the magnifying glass effect which gives the game the “edge” since you cannot see the immediate neighborhood of 
+your current position in the maze.
+<%BRK%>
+<h4>Step 4.</h4>
+The common practice is to create the control layer, containing an empty MC which holds only the actionscript for the 
+control of game flow. Here’s the code that the control MC contains (the comments within the code should make it clear 
+enough):
+
+onClipEvent(load)
+{
+&nbsp;step = 5;    //the speed of movement can be easily adjusted by changing this variable
+&nbsp;ok = true;  //used later on in collision detection
+}
+
+<%BRK%>
+onClipEvent(keyDown)
+{
+&nbsp;/*Basically only keyboard controls are handled in this code, paired with collision
+&nbsp;  detection for each movement.*/
+&nbsp;if(Key.isDown(Key.LEFT))
+&nbsp;{
+&nbsp;&nbsp;//This code repeates for all for directions of movement.
+&nbsp;&nbsp;//Here you can see that the man and the mask always move together, whereas the big
+&nbsp;&nbsp;//labirynth instance moves in the opposite direction creating a movement effect 
+&nbsp;&nbsp;//combining both regular movement and terrain scrolling. the labirynth being twice 
+&nbsp;&nbsp;//bigger than the stage makes the movement constrained exactly within the stage, since 
+&nbsp;&nbsp;//the man moves twice faster due to this combination of effects.
+&nbsp;&nbsp;_root.man._x -= step;
+&nbsp;&nbsp;_root.mask._x -= step;
+&nbsp;&nbsp;_root.big_lab._x += step;
+&nbsp;&nbsp;//In the following loop, the code checks for collision between the man's mask and 
+&nbsp;&nbsp;//all the parts of the labirynths walls.
+&nbsp;&nbsp;for ( i = 2; i &lt= 95; i++)
+&nbsp;&nbsp;{
+&nbsp;&nbsp;&nbsp;if(_root.man.mask.hitTest(_root.big_lab["part"+i]))
+&nbsp;&nbsp;&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;ok = false;
+&nbsp;&nbsp;&nbsp;&nbsp;break;
+&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;}
+&nbsp;&nbsp;//in case of collision the man is moved one step back
+&nbsp;&nbsp;if(!ok)
+&nbsp;&nbsp;{
+&nbsp;&nbsp;&nbsp;_root.man._x += step;
+&nbsp;&nbsp;&nbsp;_root.mask._x += step;
+&nbsp;&nbsp;&nbsp;_root.big_lab._x -=step;
+&nbsp;&nbsp;&nbsp;ok = true;
+&nbsp;&nbsp;}
+&nbsp;}
+&nbsp;&nbsp;//Of course you should do the same for right, up and down movement by changing the 
+&nbsp;&nbsp;//_x or _y properties with corresponding values.
+
+&nbsp;&nbsp;//This part of the code moves the white mask which hides the lower labirynth instance
+&nbsp;&nbsp;//to avoid the confusing effect that you get by showing the walls of both labirynth
+&nbsp;&nbsp;//instances.
+&nbsp;&nbsp;_root.white_mask._x = _root.mask._x;
+&nbsp;&nbsp;_root.white_mask._y = _root.mask._y
+}
+<%BRK%>
+</pre>
+</body>
+</html>

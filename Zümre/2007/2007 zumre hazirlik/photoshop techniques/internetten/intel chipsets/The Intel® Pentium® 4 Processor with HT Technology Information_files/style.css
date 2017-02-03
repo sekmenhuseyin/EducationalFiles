@@ -1,0 +1,75 @@
+.prodlink {
+	FONT-SIZE: 11px
+}
+.footprint {
+	FONT-SIZE: 11px
+}
+.fplink {
+	FONT-SIZE: 11px
+}
+.channellink {
+	FONT-SIZE: 11px
+}
+.smcopy {
+	FONT-SIZE: 11px
+}
+.azlink {
+	FONT-SIZE: 12px; LINE-HEIGHT: 1.5em
+}
+.highlight {
+	FONT-SIZE: 12px
+}
+.catlink {
+	FONT-SIZE: 12px
+}
+.catlink2 {
+	FONT-SIZE: 12px
+}
+.channelhd {
+	FONT-SIZE: 12px
+}
+.docreturn {
+	FONT-SIZE: 12px
+}
+.medcopy {
+	FONT-SIZE: 12px
+}
+.bodycopy {
+	FONT-SIZE: 14px
+}
+.bighd {
+	FONT-SIZE: 15px
+}
+.boldlink {
+	FONT-SIZE: 10px; FONT-WEIGHT: bold
+}
+.prodlink {
+	COLOR: #000
+}
+.catlink {
+	COLOR: #000
+}
+.catlink2 {
+	COLOR: #000
+}
+.prodlink:visited {
+	COLOR: #800080
+}
+.azlink:visited {
+	COLOR: #800080
+}
+.highlight {
+	COLOR: #03f
+}
+.fplink {
+	COLOR: #03f
+}
+.channellink {
+	COLOR: #03f
+}
+.docreturn {
+	COLOR: #03f
+}
+.bluelink {
+	COLOR: #03f
+}

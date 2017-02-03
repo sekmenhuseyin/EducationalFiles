@@ -1,0 +1,217 @@
+<HTML><HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<TITLE>331161 - Hotfixes to Install on Windows 2000 Domain Controllers Before Running Adprep /Forestprep</TITLE>
+<!-- (c) 2001, 2002 Microsoft Corporation. All Rights Reserved -->
+<!-- CPMSFTWBSUP04 ASM: GSS, Version=3.7.4.0, Culture=neutral, PublicKeyToken=null FW: 1.1.4322.573 -->
+<!-- REGC: ISO-8859-1 DEFRC: utf-8 RESG: 2/23/2004 8:39:53 AM RESX: 1/1/0001 12:00:00 AM -->
+<META NAME="Keywords" CONTENT="kbinfo KB331161  kbSBServ2003Pre kbSBServ2003Search kbSBServ2003St kbSBServSearch kbwin2000AdvServ kbwin2000AdvServSearch kbWin2000AdvServSP1 kbWin2000AdvServSP2 kbwin2000DataServ kbwin2000DataServSearch kbWin2000DataServSP2 kbwin2000Search kbwin2000Serv kbwin2000ServSearch kbwin2000ServSP1 kbwin2000ServSP2 kbWinAdvServSearch kbWinDataServSearch kbWinServ2003Data kbWinServ2003DataSearch kbWinServ2003Ent kbWinServ2003Ent64bit kbWinServ2003Ent64bitSearch kbWinServ2003EntSearch kbWinServ2003Search kbWinServ2003St " />
+<META NAME="Description" CONTENT="Before you run the adprep /forestprep command, Microsoft recommends that you install certain hotfixes and service packs on any Windows 2000 domain controllers. The hotfixes and service packs are listed in this article." />
+<META NAME="MS.LOCALE" CONTENT="EN" />
+<script language="Javascript" SRC="/common/script/gsfx/common.js"></script><link rel='stylesheet' type='text/css' href='/common/css/GN/EN-US/down-other/default.css' ></link><script src="/common/script/gsfx/searchui.js"></script><link rel='stylesheet' type='text/css' href='/common/css/GN/EN-US/down-other/SearchUI.css' ></link><link rel='stylesheet' type='text/css' href='/common/css/GN/EN-US/down-other/webparts.css' ></link><link rel='stylesheet' type='text/css' href='/common/css/GN/EN-US/down-other/KBArticleV2.css' ></link></HEAD>
+
+<BODY bgcolor="#FFFFFF" leftmargin="0" topmargin="0" marginheight="0" marginwidth="0" onLoad="thisLoad();" onUnload="thisUnload();">
+<table border="0" cellpadding="0" cellspacing="0" width="100%" height="100%"><tr><td>
+<TABLE width="100%" cellspacing="0" cellpadding="0" border="0" HSPACE="0" VSPACE="0"><TR><TD><A HREF="/isapi/gomscom.asp?target=/" TARGET="_top" ><IMG SRC="/library/images/support/bnr_microsoft.gif" 	HEIGHT="60" HSPACE="0" VSPACE="0" ALIGN="LEFT" ALT="Microsoft.com Home Page" BORDER="0" /></A></TD><TD width="100%" ><TABLE WIDTH="100%" CELLPADDING="0" CELLSPACING="0" BORDER="0" HSPACE="0" VSPACE="0"><TR><TD BGCOLOR="#0a6cce" VALIGN="TOP" HEIGHT="20" ALIGN="RIGHT" WIDTH="100%">
+<TABLE HEIGHT="20" BORDER="0"CELLPADDING="0" CELLSPACING="0" >
+<TR><TD><IMG SRC="/library/images/toolbar/images/curveLTR.gif" WIDTH="18" HEIGHT="20" HSPACE="0" VSPACE="0" ALT="" BORDER="0" /></TD><TD BGCOLOR="#000000" HEIGHT="20" NOWRAP>&nbsp;
+<a href="http://www.microsoft.com/products/info/default.aspx?view=22" STYLE="color:#FFFFFF;text-decoration:none;" TARGET="_top"><FONT COLOR="#FFFFFF" style="font-family:Verdana,Arial; font-size: 10px;"> All Products</FONT></a>
+</TD><TD BGCOLOR="#000000" HEIGHT="20" NOWRAP><font COLOR="#FFFFFF" style="font-family:Verdana,Arial; font-size: 10px;">&nbsp;|&nbsp;</font></TD><TD BGCOLOR="#000000" HEIGHT="20" NOWRAP>
+<a href="http://support.microsoft.com" STYLE="color:#FFFFFF;text-decoration:none;" TARGET="_top"><FONT COLOR="#FFFFFF" style="font-family:Verdana,Arial; font-size: 10px;"> Support</FONT></a>
+</TD><TD BGCOLOR="#000000" HEIGHT="20" NOWRAP><font COLOR="#FFFFFF" style="font-family:Verdana,Arial; font-size: 10px;">&nbsp;|&nbsp;</font></TD><TD BGCOLOR="#000000" HEIGHT="20" NOWRAP>
+<a href="/isapi/gosearch.asp?target=/us/default.asp" STYLE="color:#FFFFFF;text-decoration:none;" TARGET="_top"><FONT COLOR="#FFFFFF" style="font-family:Verdana,Arial; font-size: 10px;"> Search</FONT></a>
+</TD><TD BGCOLOR="#000000" HEIGHT="20" NOWRAP><font COLOR="#FFFFFF" style="font-family:Verdana,Arial; font-size: 10px;">&nbsp;|&nbsp;</font></TD><TD BGCOLOR="#000000" HEIGHT="20" NOWRAP>
+<a href="/isapi/gomscom.asp?target=/" STYLE="color:#FFFFFF;text-decoration:none;" TARGET="_top"><FONT COLOR="#FFFFFF" style="font-family:Verdana,Arial; font-size: 10px;"> Microsoft.com Guide</FONT></a>
+</TD></TR></TABLE>
+</TD></TR><TR><TD BGCOLOR=#0a6cce HEIGHT="40" align="right"><a href="/common/international.aspx" TARGET="_top"><IMG SRC="/library/images/support/EN-US/region_graphic.gif" ALT="International Support" HEIGHT="40" BORDER="0" HSPACE="0" VSPACE="0" /></A></TD></TR></TABLE>
+</TD></TR></TABLE>
+</td></tr><tr><td class="tpl_top_banner" valign="top"><table class="bbar_outer" border="0" cellpadding="0" cellspacing="0" height="18"><tr>
+<td nowrap class="bbar_cell" onmouseover="this.className='bbar_cell_hot';" onmouseout="this.className='bbar_cell';" onClick="top.location.href='http://support.microsoft.com/'"><a target ="_top" href='http://support.microsoft.com/' title='Return to Support Home Page' onclick='event.cancelBubble=true;'>&nbsp;&nbsp;Home&nbsp;&nbsp;</a></td><td class='bannerborder' width=1><img src='/library/images/support/1ptrans.gif' height=1 width=1></td>
+<td nowrap class="bbar_cell" onmouseover="this.className='bbar_cell_hot';" onmouseout="this.className='bbar_cell';" onClick="top.location.href='http://support.microsoft.com/default.aspx?pr=kbhowto'"><a target ="_top" href='http://support.microsoft.com/default.aspx?pr=kbhowto' title='Search the Knowledge Base' onclick='event.cancelBubble=true;'>&nbsp;&nbsp;Search&nbsp;&nbsp;</a></td><td class='bannerborder' width=1><img src='/library/images/support/1ptrans.gif' height=1 width=1></td>
+<td nowrap class="bbar_cell" onmouseover="this.className='bbar_cell_hot';" onmouseout="this.className='bbar_cell';" onClick="top.location.href='http://support.microsoft.com/default.aspx?pr=faqs'"><a target ="_top" href='http://support.microsoft.com/default.aspx?pr=faqs' title='Frequently Asked Questions and Product Support Centers' onclick='event.cancelBubble=true;'>&nbsp;&nbsp;FAQs&nbsp;&nbsp;</a></td><td class='bannerborder' width=1><img src='/library/images/support/1ptrans.gif' height=1 width=1></td>
+<td nowrap class="bbar_cell" onmouseover="this.className='bbar_cell_hot';" onmouseout="this.className='bbar_cell';" onClick="top.location.href='http://support.microsoft.com/default.aspx?pr=downloadover&style=home'"><a target ="_top" href='http://support.microsoft.com/default.aspx?pr=downloadover&style=home' title='Software Downloads, Updates, and Service Packs' onclick='event.cancelBubble=true;'>&nbsp;&nbsp;Downloads&nbsp;&nbsp;</a></td><td class='bannerborder' width=1><img src='/library/images/support/1ptrans.gif' height=1 width=1></td>
+<td nowrap class="bbar_cell" onmouseover="this.className='bbar_cell_hot';" onmouseout="this.className='bbar_cell';" onClick="top.location.href='http://support.microsoft.com/newsgroups/default.aspx'"><a target ="_top" href='http://support.microsoft.com/newsgroups/default.aspx' title='Community Newsgroups' onclick='event.cancelBubble=true;'>&nbsp;&nbsp;Newsgroups&nbsp;&nbsp;</a></td><td class='bannerborder' width=1><img src='/library/images/support/1ptrans.gif' height=1 width=1></td>
+<td nowrap class="bbar_cell" onmouseover="this.className='bbar_cell_hot';" onmouseout="this.className='bbar_cell';" onClick="top.location.href='http://support.microsoft.com/default.aspx?pr=csshome'"><a target ="_top" href='http://support.microsoft.com/default.aspx?pr=csshome' title='Customer Service' onclick='event.cancelBubble=true;'>&nbsp;&nbsp;Customer Service&nbsp;&nbsp;</a></td><td class='bannerborder' width=1><img src='/library/images/support/1ptrans.gif' height=1 width=1></td>
+</tr></table></td></tr><tr><td valign="top" height="100%"><table border="0" cellpadding="0" cellspacing="0" width="100%" height="100%"><tr><td valign="top"><table cellpadding="0" cellspacing="0" class="tpl_content_bar" width="100%"><tr><td class="tpl_content_title" valign="top" align="left">
+							Microsoft Knowledge Base Article - 331161
+						</td><td class="subBannerGif" valign="top" align="right">
+							<IMG src="/common/resources/Content_subban.gif" border="0" vspace="0" title="331161 - Hotfixes to Install on Windows 2000 Domain Controllers Before Running Adprep /Forestprep" />
+						</td></tr></table></td></tr><tr><td width="100%" valign="top"><XMLREADER><DIV class="OldIE">
+<DIV ID="LTRContent" class="LTRContent" DIR="LTR">
+<div class="KBPUBV2" name="KBPUBV2"><!-- - - - - - - - - - - PAGE TEXT BEGINS HERE : KBPUBV2 - - - - - - - - - - --><div class="kbContainer"><table border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td valign="top" width="100%"><table class="kbRightNav"><tr><td valign="top"><!--GETHELP_VERT--><!--SEARCHUI--><table cellspacing="0" cellpadding="0" border="0" id="SupportCenters" name="SupportCenters" class="ListNugget" width="165"><tr><td class="ListNuggetHeader">Support Centers</td></tr><tr><td id="SupportCentersBody" name="SupportCentersBody" class="ListNuggetBody" align="left">
+<TABLE CELLSPACING="0" CELLPADDING="2" BORDER="0">
+<TR><TD WIDTH="6" VALIGN="middle"><IMG SRC="http://support.microsoft.com/library/images/support/blue_bullet.gif" WIDTH="5" HEIGHT="5" BORDER="0" VALIGN="MIDDLE" HSPACE="0" ></TD>
+<TD CLASS="ListNuggetItem" VALIGN="top">
+	<A CLASS="ListNuggetItemLink" HREF="http://support.microsoft.com/default.aspx?scid=fh;EN-US;sbs">Small Business Server</A>
+</TD></TR>
+<TR><TD WIDTH="6" VALIGN="middle"><IMG SRC="http://support.microsoft.com/library/images/support/blue_bullet.gif" WIDTH="5" HEIGHT="5" BORDER="0" VALIGN="MIDDLE" HSPACE="0" ></TD>
+<TD CLASS="ListNuggetItem" VALIGN="top">
+	<A CLASS="ListNuggetItemLink" HREF="http://support.microsoft.com/default.aspx?scid=fh;EN-US;sbserv2003">Windows Small Business Server 2003</A>
+</TD></TR>
+<TR><TD WIDTH="6" VALIGN="middle"><IMG SRC="http://support.microsoft.com/library/images/support/blue_bullet.gif" WIDTH="5" HEIGHT="5" BORDER="0" VALIGN="MIDDLE" HSPACE="0" ></TD>
+<TD CLASS="ListNuggetItem" VALIGN="top">
+	<A CLASS="ListNuggetItemLink" HREF="http://support.microsoft.com/default.aspx?scid=fh;EN-US;win2000">Windows 2000</A>
+</TD></TR>
+<TR><TD WIDTH="6" VALIGN="middle"><IMG SRC="http://support.microsoft.com/library/images/support/blue_bullet.gif" WIDTH="5" HEIGHT="5" BORDER="0" VALIGN="MIDDLE" HSPACE="0" ></TD>
+<TD CLASS="ListNuggetItem" VALIGN="top">
+	<A CLASS="ListNuggetItemLink" HREF="http://support.microsoft.com/default.aspx?scid=fh;EN-US;Win2000Dev">Windows 2000 - Developer</A>
+</TD></TR>
+<TR><TD WIDTH="6" VALIGN="middle"><IMG SRC="http://support.microsoft.com/library/images/support/blue_bullet.gif" WIDTH="5" HEIGHT="5" BORDER="0" VALIGN="MIDDLE" HSPACE="0" ></TD>
+<TD CLASS="ListNuggetItem" VALIGN="top">
+	<A CLASS="ListNuggetItemLink" HREF="http://support.microsoft.com/default.aspx?scid=fh;EN-US;winsvr2003">Windows Server 2003</A>
+</TD></TR>
+</TABLE><img src="http://support.microsoft.com/library/images/support/1ptrans.gif" height="6" width="100" border="0" /></td></tr></table><table cellspacing="0" cellpadding="0" border="0" id="GeneralInfo" name="GeneralInfo" class="ListNugget" width="165"><tr><td class="ListNuggetHeader">Other Support Options</td></tr><tr><td id="GeneralInfoBody" name="GeneralInfoBody" class="ListNuggetBody" align="left"><TABLE CELLSPACING="0" CELLPADDING="2" BORDER="0"><TR><TD WIDTH="6" VALIGN="top"><IMG SRC="http://support.microsoft.com/library/images/support/blue_bullet.gif" WIDTH="5" HEIGHT="5" BORDER="0" VALIGN="MIDDLE" VSPACE="4" HSPACE="0" ></TD><TD CLASS="ListNuggetItem" VALIGN="top"><A CLASS="ListNuggetItemLink" HREF="http://support.microsoft.com/default.aspx?scid=fh;EN-US;cntactms&amp;style=home" >Contact Microsoft</A><BR>Phone Numbers, Support Options and Pricing, Online Help, and more.</TD></TR><TR><TD WIDTH="6" VALIGN="top"><IMG SRC="http://support.microsoft.com/library/images/support/blue_bullet.gif" WIDTH="5" HEIGHT="5" BORDER="0" VALIGN="MIDDLE" VSPACE="4" HSPACE="0" ></TD><TD CLASS="ListNuggetItem" VALIGN="top"><A CLASS="ListNuggetItemLink" HREF="http://support.microsoft.com/default.aspx?scid=fh;EN-US;csshome&amp;style=home" >Customer Service</A><BR>For non-technical assistance with product purchases, subscriptions, online services, events, training courses, corporate sales, piracy issues, and more.</TD></TR><TR><TD WIDTH="6" VALIGN="top"><IMG SRC="http://support.microsoft.com/library/images/support/blue_bullet.gif" WIDTH="5" HEIGHT="5" BORDER="0" VALIGN="MIDDLE" VSPACE="4" HSPACE="0" ></TD><TD CLASS="ListNuggetItem" VALIGN="top"><A CLASS="ListNuggetItemLink" HREF="http://support.microsoft.com/newsgroups" >Newsgroups</A><BR>Pose a question to other users.  Discussion groups and Forums about specific Microsoft products, technologies, and services.</TD></TR></TABLE><img src="http://support.microsoft.com/library/images/support/1ptrans.gif" height="6" width="100" border="0" /></td></tr></table><table cellspacing="0" cellpadding="0" border="0" id="PageOptions" name="PageOptions" class="ListNugget" width="165"><tr><td class="ListNuggetHeader">Page Options</td></tr><tr><td id="PageOptionsBody" name="PageOptionsBody" class="ListNuggetBody" align="left"><TABLE CELLSPACING="0" CELLPADDING="2" BORDER="0"><TR><TD WIDTH="6" VALIGN="top"><A HREF="mailto:?body=http%3a%2f%2fsupport.microsoft.com%2fdefault.aspx%3fkbid%3d331161" ><IMG SRC="http://support.microsoft.com/library/images/support/emailicon.gif" BORDER="0" HSPACE="0" Title="Send the contents of this page to a Friend" ></A></TD><TD CLASS="ListNuggetItem" VALIGN="top"><A CLASS="ListNuggetItemLink" HREF="mailto:?body=http%3a%2f%2fsupport.microsoft.com%2fdefault.aspx%3fkbid%3d331161" >Send</A></TD></TR><TR><TD WIDTH="6" VALIGN="top"><A HREF="Javascript:PrintContents();" ><IMG SRC="http://support.microsoft.com/library/images/support/printicon.gif" BORDER="0" HSPACE="0" Title="Print the contents of this page" ></A></TD><TD CLASS="ListNuggetItem" VALIGN="top"><A CLASS="ListNuggetItemLink" HREF="Javascript:PrintContents();" >Print</A></TD></TR></TABLE><img src="http://support.microsoft.com/library/images/support/1ptrans.gif" height="6" width="100" border="0" /></td></tr></table></td></tr></table><!-- - - - - - - - - - - KB CONTENT BEGINS BELOW HERE - - - - - - - - - - --><H1 class="title">Hotfixes to Install on Windows 2000 Domain Controllers Before Running Adprep /Forestprep</H1><a href="#appliesto">View products that this article applies to.</a><div class="notice">This article was previously published under Q331161 </div><div class="summary"><H2>SUMMARY</H2> Before you run the <KBD>adprep
+		  /forestprep</KBD> command, Microsoft recommends that you install certain
+		  hotfixes and service packs on any Windows 2000 domain controllers. The hotfixes
+		  and service packs are listed in this article. </div><div class="moreinformation"><H2>MORE INFORMATION</H2>The Adprep.exe utility is located in the I386 folder of your
+		  Windows Server 2003 installation media. The Adprep.exe utility prepares a
+		  Windows 2000 forest and its domains for the addition of Windows Server 2003
+		  domain controllers.<BR /><BR /> The Adprep.exe utility operations include the
+		  addition of: 
+		  <UL><LI>Improved default security descriptors for object
+				classes.</LI><LI>Changes in group memberships.</LI><LI>New directory objects that programs require.</LI></UL> The goal of the Windows Server 2003 Forest Upgrade and Windows
+		  Server 2003 Domain Upgrade utility is to add schema changes and permission
+		  objects in Active Directory so that they are secure and interoperate with
+		  newly-installed Windows Server 2003 domain controllers.<BR /><BR /> Windows 2000
+		  domain controllers that replicate in changes from the <KBD>adprep
+		  /forestprep</KBD> command are vulnerable to the following three issues.<H3>Vulnerability: Schema Additions Delete Columns from the Database and  Domain Controllers Cannot Be Started</H3><UL><LI>Issue: <BR /><BR />A rare but fatal timing problem during
+				large schema updates such as Adprep.exe can cause the bulk deletion of critical
+				objects from Active Directory on Windows 2000 domain controllers. Affected
+				domain controllers cannot start. These domain controllers must be restored or
+				reinstalled.</LI><LI>
+For additional information, click the following article number to view the article in the Microsoft Knowledge Base:
+<p class="indent"><a class="KBlink" HREF="http://support.microsoft.com/default.aspx?scid=kb;EN-US;303077">303077</a>
+ Service Pack 2
+  Hotfixes Recommended Before Making Schema Changes in Active Directory
+				  Forests
+</p><BR /><BR /></LI><LI>Threat: <BR /><BR />The installation of a hotfix or service
+				pack that avoids this vulnerability is mandatory for all Windows 2000 domain
+				controllers in the forest before you run the <KBD>adprep
+				/forestprep</KBD> command. Do not put domain controllers, the domain, or
+				the forest at risk by running the <KBD>adprep /forestprep</KBD>
+				command without having the appropriate fixes installed on every domain
+				controller in the forest.</LI><LI>Preventative fix: 
+				<UL><LI>Service Pack: Windows 2000 Service Pack 2 (SP2) or
+					 later</LI><LI>Hotfix in article 303077</LI><LI>File version information: Versions of the Ntdsa.dll
+					 file whose version and date stamp is equal to or greater than the following:
+					 <BR /><p class="indent"><PRE class="in_text">Version        Date
+--------------------------
+5.0.2195.2864  Feb-05-2001</PRE></p></LI></UL></LI></UL><H3>Vulnerability: Inefficient Replication of Schema Changes Consumes Network Bandwidth</H3><UL><LI>Issue:<BR /><BR />There is a performance problem. The
+				introduction of schema changes is not replicated efficiently between domain
+				controllers in the forest. This problem causes the consumption of additional
+				network bandwidth.</LI><LI>
+For additional information, click the following article number to view the article in the Microsoft Knowledge Base:
+<p class="indent"><a class="KBlink" HREF="http://support.microsoft.com/default.aspx?scid=kb;EN-US;300642">300642</a>
+ Schema Modification Results in Schema Mismatch Event 1203 Message
+</p></LI><LI>Threat: <BR /><BR />Install the appropriate service pack or
+				hotfix that prevents this problem if you have more than 10 domain controllers
+				in the forest or cannot tolerate the use of additional network bandwidth across
+				network links that connect domain controllers in the forest. This fix is
+				optional for forests with a small number of domain controllers that are
+				connected by high-speed links.</LI><LI>Preventative fix: 
+				<UL><LI>Service pack: Windows 2000 Service Pack 3 (SP3) or
+					 later</LI><LI>Hotfix in article 300642 </LI><LI>File version information: Versions of the Ntdsa.dll
+					 file whose version and date stamp is equal to or greater than the
+					 following:<BR /><p class="indent"><PRE class="in_text">Version        Date
+--------------------------
+5.0.2195.3673  Jun-04-2001</PRE></p></LI></UL></LI></UL><H3>Vulnerability: Active Directory Replication Is Delayed During the Index-Rebuilding Process</H3><UL><LI>Issue: <BR /><BR />Active Directory replication is delayed as
+				new attributes that are added by the <KBD>adprep /forestprep</KBD>
+				command are indexed and the schema cache is updated. The delay is a function of
+				the number of indexed attributes that are being added to Active Directory and
+				the size of the Active Directory database. You can estimate the replication
+				delay with the following formula:<BR /><BR /><p class="indent">
+(number of indexed attributes * database size in GB) / 50 = the replication delay in hours
+</p><BR /><BR />For example, the <KBD>adprep
+				/forestprep</KBD> command adds five new indexed attributes, so a domain
+				controller with a 15-GB database will have a 1.5-hour replication
+				delay.</LI><LI> For
+				  additional information, click the following article number to view the article
+				  in the Microsoft Knowledge Base: <p class="indent"><a class="KBlink" HREF="http://support.microsoft.com/default.aspx?scid=kb;EN-US;307219">307219</a>
+ Replication Stops After Active Directory Schema Update
+</p></LI><LI>Threat: <BR /><BR />Install this fix if: 
+				<UL><LI>It takes less time to install the preventative hotfix
+					 or service pack than to wait for the reindexing operation to
+					 complete.</LI><LI>Active Directory replication delays cannot be tolerated
+					 in your environment.</LI></UL> You can skip this step for domain controllers with a small
+				number of objects. </LI><LI>Preventative fix: 
+				<UL><LI>Service Pack: Windows 2000 SP3 or later</LI><LI>Hotfix in article 307219</LI><LI>File version information: Versions of the Ntdsa.dll
+					 file whose version and date stamp is equal to or greater than the
+					 following:<BR /><p class="indent"><PRE class="in_text">Version        Date
+--------------------------
+5.0.2195.4464  Oct-09-2001</PRE></p></LI></UL></LI></UL><H3>Guiding Principles</H3><UL><LI>There are individual hotfixes that mitigate all three
+				vulnerabilities on domain controllers that are running Windows 2000 Service
+				Pack 1 (SP1) or later. Therefore, do not deploy a service pack in your forest
+				solely to use the <KBD>adprep /forestprep</KBD> command.
+				</LI><LI>Supplement the existing service pack revision that is
+				installed on domain controllers in your forest with a newer Ntdsa.dll hotfix
+				that prevents the schema-deletion issue or the two performance problems that
+				apply to your forest. </LI><LI>On domain controllers with Windows 2000 SP1 installed, you
+				must install a version of the Ntdsa.dll file that prevents the schema-delete
+				vulnerability. To do this, do one of the following: 
+				<UL><LI>Install an appropriate Ntdsa.dll hotfix. For best
+					 results, install a recent, well-tested Ntdsa.dll file that resolves the schema
+					 delete and the two performance vulnerabilities. The following are examples of
+					 such hotfixes:<BR /><BR /><p class="indent"><a class="KBlink" HREF="http://support.microsoft.com/default.aspx?scid=kb;EN-US;321933">321933</a> Services Not Listed in Security Configuration and Analysis Tool
+</p></LI><LI>Install Windows 2000 SP2 or later.</LI></UL></LI><LI>Domain controllers with Windows 2000 SP2 installed are not
+				vulnerable to the schema-delete problem. If you have a small number of domain
+				controllers or objects in Active Directory, no additional fixes are required.
+				Administrators with either a large number of domain controllers or large
+				databases can do one of the following: 
+				<UL><LI>Install an appropriate Ntdsa.dll hotfix. For best
+					 results, install a recent, well-tested Ntdsa.dll hotfix that resolves the two
+					 performance vulnerabilities. The following is an example of such a
+					 hotfix:<BR /><BR /><p class="indent"><a class="KBlink" HREF="http://support.microsoft.com/default.aspx?scid=kb;EN-US;321933">321933</a> Services Not Listed in Security Configuration and Analysis Tool
+</p></LI><LI>Install Windows 2000 SP3 or later.</LI></UL></LI><LI>Domain controllers with Windows 2000 SP3 installed are
+				protected from the schema deletion and both performance vulnerabilities.
+				</LI></UL><H3>Windows 2000 SP3 Advantages and Issues</H3> Windows 2000 domain controllers must have Windows 2000 SP2 for
+		  the Active Directory installation Wizard (Dcpromo.exe) to source Active
+		  Directory from Windows Server 2003 domain controllers that are hosting program
+		  partitions. If your environment is already running Windows 2000 SP2, keep that
+		  version and do not change it. If you are standardized on Windows 2000 SP1 and
+		  anticipate the addition of a Windows 2000 domain controller to a forest that
+		  contains Windows 2000 and Windows Server 2003 domain controllers, evaluate and
+		  consider deploying Windows 2000 SP3.<BR /><BR />When Windows 2000 domain
+		  controllers have SP3 installed, it is easier to remotely administer Windows
+		  2000 domain controllers from computers that are running Microsoft Windows XP
+		  Professional or Windows 2003 Server by using the Windows Server 2003 ADMINPAK.
+		  For more information about the LDAP signing requirements when Active Directory
+		  administration tools are run on computers that are running Microsoft Windows XP
+		  Professional or Windows 2003 Server computers that are focused on Windows 2000
+		  computers, see the following article:<BR /><p class="indent"><a class="KBlink" HREF="http://support.microsoft.com/default.aspx?scid=kb;EN-US;325465">325465</a> Windows 2000 Domain Controllers Require SP3 or Later When Using Windows Server 2003
+</p> Consider adding the following post-SP3 hotfixes on
+		  domain controllers that are running Windows 2000 SP3. To do this, do one of the
+		  following: 
+		  <UL><LI>Manually add relevant fixes to each domain
+				controller.</LI><LI>Slipstream all or selected hotfixes to your Windows 2000
+				SP3 installation media or share point.</LI><LI>Slipstream all or selected hotfixes to your installation
+				media or installation share point that contains the Windows 2000 base operating
+				system plus Windows 2000 SP3. If you do this, newly-installed domain
+				controllers avoid known issues.</LI></UL> These  fixes are particularly important to Windows 2000
+		  SP3 computers that are running the Terminal and DNS services. 
+		  <p class="indent"><a class="KBlink" HREF="http://support.microsoft.com/default.aspx?scid=kb;EN-US;328020">328020</a> Redirected Printing with Terminal Services May Not Work with SP3
+</p><p class="indent"><a class="KBlink" HREF="http://support.microsoft.com/default.aspx?scid=kb;EN-US;328894">328894</a> First Character Missing from Each Line w/Generic Printer Driver
+</p><p class="indent"><a class="KBlink" HREF="http://support.microsoft.com/default.aspx?scid=kb;EN-US;324906">324906</a> Cannot Start an Office Program After You Install Service Pack 3
+</p><p class="indent"><a class="KBlink" HREF="http://support.microsoft.com/default.aspx?scid=kb;EN-US;329170">329170</a> File or Network Path No Longer Exists Error Message
+</p><p class="indent"><a class="KBlink" HREF="http://support.microsoft.com/default.aspx?scid=kb;EN-US;321733">321733</a> A "Delayed Write Failed" Error Message Occurs When You Write a File to a Server
+</p><p class="indent"><a class="KBlink" HREF="http://support.microsoft.com/default.aspx?scid=kb;EN-US;326798">326798</a> Post-SP3 SMB Redirector Hotfixes Cause a Conflict with SP3
+</p><p class="indent"><a class="KBlink" HREF="http://support.microsoft.com/default.aspx?scid=kb;EN-US;329405">329405</a> DNS Name Resolution Does Not Work for Users Who Are Not Administrators 
+</p><p class="indent"><a class="KBlink" HREF="http://support.microsoft.com/default.aspx?scid=kb;EN-US;304653">304653</a> The Serial Number Is Decremented in DNS When You Reboot
+</p> </div><div name="appliesto" id="appliesto" class="appliesto"><H3>The information in this article applies to:</H3><UL><LI>Microsoft Windows 2000 Datacenter Server SP2</LI><LI>Microsoft Windows 2000 Advanced Server SP2</LI><LI>Microsoft Windows 2000 Advanced Server SP1</LI><LI>Microsoft Windows 2000 Server SP1</LI><LI>Microsoft Windows 2000 Server SP2</LI><LI>Microsoft Windows Server 2003, Datacenter Edition</LI><LI>Microsoft Windows Server 2003, Enterprise Edition</LI><LI>Microsoft Windows Server 2003, Standard Edition</LI><LI>Microsoft Windows Server 2003, 64-Bit Enterprise Edition</LI><LI>Microsoft Windows Small Business Server 2003, Premium Edition</LI><LI>Microsoft Windows Small Business Server 2003, Standard Edition</LI></UL></div><TABLE class="docinfo" cellspacing="1" cellpadding="3" align="center"><TR><TD align="right" width="5%" class="label" valign="top" nowrap="1">Last Reviewed:</TD><TD align="left" class="data" valign="top">10/13/2003
+			 (14.0)
+		</TD></TR><TR class="composite"><TD align="right" width="5%" class="label" valign="top" nowrap="1">Keywords:</TD><TD align="left" class="data" valign="top">kbinfo KB331161</TD></TR></TABLE><BR /><div class="disclaimer"></div><!-- - - - - - - - - - - - PAGE TEXT ENDS ABOVE HERE - - - - - - - - - - - --></td></tr><tr><td align="center"><!--GETHELP_HORI--></td></tr></table></div></div>
+</DIV>
+
+</DIV>
+</XMLREADER></td></tr></table></td></tr><tr><td valign="top" class="tpl_footer"><table class="tpl_footer_row1"><tr><td class="fbtn_cell">&nbsp;<A HREF="http://support.microsoft.com/default.aspx?pr=cntactms&style=home" TARGET="_top" >Contact Us</A>&nbsp;</td></tr></table><BR><div class="tpl_footer_row2">© 2004 Microsoft Corporation. All rights reserved.&nbsp;&nbsp;<A HREF="http://support.microsoft.com/default.aspx?scid=%2fsupport%2fmisc%2fcpyright.asp" TARGET="http://support.microsoft.com/default.aspx?scid=%2fsupport%2fmisc%2fcpyright.asp" class="ftr_copyright_text">Terms of use</A>&nbsp;&nbsp;<A HREF="http://www.microsoft.com/security/default.asp" TARGET="http://www.microsoft.com/security/default.asp" class="ftr_copyright_text">Security & Privacy</A>&nbsp;&nbsp;<A HREF="http://support.microsoft.com/default.aspx?scid=%2fisapi%2fgomscom.asp%3ftarget%3d%2fenable%2fdefault.htm" TARGET="http://support.microsoft.com/default.aspx?scid=%2fisapi%2fgomscom.asp%3ftarget%3d%2fenable%2fdefault.htm" class="ftr_copyright_text">Accessibility</A>&nbsp;&nbsp;</div></td></tr></table><IMG style="display:none;" name="metrixgif" SRC="/library/images/support/1ptrans.gif"></BODY>
+
+<script language="JavaScript" >
+   function thisLoad(){
+setcookieval("SITE","GN");
+
+   g_reSupportedHostnames = new RegExp(".msn.com$|.passport.com$|.xbox.com$|.microsoft.com$|.microsoft.cz$|.msbpn.com$|.microsoft.co.*", "i");
+  ForeignLink_Hookup(true);LogHit('http://c.microsoft.com/trans_pixel.asp?TYPE=SSPV&SOURCE=SUPPORT&URI=/GN/EN-US/kb_en-us_331161&GUID=1F4FC18C-F71E-47fb-8FC9-612F8EE59C61&R=');
+   }
+
+function thisUnload(){
+;   }
+</script>
+</HTML>

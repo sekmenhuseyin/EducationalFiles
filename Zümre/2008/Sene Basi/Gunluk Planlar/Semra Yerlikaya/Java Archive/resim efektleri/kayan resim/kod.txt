@@ -1,0 +1,5 @@
+<applet code="CoolMove.class" align="baseline"
+width="450" height="100">
+<param name="MOVE" value="2">
+<param name="SRC" value="kayban.jpg">
+</applet>

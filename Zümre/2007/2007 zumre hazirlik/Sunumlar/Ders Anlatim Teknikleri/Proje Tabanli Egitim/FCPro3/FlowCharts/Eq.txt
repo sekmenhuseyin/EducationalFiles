@@ -1,0 +1,15 @@
+start;
+printf("Solve a second degree equation.");
+scanf(a,b,c);
+d=sqr(b)-4*a*c;
+if(d<0)
+	printf("No solution");
+else
+	if(d==0)
+		printf("Single solution is ",-b//(2*a));
+	else{
+		x1=(-b-sqrt(d))//(2*a);
+		x2=(-b+sqrt(d))//(2*a);
+		printf("x1=",x1," x2=",x2);
+	}
+end;

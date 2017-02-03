@@ -1,0 +1,186 @@
+<!doctype html public "-//IETF//DTD HTML//EN">
+<HTML>
+<HEAD>
+<TITLE>Windows XP: The Complete Reference: Network and Internet Security</TITLE>
+<META NAME="GENERATOR" CONTENT="Web-O-Matic Deluxe 4.1">
+<META NAME="AUTHOR" CONTENT="John R. Levine, Margaret Levine Young">
+<META NAME="COPYRIGHT" CONTENTS="Copyright 2001 by The McGraw-Hill Companies. All rights reserved.">
+</HEAD>
+<BODY BACKGROUND="../images/background.png">
+<BLOCKQUOTE>
+<SCRIPT LANGUAGE="JavaScript">
+function whomp(i, file)
+{
+	i.src = "../images/" + file + ".png";
+}
+</SCRIPT>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarered3x3.png" HEIGHT=3 WIDTH=3></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=2>
+Chapter 31: Network and Internet Security
+</FONT></TD>
+</TR>
+</TABLE>
+<BR>
+<A HREF="4.htm"  OnMouseOver='whomp(prev, "sprev");' OnMouseOut='whomp(prev, "wprev");'
+ title="Previous Section"><IMG NAME=prev SRC="../images/wprev.png" ALT="Previous" HEIGHT=20 WIDTH=82 BORDER=0></A><!--
+--><A HREF="index.htm" OnMouseOver='whomp(chap, "schap");' OnMouseOut='whomp(chap, "wchap");'
+title="Chapter Overview"><IMG SRC="../images/wchap.png" ALT="Chapter" NAME=chap HEIGHT=20 WIDTH=100 BORDER=0></A><A
+HREF="../index.htm" OnMouseOver='whomp(toc, "sbook");' OnMouseOut='whomp(toc, "wbook");' 
+title="Table of Contents"><IMG SRC="../images/wbook.png" ALT="Contents" NAME=toc HEIGHT=20 WIDTH=94 BORDER=0></A><A
+HREF="../glossary/index.htm" OnMouseOver='whomp(glos, "sglos");' OnMouseOut='whomp(glos, "wglos");' 
+title="Glossary"><IMG SRC="../images/wglos.png" ALT="Glossary" NAME=glos HEIGHT=20 WIDTH=94 BORDER=0></A><!--
+--><IMG SRC="../images/bnext.png" ALT="Next" HEIGHT=20 WIDTH=82 BORDER=0>
+<BR>
+<A NAME="1">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarered10x10.png" HEIGHT=10 WIDTH=10></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=4><B>Sending and Receiving E-mail Securely</B></FONT>
+</TD>
+</TR>
+</TABLE></A>
+<P>
+E-mail programs offer two kinds of security: signatures and encryption. Both depend on certificates that serve as electronic identity keys. The security system that Microsoft provides with Outlook Express, <A NAME="ddsmime"><I>S/MIME</I></A>, uses certificates issued by third parties, such as VeriSign and Thawte. Another popular security system, <A NAME="ddprettygoodprivacy"><I>Pretty Good Privacy</I></A> (or <A NAME="ddpgp"><I>PGP</I></A>), lets each user generate his or her own keys (Eudora can work with PGP keys). Both are forms of <A NAME="ddpublickeycryptography"><I>public-key cryptography</I></A>. Each certificate consists of a <A NAME="ddpublickey"><I>public key</I></A> (or <A NAME="dddigitalid"><I>digital</I><I> ID</I></A>), a <A NAME="ddprivatekey"><I>private </I><I>key</I></A>, and a <A NAME="dddigitalsignature"><I>digital signature</I></A>. You keep your private key and digital signature secret, while you provide your public key to anyone with whom you exchange secure mail, either directly or via a generally available key server.
+<P>
+<A NAME="ddsignatures"><I>Signatures</I></A> allow you to add to your mail a <A NAME="ddsignatureblock"><I>signature </I><I>block</I></A>, generated with your private key, that verifies the author is indeed you, and that the message was not modified in transit. Anyone who wants to validate your signature can check it by using your public key. The signature is added as an extra block at the end of the message, without modifying the other contents, so that the recipient can read your message, whether he or she validates your signature or not.
+<P>
+<A NAME="ddencryption"><I>Encryption</I></A> scrambles a message so that only the recipient can decode it. A message encrypted with someone's public key can be decrypted only with that person's private key. You encrypt a message with the recipient's public key, and the recipient uses his or her private key to decode it. Anyone else looking at the message would see only unreadable gibberish. It's possible both to <A NAME="dddigitallysign"><I>digitally sign</I></A> and encrypt the same message, so that only the designated recipient can decode the message and the designated recipient can then verify that the message is really from you.
+<P>
+Mail security depends on a <A NAME="ddkeyring"><I>key ring</I></A> of keys. On your key ring, you need your own private key and digital signature and the public key of everyone with whom you plan to exchange secure mail. <A HREF="../security/5.htm#1">Outlook Express security</A> keeps your private key and digital signature as one of the properties of your Mail account and keeps other people's public keys in the Address Book.
+<P>
+ <A HREF="../email/index.htm">Outlook Express</A> and other Microsoft e-mail programs provide a <A HREF="../security/5.htm#1">certificate-based system</A> (called S/MIME) for signing and encrypting mail. <I>Signed</I> mail uses your own <A HREF="../security/3.htm#1">certificate</A> to prove to the recipient that the author of the message is you and that the message arrived without tampering (these are the same type of certificates described in the preceding sections for authenticating material you download from the Web). <I>Encrypted</I> mail uses the recipient's certificate to protect the message's contents so that only the intended recipient can read the messages. A single message can be both signed and encrypted.
+<P>
+<TABLE><TR><TD VALIGN="TOP"><IMG SRC="../images/note.png" ALT="note" WIDTH=95 HEIGHT=29></TD>
+<TD VALIGN="TOP">For more information about encryption and signature, see RSA Data Security's Web site at <A HREF="http://www.rsasecurity.com"><B>http://www.rsasecurity.com</B></A> and Network Associates' Pretty Good Privacy Web site at <A HREF="http://www.pgp.com"><B>http://www.pgp.com</B></A>. These sites describe how to use encryption with various e-mail programs.
+
+</TD></TR></TABLE>
+<A NAME="2">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Getting a Certificate</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+The only source of certificates is a <A HREF="../security/3.htm#1">certificate authority</A>, and for a certificate to be useful, the authority has to be one that is widely accepted. The best known certificate authority is VeriSign, at <A HREF="http://www.verisign.com"><B>http://www.verisign.com</B></A>, who also owns Thawte, at <A HREF="http://www.thawte.com"><B>http</B><B>://www.thawte.com</B></A>. It provides a variety of certificates at various prices, usually including a free two-month trial of a personal certificate suitable for signing e-mail. The certificate authority's Web site walks you through the process of getting a certificate. Details vary, but generally the steps include the following:
+<UL>
+<LI >
+You enter basic information, including your e-mail address, into a form on the authority's Web site.
+<LI >
+Your Web browser automatically downloads your private key, part of the security information from the authority.
+<LI >
+The authority e-mails a confirmation code to the address you give. This ensures that the address you provide is really yours.
+<LI >
+You run Outlook Express and receive the message. It contains the URL of a page that will finish the registration and a unique code to identify yourself when you get there. Use Windows cut-and-paste tool to copy the code from your mail program to the browser windo, rather than trying to retype it.
+<LI >
+The authority generates the public key that matches your private key and downloads it as well.
+</UL>
+<P>
+<TABLE><TR><TD VALIGN="TOP"><IMG SRC="../images/note.png" ALT="note" WIDTH=95 HEIGHT=29></TD>
+<TD VALIGN="TOP">This process of obtaining a certificate only verifies your e-mail address, not any other aspect of your identity. VeriSign offers more secure certificates with more careful identity checks, but the vast majority of certificates in use are the simplest kind.
+
+</TD></TR></TABLE>
+<A NAME="3">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Sending Signed Mail</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+Once you have a certificate, sending signed mail is simple. While you're composing a message in Outlook Express, click the Digitally Sign Message button (the one with the little orange seal) to tell Outlook Express to sign the message as it's sent. Signed messages appear with the orange seal in the list of messages, as shown here:
+<BR><IMG ALIGN=TOP SRC="security.signed.png" WIDTH=672 HEIGHT=550 ALT="[image]">
+<A NAME="4">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Sending Encrypted Mail</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+Sending encrypted mail is only slightly harder than sending signed mail. The difference is that before you can send signed mail to someone, you have to have that recipient's <A HREF="../security/5.htm#1">digital ID</A> (public key) in your <A HREF="../email/6.htm#1">Windows Address Book</A>. Once you have the digital ID, create the message as usual in Outlook Express and click the Encrypt Message button (the envelope with the little blue lock) before sending the message. The encrypted mail icon looks like this:
+<BR><IMG ALIGN=TOP SRC="security.encrypted.png" WIDTH=672 HEIGHT=550 ALT="[image]">
+<P>
+There are three common ways to obtain someone's digital ID: from a signed message he or she sent, from an online directory, or from a file obtained elsewhere, such as a Web-based lookup system.
+<A NAME="5">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squaregreen6x6.png" HEIGHT=6 WIDTH=6></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Getting a Digital ID from Incoming Mail</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+Any time someone sends you a digitally signed message, you can get that person's digital ID from the message and add it to your <A HREF="../email/6.htm#1">Address Book</A>. (Note that the digital ID is the equivalent of the sender's public key; the corresponding private key is not disclosed.) Open the message, select File | Properties and click the Security tab; you see the View Certificates dialog box shown in Figure 31-6. Assuming that the signature is valid, click Add To Address Book. The Address Book opens, creating a new entry for your correspondent (if one does not already exist). Click the Digital IDs tab and observe that a digital ID is listed; then click OK to update the Address Book.
+<TABLE BORDER=2><TR><TD ALIGN=CENTER>
+<IMG SRC="security.idmail.png" WIDTH=384 HEIGHT=401 ALT="[figure]">
+</TD></TR><TR BGCOLOR="#00ffff"><TD><I>Figure 31-6:  Getting a digital ID from a mail message</I></TD></TR></TABLE>
+<A NAME="6">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squaregreen6x6.png" HEIGHT=6 WIDTH=6></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Getting a Digital ID Through LDAP Search</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+If you know that your correspondent has a digital ID and you know which certificate authority issued it, you can look it up in that authority's directory.
+<P>
+In Outlook Express, open the Address Book and click the Find button to open the search window, shown in Figure 31-7. In the Look In box, select the directory to search, which is most likely VeriSign for personal digital IDs. Enter the person's name or e-mail address and click Find Now.
+<TABLE BORDER=2><TR><TD ALIGN=CENTER>
+<IMG SRC="security.bill.png" WIDTH=483 HEIGHT=263 ALT="[figure]">
+</TD></TR><TR BGCOLOR="#00ffff"><TD><I>Figure 31-7:  Searching the VeriSign directory to find a digital ID</I></TD></TR></TABLE>
+<P>
+The directory returns a list of entries that match your request. Double-click any entry in the list to see the details, which are arranged like an address book entry, to be sure it's the person you want. If it is, click Add To Address Book to turn it into an Address Book entry, edit as desired (adding more personal info, usually) and click OK to update the Address Book.
+<A NAME="7">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squaregreen6x6.png" HEIGHT=6 WIDTH=6></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Getting a Digital ID from a File</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+Digital IDs can be stored in <A HREF="../security/3.htm#1">certificate files</A>, usually with the extension .cer. Someone can mail you a third party's ID as a file, or you might download the file from a Web-based search system.
+<P>
+To add the digital ID to your Address Book, open the Address Book and create an entry for the person, including his or her e-mail address. (The e-mail address has to match the one to which the certificate is assigned.) Then click the Address Book's Digital IDs tab, shown in Figure 31-8. Click the Import button and select the file containing the ID. The Address Book reads the digital ID and adds it to the Address Book entry.
+<TABLE BORDER=2><TR><TD ALIGN=CENTER>
+<IMG SRC="security.fileadd.png" WIDTH=503 HEIGHT=393 ALT="[figure]">
+</TD></TR><TR BGCOLOR="#00ffff"><TD><I>Figure 31-8:  Importing or exporting a digital ID</I></TD></TR></TABLE>
+<P>
+If you want to store someone's digital ID in a file to transfer it to another computer or send it to a third person, open the Address Book entry for that person, click the Digital IDs tab, click Export, and specify the file to create.
+<P>
+<TABLE><TR><TD VALIGN="TOP"><IMG SRC="../images/caution.png" ALT="caution" WIDTH=95 HEIGHT=29></TD>
+<TD VALIGN="TOP">Don't try to export your own digital ID this way; bugs in Windows keep it from working. Remember, you can send anyone your digital ID by sending a signed e-mail message.
+
+</TD></TR></TABLE>
+<A NAME="8">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Receiving Encrypted or Signed Mail</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+Outlook Express automatically handles incoming encrypted or signed mail. Signed messages have a little orange seal at the right end of the Security line of the message headers; encrypted messages have a little blue lock. When you open the message, Outlook Express automatically validates the signature or decrypts the message. The first time it does so, it displays a special window in place of the actual message, telling you what it did. Scroll down and click Continue to see the actual message. If you'd rather not see the special window in the future, a box above the Continue button lets you avoid the window in the future.
+<P>
+<A HREF="4.htm"  OnMouseOver='whomp(prevb, "sprev");' OnMouseOut='whomp(prevb, "wprev");'
+ title="Previous Section"><IMG NAME=prevb SRC="../images/wprev.png" ALT="Previous" HEIGHT=20 WIDTH=82 BORDER=0></A><!--
+--><A HREF="index.htm" OnMouseOver='whomp(chapb, "schap");' OnMouseOut='whomp(chapb, "wchap");'
+title="Chapter Overview"><IMG SRC="../images/wchap.png" ALT="Chapter" NAME=chapb HEIGHT=20 WIDTH=100 BORDER=0></A><A
+HREF="../index.htm" OnMouseOver='whomp(tocb, "sbook");' OnMouseOut='whomp(tocb, "wbook");' 
+title="Table of Contents"><IMG SRC="../images/wbook.png" ALT="Contents" NAME=tocb HEIGHT=20 WIDTH=94 BORDER=0></A><A
+HREF="../glossary/index.htm" OnMouseOver='whomp(glosb, "sglos");' OnMouseOut='whomp(glosb, "wglos");' 
+title="Glossary"><IMG SRC="../images/wglos.png" ALT="Glossary" NAME=glosb HEIGHT=20 WIDTH=94 BORDER=0></A><!--
+--><IMG SRC="../images/bnext.png" ALT="Next" HEIGHT=20 WIDTH=82 BORDER=0>
+<BR>
+</BLOCKQUOTE>
+</BODY>
+</HTML>

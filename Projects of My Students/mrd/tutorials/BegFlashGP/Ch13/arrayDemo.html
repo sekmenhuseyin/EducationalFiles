@@ -1,0 +1,58 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>arrayDemo</title>
+</head>
+<body bgcolor="#cccccc">
+<!--url's used in the movie-->
+<!--text used in the movie-->
+<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,0,0" width="550" height="400" id="arrayDemo" align="middle">
+<param name="allowScriptAccess" value="sameDomain" />
+<param name="movie" value="arrayDemo.swf" />
+<param name="quality" value="high" />
+<param name="bgcolor" value="#ffffff" />
+<embed src="arrayDemo.swf" quality="high" bgcolor="#ffffff" width="550" height="400" name="arrayDemo" align="middle" allowScriptAccess="sameDomain" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" />
+</object>
+<h1>This program creates no output in SWF format.</h1>
+<h3>Results of output window when run in IDE:</h3>
+<pre style = "background-color: white">
+1: Tanzania
+2: Dem. Rep. Congo
+3: Botswana
+4: Gabon
+5: Zimbabwe
+6: Rep. Congo
+7: Zambia
+8: Kenya
+9: South Africa
+10: Cameroon
+</pre>
+
+
+
+<h3>Code in frame 1 layer 1</h3>
+<pre>
+  //arrayDemo
+  //source: International Union for the Conservation of Nature
+
+  ePop = new Array();
+  ePop[1] = "Tanzania";
+  ePop[2] = "Dem. Rep. Congo";
+  ePop[3] = "Botswana";
+  ePop[4] = "Gabon";
+  ePop[5] = "Zimbabwe";
+  ePop[6] = "Rep. Congo";
+  ePop[7] = "Zambia";
+  ePop[8] = "Kenya";
+  ePop[9] = "South Africa";
+  ePop[10] = "Cameroon";
+  
+for (i = 1; i < ePop.length; i++){
+  trace(i + ": " + ePop[i]);
+} // end for
+</pre>
+
+
+</body>
+</html>

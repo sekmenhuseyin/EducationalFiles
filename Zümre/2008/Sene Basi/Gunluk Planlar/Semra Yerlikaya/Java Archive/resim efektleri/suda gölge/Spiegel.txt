@@ -1,0 +1,59 @@
+Êşº¾  -” " # / \ o  Ù ïYZ
+ © Ğ stringWidthx Ø $103 $102 $101 $100 !O
+ ÷ Ñ
+ 1 ë
+ © 
+ © %O
+_ ' ğz Î O O O run
+ Á Ş requestFocus Applet by Dolf van der Schaar Applet by Dolf van der Schaar. O G start · ¯ O ê createImage 	(IIIIII)V @M N|X ? 3 Å
+ D $ SP java/lang/Math 0 (Ljava/awt/Font;)V addImage
+ ÷t java/awt/Window 5
+ [ ’ &(Ljava/lang/String;)Ljava/lang/String;~
+ 6p getParameter&0  Ì
+ ÷ É ()Ljava/net/URL; 	isShowing O ()Ljava/applet/AppletContext; LWare C java/awt/Frame E .(Ljava/applet/AppletContext;Ljava/awt/Label;)V
+ dq hide š width
+ - ò ƒ $386 <init> $385 $384 $383 $382 $381 O ş HWARNING: Decompiling this code may violate your licensing agreement
+ $380
+ Ô U
+ Ô é
+ [  \ Spiegel
+ [ 
+ [  S Ø T Ø LocalVariableTable setFont setTitle e java/awt/Graphics ¾ Í java/lang/Integer g $379 getGraphics $378 $377 $376 $375 Loading images  .....  O Ç $374 $373 $372 $371 ³ $370 ´ µ Ljava/awt/Graphics; ¶ Kz]OfO getWidthgOiOkOmO (I)V
+ dŠ $369 $368 $367 $366 $365 $364 $363 $362 head.gif $361 $360 )
+ © *  İ
+ © ª
+ d 9 toFront
+ Á{ $359 $358 $357 getFont $356
+ d  $355 $354 $353 $352 $351 $350 paint java/awt/Dimension ¤ 
+SourceFile (Ljava/lang/String;II)V java/awt/Component ¨ ( Ò
+‡ = $349 $348 init Ljava/lang/Thread; $347 $346 $345 $344 $343 $342 $341 $340 ¡ y ¢ y	 [	 [	 [		 [+ $339 ¬ y ° y Â java/awt/Image getFontMetrics c Ç (Ljava/awt/Image;I)V	 ¥  (Ljava/lang/String;)V‚ B OO
+ D	 [ + (Ljava/lang/String;)I LLWare; setBackground IO jŒ Õ. (II)Ljava/awt/Image; java/lang/Thread Ó getImage	 [ `	 [ _ Ljava/awt/Color; MXG
+…
+“ p (Ljava/lang/String;I)I (Ljava/lang/String;I)V ~ û	 [ w	 [ u	 [ z	 [ x
+ © \ Ì size
+ ÷ È stop destroy çO (III)V€$ 
+drawString	 [ & setColor GRTF height
+ dw 	waitForID ô java/lang/InterruptedException java/lang/NumberFormatException õ ø java/applet/Applet
+… <
+ [ ı !(Ljava/awt/image/ImageObserver;)I
+ db Ü (Ljava/lang/Runnable;)V
+ Ô 
+ F Ä java/awt/MediaTracker
+ A
+ ÷ , ()Ljava/awt/Font; ()Ljava/awt/Dimension; Qz Rz Wz 	getHeight å copyArea	 [ À	 [ ¿	 [ ¹	 [ ¸ ÃQ show java/lang/Runnable CodeO qu ru [I iz O § (Ljava/awt/Component;)V kz (IIII)V mz nz (Ljava/awt/Graphics;)V sz tz (D)D
+ Á Ğ getName	 [	 [	 [D	 [/ P}
+ h ä getAppletInfo 2(Ljava/net/URL;Ljava/lang/String;)Ljava/awt/Image; †u ()Ljava/lang/String;	 [#	 [	 [ 	 [I	 [F	 [n	 ["	 [G	 [H	 [j	 [L	 [e	 [h	 [c	 [^	 [	 [	 [l	 [K Šu	 [P ‡z ˆz ‰z ‹z
+ M z z ()Z (Ljava/awt/Event;II)Z ()V l} '(Ljava/awt/Font;)Ljava/awt/FontMetrics;
+ [ €
+ [ |
+ [ 
+ [ }
+ [ 
+ [ ‚ getDocumentBase SPG SPF
+ d J parseInt $99 —z` java/awt/Color	 ¥ { $98 ˜z $97 ™z $96 $95 z $94 z $93 Ÿz $92  z Ljava/lang/String; •O b 2@	!ÊÀƒo ; 8 Z 	drawImage ì § yellow	 [ f I
+ û Ljava/awt/MediaTracker; D fillRect Ljava/awt/Image; sin	_  getAppletContext 	mouseDown 3(Ljava/awt/Image;IILjava/awt/image/ImageObserver;)Z† java/awt/Fontˆ java/awt/FontMetricsv„ î
+ d‰ ()Ljava/awt/Graphics;@	!ùğ†n FACTOR (Ljava/awt/Color;)V
+ © Ï java/awt/Label’  [ ÷  0   ¾ Í     · ¯    ¶    µ    ´    ³    ²    ±o    ° y    ­ y    ¬ y    ¢ y    ¡ y     z    Ÿz    z    z    ›z    ™z    ˜z    —z    z    z    Œz    ‹z    Šu     ‰z     ˆz    ‡z    †u    …    v    tz    sz     ru     qu    nz    mz    l}    kz    iz    Wz     T Ø     S Ø    Rz    Qz    P}     N|    kO    `     B*´*´ Ö¶ „*´*´9*´8¶ ”*´*´ Ö¶ „*´*´9*´8¶ ”L*+¶ 7±    a               %O    9     *´ íÇ *» ÔY*· Xµ í*´ í¶ ÿ±    a               çO    2     *´ íÆ *´ í¶ Y*µ í±    a              ]O    n     Pş*´7h=<§ #*´*´7hd*´6d¶ œ`=„*´7¡ÿÛ*´*´6*´7*´7¶ œ*¶ ]±    a              ƒN    5     *´y¶ Ê*´y¶ :*´y¶ ã¬    a               O         p<§ ?*´5`‡*´ ½k¸ *´7d*´ ºl‡k=*´*´7hd*´6*´7t¶ œ„*´7¤ÿ¿**´5`µ5*´5*´ »h¤ **´5*´ »hdµ5±    a                İ      	   g6*´¶[N»…Y-¶ ù· Ú:*´¶ H*´¶ ü:*´8l6*´9+¶ «dl6*´*´ ×¶ „*´+h`¶ ñ§ W±   b e ó  a              gO    ^     @*´:*´7h*´;`d<*´²¶ „*´*´6*´7h¶ ”*´*´ ßh¶‹W±    a              iO    U     7*´'™ 
+*´(š 
+*¶V§ $*´*´ à¶‹W*´*´ á*´:¶‹W±    a               O    =     **´<dµ<*´<*´=t£ **´6µ<±    a              -0    !     °    a               OO    ƒ     e*· >*Uµ>*Uµ?*µ)*µ**<µ7*µ'*Zµ@*r*´@‡oµE*<µA*µ ¼*µ »*µ º*r*´ »‡oµ ½*²¶ ±    a              dO          ±    a               O   T    &**¶ µ*¶V***¶¶ µ â*´ Ë*´ â¶ L*´ Ë¶J§ W**´ â¶  µ6**´ â¶ –µB§ W**´B*´A`µ:**´:µC*µ;**´6µ<***´6*´:¶ “µ à**´ à¶%µ***´6*´7h¶ “µ á**´ á¶%µ*µ(***´6*´:h¶ “µ ß**´ ß¶%µ*´y¶ ‘š R*¶W*¶ ^*¶ Z*¶U*´*´ ß*´;`¶‹W*¶T*¶S*´*´ Ö¶ „*´*´7*´6*´7¶ ”*¶R§ÿ§  & . 1 ó 2 J M ó  a              b Ü    3     +¸,>§ W>¬      ö  a               èO          ±    a               ®O        ı*²¶ *»Y*·µ Ë**¶ ´aµ9**¶ ´ Æµ8*»_Y· µ Ö*»_Y ÿ ÿ ÿ· µ ×*¶ 4L**+<¶ úµ7*¶ 4L**+Z¶ úµ@*¶ 4L**+<¶ úµA*¶ 4L**+¶ úµ ¼*
+¶ 4L**+¶ úµ »*	¶ 4L**+¶ úµ º*r*´@‡oµE*r*´ »‡oµ ½»“Y· ÛM*» DY*¶ æ,· .µy*´y¶ *´y¶‘±    a               £!    #     *¶R±    a               O    R     4*´;*´C¡ **´4hµ4*´; **´4hµ4**´;*´4`µ;±    a              fO    S     5**´E*´3‡k¸ *´A‡kµ2**´3`µ3*´3*´@h¡ *µ3±    a              mO    ½     Ÿ<*´:*´:*´Bd`<*´²¶ „*´*´6*´:h¶ ”*´*´ â¶‹W*´ ¼‡o9=§ 0*´1`‡k¸ *´2‡k>*´*´B*´:d¶ œ„*´6¡ÿÎ**´1`µ1*´1*´ ¼h¡ *µ1±    a               ¦    V

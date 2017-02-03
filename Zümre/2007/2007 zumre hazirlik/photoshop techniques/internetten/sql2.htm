@@ -1,0 +1,2310 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+  <HEAD>
+    <title>P-104 : SQL Dili Deyimleri - Dersler</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-9">
+    <meta name="GENERATOR" content="Microsoft Visual Studio .NET 7.1">
+    <meta name="CODE_LANGUAGE" content="Visual Basic .NET 7.1">
+    <meta name=vs_defaultClientScript content="JavaScript">
+    <LINK rel="stylesheet" href="../css/farukcubukcu.css">
+<LINK rel="stylesheet" href="../css/style.css">
+  </HEAD>
+   <body MS_POSITIONING="GridLayout">
+  <script language="javascript">
+  window.focus();
+  </script>
+  
+    <form name="Form1" method="post" action="ders.aspx?kursID=9&amp;dersID=99" id="Form1">
+<input type="hidden" name="__VIEWSTATE" value="dDwtODkxMzIyODc7dDw7bDxpPDA+O2k8MT47PjtsPHQ8cDxsPFRleHQ7PjtsPFAtMTA0IDogU1FMIERpbGkgRGV5aW1sZXJpIC0gRGVyc2xlcjs+Pjs7Pjt0PDtsPGk8MT47aTwzPjtpPDU+Oz47bDx0PHA8bDxUZXh0Oz47bDxQLTEwNCA6IFNRTCBEaWxpIERleWltbGVyaTs+Pjs7Pjt0PHQ8cDxwPGw8RGF0YVRleHRGaWVsZDtEYXRhVmFsdWVGaWVsZDs+O2w8bm90ZV90aXRsZTtub3RlX2lkOz4+O3A8bDxvbmNoYW5nZTs+O2w8bWVudVNlYyh0aGlzKTs+Pj47dDxpPDU+O0A8REVSUyAxOiBTUUwgREVZxLBNTEVSxLA7REVSUyAyLiBTUUwgRMSwTMSwIEZPTktTxLBZT05MQVJJO0RFUlMgMzogREVZxLBNIEJMT0tMQVJJO0RFUlMgNDogVklFVyBLVUxMQU5JTUkNCjtERVJTIDU6IFNUT1JFRCBQUk9DRURVUkU7PjtAPDk4Ozk5OzEwMDsxMDE7MTAyOz4+Oz47Oz47dDxwPGw8VGV4dDs+O2w8OTs+Pjs7Pjs+Pjs+Pjs+hpdyH7b4lsFf7o7a+dFWGAplOZ4=" />
+
+    <table width="100%">
+    	<tr>
+			<td><img src="../images/dersLogo.gif" border=0></td>
+			<td align="right"><input type="button"  value="Pencereyi Kapat" onclick="window.self.close();"></td>
+		</tr>
+	</table>
+    
+      <TABLE cellSpacing=0 cellPadding=0  border=0>
+          <TR vAlign=top>
+			<TD >
+	
+	<font color="#1e90ff" size="5">
+	<b>P-104 : SQL Dili Deyimleri</b>
+	</font>
+	
+	</TD></TR>
+        <TR vAlign=top>
+          
+          <TD><b>Ders Listesi : </b><select name="dersListesi" id="dersListesi" onchange="menuSec(this)">
+	<option value="98">DERS 1: SQL DEYİMLERİ</option>
+	<option selected="selected" value="99">DERS 2. SQL DİLİ FONKSİYONLARI</option>
+	<option value="100">DERS 3: DEYİM BLOKLARI</option>
+	<option value="101">DERS 4: VIEW KULLANIMI
+</option>
+	<option value="102">DERS 5: STORED PROCEDURE</option>
+
+</select></TD></TR>
+        <TR vAlign=top>
+          <TD>
+			<h3 style="color:#1e90ff;">
+			
+			</h3>
+		  </TD>
+		</TR>
+        <TR vAlign=top>
+          <TD> 
+			<html xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns:st1="urn:schemas-microsoft-com:office:smarttags"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=ProgId content=Word.Document>
+<meta name=Generator content="Microsoft Word 10">
+<meta name=Originator content="Microsoft Word 10">
+<link rel=File-List href="p-104-D2_dosyalar/filelist.xml">
+<title>DERS 2</title>
+<o:SmartTagType namespaceuri="urn:schemas-microsoft-com:office:smarttags"
+ name="PersonName"/>
+<o:SmartTagType namespaceuri="urn:schemas-microsoft-com:office:smarttags"
+ name="place"/>
+<o:SmartTagType namespaceuri="urn:schemas-microsoft-com:office:smarttags"
+ name="City"/>
+<!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>faruk.cubukcu</o:Author>
+  <o:LastAuthor>faruk.cubukcu</o:LastAuthor>
+  <o:Revision>1</o:Revision>
+  <o:TotalTime>6</o:TotalTime>
+  <o:Created>2003-07-27T09:11:00Z</o:Created>
+  <o:LastSaved>2003-07-27T09:18:00Z</o:LastSaved>
+  <o:Pages>1</o:Pages>
+  <o:Words>1461</o:Words>
+  <o:Characters>8330</o:Characters>
+  <o:Company>akser</o:Company>
+  <o:Lines>69</o:Lines>
+  <o:Paragraphs>19</o:Paragraphs>
+  <o:CharactersWithSpaces>9772</o:CharactersWithSpaces>
+  <o:Version>10.2625</o:Version>
+ </o:DocumentProperties>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:SpellingState>Clean</w:SpellingState>
+  <w:GrammarState>Clean</w:GrammarState>
+  <w:Compatibility>
+   <w:BreakWrappedTables/>
+   <w:SnapToGridInCell/>
+   <w:WrapTextWithPunct/>
+   <w:UseAsianBreakRules/>
+  </w:Compatibility>
+  <w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel>
+ </w:WordDocument>
+</xml><![endif]--><!--[if !mso]><object
+ classid="clsid:38481807-CA0E-42D2-BF39-B33AF135CC4D" id=ieooui></object>
+<style>
+st1\:*{behavior:url(#ieooui) }
+</style>
+<![endif]-->
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;
+	mso-font-charset:2;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:0 268435456 0 0 -2147483648 0;}
+@font-face
+	{font-family:SimSun;
+	panose-1:2 1 6 0 3 1 1 1 1 1;
+	mso-font-alt:\5B8B\4F53;
+	mso-font-charset:134;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:3 135135232 16 0 262145 0;}
+@font-face
+	{font-family:"\@SimSun";
+	panose-1:2 1 6 0 3 1 1 1 1 1;
+	mso-font-charset:134;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:3 135135232 16 0 262145 0;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-parent:"";
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:Arial;
+	mso-fareast-font-family:SimSun;
+	mso-bidi-font-family:"Times New Roman";
+	mso-ansi-language:TR;
+	mso-fareast-language:ZH-CN;}
+h1
+	{mso-style-next:Normal;
+	margin-top:6.0pt;
+	margin-right:0in;
+	margin-bottom:6.0pt;
+	margin-left:0in;
+	mso-pagination:widow-orphan lines-together;
+	page-break-after:avoid;
+	mso-outline-level:1;
+	mso-hyphenate:none;
+	font-size:16.0pt;
+	font-family:Arial;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";
+	mso-font-kerning:0pt;
+	mso-ansi-language:TR;
+	mso-fareast-language:EN-US;
+	mso-bidi-language:HE;
+	font-weight:bold;
+	mso-bidi-font-weight:normal;}
+h2
+	{mso-style-next:Normal;
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:2;
+	font-size:14.0pt;
+	font-family:Arial;
+	mso-fareast-font-family:SimSun;
+	mso-ansi-language:TR;
+	mso-fareast-language:ZH-CN;
+	font-weight:bold;
+	mso-bidi-font-style:italic;}
+h3
+	{mso-style-next:Normal;
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:3;
+	font-size:12.0pt;
+	font-family:Arial;
+	mso-fareast-font-family:SimSun;
+	mso-ansi-language:TR;
+	mso-fareast-language:ZH-CN;
+	font-weight:bold;}
+h5
+	{mso-style-next:Normal;
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	mso-outline-level:5;
+	font-size:13.0pt;
+	font-family:Arial;
+	mso-fareast-font-family:SimSun;
+	mso-bidi-font-family:"Times New Roman";
+	mso-ansi-language:TR;
+	mso-fareast-language:ZH-CN;
+	font-weight:bold;
+	font-style:italic;}
+p.MsoListBullet, li.MsoListBullet, div.MsoListBullet
+	{mso-style-update:auto;
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan lines-together;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Arial;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";
+	mso-ansi-language:TR;
+	mso-fareast-language:ZH-CN;
+	font-weight:bold;
+	mso-bidi-font-weight:normal;}
+a:link, span.MsoHyperlink
+	{mso-style-parent:"";
+	color:blue;
+	text-decoration:underline;
+	text-underline:single;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:purple;
+	text-decoration:underline;
+	text-underline:single;}
+p
+	{mso-margin-top-alt:auto;
+	margin-right:0in;
+	mso-margin-bottom-alt:auto;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:Arial;
+	mso-fareast-font-family:SimSun;
+	mso-bidi-font-family:"Times New Roman";
+	mso-fareast-language:ZH-CN;}
+code
+	{font-family:"Courier New";
+	mso-ascii-font-family:"Courier New";
+	mso-fareast-font-family:SimSun;
+	mso-hansi-font-family:"Courier New";
+	mso-bidi-font-family:"Courier New";}
+pre
+	{margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt;
+	font-size:10.0pt;
+	font-family:"Courier New";
+	mso-fareast-font-family:SimSun;
+	mso-fareast-language:ZH-CN;}
+p.H5, li.H5, div.H5
+	{mso-style-name:H5;
+	mso-style-next:Normal;
+	margin-top:5.0pt;
+	margin-right:0in;
+	margin-bottom:5.0pt;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:6;
+	font-size:10.0pt;
+	font-family:Arial;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";
+	mso-ansi-language:TR;
+	mso-fareast-language:EN-US;
+	layout-grid-mode:line;
+	font-weight:bold;
+	mso-bidi-font-weight:normal;}
+span.CODE
+	{mso-style-name:CODE;
+	mso-style-parent:"";
+	mso-ansi-font-size:10.0pt;
+	font-family:"Courier New";
+	mso-ascii-font-family:"Courier New";
+	mso-hansi-font-family:"Courier New";}
+p.DefinitionTerm, li.DefinitionTerm, div.DefinitionTerm
+	{mso-style-name:"Definition Term";
+	mso-style-next:"Definition List";
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Arial;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";
+	mso-fareast-language:EN-US;
+	layout-grid-mode:line;}
+p.DefinitionList, li.DefinitionList, div.DefinitionList
+	{mso-style-name:"Definition List";
+	mso-style-next:"Definition Term";
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.25in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Arial;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";
+	mso-fareast-language:EN-US;
+	layout-grid-mode:line;}
+p.indent, li.indent, div.indent
+	{mso-style-name:indent;
+	mso-margin-top-alt:auto;
+	margin-right:0in;
+	mso-margin-bottom-alt:auto;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:Arial;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";
+	mso-ansi-language:TR;
+	mso-fareast-language:TR;}
+span.SpellE
+	{mso-style-name:"";
+	mso-spl-e:yes;}
+span.GramE
+	{mso-style-name:"";
+	mso-gram-e:yes;}
+@page Section1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.25in 1.0in 1.25in;
+	mso-header-margin:.5in;
+	mso-footer-margin:.5in;
+	mso-paper-source:0;}
+div.Section1
+	{page:Section1;}
+ /* List Definitions */
+ @list l0
+	{mso-list-id:-2;
+	mso-list-type:simple;
+	mso-list-template-ids:-1;}
+@list l0:level1
+	{mso-level-start-at:0;
+	mso-level-text:*;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:0in;
+	text-indent:0in;}
+@list l1
+	{mso-list-id:1102996551;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-1671531848 69140481 69140483 69140485 69140481 69140483 69140485 69140481 69140483 69140485;}
+@list l1:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l2
+	{mso-list-id:1251693210;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-1211316874 67698689 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l2:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l3
+	{mso-list-id:1289437621;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-676179662 67698689 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l3:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l0:level1 lfo1
+	{mso-level-number-format:bullet;
+	mso-level-numbering:continue;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	mso-level-legacy:yes;
+	mso-level-legacy-indent:.25in;
+	mso-level-legacy-space:0in;
+	text-indent:-.25in;
+	font-family:Symbol;}
+ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+-->
+</style>
+<!--[if gte mso 10]>
+<style>
+ /* Style Definitions */
+ table.MsoNormalTable
+	{mso-style-name:"Normal Tablo";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-parent:"";
+	mso-padding-alt:0in 5.4pt 0in 5.4pt;
+	mso-para-margin:0in;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman";}
+</style>
+<![endif]-->
+</head>
+
+<body lang=EN-US link=blue vlink=purple style='tab-interval:.5in'>
+
+<div class=Section1>
+
+<h1><a name="_Toc40071311"><span lang=TR>DERS 2. SQL D&#304;L&#304;
+FONKS&#304;YONLARI</span></a></h1>
+
+<p class=MsoNormal><span lang=TR><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=TR>Amaçlar: </span></p>
+
+<p class=MsoNormal><span lang=TR><o:p>&nbsp;</o:p></span></p>
+
+<ul style='margin-top:0in' type=disc>
+ <li class=MsoNormal style='mso-list:l2 level1 lfo4;tab-stops:list .5in'><span
+     lang=TR>SQL dilinin fonksiyonlar&#305;n&#305; aç&#305;klamak. </span></li>
+</ul>
+
+<p class=MsoNormal><span lang=TR><o:p>&nbsp;</o:p></span></p>
+
+<h1><span lang=TR>I. SQL FONKS&#304;YONLARI</span></h1>
+
+<p class=MsoNormal><span lang=TR>SQL Server'da Fonksiyonlar, hesaplamalarda ve
+özellikle sistem hakk&#305;nda bilgi almada yayg&#305;n olarak kullan&#305;lan
+araçlard&#305;r. <span class=SpellE>Transact</span>-SQL (<b style='mso-bidi-font-weight:
+normal'>T-SQL</b>) programlama dilinde de&#287;i&#351;ik kategorilerle
+adland&#305;r&#305;lan fonksiyonlar vard&#305;r. Bunlardan en yayg&#305;n&#305;
+veriler üzerinde i&#351;lem yapan toplama <span class=SpellE>ya</span> da
+gruplama olarak adland&#305;rabilece&#287;imiz <span class=SpellE>aggregate</span>
+fonksiyonlar&#305;d&#305;r. <o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=TR><o:p>&nbsp;</o:p></span></p>
+
+<h2><a name="_Toc40071312"><span lang=TR>A. GRUPLAMA FONKS&#304;YONLARI</span></a><span
+lang=TR><o:p></o:p></span></h2>
+
+<p class=MsoNormal><span lang=TR>Gruplama (<span class=SpellE>aggregate</span>)
+fonksiyonlar&#305; bir dizi de&#287;er üzerinde hesaplama yaparlar ve bir sonuç
+de&#287;er döndürürler. Toplama <span class=SpellE>ya</span> da gruplama
+fonksiyonlar&#305; olarak adland&#305;rabilece&#287;imiz bu fonksiyonlar
+genellikle GROUP BY deyimi ile kullan&#305;l&#305;rlar. <o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=TR><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=TR><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=TR>Gruplama fonksiyonlar&#305;
+a&#351;a&#287;&#305;daki ifadeler içinde kullan&#305;labilirler. <o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.25in'><span lang=TR><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.5in;text-indent:-.25in;mso-list:l0 level1 lfo1'><![if !supportLists]><span
+lang=TR style='font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+Symbol'><span style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=TR>SELECT deyiminin listesinden (bir <span
+class=SpellE>subquery</span> olarak) <o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.5in;text-indent:-.25in;mso-list:l0 level1 lfo1'><![if !supportLists]><span
+lang=TR style='font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+Symbol'><span style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=TR>Bir COMPUTE <span class=SpellE>ya</span>
+da COMPUTE BY sözcü&#287;ü ile. <o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.5in;text-indent:-.25in;mso-list:l0 level1 lfo1'><![if !supportLists]><span
+lang=TR style='font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+Symbol'><span style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=TR>Bir HAVING sözcü&#287;ü ile. <o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=TR><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span class=SpellE><span lang=TR>Transact</span></span><span
+lang=TR>-SQL programlama dilinde &#351;u <span class=SpellE>aggregate</span>
+fonksiyonlar&#305; kullan&#305;l&#305;r: <o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=TR><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoListBullet style='margin-left:.5in;text-indent:-.25in;mso-list:
+l2 level1 lfo4;tab-stops:list .5in'><![if !supportLists]><span lang=TR
+style='font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+Symbol;font-weight:normal'><span style='mso-list:Ignore'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=TR>AVG<o:p></o:p></span></p>
+
+<p class=MsoListBullet style='margin-left:.5in;text-indent:-.25in;mso-list:
+l2 level1 lfo4;tab-stops:list .5in'><![if !supportLists]><span lang=TR
+style='font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+Symbol;font-weight:normal'><span style='mso-list:Ignore'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=TR>COUNT<o:p></o:p></span></p>
+
+<p class=MsoListBullet style='margin-left:.5in;text-indent:-.25in;mso-list:
+l2 level1 lfo4;tab-stops:list .5in'><![if !supportLists]><span lang=TR
+style='font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+Symbol;font-weight:normal'><span style='mso-list:Ignore'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=TR>GROUPING<o:p></o:p></span></p>
+
+<p class=MsoListBullet style='margin-left:.5in;text-indent:-.25in;mso-list:
+l2 level1 lfo4;tab-stops:list .5in'><![if !supportLists]><span lang=TR
+style='font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+Symbol;font-weight:normal'><span style='mso-list:Ignore'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=TR>MAX<o:p></o:p></span></p>
+
+<p class=MsoListBullet style='margin-left:.5in;text-indent:-.25in;mso-list:
+l2 level1 lfo4;tab-stops:list .5in'><![if !supportLists]><span lang=TR
+style='font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+Symbol;font-weight:normal'><span style='mso-list:Ignore'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=TR>MIN<o:p></o:p></span></p>
+
+<p class=MsoListBullet style='margin-left:.5in;text-indent:-.25in;mso-list:
+l2 level1 lfo4;tab-stops:list .5in'><![if !supportLists]><span lang=TR
+style='font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+Symbol;font-weight:normal'><span style='mso-list:Ignore'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=TR>SUM<o:p></o:p></span></p>
+
+<p class=MsoListBullet style='margin-left:.5in;text-indent:-.25in;mso-list:
+l2 level1 lfo4;tab-stops:list .5in'><![if !supportLists]><span lang=TR
+style='font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+Symbol;font-weight:normal'><span style='mso-list:Ignore'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=TR>STDEV<o:p></o:p></span></p>
+
+<p class=MsoListBullet style='margin-left:.5in;text-indent:-.25in;mso-list:
+l2 level1 lfo4;tab-stops:list .5in'><![if !supportLists]><span lang=TR
+style='font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+Symbol;font-weight:normal'><span style='mso-list:Ignore'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=TR>STDEVP<o:p></o:p></span></p>
+
+<p class=MsoListBullet style='margin-left:.5in;text-indent:-.25in;mso-list:
+l2 level1 lfo4;tab-stops:list .5in'><![if !supportLists]><span lang=TR
+style='font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+Symbol;font-weight:normal'><span style='mso-list:Ignore'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=TR>VAR<o:p></o:p></span></p>
+
+<p class=MsoListBullet style='margin-left:.5in;text-indent:-.25in;mso-list:
+l2 level1 lfo4;tab-stops:list .5in'><![if !supportLists]><span lang=TR
+style='font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+Symbol;font-weight:normal'><span style='mso-list:Ignore'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=TR>VARP<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=TR><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=TR>NOT: Bu dokümanlar </span><st1:PersonName><span
+ lang=TR>Faruk Çubukçu</span></st1:PersonName><span lang=TR> taraf&#305;ndan
+haz&#305;rlanm&#305;&#351;t&#305;r. Bütün haklar&#305; sakl&#305;d&#305;r.
+Ticari olarak kullan&#305;lamaz. Bak&#305;n&#305;z: <a
+href="http://www.farukcubukcu.com/">www.farukcubukcu.com</a><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=TR>Ad&#305; geçen ve telif hakl&#305; olan
+ürünler bilgi amaçl&#305; olarak kullan&#305;lm&#305;&#351;t&#305;r. <o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=TR><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=TR><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><a name="_Toc40071313"><b style='mso-bidi-font-weight:normal'><span
+lang=TR>AVG (T-SQL) Fonksiyonu</span></b></a><b style='mso-bidi-font-weight:
+normal'><span lang=TR><o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span lang=TR>Bir grup içindeki de&#287;erlerin
+ortalamas&#305;n&#305; döndürür. <span class=SpellE>Null</span> de&#287;erler dikkate
+al&#305;nmaz. <o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=TR><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><u><span lang=TR>Kullan&#305;m Biçimi: <o:p></o:p></span></u></p>
+
+<p class=MsoNormal><span lang=TR><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=TR>AVG(</span></b><span
+lang=TR>[ALL | DISTINCT] <i style='mso-bidi-font-style:normal'>ifade</i><b
+style='mso-bidi-font-weight:normal'>)</b><o:p></o:p></span></p>
+
+<p class=H5><span lang=TR><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><u><span lang=TR>Argümanlar&#305;:<o:p></o:p></span></u></p>
+
+<p class=DefinitionTerm style='margin-top:5.0pt;margin-right:0in;margin-bottom:
+5.0pt;margin-left:0in'><span lang=TR style='mso-ansi-language:TR'>ALL <o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=TR><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=TR>Ortalama fonksiyonunu bütün de&#287;erlere
+uygular. <o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=TR><o:p>&nbsp;</o:p></span></p>
+
+<p class=DefinitionTerm style='margin-top:5.0pt;margin-right:0in;margin-bottom:
+5.0pt;margin-left:0in'><span lang=TR style='mso-ansi-language:TR'>DISTINCT <o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=TR>&#304;&#351;lemin her tek de&#287;er için
+uygulanaca&#287;&#305;n&#305; belirtir. Di&#287;er bir deyi&#351;le tekrar eden
+de&#287;erlerin yerine birisi kullan&#305;l&#305;r. <o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=TR><o:p>&nbsp;</o:p></span></p>
+
+<p class=DefinitionTerm style='margin-top:5.0pt;margin-right:0in;margin-bottom:
+5.0pt;margin-left:0in'><i style='mso-bidi-font-style:normal'><span lang=TR
+style='mso-ansi-language:TR'>ifade</span></i><span lang=TR style='mso-ansi-language:
+TR'><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=TR><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=TR>Say&#305;sal bir de&#287;eri olan ifade <span
+class=SpellE>ya</span> da kolon ad&#305;.<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=TR><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><u><span lang=TR>Örnek</span></u><span lang=TR>: <o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=TR><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=TR>A&#351;a&#287;&#305;daki örnekte
+sat&#305;&#351; miktarlar&#305; toplanmakta ve ortalamas&#305; al&#305;narak
+iki ayr&#305; sonuç de&#287;eri verilmektedir: <o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=TR><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span class=CODE><span lang=TR style='font-size:10.0pt;
+mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman"'>USE <span
+class=SpellE>Northwind</span><o:p></o:p></span></span></p>
+
+<p class=MsoNormal><span class=CODE><span lang=TR style='font-size:10.0pt;
+mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman"'>GO</span></span><span
+lang=TR><o:p></o:p></span></p>
+
+<p class=MsoNormal><span class=CODE><span lang=TR style='font-size:10.0pt;
+mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman"'>SELECT AVG(<span
+class=SpellE>quantity</span>), SUM(<span class=SpellE>quantity</span>)</span></span><span
+lang=TR><o:p></o:p></span></p>
+
+<p class=MsoNormal><span class=CODE><span lang=TR style='font-size:10.0pt;
+mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman"'>FROM [<span
+class=SpellE>Order</span> <span class=SpellE>Details</span>]<o:p></o:p></span></span></p>
+
+<p class=MsoNormal><span class=CODE><span lang=TR style='font-size:10.0pt;
+mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman"'>GO</span></span><span
+lang=TR><o:p></o:p></span></p>
+
+<p class=H5><span lang=TR><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><a name="_Toc40071314"><b style='mso-bidi-font-weight:normal'><span
+lang=TR>COUNT (T-SQL) Fonksiyonu</span></b></a><b style='mso-bidi-font-weight:
+normal'><span lang=TR><o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span lang=TR>Bir grup içindeki eleman
+say&#305;s&#305;n&#305; verir. <o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=TR><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><u><span lang=TR>Kullan&#305;m Biçimi: <o:p></o:p></span></u></p>
+
+<p class=MsoNormal><span lang=TR><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=TR>COUNT(</span></b><span
+lang=TR>{[ALL | DISTINCT] <i style='mso-bidi-font-style:normal'>ifade</i>] | <b
+style='mso-bidi-font-weight:normal'>*</b>}<b style='mso-bidi-font-weight:normal'>)</b><o:p></o:p></span></p>
+
+<p class=MsoNormal><u><span lang=TR><o:p><span style='text-decoration:none'>&nbsp;</span></o:p></span></u></p>
+
+<p class=MsoNormal><u><span lang=TR>Argümanlar&#305;: <o:p></o:p></span></u></p>
+
+<p class=MsoNormal><span lang=TR><o:p>&nbsp;</o:p></span></p>
+
+<p class=DefinitionTerm style='margin-top:5.0pt;margin-right:0in;margin-bottom:
+5.0pt;margin-left:0in'><span lang=TR style='mso-ansi-language:TR'>ALL <o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=TR><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=TR>Fonksiyonunu bütün de&#287;erlere uygular. <o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=TR><o:p>&nbsp;</o:p></span></p>
+
+<p class=DefinitionTerm style='margin-top:5.0pt;margin-right:0in;margin-bottom:
+5.0pt;margin-left:0in'><span lang=TR style='mso-ansi-language:TR'>DISTINCT <o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=TR>&#304;&#351;lemin her tek de&#287;er için
+uygulanaca&#287;&#305;n&#305; belirtir. Di&#287;er bir deyi&#351;le tekrar eden
+de&#287;erlerin yerine birisi kullan&#305;l&#305;r. <o:p></o:p></span></p>
+
+<p class=DefinitionTerm style='margin-top:5.0pt;margin-right:0in;margin-bottom:
+5.0pt;margin-left:0in'><i style='mso-bidi-font-style:normal'><span lang=TR
+style='mso-ansi-language:TR'><o:p>&nbsp;</o:p></span></i></p>
+
+<p class=DefinitionTerm style='margin-top:5.0pt;margin-right:0in;margin-bottom:
+5.0pt;margin-left:0in'><i style='mso-bidi-font-style:normal'><span lang=TR
+style='mso-ansi-language:TR'>ifade</span></i><span lang=TR style='mso-ansi-language:
+TR'><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=TR><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=TR>Bir ifade <span class=SpellE>ya</span> da
+kolon ad&#305;.<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=TR><o:p>&nbsp;</o:p></span></p>
+
+<p class=DefinitionTerm style='margin-top:5.0pt;margin-right:0in;margin-bottom:
+5.0pt;margin-left:0in'><b style='mso-bidi-font-weight:normal'><span lang=TR
+style='mso-ansi-language:TR'>*</span></b><span lang=TR style='mso-ansi-language:
+TR'> <o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=TR>Bir tablodaki bütün sat&#305;rlar&#305;n
+say&#305;s&#305;n&#305; döndürmek için kullan&#305;l&#305;r. COUNT(<b
+style='mso-bidi-font-weight:normal'>*</b>) herhangi bir <span class=SpellE>paratmetre</span>
+ile kullan&#305;lmaz ve DISTINCT ile kullan&#305;lmaz. <o:p></o:p></span></p>
+
+<p class=H5><span lang=TR><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=TR>COUNT(*) ile <span class=SpellE>null</span> ve
+tekrar eden de&#287;erler dahil bütün elemanlar say&#305;l&#305;r. <o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=TR><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><u><span lang=TR>Örnek:<o:p></o:p></span></u></p>
+
+<p class=MsoNormal><span lang=TR><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=TR>A&#351;a&#287;&#305;daki örnekte ürünler
+tablosundaki ürünler say&#305;l&#305;r. DISTINCT ile tekrara izin verilmez. <o:p></o:p></span></p>
+
+<p class=MsoNormal><span class=CODE><span lang=TR style='font-size:10.0pt;
+mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman"'><o:p>&nbsp;</o:p></span></span></p>
+
+<p class=MsoNormal><span class=CODE><span lang=TR style='font-size:10.0pt;
+mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman"'>USE <span
+class=SpellE>Northwind</span><o:p></o:p></span></span></p>
+
+<p class=MsoNormal><span class=CODE><span lang=TR style='font-size:10.0pt;
+mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman"'>GO</span></span><span
+lang=TR><o:p></o:p></span></p>
+
+<p class=MsoNormal><span class=CODE><span lang=TR style='font-size:10.0pt;
+mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman"'>SELECT
+COUNT(DISTINCT <span class=SpellE>productname</span>)</span></span><span
+lang=TR><o:p></o:p></span></p>
+
+<p class=MsoNormal><span class=CODE><span lang=TR style='font-size:10.0pt;
+mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman"'>FROM <span
+class=SpellE>products</span></span></span><span lang=TR><o:p></o:p></span></p>
+
+<p class=MsoNormal><span class=CODE><span lang=TR style='font-size:10.0pt;
+mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman"'>GO</span></span><span
+lang=TR><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=TR><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><a name="_Toc40071316"><b style='mso-bidi-font-weight:normal'><span
+lang=TR>MAX (T-SQL) Fonksiyonu</span></b></a><b style='mso-bidi-font-weight:
+normal'><span lang=TR><o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span lang=TR>&#304;fade içindeki maksimum de&#287;eri
+döndürür. <o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=TR><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><u><span lang=TR>Kullan&#305;m Biçimi: <o:p></o:p></span></u></p>
+
+<p class=MsoNormal><span lang=TR><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=TR>MAX(</span></b><span
+lang=TR>[ALL | DISTINCT] <i style='mso-bidi-font-style:normal'>ifade</i><b
+style='mso-bidi-font-weight:normal'>)</b><o:p></o:p></span></p>
+
+<p class=H5><span lang=TR><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><u><span lang=TR>Argümanlar&#305;: <o:p></o:p></span></u></p>
+
+<p class=MsoNormal><span lang=TR><o:p>&nbsp;</o:p></span></p>
+
+<p class=DefinitionTerm style='margin-top:5.0pt;margin-right:0in;margin-bottom:
+5.0pt;margin-left:0in'><span lang=TR style='mso-ansi-language:TR'>ALL <o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=TR><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span class=SpellE><span lang=TR>Fonskiyonunu</span></span><span
+lang=TR> bütün de&#287;erlere uygular. <o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=TR><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><a name="_Toc40071317"><b style='mso-bidi-font-weight:normal'><span
+lang=TR>MIN (T-SQL) </span></b></a><span class=SpellE><span style='mso-bookmark:
+_Toc40071317'><b style='mso-bidi-font-weight:normal'><span lang=TR>FOnksiyonu</span></b></span></span><span
+style='mso-bookmark:_Toc40071317'></span><b style='mso-bidi-font-weight:normal'><span
+lang=TR><o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span lang=TR>&#304;fade içindeki minimum de&#287;eri
+döndürür. <o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=TR><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><u><span lang=TR>Kullan&#305;m Biçimi: <o:p></o:p></span></u></p>
+
+<p class=MsoNormal><span lang=TR><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=TR>MIN(</span></b><span
+lang=TR>[ALL | DISTINCT] <i style='mso-bidi-font-style:normal'>ifade</i><b
+style='mso-bidi-font-weight:normal'>)</b><o:p></o:p></span></p>
+
+<p class=H5><span lang=TR><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><u><span lang=TR>Argümanlar&#305;: <o:p></o:p></span></u></p>
+
+<p class=MsoNormal><span lang=TR><o:p>&nbsp;</o:p></span></p>
+
+<p class=DefinitionTerm style='margin-top:5.0pt;margin-right:0in;margin-bottom:
+5.0pt;margin-left:0in'><span lang=TR style='mso-ansi-language:TR'>ALL <o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=TR><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span class=SpellE><span lang=TR>Fonskiyonunu</span></span><span
+lang=TR> bütün de&#287;erlere uygular. </span></p>
+
+<p class=MsoNormal><span lang=TR><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><u><span lang=TR>Örnek:<o:p></o:p></span></u></p>
+
+<p class=MsoNormal><span lang=TR><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=TR>A&#351;a&#287;&#305;daki örnekte en küçük
+sat&#305;&#351; adedi elde edilmektedir: <o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=TR><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span class=CODE><span lang=TR style='font-size:10.0pt;
+mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman"'>USE <span
+class=SpellE>Northwind</span><o:p></o:p></span></span></p>
+
+<p class=MsoNormal><span class=CODE><span lang=TR style='font-size:10.0pt;
+mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman"'>GO</span></span><span
+lang=TR><o:p></o:p></span></p>
+
+<p class=MsoNormal><span class=CODE><span lang=TR style='font-size:10.0pt;
+mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman"'>SELECT MIN(<span
+class=SpellE>quantity</span>)</span></span><span lang=TR><o:p></o:p></span></p>
+
+<p class=MsoNormal><span class=CODE><span lang=TR style='font-size:10.0pt;
+mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman"'>FROM [<span
+class=SpellE>Order</span> <span class=SpellE>Details</span>]<o:p></o:p></span></span></p>
+
+<p class=MsoNormal><span class=CODE><span lang=TR style='font-size:10.0pt;
+mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman"'>GO</span></span><span
+lang=TR><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=TR><o:p>&nbsp;</o:p></span></p>
+
+<h3><a name="_Toc40071327"><span lang=TR>SUM Fonksiyonu</span></a><span
+lang=TR><o:p></o:p></span></h3>
+
+<p class=MsoNormal><span lang=TR>De&#287;erlerin toplamlar&#305;n&#305; verir. SUM
+fonksiyonu sadece say&#305;sal alanlarda kullan&#305;l&#305;r. <o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=TR><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><u><span lang=TR>Kullan&#305;m Biçimi: <o:p></o:p></span></u></p>
+
+<p class=MsoNormal><u><span lang=TR><o:p><span style='text-decoration:none'>&nbsp;</span></o:p></span></u></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=TR>SUM (</span></b><span
+lang=TR>[ALL | DISTINCT] <i style='mso-bidi-font-style:normal'>ifade</i><b
+style='mso-bidi-font-weight:normal'>)<o:p></o:p></b></span></p>
+
+<p class=MsoNormal><span lang=TR><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><u><span lang=TR>Argümanlar&#305;:<o:p></o:p></span></u></p>
+
+<p class=DefinitionTerm style='margin-top:5.0pt;margin-right:0in;margin-bottom:
+5.0pt;margin-left:0in'><span lang=TR style='mso-ansi-language:TR'>ALL <o:p></o:p></span></p>
+
+<p class=DefinitionList style='margin-top:5.0pt;margin-right:0in;margin-bottom:
+5.0pt;margin-left:.25in'><span lang=TR style='mso-ansi-language:TR'>Toplama (<span
+class=SpellE>aggregate</span>) fonksiyonunu bütün de&#287;erlere uygular. ALL
+seçene&#287;i varsay&#305;m olarak kullan&#305;l&#305;r. <o:p></o:p></span></p>
+
+<p class=DefinitionTerm style='margin-top:5.0pt;margin-right:0in;margin-bottom:
+5.0pt;margin-left:0in'><span lang=TR style='mso-ansi-language:TR'>DISTINCT <o:p></o:p></span></p>
+
+<p class=DefinitionList style='margin-top:5.0pt;margin-right:0in;margin-bottom:
+5.0pt;margin-left:.25in'><span lang=TR style='mso-ansi-language:TR'>SUM
+fonksiyonunu tek de&#287;erlerin (<span class=SpellE>unique</span>)
+toplam&#305;n&#305; vermesini sa&#287;lar. <o:p></o:p></span></p>
+
+<p class=DefinitionTerm style='margin-top:5.0pt;margin-right:0in;margin-bottom:
+5.0pt;margin-left:0in'><i style='mso-bidi-font-style:normal'><span lang=TR
+style='mso-ansi-language:TR'>&#304;fade</span></i><span lang=TR
+style='mso-ansi-language:TR'><o:p></o:p></span></p>
+
+<p class=DefinitionList style='margin-top:5.0pt;margin-right:0in;margin-bottom:
+5.0pt;margin-left:.25in'><span lang=TR style='mso-ansi-language:TR'>Bir sabit,
+bir kolon, fonksiyon <span class=SpellE>ya</span> da bir aritmetik i&#351;lem. <o:p></o:p></span></p>
+
+<p class=MsoNormal><u><span lang=TR>Örnek: <o:p></o:p></span></u></p>
+
+<p class=MsoNormal><span lang=TR><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span class=CODE><span lang=TR style='font-size:10.0pt;
+mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman"'>USE <span
+class=SpellE>pubs</span></span></span><span lang=TR><o:p></o:p></span></p>
+
+<p class=MsoNormal><span class=CODE><span lang=TR style='font-size:10.0pt;
+mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman"'>GO</span></span><span
+lang=TR><o:p></o:p></span></p>
+
+<p class=MsoNormal><span class=CODE><span lang=TR style='font-size:10.0pt;
+mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman"'>-- Sat&#305;r
+toplamlar&#305;</span></span><span lang=TR><o:p></o:p></span></p>
+
+<p class=MsoNormal><span class=CODE><span lang=TR style='font-size:10.0pt;
+mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman"'><o:p>&nbsp;</o:p></span></span></p>
+
+<p class=MsoNormal><span class=CODE><span lang=TR style='font-size:10.0pt;
+mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman"'>SELECT <span
+class=SpellE>type</span>, <span class=SpellE>price</span>, <span class=SpellE>advance</span></span></span><span
+lang=TR><o:p></o:p></span></p>
+
+<p class=MsoNormal><span class=CODE><span lang=TR style='font-size:10.0pt;
+mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman"'>FROM <span
+class=SpellE>titles</span></span></span><span lang=TR><o:p></o:p></span></p>
+
+<p class=MsoNormal><span class=CODE><span lang=TR style='font-size:10.0pt;
+mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman"'>ORDER BY <span
+class=SpellE>type</span></span></span><span lang=TR><o:p></o:p></span></p>
+
+<p class=MsoNormal><span class=CODE><span lang=TR style='font-size:10.0pt;
+mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman"'>COMPUTE SUM(<span
+class=SpellE>price</span>), SUM(<span class=SpellE>advance</span>) BY <span
+class=SpellE>type</span></span></span><span lang=TR><o:p></o:p></span></p>
+
+<p class=MsoNormal><span class=CODE><span lang=TR style='font-size:10.0pt;
+mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman"'><o:p>&nbsp;</o:p></span></span></p>
+
+<h2><a name="_Toc40071341"></a><a name="_Toc40071319"><span style='mso-bookmark:
+_Toc40071341'><span lang=TR>B. TAR&#304;H VE ZAMAN FONKS&#304;YONLARI (T-SQL)</span></span></a><span
+style='mso-bookmark:_Toc40071341'><span lang=TR><o:p></o:p></span></span></h2>
+
+<p class=MsoNormal><span style='mso-bookmark:_Toc40071341'><span lang=TR>Bu
+fonksiyonlar tarih (<span class=SpellE>date</span>) ve zaman (time) üzerinde
+i&#351;lemler yapmay&#305; sa&#287;lar. Tarih ve zaman fonksiyonlar&#305;
+&#351;unlard&#305;r: <o:p></o:p></span></span></p>
+
+<p class=MsoNormal><span style='mso-bookmark:_Toc40071341'><span lang=TR><o:p>&nbsp;</o:p></span></span></p>
+
+<p class=MsoListBullet style='margin-left:.5in;text-indent:-.25in;mso-list:
+l3 level1 lfo3;tab-stops:list .5in'><span style='mso-bookmark:_Toc40071341'><![if !supportLists]><span
+lang=TR style='font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+Symbol;font-weight:normal'><span style='mso-list:Ignore'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=TR>DATEADD<o:p></o:p></span></span></p>
+
+<p class=MsoListBullet style='margin-left:.5in;text-indent:-.25in;mso-list:
+l3 level1 lfo3;tab-stops:list .5in'><span style='mso-bookmark:_Toc40071341'><![if !supportLists]><span
+lang=TR style='font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+Symbol;font-weight:normal'><span style='mso-list:Ignore'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=TR>DATEDIFF<o:p></o:p></span></span></p>
+
+<p class=MsoListBullet style='margin-left:.5in;text-indent:-.25in;mso-list:
+l3 level1 lfo3;tab-stops:list .5in'><span style='mso-bookmark:_Toc40071341'><![if !supportLists]><span
+lang=TR style='font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+Symbol;font-weight:normal'><span style='mso-list:Ignore'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=TR>DATENAME<o:p></o:p></span></span></p>
+
+<p class=MsoListBullet style='margin-left:.5in;text-indent:-.25in;mso-list:
+l3 level1 lfo3;tab-stops:list .5in'><span style='mso-bookmark:_Toc40071341'><![if !supportLists]><span
+lang=TR style='font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+Symbol;font-weight:normal'><span style='mso-list:Ignore'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=TR>DATEPART<o:p></o:p></span></span></p>
+
+<p class=MsoListBullet style='margin-left:.5in;text-indent:-.25in;mso-list:
+l3 level1 lfo3;tab-stops:list .5in'><span style='mso-bookmark:_Toc40071341'><![if !supportLists]><span
+lang=TR style='font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+Symbol;font-weight:normal'><span style='mso-list:Ignore'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=TR>DAY<o:p></o:p></span></span></p>
+
+<p class=MsoListBullet style='margin-left:.5in;text-indent:-.25in;mso-list:
+l3 level1 lfo3;tab-stops:list .5in'><span style='mso-bookmark:_Toc40071341'><![if !supportLists]><span
+lang=TR style='font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+Symbol;font-weight:normal'><span style='mso-list:Ignore'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=TR>GETDATE<o:p></o:p></span></span></p>
+
+<p class=MsoListBullet style='margin-left:.5in;text-indent:-.25in;mso-list:
+l3 level1 lfo3;tab-stops:list .5in'><span style='mso-bookmark:_Toc40071341'><![if !supportLists]><span
+lang=TR style='font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+Symbol;font-weight:normal'><span style='mso-list:Ignore'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=TR>MONTH<o:p></o:p></span></span></p>
+
+<p class=MsoListBullet style='margin-left:.5in;text-indent:-.25in;mso-list:
+l3 level1 lfo3;tab-stops:list .5in'><span style='mso-bookmark:_Toc40071341'><![if !supportLists]><span
+lang=TR style='font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+Symbol;font-weight:normal'><span style='mso-list:Ignore'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=TR>YEAR</span></span></p>
+
+<p class=MsoListBullet style='margin-left:.5in;text-indent:-.25in;mso-list:
+l3 level1 lfo3;tab-stops:list .5in'><span style='mso-bookmark:_Toc40071341'><![if !supportLists]><span
+lang=TR style='font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+Symbol;font-weight:normal'><span style='mso-list:Ignore'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=TR>CONVERT</span></span></p>
+
+<p class=MsoListBullet><span style='mso-bookmark:_Toc40071341'><span lang=TR><br
+style='mso-special-character:line-break'>
+<![if !supportLineBreakNewLine]><br style='mso-special-character:line-break'>
+<![endif]></span></span></p>
+
+<p class=MsoListBullet><span style='mso-bookmark:_Toc40071341'><span lang=TR>DATEADD<o:p></o:p></span></span></p>
+
+<p><span style='mso-bookmark:_Toc40071341'><a name="_dateadd"></a><span
+lang=TR style='mso-ansi-language:TR'>Belli bir tarihin üzerine de&#287;er
+eklenerek yeni bir tarih de&#287;eri üretir. <o:p></o:p></span></span></p>
+
+<p><span style='mso-bookmark:_Toc40071341'><span lang=TR style='mso-ansi-language:
+TR'>Kullan&#305;m biçimi: <o:p></o:p></span></span></p>
+
+<p><span style='mso-bookmark:_Toc40071341'><b style='mso-bidi-font-weight:normal'><span
+lang=TR style='mso-ansi-language:TR'>DATEADD <span style='mso-bidi-font-weight:
+bold'>(</span></span></b></span><span style='mso-bookmark:_Toc40071341'><span
+lang=TR style='mso-ansi-language:TR'> <span class=SpellE><i>tarihk&#305;sm&#305;</i></span><b>,</b>
+<i>say&#305;</i><b>,</b> <i>tarih</i><b>) </b><o:p></o:p></span></span></p>
+
+<h5><span style='mso-bookmark:_Toc40071341'><span lang=TR>Argümanlar&#305;: </span></span></h5>
+
+<p><span style='mso-bookmark:_Toc40071341'><span class=SpellE><i>Tarih</i></span><i>
+<span class=SpellE>k&#305;sm&#305;</span></i></span></p>
+
+<table class=MsoNormalTable border=1 cellpadding=0 width=571 style='width:428.25pt;
+ mso-cellspacing:1.5pt;mso-padding-alt:1.5pt 1.5pt 1.5pt 1.5pt'>
+ <tr style='mso-yfti-irow:0'>
+  <td width="43%" valign=top style='width:43.54%;padding:1.5pt 1.5pt 1.5pt 1.5pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='mso-bookmark:_Toc40071341'><b><span lang=TR>Tarih Parças&#305;<o:p></o:p></span></b></span></p>
+  </td>
+  <span style='mso-bookmark:_Toc40071341'></span>
+  <td width="55%" valign=top style='width:55.42%;padding:1.5pt 1.5pt 1.5pt 1.5pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='mso-bookmark:_Toc40071341'><b><span lang=TR>K&#305;saltmas&#305;<o:p></o:p></span></b></span></p>
+  </td>
+  <span style='mso-bookmark:_Toc40071341'></span>
+ </tr>
+ <tr style='mso-yfti-irow:1'>
+  <td width="43%" valign=top style='width:43.54%;padding:1.5pt 1.5pt 1.5pt 1.5pt'>
+  <p class=MsoNormal><span style='mso-bookmark:_Toc40071341'><span
+  class=SpellE><b><span lang=TR>Year</span></b></span></span></p>
+  </td>
+  <span style='mso-bookmark:_Toc40071341'></span>
+  <td width="55%" valign=top style='width:55.42%;padding:1.5pt 1.5pt 1.5pt 1.5pt'>
+  <p class=MsoNormal><span style='mso-bookmark:_Toc40071341'><b><span lang=TR>yy,
+  <span class=SpellE>yyyy</span></span></b></span></p>
+  </td>
+  <span style='mso-bookmark:_Toc40071341'></span>
+ </tr>
+ <tr style='mso-yfti-irow:2'>
+  <td width="43%" valign=top style='width:43.54%;padding:1.5pt 1.5pt 1.5pt 1.5pt'>
+  <p class=MsoNormal><span style='mso-bookmark:_Toc40071341'><span
+  class=SpellE><b><span lang=TR>Quarter</span></b></span></span></p>
+  </td>
+  <span style='mso-bookmark:_Toc40071341'></span>
+  <td width="55%" valign=top style='width:55.42%;padding:1.5pt 1.5pt 1.5pt 1.5pt'>
+  <p class=MsoNormal><span style='mso-bookmark:_Toc40071341'><span
+  class=SpellE><b><span lang=TR>qq</span></b></span><b><span lang=TR>, q</span></b></span></p>
+  </td>
+  <span style='mso-bookmark:_Toc40071341'></span>
+ </tr>
+ <tr style='mso-yfti-irow:3'>
+  <td width="43%" valign=top style='width:43.54%;padding:1.5pt 1.5pt 1.5pt 1.5pt'>
+  <p class=MsoNormal><span style='mso-bookmark:_Toc40071341'><span
+  class=SpellE><b><span lang=TR>Month</span></b></span></span></p>
+  </td>
+  <span style='mso-bookmark:_Toc40071341'></span>
+  <td width="55%" valign=top style='width:55.42%;padding:1.5pt 1.5pt 1.5pt 1.5pt'>
+  <p class=MsoNormal><span style='mso-bookmark:_Toc40071341'><b><span lang=TR>mm,
+  m</span></b></span></p>
+  </td>
+  <span style='mso-bookmark:_Toc40071341'></span>
+ </tr>
+ <tr style='mso-yfti-irow:4'>
+  <td width="43%" valign=top style='width:43.54%;padding:1.5pt 1.5pt 1.5pt 1.5pt'>
+  <p class=MsoNormal><span style='mso-bookmark:_Toc40071341'><span
+  class=SpellE><b><span lang=TR>Dayofyear</span></b></span></span></p>
+  </td>
+  <span style='mso-bookmark:_Toc40071341'></span>
+  <td width="55%" valign=top style='width:55.42%;padding:1.5pt 1.5pt 1.5pt 1.5pt'>
+  <p class=MsoNormal><span style='mso-bookmark:_Toc40071341'><span
+  class=SpellE><b><span lang=TR>dy</span></b></span><b><span lang=TR>, y</span></b></span></p>
+  </td>
+  <span style='mso-bookmark:_Toc40071341'></span>
+ </tr>
+ <tr style='mso-yfti-irow:5'>
+  <td width="43%" valign=top style='width:43.54%;padding:1.5pt 1.5pt 1.5pt 1.5pt'>
+  <p class=MsoNormal><span style='mso-bookmark:_Toc40071341'><span
+  class=SpellE><b><span lang=TR>Day</span></b></span></span></p>
+  </td>
+  <span style='mso-bookmark:_Toc40071341'></span>
+  <td width="55%" valign=top style='width:55.42%;padding:1.5pt 1.5pt 1.5pt 1.5pt'>
+  <p class=MsoNormal><span style='mso-bookmark:_Toc40071341'><span
+  class=SpellE><b><span lang=TR>dd</span></b></span><b><span lang=TR>, d</span></b></span></p>
+  </td>
+  <span style='mso-bookmark:_Toc40071341'></span>
+ </tr>
+ <tr style='mso-yfti-irow:6'>
+  <td width="43%" valign=top style='width:43.54%;padding:1.5pt 1.5pt 1.5pt 1.5pt'>
+  <p class=MsoNormal><span style='mso-bookmark:_Toc40071341'><span
+  class=SpellE><b><span lang=TR>Week</span></b></span></span></p>
+  </td>
+  <span style='mso-bookmark:_Toc40071341'></span>
+  <td width="55%" valign=top style='width:55.42%;padding:1.5pt 1.5pt 1.5pt 1.5pt'>
+  <p class=MsoNormal><span style='mso-bookmark:_Toc40071341'><span
+  class=SpellE><b><span lang=TR>wk</span></b></span><b><span lang=TR>, <span
+  class=SpellE>ww</span></span></b></span></p>
+  </td>
+  <span style='mso-bookmark:_Toc40071341'></span>
+ </tr>
+ <tr style='mso-yfti-irow:7'>
+  <td width="43%" valign=top style='width:43.54%;padding:1.5pt 1.5pt 1.5pt 1.5pt'>
+  <p class=MsoNormal><span style='mso-bookmark:_Toc40071341'><span
+  class=SpellE><b><span lang=TR>Hour</span></b></span></span></p>
+  </td>
+  <span style='mso-bookmark:_Toc40071341'></span>
+  <td width="55%" valign=top style='width:55.42%;padding:1.5pt 1.5pt 1.5pt 1.5pt'>
+  <p class=MsoNormal><span style='mso-bookmark:_Toc40071341'><span
+  class=SpellE><b><span lang=TR>hh</span></b></span></span></p>
+  </td>
+  <span style='mso-bookmark:_Toc40071341'></span>
+ </tr>
+ <tr style='mso-yfti-irow:8'>
+  <td width="43%" valign=top style='width:43.54%;padding:1.5pt 1.5pt 1.5pt 1.5pt'>
+  <p class=MsoNormal><span style='mso-bookmark:_Toc40071341'><span
+  class=SpellE><b><span lang=TR>Minute</span></b></span></span></p>
+  </td>
+  <span style='mso-bookmark:_Toc40071341'></span>
+  <td width="55%" valign=top style='width:55.42%;padding:1.5pt 1.5pt 1.5pt 1.5pt'>
+  <p class=MsoNormal><span style='mso-bookmark:_Toc40071341'><b><span lang=TR>mi,
+  n</span></b></span></p>
+  </td>
+  <span style='mso-bookmark:_Toc40071341'></span>
+ </tr>
+ <tr style='mso-yfti-irow:9'>
+  <td width="43%" valign=top style='width:43.54%;padding:1.5pt 1.5pt 1.5pt 1.5pt'>
+  <p class=MsoNormal><span style='mso-bookmark:_Toc40071341'><span
+  class=SpellE><b><span lang=TR>Second</span></b></span></span></p>
+  </td>
+  <span style='mso-bookmark:_Toc40071341'></span>
+  <td width="55%" valign=top style='width:55.42%;padding:1.5pt 1.5pt 1.5pt 1.5pt'>
+  <p class=MsoNormal><span style='mso-bookmark:_Toc40071341'><span
+  class=SpellE><b><span lang=TR>ss</span></b></span><b><span lang=TR>, s</span></b></span></p>
+  </td>
+  <span style='mso-bookmark:_Toc40071341'></span>
+ </tr>
+ <tr style='mso-yfti-irow:10;mso-yfti-lastrow:yes'>
+  <td width="43%" valign=top style='width:43.54%;padding:1.5pt 1.5pt 1.5pt 1.5pt'>
+  <p class=MsoNormal><span style='mso-bookmark:_Toc40071341'><span
+  class=SpellE><b><span lang=TR>Millisecond</span></b></span></span></p>
+  </td>
+  <span style='mso-bookmark:_Toc40071341'></span>
+  <td width="55%" valign=top style='width:55.42%;padding:1.5pt 1.5pt 1.5pt 1.5pt'>
+  <p class=MsoNormal><span style='mso-bookmark:_Toc40071341'><span
+  class=SpellE><b><span lang=TR>ms</span></b></span></span></p>
+  </td>
+  <span style='mso-bookmark:_Toc40071341'></span>
+ </tr>
+</table>
+
+<p class=MsoNormal><span style='mso-bookmark:_Toc40071341'><span lang=TR><o:p>&nbsp;</o:p></span></span></p>
+
+<p><span style='mso-bookmark:_Toc40071341'><span class=SpellE><span
+class=GramE><i>say&#305;</i></span></span></span></p>
+
+<p class=indent><span style='mso-bookmark:_Toc40071341'><span lang=TR>Tarih
+k&#305;sm&#305;n&#305; art&#305;rmak için kullan&#305;lan de&#287;er. </span></span></p>
+
+<p><span style='mso-bookmark:_Toc40071341'><i><span lang=TR style='mso-ansi-language:
+TR'>tarih</span></i></span><span style='mso-bookmark:_Toc40071341'><span
+lang=TR style='mso-ansi-language:TR'><o:p></o:p></span></span></p>
+
+<p class=indent><span style='mso-bookmark:_Toc40071341'><span lang=TR>Tarih
+de&#287;erini döndüren tarih <span class=SpellE>bilgidi</span>. </span></span></p>
+
+<h5><span style='mso-bookmark:_Toc40071341'><span lang=TR>Örnekler: </span></span></h5>
+
+<p><span style='mso-bookmark:_Toc40071341'><span lang=TR style='mso-ansi-language:
+TR'>Yay&#305;n tarihinin 30 gün sonras&#305;: <o:p></o:p></span></span></p>
+
+<pre><span style='mso-bookmark:_Toc40071341'><code>USE pubs<o:p></o:p></code></span></pre><pre><span
+style='mso-bookmark:_Toc40071341'><code>GO<o:p></o:p></code></span></pre><pre><span
+style='mso-bookmark:_Toc40071341'><code>SELECT </code><span class=GramE>DATEADD<code>(</code></span><code>day, 30, <span
+class=SpellE>pubdate</span>) <o:p></o:p></code></span></pre><pre><span
+style='mso-bookmark:_Toc40071341'><code>FROM titles<o:p></o:p></code></span></pre><pre><span
+style='mso-bookmark:_Toc40071341'><code>GO<o:p></o:p></code></span></pre>
+
+<p class=MsoListBullet><span style='mso-bookmark:_Toc40071341'><span lang=TR><o:p>&nbsp;</o:p></span></span></p>
+
+<p class=MsoListBullet><span style='mso-bookmark:_Toc40071341'><span lang=TR>Örnek:
+Son on gün içinde yap&#305;lan sipari&#351;ler: </span></span></p>
+
+<p class=MsoListBullet><span style='mso-bookmark:_Toc40071341'><span lang=TR><o:p>&nbsp;</o:p></span></span></p>
+
+<p class=MsoListBullet><span style='mso-bookmark:_Toc40071341'><span lang=TR
+style='font-size:10.0pt;font-family:"Courier New";mso-fareast-language:TR'>SELECT
+<span class=SpellE>ord</span>_<span class=SpellE>num</span>, <span
+class=SpellE>ord</span>_<span class=SpellE>date</span><br>
+FROM <span class=SpellE>sales</span><br>
+WHERE<br>
+(<span class=SpellE>ord</span>_<span class=SpellE>date</span> &gt;= <br>
+&nbsp; DATEADD(<span class=SpellE>day</span>, -10, GETDATE()))<o:p></o:p></span></span></p>
+
+<p class=MsoListBullet><span style='mso-bookmark:_Toc40071341'><span lang=TR><o:p>&nbsp;</o:p></span></span></p>
+
+<p class=MsoNormal><span style='mso-bookmark:_Toc40071341'><a name="_datediff"></a><b
+style='mso-bidi-font-weight:normal'><span lang=TR>DATEDIFF<o:p></o:p></span></b></span></p>
+
+<p class=MsoNormal><span style='mso-bookmark:_Toc40071341'><span lang=TR>&#304;ki
+tarih aras&#305;ndaki gün say&#305;s&#305;n&#305; verir. </span></span></p>
+
+<p><span style='mso-bookmark:_Toc40071341'><span lang=TR style='mso-ansi-language:
+TR'>Kullan&#305;m&#305;: <o:p></o:p></span></span></p>
+
+<p><span style='mso-bookmark:_Toc40071341'><span lang=TR style='mso-ansi-language:
+TR'>DATEDIFF <b>( </b><i>Tarih parças&#305;</i><b>,</b> <i>ba&#351;lang&#305;ç
+tarihi</i><b>,</b> <i>biti&#351; tarihi</i><b>) </b><o:p></o:p></span></span></p>
+
+<h5><span style='mso-bookmark:_Toc40071341'><span lang=TR>Argümanlar&#305;: </span></span></h5>
+
+<p><span style='mso-bookmark:_Toc40071341'><span class=SpellE><i>Tarih</i></span><i>
+<span class=SpellE>parças&#305;</span></i></span></p>
+
+<table class=MsoNormalTable border=1 cellpadding=0 width=571 style='width:428.25pt;
+ mso-cellspacing:1.5pt;mso-padding-alt:1.5pt 1.5pt 1.5pt 1.5pt'>
+ <tr style='mso-yfti-irow:0'>
+  <td width="43%" valign=top style='width:43.54%;padding:1.5pt 1.5pt 1.5pt 1.5pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='mso-bookmark:_Toc40071341'><b><span lang=TR>Tarih Parças&#305;<o:p></o:p></span></b></span></p>
+  </td>
+  <span style='mso-bookmark:_Toc40071341'></span>
+  <td width="55%" valign=top style='width:55.42%;padding:1.5pt 1.5pt 1.5pt 1.5pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='mso-bookmark:_Toc40071341'><b><span lang=TR>K&#305;saltmas&#305;<o:p></o:p></span></b></span></p>
+  </td>
+  <span style='mso-bookmark:_Toc40071341'></span>
+ </tr>
+ <tr style='mso-yfti-irow:1'>
+  <td width="43%" valign=top style='width:43.54%;padding:1.5pt 1.5pt 1.5pt 1.5pt'>
+  <p class=MsoNormal><span style='mso-bookmark:_Toc40071341'><span
+  class=SpellE><b><span lang=TR>Year</span></b></span></span></p>
+  </td>
+  <span style='mso-bookmark:_Toc40071341'></span>
+  <td width="55%" valign=top style='width:55.42%;padding:1.5pt 1.5pt 1.5pt 1.5pt'>
+  <p class=MsoNormal><span style='mso-bookmark:_Toc40071341'><b><span lang=TR>yy,
+  <span class=SpellE>yyyy</span></span></b></span></p>
+  </td>
+  <span style='mso-bookmark:_Toc40071341'></span>
+ </tr>
+ <tr style='mso-yfti-irow:2'>
+  <td width="43%" valign=top style='width:43.54%;padding:1.5pt 1.5pt 1.5pt 1.5pt'>
+  <p class=MsoNormal><span style='mso-bookmark:_Toc40071341'><span
+  class=SpellE><b><span lang=TR>Quarter</span></b></span></span></p>
+  </td>
+  <span style='mso-bookmark:_Toc40071341'></span>
+  <td width="55%" valign=top style='width:55.42%;padding:1.5pt 1.5pt 1.5pt 1.5pt'>
+  <p class=MsoNormal><span style='mso-bookmark:_Toc40071341'><span
+  class=SpellE><b><span lang=TR>qq</span></b></span><b><span lang=TR>, q</span></b></span></p>
+  </td>
+  <span style='mso-bookmark:_Toc40071341'></span>
+ </tr>
+ <tr style='mso-yfti-irow:3'>
+  <td width="43%" valign=top style='width:43.54%;padding:1.5pt 1.5pt 1.5pt 1.5pt'>
+  <p class=MsoNormal><span style='mso-bookmark:_Toc40071341'><span
+  class=SpellE><b><span lang=TR>Month</span></b></span></span></p>
+  </td>
+  <span style='mso-bookmark:_Toc40071341'></span>
+  <td width="55%" valign=top style='width:55.42%;padding:1.5pt 1.5pt 1.5pt 1.5pt'>
+  <p class=MsoNormal><span style='mso-bookmark:_Toc40071341'><b><span lang=TR>mm,
+  m</span></b></span></p>
+  </td>
+  <span style='mso-bookmark:_Toc40071341'></span>
+ </tr>
+ <tr style='mso-yfti-irow:4'>
+  <td width="43%" valign=top style='width:43.54%;padding:1.5pt 1.5pt 1.5pt 1.5pt'>
+  <p class=MsoNormal><span style='mso-bookmark:_Toc40071341'><span
+  class=SpellE><b><span lang=TR>Dayofyear</span></b></span></span></p>
+  </td>
+  <span style='mso-bookmark:_Toc40071341'></span>
+  <td width="55%" valign=top style='width:55.42%;padding:1.5pt 1.5pt 1.5pt 1.5pt'>
+  <p class=MsoNormal><span style='mso-bookmark:_Toc40071341'><span
+  class=SpellE><b><span lang=TR>dy</span></b></span><b><span lang=TR>, y</span></b></span></p>
+  </td>
+  <span style='mso-bookmark:_Toc40071341'></span>
+ </tr>
+ <tr style='mso-yfti-irow:5'>
+  <td width="43%" valign=top style='width:43.54%;padding:1.5pt 1.5pt 1.5pt 1.5pt'>
+  <p class=MsoNormal><span style='mso-bookmark:_Toc40071341'><span
+  class=SpellE><b><span lang=TR>Day</span></b></span></span></p>
+  </td>
+  <span style='mso-bookmark:_Toc40071341'></span>
+  <td width="55%" valign=top style='width:55.42%;padding:1.5pt 1.5pt 1.5pt 1.5pt'>
+  <p class=MsoNormal><span style='mso-bookmark:_Toc40071341'><span
+  class=SpellE><b><span lang=TR>dd</span></b></span><b><span lang=TR>, d</span></b></span></p>
+  </td>
+  <span style='mso-bookmark:_Toc40071341'></span>
+ </tr>
+ <tr style='mso-yfti-irow:6'>
+  <td width="43%" valign=top style='width:43.54%;padding:1.5pt 1.5pt 1.5pt 1.5pt'>
+  <p class=MsoNormal><span style='mso-bookmark:_Toc40071341'><span
+  class=SpellE><b><span lang=TR>Week</span></b></span></span></p>
+  </td>
+  <span style='mso-bookmark:_Toc40071341'></span>
+  <td width="55%" valign=top style='width:55.42%;padding:1.5pt 1.5pt 1.5pt 1.5pt'>
+  <p class=MsoNormal><span style='mso-bookmark:_Toc40071341'><span
+  class=SpellE><b><span lang=TR>wk</span></b></span><b><span lang=TR>, <span
+  class=SpellE>ww</span></span></b></span></p>
+  </td>
+  <span style='mso-bookmark:_Toc40071341'></span>
+ </tr>
+ <tr style='mso-yfti-irow:7'>
+  <td width="43%" valign=top style='width:43.54%;padding:1.5pt 1.5pt 1.5pt 1.5pt'>
+  <p class=MsoNormal><span style='mso-bookmark:_Toc40071341'><span
+  class=SpellE><b><span lang=TR>Hour</span></b></span></span></p>
+  </td>
+  <span style='mso-bookmark:_Toc40071341'></span>
+  <td width="55%" valign=top style='width:55.42%;padding:1.5pt 1.5pt 1.5pt 1.5pt'>
+  <p class=MsoNormal><span style='mso-bookmark:_Toc40071341'><span
+  class=SpellE><b><span lang=TR>hh</span></b></span></span></p>
+  </td>
+  <span style='mso-bookmark:_Toc40071341'></span>
+ </tr>
+ <tr style='mso-yfti-irow:8'>
+  <td width="43%" valign=top style='width:43.54%;padding:1.5pt 1.5pt 1.5pt 1.5pt'>
+  <p class=MsoNormal><span style='mso-bookmark:_Toc40071341'><span
+  class=SpellE><b><span lang=TR>Minute</span></b></span></span></p>
+  </td>
+  <span style='mso-bookmark:_Toc40071341'></span>
+  <td width="55%" valign=top style='width:55.42%;padding:1.5pt 1.5pt 1.5pt 1.5pt'>
+  <p class=MsoNormal><span style='mso-bookmark:_Toc40071341'><b><span lang=TR>mi,
+  n</span></b></span></p>
+  </td>
+  <span style='mso-bookmark:_Toc40071341'></span>
+ </tr>
+ <tr style='mso-yfti-irow:9'>
+  <td width="43%" valign=top style='width:43.54%;padding:1.5pt 1.5pt 1.5pt 1.5pt'>
+  <p class=MsoNormal><span style='mso-bookmark:_Toc40071341'><span
+  class=SpellE><b><span lang=TR>Second</span></b></span></span></p>
+  </td>
+  <span style='mso-bookmark:_Toc40071341'></span>
+  <td width="55%" valign=top style='width:55.42%;padding:1.5pt 1.5pt 1.5pt 1.5pt'>
+  <p class=MsoNormal><span style='mso-bookmark:_Toc40071341'><span
+  class=SpellE><b><span lang=TR>ss</span></b></span><b><span lang=TR>, s</span></b></span></p>
+  </td>
+  <span style='mso-bookmark:_Toc40071341'></span>
+ </tr>
+ <tr style='mso-yfti-irow:10;mso-yfti-lastrow:yes'>
+  <td width="43%" valign=top style='width:43.54%;padding:1.5pt 1.5pt 1.5pt 1.5pt'>
+  <p class=MsoNormal><span style='mso-bookmark:_Toc40071341'><span
+  class=SpellE><b><span lang=TR>millisecond</span></b></span></span></p>
+  </td>
+  <span style='mso-bookmark:_Toc40071341'></span>
+  <td width="55%" valign=top style='width:55.42%;padding:1.5pt 1.5pt 1.5pt 1.5pt'>
+  <p class=MsoNormal><span style='mso-bookmark:_Toc40071341'><span
+  class=SpellE><b><span lang=TR>Ms</span></b></span></span></p>
+  </td>
+  <span style='mso-bookmark:_Toc40071341'></span>
+ </tr>
+</table>
+
+<p class=MsoNormal><span style='mso-bookmark:_Toc40071341'><span lang=TR><o:p>&nbsp;</o:p></span></span></p>
+
+<p class=MsoNormal><span style='mso-bookmark:_Toc40071341'><span lang=TR>Örnek:
+&#350;u anki tarih ile yay&#305;n tarihi aras&#305;ndaki fark: </span></span></p>
+
+<pre><span style='mso-bookmark:_Toc40071341'><code><span lang=TR
+style='mso-ansi-language:TR'><o:p>&nbsp;</o:p></span></code></span></pre><pre><span
+style='mso-bookmark:_Toc40071341'><code>USE pubs<o:p></o:p></code></span></pre><pre><span
+style='mso-bookmark:_Toc40071341'><code>GO<o:p></o:p></code></span></pre><pre><span
+style='mso-bookmark:_Toc40071341'><code>SELECT <span class=GramE>DATEDIFF(</span>day, <span
+class=SpellE>pubdate</span>, <span class=SpellE>getdate</span>()) <o:p></o:p></code></span></pre><pre><span
+style='mso-bookmark:_Toc40071341'><code>FROM titles<o:p></o:p></code></span></pre><pre><span
+style='mso-bookmark:_Toc40071341'><code>GO<o:p></o:p></code></span></pre>
+
+<p class=MsoListBullet><span style='mso-bookmark:_Toc40071341'><span lang=TR><o:p>&nbsp;</o:p></span></span></p>
+
+<p class=MsoNormal><span style='mso-bookmark:_Toc40071341'><b style='mso-bidi-font-weight:
+normal'><span lang=TR>DATEPART (T-SQL)<o:p></o:p></span></b></span></p>
+
+<p class=MsoNormal><span style='mso-bookmark:_Toc40071341'><span lang=TR>Belirtilen
+tarihin istenen parças&#305;na kar&#351;&#305;l&#305;k olarak bir tamsay&#305;
+döndürür. <o:p></o:p></span></span></p>
+
+<p class=MsoNormal><span style='mso-bookmark:_Toc40071341'><span lang=TR><o:p>&nbsp;</o:p></span></span></p>
+
+<p class=H5><span style='mso-bookmark:_Toc40071341'><u><span lang=TR
+style='font-weight:normal'>Kullan&#305;m Biçimi: <o:p></o:p></span></u></span></p>
+
+<p class=MsoNormal><span style='mso-bookmark:_Toc40071341'><span lang=TR><o:p>&nbsp;</o:p></span></span></p>
+
+<p class=MsoNormal><span style='mso-bookmark:_Toc40071341'><b style='mso-bidi-font-weight:
+normal'><span lang=TR>DATEPART(</span></b><span class=SpellE><i
+style='mso-bidi-font-style:normal'><span lang=TR>tarihparças&#305;</span></i></span><b
+style='mso-bidi-font-weight:normal'><span lang=TR>,</span></b><span lang=TR> <i
+style='mso-bidi-font-style:normal'>tarih</i><b style='mso-bidi-font-weight:
+normal'>)</b><o:p></o:p></span></span></p>
+
+<p class=MsoNormal><span style='mso-bookmark:_Toc40071341'><u><span lang=TR><o:p><span
+ style='text-decoration:none'>&nbsp;</span></o:p></span></u></span></p>
+
+<p class=MsoNormal><span style='mso-bookmark:_Toc40071341'><u><span lang=TR>Argümanlar&#305;:
+<o:p></o:p></span></u></span></p>
+
+<p class=DefinitionTerm style='margin-top:5.0pt;margin-right:0in;margin-bottom:
+5.0pt;margin-left:0in'><span style='mso-bookmark:_Toc40071341'><i
+style='mso-bidi-font-style:normal'><span lang=TR style='mso-ansi-language:TR'>Tarih
+parças&#305;</span></i></span><span style='mso-bookmark:_Toc40071341'><span
+lang=TR style='mso-ansi-language:TR'><o:p></o:p></span></span></p>
+
+<p class=MsoNormal><span style='mso-bookmark:_Toc40071341'><span lang=TR><o:p>&nbsp;</o:p></span></span></p>
+
+<p class=MsoNormal><span style='mso-bookmark:_Toc40071341'><span lang=TR>Tarih
+bilgisinin bir k&#305;sm&#305;n&#305; ifade eden bilgi. <o:p></o:p></span></span></p>
+
+<p class=MsoNormal><span style='mso-bookmark:_Toc40071341'><span lang=TR><o:p>&nbsp;</o:p></span></span></p>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0
+ style='border-collapse:collapse;mso-padding-alt:0in 0in 0in 0in'>
+ <tr style='mso-yfti-irow:0'>
+  <td width=144 style='width:1.5in;padding:0in 0in 0in 0in'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='mso-bookmark:_Toc40071341'></span><!--[if supportFields]><span
+  style='mso-bookmark:_Toc40071341'></span><span style='mso-element:field-begin'></span><span
+  style='mso-bookmark:_Toc40071341'><b style='mso-bidi-font-weight:normal'><span
+  lang=TR>PRIVATE</span></b></span><![endif]--><span style='mso-bookmark:_Toc40071341'></span><!--[if supportFields]><span
+  style='mso-bookmark:_Toc40071341'></span><span style='mso-element:field-end'></span><![endif]--><span
+  style='mso-bookmark:_Toc40071341'><b style='mso-bidi-font-weight:normal'><span
+  lang=TR>Tarih bölümü<o:p></o:p></span></b></span></p>
+  </td>
+  <span style='mso-bookmark:_Toc40071341'></span>
+  <td width=120 style='width:1.25in;padding:0in 0in 0in 0in'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='mso-bookmark:_Toc40071341'><b style='mso-bidi-font-weight:normal'><span
+  lang=TR>K&#305;saltma<o:p></o:p></span></b></span></p>
+  </td>
+  <span style='mso-bookmark:_Toc40071341'></span>
+ </tr>
+ <tr style='mso-yfti-irow:1'>
+  <td width=144 style='width:1.5in;padding:0in 0in 0in 0in'>
+  <p class=MsoNormal><span style='mso-bookmark:_Toc40071341'><span
+  class=SpellE><b style='mso-bidi-font-weight:normal'><span lang=TR>year</span></b></span><span
+  lang=TR><o:p></o:p></span></span></p>
+  </td>
+  <span style='mso-bookmark:_Toc40071341'></span>
+  <td width=120 style='width:1.25in;padding:0in 0in 0in 0in'>
+  <p class=MsoNormal><span style='mso-bookmark:_Toc40071341'><b
+  style='mso-bidi-font-weight:normal'><span lang=TR>yy, <span class=SpellE>yyyy</span></span></b><span
+  lang=TR><o:p></o:p></span></span></p>
+  </td>
+  <span style='mso-bookmark:_Toc40071341'></span>
+ </tr>
+ <tr style='mso-yfti-irow:2'>
+  <td width=144 style='width:1.5in;padding:0in 0in 0in 0in'>
+  <p class=MsoNormal><span style='mso-bookmark:_Toc40071341'><span
+  class=SpellE><b style='mso-bidi-font-weight:normal'><span lang=TR>quarter</span></b></span><span
+  lang=TR><o:p></o:p></span></span></p>
+  </td>
+  <span style='mso-bookmark:_Toc40071341'></span>
+  <td width=120 style='width:1.25in;padding:0in 0in 0in 0in'>
+  <p class=MsoNormal><span style='mso-bookmark:_Toc40071341'><span
+  class=SpellE><b style='mso-bidi-font-weight:normal'><span lang=TR>qq</span></b></span><b
+  style='mso-bidi-font-weight:normal'><span lang=TR>, q</span></b><span
+  lang=TR><o:p></o:p></span></span></p>
+  </td>
+  <span style='mso-bookmark:_Toc40071341'></span>
+ </tr>
+ <tr style='mso-yfti-irow:3'>
+  <td width=144 style='width:1.5in;padding:0in 0in 0in 0in'>
+  <p class=MsoNormal><span style='mso-bookmark:_Toc40071341'><span
+  class=SpellE><b style='mso-bidi-font-weight:normal'><span lang=TR>month</span></b></span><span
+  lang=TR><o:p></o:p></span></span></p>
+  </td>
+  <span style='mso-bookmark:_Toc40071341'></span>
+  <td width=120 style='width:1.25in;padding:0in 0in 0in 0in'>
+  <p class=MsoNormal><span style='mso-bookmark:_Toc40071341'><b
+  style='mso-bidi-font-weight:normal'><span lang=TR>mm, m</span></b><span
+  lang=TR><o:p></o:p></span></span></p>
+  </td>
+  <span style='mso-bookmark:_Toc40071341'></span>
+ </tr>
+ <tr style='mso-yfti-irow:4'>
+  <td width=144 style='width:1.5in;padding:0in 0in 0in 0in'>
+  <p class=MsoNormal><span style='mso-bookmark:_Toc40071341'><span
+  class=SpellE><b style='mso-bidi-font-weight:normal'><span lang=TR>dayofyear</span></b></span><span
+  lang=TR><o:p></o:p></span></span></p>
+  </td>
+  <span style='mso-bookmark:_Toc40071341'></span>
+  <td width=120 style='width:1.25in;padding:0in 0in 0in 0in'>
+  <p class=MsoNormal><span style='mso-bookmark:_Toc40071341'><span
+  class=SpellE><b style='mso-bidi-font-weight:normal'><span lang=TR>dy</span></b></span><b
+  style='mso-bidi-font-weight:normal'><span lang=TR>, y</span></b><span
+  lang=TR><o:p></o:p></span></span></p>
+  </td>
+  <span style='mso-bookmark:_Toc40071341'></span>
+ </tr>
+ <tr style='mso-yfti-irow:5'>
+  <td width=144 style='width:1.5in;padding:0in 0in 0in 0in'>
+  <p class=MsoNormal><span style='mso-bookmark:_Toc40071341'><span
+  class=SpellE><b style='mso-bidi-font-weight:normal'><span lang=TR>day</span></b></span><span
+  lang=TR><o:p></o:p></span></span></p>
+  </td>
+  <span style='mso-bookmark:_Toc40071341'></span>
+  <td width=120 style='width:1.25in;padding:0in 0in 0in 0in'>
+  <p class=MsoNormal><span style='mso-bookmark:_Toc40071341'><span
+  class=SpellE><b style='mso-bidi-font-weight:normal'><span lang=TR>dd</span></b></span><b
+  style='mso-bidi-font-weight:normal'><span lang=TR>, d</span></b><span
+  lang=TR><o:p></o:p></span></span></p>
+  </td>
+  <span style='mso-bookmark:_Toc40071341'></span>
+ </tr>
+ <tr style='mso-yfti-irow:6'>
+  <td width=144 style='width:1.5in;padding:0in 0in 0in 0in'>
+  <p class=MsoNormal><span style='mso-bookmark:_Toc40071341'><span
+  class=SpellE><b style='mso-bidi-font-weight:normal'><span lang=TR>week</span></b></span><span
+  lang=TR><o:p></o:p></span></span></p>
+  </td>
+  <span style='mso-bookmark:_Toc40071341'></span>
+  <td width=120 style='width:1.25in;padding:0in 0in 0in 0in'>
+  <p class=MsoNormal><span style='mso-bookmark:_Toc40071341'><span
+  class=SpellE><b style='mso-bidi-font-weight:normal'><span lang=TR>wk</span></b></span><b
+  style='mso-bidi-font-weight:normal'><span lang=TR>, <span class=SpellE>ww</span></span></b><span
+  lang=TR><o:p></o:p></span></span></p>
+  </td>
+  <span style='mso-bookmark:_Toc40071341'></span>
+ </tr>
+ <tr style='mso-yfti-irow:7'>
+  <td width=144 style='width:1.5in;padding:0in 0in 0in 0in'>
+  <p class=MsoNormal><span style='mso-bookmark:_Toc40071341'><span
+  class=SpellE><b style='mso-bidi-font-weight:normal'><span lang=TR>weekday</span></b></span><span
+  lang=TR><o:p></o:p></span></span></p>
+  </td>
+  <span style='mso-bookmark:_Toc40071341'></span>
+  <td width=120 style='width:1.25in;padding:0in 0in 0in 0in'>
+  <p class=MsoNormal><span style='mso-bookmark:_Toc40071341'><span
+  class=SpellE><b style='mso-bidi-font-weight:normal'><span lang=TR>Dw</span></b></span><span
+  lang=TR><o:p></o:p></span></span></p>
+  </td>
+  <span style='mso-bookmark:_Toc40071341'></span>
+ </tr>
+ <tr style='mso-yfti-irow:8'>
+  <td width=144 style='width:1.5in;padding:0in 0in 0in 0in'>
+  <p class=MsoNormal><span style='mso-bookmark:_Toc40071341'><span
+  class=SpellE><b style='mso-bidi-font-weight:normal'><span lang=TR>hour</span></b></span><span
+  lang=TR><o:p></o:p></span></span></p>
+  </td>
+  <span style='mso-bookmark:_Toc40071341'></span>
+  <td width=120 style='width:1.25in;padding:0in 0in 0in 0in'>
+  <p class=MsoNormal><span style='mso-bookmark:_Toc40071341'><span
+  class=SpellE><b style='mso-bidi-font-weight:normal'><span lang=TR>Hh</span></b></span><span
+  lang=TR><o:p></o:p></span></span></p>
+  </td>
+  <span style='mso-bookmark:_Toc40071341'></span>
+ </tr>
+ <tr style='mso-yfti-irow:9'>
+  <td width=144 style='width:1.5in;padding:0in 0in 0in 0in'>
+  <p class=MsoNormal><span style='mso-bookmark:_Toc40071341'><span
+  class=SpellE><b style='mso-bidi-font-weight:normal'><span lang=TR>minute</span></b></span><span
+  lang=TR><o:p></o:p></span></span></p>
+  </td>
+  <span style='mso-bookmark:_Toc40071341'></span>
+  <td width=120 style='width:1.25in;padding:0in 0in 0in 0in'>
+  <p class=MsoNormal><span style='mso-bookmark:_Toc40071341'><b
+  style='mso-bidi-font-weight:normal'><span lang=TR>mi, n</span></b><span
+  lang=TR><o:p></o:p></span></span></p>
+  </td>
+  <span style='mso-bookmark:_Toc40071341'></span>
+ </tr>
+ <tr style='mso-yfti-irow:10'>
+  <td width=144 style='width:1.5in;padding:0in 0in 0in 0in'>
+  <p class=MsoNormal><span style='mso-bookmark:_Toc40071341'><span
+  class=SpellE><b style='mso-bidi-font-weight:normal'><span lang=TR>second</span></b></span><span
+  lang=TR><o:p></o:p></span></span></p>
+  </td>
+  <span style='mso-bookmark:_Toc40071341'></span>
+  <td width=120 style='width:1.25in;padding:0in 0in 0in 0in'>
+  <p class=MsoNormal><span style='mso-bookmark:_Toc40071341'><span
+  class=SpellE><b style='mso-bidi-font-weight:normal'><span lang=TR>ss</span></b></span><b
+  style='mso-bidi-font-weight:normal'><span lang=TR>, s</span></b><span
+  lang=TR><o:p></o:p></span></span></p>
+  </td>
+  <span style='mso-bookmark:_Toc40071341'></span>
+ </tr>
+ <tr style='mso-yfti-irow:11;mso-yfti-lastrow:yes'>
+  <td width=144 style='width:1.5in;padding:0in 0in 0in 0in'>
+  <p class=MsoNormal><span style='mso-bookmark:_Toc40071341'><span
+  class=SpellE><b style='mso-bidi-font-weight:normal'><span lang=TR>millisecond</span></b></span><span
+  lang=TR><o:p></o:p></span></span></p>
+  </td>
+  <span style='mso-bookmark:_Toc40071341'></span>
+  <td width=120 style='width:1.25in;padding:0in 0in 0in 0in'>
+  <p class=MsoNormal><span style='mso-bookmark:_Toc40071341'><span
+  class=SpellE><b style='mso-bidi-font-weight:normal'><span lang=TR>Ms</span></b></span><span
+  lang=TR><o:p></o:p></span></span></p>
+  </td>
+  <span style='mso-bookmark:_Toc40071341'></span>
+ </tr>
+</table>
+
+<p class=MsoNormal><span style='mso-bookmark:_Toc40071341'><u><span lang=TR><o:p><span
+ style='text-decoration:none'>&nbsp;</span></o:p></span></u></span></p>
+
+<p class=MsoNormal><span style='mso-bookmark:_Toc40071341'><u><span lang=TR>Örnek:
+<o:p></o:p></span></u></span></p>
+
+<p class=MsoNormal><span style='mso-bookmark:_Toc40071341'><span lang=TR><o:p>&nbsp;</o:p></span></span></p>
+
+<p class=MsoNormal><span style='mso-bookmark:_Toc40071341'><span lang=TR>A&#351;a&#287;&#305;daki
+örnekte &#351;u anki tarihin kar&#351;&#305;l&#305;k geldi&#287;i ay ad&#305;
+ve ay numaras&#305; bulunmaktad&#305;r: <o:p></o:p></span></span></p>
+
+<p class=MsoNormal><span style='mso-bookmark:_Toc40071341'><span lang=TR><o:p>&nbsp;</o:p></span></span></p>
+
+<p class=MsoNormal><span style='mso-bookmark:_Toc40071341'><span class=CODE><span
+lang=TR style='font-size:10.0pt;mso-bidi-font-size:12.0pt;mso-bidi-font-family:
+"Times New Roman"'>SELECT GETDATE() <o:p></o:p></span></span></span></p>
+
+<p class=MsoNormal><span style='mso-bookmark:_Toc40071341'><span class=CODE><span
+lang=TR style='font-size:10.0pt;mso-bidi-font-size:12.0pt;mso-bidi-font-family:
+"Times New Roman"'><o:p>&nbsp;</o:p></span></span></span></p>
+
+<p class=MsoNormal><span style='mso-bookmark:_Toc40071341'><span lang=TR>Tarihi
+verir: <o:p></o:p></span></span></p>
+
+<p class=MsoNormal><span style='mso-bookmark:_Toc40071341'><span class=CODE><span
+lang=TR style='font-size:10.0pt;mso-bidi-font-size:12.0pt;mso-bidi-font-family:
+"Times New Roman"'><o:p>&nbsp;</o:p></span></span></span></p>
+
+<p class=MsoNormal><span style='mso-bookmark:_Toc40071341'><span class=CODE><span
+lang=TR style='font-size:10.0pt;mso-bidi-font-size:12.0pt;mso-bidi-font-family:
+"Times New Roman"'>SELECT DATEPART(<span class=SpellE>month</span>, GETDATE()) <o:p></o:p></span></span></span></p>
+
+<p class=MsoNormal><span style='mso-bookmark:_Toc40071341'><span class=CODE><span
+lang=TR style='font-size:10.0pt;mso-bidi-font-size:12.0pt;mso-bidi-font-family:
+"Times New Roman"'><o:p>&nbsp;</o:p></span></span></span></p>
+
+<p class=MsoNormal><span style='mso-bookmark:_Toc40071341'><span lang=TR>Ay&#305;
+verir: <o:p></o:p></span></span></p>
+
+<p class=MsoNormal><span style='mso-bookmark:_Toc40071341'><span lang=TR><o:p>&nbsp;</o:p></span></span></p>
+
+<p class=MsoNormal><span style='mso-bookmark:_Toc40071341'><b style='mso-bidi-font-weight:
+normal'><span lang=TR>DAY (T-SQL)<o:p></o:p></span></b></span></p>
+
+<p class=MsoNormal><span style='mso-bookmark:_Toc40071341'><span lang=TR>Bir
+tarih bilgisinin gün k&#305;sm&#305;n&#305; verir. <o:p></o:p></span></span></p>
+
+<p class=MsoNormal><span style='mso-bookmark:_Toc40071341'><span lang=TR><o:p>&nbsp;</o:p></span></span></p>
+
+<p class=MsoNormal><span style='mso-bookmark:_Toc40071341'><u><span lang=TR>Kullan&#305;m
+Biçimi: <o:p></o:p></span></u></span></p>
+
+<p class=MsoNormal><span style='mso-bookmark:_Toc40071341'><span lang=TR><o:p>&nbsp;</o:p></span></span></p>
+
+<p class=MsoNormal><span style='mso-bookmark:_Toc40071341'><b style='mso-bidi-font-weight:
+normal'><span lang=TR>DAY(</span></b><i style='mso-bidi-font-style:normal'><span
+lang=TR>tarih</span></i><b style='mso-bidi-font-weight:normal'><span lang=TR>)</span></b><span
+lang=TR><o:p></o:p></span></span></p>
+
+<p class=MsoNormal><span style='mso-bookmark:_Toc40071341'><span lang=TR><o:p>&nbsp;</o:p></span></span></p>
+
+<p class=MsoNormal><span style='mso-bookmark:_Toc40071341'><u><span lang=TR>Argümanlar&#305;:
+<o:p></o:p></span></u></span></p>
+
+<p class=MsoNormal><span style='mso-bookmark:_Toc40071341'><span lang=TR><o:p>&nbsp;</o:p></span></span></p>
+
+<p class=DefinitionTerm style='margin-top:5.0pt;margin-right:0in;margin-bottom:
+5.0pt;margin-left:0in'><span style='mso-bookmark:_Toc40071341'><i
+style='mso-bidi-font-style:normal'><span lang=TR style='mso-ansi-language:TR'>tarih</span></i></span><span
+style='mso-bookmark:_Toc40071341'><span lang=TR style='mso-ansi-language:TR'><o:p></o:p></span></span></p>
+
+<p class=MsoNormal><span style='mso-bookmark:_Toc40071341'><span lang=TR><o:p>&nbsp;</o:p></span></span></p>
+
+<p class=MsoNormal><span style='mso-bookmark:_Toc40071341'><span lang=TR><o:p>&nbsp;</o:p></span></span></p>
+
+<p class=MsoNormal><span style='mso-bookmark:_Toc40071341'><span class=SpellE><b
+style='mso-bidi-font-weight:normal'><span lang=TR>datetime</span></b></span><span
+lang=TR> <span class=SpellE>ya</span> da <span class=SpellE><b
+style='mso-bidi-font-weight:normal'>smalldatetime</b></span> tarih bilgisi.<o:p></o:p></span></span></p>
+
+<p class=MsoNormal><span style='mso-bookmark:_Toc40071341'><span lang=TR><o:p>&nbsp;</o:p></span></span></p>
+
+<p class=MsoNormal><span style='mso-bookmark:_Toc40071341'><span lang=TR>A&#351;a&#287;&#305;daki
+örnekte verilen tarihin gün k&#305;sm&#305; verilmektedir: <o:p></o:p></span></span></p>
+
+<p class=MsoNormal><span style='mso-bookmark:_Toc40071341'><span lang=TR><o:p>&nbsp;</o:p></span></span></p>
+
+<p class=MsoNormal><span style='mso-bookmark:_Toc40071341'><span class=CODE><span
+lang=TR style='font-size:10.0pt;mso-bidi-font-size:12.0pt;mso-bidi-font-family:
+"Times New Roman"'>SELECT DAY('26/03/1999') AS 'Gün'</span></span><span
+lang=TR><o:p></o:p></span></span></p>
+
+<p class=MsoNormal><span style='mso-bookmark:_Toc40071341'><span class=CODE><span
+lang=TR style='font-size:10.0pt;mso-bidi-font-size:12.0pt;mso-bidi-font-family:
+"Times New Roman"'>GO</span></span><span lang=TR><o:p></o:p></span></span></p>
+
+<p class=MsoNormal><span style='mso-bookmark:_Toc40071341'><span lang=TR><o:p>&nbsp;</o:p></span></span></p>
+
+<p class=MsoNormal><span style='mso-bookmark:_Toc40071341'><span lang=TR>Sonuç:
+<o:p></o:p></span></span></p>
+
+<p class=MsoNormal><span style='mso-bookmark:_Toc40071341'><span lang=TR><o:p>&nbsp;</o:p></span></span></p>
+
+<p class=MsoNormal><span style='mso-bookmark:_Toc40071341'><span class=CODE><span
+lang=TR style='font-size:10.0pt;mso-bidi-font-size:12.0pt;mso-bidi-font-family:
+"Times New Roman"'>Gün<br>
+------------ <br>
+26<o:p></o:p></span></span></span></p>
+
+<p class=MsoNormal><span style='mso-bookmark:_Toc40071341'><span class=CODE><span
+lang=TR style='font-size:10.0pt;mso-bidi-font-size:12.0pt;mso-bidi-font-family:
+"Times New Roman"'><o:p>&nbsp;</o:p></span></span></span></p>
+
+<p class=MsoNormal><span style='mso-bookmark:_Toc40071341'><span lang=TR><o:p>&nbsp;</o:p></span></span></p>
+
+<p class=MsoNormal><span style='mso-bookmark:_Toc40071341'><b style='mso-bidi-font-weight:
+normal'><span lang=TR>MONTH (T-SQL)<o:p></o:p></span></b></span></p>
+
+<p class=MsoNormal><span style='mso-bookmark:_Toc40071341'><span lang=TR>Bir
+tarih bilgisinin ay k&#305;sm&#305;n&#305; verir. <o:p></o:p></span></span></p>
+
+<p class=MsoNormal><span style='mso-bookmark:_Toc40071341'><span lang=TR><o:p>&nbsp;</o:p></span></span></p>
+
+<p class=MsoNormal><span style='mso-bookmark:_Toc40071341'><u><span lang=TR>Kullan&#305;m
+Biçimi: <o:p></o:p></span></u></span></p>
+
+<p class=MsoNormal><span style='mso-bookmark:_Toc40071341'><span lang=TR><o:p>&nbsp;</o:p></span></span></p>
+
+<p class=MsoNormal><span style='mso-bookmark:_Toc40071341'><b style='mso-bidi-font-weight:
+normal'><span lang=TR>MONTH(</span></b><i style='mso-bidi-font-style:normal'><span
+lang=TR>tarih</span></i><b style='mso-bidi-font-weight:normal'><span lang=TR>)</span></b><span
+lang=TR><o:p></o:p></span></span></p>
+
+<p class=MsoNormal><span style='mso-bookmark:_Toc40071341'><span lang=TR><o:p>&nbsp;</o:p></span></span></p>
+
+<p class=MsoNormal><span style='mso-bookmark:_Toc40071341'><u><span lang=TR>Argümanlar&#305;:
+<o:p></o:p></span></u></span></p>
+
+<p class=MsoNormal><span style='mso-bookmark:_Toc40071341'><span lang=TR><o:p>&nbsp;</o:p></span></span></p>
+
+<p class=DefinitionTerm style='margin-top:5.0pt;margin-right:0in;margin-bottom:
+5.0pt;margin-left:0in'><span style='mso-bookmark:_Toc40071341'><i
+style='mso-bidi-font-style:normal'><span lang=TR style='mso-ansi-language:TR'>tarih</span></i></span><span
+style='mso-bookmark:_Toc40071341'><span lang=TR style='mso-ansi-language:TR'><o:p></o:p></span></span></p>
+
+<p class=MsoNormal><span style='mso-bookmark:_Toc40071341'><span lang=TR><o:p>&nbsp;</o:p></span></span></p>
+
+<p class=MsoNormal><span style='mso-bookmark:_Toc40071341'><span class=SpellE><b
+style='mso-bidi-font-weight:normal'><span lang=TR>datetime</span></b></span><span
+lang=TR> <span class=SpellE>ya</span> da <span class=SpellE><b
+style='mso-bidi-font-weight:normal'>smalldatetime</b></span> tarih bilgisi.<o:p></o:p></span></span></p>
+
+<p class=MsoNormal><span style='mso-bookmark:_Toc40071341'><span lang=TR><o:p>&nbsp;</o:p></span></span></p>
+
+<p class=MsoNormal><span style='mso-bookmark:_Toc40071341'><span lang=TR>A&#351;a&#287;&#305;daki
+örnekte verilen tarihin ay k&#305;sm&#305; verilmektedir: <o:p></o:p></span></span></p>
+
+<p class=MsoNormal><span style='mso-bookmark:_Toc40071341'><span lang=TR><o:p>&nbsp;</o:p></span></span></p>
+
+<p class=MsoNormal><span style='mso-bookmark:_Toc40071341'><span class=CODE><span
+lang=TR style='font-size:10.0pt;mso-bidi-font-size:12.0pt;mso-bidi-font-family:
+"Times New Roman"'>SELECT MONTH('26/03/1999') AS 'Ay'</span></span><span
+lang=TR><o:p></o:p></span></span></p>
+
+<p class=MsoNormal><span style='mso-bookmark:_Toc40071341'><span class=CODE><span
+lang=TR style='font-size:10.0pt;mso-bidi-font-size:12.0pt;mso-bidi-font-family:
+"Times New Roman"'>GO</span></span><span lang=TR><o:p></o:p></span></span></p>
+
+<p class=MsoNormal><span style='mso-bookmark:_Toc40071341'><span lang=TR><o:p>&nbsp;</o:p></span></span></p>
+
+<p class=MsoNormal><span style='mso-bookmark:_Toc40071341'><span lang=TR>Sonuç:
+<o:p></o:p></span></span></p>
+
+<p class=MsoNormal><span style='mso-bookmark:_Toc40071341'><span lang=TR><o:p>&nbsp;</o:p></span></span></p>
+
+<p class=MsoNormal><span style='mso-bookmark:_Toc40071341'><span class=CODE><span
+lang=TR style='font-size:10.0pt;mso-bidi-font-size:12.0pt;mso-bidi-font-family:
+"Times New Roman"'>Ay<br>
+------------ <br>
+03<o:p></o:p></span></span></span></p>
+
+<p class=MsoNormal><span style='mso-bookmark:_Toc40071341'><span lang=TR><o:p>&nbsp;</o:p></span></span></p>
+
+<p class=MsoNormal><span style='mso-bookmark:_Toc40071341'><b style='mso-bidi-font-weight:
+normal'><span lang=TR>YEAR (T-SQL)<o:p></o:p></span></b></span></p>
+
+<p class=MsoNormal><span style='mso-bookmark:_Toc40071341'><span lang=TR>Bir
+tarih bilgisinin y&#305;l k&#305;sm&#305;n&#305; verir. <o:p></o:p></span></span></p>
+
+<p class=MsoNormal><span style='mso-bookmark:_Toc40071341'><span lang=TR><o:p>&nbsp;</o:p></span></span></p>
+
+<p class=MsoNormal><span style='mso-bookmark:_Toc40071341'><u><span lang=TR>Kullan&#305;m
+Biçimi: <o:p></o:p></span></u></span></p>
+
+<p class=MsoNormal><span style='mso-bookmark:_Toc40071341'><span lang=TR><o:p>&nbsp;</o:p></span></span></p>
+
+<p class=MsoNormal><span style='mso-bookmark:_Toc40071341'><b style='mso-bidi-font-weight:
+normal'><span lang=TR>YEAR(</span></b><i style='mso-bidi-font-style:normal'><span
+lang=TR>tarih</span></i><b style='mso-bidi-font-weight:normal'><span lang=TR>)</span></b><span
+lang=TR><o:p></o:p></span></span></p>
+
+<p class=MsoNormal><span style='mso-bookmark:_Toc40071341'><span lang=TR><o:p>&nbsp;</o:p></span></span></p>
+
+<p class=MsoNormal><span style='mso-bookmark:_Toc40071341'><u><span lang=TR>Argümanlar&#305;:
+<o:p></o:p></span></u></span></p>
+
+<p class=MsoNormal><span style='mso-bookmark:_Toc40071341'><span lang=TR><o:p>&nbsp;</o:p></span></span></p>
+
+<p class=DefinitionTerm style='margin-top:5.0pt;margin-right:0in;margin-bottom:
+5.0pt;margin-left:0in'><span style='mso-bookmark:_Toc40071341'><i
+style='mso-bidi-font-style:normal'><span lang=TR style='mso-ansi-language:TR'>tarih</span></i></span><span
+style='mso-bookmark:_Toc40071341'><span lang=TR style='mso-ansi-language:TR'><o:p></o:p></span></span></p>
+
+<p class=MsoNormal><span style='mso-bookmark:_Toc40071341'><span lang=TR><o:p>&nbsp;</o:p></span></span></p>
+
+<p class=MsoNormal><span style='mso-bookmark:_Toc40071341'><span lang=TR><o:p>&nbsp;</o:p></span></span></p>
+
+<p class=MsoNormal><span style='mso-bookmark:_Toc40071341'><span lang=TR><o:p>&nbsp;</o:p></span></span></p>
+
+<h2><span style='mso-bookmark:_Toc40071341'><span lang=TR>D. KARAKER
+FONKS&#304;YONLARI</span></span></h2>
+
+<p class=MsoNormal><span style='mso-bookmark:_Toc40071341'><span class=SpellE><span
+lang=TR>String</span></span><span lang=TR> (karakter) alanlar&#305;
+i&#351;lemek için yayg&#305;n kulland&#305;&#287;&#305;m&#305;z fonksiyonlar bu
+alana girer. <span class=SpellE>Transact</span>-SQL dilinde kullan&#305;lan baz&#305;
+karakter fonksiyonlar&#305; &#351;unlard&#305;r: </span></span></p>
+
+<p class=MsoNormal><span style='mso-bookmark:_Toc40071341'><span lang=TR><o:p>&nbsp;</o:p></span></span></p>
+
+<ul style='margin-top:0in' type=disc>
+ <li class=MsoNormal style='mso-list:l1 level1 lfo2;tab-stops:list .5in'><span
+     style='mso-bookmark:_Toc40071341'><span lang=TR>ASCII </span></span></li>
+ <li class=MsoNormal style='mso-list:l1 level1 lfo2;tab-stops:list .5in'><span
+     style='mso-bookmark:_Toc40071341'><span lang=TR>CHAR </span></span></li>
+ <li class=MsoNormal style='mso-list:l1 level1 lfo2;tab-stops:list .5in'><span
+     style='mso-bookmark:_Toc40071341'><span lang=TR>CHARINDEX </span></span></li>
+ <li class=MsoNormal style='mso-list:l1 level1 lfo2;tab-stops:list .5in'><span
+     style='mso-bookmark:_Toc40071341'><span lang=TR>DIFFERENCE </span></span></li>
+ <li class=MsoNormal style='mso-list:l1 level1 lfo2;tab-stops:list .5in'><span
+     style='mso-bookmark:_Toc40071341'><span lang=TR>LEFT </span></span></li>
+ <li class=MsoNormal style='mso-list:l1 level1 lfo2;tab-stops:list .5in'><span
+     style='mso-bookmark:_Toc40071341'><span lang=TR>LEN </span></span></li>
+ <li class=MsoNormal style='mso-list:l1 level1 lfo2;tab-stops:list .5in'><span
+     style='mso-bookmark:_Toc40071341'><span lang=TR>LOWER </span></span></li>
+ <li class=MsoNormal style='mso-list:l1 level1 lfo2;tab-stops:list .5in'><span
+     style='mso-bookmark:_Toc40071341'><span lang=TR>LTRIM </span></span></li>
+ <li class=MsoNormal style='mso-list:l1 level1 lfo2;tab-stops:list .5in'><span
+     style='mso-bookmark:_Toc40071341'><span lang=TR>NCHAR </span></span></li>
+ <li class=MsoNormal style='mso-list:l1 level1 lfo2;tab-stops:list .5in'><span
+     style='mso-bookmark:_Toc40071341'><span lang=TR>REPLICATE </span></span></li>
+ <li class=MsoNormal style='mso-list:l1 level1 lfo2;tab-stops:list .5in'><span
+     style='mso-bookmark:_Toc40071341'><span lang=TR>REVERSE </span></span></li>
+ <li class=MsoNormal style='mso-list:l1 level1 lfo2;tab-stops:list .5in'><span
+     style='mso-bookmark:_Toc40071341'><span lang=TR>SUBSTRING </span></span></li>
+ <li class=MsoNormal style='mso-list:l1 level1 lfo2;tab-stops:list .5in'><span
+     style='mso-bookmark:_Toc40071341'><span lang=TR>QUOTENAME </span></span></li>
+ <li class=MsoNormal style='mso-list:l1 level1 lfo2;tab-stops:list .5in'><span
+     style='mso-bookmark:_Toc40071341'><span lang=TR>STUFF </span></span></li>
+ <li class=MsoNormal style='mso-list:l1 level1 lfo2;tab-stops:list .5in'><span
+     style='mso-bookmark:_Toc40071341'><span lang=TR>REPLACE </span></span></li>
+ <li class=MsoNormal style='mso-list:l1 level1 lfo2;tab-stops:list .5in'><span
+     style='mso-bookmark:_Toc40071341'><span lang=TR>STR </span></span></li>
+ <li class=MsoNormal style='mso-list:l1 level1 lfo2;tab-stops:list .5in'><span
+     style='mso-bookmark:_Toc40071341'><span lang=TR>SOUNDEX </span></span></li>
+ <li class=MsoNormal style='mso-list:l1 level1 lfo2;tab-stops:list .5in'><span
+     style='mso-bookmark:_Toc40071341'><span lang=TR>PATINDEX </span></span></li>
+ <li class=MsoNormal style='mso-list:l1 level1 lfo2;tab-stops:list .5in'><span
+     style='mso-bookmark:_Toc40071341'><span lang=TR>SPACE </span></span></li>
+ <li class=MsoNormal style='mso-list:l1 level1 lfo2;tab-stops:list .5in'><span
+     style='mso-bookmark:_Toc40071341'><span lang=TR>RIGHT </span></span></li>
+ <li class=MsoNormal style='mso-list:l1 level1 lfo2;tab-stops:list .5in'><span
+     style='mso-bookmark:_Toc40071341'><span lang=TR>RTRIM<span
+     style='mso-spacerun:yes'>   </span></span></span></li>
+ <li class=MsoNormal style='mso-list:l1 level1 lfo2;tab-stops:list .5in'><span
+     style='mso-bookmark:_Toc40071341'><span lang=TR>UPPER </span></span></li>
+ <li class=MsoNormal style='mso-list:l1 level1 lfo2;tab-stops:list .5in'><span
+     style='mso-bookmark:_Toc40071341'><span lang=TR>UNICODE </span></span></li>
+</ul>
+
+<p class=MsoNormal><span style='mso-bookmark:_Toc40071341'><span lang=TR><o:p>&nbsp;</o:p></span></span></p>
+
+<p class=MsoNormal><span style='mso-bookmark:_Toc40071341'><a name="_ascii"></a><b
+style='mso-bidi-font-weight:normal'><span lang=TR>ASCII<o:p></o:p></span></b></span></p>
+
+<p class=MsoNormal><span style='mso-bookmark:_Toc40071341'><span lang=TR>Bir
+karakter ifadenin en soldaki de&#287;erinin ASCII kodunu döndürür. </span></span></p>
+
+<p class=MsoNormal><span style='mso-bookmark:_Toc40071341'><span lang=TR><o:p>&nbsp;</o:p></span></span></p>
+
+<p class=MsoNormal><span style='mso-bookmark:_Toc40071341'><b style='mso-bidi-font-weight:
+normal'><span lang=TR>Kullan&#305;m&#305;: <o:p></o:p></span></b></span></p>
+
+<p><span style='mso-bookmark:_Toc40071341'><span lang=DE style='mso-ansi-language:
+DE'>ASCII <b>(</b> <span class=SpellE><i>karakter</i></span><i> <span
+class=SpellE>ifade</span></i><b>)</b> <o:p></o:p></span></span></p>
+
+<p class=indent><span style='mso-bookmark:_Toc40071341'><span class=SpellE><span
+lang=TR>Karekter</span></span><span lang=TR> ifade <span class=SpellE>char</span>
+<span class=SpellE>ya</span> da <span class=SpellE><b>varchar</b></span><b>
+türündedir.<o:p></o:p></b></span></span></p>
+
+<p class=indent><span style='mso-bookmark:_Toc40071341'><span lang=TR>Döndürdü&#287;ü
+tür: <span class=SpellE>Int</span></span></span></p>
+
+<p class=MsoNormal><span style='mso-bookmark:_Toc40071341'><b style='mso-bidi-font-weight:
+normal'><span lang=TR>Örnek: <o:p></o:p></span></b></span></p>
+
+<p><span style='mso-bookmark:_Toc40071341'><span lang=TR style='mso-ansi-language:
+TR'>Bizim Ev cümlesinin bütün karakterlerinin ASCII de&#287;erini döndürür: <o:p></o:p></span></span></p>
+
+<pre><span style='mso-bookmark:_Toc40071341'><code>SET TEXTSIZE 0<o:p></o:p></code></span></pre><pre><span
+style='mso-bookmark:_Toc40071341'><code>SET NOCOUNT ON<o:p></o:p></code></span></pre><pre><span
+style='mso-bookmark:_Toc40071341'><code>-- <span class=SpellE><span
+class=GramE>de&#287;i&#351;ken</span></span> <span class=SpellE>olu&#351;tur</span>.<o:p></o:p></code></span></pre><pre><span
+style='mso-bookmark:_Toc40071341'><code>DECLARE @<span class=SpellE>konum</span> <span
+class=SpellE>int</span>, @<span class=SpellE>karakter</span> <span class=GramE>char(</span>15)<o:p></o:p></code></span></pre><pre><span
+style='mso-bookmark:_Toc40071341'><code>-- <span class=SpellE><span
+class=GramE>de&#287;i&#351;kenlere</span></span> ilk <span class=SpellE>de&#287;er</span> <span
+class=SpellE>ver</span>.<o:p></o:p></code></span></pre><pre><span
+style='mso-bookmark:_Toc40071341'><code>SET @<span class=SpellE>konum</span>= 1<o:p></o:p></code></span></pre><pre><span
+style='mso-bookmark:_Toc40071341'><code>SET @<span class=SpellE>karakter</span>= '<span
+class=SpellE>Bizim</span> <span class=SpellE><span class=GramE>Ev</span></span>'<o:p></o:p></code></span></pre><pre><span
+style='mso-bookmark:_Toc40071341'><code>WHILE @<span class=SpellE>konum</span>&lt;= <span
+class=GramE>DATALENGTH(</span>@<span class=SpellE>karakter</span>)<o:p></o:p></code></span></pre><pre><span
+style='mso-bookmark:_Toc40071341'><code><span style='mso-spacerun:yes'>   </span>BEGIN<o:p></o:p></code></span></pre><pre><span
+style='mso-bookmark:_Toc40071341'><code><span style='mso-spacerun:yes'>   </span>SELECT <span
+class=GramE>ASCII(</span>SUBSTRING(@<span class=SpellE>karakter</span>, @<span
+class=SpellE>konum</span>, 1)),<o:p></o:p></code></span></pre><pre><span
+style='mso-bookmark:_Toc40071341'><code><span style='mso-spacerun:yes'>      </span><span
+class=GramE>CHAR(</span>ASCII(SUBSTRING(@<span class=SpellE>karakter</span>, @<span
+class=SpellE>konum</span>, 1)))<o:p></o:p></code></span></pre><pre><span
+style='mso-bookmark:_Toc40071341'><code><span style='mso-spacerun:yes'>    </span>SET @<span
+class=SpellE>konum</span>= @<span class=SpellE>konum</span> + 1<o:p></o:p></code></span></pre><pre><span
+style='mso-bookmark:_Toc40071341'><code><span style='mso-spacerun:yes'>   </span>END<o:p></o:p></code></span></pre><pre><span
+style='mso-bookmark:_Toc40071341'><code>SET NOCOUNT OFF<o:p></o:p></code></span></pre><pre><span
+style='mso-bookmark:_Toc40071341'><code>GO<o:p></o:p></code></span></pre>
+
+<p class=MsoNormal><span style='mso-bookmark:_Toc40071341'><a name="_char"></a><a
+name="_charindex"></a><b style='mso-bidi-font-weight:normal'><span lang=TR><o:p>&nbsp;</o:p></span></b></span></p>
+
+<p class=MsoNormal><span style='mso-bookmark:_Toc40071341'><b style='mso-bidi-font-weight:
+normal'><span lang=TR>CHARINDEX<o:p></o:p></span></b></span></p>
+
+<p class=MsoNormal><span style='mso-bookmark:_Toc40071341'><span lang=TR>Bir
+karakter dize içinde belirtilen bir ifadenin (karakterin) ba&#351;lang&#305;ç
+konumunu döndürür. </span></span></p>
+
+<p class=MsoNormal><span style='mso-bookmark:_Toc40071341'><span lang=TR><o:p>&nbsp;</o:p></span></span></p>
+
+<h5><span style='mso-bookmark:_Toc40071341'><span lang=TR>Kullan&#305;m&#305;: </span></span></h5>
+
+<p><span style='mso-bookmark:_Toc40071341'><span lang=TR style='mso-ansi-language:
+TR'>CHARINDEX <b>( </b><i>ifade1</i><b>, </b><i>ifade2</i>[ <b>,</b> <i>ba&#351;lang&#305;ç
+konumu</i>] <b>) </b><o:p></o:p></span></span></p>
+
+<p><span style='mso-bookmark:_Toc40071341'><span lang=TR style='mso-ansi-language:
+TR'>&#304;fade1: aranacak karakterleri belirtir. <o:p></o:p></span></span></p>
+
+<p><span style='mso-bookmark:_Toc40071341'><span lang=TR style='mso-ansi-language:
+TR'>&#304;fade2: &#304;fade1'deki karakterlerin aranaca&#287;&#305;
+karakterleri belirtir. <o:p></o:p></span></span></p>
+
+<p><span style='mso-bookmark:_Toc40071341'><span lang=TR style='mso-ansi-language:
+TR'>Ba&#351;lang&#305;ç konumu ise araman&#305;n ba&#351;lanaca&#287;&#305;
+konumu belirtir. <o:p></o:p></span></span></p>
+
+<p class=MsoNormal><span style='mso-bookmark:_Toc40071341'><span lang=TR>Döndürdü&#287;ü
+tür: <span class=SpellE>Int</span></span></span></p>
+
+<p><span style='mso-bookmark:_Toc40071341'><span lang=TR style='mso-ansi-language:
+TR'>&#304;fadelerden birisi NULL ise CHARINDEX fonksiyonu NULL de&#287;erini
+döndürür. &#304;fade1, &#304;fade2 içinde bulunamazda 0 de&#287;eri döner. <o:p></o:p></span></span></p>
+
+<p><span style='mso-bookmark:_Toc40071341'><span lang=TR style='mso-ansi-language:
+TR'>Örnek: ADI alan&#305;nda BOYASI sözcü&#287;ünün
+ba&#351;lad&#305;&#287;&#305; konumu döndürür. <o:p></o:p></span></span></p>
+
+<pre><span style='mso-bookmark:_Toc40071341'><code>SELECT </code><span
+class=GramE>CHARINDEX<code>(</code></span><code>'BOYASI', <span class=SpellE>adi</span>)<o:p></o:p></code></span></pre><pre><span
+style='mso-bookmark:_Toc40071341'><code>FROM </code></span><st1:City><st1:place><span
+  style='mso-bookmark:_Toc40071341'><span class=SpellE><code>ur</code></span></span></st1:place></st1:City><span
+style='mso-bookmark:_Toc40071341'><span class=SpellE><code>un</code></span><code><o:p></o:p></code></span></pre><pre><span
+style='mso-bookmark:_Toc40071341'><code><o:p>&nbsp;</o:p></code></span></pre><pre><span
+style='mso-bookmark:_Toc40071341'><code>-- <span class=SpellE><span
+class=GramE>arama</span></span> <span class=SpellE>için</span> <span
+class=SpellE>ba&#351;lang&#305;kç</span> <span class=SpellE>konumu</span> <span
+class=SpellE>belirtmek</span> <span class=SpellE>istersek</span><o:p></o:p></code></span></pre><pre><span
+style='mso-bookmark:_Toc40071341'><code>SELECT </code><span class=GramE>CHARINDEX<code>(</code></span><code>'BOYASI', <span
+class=SpellE>adi</span>, 5)<o:p></o:p></code></span></pre><pre><span
+style='mso-bookmark:_Toc40071341'><code>FROM </code></span><st1:City><st1:place><span
+  style='mso-bookmark:_Toc40071341'><span class=SpellE><code>ur</code></span></span></st1:place></st1:City><span
+style='mso-bookmark:_Toc40071341'><span class=SpellE><code>un</code></span><code><o:p></o:p></code></span></pre>
+
+<p class=MsoNormal><span style='mso-bookmark:_Toc40071341'><a name="_difference"></a><b
+style='mso-bidi-font-weight:normal'><span lang=TR><o:p>&nbsp;</o:p></span></b></span></p>
+
+<p class=MsoNormal><span style='mso-bookmark:_Toc40071341'><b style='mso-bidi-font-weight:
+normal'><span lang=TR>Yaln&#305;zca adlar listesi: <o:p></o:p></span></b></span></p>
+
+<p class=MsoNormal><span style='mso-bookmark:_Toc40071341'><b style='mso-bidi-font-weight:
+normal'><span lang=TR><o:p>&nbsp;</o:p></span></b></span></p>
+
+<p class=MsoNormal><span style='mso-bookmark:_Toc40071341'><span class=SpellE><span
+lang=TR>select</span></span><span lang=TR> <span class=SpellE>left</span> (adi,<span
+class=SpellE>charindex</span>(' <span class=SpellE>'</span>, adi)) <span
+class=SpellE>from</span> <span class=SpellE>cariana</span></span></span></p>
+
+<p class=MsoNormal><span style='mso-bookmark:_Toc40071341'><b style='mso-bidi-font-weight:
+normal'><span lang=TR><o:p>&nbsp;</o:p></span></b></span></p>
+
+<p class=MsoNormal><span style='mso-bookmark:_Toc40071341'><b style='mso-bidi-font-weight:
+normal'><span lang=TR><o:p>&nbsp;</o:p></span></b></span></p>
+
+<p class=MsoNormal><span style='mso-bookmark:_Toc40071341'><a name="_left"></a><b
+style='mso-bidi-font-weight:normal'><span lang=TR>LEFT<o:p></o:p></span></b></span></p>
+
+<p class=MsoNormal><span style='mso-bookmark:_Toc40071341'><span lang=TR>Bir
+karakter dizesinin sol taraftan belirtilen say&#305; kadar keser. </span></span></p>
+
+<p class=MsoNormal><span style='mso-bookmark:_Toc40071341'><span lang=TR><o:p>&nbsp;</o:p></span></span></p>
+
+<h5><span style='mso-bookmark:_Toc40071341'><span lang=TR>Kullan&#305;m&#305;: </span></span></h5>
+
+<p><span style='mso-bookmark:_Toc40071341'><span lang=DE style='mso-ansi-language:
+DE'>LEFT <span class=GramE><b>( </b><span class=SpellE><i>karakter</i></span></span><i>
+<span class=SpellE>dize</span></i><b>,</b> <span class=SpellE><i>tarmsay&#305;</i></span><b>)
+</b><o:p></o:p></span></span></p>
+
+<p><span style='mso-bookmark:_Toc40071341'><span class=SpellE><span lang=DE
+style='mso-ansi-language:DE'>Örnek</span></span></span><span style='mso-bookmark:
+_Toc40071341'><span lang=DE style='mso-ansi-language:DE'>: <span class=SpellE>Adlar&#305;n</span>
+<span class=SpellE>soldan</span> <span class=SpellE>be&#351;</span> <span
+class=SpellE>karakteri</span>: <o:p></o:p></span></span></p>
+
+<pre><span style='mso-bookmark:_Toc40071341'><code>USE <span class=SpellE>ornek</span><o:p></o:p></code></span></pre><pre><span
+style='mso-bookmark:_Toc40071341'><code>GO<o:p></o:p></code></span></pre><pre><span
+style='mso-bookmark:_Toc40071341'><code>SELECT <span class=GramE>LEFT(</span><span
+class=SpellE>adi</span>, 5) <o:p></o:p></code></span></pre><pre><span
+style='mso-bookmark:_Toc40071341'><code>FROM <span class=SpellE>cariana</span><o:p></o:p></code></span></pre><pre><span
+style='mso-bookmark:_Toc40071341'><code>ORDER BY <span class=SpellE>kodu</span><o:p></o:p></code></span></pre><pre><span
+style='mso-bookmark:_Toc40071341'><code>GO<o:p></o:p></code></span></pre>
+
+<p class=MsoNormal><span style='mso-bookmark:_Toc40071341'><a name="_len"></a><b
+style='mso-bidi-font-weight:normal'><span lang=TR><o:p>&nbsp;</o:p></span></b></span></p>
+
+<p class=MsoNormal><span style='mso-bookmark:_Toc40071341'><b style='mso-bidi-font-weight:
+normal'><span lang=TR>LEN<o:p></o:p></span></b></span></p>
+
+<p><span style='mso-bookmark:_Toc40071341'><span lang=TR style='mso-ansi-language:
+TR'>Dize verinin uzunlu&#287;unu döndürür. <o:p></o:p></span></span></p>
+
+<h5><span style='mso-bookmark:_Toc40071341'><span lang=TR>Kullan&#305;m&#305;: </span></span></h5>
+
+<p><span style='mso-bookmark:_Toc40071341'><span lang=TR style='mso-ansi-language:
+TR'>LEN <b>( </b><i>karakter dize</i><b>) </b><o:p></o:p></span></span></p>
+
+<p class=MsoNormal><span style='mso-bookmark:_Toc40071341'><b style='mso-bidi-font-weight:
+normal'><span lang=TR>Örnek: Ad&#305; alan&#305;n&#305;n uzunlu&#287;u: <o:p></o:p></span></b></span></p>
+
+<p class=MsoNormal><span style='mso-bookmark:_Toc40071341'><b style='mso-bidi-font-weight:
+normal'><span lang=TR><o:p>&nbsp;</o:p></span></b></span></p>
+
+<pre><span style='mso-bookmark:_Toc40071341'><code>SELECT <span class=GramE>LEN(</span><span
+class=SpellE>adi</span>) AS '<span class=SpellE>Uzunluk</span>'<o:p></o:p></code></span></pre><pre><span
+style='mso-bookmark:_Toc40071341'><code>FROM <span class=SpellE>cariana</span><o:p></o:p></code></span></pre>
+
+<p class=MsoNormal><span style='mso-bookmark:_Toc40071341'><span lang=TR><o:p>&nbsp;</o:p></span></span></p>
+
+<p class=MsoNormal><span style='mso-bookmark:_Toc40071341'><span class=SpellE><span
+lang=TR>use</span></span><span lang=TR> <span class=SpellE>ornek</span></span></span></p>
+
+<p class=MsoNormal><span style='mso-bookmark:_Toc40071341'><span class=SpellE><span
+lang=TR>select</span></span><span lang=TR> <span class=SpellE>substring</span>
+(adi,<span class=SpellE>charindex</span>(' ',adi)+1,(<span class=SpellE>len</span>(adi)-<span
+class=SpellE>charindex</span>(' ',adi))) <span class=SpellE>from</span> <span
+class=SpellE>cariana</span></span></span></p>
+
+<p class=MsoNormal><span style='mso-bookmark:_Toc40071341'><span lang=TR>--
+soyad&#305;n&#305; <span class=SpellE>ay&#305;rmak</span></span></span></p>
+
+<p class=MsoNormal><span style='mso-bookmark:_Toc40071341'><span lang=TR><o:p>&nbsp;</o:p></span></span></p>
+
+<p class=MsoNormal><span style='mso-bookmark:_Toc40071341'><span lang=TR><o:p>&nbsp;</o:p></span></span></p>
+
+<p class=MsoNormal><span style='mso-bookmark:_Toc40071341'><a name="_lower"></a><a
+name="_ltrim"></a><b style='mso-bidi-font-weight:normal'><span lang=TR>LTRIM<o:p></o:p></span></b></span></p>
+
+<p><span style='mso-bookmark:_Toc40071341'><span lang=TR style='mso-ansi-language:
+TR'>Önündeki bo&#351;luklar&#305; siler. <o:p></o:p></span></span></p>
+
+<h5><span style='mso-bookmark:_Toc40071341'><span lang=TR>Kullan&#305;m&#305;: </span></span></h5>
+
+<p><span style='mso-bookmark:_Toc40071341'><span lang=TR style='mso-ansi-language:
+TR'>LTRIM <b>( </b><i>karakter dize</i><b>) </b><o:p></o:p></span></span></p>
+
+<pre><span style='mso-bookmark:_Toc40071341'><a name="_patindex"></a><a
+name="_replace"></a><code><span lang=TR style='mso-ansi-language:TR'><o:p>&nbsp;</o:p></span></code></span></pre>
+
+<p class=MsoNormal><span style='mso-bookmark:_Toc40071341'><a name="_quotename"></a><a
+name="_replicate"></a><a name="_right"></a><b style='mso-bidi-font-weight:normal'><span
+lang=TR>RIGHT<o:p></o:p></span></b></span></p>
+
+<p class=MsoNormal><span style='mso-bookmark:_Toc40071341'><span lang=TR>Belirtilen
+dizenin sa&#287; taraf&#305;ndan keser. </span></span></p>
+
+<p class=MsoNormal><span style='mso-bookmark:_Toc40071341'><span lang=TR><o:p>&nbsp;</o:p></span></span></p>
+
+<h5><span style='mso-bookmark:_Toc40071341'><span lang=TR>Kullan&#305;m&#305;: </span></span></h5>
+
+<p><span style='mso-bookmark:_Toc40071341'><span lang=DE style='mso-ansi-language:
+DE'>RIGHT <span class=GramE><b>( </b><span class=SpellE><i>karakter</i></span></span><i>
+<span class=SpellE>dizesi</span></i><b>,</b> <span class=SpellE><i>tamsay&#305;</i></span><b>)
+</b><o:p></o:p></span></span></p>
+
+<h5><span style='mso-bookmark:_Toc40071341'><span class=SpellE><span lang=TR>Arguments</span></span></span></h5>
+
+<h5><span style='mso-bookmark:_Toc40071341'><span lang=TR>Örnek: </span></span></h5>
+
+<p><span style='mso-bookmark:_Toc40071341'><span lang=DE style='mso-ansi-language:
+DE'>Ad&#305; <span class=SpellE>alan&#305;n&#305;</span> <span class=SpellE>sa&#287;lan</span>
+10 <span class=SpellE>karakteri</span>: <o:p></o:p></span></span></p>
+
+<pre><span style='mso-bookmark:_Toc40071341'><code>SELECT <span class=GramE>RIGHT(</span><span
+class=SpellE>adi</span>, 10) <o:p></o:p></code></span></pre><pre><span
+style='mso-bookmark:_Toc40071341'><code>FROM <span class=SpellE>cariana</span><o:p></o:p></code></span></pre>
+
+<h1><span style='mso-bookmark:_Toc40071341'><a name="_rtrim"></a><span lang=TR><o:p>&nbsp;</o:p></span></span></h1>
+
+<p class=MsoNormal><span style='mso-bookmark:_Toc40071341'><b style='mso-bidi-font-weight:
+normal'><span lang=TR>RTRIM<o:p></o:p></span></b></span></p>
+
+<p><span style='mso-bookmark:_Toc40071341'><span lang=TR style='mso-ansi-language:
+TR'>Karakter dizesinin arkas&#305;ndaki bo&#351;luklar&#305;
+kald&#305;r&#305;r. <o:p></o:p></span></span></p>
+
+<h5><span style='mso-bookmark:_Toc40071341'><span lang=TR>Kullan&#305;m&#305;:</span></span></h5>
+
+<p><span style='mso-bookmark:_Toc40071341'><span lang=DE style='mso-ansi-language:
+DE'>RTRIM <b>( </b><span class=SpellE><i>karakter</i></span><i> <span
+class=SpellE>dize</span></i><b>) </b><o:p></o:p></span></span></p>
+
+<p class=MsoNormal><span style='mso-bookmark:_Toc40071341'><span lang=TR>Örnek:
+Bir alan güncelleme: </span></span></p>
+
+<p class=MsoNormal><span style='mso-bookmark:_Toc40071341'><span lang=TR><o:p>&nbsp;</o:p></span></span></p>
+
+<p class=MsoNormal><span style='mso-bookmark:_Toc40071341'><span class=SpellE><span
+lang=TR>update</span></span><span lang=TR> deneme</span></span></p>
+
+<p class=MsoNormal><span style='mso-bookmark:_Toc40071341'><span lang=TR>set
+alan1 = <span class=SpellE>rtrim</span>(alan1) + <span class=SpellE>rtrim</span>('a')</span></span></p>
+
+<p class=MsoNormal><span style='mso-bookmark:_Toc40071341'><span lang=TR><o:p>&nbsp;</o:p></span></span></p>
+
+<p class=MsoNormal><span style='mso-bookmark:_Toc40071341'><span lang=TR><o:p>&nbsp;</o:p></span></span></p>
+
+<pre><span style='mso-bookmark:_Toc40071341'><a name="_str"></a><code><span
+lang=TR style='mso-ansi-language:TR'><span style='mso-spacerun:yes'> </span><o:p></o:p></span></code></span></pre>
+
+<p class=MsoNormal><span style='mso-bookmark:_Toc40071341'><a name="_stuff"></a><b
+style='mso-bidi-font-weight:normal'><span lang=TR>STUFF<o:p></o:p></span></b></span></p>
+
+<p><span style='mso-bookmark:_Toc40071341'><span lang=TR style='mso-ansi-language:
+TR'>Belirtilen uzunluktaki karakterleri siler ve yerine belirtilen di&#287;er
+karakterleri ekler. <o:p></o:p></span></span></p>
+
+<h5><span style='mso-bookmark:_Toc40071341'><span class=SpellE><span lang=TR>Syntax</span></span></span></h5>
+
+<p><span style='mso-bookmark:_Toc40071341'><span lang=TR style='mso-ansi-language:
+TR'>STUFF <b>( </b><span class=SpellE><i>karaker</i></span><i> dize</i><b>,</b>
+<i>ba&#351;lang&#305;ç</i><b>,</b> <i>uzunluk</i><b>,</b> <i>karakter dize</i><b>)
+</b><o:p></o:p></span></span></p>
+
+<pre><span style='mso-bookmark:_Toc40071341'><span class=SpellE><code>Örnek</code></span><code>: <o:p></o:p></code></span></pre><pre><span
+style='mso-bookmark:_Toc40071341'><code><o:p>&nbsp;</o:p></code></span></pre><pre><span
+style='mso-bookmark:_Toc40071341'><span class=GramE><code>use</code></span><code> <span
+class=SpellE>ornek</span><o:p></o:p></code></span></pre><pre><span
+style='mso-bookmark:_Toc40071341'><code>SELECT <span class=GramE>STUFF(</span><span
+class=SpellE>tel</span>, 7, 1, '8') from <span class=SpellE>cariana</span><o:p></o:p></code></span></pre><pre><span
+style='mso-bookmark:_Toc40071341'><code><span lang=DE style='mso-ansi-language:
+DE'>-- <span class=SpellE>telefon</span> <span class=SpellE>numaras&#305;nda</span> 7 <span
+class=SpellE>karakteri</span> 9 <span class=SpellE>ile</span> <span
+class=SpellE>de&#287;i&#351;tirmek</span><o:p></o:p></span></code></span></pre><pre><span
+style='mso-bookmark:_Toc40071341'><code><span lang=DE style='mso-ansi-language:
+DE'><o:p>&nbsp;</o:p></span></code></span></pre><pre><span style='mso-bookmark:
+_Toc40071341'><code><span lang=DE style='mso-ansi-language:DE'><o:p>&nbsp;</o:p></span></code></span></pre>
+
+<p class=MsoNormal><span style='mso-bookmark:_Toc40071341'><a name="_substring"></a><b
+style='mso-bidi-font-weight:normal'><span lang=TR>SUBSTRING<o:p></o:p></span></b></span></p>
+
+<p><span style='mso-bookmark:_Toc40071341'><span class=SpellE><span lang=DE
+style='mso-ansi-language:DE'>Bir</span></span></span><span style='mso-bookmark:
+_Toc40071341'><span lang=DE style='mso-ansi-language:DE'> <span class=SpellE>karakter</span>
+<span class=SpellE>dizesinin</span> <span class=SpellE>içinden</span> <span
+class=SpellE>belli</span> <span class=SpellE>karakterleri</span> <span
+class=SpellE>seçer</span>. <o:p></o:p></span></span></p>
+
+<h5><span style='mso-bookmark:_Toc40071341'><span lang=TR>Kullan&#305;m&#305;:</span></span></h5>
+
+<p><span style='mso-bookmark:_Toc40071341'><span lang=DE style='mso-ansi-language:
+DE'>SUBSTRING <b>( </b><span class=SpellE><i>karakter</i></span><i> <span
+class=SpellE>dize</span></i><b>,</b> <span class=SpellE><i>ba&#351;lang&#305;ç</i></span><b>,</b>
+<span class=SpellE><i>uzunluk</i></span><b>) </b><o:p></o:p></span></span></p>
+
+<h5><span style='mso-bookmark:_Toc40071341'><span lang=TR><o:p>&nbsp;</o:p></span></span></h5>
+
+<h5><span style='mso-bookmark:_Toc40071341'><span lang=TR>Örnek: </span></span></h5>
+
+<p class=MsoNormal><span style='mso-bookmark:_Toc40071341'><span lang=TR>Ad&#305;
+alan&#305;n&#305;n içinde üçüncü karakter ba&#351;lay&#305;m 4 tane karakteri
+döndürmek: </span></span></p>
+
+<p class=MsoNormal><span style='mso-bookmark:_Toc40071341'><span lang=TR><o:p>&nbsp;</o:p></span></span></p>
+
+<pre><span style='mso-bookmark:_Toc40071341'><code>SELECT <span class=GramE>SUBSTRING(</span><span
+class=SpellE>adi</span>, 3, 4)<o:p></o:p></code></span></pre><pre><span
+style='mso-bookmark:_Toc40071341'><code>FROM <span class=SpellE>cariana</span><o:p></o:p></code></span></pre><pre><span
+style='mso-bookmark:_Toc40071341'><code><o:p>&nbsp;</o:p></code></span></pre><pre><span
+style='mso-bookmark:_Toc40071341'><span class=SpellE><code>Ad&#305;</code></span><code> <span
+class=SpellE>soyad&#305;</span> <span class=SpellE>alan&#305;ndan</span> <span
+class=SpellE>soyad&#305;n&#305;</span> <span class=SpellE>çekmek</span>: <o:p></o:p></code></span></pre><pre><span
+style='mso-bookmark:_Toc40071341'><code><o:p>&nbsp;</o:p></code></span></pre><pre><span
+style='mso-bookmark:_Toc40071341'><span class=GramE><code>select</code></span><code> substring (<span
+class=SpellE>adi,charindex</span>(' ',<span class=SpellE>adi</span>)+1,(<span
+class=SpellE>len</span>(<span class=SpellE>adi</span>)-<span class=SpellE>charindex</span>(' ',<span
+class=SpellE>adi</span>))) from <span class=SpellE>cariana</span><o:p></o:p></code></span></pre><pre><span
+style='mso-bookmark:_Toc40071341'><code><o:p>&nbsp;</o:p></code></span></pre><pre><span
+style='mso-bookmark:_Toc40071341'><code><o:p>&nbsp;</o:p></code></span></pre>
+
+<h1><span style='mso-bookmark:_Toc40071341'><code><span lang=TR
+style='mso-ansi-font-size:16.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'>GÖZDEN
+GEÇ&#304;RME<o:p></o:p></span></code></span></h1>
+
+<p class=MsoNormal><span style='mso-bookmark:_Toc40071341'><code><span lang=TR
+style='font-size:10.0pt'><br>
+1. SQL Dili fonksiyonlar&#305;n&#305;n s&#305;n&#305;flar&#305;n&#305;
+aç&#305;klay&#305;n&#305;z. <o:p></o:p></span></code></span></p>
+
+<p class=MsoNormal><span style='mso-bookmark:_Toc40071341'><code><span lang=TR
+style='font-size:10.0pt'>2. Bir alan&#305;n soldan üç karakterini seçmek için
+hangi fonksiyonlar&#305; kullanabiliriz. <o:p></o:p></span></code></span></p>
+
+<p class=MsoNormal><span style='mso-bookmark:_Toc40071341'><code><span lang=TR
+style='font-size:10.0pt'><o:p>&nbsp;</o:p></span></code></span></p>
+
+<p class=MsoNormal><span style='mso-bookmark:_Toc40071341'><a name="_upper"></a><span
+lang=TR><o:p>&nbsp;</o:p></span></span></p>
+
+<span lang=TR style='font-size:12.0pt;font-family:Arial;mso-fareast-font-family:
+SimSun;mso-bidi-font-family:"Times New Roman";mso-ansi-language:TR;mso-fareast-language:
+ZH-CN;mso-bidi-language:AR-SA'><br clear=all style='mso-special-character:line-break;
+page-break-before:always'>
+<span style='mso-bookmark:_Toc40071341'></span></span>
+
+<p class=MsoNormal><span lang=TR><o:p>&nbsp;</o:p></span></p>
+
+</div>
+
+</body>
+
+</html>
+
+		  </TD>
+		</TR>
+	</TABLE>
+
+    </form>
+<script language="javascript">
+function menuSec(seciliMenu){
+location.href='ders.aspx?kursID=9&dersID=' + seciliMenu.options[seciliMenu.selectedIndex].value};
+</script>
+  </body>
+</HTML>

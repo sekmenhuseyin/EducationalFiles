@@ -1,0 +1,452 @@
+<!doctype html public "-//IETF//DTD HTML//EN">
+<HTML>
+<HEAD>
+<TITLE>Windows XP: The Complete Reference: Adding and Removing Hardware</TITLE>
+<META NAME="GENERATOR" CONTENT="Web-O-Matic Deluxe 4.1">
+<META NAME="AUTHOR" CONTENT="John R. Levine, Margaret Levine Young">
+<META NAME="COPYRIGHT" CONTENTS="Copyright 2001 by The McGraw-Hill Companies. All rights reserved.">
+</HEAD>
+<BODY BACKGROUND="../images/background.png">
+<BLOCKQUOTE>
+<SCRIPT LANGUAGE="JavaScript">
+function whomp(i, file)
+{
+	i.src = "../images/" + file + ".png";
+}
+</SCRIPT>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarered3x3.png" HEIGHT=3 WIDTH=3></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=2>
+Chapter 13: Adding and Removing Hardware
+</FONT></TD>
+</TR>
+</TABLE>
+<BR>
+<A HREF="3.htm"  OnMouseOver='whomp(prev, "sprev");' OnMouseOut='whomp(prev, "wprev");'
+ title="Previous Section"><IMG NAME=prev SRC="../images/wprev.png" ALT="Previous" HEIGHT=20 WIDTH=82 BORDER=0></A><!--
+--><A HREF="index.htm" OnMouseOver='whomp(chap, "schap");' OnMouseOut='whomp(chap, "wchap");'
+title="Chapter Overview"><IMG SRC="../images/wchap.png" ALT="Chapter" NAME=chap HEIGHT=20 WIDTH=100 BORDER=0></A><A
+HREF="../index.htm" OnMouseOver='whomp(toc, "sbook");' OnMouseOut='whomp(toc, "wbook");' 
+title="Table of Contents"><IMG SRC="../images/wbook.png" ALT="Contents" NAME=toc HEIGHT=20 WIDTH=94 BORDER=0></A><A
+HREF="../glossary/index.htm" OnMouseOver='whomp(glos, "sglos");' OnMouseOut='whomp(glos, "wglos");' 
+title="Glossary"><IMG SRC="../images/wglos.png" ALT="Glossary" NAME=glos HEIGHT=20 WIDTH=94 BORDER=0></A><!--
+--><A HREF="5.htm"  OnMouseOver='whomp(next, "snext");' OnMouseOut='whomp(next, "wnext");'
+ title="Next Section"><IMG NAME=next SRC="../images/wnext.png" ALT="Next" HEIGHT=20 WIDTH=82 BORDER=0></A>
+<BR>
+<A NAME="1">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarered10x10.png" HEIGHT=10 WIDTH=10></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=4><B>What Types of Hardware Can You Install?</B></FONT>
+</TD>
+</TR>
+</TABLE></A>
+<P>
+IBM-compatible computers, having evolved for over 20 years, offer numerous, often complicated, ways to attach new kinds of equipment. The details of PC hardware are beyond the scope of this book, but this section describes the basics of PC hardware that you need to know to get a recalcitrant Windows driver installed, including older types of PC components, in case you are upgrading an older computer. See <A HREF="../harddisks/index.htm">Chapter 32</A> for more information about configuring hard disks. <A HREF="../desktop/index.htm">Chapter 11</A> describes how to configure your display, and <A HREF="../printing/index.htm">Chapter 14</A> talks about how to print once you've installed a printer.
+<P>
+<TABLE><TR><TD VALIGN="TOP"><IMG SRC="../images/note.png" ALT="note" WIDTH=95 HEIGHT=29></TD>
+<TD VALIGN="TOP">The system requirements for Windows XP are steep, so upgrading an older computer may not be worth the expense and trouble. Carefully weigh the costs of upgrading versus purchasing new (especially with the prices of new systems so low). Keep in mind that you may be required to completely replace everything inside the case in order to satisfy Windows XP, so keeping the old system might actually be more useful than upgrading it to XP. See the Microsoft Windows Hardware Quality Labs (HCL) Web site at <A HREF="http://www.microsoft.com/hcl"><B>http://www.microsoft.com/hcl</B></A> to find out whether your hardware has been approved by Microsoft for use with Windows XP. Keep in mind that lots of hardware that Microsoft hasn't gotten around to testing also works.
+
+</TD></TR></TABLE>
+<P>
+<TABLE><TR><TD VALIGN="TOP"><IMG SRC="../images/tip.png" ALT="tip" WIDTH=95 HEIGHT=29></TD>
+<TD VALIGN="TOP">For the definitions of many hardware-related terms and acronyms, see the Dirt Cheap Drives Web site at <A HREF="http://www.dirtcheapdrives.com/tech"><B>http://www.dirtcheapdrives.com/tech</B></A> and click Glossary.
+
+</TD></TR></TABLE>
+<A NAME="2">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Integrated Versus Separate Peripherals</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+The original IBM Personal Computer contained nothing built into the computer beyond the <A NAME="ddcentralprocessingunit"><I>central processing unit</I></A> (<A NAME="ddcpu"><I>CPU</I></A>), memory, and keyboard. Everything else, including screens, floppy disk drives, hard disk drives, printers, modems, and serial ports, was provided by separate extra-cost add-in cards. (Hardware you add to your computer, other than processors and memory, is called a <A NAME="ddperipheral"><I>peripheral</I></A>.) Over the years, manufacturers have found that, as the functions of the computer were combined into fewer and fewer chips, it became cheaper to build the most common peripherals into the computer's <A NAME="ddmotherboard"><I>motherboard</I></A>, <A NAME="ddmainboard"><I>mainboard</I></A>, or <A NAME="ddsystemboard"><I>system board</I></A>, the printed circuit board that carries the CPU and memory. Modern computers typically include a parallel port, one or two serial ports, two PS/2 ports for keyboard and mouse, two Universal Serial Bus (USB) ports, controllers for up to two floppy disk drives and four IDE (Integrated Device Electronics) devices (typically hard drives, CD-ROM drives, CD-R drives, or DVD drives), a 56K modem, and sound and video adapters on the motherboard. Windows usually can't tell whether these items are built-in or on separate cards, so Windows treats them all as though they are separate peripherals.
+<A NAME="3">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Connectors</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+The back of your PC is bristling with connectors for various sorts of devices (see Figure 13-2). If your computer has internal <A NAME="ddexpansionslots"><I>expansion slots</I></A> holding adapter cards, each adapter card may have a connector or two, as well. Connectors to which you attach cables are also called <A NAME="ddports"><I>ports</I></A>. Most likely, the user's manual for your computer has a similar picture showing and labeling the connectors on your computer.
+<TABLE BORDER=2><TR><TD ALIGN=CENTER>
+<IMG SRC="hardware.connectors.png" WIDTH=514 HEIGHT=167 ALT="[figure]">
+</TD></TR><TR BGCOLOR="#00ffff"><TD><I>Figure 13-2:  Connectors on the back of your computer</I></TD></TR></TABLE>
+<A NAME="4">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squaregreen6x6.png" HEIGHT=6 WIDTH=6></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Serial (Com) Ports</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+Most PCs have one or two <A NAME="ddserialports"><I>serial ports</I></A>, which are D-shaped connectors with 9 or 25 pins (sometimes referred to as <A NAME="dddb9"><I>DB-9</I></A> and <A NAME="dddb25"><I>DB-25</I></A>):
+<BR><IMG ALIGN=TOP SRC="hardware.serialcons.png" WIDTH=350 HEIGHT=53 ALT="[image]">
+<P>
+Most commonly, you plug an external dial-up modem into a serial port, but serial ports are also used for serial mice, computer-to-computer cabling for "poor man's networking," and occasionally for printers. If you have a <A NAME="ddups">UPS</A> (uninterruptible power supply), a cable may run from the UPS to the PC's serial port so that the UPS can signal Windows to shut down when the UPS battery is almost dead.
+<A NAME="5">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squaregreen6x6.png" HEIGHT=6 WIDTH=6></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Network Ports</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+Some PCs come with a built-in network adapter to enable the computer to connect to a local area network, DSL modem, or cable modem. Newer network ports have RJ45 jacks that look like phone jacks, only larger. Old network ports may have round coaxial cable connectors. See the "<A HREF="../lans/5.htm#1">Buying Network Hardware</A>" section in Chapter 28 for how to connect your computer to a network. See the "<A HREF="../hardware/5.htm#4">Installing Modems</A>" section later in this chapter for more about installing DSL and cable modems.
+<A NAME="6">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squaregreen6x6.png" HEIGHT=6 WIDTH=6></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Telephone Plugs</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+A <A NAME="ddmodem"><I>modem</I></A> connects your computer to a phone line. If you have a dial-up (analog) modem (the kind of modem that connects to a normal, old-fashioned phone line) the modem has one or two <A NAME="ddrj11"><I>RJ-11</I></A> telephone plugs that are identical to the plugs on the back of a U.S. telephone. (If you are outside the U.S., your modem may have a different type of phone plug.) If there are two plugs, one is for the incoming phone line plugged into the wall, and the other is for a phone that shares the line with the modem. (The advantage to plugging the phone in via the modem is that, while the modem is online, the phone is disconnected, so you won't disconnect your modem call if you pick up the phone by mistake.) See "<A HREF="../hardware/5.htm#4">Installing Modems</A>" later in this chapter for other types of modems.
+<A NAME="7">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squaregreen6x6.png" HEIGHT=6 WIDTH=6></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Parallel Ports</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+Most PCs have a <A NAME="ddparallelport"><I>parallel port</I></A>, a D-shaped socket with holes for 25 pins. Parallel ports are often used for printers, and sometimes for other devices such as removable disk drives (such as ZIP drives).
+<BR><IMG ALIGN=TOP SRC="hardware.parallel.png" WIDTH=176 HEIGHT=64 ALT="[image]">
+<P>
+<TABLE><TR><TD VALIGN="TOP"><IMG SRC="../images/caution.png" ALT="caution" WIDTH=95 HEIGHT=29></TD>
+<TD VALIGN="TOP">The 25-pin serial port is mechanically identical to the parallel port, except that the serial port is "male" and the parallel port is "female." Despite the similar connectors, you can't plug a device intended for one port into the other port.
+
+</TD></TR></TABLE>
+<P>
+Parallel ports can communicate unidirectionally (for sending information to a printer) or bi-directionally (for smart printers that send information back to the computer, as well as for devices that we think should never be connected to a parallel port in the first place, like ZIP drives and scanners). There are two bi-directional standards: ECP (Enhanced Capability Port, used mainly by printers and scanners) and EPP (Enhanced Parallel Port, used mainly by devices other than printers). When you look at your parallel devices in Device Manager, by clicking Ports (COM &amp; LPT), Windows shows what kind of communication each parallel port uses.
+<P>
+<TABLE><TR><TD VALIGN="TOP"><IMG SRC="../images/tip.png" ALT="tip" WIDTH=95 HEIGHT=29></TD>
+<TD VALIGN="TOP">You set the communications standard for your parallel port in the BIOS setup for your computer. If you run into trouble connecting a device (especially one that requires bi-directional information), check your computer's manual for how to configure the parallel port.
+
+</TD></TR></TABLE>
+<A NAME="8">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squaregreen6x6.png" HEIGHT=6 WIDTH=6></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>PS/2 (Keyboard and Mouse Ports)</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+All PCs new enough to run Windows XP have two connectors for a keyboard and a mouse andusually two <A NAME="ddps2connectors"><I>PS/2 connectors</I></A>:
+<BR><IMG ALIGN=TOP SRC="hardware.ps2.png" WIDTH=121 HEIGHT=108 ALT="[image]">
+<P>
+The keyboard and mouse ports look identical--look at the little icons next to the connectors to determine which is which. (Nothing terrible will happen if you plug a mouse into the keyboard port, or vice versa--Windows usually complains that it can't find your keyboard or mouse.)
+<A NAME="9">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squaregreen6x6.png" HEIGHT=6 WIDTH=6></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Display Ports</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+Display adapters, into which you plug your monitor, all use a 15-pin (<A NAME="dddb15"><I>DB-15</I></A>) connector that is similar in size to the 9-pin serial connector.
+<BR><IMG ALIGN=TOP SRC="hardware.vga.png" WIDTH=123 HEIGHT=49 ALT="[image]">
+<P>
+Display adapters are identified by acronyms like SVGA, XGA, Super VGA, and Ultra XGA, depending on their maximum resolution. Don't worry about the acronyms, because each display adapter manufacturer seems to make up their own. All monitors made in recent years are compatible with almost all display adapters, at least at common resolutions.  Resolutions you are likely to encounter are 800 0xd7 600 (the minimum required for Windows XP), 1024 0xd7 768, 1400 0xd7 1050, and 1600 0xd7 1200.
+<P>
+The video display adapters that are built into new computers can support lots of colors beyond the original 256 colors (also known as <A NAME="dd8bitcolor">8-bit color</A>); most can display 16-bit High Color, 24-bit True Color, and 32-bit True Color.
+<A NAME="10">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squaregreen6x6.png" HEIGHT=6 WIDTH=6></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Multiple Displays</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+Windows XP Professional can support more than one display (screen or monitor), continuing the Windows desktop from one display to the next. (Windows XP Home Edition doesn't include this support.) You need a video display adapter for each <A HREF="../desktop/12.htm#2"> display</A> or a special multidisplay adapter card. Some laptop computers enable you to use the built-in LCD screen as one monitor and an external monitor as the second monitor.
+<A NAME="11">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squaregreen6x6.png" HEIGHT=6 WIDTH=6></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Universal Serial Bus (USB)</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+The <A NAME="ddusb"><I>USB</I> </A> (<A NAME="dduniversalserialbus"><I>universal serial bus</I></A>) is a relatively new connector for which Microsoft introduced full support in Windows 98. It is a faster and simpler alternative to serial and parallel ports, as well as for low- to moderate-speed devices such as modems, printers, sound cards, and backup tapes. Few older computers come with USB ports. Most new computers come with at least two.
+<BR><IMG ALIGN=TOP SRC="hardware.usbs.png" WIDTH=60 HEIGHT=64 ALT="[image]">
+<P>
+The USB uses a small rectangular connector. Unlike most other connection schemes, USB lets you connect a <A NAME="ddusbhub"><I>USB hub</I></A> to your USB port, so you can have a desk full of USB devices, even though your computer has only a single USB connector. Also remarkable is the fact that you can <A NAME="ddhotswap"><I>hot swap</I></A> USB devices--you don't have to turn off the computer, plug in the device, and restart the computer; just plug the device in and turn it on.
+<P>
+USB printers and scanners are popular, and USB network adapters are a hit with high-speed Internet access installers (unlike network interface cards, USB network adapters don't require the installer to open up the computer).
+<P>
+<TABLE><TR><TD VALIGN="TOP"><IMG SRC="../images/note.png" ALT="note" WIDTH=95 HEIGHT=29></TD>
+<TD VALIGN="TOP">If the device you are attaching has never been connected to the computer before, Windows will likely need to install a driver for it. The vast majority of drivers for Windows XP can be used without restarting the computer, thanks in no small part to XP's Windows 2000 heritage.
+
+</TD></TR></TABLE>
+<A NAME="12">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squaregreen6x6.png" HEIGHT=6 WIDTH=6></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>FireWire</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+Some computers also have <A NAME="ddfirewire"><I>FireWire</I></A> ports, also known as <A NAME="ddieee1394"><I>IEEE 1394</I></A> or Sony <A NAME="ddilink"><I>i.Link</I></A>. They are faster than USB ports, and are typically used for digital video cameras, hard disk drives, and high-speed printers. FireWire was first developed by Apple for its Macintosh computers, but is now available on many Windows-compatible PCs, too.
+<BR><IMG ALIGN=TOP SRC="hardware.firewire.png" WIDTH=70 HEIGHT=54 ALT="[image]">
+<P>
+FireWire cables are limited to about 15 feet in length. FireWire, like USB, can be hot-swapped--connected and disconnected--while the computer is running. FireWire is efficient, self-powered, flexible, and fast.
+<P>
+<TABLE><TR><TD VALIGN="TOP"><IMG SRC="../images/note.png" ALT="note" WIDTH=95 HEIGHT=29></TD>
+<TD VALIGN="TOP">Your FireWire port appears in the Network Connections window as a LAN port--choose Start | Network Connections to see it. (In Windows XP Home Edition, choose Start | Control Panel, click Network And Internet Connections, and click Network Connections to see it.)
+
+</TD></TR></TABLE>
+<A NAME="13">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squaregreen6x6.png" HEIGHT=6 WIDTH=6></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Audio and Video Jacks</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+Most PCs have connectors for speakers or headphones, and sometimes a microphone. The speaker connector is a standard 1/8-inch stereo mini-audio jack. The microphone connector is usually also a mini-audio jack, so you have to be careful not to confuse the two. (Otherwise, your sound may play sdrawkcab. Well, not really.)
+<P>
+If your computer doesn't have speaker connectors, you can add an internal sound board. Many CD-ROM drives have headphone jacks so you can listen to audio CDs, even if your computer has no speakers.
+<P>
+Newer computers may have a digital audio jack (<A NAME="ddspdif"><I>S/PDIF</I></A> or Sony/Philips Digital Interface jack) to which you can connect digital audio equipment, like a DAT (digital audio tape) machine. Most S/PDIF ports accept standard RCA connectors, the same connector used for regular audio jacks.
+<P>
+<TABLE><TR><TD VALIGN="TOP"><IMG SRC="../images/tip.png" ALT="tip" WIDTH=95 HEIGHT=29></TD>
+<TD VALIGN="TOP">If you plan to use your TV to display information from your computer, check whether your PC has a <A NAME="ddtvjack">TV jack</A> or <A NAME="ddsvideo"><I>S-video</I></A> jack, to which you can connect a television. Alternatively, your PC may come with a video card that includes a TV In plug so you can watch TV on your computer monitor. These video cards may include software for <A NAME="ddpictureinpicture">picture-in-picture</A> (so that your TV picture appears in a window) and for capturing graphics from the video.
+
+</TD></TR></TABLE>
+<A NAME="14">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squaregreen6x6.png" HEIGHT=6 WIDTH=6></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>PC Cards</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+Laptop computers usually have one or two <A NAME="ddpccard"><I>PC card</I></A> slots (also known as <A NAME="ddpcmcia"><I>PCMCIA</I></A> slots). A few desktop computers have them, too. These take credit-card-sized adapter cards of many varieties, including modems, networks, and disk and tape controllers. PC cards, unlike other adapter cards, can be added to, and removed from, your computer while it's running. To add a PC card, press it firmly into the slot until it seats. To remove a PC card, press the button next to the PC card to eject the card slightly and then pull out the card.
+<P>
+Before removing a PC card, you should first tell Windows, so that it can stop sending data to, or receiving data from, the card. When you have a PC card inserted, an icon for it may appear in the notification area of the taskbar. If so, click or double-click it to find a command for preparing Windows for the removal of the card.
+<A NAME="15">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Internal Adapter Cards</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+If you add a device to your computer that can't be plugged into one of the existing connectors on your computer, you have to add an <A NAME="ddadaptercard"><I>adapter card</I></A> that plugs into a slot inside the computer. As the PC has evolved over the past 20 years, the slots into which you can plug adapter cards have evolved as well.
+<A NAME="16">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squaregreen6x6.png" HEIGHT=6 WIDTH=6></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>PCI Cards</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+<A NAME="ddpci"><I>PCI</I></A> <I>(Peripheral Connect Interface)</I> slots enable you to expand the capabilities of your computer by installing PCI adapter cards inside the computer. To install a PCI card, you need to turn off the computer, take off the cover, slide the PCI card into the slot, screw it down, replace the cover, and turn the computer back on. PCI cards include display adapters (for connecting to monitors), sound cards (for connecting to speakers), network adapter cards (for LAN and high-speed Internet connections), disk drive adapters (for connecting hard disks, CD-ROM drives, and floppy drives), and SCSI adapters (for connecting a wide variety of peripherals).
+<P>
+<TABLE><TR><TD VALIGN="TOP"><IMG SRC="../images/note.png" ALT="note" WIDTH=95 HEIGHT=29></TD>
+<TD VALIGN="TOP">Older PCs came with <A NAME="ddisa"><I>ISA</I></A> (Industry Standard Architecture) slots, into which you plugged ISA cards, which often required you to set jumpers and switches on the card. Later, PC manufacturers introduced <A NAME="ddeisa"><I>EISA</I></A> (Enhanced or Extended ISA) slots, an improved version of ISA. Both ISA and EISA slots have been superceded by PCI slots. Computers capable of running Windows XP are unlikely to have ISA or EISA slots.
+
+</TD></TR></TABLE>
+<A NAME="17">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squaregreen6x6.png" HEIGHT=6 WIDTH=6></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>AGP Cards</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+<A NAME="ddagp"><I>AGP</I></A> <I>(Accelerated Graphics Port) </I>slots are an advanced version of PCI for video cards, enabling faster screen updates. The original specification, 1x, could transfer graphics data between the cards buffers and system RAM at a speed equal to the system's bus, typically 33, 50, and 66Mhz at that time. 2x and 4x varieties have since become available and bus speeds have increased 100Mhz to 200Mhz. Luckily, newer AGP cards are backwards compatible (that is, compatible with older versions). Another advanced feature of these cards is that they can use half the RAM of equivalent PCI-based cards. For example, a 4MB AGP video card is the functional equivalent of an 8MB PCI video card, because the AGP card allocates an equal amount of system RAM to that of its on-board RAM.
+<A NAME="18">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squaregreen6x6.png" HEIGHT=6 WIDTH=6></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Other Kinds of Cards</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+Most computers have a few specialized slots and connectors for specific devices. There are usually two to four small slots for <A HREF="../hardware/7.htm#1">memory</A>, and a connector or two for <A HREF="../hardware/4.htm#24">IDE or EIDE expansion disks</A>. Your computer's manual should list the available slots and connectors.
+<A NAME="19">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Hardware Parameters</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+Every card in your PC needs a variety of hardware parameters to be set, so that the CPU can communicate with the card reliably and without interfering with other cards. With the newer kinds of connections, such as PCI, USB, and FireWire, most--if not all--of these parameters are set automatically by Windows' <A HREF="../hardware/2.htm#1">Plug and Play</A> feature; but older ISA cards and some PCI cards require manual tweaking.
+<P>
+To see a list of your computer's hardware, you use the Device Manager window. To display it, choose Start | Control Panel, click Performance And Maintenance, click the System icon, and select the Hardware tab (Figure 13-3 shows the hardware tab of the System Properties window on the left). Click the Device Manager button to see the Device Manager window (shown in Figure 13-3 on the right). You can choose commands from the View menu on the menu bar to see listings by type of device or by how they are connected to the computer. To see listings of the <A HREF="../hardware/4.htm#21">interrupts (IRQs)</A>, <A HREF="../hardware/4.htm#20">I/O addresses</A>, <A HREF="../hardware/4.htm#22">DMA channels</A>, and <A HREF="../hardware/4.htm#23">memory addresses</A>, choose View | Resources By Type, then click the plus box to the left of each item.
+<TABLE BORDER=2><TR><TD ALIGN=CENTER>
+<IMG SRC="hardware.sysprop.png" WIDTH=725 HEIGHT=539 ALT="[figure]">
+</TD></TR><TR BGCOLOR="#00ffff"><TD><I>Figure 13-3:  The System Properties dialog box and Device Manager window</I></TD></TR></TABLE>
+<P>
+<TABLE><TR><TD VALIGN="TOP"><IMG SRC="../images/tip.png" ALT="tip" WIDTH=95 HEIGHT=29></TD>
+<TD VALIGN="TOP">Keep a logbook for your computer, listing all the cards installed in your computer and the hardware parameters you've set on them. This makes troubleshooting a lot easier.
+
+</TD></TR></TABLE>
+<A NAME="20">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squaregreen6x6.png" HEIGHT=6 WIDTH=6></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>I/O Address</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+Every device attached to a PC has at least one <A NAME="ddioaddress"><I>I/O address</I></A>, a hexadecimal number that the CPU uses to communicate with the device. All I/O addresses on a given computer must be unique; address "collisions" are the most common reason that a new I/O device doesn't work.
+<P>
+Devices on the motherboard have I/O addresses that either are permanently assigned or can be changed in the setup menus built into your motherboard (see the documentation that came with your computer). Devices on ISA cards have addresses that generally can be changed by moving jumpers on the card, while PCI cards have addresses that are set by software when you start your computer.
+<P>
+All traditional PC devices have well-known fixed addresses. These include up to four serial ports, a parallel port, floppy and hard disk controllers, and internal devices such as the clock and keyboard controller. Other add-in devices have more-or-less fixed addresses, depending on how popular the device is and how long it's been around. PCI cards automatically get unique addresses, but ISA cards often need jumpers to be reset.
+<P>
+See the <A HREF="../hardware/6.htm#1">troubleshooting</A> section later in this chapter for advice on getting I/O addresses unscrambled. Luckily, with newer hardware you are unlikely to need to worry about I/S addresses.
+<P>
+<TABLE><TR><TD VALIGN="TOP"><IMG SRC="../images/note.png" ALT="note" WIDTH=95 HEIGHT=29></TD>
+<TD VALIGN="TOP">AGP, the Accelerated Graphics Port technology from Intel, is a derivative of PCI. AGP video cards appear in the hardware list as device 1 of PCI Bus 0. This is normal, despite the name AGP.
+
+</TD></TR></TABLE>
+<A NAME="21">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squaregreen6x6.png" HEIGHT=6 WIDTH=6></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Interrupts (IRQs)</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+The PC architecture provides 15 <A NAME="ddinterrupts"><I>interrupts</I></A> or <A NAME="ddirqs"><I>IRQs</I></A> (interrupt requests), channels that a device can use to alert the CPU that the device needs attention. The interrupts are numbered 0, 1, and 3 through 15. (For historical reasons, interrupt 2 isn't available, and the few devices that used interrupt 2 on early PCs use interrupt 9 instead.) PCI devices all can, and usually do, share a single interrupt, but nearly every ISA device that uses an interrupt needs a separate unique interrupt number. Motherboard devices use interrupts 0 and 1; built-in serial ports usually use 3 and 4; the floppy disk uses 6; the parallel port uses 7; the clock uses 8; a built-in mouse uses 12; the floating-point unit uses 13 (even if you don't do any floating-point calculations); and the hard disk controller uses 15--leaving 5, 9, 10, 11, and 14 for other devices. Assigning interrupts correctly on ISA cards is one of the most troublesome and error-prone aspects of hardware configuration. A few ISA cards can have their interrupt number set in software, in which case Windows sets the interrupt automatically; but most have jumpers you have to change. Fortunately, only a few ISA cards are still available commercially; everything else is PCI based.
+<A NAME="22">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squaregreen6x6.png" HEIGHT=6 WIDTH=6></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>DMA Channels</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+<A NAME="dddma"><I>DMA</I></A>, which stands for <A NAME="dddirectmemoryaccess"><I>direct memory access</I></A>, is a motherboard facility used by a few medium-speed devices. There are six DMA channels, of which the floppy disk always takes DMA 2. Some sound cards need a DMA channel, usually DMA 1. You set the DMA channel in the Properties dialog box for the device.
+<A NAME="23">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squaregreen6x6.png" HEIGHT=6 WIDTH=6></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Memory Addresses</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+Each byte of memory in your computer has a unique <A NAME="ddmemoryaddress"><I>memory address</I></A>. A few devices, notably screen controllers and some network cards, use a shared memory region to transfer data between the CPU and the device. Those devices need a range of memory addresses for their shared memory. Screen cards generally use the ranges (expressed in hexadecimal numbers, or hex) 0xA0000 through 0xAFFFF, 0xB0000 through 0xBFFFF, and sometimes 0xC0000 through 0xCFFFF. The range from the end of the screen controller's memory to about 0xE0000 is available for other devices. PCI (and AGP) cards always have their addresses set in software.
+<A NAME="24">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Disk Controllers</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+A <A NAME="dddiskcontroller"><I>disk controller</I></A> is a PCI adapter card or built-in board to which you connect hard disks, CD-ROM drives, or tape drives. Disk controllers present an extra configuration challenge, because you can attach more than one device to a single controller. See <A HREF="../harddisks/index.htm">Chapter 32</A> for more information about configuring hard disks.
+<A NAME="25">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squaregreen6x6.png" HEIGHT=6 WIDTH=6></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>IDE and EIDE Device Numbers</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+<A NAME="ddide"><I>IDE</I></A> (Integrated Device Electronics) and <A NAME="ddeide"><I>EIDE</I></A> (Enhanced IDE, also known as <A NAME="ddata2"><I>ATA 2</I></A>) disk controllers support up to two devices, the first of which is usually a hard disk, and the second of which can be either a hard disk or a CD-ROM drive. The controller has two connectors into which drive cables are plugged, and which device is which depends on which connector each is plugged into. The first device is called the <I>primary</I> device, and is the second the <I>secondary</I> device. When the position on the cable determines which device is primary and which is secondary, this is called <A NAME="ddcableselect"><I>cable select</I></A> (<A NAME="ddcs"><I>CS</I></A>). Jumpers on the devices can also determine which one is primary and which one is secondary, regardless of where they are plugged in.
+<P>
+Most motherboards contain two IDE or EIDE controllers, each of which can have a primary and a secondary device, for a system total of up to four devices.
+<A NAME="26">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squaregreen6x6.png" HEIGHT=6 WIDTH=6></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>SCSI Device Numbers</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+<A NAME="ddscsi"><I>SCSI</I></A> (Small Computer System Interface) is an older standard for connecting high-speed devices to your computer, and has largely been superceded by USB and FireWire. Few newer computers come with SCSI controllers. SCSI is still widely used in server computers for connecting disks and tapes.
+<P>
+Each SCSI controller can connect up to 7 devices for older controllers, or 15 devices for more recent controllers. To identify devices attached to one SCSI controller, each device has a device number from 0 to 7, or 15.
+<P>
+The SCSI controller itself has a device number, usually the highest possible number--7 or 15. The first disk is invariably device 0, but other numbers can be assigned arbitrarily, as long as each device has a separate number. A few devices have subunits, such as tape or CD-ROM jukebox drives that can contain several different tapes or disks.
+<P>
+<TABLE><TR><TD VALIGN="TOP"><IMG SRC="../images/caution.png" ALT="caution" WIDTH=95 HEIGHT=29></TD>
+<TD VALIGN="TOP">Due to some extremely bad planning in the early 1980s, older external SCSI devices use connectors that are physically identical to the DB-25 and Centronics connectors used on modems and printers on parallel and serial ports. Even if they fit physically, don't try connecting a SCSI device to a non-SCSI controller, or vice versa, because it won't work, and you may well cause expensive damage to the electronics.
+
+</TD></TR></TABLE>
+<A NAME="27">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Memory (RAM)</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+<A NAME="ddmemory"><I>Memory</I></A>, or <A NAME="ddram"><I>RAM</I></A> (<I>random access memory</I>), is the temporary storage your computer uses for the programs that you are running and the files you currently have open. Most PCs have from two to four memory slots, and usually the computer is shipped with one or two of the four slots already containing memory. Memory comes in many different sizes, speeds, and types, so you must ensure that the memory you add is compatible with your particular computer (see the section "<A HREF="../hardware/7.htm#1">Adding Memory</A>" later in this chapter). Memory chips are extremely sensitive to static electricity, so be sure to understand and follow the procedures needed to avoid static damage. (Some memory ships with an antistatic wrist strap and instructions on how to use it.)
+<A NAME="28">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>What Are Drivers?</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+Many hardware devices--whether they come as part of your computer or are added later--require a <A NAME="dddriver"><I>driver</I></A> or <A NAME="dddevicedriver"><I>device driver</I></A>, a program that translates between your operating system (Windows) and the hardware. For example, a printer driver translates printing requests from Windows (and through it, your applications) to commands that your printer can understand.
+<P>
+Windows comes with standard drivers for a wide range of monitors, printers, modems, and other devices. When you buy hardware, you usually receive a floppy disk or CD-ROM that contains the driver for the device, which you need to install during the configuring process to get the device to work with Windows. For some devices, Windows already has a driver on the Windows XP CD-ROM, so you never need to insert the driver disk. Many manufacturers provide updated device drivers on their Web sites.
+<P>
+<TABLE><TR><TD VALIGN="TOP"><IMG SRC="../images/tip.png" ALT="tip" WIDTH=95 HEIGHT=29></TD>
+<TD VALIGN="TOP">Many hardware components come with one set of drivers for use with Windows Me/9x and another set for Windows 2000 and XP. If a device doesn't have drivers for Windows XP, try the Windows 2000 drivers.
+
+</TD></TR></TABLE>
+<P>
+To see information about the driver for a device, display its Properties dialog box--from the Device Manager window, right-click a device and choose Properties from the menu that appears. If there is a Driver tab, click it. Most Driver tabs contain a Driver Details button (for a list of files that make up the driver), Update Driver button (for installing a new driver), Roll Back Driver button (for reinstalling a previous driver), and Uninstall (to uninstall the driver, leaving the device with no driver).
+<P>
+<TABLE><TR><TD VALIGN="TOP"><IMG SRC="../images/note.png" ALT="note" WIDTH=95 HEIGHT=29></TD>
+<TD VALIGN="TOP">Many drivers have not been approved by Microsoft's Windows Logo testing program because it's expensive and many manufacturers don't like the idea of paying Microsoft to approve their software. When you install a driver for a new device, you may see a warning like this:
+
+</TD></TR></TABLE>
+<BR><IMG ALIGN=TOP SRC="hardware.notsigned.png" WIDTH=396 HEIGHT=315 ALT="[image]">
+<P>
+If the driver came with the device, or you downloaded it from the manufacturer's Web site, click Continue Anyway to go ahead and install it.
+<P>
+<A HREF="3.htm"  OnMouseOver='whomp(prevb, "sprev");' OnMouseOut='whomp(prevb, "wprev");'
+ title="Previous Section"><IMG NAME=prevb SRC="../images/wprev.png" ALT="Previous" HEIGHT=20 WIDTH=82 BORDER=0></A><!--
+--><A HREF="index.htm" OnMouseOver='whomp(chapb, "schap");' OnMouseOut='whomp(chapb, "wchap");'
+title="Chapter Overview"><IMG SRC="../images/wchap.png" ALT="Chapter" NAME=chapb HEIGHT=20 WIDTH=100 BORDER=0></A><A
+HREF="../index.htm" OnMouseOver='whomp(tocb, "sbook");' OnMouseOut='whomp(tocb, "wbook");' 
+title="Table of Contents"><IMG SRC="../images/wbook.png" ALT="Contents" NAME=tocb HEIGHT=20 WIDTH=94 BORDER=0></A><A
+HREF="../glossary/index.htm" OnMouseOver='whomp(glosb, "sglos");' OnMouseOut='whomp(glosb, "wglos");' 
+title="Glossary"><IMG SRC="../images/wglos.png" ALT="Glossary" NAME=glosb HEIGHT=20 WIDTH=94 BORDER=0></A><!--
+--><A HREF="5.htm"  OnMouseOver='whomp(nextb, "snext");' OnMouseOut='whomp(nextb, "wnext");'
+ title="Next Section"><IMG NAME=nextb SRC="../images/wnext.png" ALT="Next" HEIGHT=20 WIDTH=82 BORDER=0></A>
+<BR>
+</BLOCKQUOTE>
+</BODY>
+</HTML>

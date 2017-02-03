@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>keyboardDemo</title>
+</head>
+<body bgcolor="#cccccc">
+<!--url's used in the movie-->
+<!--text used in the movie-->
+<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,0,0" width="550" height="400" id="keyboardDemo" align="middle">
+<param name="allowScriptAccess" value="sameDomain" />
+<param name="movie" value="keyboardDemo.swf" />
+<param name="quality" value="high" />
+<param name="bgcolor" value="#ffffff" />
+<embed src="keyboardDemo.swf" quality="high" bgcolor="#ffffff" width="550" height="400" name="keyboardDemo" align="middle" allowScriptAccess="sameDomain" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" />
+</object>
+<h3>code in frame 1 layer 1</h3>
+<pre>
+//keyboardDemo
+//demonstrates two main flavors of keyboard input
+// Andy Harris, 4/05
+
+_root.onEnterFrame = function(){
+  
+  output = "";
+  if(Key.isDown(Key.LEFT)){
+    output = "left";
+  } // end if
+
+  if(Key.isDown(Key.RIGHT)){
+    output = "right";
+  } // end if
+
+  if(Key.isDown(Key.UP)){
+    output = "up";
+  } // end if
+
+  if(Key.isDown(Key.DOWN)){
+    output = "down";
+  } // end if
+
+  if(Key.isDown(Key.SPACE)){
+    output = "space";
+  } // end if
+
+  if(Key.isDown(65)){
+    output = "A";
+  } // end if
+
+  lastPressed = String.fromCharCode(Key.getAscii());
+  
+} // end if
+</pre>
+</body>
+</html>

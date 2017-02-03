@@ -1,0 +1,49 @@
+<html>
+
+<head>
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1254">
+<title>Yeni Sayfa 1</title>
+
+<script> 
+<!--  
+/*Background fade by Dave Methvin, 
+Windows Magazine 
+May be used/modified if credit line is 
+retained*/ 
+function BgFade(red1, grn1, blu1, red2, 
+grn2, blu2, steps) { 
+sred = red1; sgrn = grn1; sblu = blu1;  
+ered = red2; egrn = grn2; eblu = blu2;  
+inc = steps;  
+step = 0;  
+RunFader(); 
+} 
+function RunFader() { 
+var epct = step/inc;  
+var spct = 1 - epct;  
+document.bgColor = 
+Math.floor(sred * spct + ered * 
+epct)*256*256 + 
+Math.floor(sgrn * spct + egrn * epct)*256 + 
+Math.floor(sblu * spct + eblu * epct);  
+if ( step < inc ) { 
+setTimeout('RunFader()',50);  
+} 
+step++; 
+} 
+BgFade(0x00,0x00,0x00, 0xFF,0xFF,0xFF,10);  
+//--> 
+
+</script> 
+
+
+
+</head>
+
+<body>
+
+</body>
+
+</html>

@@ -1,0 +1,165 @@
+
+
+function mnpMenuDir()
+{
+	return "LTR";
+}
+
+function mnpMenuCT()
+{
+	
+	return false;
+}
+
+function m4f92b61c2ce041329b6b8d371bf81404()
+{
+	this.items = new Array();
+	var n = 0;
+	this.items[n++] = new mnpPage('Technology Information: Overview', '/asp.net/technologyinfo/', '', '', '_S1_Node2_S1_Node1');
+	this.items[n++] = new mnpPage('ASP.NET Overview', '/asp.net/technologyinfo/overview/default.aspx', '', '', '_S1_Node2_S1_Node2');
+	this.items[n++] = new mnpPage('System Requirements', '/asp.net/technologyinfo/sysreqs/default.aspx', '', '', '_S1_Node2_S1_Node3');
+	this.items[n++] = new mnpPage('News and Reviews', '/asp.net/technologyinfo/news/default.aspx', '', 'm935e6f7e3d414710b83bf90f174cdc81', '_S1_Node2_S1_Node4');
+	this.items[n++] = new mnpPage('Frequently Asked Questions', '/asp.net/technologyinfo/faq/default.aspx', '', '', '_S1_Node2_S1_Node5');
+	this.items[n++] = new mnpPage('Case Studies', '/asp.net/technologyinfo/casestudies/default.aspx', '', '', '_S1_Node2_S1_Node6');
+	this.items[n++] = new mnpPage('Sites Using ASP.NET', '/asp.net/technologyinfo/sites/default.aspx', '', '', '_S1_Node2_S1_Node7');
+}
+
+function m935e6f7e3d414710b83bf90f174cdc81()
+{
+	this.items = new Array();
+	var n = 0;
+	this.items[n++] = new mnpPage('News and Reviews: Overview', '/asp.net/technologyinfo/news/', '', '', '_S1_Node2_S1_Node4_S1_Node1');
+	this.items[n++] = new mnpPage('Press Releases', '/asp.net/technologyinfo/news/press/default.aspx', '', '', '_S1_Node2_S1_Node4_S1_Node2');
+	this.items[n++] = new mnpPage('Industry News', '/asp.net/technologyinfo/news/articles/default.aspx', '', '', '_S1_Node2_S1_Node4_S1_Node3');
+	this.items[n++] = new mnpPage('Reviews', '/asp.net/technologyinfo/news/reviews/default.aspx', '', '', '_S1_Node2_S1_Node4_S1_Node4');
+	this.items[n++] = new mnpPage('Awards', '/asp.net/technologyinfo/news/awards/default.aspx', '', '', '_S1_Node2_S1_Node4_S1_Node5');
+}
+
+function mefcf65503bc3467b81dd5c6497f67cdb()
+{
+	this.items = new Array();
+	var n = 0;
+	this.items[n++] = new mnpPage('Using ASP.NET: Overview', '/asp.net/using/', '', '', '_S1_Node3_S1_Node1');
+	this.items[n++] = new mnpPage('Getting Started', '/asp.net/using/gettingstarted/default.aspx', '', '', '_S1_Node3_S1_Node2');
+	this.items[n++] = new mnpPage('Migrating', '/asp.net/using/migrating/default.aspx', '', 'maf49a7b8a98740aca32df9c900355b7a', '_S1_Node3_S1_Node3');
+	this.items[n++] = new mnpPage('Understanding', '/asp.net/using/understanding/default.aspx', '', 'me9990e5fe417465c82e5e22bc2f80836', '_S1_Node3_S1_Node4');
+	this.items[n++] = new mnpPage('Building Applications', '/asp.net/using/building/default.aspx', '', 'mf4710cea4c864ad1a4bb87fba11e115c', '_S1_Node3_S1_Node5');
+	this.items[n++] = new mnpPage('Deploying &amp; Distributing', '/asp.net/using/deploying/default.aspx', '', '', '_S1_Node3_S1_Node6');
+	this.items[n++] = new mnpPage('Documentation', '/asp.net/using/documentation/default.aspx', '', 'm6c99269d34e541e59ea8f8e9da6a8da6', '_S1_Node3_S1_Node7');
+	this.items[n++] = new mnpPage('Books', '/asp.net/using/books/default.aspx', '', '', '_S1_Node3_S1_Node8');
+	this.items[n++] = new mnpPage('Training &amp; Events', '/asp.net/using/training/default.aspx', '', 'm2b1293ef8955470d99bc8c70bf65d103', '_S1_Node3_S1_Node9');
+}
+
+function maf49a7b8a98740aca32df9c900355b7a()
+{
+	this.items = new Array();
+	var n = 0;
+	this.items[n++] = new mnpPage('Migrating: Overview', '/asp.net/using/migrating/', '', '', '_S1_Node3_S1_Node3_S1_Node1');
+	this.items[n++] = new mnpPage('JSP to ASP.NET Migration Guide', '/asp.net/using/migrating/jspmig/default.aspx', '', '', '_S1_Node3_S1_Node3_S1_Node2');
+	this.items[n++] = new mnpPage('Introduction to ASP.NET for PHP Developers', '/asp.net/using/migrating/phpmig/default.aspx', '', '', '_S1_Node3_S1_Node3_S1_Node3');
+}
+
+function me9990e5fe417465c82e5e22bc2f80836()
+{
+	this.items = new Array();
+	var n = 0;
+	this.items[n++] = new mnpPage('Understanding: Overview', '/asp.net/using/understanding/', '', '', '_S1_Node3_S1_Node4_S1_Node1');
+	this.items[n++] = new mnpPage('ASP.NET', '/asp.net/using/understanding/aspnet/default.aspx', '', '', '_S1_Node3_S1_Node4_S1_Node2');
+	this.items[n++] = new mnpPage('.NET Fundamentals', '/asp.net/using/understanding/netfundamentals/default.aspx', '', '', '_S1_Node3_S1_Node4_S1_Node3');
+	this.items[n++] = new mnpPage('Architecture &amp; Design', '/asp.net/using/understanding/arch/default.aspx', '', '', '_S1_Node3_S1_Node4_S1_Node4');
+	this.items[n++] = new mnpPage('Security', '/asp.net/using/understanding/security/default.aspx', '', '', '_S1_Node3_S1_Node4_S1_Node5');
+	this.items[n++] = new mnpPage('Performance and Diagnostics', '/asp.net/using/understanding/perf/default.aspx', '', '', '_S1_Node3_S1_Node4_S1_Node6');
+	this.items[n++] = new mnpPage('Data Access', '/asp.net/using/understanding/data/default.aspx', '', '', '_S1_Node3_S1_Node4_S1_Node7');
+	this.items[n++] = new mnpPage('XML', '/asp.net/using/understanding/XML/default.aspx', '', '', '_S1_Node3_S1_Node4_S1_Node8');
+	this.items[n++] = new mnpPage('Graphics', '/asp.net/using/understanding/graphics/default.aspx', '', '', '_S1_Node3_S1_Node4_S1_Node9');
+	this.items[n++] = new mnpPage('Interoperability', '/asp.net/using/understanding/interop/default.aspx', '', '', '_S1_Node3_S1_Node4_S1_Node10');
+	this.items[n++] = new mnpPage('Speech.NET', '/asp.net/using/understanding/speech/default.aspx', '', '', '_S1_Node3_S1_Node4_S1_Node11');
+}
+
+function mf4710cea4c864ad1a4bb87fba11e115c()
+{
+	this.items = new Array();
+	var n = 0;
+	this.items[n++] = new mnpPage('Building Applications: Overview', '/asp.net/using/building/', '', '', '_S1_Node3_S1_Node5_S1_Node1');
+	this.items[n++] = new mnpPage('Web Applications', '/asp.net/using/building/web/default.aspx', '', '', '_S1_Node3_S1_Node5_S1_Node2');
+	this.items[n++] = new mnpPage('Mobile Applications', '/asp.net/using/building/mobile/default.aspx', '', '', '_S1_Node3_S1_Node5_S1_Node3');
+	this.items[n++] = new mnpPage('Web Controls', '/asp.net/using/building/webcontrols/default.aspx', '', '', '_S1_Node3_S1_Node5_S1_Node4');
+	this.items[n++] = new mnpPage('Web Services', '/asp.net/using/building/webservices/default.aspx', '', '', '_S1_Node3_S1_Node5_S1_Node5');
+	this.items[n++] = new mnpPage('Component Libraries', '/asp.net/using/building/components/default.aspx', '', '', '_S1_Node3_S1_Node5_S1_Node6');
+	this.items[n++] = new mnpPage('Microsoft Servers', '/asp.net/using/building/servers/default.aspx', '', '', '_S1_Node3_S1_Node5_S1_Node7');
+}
+
+function m6c99269d34e541e59ea8f8e9da6a8da6()
+{
+	this.items = new Array();
+	var n = 0;
+	this.items[n++] = new mnpPage('Documentation: Overview', '/asp.net/using/documentation/', '', '', '_S1_Node3_S1_Node7_S1_Node1');
+	this.items[n++] = new mnpPage('Tools', '/asp.net/using/documentation/Tools/default.aspx', '', '', '_S1_Node3_S1_Node7_S1_Node2');
+}
+
+function m2b1293ef8955470d99bc8c70bf65d103()
+{
+	this.items = new Array();
+	var n = 0;
+	this.items[n++] = new mnpPage('Training &amp; Events: Overview', '/asp.net/using/training/', '', '', '_S1_Node3_S1_Node9_S1_Node1');
+	this.items[n++] = new mnpPage('MSDN TV', '/asp.net/using/training/msdntv/default.aspx', '', '', '_S1_Node3_S1_Node9_S1_Node2');
+	this.items[n++] = new mnpPage('Training', '/asp.net/using/training/training/default.aspx', '', '', '_S1_Node3_S1_Node9_S1_Node3');
+	this.items[n++] = new mnpPage('Events', '/asp.net/using/training/events/default.aspx', '', '', '_S1_Node3_S1_Node9_S1_Node4');
+	this.items[n++] = new mnpPage('Webcasts', '/asp.net/using/training/webcasts/default.aspx', '', '', '_S1_Node3_S1_Node9_S1_Node5');
+}
+
+function mcd7f007dd241479ab6ae15eea9b62365()
+{
+	this.items = new Array();
+	var n = 0;
+	this.items[n++] = new mnpPage('Downloads: Overview', '/asp.net/downloads/', '', '', '_S1_Node4_S1_Node1');
+	this.items[n++] = new mnpPage('Updates', '/asp.net/downloads/updates/default.aspx', '', '', '_S1_Node4_S1_Node2');
+	this.items[n++] = new mnpPage('Tools &amp; Utilities', '/asp.net/downloads/tools/default.aspx', '', '', '_S1_Node4_S1_Node3');
+	this.items[n++] = new mnpPage('Controls &amp; Components', '/asp.net/downloads/components/default.aspx', '', '', '_S1_Node4_S1_Node4');
+	this.items[n++] = new mnpPage('Code Samples', '/asp.net/downloads/samples/default.aspx', '', '', '_S1_Node4_S1_Node5');
+	this.items[n++] = new mnpPage('Starter Kits', '/asp.net/downloads/kits/default.aspx', '', '', '_S1_Node4_S1_Node6');
+}
+
+function m4c3940483d3a4ffdb360d3e85dcb776f()
+{
+	this.items = new Array();
+	var n = 0;
+	this.items[n++] = new mnpPage('Support: Overview', '/asp.net/support/', '', '', '_S1_Node5_S1_Node1');
+	this.items[n++] = new mnpPage('Support', '/asp.net/support/support/default.aspx', '', '', '_S1_Node5_S1_Node2');
+	this.items[n++] = new mnpPage('Newsgroups', '/asp.net/support/newsgroups/default.aspx', '', '', '_S1_Node5_S1_Node3');
+	this.items[n++] = new mnpPage('How-to', '/asp.net/support/howto/default.aspx', '', '', '_S1_Node5_S1_Node4');
+}
+
+function m9a8fceba416f493380cfacc7de5fb00f()
+{
+	this.items = new Array();
+	var n = 0;
+	this.items[n++] = new mnpPage('Community: Overview', '/asp.net/community/', '', '', '_S1_Node6_S1_Node1');
+	this.items[n++] = new mnpPage('Authors', '/asp.net/community/authors/default.aspx', '', 'm7fee1d949d7d4a2da34340689c0ce15c', '_S1_Node6_S1_Node2');
+	this.items[n++] = new mnpPage('Weblogs', '/asp.net/community/blogs/default.aspx', '', '', '_S1_Node6_S1_Node3');
+	this.items[n++] = new mnpPage('Related Sites', '/asp.net/community/related/default.aspx', '', '', '_S1_Node6_S1_Node4');
+}
+
+function m7fee1d949d7d4a2da34340689c0ce15c()
+{
+	this.items = new Array();
+	var n = 0;
+	this.items[n++] = new mnpPage('Authors: Overview', '/asp.net/community/authors/', '', '', '_S1_Node6_S1_Node2_S1_Node1');
+	this.items[n++] = new mnpPage('3 Leaf Solutions', '/asp.net/community/authors/3leaf/default.aspx', '', '', '_S1_Node6_S1_Node2_S1_Node2');
+	this.items[n++] = new mnpPage('Mike Amundsen', '/asp.net/community/authors/mikeamundsen/default.aspx', '', '', '_S1_Node6_S1_Node2_S1_Node3');
+	this.items[n++] = new mnpPage('Victor Garcia Aprea', '/asp.net/community/authors/vga/default.aspx', '', '', '_S1_Node6_S1_Node2_S1_Node4');
+	this.items[n++] = new mnpPage('Michele Leroux Bustamante', '/asp.net/community/authors/mlb/default.aspx', '', '', '_S1_Node6_S1_Node2_S1_Node5');
+	this.items[n++] = new mnpPage('Vandana Datye', '/asp.net/community/authors/vandanadatye/default.aspx', '', '', '_S1_Node6_S1_Node2_S1_Node6');
+	this.items[n++] = new mnpPage('G. Andrew Duthie', '/asp.net/community/authors/andrewduthie/default.aspx', '', '', '_S1_Node6_S1_Node2_S1_Node7');
+	this.items[n++] = new mnpPage('Dino Esposito', '/asp.net/community/authors/dinoesposito/default.aspx', '', '', '_S1_Node6_S1_Node2_S1_Node8');
+	this.items[n++] = new mnpPage('Bill Evjen', '/asp.net/community/authors/billevjen/default.aspx', '', '', '_S1_Node6_S1_Node2_S1_Node9');
+	this.items[n++] = new mnpPage('Scott Hanselman', '/asp.net/community/authors/scotthanselman/default.aspx', '', '', '_S1_Node6_S1_Node2_S1_Node10');
+	this.items[n++] = new mnpPage('Scott Mitchell', '/asp.net/community/authors/scottmitchell/default.aspx', '', '', '_S1_Node6_S1_Node2_S1_Node11');
+	this.items[n++] = new mnpPage('Fritz Onion', '/asp.net/community/authors/fritzonion/default.aspx', '', '', '_S1_Node6_S1_Node2_S1_Node12');
+	this.items[n++] = new mnpPage('Roy Osherove', '/asp.net/community/authors/royosherove/default.aspx', '', '', '_S1_Node6_S1_Node2_S1_Node13');
+	this.items[n++] = new mnpPage('Eli Robillard', '/asp.net/community/authors/elirobillard/default.aspx', '', '', '_S1_Node6_S1_Node2_S1_Node14');
+	this.items[n++] = new mnpPage('Marcie Robillard', '/asp.net/community/authors/datagridgirl/default.aspx', '', '', '_S1_Node6_S1_Node2_S1_Node15');
+	this.items[n++] = new mnpPage('Paul Sheriff', '/asp.net/community/authors/paulsheriff/default.aspx', '', '', '_S1_Node6_S1_Node2_S1_Node16');
+	this.items[n++] = new mnpPage('Steven A. Smith', '/asp.net/community/authors/stevesmith/default.aspx', '', '', '_S1_Node6_S1_Node2_S1_Node17');
+}
+

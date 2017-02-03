@@ -1,0 +1,177 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>monsterMove</title>
+</head>
+<body bgcolor="#cccccc">
+<!--url's used in the movie-->
+<!--text used in the movie-->
+<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,0,0" width="550" height="400" id="monsterMove" align="middle">
+<param name="allowScriptAccess" value="sameDomain" />
+<param name="movie" value="monsterMove.swf" />
+<param name="quality" value="high" />
+<param name="bgcolor" value="#999999" />
+<embed src="monsterMove.swf" quality="high" bgcolor="#999999" width="550" height="400" name="monsterMove" align="middle" allowScriptAccess="sameDomain" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" />
+</object>
+<h3>code in frame 1 layer 1</h3>
+<pre>
+//monsterMove
+//add monster under user control
+
+init();
+
+function init(){
+  //initialization
+
+  //set up direction constants
+  NORTH = 0;
+  NORTHEAST = 1;
+  EAST = 2;
+  SOUTHEAST = 3;
+  SOUTH = 4;
+  SOUTHWEST = 5;
+  WEST = 6;
+  NORTHWEST = 7;
+
+  //randomly position car
+  car._x = Math.random() * Stage.width;
+  car._y = Math.random() * Stage.height;
+  car.dir = Math.random() * 8;
+  car.dir = Math.floor(car.dir);
+  car._rotation = car.dir * 45;
+  car.speed = Math.random() * 10;
+  turn(car);
+
+  /* debugging code...
+  trace ("dir: " + car.dir);
+  trace ("rot: " + car._rotation);
+  trace ("dx: " + car.dx);
+  trace ("dy: " + car.dy);
+  */
+
+  //set monster initial values
+  monster.dx = 0;
+  monster.dy = 0;
+  monster.speed = 0;
+  monster.dir = NORTH;
+
+} // end init
+
+car.onEnterFrame = function(){
+  move(car);
+} // end car enterFrame
+
+monster.onEnterFrame = function(){
+  checkKeys();
+  turn(monster);
+  move(monster);
+} // end monster enterFrame
+
+function checkKeys(){
+  //check keyboard to move monster
+  if (Key.isDown(Key.UP)){
+    trace ("up");
+    monster.speed++;
+    if (monster.speed > 8){
+      monster.speed = 8;
+    } // end if
+
+  } // end if
+
+  if (Key.isDown(Key.DOWN)){
+    monster.speed--;
+    if (monster.speed < -3){
+      monster.speed = -3;
+    } // end if
+  } // end if
+
+  if (Key.isDown(Key.RIGHT)){
+    monster.dir++;
+    if (monster.dir > NORTHWEST){
+      monster.dir = NORTH;
+    } // end if
+  } // end if
+
+  if (Key.isDown(Key.LEFT)){
+    monster.dir--;
+    if (monster.dir < NORTH){
+      monster.dir = NORTHWEST;
+    } // end if
+  } // end if
+
+} // end checkKeys
+
+function move(thing){
+  //moves any thing, wrapping around boundaries
+
+  //move
+  thing._x += thing.dx;
+  thing._y += thing.dy;
+  
+  //check boundaries - wrap all directions
+  if (thing._x > Stage.width){
+    thing._x = 0;
+  } // end if
+
+  if (thing._x < 0){
+    thing._x = Stage.width;
+  } // end if
+
+  if (thing._y > Stage.height){
+    thing._y = 0;
+  } // end if
+
+  if (thing._y < 0){
+    thing._y = Stage.height;
+  } // end if
+} // end move
+
+function turn(thing){
+  thing._rotation = thing.dir * 45;
+
+  switch (thing.dir){
+    case NORTH:
+      thing.dx = 0;
+      thing.dy = -1;
+      break;
+    case NORTHEAST:
+      thing.dx = .7;
+      thing.dy = -.7;
+      break;
+    case EAST:
+      thing.dx = 1;
+      thing.dy = 0;
+      break;
+    case SOUTHEAST:
+      thing.dx = .7;
+      thing.dy = .7;
+      break;
+    case SOUTH:
+      thing.dx = 0;
+      thing.dy = 1;
+      break;
+    case SOUTHWEST:
+      thing.dx = -.7;
+      thing.dy = .7;
+      break;
+    case WEST:
+      thing.dx = -1;
+      thing.dy = 0;
+      break;
+    case NORTHWEST:
+      thing.dx = -.7;
+      thing.dy = -.7;
+      break;
+    default:
+      trace("there's a problem here...");
+  } // end switch
+  thing.dx *= thing.speed;
+  thing.dy *= thing.speed;  
+} // end turn
+
+
+</pre>
+
+</body>
+</html>

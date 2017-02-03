@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>bounceDemo</title>
+</head>
+<body bgcolor="#cccccc">
+<!--url's used in the movie-->
+<!--text used in the movie-->
+<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,0,0" width="550" height="400" id="bounceDemo" align="middle">
+<param name="allowScriptAccess" value="sameDomain" />
+<param name="movie" value="bounceDemo.swf" />
+<param name="quality" value="high" />
+<param name="bgcolor" value="#ffffff" />
+<embed src="bounceDemo.swf" quality="high" bgcolor="#ffffff" width="550" height="400" name="bounceDemo" align="middle" allowScriptAccess="sameDomain" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" />
+</object>
+<h3>code in frame 1 layer 1</h3>
+<pre>
+//Bounce Demo
+//demonstrates bouncing off walls
+
+ball.dx = 5;
+ball.dy = 5;
+
+ball.onEnterFrame = function(){
+  ball.move();
+  ball.checkBoundaries();
+} // end enterFrame
+
+ball.move = function(){
+  ball._x += ball.dx;
+  ball._y += ball.dy;
+} // end move
+
+ball.checkBoundaries = function(){
+  //bounce demo - bounce off walls
+  //keep ball entirely on stage
+
+  //ball leaves right side
+  if (ball._x > Stage.width - (ball._width/2)){
+    ball.dx = -ball.dx;
+  } // end if
+
+  //ball leaves left side
+  if (ball._x < ball._width/2){
+    ball.dx = -ball.dx;
+  } // end if
+
+  //ball leaves bottom of stage
+  if (ball._y > Stage.height - (ball._height/2)){
+    ball.dy = -ball.dy;
+  } // end if
+
+  //ball leaves top of stage
+  if (ball._y < ball._height/2){
+    ball.dy = -ball.dy;
+  } // end if
+
+} // end checkboundaries
+
+
+</pre>
+
+
+</body>
+</html>

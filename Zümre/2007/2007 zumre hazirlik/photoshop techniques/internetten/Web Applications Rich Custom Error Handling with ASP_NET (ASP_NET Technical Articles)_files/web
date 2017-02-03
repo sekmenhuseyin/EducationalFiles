@@ -1,0 +1,1023 @@
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >
+<html>
+<head>
+   <!--Enter title and description-->
+   <title>Web Applications</title>
+   <meta name="ms.locale" content="en-us">
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">   
+	<meta name="Description" content="On this page, find links to articles and other resources for building Web applications using ASP.NET." />
+	
+	
+	<link type='text/css' rel='Stylesheet' href='/library/mnp/2/aspx/css.aspx?locale=en-us&amp;name=QuickSearch&amp;name=Menu&amp;static=Page' />
+<script type='text/javascript' language='Javascript' src='/mnp_utility.mspx/menujs?mnpshell=%2fasp.net%2fshell.config&amp;clicktrax=False'></script>
+<link type='text/css' rel='Stylesheet' href='/msdn-online/shared/css/dc2e.css' />
+<link type='text/css' rel='Stylesheet' href='/msdn-online/shared/css/msdn-mnp25-eyebrow.css' />
+<link rel='stylesheet' type='text/css' href='/library/toolbar/3.0/css.aspx?c=/asp.net/shell.config' /><script language='JavaScript'>var doImage = doImage;
+var TType = TType;
+
+function mhHover(tbl, idx, cls)
+{
+	var t, d;
+	if (document.getElementById)
+		t = document.getElementById(tbl);
+	else
+		t = document.all(tbl);
+	if (t == null) return;
+	if (t.getElementsByTagName)
+		d = t.getElementsByTagName("TD");
+	else
+		d = t.all.tags("TD");
+	if (d == null) return;
+	if (d.length <= idx) return;
+	d[idx].className = cls;
+}
+
+function setMSResearch() {
+  var time = new Date();
+  if( document.cookie.indexOf( 'msresearch=1 ') == -1 ) {
+    document.cookie = 'msresearch=' + time.getTime() + ':' + escape( document.location) + ':' + escape( document.referrer) + '; path=/; domain=.microsoft.com; ';
+  }
+}
+
+function footerjs(doc)
+{
+	if (doImage == null)
+	{
+		var tt = TType == null ? "PV" : TType;
+		doc.write('<layer visibility="hide"><div style="display:none"><img src="http://c.microsoft.com/trans_pixel.asp?source=msdn&TYPE=' + tt + '&p=asp.net_using_building_web" width=0 height=0 hspace=0 vspace=0 border=0 /></div></layer>');
+	}
+
+	if( ( document.cookie.indexOf( 'msresearch=1 ') == -1 ) 
+	 && ( document.cookie.indexOf( 'msresearch=')   != -1 ) ) {
+	  setInterval( "setMSResearch()", 1000 );
+	}
+}</script>		
+</head>
+
+
+<body>
+<a name="top"></a>
+
+
+		<script language="Javascript">
+				if (self.name == "MNPMainFrame")
+					top.location.href = self.location.href;
+			</script><div id="msviMasthead" xmlns:Utility="http://www.microsoft.com/MSCOM/VisualIdentity/Utility"><table cellpadding="0" cellspacing="0" width="100%" border="0"><tr><td width="100%"><table cellpadding="0" cellspacing="0" width="100%" height="22" border="0"><tr><td id="msviRegionIdGraphic" bgcolor="#FFFFFF"></td><td width="100%" bgcolor="#3568CC"><img src="/library/toolbar/3.0/gradient.aspx?a=FFFFFF&amp;b=3568CC&amp;w=250&amp;h=22&amp;d=ltr&amp;c=RkWooiSyZq0Yx5DIezuYpFhZ%2ffA%3d" width="250" height="22" alt="*" title="" /></td></tr></table></td><td id="msviGlobalToolbar" bgcolor="#3568CC" height="22" nowrap="" dir="ltr" align="left"><table cellpadding="0" cellspacing="0" border="0"><tr><td class="gt0" nowrap="nowrap" onmouseover="mhHover('msviGlobalToolbar', 0, 'gt1')" onmouseout="mhHover('msviGlobalToolbar', 0, 'gt0')"><a href="http://www.microsoft.com">Microsoft.com Home</a></td><td class="gtsep">|</td><td class="gt0" nowrap="nowrap" onmouseover="mhHover('msviGlobalToolbar', 2, 'gt1')" onmouseout="mhHover('msviGlobalToolbar', 2, 'gt0')"><a href="/library/toolbar/3.0/sitemap/en-us.mspx">Site Map</a></td></tr></table></td></tr><tr valign="top"><td width="100%"><table cellpadding="0" cellspacing="0" width="100%" height="42" border="0" style="height: expression(parentElement.offsetHeight)"><tr valign="top"><td id="msviBrandBanner" bgcolor="FFFFFF"><a href="http://www.microsoft.com/msdn"><img src="/library/toolbar/3.0/images/banners/msdn_masthead_ltr.gif" width="225" height="42" alt="MSDN" title="" border="0" /></a></td><td width="100%" bgcolor="#6799FF"><img src="/library/toolbar/3.0/gradient.aspx?a=FFFFFF&amp;b=6799FF&amp;w=250&amp;h=42&amp;d=ltr&amp;c=87hrt6fb9uyj4Xgg%2f0ZD3dLE36E%3d" width="250" height="42" alt="*" title="" /></td></tr></table></td><td id="msviGlobalSearch" bgcolor="#6799FF"><div id="msviNoSearch"></div></td></tr></table><div id="msviLocalToolbar"><table cellpadding="0" cellspacing="0" width="100%" height="19" border="0"><tr><td nowrap="nowrap" id="msviHomePageLink"><a href="/">MSDN Home</a></td><td><span class="ltsep">|</span></td><td class="lt0" nowrap="nowrap" onmouseover="mhHover('msviLocalToolbar', 2, 'lt1')" onmouseout="mhHover('msviLocalToolbar', 2, 'lt0')"><a href="/developercenters/">Developer Centers</a></td><td><span class="ltsep">|</span></td><td class="lt0" nowrap="nowrap" onmouseover="mhHover('msviLocalToolbar', 4, 'lt1')" onmouseout="mhHover('msviLocalToolbar', 4, 'lt0')"><a href="/library/default.asp">Library</a></td><td><span class="ltsep">|</span></td><td class="lt0" nowrap="nowrap" onmouseover="mhHover('msviLocalToolbar', 6, 'lt1')" onmouseout="mhHover('msviLocalToolbar', 6, 'lt0')"><a href="/downloads/">Downloads</a></td><td><span class="ltsep">|</span></td><td class="lt0" nowrap="nowrap" onmouseover="mhHover('msviLocalToolbar', 8, 'lt1')" onmouseout="mhHover('msviLocalToolbar', 8, 'lt0')"><a href="/code/">Code Center</a></td><td><span class="ltsep">|</span></td><td class="lt0" nowrap="nowrap" onmouseover="mhHover('msviLocalToolbar', 10, 'lt1')" onmouseout="mhHover('msviLocalToolbar', 10, 'lt0')"><a href="/subscriptions/">Subscriptions</a></td><td><span class="ltsep">|</span></td><td class="lt0" nowrap="nowrap" onmouseover="mhHover('msviLocalToolbar', 12, 'lt1')" onmouseout="mhHover('msviLocalToolbar', 12, 'lt0')"><a href="/worldwide.aspx">MSDN Worldwide</a></td><td width="100%"></td></tr></table></div></div>
+			<table cellpadding="0" cellspacing="0" border="0" width="100%" dir="LTR">
+				<tr valign="top">
+		<td height="100%" style="overflow-x: hidden" width="181"><table cellpadding="0" cellspacing="0" border="0" width="100%"><tr><td class="mnpQuickSearch" style="background: #CCCCCC; color: #000000" dir="LTR"><form style="margin: 0px" action="/msdn-online/shared/components/mscomsearch30.aspx"><nobr><font color="#000000">Search for</font><br><input class="mnpSearchBox" type="text" id="qu" name="qu" maxlength="255" style="width: 165px"><br><table cellpadding="0" cellspacing="0" border="0" width="100%" style="margin-top: 2px"><tr><td width="100%" class="mnpQuickSearch" style="padding: 0px"><select class="mnpSearchScopes" style="width: 137px" name="SearchScope"><option value="1" selected="">All MSDN</option><option value="2">All Library</option><option value="3">Code &amp; Downloads</option><option value="4">Product Information</option><option value="5">Knowledge Base</option></select></td><td><input class="mnpSearchButton" type="submit" value="Go"><br></td></tr></table><a href="http://search.microsoft.com/search/search.aspx?View=msdn&amp;st=a&amp;c=0&amp;s=1" style="color: #000000" onmouseover="style.color='#0033CC';" onmouseout="style.color='#000000';">Advanced Search</a></nobr></form></td></tr></table><div id="mnpMenuTop" class="mnpMenuTop" style="overflow-x: hidden; width: 181px" url="/asp.net/using/building/web/default.aspx" dir="LTR" parent="/asp.net/using/building/default.aspx"><div class="mnpInherit"><div class="mnpMenuRow" style="border-color: #F1F1F1; background: #F1F1F1; width: 176px; overflow-x: hidden"><img width="4" height="7" border="0" alt="*" title="" class="mnpMenuArrow" src="/library/mnp/2/gif/arrowLTR.gif" style="left: 166px; visibility: hidden"><a href="/asp.net/">ASP.NET Home</a></div><div class="mnpMenuRow" style="border-color: #F1F1F1; background: #F1F1F1; width: 176px; overflow-x: hidden" menu="m4f92b61c2ce041329b6b8d371bf81404"><img width="4" height="7" border="0" alt="*" title="" class="mnpMenuArrow" src="/library/mnp/2/gif/arrowLTR.gif" style="left: 166px; visibility: hidden"><a href="/asp.net/technologyinfo/default.aspx">Technology Information</a></div><div class="mnpMenuRow" style="border-color: #F1F1F1; background: #F1F1F1; width: 176px; overflow-x: hidden" menu="mefcf65503bc3467b81dd5c6497f67cdb"><img width="4" height="7" border="0" alt="*" title="" class="mnpMenuArrow" src="/library/mnp/2/gif/arrowLTR.gif" style="left: 166px; visibility: hidden"><a href="/asp.net/using/default.aspx">Using ASP.NET</a></div><div class="mnpMenuRow" style="border-color: #F1F1F1; background: #F1F1F1; width: 176px; overflow-x: hidden" menu="mcd7f007dd241479ab6ae15eea9b62365"><img width="4" height="7" border="0" alt="*" title="" class="mnpMenuArrow" src="/library/mnp/2/gif/arrowLTR.gif" style="left: 166px; visibility: hidden"><a href="/asp.net/downloads/default.aspx">Downloads</a></div><div class="mnpMenuRow" style="border-color: #F1F1F1; background: #F1F1F1; width: 176px; overflow-x: hidden" menu="m4c3940483d3a4ffdb360d3e85dcb776f"><img width="4" height="7" border="0" alt="*" title="" class="mnpMenuArrow" src="/library/mnp/2/gif/arrowLTR.gif" style="left: 166px; visibility: hidden"><a href="/asp.net/support/default.aspx">Support</a></div><div class="mnpMenuRow" style="border-color: #F1F1F1; background: #F1F1F1; width: 176px; overflow-x: hidden" menu="m9a8fceba416f493380cfacc7de5fb00f"><img width="4" height="7" border="0" alt="*" title="" class="mnpMenuArrow" src="/library/mnp/2/gif/arrowLTR.gif" style="left: 166px; visibility: hidden"><a href="/asp.net/community/default.aspx">Community</a></div><div class="mnpMenuBorder" style="width: 180px"></div><div class="mnpMenuRow" style="border-color: #F1F1F1; background: #F1F1F1; width: 176px; overflow-x: hidden"><img width="4" height="7" border="0" alt="*" title="" class="mnpMenuArrow" src="/library/mnp/2/gif/arrowLTR.gif" style="left: 166px; visibility: hidden"><a href="/products">Products &amp; Technologies</a></div><div class="mnpMenuBorder" style="width: 180px; margin-bottom: 0px"></div></div></div><div class="mnpAds" style="width: 181px; height: 100%; margin-bottom: 20px; background: #F1F1F1; border-style: solid; border-color: #999999; border-width: 0px 1px 0px 0px">
+	<p /><center><a id="ad1" href="http://www.msdnevents.com/" target="_top"><img src="/nodehomes/graphics/msdnevents.gif" alt="MSDN Events" border="0" /></a></center><p /><center><a id="ad2" href="http://devconnections.com/asp/" target="_top"><img src="/nodehomes/graphics/aspconn.gif" alt="Microsoft ASP.NET Connections" border="0" /></a></center>
+</div><div class="mnpAds" style="width: 181px; height: 100%; margin-bottom: 20px"><center></center></div></td>
+						<td width="100%" dir="LTR">
+		<table width="100%" cellpadding="0" cellspacing="0" height="46" bgcolor="#3366CC"><tr><td width="419"><img border="0" src="/msdn-online/shared/graphics/left_bnr_ASPNET.jpg" width="419" height="46" alt="MSDN Home"></td><td width="100%" title="MSDN Home" background="" bgcolor="#3366CC">&nbsp;</td><td width="175"><img border="0" src="/msdn-online/shared/graphics/right_bnr_aspnet.jpg" width="175" height="46" alt="MSDN Home"></td></tr></table>
+<span id="_ctl0_eb" class="eyebrow" style="COLOR: #003399;width: 100%;height: 24px;padding-top:4px;padding-left:14px;"><a href='/'>MSDN Home</a>&nbsp;&gt;&nbsp;<a href='/asp.net/default.aspx'>ASP.NET Home</a>&nbsp;&gt;&nbsp;<a href='/asp.net/using/default.aspx'>Using ASP.NET</a>&nbsp;&gt;&nbsp;<a href='/asp.net/using/building/default.aspx'>Building Applications</a>&nbsp;&gt;&nbsp;Web Applications</span>
+
+<div id="pageContainer" class="clsDocBody">
+	
+<table id="hpcontenttable" cellpadding="0" border="0" border="0" style="width:100%;">
+		<tr>
+			<td valign="Top">
+	<h1><a name='Intro'>Web Applications</a></h1>
+	<p>
+
+
+	<span style="display:inline-block;">
+
+
+		<span style="color:#000000;">The new ASP.NET technologies included in the Microsoft .NET Framework enable you to build complete Web applications from within Visual Studio .NET. On this page, find links to articles and other resources for building Web applications using ASP.NET.
+		</span>&nbsp;&nbsp;
+
+
+	</span>
+	<p />
+	</p>
+	
+
+<hr />
+
+<h3><a name='basics'>Basics</a></h3>
+<p>
+
+
+<span style="display:inline-block;">
+<a style="font-weight:bold;" href="http://www.msdn.microsoft.com/library/en-us/dnaspp/html/surveysample1.asp">Build Dynamic Web Forms with Visual Studio .NET</a><br />
+
+
+	<span style="color:#000000;">Leverage Visual Studio .NET wizards to save time and code with this ASP.NET sample online survey application.
+	</span>&nbsp;&nbsp;
+
+
+</span>
+<p />
+
+
+<span style="display:inline-block;">
+<a style="font-weight:bold;" href="http://www.msdn.microsoft.com/msdnmag/issues/02/08/wickedcode/toc.asp">Code Your Way to ASP.NET Excellence</a><br />
+
+
+	<span style="color:#000000;">Discover some of the hidden capabilities of working with ASP.NET pages.
+	</span>&nbsp;&nbsp;
+
+
+</span>
+<p />
+
+
+<span style="display:inline-block;">
+<a style="font-weight:bold;" href="default.aspx?pull=/library/en-us/dnaspp/html/aspnet-jumpinto-part1.asp">Jumping Into ASP.NET Part 1: Application Planning and Design</a><br />
+
+
+	<span style="color:#000000;">Learn best practices for Web application design and programming in this series of articles. First step: defining the application you need and planning ahead.
+	</span>&nbsp;&nbsp;
+
+
+</span>
+<p />
+
+
+<span style="display:inline-block;">
+<a style="font-weight:bold;" href="http://www.msdn.microsoft.com/msdnmag/issues/02/08/aspcolumn/toc.asp">Code-behind in ASPX Files</a><br />
+
+
+	<span style="color:#000000;">Discover how the code-behind model for ASP.NET pages helps you divide the presentation and source code, leading to more manageable Web applications.
+	</span>&nbsp;&nbsp;
+
+
+</span>
+<p />
+
+
+<span style="display:inline-block;">
+<a style="font-weight:bold;" href="http://www.msdn.microsoft.com/msdnmag/issues/01/09/xmlorder/toc.asp">Collect Customer Order Information on an Internet Site Using XML and Web Forms</a><br />
+
+
+	<span style="color:#000000;">Build an online pizza ordering application using ASP.NET.
+	</span>&nbsp;&nbsp;
+
+
+</span>
+<p />
+
+
+<span style="display:inline-block;">
+<a style="font-weight:bold;" href="http://www.msdn.microsoft.com/msdnmag/issues/03/08/starterkits/toc.asp">Jump Start Your Web Site Development with the ASP.NET Starter Kits</a><br />
+
+
+	<span style="color:#000000;">See how the ASP.NET Starter Kits can provide a useful foundation for your Web applications.
+	</span>&nbsp;&nbsp;
+
+
+</span>
+<p />
+
+
+<span style="display:inline-block;">
+<a style="font-weight:bold;" href="http://www.msdn.microsoft.com/msdnmag/issues/03/05/cuttingedge/toc.asp">Form-based Programming in ASP.NET</a><br />
+
+
+	<span style="color:#000000;">Learn how to use ASP.NET's Form model when creating ASP.NET applications.
+	</span>&nbsp;&nbsp;
+
+
+</span>
+<p />
+
+
+<span style="display:inline-block;">
+<a style="font-weight:bold;" href="http://www.msdn.microsoft.com/msdnmag/issues/01/08/cutting/toc.asp">Reusability in ASP .NET: Code-behind Classes and Pagelets</a><br />
+
+
+	<span style="color:#000000;">Examine the code-behind deployment model for ASP.NET applications.
+	</span>&nbsp;&nbsp;
+
+
+</span>
+<p />
+
+
+<span style="display:inline-block;">
+<a style="font-weight:bold;" href="http://www.msdn.microsoft.com/msdnmag/issues/01/09/cutting/toc.asp">Reusability in ASP .NET, Part 2</a><br />
+
+
+	<span style="color:#000000;">Learn how ASP.NET server controls aid in creating reusable ASP.NET applications.
+	</span>&nbsp;&nbsp;
+
+
+</span>
+<p />
+
+
+<span style="display:inline-block;">
+<a style="font-weight:bold;" href="http://www.msdn.microsoft.com/library/en-us/dnaspp/html/surveysample1.asp">Build Dynamic Web Forms with Visual Studio .NET</a><br />
+
+
+	<span style="color:#000000;">Leverage Visual Studio .NET wizards to save time and code with this ASP.NET sample online survey application.
+	</span>&nbsp;&nbsp;
+
+
+</span>
+<p />
+
+
+<span style="display:inline-block;">
+<a style="font-weight:bold;" href="/asp.net/default.aspx?pull=/library/en-us/dnaspp/html/aspnetmigrissues.asp">Migrating to ASP.NET: Key Considerations</a><br />
+
+
+	<span style="color:#000000;">Explore the new features of ASP.NET that can improve existing applications, as well as important considerations for moving Web applications from ASP to ASP.NET quickly and efficiently.
+	</span>&nbsp;&nbsp;
+
+
+</span>
+<p />
+</p>
+
+<h3><a name='debugging'>Debugging</a></h3>
+<p>
+
+
+<span style="display:inline-block;">
+<a style="font-weight:bold;" href="http://www.msdn.microsoft.com/msdnmag/issues/01/10/bugslayer/toc.asp">Handling Assertions in ASP .NET Web Apps</a><br />
+
+
+	<span style="color:#000000;">Learn why assertions are important, and how to use them in your ASP.NET applications.
+	</span>&nbsp;&nbsp;
+
+
+</span>
+<p />
+
+
+<span style="display:inline-block;">
+<a style="font-weight:bold;" href="http://www.msdn.microsoft.com/msdnmag/issues/03/04/cuttingedge/toc.asp">MyTracer Monitors and Traces ASP.NET Apps</a><br />
+
+
+	<span style="color:#000000;">Examine the Tracing functionality available in ASP.NET applications, and see how to use it to improve the quality of your Web site.
+	</span>&nbsp;&nbsp;
+
+
+</span>
+<p />
+
+
+<span style="display:inline-block;">
+<a style="font-weight:bold;" href="default.aspx?pull=/library/en-us/dnaspp/html/customerrors.asp">Rich Custom Error Handling with ASP.NET</a><br />
+
+
+	<span style="color:#000000;">Add your own custom error handling to your ASP.NET Web applications to ease debugging and improve customer satisfaction.
+	</span>&nbsp;&nbsp;
+
+
+</span>
+<p />
+</p>
+
+<h3><a name='vs'>Working with Visual Studio .NET</a></h3>
+<p>
+
+
+<span style="display:inline-block;">
+<a style="font-weight:bold;" href="/asp.net/default.aspx?pull=/library/en-us/dv_vstechart/html/vstchworkingwithsingle-filewebformspagesinvisualstudio.asp">Working with Single-File Web Forms Pages in Visual Studio .NET</a><br />
+
+
+	<span style="color:#000000;">Developers who use Visual Studio .NET might want or need to work with single-file Web Forms pages instead of code-behind Web Forms pages. Get an overview of single-file Web Forms pages, how to work with single-file pages in Visual Studio, and how to convert single-file Web Forms pages to code-behind Web Forms pages. 
+
+	</span>&nbsp;&nbsp;
+
+
+</span>
+<p />
+
+
+<span style="display:inline-block;">
+<a style="font-weight:bold;" href="http://www.msdn.microsoft.com/library/en-us/dnaspp/html/aspnet-testwithnunit.asp">Get Test Infected with NUnit: Unit Test Your .NET Data Access Layer</a><br />
+
+
+	<span style="color:#000000;">Take advantage of Nunit&#151;an open-source unit-testing tool&#151;to prevent bugs in your ASP.NET applications.
+	</span>&nbsp;&nbsp;
+
+
+</span>
+<p />
+
+
+<span style="display:inline-block;">
+<a style="font-weight:bold;" href="http://www.msdn.microsoft.com/library/en-us/dnaspp/html/webdevinwhidbey.asp">Preview Web Development with Visual Studio Whidbey</a><br />
+
+
+	<span style="color:#000000;">Discover 24 features in Microsoft Visual Studio code-named "Whidbey" that will make the development of data-driven Web applications easier and faster.
+	</span>&nbsp;&nbsp;
+
+
+</span>
+<p />
+
+
+<span style="display:inline-block;">
+<a style="font-weight:bold;" href="/asp.net/default.aspx?pull=/msdnmag/issues/02/11/ASPColumn/TOC.asp">Deploying an ASP.NET App Using Visual Studio .NET</a><br />
+
+
+	<span style="color:#000000;">George Shepherd examines what it takes to deploy an ASP.NET application generated using Visual Studio .NET. 
+	</span>&nbsp;&nbsp;
+
+
+</span>
+<p />
+</p>
+
+<h3><a name='data'>Data Access</a></h3>
+<p>
+
+
+<span style="display:inline-block;">
+<a style="font-weight:bold;" href="default.aspx?pull=/library/en-us/dnaspp/html/aspn-hierdatabinding.asp">Hierarchical Data Binding in ASP.NET</a><br />
+
+
+	<span style="color:#000000;">Get techniques for performing ASP.NET data binding to data sources that are more than two dimensions and are hierarchical in nature.
+	</span>&nbsp;&nbsp;
+
+
+</span>
+<p />
+
+
+<span style="display:inline-block;">
+<a style="font-weight:bold;" href="http://www.msdn.microsoft.com/library/en-us/dnaspp/html/aspnet-bindyourdata.asp">Bind Your Data in ASP.NET Whidbey</a><br />
+
+
+	<span style="color:#000000;">Discover the new Data Source Controls, code-free data binding, and new GridView and DetailsView Web controls in ASP.NET Whidbey.
+	</span>&nbsp;&nbsp;
+
+
+</span>
+<p />
+
+
+<span style="display:inline-block;">
+<a style="font-weight:bold;" href="http://www.msdn.microsoft.com/msdnmag/issues/01/03/cutting/toc.asp">Server-side ASP .NET Data Binding</a><br />
+
+
+	<span style="color:#000000;">Understand data-binding in ASP.NET.
+	</span>&nbsp;&nbsp;
+
+
+</span>
+<p />
+
+
+<span style="display:inline-block;">
+<a style="font-weight:bold;" href="http://www.msdn.microsoft.com/msdnmag/issues/03/04/wickedcode/toc.asp">Supporting Database Cache Dependencies in ASP.NET</a><br />
+
+
+	<span style="color:#000000;">Use SQL server to store ASP.NET cache items.
+	</span>&nbsp;&nbsp;
+
+
+</span>
+<p />
+
+
+<span style="display:inline-block;">
+<a style="font-weight:bold;" href="http://www.msdn.microsoft.com/library/en-us/dnaspp/html/datacontrolswhidbey.asp">Working with Data in ASP.NET Whidbey</a><br />
+
+
+	<span style="color:#000000;">See how ASP.NET "Whidbey" expands on ASP.NET's great data support.
+	</span>&nbsp;&nbsp;
+
+
+</span>
+<p />
+
+
+<span style="display:inline-block;">
+<a style="font-weight:bold;" href="http://msdn.microsoft.com/library/en-us/dnaspp/html/aspnet-whenusedatawebcontrols.asp?frame=true">Deciding When to Use the DataGrid, DataList or Repeater </a><br />
+
+
+	<span style="color:#000000;">There are three controls typically used when working with data in ASP.NET applications. Examine the pros and cons of each to decide what's best for your application.
+	</span>&nbsp;&nbsp;
+
+
+</span>
+<p />
+
+
+<span style="display:inline-block;">
+<a style="font-weight:bold;" href="/asp.net/default.aspx?pull=/library/en-us/dnaspp/html/aspnetcustrep.asp">Using ASP.NET to Create Multi-Page Custom Reports</a><br />
+
+
+	<span style="color:#000000;">Discover how to use the existing Microsoft ASP.NET infrastructure of designers, data binding, and other run-time functionality to generate simple and complex multipage HTML reports.
+	</span>&nbsp;&nbsp;
+
+
+</span>
+<p />
+</p>
+
+<h3><a name='ui'>User Interface</a></h3>
+<p>
+
+
+<span style="display:inline-block;">
+<a style="font-weight:bold;" href="http://msdn.microsoft.com/library/en-us/dnaspp/html/dngrfwalkthroughtrackingserverprogressfromaspnetclientapplication.asp?frame=true">Walkthrough: Tracking Server Progress from an ASP.NET Client Application</a><br />
+
+
+	<span style="color:#000000;">Find out how to visually track the progress of an ASP.NET code-behind server application from a client Web application.
+
+	</span>&nbsp;&nbsp;
+
+
+</span>
+<p />
+
+
+<span style="display:inline-block;">
+<a style="font-weight:bold;" href="default.aspx?pull=/library/en-us/dnaspp/html/aspnet-usingtreeviewiewebcontrol.asp">Using the TreeView IE Web Control</a><br />
+
+
+	<span style="color:#000000;">Learn about the TreeView Web control and how to start using it in your ASP.NET Web applications.
+	</span>&nbsp;&nbsp;
+
+
+</span>
+<p />
+
+
+<span style="display:inline-block;">
+<a style="font-weight:bold;" href="http://www.msdn.microsoft.com/library/en-us/dnaspp/html/aspnet-globalarchi.asp">Explore Application Architecture for ASP.NET in Order to Support Future Globalization</a><br />
+
+
+	<span style="color:#000000;">Learn how to architect and build Web applications that enable you to add support for multiple languages and cultures.
+	</span>&nbsp;&nbsp;
+
+
+</span>
+<p />
+
+
+<span style="display:inline-block;">
+<a style="font-weight:bold;" href="http://www.msdn.microsoft.com/library/en-us/dnaspp/html/aspnet-masterpages.asp">Master Pages in ASP.NET Whidbey</a><br />
+
+
+	<span style="color:#000000;">Create consistent Web sites with ease using the new MasterPages feature in ASP.NET Whidbey.
+	</span>&nbsp;&nbsp;
+
+
+</span>
+<p />
+
+
+<span style="display:inline-block;">
+<a style="font-weight:bold;" href="http://www.msdn.microsoft.com/library/en-us/dnaspp/html/aspnet-meetwebpartfrmwrk.asp">Meet the Web Part Framework</a><br />
+
+
+	<span style="color:#000000;">Create Web applications easily with these powerful new ASP.NET Whidbey controls.
+	</span>&nbsp;&nbsp;
+
+
+</span>
+<p />
+
+
+<span style="display:inline-block;">
+<a style="font-weight:bold;" href="http://www.msdn.microsoft.com/library/en-us/dnaspp/html/aspnet-standardize-masterpages.asp">Standardize Your Site Fast With Master Pages</a><br />
+
+
+	<span style="color:#000000;">Learn how to apply MasterPages with ASP.NET Whidbey to quickly standardize your site. ASP.NET Whidbey includes a flexible page-template system with excellent visual-designer support.
+	</span>&nbsp;&nbsp;
+
+
+</span>
+<p />
+</p>
+
+<h3><a name='caching'>Caching</a></h3>
+<p>
+
+
+<span style="display:inline-block;">
+<a style="font-weight:bold;" href="http://www.msdn.microsoft.com/library/en-us/dnaspp/html/aspnet-createcacheconfigobject.asp">Make a Cache Configuration Object for ASP.NET</a><br />
+
+
+	<span style="color:#000000;">Improve reuse of your cached data by encapsulating caching best practices into a helper class. You can manage caching policies across the application and significantly reduce lines of code you'll need.
+	</span>&nbsp;&nbsp;
+
+
+</span>
+<p />
+
+
+<span style="display:inline-block;">
+<a style="font-weight:bold;" href="default.aspx?pull=/library/en-us/dnaspp/html/aspnet-cachingtechniquesbestpract.asp">ASP.NET Caching: Techniques and Best Practices</a><br />
+
+
+	<span style="color:#000000;">ASP.NET provides three forms of caching in Web applications. Examine best practices and techniques for using these three methods to improve your performance.
+	</span>&nbsp;&nbsp;
+
+
+</span>
+<p />
+</p>
+
+<h3><a name='state'>State Management</a></h3>
+<p>
+
+
+<span style="display:inline-block;">
+<a style="font-weight:bold;" href="default.aspx?pull=/library/en-us/dnaspp/html/aspnet-finitestatemachines.asp">Finite State Machines, Wizards and the Web</a><br />
+
+
+	<span style="color:#000000;">Explore a solution for creating Wizards using ASP.NET that step your users through a process. Discover how this feature will become even easier with ASP.NET Whidbey.
+	</span>&nbsp;&nbsp;
+
+
+</span>
+<p />
+
+
+<span style="display:inline-block;">
+<a style="font-weight:bold;" href="http://www.msdn.microsoft.com/msdnmag/issues/03/02/cuttingedge/toc.asp">The ASP.NET View State</a><br />
+
+
+	<span style="color:#000000;">Take a tour of the view state implementation in ASP.NET and learn how to keep your Web pages fit and trim and a bit more secure.
+	</span>&nbsp;&nbsp;
+
+
+</span>
+<p />
+
+
+<span style="display:inline-block;">
+<a style="font-weight:bold;" href="http://www.msdn.microsoft.com/library/en-us/dnaspp/html/converttoaspnet.asp">How to Share Session State Between Classic ASP and ASP.NET</a><br />
+
+
+	<span style="color:#000000;">Share session state between classic ASP and Microsoft ASP.NET for easier conversion of applications.
+	</span>&nbsp;&nbsp;
+
+
+</span>
+<p />
+
+
+<span style="display:inline-block;">
+<a style="font-weight:bold;" href="http://www.msdn.microsoft.com/msdnmag/issues/01/12/cutting/toc.asp">Using Session and Application Objects in ASP.NET, Part 2</a><br />
+
+
+	<span style="color:#000000;">Discover how ASP.NET expands the capabilities of the Session and Application objects.
+	</span>&nbsp;&nbsp;
+
+
+</span>
+<p />
+
+
+<span style="display:inline-block;">
+<a style="font-weight:bold;" href="http://www.msdn.microsoft.com/msdnmag/issues/03/05/datapoints/toc.asp">Techniques for Managing Rowset Paging</a><br />
+
+
+	<span style="color:#000000;">Learn techniques for working with multiple pages of data in your ASP.NET application.
+	</span>&nbsp;&nbsp;
+
+
+</span>
+<p />
+
+
+<span style="display:inline-block;">
+<a style="font-weight:bold;" href="http://www.msdn.microsoft.com/library/en-us/dnaspp/html/aspnetsessionstate.asp">Explore Session State Implementation in ASP.NET</a><br />
+
+
+	<span style="color:#000000;">Delve into session state implementation in ASP.NET 1.1. Learn to optimize session state management from within managed Web applications.
+	</span>&nbsp;&nbsp;
+
+
+</span>
+<p />
+
+
+<span style="display:inline-block;">
+<a style="font-weight:bold;" href="/asp.net/default.aspx?pull=/msdnmag/issues/03/04/aspnetuserstate/default.aspx">Nine Options for Managing Persistent User State in Your ASP.NET Application</a><br />
+
+
+	<span style="color:#000000;">Learn about techniques, guidelines, and updated best practices on the many ways to persist data between user requests in ASP.NET.
+	</span>&nbsp;&nbsp;
+
+
+</span>
+<p />
+
+
+<span style="display:inline-block;">
+<a style="font-weight:bold;" href="/asp.net/default.aspx?pull=/library/en-us/dv_vstechart/html/vbtchaspnetcookies101.asp">Basics of Cookies in ASP.NET</a><br />
+
+
+	<span style="color:#000000;">Get techniques for reading and writing HTTP cookies in an ASP.NET Web application.
+	</span>&nbsp;&nbsp;
+
+
+</span>
+<p />
+</p>
+
+<h3><a name='security'>Security & Validation</a></h3>
+<p>
+
+
+<span style="display:inline-block;">
+<a style="font-weight:bold;" href="http://www.msdn.microsoft.com/msdnmag/issues/02/09/aspnethashalgorithms/toc.asp">Tamper-Resistant Apps: Cryptographic Hash Algorithms Let You Detect Malicious Code in ASP.NET</a><br />
+
+
+	<span style="color:#000000;">Use the .NET Framework cryptographic functions from within ASP.NET.
+	</span>&nbsp;&nbsp;
+
+
+</span>
+<p />
+
+
+<span style="display:inline-block;">
+<a style="font-weight:bold;" href="default.aspx?pull=/library/en-us/dnaspp/html/mixedsecurity.asp">Mixing Forms and Windows Security in ASP.NET</a><br />
+
+
+	<span style="color:#000000;">Examine a solution that combines Forms and Windows Authentication, enabling ASP.NET security for both internal and external users.
+	</span>&nbsp;&nbsp;
+
+
+</span>
+<p />
+
+
+<span style="display:inline-block;">
+<a style="font-weight:bold;" href="http://www.msdn.microsoft.com/msdnmag/issues/02/04/valid/toc.asp">Selectively Enable Form Validation When Using ASP.NET Web Controls</a><br />
+
+
+	<span style="color:#000000;">Extend the validation capabilities of ASP.NET to control when, and where, validation takes place.
+	</span>&nbsp;&nbsp;
+
+
+</span>
+<p />
+
+
+<span style="display:inline-block;">
+<a style="font-weight:bold;" href="http://www.msdn.microsoft.com/msdnmag/issues/02/08/aspnetcommerceapp/toc.asp">Leverage the Authentication and Form Validation Features of ASP.NET to Bolster Your Commerce App</a><br />
+
+
+	<span style="color:#000000;">See how the power and flexibility of ASP.NET's validation controls make it easy to plug new functionality into your Web applications.
+	</span>&nbsp;&nbsp;
+
+
+</span>
+<p />
+
+
+<span style="display:inline-block;">
+<a style="font-weight:bold;" href="http://www.msdn.microsoft.com/msdnmag/issues/01/11/cutting/toc.asp">Using Session and Application Objects in ASP .NET</a><br />
+
+
+	<span style="color:#000000;">Discover how ASP.NET expands the capabilities of the Session and Application objects.
+	</span>&nbsp;&nbsp;
+
+
+</span>
+<p />
+
+
+<span style="display:inline-block;">
+<a style="font-weight:bold;" href="/asp.net/default.aspx?pull=/library/en-us/dnaspp/html/aspplusvalid.asp">ASP.NET Validation in Depth</a><br />
+
+
+	<span style="color:#000000;">See a detailed examination of the workings of ASP.NET validation Web controls.
+	</span>&nbsp;&nbsp;
+
+
+</span>
+<p />
+
+
+<span style="display:inline-block;">
+<a style="font-weight:bold;" href="/asp.net/default.aspx?pull=/library/en-us/dnnetsec/html/secnetlpMSDN.asp">.NET Security Guide</a><br />
+
+
+	<span style="color:#000000;">Examine a practical, scenario-driven approach to designing and building secure ASP.NET applications for Windows 2000 and the .NET Framework 1.0.
+	</span>&nbsp;&nbsp;
+
+
+</span>
+<p />
+
+
+<span style="display:inline-block;">
+<a style="font-weight:bold;" href="/asp.net/default.aspx?pull=/library/en-us/dnbda/html/authaspdotnet.asp">Authentication in ASP.NET: .NET Security Guidance</a><br />
+
+
+	<span style="color:#000000;">Learn how both Internet Information Services and ASP.NET provide security models that allow you to authenticate your users appropriately and obtain the correct security context within your application.
+	</span>&nbsp;&nbsp;
+
+
+</span>
+<p />
+
+
+<span style="display:inline-block;">
+<a style="font-weight:bold;" href="http://www.msdn.microsoft.com/msdnmag/issues/02/04/aspsec/toc.asp">An Introductory Guide to Building and Deploying More Secure Sites with ASP.NET and IIS</a><br />
+
+
+	<span style="color:#000000;">Learn how ASP.NET uses the .NET Framework Security model to secure your Web applications.
+	</span>&nbsp;&nbsp;
+
+
+</span>
+<p />
+
+
+<span style="display:inline-block;">
+<a style="font-weight:bold;" href="/asp.net/default.aspx?pull=/vbtv/default.asp">MSDN Online - VBTV</a><br />
+
+
+	<span style="color:#000000;">Whether you're an existing Visual Basic developer or a new .NET developer, VBTV provides you with the latest and most pertinent information you need to get up and running quickly with Visual Basic .NET.
+	</span>&nbsp;&nbsp;
+
+
+</span>
+<p />
+
+
+<span style="display:inline-block;">
+<a style="font-weight:bold;" href="/asp.net/default.aspx?pull=/library/en-us/dnaspp/html/pdc_userinput.asp">User Input Validation in ASP.NET</a><br />
+
+
+	<span style="color:#000000;">Read a brief overview of the validation framework in ASP.NET, and walk through an example on adding validation to a page.
+	</span>&nbsp;&nbsp;
+
+
+</span>
+<p />
+
+
+<span style="display:inline-block;">
+<a style="font-weight:bold;" href="http://www.msdn.microsoft.com/library/en-us/dnaspp/html/personalizationwhidbey.asp">Personalization in ASP.NET Whidbey</a><br />
+
+
+	<span style="color:#000000;">Forget about all the code you used to write to add personalization to your Web sites. See the new features in ASP.NET Whidbey that make adding personalization a breeze.
+	</span>&nbsp;&nbsp;
+
+
+</span>
+<p />
+
+
+<span style="display:inline-block;">
+<a style="font-weight:bold;" href="http://www.msdn.microsoft.com/library/en-us/dnaspp/html/aspnet-membership.asp">Add Membership and Role Support with ASP.NET Whidbey</a><br />
+
+
+	<span style="color:#000000;">Discover how you can add membership and role support quickly with ASP.NET Whidbey. Often this doesn't require any code.
+	</span>&nbsp;&nbsp;
+
+
+</span>
+<p />
+
+
+<span style="display:inline-block;">
+<a style="font-weight:bold;" href="http://www.msdn.microsoft.com/library/en-us/dnaspp/html/aspnet-getpersonal.asp">Get Personal with ASP.NET Whidbey</a><br />
+
+
+	<span style="color:#000000;">Reduce development time and code with personalization and membership in ASP.NET Whidbey.
+	</span>&nbsp;&nbsp;
+
+
+</span>
+<p />
+
+
+<span style="display:inline-block;">
+<a style="font-weight:bold;" href="http://www.msdn.microsoft.com/library/en-us/dnaspp/html/aspnet-securingapps.asp">Use Less Code to Secure ASP.NET Applications</a><br />
+
+
+	<span style="color:#000000;">Examine the new security features in ASP.NET Whidbey. They make adding authentication and authorization simple, and almost code-free.
+	</span>&nbsp;&nbsp;
+
+
+</span>
+<p />
+</p>
+
+<h3><a name='graphics'>Graphics</a></h3>
+<p>
+
+
+<span style="display:inline-block;">
+<a style="font-weight:bold;" href="http://www.msdn.microsoft.com/library/en-us/dnaspp/html/colorquant.asp">Optimizing Color Quantization for ASP.NET Images</a><br />
+
+
+	<span style="color:#000000;">Describes how to quantize (recolor) dynamically generated images for ASP.NET pages in order to overcome a limitation of GDI+ in the .NET Framework versions 1.0 and 1.1. This article presents two methods of color depth reduction on images.
+	</span>&nbsp;&nbsp;
+
+
+</span>
+<p />
+
+
+<span style="display:inline-block;">
+<a style="font-weight:bold;" href="/asp.net/default.aspx?pull=/msdnmag/issues/02/02/ASPDraw/TOC.asp">Create Snazzy Web Charts and Graphics On the Fly</a><br />
+
+
+	<span style="color:#000000;">Access the drawing classes of the .NET Framework directly with C# to create dynamic images and charts, and display them by way of ASP.NET.
+
+	</span>&nbsp;&nbsp;
+
+
+</span>
+<p />
+</p>
+
+<h3><a name='xml'>XML</a></h3>
+<p>
+
+
+<span style="display:inline-block;">
+<a style="font-weight:bold;" href="http://www.msdn.microsoft.com/library/en-us/dnaspp/html/aspnet-createrssw-aspnet.asp">Create an RSS News Aggregator with ASP.NET</a><br />
+
+
+	<span style="color:#000000;">Examine how the XML support in the .NET Framework makes creating an RSS News Aggregator simple.
+	</span>&nbsp;&nbsp;
+
+
+</span>
+<p />
+
+
+<span style="display:inline-block;">
+<a style="font-weight:bold;" href="http://www.msdn.microsoft.com/msdnmag/issues/02/12/xmlschemaimporting/toc.asp">Take Advantage of Existing External XML Schemas with a Custom Import Framework in ASP.NET</a><br />
+
+
+	<span style="color:#000000;">This article builds an external schema framework as an extension to the ASP.NET Web Services runtime to enable you to reference external schemas within your XML Web Service interface.
+
+	</span>&nbsp;&nbsp;
+
+
+</span>
+<p />
+
+
+<span style="display:inline-block;">
+<a style="font-weight:bold;" href="/asp.net/default.aspx?pull=/msdnmag/issues/03/03/siteskinning/default.aspx">Site Skinning: Rich XML Classes Let Users Personalize Their Visual Experience on Your ASP.NET Site</a><br />
+
+
+	<span style="color:#000000;">See an illustration on the use of the rich XML classes in the .NET Framework and the built-in extensibility of ASP.NET to apply the skinning technique to Web sites, wrapping their functionality in a new user interface that allows customers to personalize their experience. 
+	</span>&nbsp;&nbsp;
+
+
+</span>
+<p />
+</p>
+
+<h3><a name='pipeline'>HTTP Runtime</a></h3>
+<p>
+
+
+<span style="display:inline-block;">
+<a style="font-weight:bold;" href="http://www.msdn.microsoft.com/msdnmag/issues/01/07/asp/toc.asp">ASP .NET Connection Model and Writing Custom HTTP Handler/Response Objects</a><br />
+
+
+	<span style="color:#000000;">Learn how to create custom HTTP Handlers and use them to learn how ASP.NET connection model works.
+	</span>&nbsp;&nbsp;
+
+
+</span>
+<p />
+
+
+<span style="display:inline-block;">
+<a style="font-weight:bold;" href="http://www.msdn.microsoft.com/msdnmag/issues/02/05/asp/toc.asp">HTTP Modules</a><br />
+
+
+	<span style="color:#000000;">Discover how to use HTTP Modules to extend the functionality of ASP.NET.
+	</span>&nbsp;&nbsp;
+
+
+</span>
+<p />
+
+
+<span style="display:inline-block;">
+<a style="font-weight:bold;" href="http://www.msdn.microsoft.com/library/en-us/dnaspp/html/dngrftheaspnethttpruntime.asp">The ASP.NET HTTP Runtime</a><br />
+
+
+	<span style="color:#000000;">Dino Esposito looks at the constituent components of the HTTP runtime, the logic that drives the processing of individual requests directed to ASP.NET applications, and shows all the steps by which a HTTP request becomes plain HTML text.
+	</span>&nbsp;&nbsp;
+
+
+</span>
+<p />
+
+
+<span style="display:inline-block;">
+<a style="font-weight:bold;" href="http://www.msdn.microsoft.com/library/en-us/dnaspp/html/aspnet-pageobjectmodel.asp">One Day in the Life of an ASP.NET Web Page</a><br />
+
+
+	<span style="color:#000000;">Explore the eventing model built around ASP.NET Web pages and the various stages that a Web page experiences on its way to HTML. Discover the events that characterize the lifecycle of page and how control and page authors can intervene to alter the standard behavior.
+	</span>&nbsp;&nbsp;
+
+
+</span>
+<p />
+
+
+<span style="display:inline-block;">
+<a style="font-weight:bold;" href="http://www.msdn.microsoft.com/msdnmag/issues/02/08/httpfilters/toc.asp"> Intercept, Monitor, and Modify Web Requests with HTTP Filters in ISAPI and ASP.NET </a><br />
+
+
+	<span style="color:#000000;">Examine how HTTP Modules compare to ISAPI Filters, and see how to create one to reroute incoming Web Requests.
+	</span>&nbsp;&nbsp;
+
+
+</span>
+<p />
+
+
+<span style="display:inline-block;">
+<a style="font-weight:bold;" href="http://www.msdn.microsoft.com/msdnmag/issues/03/06/threading/toc.asp">Use Threads and Build Asynchronous Handlers in Your Server-Side Web Code</a><br />
+
+
+	<span style="color:#000000;">Learn the benefits, tradeoffs and choices for using threads from your ASP.NET applications.
+	</span>&nbsp;&nbsp;
+
+
+</span>
+<p />
+
+
+<span style="display:inline-block;">
+<a style="font-weight:bold;" href="/asp.net/default.aspx?pull=/msdnmag/issues/02/09/httppipelines/default.aspx">Securely Implement Request Processing, Filtering, and Content Redirection with HTTP Pipelines in ASP.NET</a><br />
+
+
+	<span style="color:#000000;">Explore the architecture of the lower-level infrastructure of ASP.NET and how you can use this pipeline to add sophisticated functionality to an ASP.NET-based application.
+	</span>&nbsp;&nbsp;
+
+
+</span>
+<p />
+</p>
+</td><td valign="Top">
+   <div style="float:right;">
+      <div id="pageoptions_OptionsPanel" class="MNPPart">
+	
+<h4>Page Options</h4>
+<IFRAME id='frmRatingsOptions' src='/msdn-online/shared/components/ratings/ratings.aspx?&opt=1&ContentID=FC031C97-4ACB-4F46-B12E-BAFD5F92B684&mnp2=1&Config=/asp.net/ratingscnfg.xml&Print=Default.aspx?print=true&HideDiscuss=1' frameborder='0' scrolling='no' width='95%' height='70' ></IFRAME>
+
+
+				
+
+</div>
+
+
+      <p />
+<div class="MNPPart">
+<b><a name='usingbuildingweb'>On this page</a></b>
+<ul><li><a href="#basics">Basics</a></li><li><a href="#debugging">Debugging</a></li><li><a href="#vs">Visual Studio .NET</a></li><li><a href="#data">Data Access</a></li><li><a href="#ui">User Interface</a></li><li><a href="#caching">Caching</a></li><li><a href="#state">State Management</a></li><li><a href="#security">Security &amp; Validation</a></li><li><a href="#graphics">Graphics</a></li><li><a href="#xml">XML</a></li><li><a href="#pipeline">HTTP Runtime</a></li></ul></div>
+
+   </div>  
+</td>
+</tr>
+</table>
+
+<!--pull table-->
+
+
+<a href="#top"><img src="/msdn-online/shared/graphics/top.gif" border="0" alt="Top of Page" /></a>
+<a href="#top" title="Top of Page">Top of Page</a>
+<p />
+
+</div>
+
+
+<TABLE cellpadding='0' cellspacing='0' border='0' style='width:100%'>
+<TR>
+<TD style='width:500' nowrap>
+</TD>
+</TR>
+<TR>
+<TD>
+<IFRAME id='frmRatings' src='/msdn-online/shared/components/ratings/ratings.aspx?ContentID=FC031C97-4ACB-4F46-B12E-BAFD5F92B684&mnp2=1&Config=/asp.net/ratingscnfg.xml&Print=Default.aspx?print=true&HideDiscuss=1' frameborder='0' scrolling='no' width='100%' height='24' vspace='0' hspace='0' ></IFRAME>
+</TD></TR></TABLE>
+
+
+
+
+
+
+
+
+
+					</td>
+		
+				</tr>
+			</table>
+		<br clear="all" style="line-height: 1px; overflow: hidden" /><table id="msviFooter" width="100%" cellpadding="0" cellspacing="0"><tr valign="bottom"><td id="msviFooter2" style="filter:progid:DXImageTransform.Microsoft.Gradient(startColorStr='#FFFFFF', endColorStr='#669AFF', gradientType='1')"><div id="msviLocalFooter"><nobr><a href="http://go.microsoft.com/?linkid=317027">Manage Your Profile</a> |</nobr><wbr /><nobr><a href="/isapi/gomscom.asp?target=/legal/">Legal</a> |</nobr><wbr /><nobr><a href="http://register.microsoft.com/contactus30/contactus.asp?domain=msdn">Contact Us</a> |</nobr><wbr /><nobr><a href="/flash/">MSDN Flash Newsletter</a></nobr></div><div id="msviGlobalFooter"><span dir="ltr">&#169;2004 Microsoft Corporation. All rights reserved.&nbsp;</span><nobr><a href="http://www.microsoft.com/info/cpyright.mspx">Terms of Use</a> |</nobr><wbr /><nobr><a href="http://www.microsoft.com/info/privacy.mspx">Privacy Statement</a></nobr></div></td><td bgcolor="#669AFF" width="105"><img src="/library/toolbar/3.0/text.aspx?t=TQ%3d%3d&amp;f=FFFFFF&amp;b=669AFF&amp;font=Microsoft+Logo+95%2c+13.5pt&amp;w=105&amp;h=29&amp;a=0&amp;l=0&amp;v=0&amp;c=p7fMCifCOtX%2bJ5SQCkICNeYZbK0%3d" width="105" height="29" alt="Microsoft" title="" border="0" /></td></tr></table><layer visibility="hide"><div style="display:none"><img width="0" height="0" border="0" hspace="0" vspace="0" src="http://c.microsoft.com/trans_pixel.asp?source=msdn&amp;TYPE=PV&amp;p=asp.net_using_building_web"></div></layer>
+
+</body>
+</html>
+
+

@@ -1,0 +1,126 @@
+<!doctype html public "-//IETF//DTD HTML//EN">
+<HTML>
+<HEAD>
+<TITLE>Windows XP: The Complete Reference: Connecting Your LAN to the Internet</TITLE>
+<META NAME="GENERATOR" CONTENT="Web-O-Matic Deluxe 4.1">
+<META NAME="AUTHOR" CONTENT="John R. Levine, Margaret Levine Young">
+<META NAME="COPYRIGHT" CONTENTS="Copyright 2001 by The McGraw-Hill Companies. All rights reserved.">
+</HEAD>
+<BODY BACKGROUND="../images/background.png">
+<BLOCKQUOTE>
+<SCRIPT LANGUAGE="JavaScript">
+function whomp(i, file)
+{
+	i.src = "../images/" + file + ".png";
+}
+</SCRIPT>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarered3x3.png" HEIGHT=3 WIDTH=3></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=2>
+Chapter 30: Connecting Your LAN to the Internet
+</FONT></TD>
+</TR>
+</TABLE>
+<BR>
+<A HREF="0.htm"  OnMouseOver='whomp(prev, "sprev");' OnMouseOut='whomp(prev, "wprev");'
+ title="Previous Section"><IMG NAME=prev SRC="../images/wprev.png" ALT="Previous" HEIGHT=20 WIDTH=82 BORDER=0></A><!--
+--><A HREF="index.htm" OnMouseOver='whomp(chap, "schap");' OnMouseOut='whomp(chap, "wchap");'
+title="Chapter Overview"><IMG SRC="../images/wchap.png" ALT="Chapter" NAME=chap HEIGHT=20 WIDTH=100 BORDER=0></A><A
+HREF="../index.htm" OnMouseOver='whomp(toc, "sbook");' OnMouseOut='whomp(toc, "wbook");' 
+title="Table of Contents"><IMG SRC="../images/wbook.png" ALT="Contents" NAME=toc HEIGHT=20 WIDTH=94 BORDER=0></A><A
+HREF="../glossary/index.htm" OnMouseOver='whomp(glos, "sglos");' OnMouseOut='whomp(glos, "wglos");' 
+title="Glossary"><IMG SRC="../images/wglos.png" ALT="Glossary" NAME=glos HEIGHT=20 WIDTH=94 BORDER=0></A><!--
+--><A HREF="2.htm"  OnMouseOver='whomp(next, "snext");' OnMouseOut='whomp(next, "wnext");'
+ title="Next Section"><IMG NAME=next SRC="../images/wnext.png" ALT="Next" HEIGHT=20 WIDTH=82 BORDER=0></A>
+<BR>
+<A NAME="1">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarered10x10.png" HEIGHT=10 WIDTH=10></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=4><B>How Can You Connect a LAN to the Internet?</B></FONT>
+</TD>
+</TR>
+</TABLE></A>
+<P>
+When a computer communicates with other computers on the Internet, it sends messages in the <A HREF="../peer2peer/1.htm#3">TCP/IP protocol</A> addressed to the other computers using their numeric IP (Internet Protocol) addresses. To share an Internet connection, the computers on your LAN must be able to communicate with TCP/IP. The computers can also communicate on the LAN with another protocol (for example, a LAN might use NetBEUI for file and printer sharing on the LAN and TCP/IP for Internet Connection Sharing.)
+<P>
+The device or program that connects your LAN to the Internet acts as a <A NAME="ddgateway"><I>gateway</I></A>, passing messages between the computers on the LAN and computers on the Internet, and possibly controlling what types of information can pass.
+<A NAME="2">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>What Does a Gateway Do?</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+An Internet gateway can perform the following tasks:
+<UL>
+<LI >
+<B>Translating between the IP address on the LAN and the IP addresses on the Internet  </B>Computers on a LAN usually use private, LAN-only IP addresses, frequently assigned by a DHCP server on the LAN. Computers on the Internet use publicly visible IP addresses that are usually assigned by your ISP. A gateway accepts packets (messages) from the LAN, strips off the private IP address, substitutes its own ISP-supplied IP address, and passes the packet along to the Internet. When replies return, the gateway passes the replies back to the computer that made the request. To the rest of the Internet, all packets from the LAN appear to be from the gateway, so no information leaks out about the individual systems on your LAN. This service is called <A NAME="ddnetworkaddresstranslation"><I>Network Address Translation</I></A> (<A NAME="ddnat"><I>NAT</I></A>). All gateways to networks that use private addresses must perform this task.
+<LI >
+<B>Controlling the types of information that can flow between the Internet and your LAN  </B>The gateway, for example, can prevent telnet sessions (remote terminal sessions, described in section "<A HREF="../winsock/2.htm#1">Logging in to Other Computers Using Telnet</A>" in Chapter 28) from coming in from the Internet or prevent chat sessions from going in either direction between the LAN and the Internet.
+<LI >
+<B>Caching</B>  The gateway can store information that has been requested from the Internet so that if a user requests the same information, the gateway can provide it without having to get it from the Internet again.
+<LI >
+<B>Logging usage of the Internet  </B>The gateway can log all packets that pass between the LAN and the Internet so you can have a record of who has access to your LAN from the Internet and what Internet services your LAN users have used.
+</UL>
+<P>
+Some gateway software (like ICS) provides only address translation. Other gateway programs, called <A NAME="ddproxyservers"><I>proxy servers</I></A>, provide address translation, caching, and logging. If the proxy server also provides security, controlling what information can pass between the LAN and the Internet, it's called a <A HREF="../security/4.htm#1"><I>firewall</I></A>.
+<A NAME="3">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Devices That Can Act as Gateways</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+Three kinds devices are commonly used as gateways, connecting LANs to the Internet:
+<UL>
+<LI >
+<B>Routers</B>  A "black box" that connects to your LAN hub or switch and to a phone line (dial-up, ISDN line, DSL line, or cable modem connection). Firewall software is built into the router. All you have to do is cable it to your LAN, connect your phone line or cable modem, plug it into power, and your LAN is on the Internet. Routers can be the simplest and most effective way to connect your LAN to the Internet. You connect your Internet connection (phone line or cable Internet cable) to the router, and run a LAN cable from the router to the LAN's hub or switch.<B></B>
+<LI >
+<B>UNIX or Linux systems</B>  Because the Internet was built on UNIX systems, lots of excellent TCP/IP communication software comes with most UNIX and Linux systems. Many "black box" routers are actually computers running UNIX or Linux, but you can set up your own for less money. You can run a wide variety of firewall software, as well as Web server, POP (e-mail) server, or other Internet server software on the UNIX or Linux system. The UNIX or Linux system needs two connections: an Internet connection (phone line or cable Internet cable) and a LAN connection (cable to the LAN's hub or switch).<B></B>
+<LI >
+<B>Windows systems running proxy server software</B>  A Windows XP, Me, 98, 2000, or NT 4 system can act as a router, running a gateway program. The Windows system connects to the Internet over a phone line or cable connection, and the gateway program provides the IP address translation. If you run proxy server or firewall programs, the Windows system also provides security: Windows XP comes with a built-in firewall.<B></B>
+</UL>
+<A NAME="4">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Software and Hardware for a Windows-Based Gateway</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+If you use a Windows system running NAT (Network Address Translation), proxy server, or firewall software, the system has two connections: one to the LAN (using a network interface card) and the other to the Internet (using a modem for dial-up or another network interface card or USB port for DSL or cable Internet connection).
+<P>
+<TABLE><TR><TD VALIGN="TOP"><IMG SRC="../images/caution.png" ALT="caution" WIDTH=95 HEIGHT=29></TD>
+<TD VALIGN="TOP">Even though DSL and cable Internet connections use the same cabling as a LAN (RJ45 Category-5 cable), don't plug the DSL or cable Internet cable into your LAN's hub or switch. The DSL or cable Internet must connect to a PC or router so that you have a gateway between the Internet and the LAN. (Connecting the modem to the hub is possible, but tricky and prone to error.)
+
+</TD></TR></TABLE>
+<P>
+Windows XP comes with Internet Connection Sharing, which is easy to install and set up. Several Windows-based proxy server programs have been available for years, including SyGate (at <A HREF="http://www.sygate.com"><B>http://www.sygate.com</B></A>), WinGate (at <A HREF="http://wingate.deerfield.com"><B>http://wingate.deerfield.com</B></A>), and WinProxy (at <A HREF="http://www.winproxy.com"><B>http://www.winproxy.com</B></A>). All three of these programs have downloadable versions that you can try before buying. You install the proxy server program on the computer that is connected to the Internet and a matching client program on each of the other computers on the LAN. When the user of any computer on the LAN wants to check e-mail or browse the Web, the computer running the proxy server program connects to the Internet (if it's not already connected) and passes data from the user's computer to and from the Internet.
+<P>
+<TABLE><TR><TD VALIGN="TOP"><IMG SRC="../images/tip.png" ALT="tip" WIDTH=95 HEIGHT=29></TD>
+<TD VALIGN="TOP">Test the security of your LAN's Internet connection by going to the Gibson Research Corporation's Web site at <A HREF="http://grc.com"><B>http://grc.com</B></A>. Follow the links to their Shields UP! service, which can check how vulnerable your computer is to attack or data theft from the Internet.
+
+</TD></TR></TABLE>
+<P>
+<A HREF="0.htm"  OnMouseOver='whomp(prevb, "sprev");' OnMouseOut='whomp(prevb, "wprev");'
+ title="Previous Section"><IMG NAME=prevb SRC="../images/wprev.png" ALT="Previous" HEIGHT=20 WIDTH=82 BORDER=0></A><!--
+--><A HREF="index.htm" OnMouseOver='whomp(chapb, "schap");' OnMouseOut='whomp(chapb, "wchap");'
+title="Chapter Overview"><IMG SRC="../images/wchap.png" ALT="Chapter" NAME=chapb HEIGHT=20 WIDTH=100 BORDER=0></A><A
+HREF="../index.htm" OnMouseOver='whomp(tocb, "sbook");' OnMouseOut='whomp(tocb, "wbook");' 
+title="Table of Contents"><IMG SRC="../images/wbook.png" ALT="Contents" NAME=tocb HEIGHT=20 WIDTH=94 BORDER=0></A><A
+HREF="../glossary/index.htm" OnMouseOver='whomp(glosb, "sglos");' OnMouseOut='whomp(glosb, "wglos");' 
+title="Glossary"><IMG SRC="../images/wglos.png" ALT="Glossary" NAME=glosb HEIGHT=20 WIDTH=94 BORDER=0></A><!--
+--><A HREF="2.htm"  OnMouseOver='whomp(nextb, "snext");' OnMouseOut='whomp(nextb, "wnext");'
+ title="Next Section"><IMG NAME=nextb SRC="../images/wnext.png" ALT="Next" HEIGHT=20 WIDTH=82 BORDER=0></A>
+<BR>
+</BLOCKQUOTE>
+</BODY>
+</HTML>

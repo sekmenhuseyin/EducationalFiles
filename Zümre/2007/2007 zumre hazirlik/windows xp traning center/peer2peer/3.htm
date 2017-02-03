@@ -1,0 +1,345 @@
+<!doctype html public "-//IETF//DTD HTML//EN">
+<HTML>
+<HEAD>
+<TITLE>Windows XP: The Complete Reference: Configuring Windows for a LAN</TITLE>
+<META NAME="GENERATOR" CONTENT="Web-O-Matic Deluxe 4.1">
+<META NAME="AUTHOR" CONTENT="John R. Levine, Margaret Levine Young">
+<META NAME="COPYRIGHT" CONTENTS="Copyright 2001 by The McGraw-Hill Companies. All rights reserved.">
+</HEAD>
+<BODY BACKGROUND="../images/background.png">
+<BLOCKQUOTE>
+<SCRIPT LANGUAGE="JavaScript">
+function whomp(i, file)
+{
+	i.src = "../images/" + file + ".png";
+}
+</SCRIPT>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarered3x3.png" HEIGHT=3 WIDTH=3></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=2>
+Chapter 28: Configuring Windows for a LAN
+</FONT></TD>
+</TR>
+</TABLE>
+<BR>
+<A HREF="2.htm"  OnMouseOver='whomp(prev, "sprev");' OnMouseOut='whomp(prev, "wprev");'
+ title="Previous Section"><IMG NAME=prev SRC="../images/wprev.png" ALT="Previous" HEIGHT=20 WIDTH=82 BORDER=0></A><!--
+--><A HREF="index.htm" OnMouseOver='whomp(chap, "schap");' OnMouseOut='whomp(chap, "wchap");'
+title="Chapter Overview"><IMG SRC="../images/wchap.png" ALT="Chapter" NAME=chap HEIGHT=20 WIDTH=100 BORDER=0></A><A
+HREF="../index.htm" OnMouseOver='whomp(toc, "sbook");' OnMouseOut='whomp(toc, "wbook");' 
+title="Table of Contents"><IMG SRC="../images/wbook.png" ALT="Contents" NAME=toc HEIGHT=20 WIDTH=94 BORDER=0></A><A
+HREF="../glossary/index.htm" OnMouseOver='whomp(glos, "sglos");' OnMouseOut='whomp(glos, "wglos");' 
+title="Glossary"><IMG SRC="../images/wglos.png" ALT="Glossary" NAME=glos HEIGHT=20 WIDTH=94 BORDER=0></A><!--
+--><A HREF="4.htm"  OnMouseOver='whomp(next, "snext");' OnMouseOut='whomp(next, "wnext");'
+ title="Next Section"><IMG NAME=next SRC="../images/wnext.png" ALT="Next" HEIGHT=20 WIDTH=82 BORDER=0></A>
+<BR>
+<A NAME="1">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarered10x10.png" HEIGHT=10 WIDTH=10></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=4><B>Installing and Configuring Network Components</B></FONT>
+</TD>
+</TR>
+</TABLE></A>
+<P>
+Running the Network Setup Wizard is usually all you need to do to set up a workgroup network or attach your PC to an existing workgroup. However, if you are connecting to a domain-based or other type of network, you may need to install, configure, or uninstall network components yourself. Talk to your LAN administrator before making any changes to your configuration.
+<P>
+For each networking connection listed in the Network Connections window, you can see its properties by right-clicking the connection and choosing Properties from the menu that appears. Figure 28-5 shows the properties of a LAN connection.
+<TABLE BORDER=2><TR><TD ALIGN=CENTER>
+<IMG SRC="peer2peer.lanprops.png" WIDTH=367 HEIGHT=445 ALT="[figure]">
+</TD></TR><TR BGCOLOR="#00ffff"><TD><I>Figure 28-5:  Properties of a LAN connection</I></TD></TR></TABLE>
+<P>
+The Local Area Connection Properties dialog box lists the network interface card that connects your computer to the LAN. It also lists the <A HREF="../peer2peer/1.htm#1">clients, protocols, and services</A> used for this network connection. The network interface card appears at the top, in the Connect Using box. The clients, protocols, and services are listed in the This Connection Uses the Following Items box, with icons that identify the different types of components:
+<BR><IMG ALIGN=TOP SRC="peer2peer.icons.png" WIDTH=190 HEIGHT=548 ALT="[image]">
+<P>
+For a standard TCP/IP LAN, these four components should be installed (they should appear in your Local Area Connection Properties dialog box) and enabled (each check box contains a check mark):
+<UL>
+<LI >
+<B>Client For Microsoft Networks</B>  Client that enables the computer to communicate with other Windows computers.
+<LI >
+<B>File And Printer Sharing For Microsoft Networks</B>  Service that shares files and printers. This service should be enabled only on a LAN connection, not on an Internet connection.
+<LI >
+<B>QoS Packet Scheduler  </B>Service that determines the precedence of information packets on the LAN based on Quality of Service (QoS) standards.<B></B>
+<LI >
+<B>Internet Protocol (TCP/IP)</B>  Protocol used on the Internet and many LANs.<B></B>
+</UL>
+<P>
+ If you have these four components and your LAN uses TCP/IP, you probably don't need to install any network components. Skip down to the section "<A HREF="../peer2peer/4.htm#1">Checking Your Network Connection</A>" later in this chapter.
+<A NAME="2">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Installing and Configuring an Adapter</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+Chapter 13 described how to install a network interface adapter if your computer doesn't already have one. The <A NAME="ddadapter"><I>adapter</I></A> is the software driver that allows your PC to communicate with the network interface card in your PC. (Network interface cards are also called <I>network adapters</I>.) Every model of network interface card has its own driver, which must be installed so the client software knows how to package information and send it to the network interface card.
+<P>
+Your network adapter appears in the Connect Using box of the Local Area Connection Properties dialog box (Figure 28-5). Click the Configure button to see the <A HREF="../hardware/4.htm#28">Properties dialog box</A> for the network interface card.
+<A NAME="3">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Installing a Client</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+The next step is to install the client component, which identifies the type of network on which your computer will be. When you configure your network connection (or when Windows finds your Plug and Play network interface card), Windows also installs the Client For Microsoft Networks. If a client is installed, it appears in the This Connection Uses The Following Items dialog box in the Local Area Connection Properties dialog box (Figure 28-5).
+<P>
+Because you are installing a peer-to-peer Windows network, the Client For Microsoft Networks is the one you need. (It is similar to the Workstation service that came with Windows NT 4.0 Workstation.) If you mistakenly deleted your Client For Microsoft Networks, or if you need the Client Service For NetWare (which also comes with Windows XP), follow these steps:
+<OL>
+<LI  VALUE=1>
+Display the Local Area Connection Properties dialog box (by clicking Start, right-clicking My Network Places, choosing Properties, right-clicking Local Area Connection, and choosing Properties). Click the General tab (if it's not already selected).
+<LI  VALUE=2>
+Click the Install button. You see the Select Network Component Type dialog box:
+</OL>
+<BR><IMG ALIGN=TOP SRC="peer2peer.snct.png" WIDTH=306 HEIGHT=281 ALT="[image]">
+<OL>
+<LI  VALUE=3>
+Select Client as the type of network component you want to install and click the Add button. You see the Select Network Client dialog box.
+</OL>
+<BR><IMG ALIGN=TOP SRC="peer2peer.clientdb.png" WIDTH=441 HEIGHT=329 ALT="[image]">
+<OL>
+<LI  VALUE=4>
+Choose the network client. If you have a floppy disk or CD with software for another type of client, insert it now and click Have Disk.
+<LI  VALUE=5>
+Click OK. You return to the Local Area Connection Properties dialog box, with the client you just defined listed. You may be prompted to insert the Windows XP CD-ROM.
+<LI  VALUE=6>
+Click OK to save your changes.
+</OL>
+<A NAME="4">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Installing a Protocol</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+When you install Windows, it automatically installs the TCP/IP protocol, in case you want to use TCP/IP for Internet communication. We recommend that you use TCP/IP if you are setting up a new network, since it's the standard.
+<P>
+<TABLE><TR><TD VALIGN="TOP"><IMG SRC="../images/caution.png" ALT="caution" WIDTH=95 HEIGHT=29></TD>
+<TD VALIGN="TOP">You can delete protocols you don't use, but don't delete TCP/IP! We did so, and ended up needing to reinstall Windows in order to get it back.
+
+</TD></TR></TABLE>
+<P>
+Starting with Windows XP, Microsoft no longer supports NetBEUI. If you use NetBEUI for a small network, you have two choices: Install NetBEUI from the Windows XP CD-ROM, even though Microsoft no longer supports it, or upgrade all the computers on your LAN to TCP/IP. Windows XP also comes with support for NetWare's IPX/SPX protocol, which you can easily install as a network component.
+<A NAME="5">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squaregreen6x6.png" HEIGHT=6 WIDTH=6></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Copying NetBEUI Files</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+Before you can install the NetBEUI protocol, you need to follow these steps to copy the files by hand from the Windows XP CD-ROM:
+<OL>
+<LI  VALUE=1>
+Put the Windows XP CD-ROM in the drive. Choose Perform Additional Tasks, and then Browse This CD.
+<LI  VALUE=2>
+In the Explorer window that appears, locate the Valueadd\msft\net\netbeui folder on the CD.
+<LI  VALUE=3>
+Copy the Nbf.sys file into the C:\Windows\System32\Drivers folder (assuming that Windows is installed in C:\Windows).
+<LI  VALUE=4>
+Copy Netnbf.inf into the C:\Windows\Inf folder.
+</OL>
+<P>
+After copying the files, you can install NetBEUI, as described in the next section.
+<A NAME="6">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squaregreen6x6.png" HEIGHT=6 WIDTH=6></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Installing NetBEUI or IPX/SPX</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+Installing a protocol is similar to installing other network components. Follow these steps to install NetBEUI or IPX/SPX:
+<OL>
+<LI  VALUE=1>
+Display the Local Area Connection Properties dialog box (by clicking Start, right-clicking My Network Places, choosing Properties, right-clicking Local Area Connection, and choosing Properties). Click the General tab (if it's not already selected).
+<LI  VALUE=2>
+Click the Add button to display the Select Network Component Type dialog box.
+<LI  VALUE=3>
+Select Protocol and click the Add button. You see the Select Network Protocol dialog box, shown in Figure 28-6.
+</OL>
+<TABLE BORDER=2><TR><TD ALIGN=CENTER>
+<IMG SRC="peer2peer.protocoldb.png" WIDTH=441 HEIGHT=329 ALT="[figure]">
+</TD></TR><TR BGCOLOR="#00ffff"><TD><I>Figure 28-6:  Choose the network protocol.</I></TD></TR></TABLE>
+<OL>
+<LI  VALUE=4>
+Select NetBEUI or NWLink IPX/SPX/NetBIOS Compatible Transport Protocol and click OK.
+<LI  VALUE=5>
+You return to the Local Area Connection Properties dialog box, with the protocol you just defined listed. You may be prompted to insert the Windows XP CD-ROM.
+<LI  VALUE=6>
+Click OK to save your changes.
+</OL>
+<A NAME="7">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squaregreen6x6.png" HEIGHT=6 WIDTH=6></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Setting the Order of Your Protocols</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+When you install a protocol, Windows "binds" the new protocol to all the clients and services you have available--usually File And Printer Sharing For Microsoft Networks and Client For Microsoft Networks. A <A NAME="ddbinding"><I>binding</I></A> tells Windows to use a specific protocol with a specific client or service.
+<P>
+You might not want to use all of your installed protocols to work with all your installed clients and services. You can control which protocols work with which clients and services, and which protocol Windows should try first, by opening the Network Connections window (choose Start | Control Panel, click Network And Internet Connections, and click Network Connections) and choosing Advanced | Advanced Settings. You see the Advanced Settings dialog box, shown in Figure 28-7. Click the Local Area Connection in the Connections box (if it's not already selected). The lower part of the Adapters And Bindings tab shows your client and services for that connection, with your installed protocols listed under each client or service.
+<TABLE BORDER=2><TR><TD ALIGN=CENTER>
+<IMG SRC="peer2peer.whichprot.png" WIDTH=404 HEIGHT=455 ALT="[figure]">
+</TD></TR><TR BGCOLOR="#00ffff"><TD><I>Figure 28-7:  Choosing which protocols to use with each client or service</I></TD></TR></TABLE>
+<P>
+You can switch the order of the protocols, so that the one you plan to use most often appears first. Click the protocol and click the up- or down-pointing arrow button to move it. If you don't plan to use a protocol with a particular service, deselect the check box by the protocol.
+<P>
+<TABLE><TR><TD VALIGN="TOP"><IMG SRC="../images/tip.png" ALT="tip" WIDTH=95 HEIGHT=29></TD>
+<TD VALIGN="TOP">If you connect to the Internet through a hub or router than doesn't provide a firewall between your computers and the Internet, don't use TCP/IP for your file and printer sharing. Instead, on each computer on your LAN, install the IPX/SPX protocol, as described in "Installing a Protocol" earlier in this chapter. Then use the Advanced Settings dialog box on each computer to disable Internet Protocol (TCP/IP) for File And Printer Sharing For Microsoft Networks. Leave IPX/SPX enabled, so that all the computers can use that protocol for file and printer sharing. Leave TCP/IP installed for use by your Internet connection.
+
+</TD></TR></TABLE>
+<A NAME="8">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Configuring the TCP/IP Protocol</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+If you use <A HREF="../peer2peer/1.htm#3">TCP/IP</A> for communication on your LAN, you need to assign an IP address to your computer's network interface card, using static addressing or DHCP. For a laptop, you can also use an alternate configuration, for when the computer isn't connect to its regular network. Follow these steps:
+<OL>
+<LI  VALUE=1>
+Display the Local Area Connection Properties dialog box (by clicking Start, right-clicking My Network Places, choosing Properties, right-clicking Local Area Connection, and choosing Properties). Click the General tab (if it's not already selected).
+<LI  VALUE=2>
+On the list of network components that the connection uses, select Internet Protocol (TCP/IP).
+<LI  VALUE=3>
+Click Properties. You see the Internet Protocol (TCP/IP) Properties dialog box:
+</OL>
+<BR><IMG ALIGN=TOP SRC="peer2peer.tcpipprops.png" WIDTH=404 HEIGHT=455 ALT="[image]">
+<OL>
+<LI  VALUE=4>
+To assign a static IP address, click Use The Following IP Address. In the IP Address box, type the IP address you've chosen. Windows supplies the dots that separate the four parts of the address.
+<LI  VALUE=5>
+In the Subnet Mask box, type <B>255.255.255.0</B>.
+<LI  VALUE=6>
+To use DHCP or APIPA (systems that assign an IP address to your computer when Windows starts up), select Obtain An IP Address Automatically. If your LAN has a DHCP server, Windows will get IP addresses from the server each time you start Windows. If not, Windows will assign itself an address.
+<LI  VALUE=7>
+If you have a laptop that connects to a LAN in a different way when you are not at your desk, click the Alternate Configuration tab. Your IP addressing choices are Automatic Private IP Address (APIPA) or User Configured (a static address).
+<LI  VALUE=8>
+Click OK in each dialog box.
+</OL>
+<A NAME="9">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Installing a Service</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+A service is the last network component you install. It also is the only optional component. Your network can work fine without a service, but no one on the network will be able to share resources, such as hard disks, CD-ROM drives, files, or printers. If you don't want to share resources, don't install any services.
+<P>
+<TABLE><TR><TD VALIGN="TOP"><IMG SRC="../images/note.png" ALT="note" WIDTH=95 HEIGHT=29></TD>
+<TD VALIGN="TOP">Even when a service has been defined, you can add some <A HREF="../sharehw/2.htm#8">security measures</A> to ensure that the resources on your computer are not abused.
+
+</TD></TR></TABLE>
+<P>
+If you are creating a peer-to-peer network of Windows computers, you need the File And Printer Sharing For Microsoft Networks service. This service is installed automatically by the Network Setup Wizard. If you need to install it (or another service) yourself, follow these steps:
+<OL>
+<LI  VALUE=1>
+Display the Local Area Connection Properties dialog box (by clicking Start, right-clicking My Network Places, choosing Properties, right-clicking Local Area Connection, and choosing Properties). Click the General tab (if it's not already selected).
+<LI  VALUE=2>
+Click the Add button to display the Select Network Component Type dialog box.
+<LI  VALUE=3>
+Select Service and click the Add button. You see the Select Network Service dialog box:
+</OL>
+<BR><IMG ALIGN=TOP SRC="peer2peer.servicedb.png" WIDTH=441 HEIGHT=329 ALT="[image]">
+<OL>
+<LI  VALUE=4>
+Select the service you want and click OK.
+<LI  VALUE=5>
+You return to the Local Area Connection Properties dialog box, with the protocol you just defined listed. You may be prompted to insert the Windows XP CD-ROM.
+<LI  VALUE=6>
+Click OK to save your changes.
+</OL>
+<A NAME="10">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Changing the Computer Name, Workgroup, or Domain</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+To see or change your computer's name and which workgroup or domain it is in, follow these steps:
+<OL>
+<LI  VALUE=1>
+Click Start, right-click My Computer, and choose Properties from the menu that appears. You see the System Properties dialog box.
+<LI  VALUE=2>
+Click the Computer Name tab, shown in Figure 28-8.
+</OL>
+<TABLE BORDER=2><TR><TD ALIGN=CENTER>
+<IMG SRC="peer2peer.id.png" WIDTH=419 HEIGHT=486 ALT="[figure]">
+</TD></TR><TR BGCOLOR="#00ffff"><TD><I>Figure 28-8:  Each computer needs a unique name and the name of a workgroup.</I></TD></TR></TABLE>
+<OL>
+<LI  VALUE=3>
+Type a description of the computer in the Computer Description box. This description appears in the My Network Places window.
+<LI  VALUE=4>
+To change the computer name or workgroup, click the Change button to display the Computer Name Changes dialog box:
+</OL>
+<BR><IMG ALIGN=TOP SRC="peer2peer.cnc.png" WIDTH=327 HEIGHT=391 ALT="[image]">
+<OL>
+<LI  VALUE=5>
+In the Computer Name box, type a unique name for the computer.
+<LI  VALUE=6>
+If the computer is part of a workgroup, choose Workgroup in the Member Of section of the dialog box and type the workgroup name in the box. If the computer is part of a domain, choose Domain and type the domain name.
+<LI  VALUE=7>
+Click OK. You may see a message telling you to restart Windows for your changes to take effect.
+</OL>
+<A NAME="11">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Setting Other Network Configuration Options</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+Here are a few other options that you can configure for your LAN connection:
+<UL>
+<LI >
+<B>Showing an icon in the notification area</B>  If you would like to see an icon for the LAN connection in the notification area (the right end of the taskbar, next to the clock), display the Local Area Connection Properties dialog box, click the General tab, and select the Show Icon In Notification Area When Connected check box.
+<LI >
+<B>Wireless networks</B>  Wireless LANs use radio waves rather than cables to communicate. One computer has an <A HREF="../lans/4.htm#3">access point</A>, which serves as the hub for the LAN. The other computers have wireless LAN cards with antennas for communicating to the access point. If your computer has a wireless LAN connection, it appears as a local area connection in the Network Connections window (choose Start | Control Panel, click Network And Internet Connections, and click Network Connections). Right-click the connection and click the Wireless Networks tab to configure the connection.
+<LI >
+<B>Bridging two networks</B>  If you have two network interface cards, and each one connects your computer to a network, your computer can <A NAME="ddbridge"><I>bridge</I></A> (connect together) the two networks. In the Network Connections window, select the two (or more) LANs (by clicking one and C<SMALL>TRL</SMALL>-clicking the others). Choose Advanced | Bridge Connections from the menu bar. You can't bridge a connection that has the Internet Connection Firewall or ICS enabled. Network bridges are useful for connecting a wireless LAN to your regular cable-based LAN. (Network bridging isn't available in Windows XP 64-Bit Edition.)</UL>
+<P>
+<TABLE><TR><TD VALIGN="TOP"><IMG SRC="../images/caution.png" ALT="caution" WIDTH=95 HEIGHT=29></TD>
+<TD VALIGN="TOP">Don't bridge anything to an Internet connection. Doing so would create a wide-open security hole into your LAN!
+
+</TD></TR></TABLE>
+<UL>
+<LI >
+<B>Optional network components</B>  Windows XP comes with several optional services that you can install, but none of them is commonly used on small peer-to-peer networks.
+<LI >
+<B>Authentication using smart cards</B>  Windows can use IEEE 802.1X-standard authentication, which supports smart cards and other access controls. In the Local Area Connection Properties dialog box, click the Authentication tab.
+</UL>
+<P>
+<A HREF="2.htm"  OnMouseOver='whomp(prevb, "sprev");' OnMouseOut='whomp(prevb, "wprev");'
+ title="Previous Section"><IMG NAME=prevb SRC="../images/wprev.png" ALT="Previous" HEIGHT=20 WIDTH=82 BORDER=0></A><!--
+--><A HREF="index.htm" OnMouseOver='whomp(chapb, "schap");' OnMouseOut='whomp(chapb, "wchap");'
+title="Chapter Overview"><IMG SRC="../images/wchap.png" ALT="Chapter" NAME=chapb HEIGHT=20 WIDTH=100 BORDER=0></A><A
+HREF="../index.htm" OnMouseOver='whomp(tocb, "sbook");' OnMouseOut='whomp(tocb, "wbook");' 
+title="Table of Contents"><IMG SRC="../images/wbook.png" ALT="Contents" NAME=tocb HEIGHT=20 WIDTH=94 BORDER=0></A><A
+HREF="../glossary/index.htm" OnMouseOver='whomp(glosb, "sglos");' OnMouseOut='whomp(glosb, "wglos");' 
+title="Glossary"><IMG SRC="../images/wglos.png" ALT="Glossary" NAME=glosb HEIGHT=20 WIDTH=94 BORDER=0></A><!--
+--><A HREF="4.htm"  OnMouseOver='whomp(nextb, "snext");' OnMouseOut='whomp(nextb, "wnext");'
+ title="Next Section"><IMG NAME=nextb SRC="../images/wnext.png" ALT="Next" HEIGHT=20 WIDTH=82 BORDER=0></A>
+<BR>
+</BLOCKQUOTE>
+</BODY>
+</HTML>

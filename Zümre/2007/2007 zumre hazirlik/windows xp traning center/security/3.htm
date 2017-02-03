@@ -1,0 +1,140 @@
+<!doctype html public "-//IETF//DTD HTML//EN">
+<HTML>
+<HEAD>
+<TITLE>Windows XP: The Complete Reference: Network and Internet Security</TITLE>
+<META NAME="GENERATOR" CONTENT="Web-O-Matic Deluxe 4.1">
+<META NAME="AUTHOR" CONTENT="John R. Levine, Margaret Levine Young">
+<META NAME="COPYRIGHT" CONTENTS="Copyright 2001 by The McGraw-Hill Companies. All rights reserved.">
+</HEAD>
+<BODY BACKGROUND="../images/background.png">
+<BLOCKQUOTE>
+<SCRIPT LANGUAGE="JavaScript">
+function whomp(i, file)
+{
+	i.src = "../images/" + file + ".png";
+}
+</SCRIPT>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarered3x3.png" HEIGHT=3 WIDTH=3></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=2>
+Chapter 31: Network and Internet Security
+</FONT></TD>
+</TR>
+</TABLE>
+<BR>
+<A HREF="2.htm"  OnMouseOver='whomp(prev, "sprev");' OnMouseOut='whomp(prev, "wprev");'
+ title="Previous Section"><IMG NAME=prev SRC="../images/wprev.png" ALT="Previous" HEIGHT=20 WIDTH=82 BORDER=0></A><!--
+--><A HREF="index.htm" OnMouseOver='whomp(chap, "schap");' OnMouseOut='whomp(chap, "wchap");'
+title="Chapter Overview"><IMG SRC="../images/wchap.png" ALT="Chapter" NAME=chap HEIGHT=20 WIDTH=100 BORDER=0></A><A
+HREF="../index.htm" OnMouseOver='whomp(toc, "sbook");' OnMouseOut='whomp(toc, "wbook");' 
+title="Table of Contents"><IMG SRC="../images/wbook.png" ALT="Contents" NAME=toc HEIGHT=20 WIDTH=94 BORDER=0></A><A
+HREF="../glossary/index.htm" OnMouseOver='whomp(glos, "sglos");' OnMouseOut='whomp(glos, "wglos");' 
+title="Glossary"><IMG SRC="../images/wglos.png" ALT="Glossary" NAME=glos HEIGHT=20 WIDTH=94 BORDER=0></A><!--
+--><A HREF="4.htm"  OnMouseOver='whomp(next, "snext");' OnMouseOut='whomp(next, "wnext");'
+ title="Next Section"><IMG NAME=next SRC="../images/wnext.png" ALT="Next" HEIGHT=20 WIDTH=82 BORDER=0></A>
+<BR>
+<A NAME="1">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarered10x10.png" HEIGHT=10 WIDTH=10></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=4><B>Securing Your Web Communication with Encryption and Certificates</B></FONT>
+</TD>
+</TR>
+</TABLE></A>
+<P>
+Browsers store <A NAME="ddcertificates"><I>certificates</I></A>, cryptographic data that can identify your computer to remote computers or vice versa. Certificates are issued by <A NAME="ddcertificateauthorities"><I>certificate authorities</I></A>, each of which has its own certificate. Internet Explorer comes with about 30 <A NAME="ddauthoritycertificates"><I>authority certificates</I></A> that they can use to check that the certificates presented to your computer by other sites are, in fact, issued by known certificate authorities. To provide secure communication with a remote Web site, Internet Explorer uses <A NAME="ddssl"><I>SSL</I></A> (Secure Sockets Layer) to provide a variation of the standard HTTP Web protocol, called <A NAME="ddhttps"><I>HTTPS</I></A>. Web servers that use HTTPS are called <A NAME="ddsecureservers"><I>secure servers</I></A>.
+<P>
+You can also acquire a <A NAME="ddpersonalcertificate"><I>personal certificate</I></A> to use to identify yourself when your Internet Explorer or Navigator contacts a Web site. The most widely used authorities for personal certificates are VeriSign, at <A HREF="http://www.verisign.com"><B>http://www.verisign.com</B></A> and Thawte (which is owned by VeriSign) at <A HREF="http://www.thawte.com"><B>http://www.thawte.com</B></A>. See RSA Data Security's list of questions and answers at their Web site at <A HREF="http://www.rsasecurity.com/rsalabs/faq"><B>http://www.rsasecurity.com/rsalabs/faq</B></A> for more information about certificates.
+<P>
+New applets usually are digitally signed by their authors, that is, each applet includes certificate information that identifies the applet's author and verifies that the applet wasn't tampered with since the author signed it. The only way that a software publisher can create an officially signed application is to participate in Microsoft's very costly and involved certification procedures, which we expect that many smaller software vendors won't be able to afford. Unfortunately, the high cost of Microsoft's certification process means that many perfectly safe applets won't be signed and will trigger a warning message when you install them.
+<A NAME="2">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Browsing the Web Securely</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+Internet Explorer handles communication security by using SSL (Secure Sockets Layer) to encrypt messages sent to and from remote servers and certificates to verify who the party is at the other end of a connection. For example, you use this type of security when you place a credit card order with a Web-based retailer that uses a secure Web server. For the most part, SSL works invisibly, with all the security validation happening automatically. Internet Explorer, by default, warns you when you switch between secure and normal pages with dialog boxes like this:
+<BR><IMG ALIGN=TOP SRC="security.iealert.png" WIDTH=345 HEIGHT=178 ALT="[image]">
+<P>
+(We find these warnings annoying and turn them off.) You can tell whether the current page is secure in the following ways:
+<UL>
+<LI >
+Look at the URL for the page in the browser's Address or Location box to see whether the page's address starts with <B>https://</B> rather than <B>http://</B>.
+<LI >
+Look at the status bar at the bottom of the browser window to see whether a little lock icon appears, indicating that the connection is secure.
+</UL>
+<P>
+Whenever your browser opens an HTTPS connection to a server that supports SSL, the server presents a certificate to your computer. If the certificate is validated by one of the authority certificates known to your browser, and the name on the certificate matches the name of the Web site, the browser uses the connection and displays Web pages as usual. If either of those checks fails, the Web browser warns you and gives you the option to continue. You see a Security Alert or similar dialog box when your browser can't validate a remote site's certificate. If you trust the source of the file that you are downloading, you can tell Windows to continue and use the connection despite the warning.
+<A NAME="3">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Using Object Certificates When Downloading Files</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+Whenever Internet Explorer retrieves a Web page that uses a hitherto unknown ActiveX or Java applet, Internet Explorer checks to see whether your <A HREF="../security/2.htm#4">download security settings</A> permit you to download it. If your settings don't permit the download, Internet Explorer warns you and doesn't download the file. You see the dialog box shown here:
+<BR><IMG ALIGN=TOP SRC="security.noactivex.png" WIDTH=675 HEIGHT=126 ALT="[image]">
+<P>
+Unless a site is in the Trusted Zone (in which case Internet Explorer accepts the applet without question), Internet Explorer checks the certificate with which the program is signed and displays the Security Warning dialog box, as shown in Figure 31-3. You see who the signer is and who verified the signature. If the signer is someone you're inclined to trust, such as a large reputable organization or someone you know personally, click Yes to accept the applet. If you expect always to accept applets from this signer, click the Always Trust Content From <I>ThisSigner</I><I>'sName</I> check box at the bottom of the dialog box to tell Internet Explorer not to ask about signatures from this signer in the future. (If you check the box and later change your mind, the list of signers you've checked is in the Internet Properties dialog box; click the Content tab and click Publishers to examine and change the list.)
+<TABLE BORDER=2><TR><TD ALIGN=CENTER>
+<IMG SRC="security.appcert.png" WIDTH=441 HEIGHT=343 ALT="[figure]">
+</TD></TR><TR BGCOLOR="#00ffff"><TD><I>Figure 31-3:  The Security Warning dialog box displays certificate information for an ActiveX applet.</I></TD></TR></TABLE>
+<A NAME="4">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Managing Certificates from Certificate Publishers</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+If you expect to download many programs (or display Web pages that contain applets), you will end up with a collection of certificates with which Internet Explorer can verify the sources of the programs. You can see lists of the certificates that you have received. Click the Content tab on the Internet Options dialog box. Click the buttons in the Certificates section of the dialog box.
+<P>
+In Internet Explorer, choose Tools | Internet Options from the menu to see the Internet Options dialog box. Clicking the Content tab and then the Publishers button displays the Certificates dialog box with the Trusted Publishers tab selected, as shown in Figure 31-4. The dialog box lists certificates for software publishers that you have told your browsers to trust (by clicking the Always Trust Content From check box in the Security Warning dialog box, shown in Figure 31-3). New certificates are added when you download authenticated software from the Internet. You can delete a certificate from this list by selecting it and clicking Remove.
+<TABLE BORDER=2><TR><TD ALIGN=CENTER>
+<IMG SRC="security.authenticode.png" WIDTH=509 HEIGHT=471 ALT="[figure]">
+</TD></TR><TR BGCOLOR="#00ffff"><TD><I>Figure 31-4:  Viewing certificates from software publishers</I></TD></TR></TABLE>
+<A NAME="5">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Managing Your Personal Certificates</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+You can get your own certificate to identify yourself to secure remote Web servers that demand user certificates for identification. See "<A HREF="../security/5.htm#2">Getting a Certificate</A>" later in this chapter for how to get your own certificate for use both on the Web and in sending and receiving secure e-mail.
+<P>
+To see what personal certificates are installed in Internet Explorer, choose Tools | Options, click the Content tab, and click the Certificates button to display the Certificates dialog box with the Personal tab selected, shown in Figure 31-5. You see a list of the certificates you have installed on your computer that you can use to identify yourself.
+<TABLE BORDER=2><TR><TD ALIGN=CENTER>
+<IMG SRC="security.mycert.png" WIDTH=509 HEIGHT=471 ALT="[figure]">
+</TD></TR><TR BGCOLOR="#00ffff"><TD><I>Figure 31-5:  The Certificates dialog box showing your own certificates</I></TD></TR></TABLE>
+<P>
+If you receive a certificate and store it on your disk, click Import to read the certificate and include it on the list in this dialog box. Windows can read certificates stored in personal certificate files (with the extension .pfx). You can export a certificate and its associated information to a personal certificate file; select the certificate from the list on the Certificates dialog box and click Export.
+<P>
+<TABLE><TR><TD VALIGN="TOP"><IMG SRC="../images/tip.png" ALT="tip" WIDTH=95 HEIGHT=29></TD>
+<TD VALIGN="TOP">If you get a certificate in Internet Explorer, you can export it to a file and then import the certificate from that file into any other certificate-capable web browser (like Netscape) or vice-versa.
+
+</TD></TR></TABLE>
+<P>
+<A HREF="2.htm"  OnMouseOver='whomp(prevb, "sprev");' OnMouseOut='whomp(prevb, "wprev");'
+ title="Previous Section"><IMG NAME=prevb SRC="../images/wprev.png" ALT="Previous" HEIGHT=20 WIDTH=82 BORDER=0></A><!--
+--><A HREF="index.htm" OnMouseOver='whomp(chapb, "schap");' OnMouseOut='whomp(chapb, "wchap");'
+title="Chapter Overview"><IMG SRC="../images/wchap.png" ALT="Chapter" NAME=chapb HEIGHT=20 WIDTH=100 BORDER=0></A><A
+HREF="../index.htm" OnMouseOver='whomp(tocb, "sbook");' OnMouseOut='whomp(tocb, "wbook");' 
+title="Table of Contents"><IMG SRC="../images/wbook.png" ALT="Contents" NAME=tocb HEIGHT=20 WIDTH=94 BORDER=0></A><A
+HREF="../glossary/index.htm" OnMouseOver='whomp(glosb, "sglos");' OnMouseOut='whomp(glosb, "wglos");' 
+title="Glossary"><IMG SRC="../images/wglos.png" ALT="Glossary" NAME=glosb HEIGHT=20 WIDTH=94 BORDER=0></A><!--
+--><A HREF="4.htm"  OnMouseOver='whomp(nextb, "snext");' OnMouseOut='whomp(nextb, "wnext");'
+ title="Next Section"><IMG NAME=nextb SRC="../images/wnext.png" ALT="Next" HEIGHT=20 WIDTH=82 BORDER=0></A>
+<BR>
+</BLOCKQUOTE>
+</BODY>
+</HTML>

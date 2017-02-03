@@ -1,0 +1,272 @@
+<!doctype html public "-//IETF//DTD HTML//EN">
+<HTML>
+<HEAD>
+<TITLE>Windows XP: The Complete Reference: Sharing Drives and Printers on a LAN</TITLE>
+<META NAME="GENERATOR" CONTENT="Web-O-Matic Deluxe 4.1">
+<META NAME="AUTHOR" CONTENT="John R. Levine, Margaret Levine Young">
+<META NAME="COPYRIGHT" CONTENTS="Copyright 2001 by The McGraw-Hill Companies. All rights reserved.">
+</HEAD>
+<BODY BACKGROUND="../images/background.png">
+<BLOCKQUOTE>
+<SCRIPT LANGUAGE="JavaScript">
+function whomp(i, file)
+{
+	i.src = "../images/" + file + ".png";
+}
+</SCRIPT>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarered3x3.png" HEIGHT=3 WIDTH=3></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=2>
+Chapter 29: Sharing Drives and Printers on a LAN
+</FONT></TD>
+</TR>
+</TABLE>
+<BR>
+<A HREF="2.htm"  OnMouseOver='whomp(prev, "sprev");' OnMouseOut='whomp(prev, "wprev");'
+ title="Previous Section"><IMG NAME=prev SRC="../images/wprev.png" ALT="Previous" HEIGHT=20 WIDTH=82 BORDER=0></A><!--
+--><A HREF="index.htm" OnMouseOver='whomp(chap, "schap");' OnMouseOut='whomp(chap, "wchap");'
+title="Chapter Overview"><IMG SRC="../images/wchap.png" ALT="Chapter" NAME=chap HEIGHT=20 WIDTH=100 BORDER=0></A><A
+HREF="../index.htm" OnMouseOver='whomp(toc, "sbook");' OnMouseOut='whomp(toc, "wbook");' 
+title="Table of Contents"><IMG SRC="../images/wbook.png" ALT="Contents" NAME=toc HEIGHT=20 WIDTH=94 BORDER=0></A><A
+HREF="../glossary/index.htm" OnMouseOver='whomp(glos, "sglos");' OnMouseOut='whomp(glos, "wglos");' 
+title="Glossary"><IMG SRC="../images/wglos.png" ALT="Glossary" NAME=glos HEIGHT=20 WIDTH=94 BORDER=0></A><!--
+--><A HREF="4.htm"  OnMouseOver='whomp(next, "snext");' OnMouseOut='whomp(next, "wnext");'
+ title="Next Section"><IMG NAME=next SRC="../images/wnext.png" ALT="Next" HEIGHT=20 WIDTH=82 BORDER=0></A>
+<BR>
+<A NAME="1">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarered10x10.png" HEIGHT=10 WIDTH=10></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=4><B>Sharing Your Disk Drives and Folders with Others</B></FONT>
+</TD>
+</TR>
+</TABLE></A>
+<P>
+You might want to share the files stored on your computer's disk drives in a number of ways. You might want to permit all the computers on the LAN to access a Zip drive, Jaz drive, or CD-ROM writer, so that you don't have to buy a drive for each computer. You can even permit other users of the LAN to read files in a certain folder on a particular hard drive. For instance, give read-only access to the folder that contains the company personnel policies, so that you don't waste space on each computer saving the same files (and time updating numerous copies of the files). You can allow some users to be able to read and write to one file, perhaps the one containing the database in which orders are entered, so that the information each user sees is always the most up-to-date information available. Maybe there is one shared folder on your hard drive that you want other people to be able to use--maybe you just want to share everything--you want to allow everyone on the LAN to read and write to your hard drive.
+<P>
+Before anyone else can read or write files on your disk drives, you must configure either the entire drive or specific folders as sharable. You choose a <A NAME="ddsharename"><I>share name</I></A> for the drive or folder--the name that you want to appear in Windows Explorer as <I>name</I> on <I>computer name</I>. For example, if your computer is named Laptop, and you share your CD-ROM (which is drive D on your computer) with the share name CD-ROM Drive, it appears as CD-ROM Drive On Laptop in Windows Explorer on other people's computers. You can provide a comment to further identify a shared drive or folder. The comment is visible only when the properties are displayed, however.
+<P>
+When you make a drive or folder sharable, you also decide what access to specify--at least, you can if you have Windows XP Professional (Windows XP Home Edition eliminates many security features). There are alternatives to sharing a whole drive with full read and write access:
+<UL>
+<LI >
+You can share just a folder.
+<LI >
+You can specify read-only rights.
+<LI >
+You can choose the users who can access the drive.
+</UL>
+<A NAME="2">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Enabling Security for Shared Resources</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+By default, Windows XP enables <A HREF="../users/2.htm#7"><I>Simple File Sharing</I></A>, which means that when you share a drive or folder, you share it with everyone in your network workgroup. If you want to enable any security measures, such as permitting only some users access to the drive or preventing users from writing to the drive (allowing only read permission), you have to disable Simple File Sharing. You can't disable Simple File Sharing in Windows XP Home Edition, only in Windows XP Professional.
+<P>
+Follow these steps to change the Simple File Sharing setting on your computer:
+<OL>
+<LI  VALUE=1>
+Run Windows Explorer (choose Start | My Computer, for example).
+<LI  VALUE=2>
+Choose Tools | Folder Options to see the Folder Options dialog box.
+<LI  VALUE=3>
+Click the View tab.
+<LI  VALUE=4>
+Scroll to the bottom of the Advanced Settings box to find the Use Simple File Sharing check box (see Figure 29-3).
+</OL>
+<TABLE BORDER=2><TR><TD ALIGN=CENTER>
+<IMG SRC="sharehw.folderview.png" WIDTH=386 HEIGHT=475 ALT="[figure]">
+</TD></TR><TR BGCOLOR="#00ffff"><TD><I>Figure 29-3:  Scroll to the bottom to see the Use Simple File Sharing check box.</I></TD></TR></TABLE>
+<OL>
+<LI  VALUE=5>
+Click the check box to change the setting. When Use Simple File Sharing is selected, you will not see any security options when you share a drive or folder.
+<LI  VALUE=6>
+Click OK to close the dialog box.
+</OL>
+<P>
+When Simple File Sharing is disabled you see security options when you share a drive or folder. However, the options you see depend on whether the drive that you are sharing is formatted with NTFS or FAT32.
+<A NAME="3">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Making a Drive Sharable</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+Follow these steps to share a drive or folder:
+<OL>
+<LI  VALUE=1>
+Run <A HREF="../files/3.htm#1">Windows Explorer</A> and display the name of the drive or folder you want to share with others.
+</OL>
+<P>
+<TABLE><TR><TD VALIGN="TOP"><IMG SRC="../images/note.png" ALT="note" WIDTH=95 HEIGHT=29></TD>
+<TD VALIGN="TOP">If you open the folder you want to share, you can use the Share This Folder link in the task pane to share it.
+
+</TD></TR></TABLE>
+<OL>
+<LI  VALUE=2>
+Right-click the drive or folder you want to share and choose Sharing And Security from the shortcut menu. (If you don't see Sharing And Security, you need to <A HREF="../sharehw/1.htm#1">install File And Printer Sharing For Microsoft Networks from the Network dialog box</A>.) You see the Properties dialog box for the drive or folder, with the Sharing tab selected. Which options appear on the Sharing tab depend on whether you are using simple file sharing (shown in Figure 29-4) or not (shown in Figure 29-5). If have simple file sharing and you have chosen to share a whole drive, you will see a link warning you that sharing the root of the drive is risky. Click the link to see Figure 29-4.
+</OL>
+<TABLE BORDER=2><TR><TD ALIGN=CENTER>
+<IMG SRC="sharehw.simpleprop.png" WIDTH=367 HEIGHT=509 ALT="[figure]">
+</TD></TR><TR BGCOLOR="#00ffff"><TD><I>Figure 29-4:  Sharing a disk drive with simple file sharing</I></TD></TR></TABLE>
+<TABLE BORDER=2><TR><TD ALIGN=CENTER>
+<IMG SRC="sharehw.driveprop.png" WIDTH=367 HEIGHT=455 ALT="[figure]">
+</TD></TR><TR BGCOLOR="#00ffff"><TD><I>Figure 29-5:  Sharing a disk drive with simple file sharing turned off</I></TD></TR></TABLE>
+<OL>
+<LI  VALUE=3>
+Click the Shared This Folder radio button or click the Share This Folder On The Network check box.
+<LI  VALUE=4>
+Type the share name into the Share Name box. A share name can be from one to 12 characters long, including spaces.
+<LI  VALUE=5>
+If you want the drive or folder to be available to everyone in your workgroup, click OK to close the dialog box. If you want to add some security to the shared resource, see the next two sections, depending on whether you use Simple File Sharing.
+</OL>
+<P>
+When you close the dialog box, you see a tiny hand as part of the drive or folder icon, signifying that the resource is shared. Other users can use your files by navigating to them through My Network Places. If they use the drive or folder often, they have the option of <A HREF="../sharehw/2.htm#4">mapping the drive</A>. If you decide to stop sharing of the drive, open the Properties dialog box for the drive and select the Do Not Share This Folder radio button or deselect the Share This Folder On The Network check box on the Sharing tab.
+<P>
+If you make a folder sharable, the shared folder looks like a whole drive from other computers on the LAN, but other people can see and use only the shared folder.
+<A NAME="4">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Controlling Access with Simple File Sharing Security</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+If you are using Simple File Sharing (and if you haven't changed the option, it is on by default), you have only one security option. You can select the Allow Network Users To Change My Files check box when you share a folder or drive to make files on the shared resource read-only--other users will be able to open files, but not save changes to your drive. Leave this check box blank if you want other users to be able to save changes to files on your disk. (This setting works for Windows XP Home Edition, or for Windows XP Professional systems that are not logged onto a domain-based LAN.)
+<A NAME="5">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Controlling Access When Simple File Sharing Is Disabled</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+When Simple File Sharing is disabled, you see different options on the Sharing tab of the Properties dialog box for a drive or folder. You can control how many people can access the drive or folder, how files are saved for offline use, and which users have permission to do what.
+<P>
+<A NAME="ddpermissions"><I>Permissions</I></A> tell Windows what a specific user account or user group is allowed to do with a specific drive, folder, or file. (See <A HREF="../users/index.htm">Chapter 6</A> for information about user and group accounts.) You can set permissions for everyone or set permissions for individual users (however it is preferable to set permissions for groups, rather than individual users, because groups are easier to manage as individuals come and go). The permissions that you can set depend on the file system of the disk on which the shared drive or folder. NTFS disks (or partitions) support more security options than other formats (FAT32 and FAT). See the section "<A HREF="../harddisks/1.htm#7">What Are FAT, FAT32, and NTFS?</A>" in Chapter 32 for information about file systems.
+<A NAME="6">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squaregreen6x6.png" HEIGHT=6 WIDTH=6></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Setting User Permissions for FAT32 Drives</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+For a shared FAT32 (Windows Me/9x-style) drive or a shared folder stored on an FAT32 drive or partition, you have limited options for setting permissions. You set permissions on the Permissions dialog box, shown in Figure 29-6, which you display by clicking the Permissions button on the Sharing tab of the Properties dialog box for the shared drive or folder. In the Permissions dialog box, select the group or user and use the check boxes in the Permissions box to turn permissions on or off. You see the following permissions options:
+<TABLE BORDER=2><TR><TD ALIGN=CENTER>
+<IMG SRC="sharehw.permissions.png" WIDTH=367 HEIGHT=450 ALT="[figure]">
+</TD></TR><TR BGCOLOR="#00ffff"><TD><I>Figure 29-6:  Click the user or group in the Group Or User Names box to see the permissions for that user or group.</I></TD></TR></TABLE>
+<UL>
+<LI >
+<B>Full Control  </B>Allows the user or group to read, create, change, delete files, etc. Full Control allows network users to do whatever the computer owner can do with the shared folder or drive.
+<LI >
+<B>Change  </B>Prevents users from deleting folders and files, changing permissions, or taking ownership for a file or folder.
+<LI >
+<B>Read  </B>Allows users only to open and read files.
+</UL>
+<P>
+Although each option has an Allow and Deny check box, there are really only three available options: Full Control, Change, or Read. If you click a Deny check box, other settings will change to reflect the option that is denied--for instance if you deny full control, then change and read are also denied.
+<P>
+You can add or remove users and groups listed by using the Add and Remove buttons. When you click Add, you see the Select Users Or Groups dialog box, shown here:
+<BR><IMG ALIGN=TOP SRC="sharehw.selectusers.png" WIDTH=464 HEIGHT=254 ALT="[image]">
+<P>
+The From This Location box shows the name of your computer. Type a user account or group account name into the box at the bottom of the dialog box and click OK.
+<A NAME="7">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squaregreen6x6.png" HEIGHT=6 WIDTH=6></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Setting User Permissions for NTFS Drives</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+For shared NTFS drives and folders that are stored on an NTFS drive or partition, you have more options when setting permissions for LAN and local users. The Properties dialog box for the shared drive or folder includes a Security tab that you can click to set permissions, as shown in Figure 29-7.
+<TABLE BORDER=2><TR><TD ALIGN=CENTER>
+<IMG SRC="sharehw.ntfsperm.png" WIDTH=367 HEIGHT=455 ALT="[figure]">
+</TD></TR><TR BGCOLOR="#00ffff"><TD><I>Figure 29-7:  The Security tab of the Properties dialog box (for NTFS only)</I></TD></TR></TABLE>
+<P>
+<TABLE><TR><TD VALIGN="TOP"><IMG SRC="../images/note.png" ALT="note" WIDTH=95 HEIGHT=29></TD>
+<TD VALIGN="TOP">If the shared drive is formatted with NTFS, you should set permissions on the Security tab, rather than by clicking the Permissions button on the Sharing tab.
+
+</TD></TR></TABLE>
+<P>
+The Security tab allows more specific permissions settings but works the same way as the Permissions dialog box described in the previous section--first select a user or group; then define permissions. The following permissions are available:
+<UL>
+<LI >
+<B>Full Control  </B>Allows the user or group to read, create, change, and delete files--whatever the computer owner can do with the shared folder or drive.
+<LI >
+<B>Modify  </B>Prevents users from deleting folders and files, changing permissions, or taking ownership for a file or folder.
+<LI >
+<B>Read &amp; Execute  </B>Allows users to read and run files but not to change the contents of the shared drive or folder.
+<LI >
+<B>List Folder Contents  </B>Allows users to see the contents of the folder.
+<LI >
+<B>Read </B>Allows users to see the contents of the drive or folder and open files but not to save changes.
+<LI >
+<B>Write  </B>Allows users to write to the drive or folder but not to open files or see a list of files already there.
+<LI >
+<B>Special Permissions  </B>Click the Advanced button to apply special permissions.
+</UL>
+<P>
+<TABLE><TR><TD VALIGN="TOP"><IMG SRC="../images/note.png" ALT="note" WIDTH=95 HEIGHT=29></TD>
+<TD VALIGN="TOP">If you need to know more about permissions on a network, see <I>Windows .NET Server: The Complete Reference</I>, by Kathy Ivens (published by Osborne/McGraw-Hill), which discusses domain-based permissions. If you need complicated permissions, you probably need to think about creating a domain-based LAN.
+
+</TD></TR></TABLE>
+<A NAME="8">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squaregreen6x6.png" HEIGHT=6 WIDTH=6></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Limiting the Number of Users for Your Drive or Folder [limiting]<TT></TT></B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+In the User Limit section of the Sharing tab of the Properties dialog box for a shared drive or folder, choose Maximum Allowed (which allows as many people to connect as the network allows) or Allow This Number of Users and specify the number allowed at one time.
+<A NAME="9">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squaregreen6x6.png" HEIGHT=6 WIDTH=6></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Controlling Offline Files</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+Caching affects how files stored on your computer are saved for offline use on another network computer. Click the Caching button on the Properties dialog box for the shared drive or folder to see the Caching Settings dialog box, shown in Figure 29-8. The Allow Caching Of Files In This Shared Folder check box controls whether files are stored on the other computers for use when your computer isn't available.
+<TABLE BORDER=2><TR><TD ALIGN=CENTER>
+<IMG SRC="sharehw.caching.png" WIDTH=416 HEIGHT=321 ALT="[figure]">
+</TD></TR><TR BGCOLOR="#00ffff"><TD><I>Figure 29-8:  Caching options affect files saved for offline use.</I></TD></TR></TABLE>
+<P>
+If you allow caching, you can choose from one of the three caching settings:
+<UL>
+<LI >
+<B>Automatic Caching Of Documents  </B>Makes all open files in the shared folder or drive available offline automatically.
+<LI >
+<B>Automatic Caching Of Programs And Documents  </B>When you use this option, permissions need to be restricted to allow only Read access. This option opens files that cannot be changed without accessing the network version and thus reduces network traffic<B>.</B>
+<LI >
+<B>Manual Caching Of Documents  </B>The user must identify files for <A HREF="../mobile/1.htm#2">offline use</A>. This is the default setting.
+</UL>
+<P>
+<A HREF="2.htm"  OnMouseOver='whomp(prevb, "sprev");' OnMouseOut='whomp(prevb, "wprev");'
+ title="Previous Section"><IMG NAME=prevb SRC="../images/wprev.png" ALT="Previous" HEIGHT=20 WIDTH=82 BORDER=0></A><!--
+--><A HREF="index.htm" OnMouseOver='whomp(chapb, "schap");' OnMouseOut='whomp(chapb, "wchap");'
+title="Chapter Overview"><IMG SRC="../images/wchap.png" ALT="Chapter" NAME=chapb HEIGHT=20 WIDTH=100 BORDER=0></A><A
+HREF="../index.htm" OnMouseOver='whomp(tocb, "sbook");' OnMouseOut='whomp(tocb, "wbook");' 
+title="Table of Contents"><IMG SRC="../images/wbook.png" ALT="Contents" NAME=tocb HEIGHT=20 WIDTH=94 BORDER=0></A><A
+HREF="../glossary/index.htm" OnMouseOver='whomp(glosb, "sglos");' OnMouseOut='whomp(glosb, "wglos");' 
+title="Glossary"><IMG SRC="../images/wglos.png" ALT="Glossary" NAME=glosb HEIGHT=20 WIDTH=94 BORDER=0></A><!--
+--><A HREF="4.htm"  OnMouseOver='whomp(nextb, "snext");' OnMouseOut='whomp(nextb, "wnext");'
+ title="Next Section"><IMG NAME=nextb SRC="../images/wnext.png" ALT="Next" HEIGHT=20 WIDTH=82 BORDER=0></A>
+<BR>
+</BLOCKQUOTE>
+</BODY>
+</HTML>

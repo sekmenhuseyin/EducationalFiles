@@ -1,0 +1,120 @@
+<!doctype html public "-//IETF//DTD HTML//EN">
+<HTML>
+<HEAD>
+<TITLE>Windows XP: The Complete Reference: Registering Programs and File Types</TITLE>
+<META NAME="GENERATOR" CONTENT="Web-O-Matic Deluxe 4.1">
+<META NAME="AUTHOR" CONTENT="John R. Levine, Margaret Levine Young">
+<META NAME="COPYRIGHT" CONTENTS="Copyright 2001 by The McGraw-Hill Companies. All rights reserved.">
+</HEAD>
+<BODY BACKGROUND="../images/background.png">
+<BLOCKQUOTE>
+<SCRIPT LANGUAGE="JavaScript">
+function whomp(i, file)
+{
+	i.src = "../images/" + file + ".png";
+}
+</SCRIPT>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarered3x3.png" HEIGHT=3 WIDTH=3></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=2>
+Chapter 38: Registering Programs and File Types
+</FONT></TD>
+</TR>
+</TABLE>
+<BR>
+<A HREF="0.htm"  OnMouseOver='whomp(prev, "sprev");' OnMouseOut='whomp(prev, "wprev");'
+ title="Previous Section"><IMG NAME=prev SRC="../images/wprev.png" ALT="Previous" HEIGHT=20 WIDTH=82 BORDER=0></A><!--
+--><A HREF="index.htm" OnMouseOver='whomp(chap, "schap");' OnMouseOut='whomp(chap, "wchap");'
+title="Chapter Overview"><IMG SRC="../images/wchap.png" ALT="Chapter" NAME=chap HEIGHT=20 WIDTH=100 BORDER=0></A><A
+HREF="../index.htm" OnMouseOver='whomp(toc, "sbook");' OnMouseOut='whomp(toc, "wbook");' 
+title="Table of Contents"><IMG SRC="../images/wbook.png" ALT="Contents" NAME=toc HEIGHT=20 WIDTH=94 BORDER=0></A><A
+HREF="../glossary/index.htm" OnMouseOver='whomp(glos, "sglos");' OnMouseOut='whomp(glos, "wglos");' 
+title="Glossary"><IMG SRC="../images/wglos.png" ALT="Glossary" NAME=glos HEIGHT=20 WIDTH=94 BORDER=0></A><!--
+--><A HREF="2.htm"  OnMouseOver='whomp(next, "snext");' OnMouseOut='whomp(next, "wnext");'
+ title="Next Section"><IMG NAME=next SRC="../images/wnext.png" ALT="Next" HEIGHT=20 WIDTH=82 BORDER=0></A>
+<BR>
+<A NAME="1">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarered10x10.png" HEIGHT=10 WIDTH=10></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=4><B>What Is the Registry?</B></FONT>
+</TD>
+</TR>
+</TABLE></A>
+<P>
+Early versions of Windows scattered configuration settings among dozens of different files. Many settings were stored in <A HREF="../internals/1.htm#5">C:\Windows\Win.ini</A> and <A HREF="../internals/1.htm#6">C:\Windows\System.ini</A>, but programs were as likely to use their own <A HREF="../internals/1.htm#4">INI files</A> as the standard ones, and there was no consistency in the way that INI files were created and maintained. In Windows 95, Microsoft created the <A NAME="ddregistry"><I>Registry</I></A>, a single centralized database in which programs keep their setup information. The Registry contains all of the information that the INI files contained, as well as other settings from around the system. All subsequent versions of Windows store configuration information settings in the Registry, and the win.ini and system.ini files remain only for backwards compatibility with older programs.
+<P>
+The Registry contains configuration settings for Windows itself, as well as for most programs you have installed. It also includes <A HREF="../users/index.htm">user profile</A> information, and information about each hardware component.
+<P>
+Most of the time, the Registry works automatically in the background, but in a few circumstances, you may want to edit it yourself.
+<A NAME="2">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Where Is the Registry Stored?</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+The Registry is stored in a group of files in your C:\Windows\System32\Config folder (assuming that Windows XP is installed on C:). The files with no extension (Default, Software, System, Sam, Security, Userdiff) contain the actual Registry entries. The .sav files are copies of the corresponding files made when you installed Windows. User profile information is stored in a file named Ntuser.dat in each user's folder in C:\Documents And Settings.
+<P>
+<TABLE><TR><TD VALIGN="TOP"><IMG SRC="../images/note.png" ALT="note" WIDTH=95 HEIGHT=29></TD>
+<TD VALIGN="TOP">Although Registry Editor looks and works the same as the Windows Me/9x Registry Editor, the location and format of the Registry files are quite different. The Windows XP Registry system is based on Windows 2000/NT and is much larger than its Windows Me/9x equivalent.
+
+</TD></TR></TABLE>
+<A NAME="3">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>What Are Hives and Keys?</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+The Registry is organized much like the Windows file system. The Registry contains a set of <A NAME="ddhives"><I>hives</I></A>, which are like folders, inside of which are stored <A NAME="ddkeys"><I>keys</I></A>. Additional keys can be stored within keys. Each key defines a setting or behavior for Windows or an installed application. Key pathnames are written with reverse slashes between them, much like filenames, so a typical key name is
+<P><PRE>
+HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\Sysaudio
+</PRE>
+<P>
+This key is in the HKEY_LOCAL_MACHINE hive, which contains a key named System, which in turn contains a key named CurrentControlSet, which contains a key named Services, which contains a key named Sysaudio. Each key can have one or more <A NAME="ddvalues"><I>values</I></A>, each of which consists of a name, a data type, and some data. A key at any level can contain any number of values, so in the example, values can be associated with HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services or HKEY_LOCAL_MACHINE\System. (In practice, most of the values are stored at the lowest level or next lowest level.)
+<P>
+The data type of a value can be REG_BINARY (a series of binary or hexadecimal digits), REG_DWORD (four-byte numeric value, also called a <A NAME="dddword"><I>DWORD</I></A>), REG_EXPAND_SZ (variable-length <A NAME="ddstring"><I>string</I></A>, or text), REG_SZ (fixed-length string), REG_MULTI_SZ (list of strings, separated by spaces, commas, or other punctuation), or REG_FULL_RESOURCE_DESCRIPTOR (larger grouping of information for storing a resource list, usually for a hardware driver). You never change the data type of a value: you change the data. (But only if you are <I>sure</I> you know what you are doing!)
+<A NAME="4">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>The Top-Level Hives</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+The Registry comes with these hives at the top level of the tree structure (directly under the My Computer entry in the Registry):
+<UL>
+<LI >
+<B>HKEY_CLASSES_ROOT</B>  File associations for file types.
+<LI >
+<B>HKEY_CURRENT_USER</B>  Configuration information for the current user account.
+<LI >
+<B>HKEY_LOCAL_MACHINE</B>  Configuration information about the computer, for all users.
+<LI >
+<B>HKEY_USERS</B>  Configuration information for all user accounts.
+<LI >
+<B>HKEY_CURRENT_CONFIG</B>  Hardware profile information for the hardware profile that your computer uses at startup.
+</UL>
+<P>
+<A HREF="0.htm"  OnMouseOver='whomp(prevb, "sprev");' OnMouseOut='whomp(prevb, "wprev");'
+ title="Previous Section"><IMG NAME=prevb SRC="../images/wprev.png" ALT="Previous" HEIGHT=20 WIDTH=82 BORDER=0></A><!--
+--><A HREF="index.htm" OnMouseOver='whomp(chapb, "schap");' OnMouseOut='whomp(chapb, "wchap");'
+title="Chapter Overview"><IMG SRC="../images/wchap.png" ALT="Chapter" NAME=chapb HEIGHT=20 WIDTH=100 BORDER=0></A><A
+HREF="../index.htm" OnMouseOver='whomp(tocb, "sbook");' OnMouseOut='whomp(tocb, "wbook");' 
+title="Table of Contents"><IMG SRC="../images/wbook.png" ALT="Contents" NAME=tocb HEIGHT=20 WIDTH=94 BORDER=0></A><A
+HREF="../glossary/index.htm" OnMouseOver='whomp(glosb, "sglos");' OnMouseOut='whomp(glosb, "wglos");' 
+title="Glossary"><IMG SRC="../images/wglos.png" ALT="Glossary" NAME=glosb HEIGHT=20 WIDTH=94 BORDER=0></A><!--
+--><A HREF="2.htm"  OnMouseOver='whomp(nextb, "snext");' OnMouseOut='whomp(nextb, "wnext");'
+ title="Next Section"><IMG NAME=nextb SRC="../images/wnext.png" ALT="Next" HEIGHT=20 WIDTH=82 BORDER=0></A>
+<BR>
+</BLOCKQUOTE>
+</BODY>
+</HTML>

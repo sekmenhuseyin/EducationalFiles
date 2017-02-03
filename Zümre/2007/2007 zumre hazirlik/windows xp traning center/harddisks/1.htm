@@ -1,0 +1,627 @@
+<!doctype html public "-//IETF//DTD HTML//EN">
+<HTML>
+<HEAD>
+<TITLE>Windows XP: The Complete Reference: Formatting and Partitioning Disks</TITLE>
+<META NAME="GENERATOR" CONTENT="Web-O-Matic Deluxe 4.1">
+<META NAME="AUTHOR" CONTENT="John R. Levine, Margaret Levine Young">
+<META NAME="COPYRIGHT" CONTENTS="Copyright 2001 by The McGraw-Hill Companies. All rights reserved.">
+</HEAD>
+<BODY BACKGROUND="../images/background.png">
+<BLOCKQUOTE>
+<SCRIPT LANGUAGE="JavaScript">
+function whomp(i, file)
+{
+	i.src = "../images/" + file + ".png";
+}
+</SCRIPT>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarered3x3.png" HEIGHT=3 WIDTH=3></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=2>
+Chapter 32: Formatting and Partitioning Disks
+</FONT></TD>
+</TR>
+</TABLE>
+<BR>
+<A HREF="0.htm"  OnMouseOver='whomp(prev, "sprev");' OnMouseOut='whomp(prev, "wprev");'
+ title="Previous Section"><IMG NAME=prev SRC="../images/wprev.png" ALT="Previous" HEIGHT=20 WIDTH=82 BORDER=0></A><!--
+--><A HREF="index.htm" OnMouseOver='whomp(chap, "schap");' OnMouseOut='whomp(chap, "wchap");'
+title="Chapter Overview"><IMG SRC="../images/wchap.png" ALT="Chapter" NAME=chap HEIGHT=20 WIDTH=100 BORDER=0></A><A
+HREF="../index.htm" OnMouseOver='whomp(toc, "sbook");' OnMouseOut='whomp(toc, "wbook");' 
+title="Table of Contents"><IMG SRC="../images/wbook.png" ALT="Contents" NAME=toc HEIGHT=20 WIDTH=94 BORDER=0></A><A
+HREF="../glossary/index.htm" OnMouseOver='whomp(glos, "sglos");' OnMouseOut='whomp(glos, "wglos");' 
+title="Glossary"><IMG SRC="../images/wglos.png" ALT="Glossary" NAME=glos HEIGHT=20 WIDTH=94 BORDER=0></A><!--
+--><A HREF="2.htm"  OnMouseOver='whomp(next, "snext");' OnMouseOut='whomp(next, "wnext");'
+ title="Next Section"><IMG NAME=next SRC="../images/wnext.png" ALT="Next" HEIGHT=20 WIDTH=82 BORDER=0></A>
+<BR>
+<A NAME="1">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarered10x10.png" HEIGHT=10 WIDTH=10></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=4><B>What Are Partitions, File Systems, NTFS, and Drive Letters?</B></FONT>
+</TD>
+</TR>
+</TABLE></A>
+<P>
+Partitions and file systems determine how and where Windows stores information on your disk. Drive letters refer to the various disks on your computer. Before you can decide which file system to use on your partitions, you need to know the differences among FAT, FAT32, and NTFS.
+<A NAME="2">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>What Is a Partition?</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+A <A NAME="ddpartition"><I>partition</I></A> is a section of a hard disk. Every hard disk must be partitioned before Windows can use it. Normally, a disk is set up as a single large partition spanning the entire disk, but in some circumstances using more than one partition makes sense. When you partition a disk, you allocate a fixed amount of space to each partition.
+<P>
+<TABLE><TR><TD VALIGN="TOP"><IMG SRC="../images/tip.png" ALT="tip" WIDTH=95 HEIGHT=29></TD>
+<TD VALIGN="TOP">If your disks contain only one partition each, you can use the terms "disk drive" and "partition" interchangeably.
+
+</TD></TR></TABLE>
+<A NAME="3">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squaregreen6x6.png" HEIGHT=6 WIDTH=6></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Types of Partitions</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+Each partition on a disk is set up for a type of operating system. The partitions used by DOS and Windows have historically been called <A NAME="ddprimarypartition"><I>primary partition</I></A> and <A NAME="ddextendedpartition"><I>extended partition</I></A>. One disk drive can store either four primary partitions, or three primary partitions and one extended partition. An extended partition can contain many <A NAME="ddlogicaldrives"><I>logical drives</I></A>, which are also partitions--extended partitions provide a way to have more than four partitions on a disk. An extended partition can also contain free space, which isn't allocated to a logical drive. Disks can also contain unallocated space, which doesn't belong to any partition. Other operating systems, such as Linux and OS/2, have their own types of partitions.
+<P>
+When you are running Windows XP, it also designates partitions as system, boot, and active:
+<UL>
+<LI >
+<A NAME="ddsystempartition"><B>System partition</B></A>  Has the files needed to start up the computer (the most important startup file is called Ntldr, an abbreviation for "NT Loader"), stored in the root (main) folder. May be FAT, FAT32, or NTFS. For a multiboot system with Windows Me/9x, the system partition must be FAT or FAT32. The system partition can be small because only a few files are needed. The files needed to start the computer are Ntldr, Boot.ini, and Ntdetect.com.
+<LI >
+<A NAME="ddbootpartition"><B>Boot partition</B></A>  Has the files that contain the Windows XP operating system. May be formatted with the FAT (not recommended), FAT32, or NTFS (recommended) <A HREF="../harddisks/1.htm#6">file system</A>. The boot partition must be large enough for the Windows XP program files and lots of extra space, since other programs usually install in the same partition and Microsoft encourages users to store data there, too.
+<LI >
+<A NAME="ddactivepartition"><B>Active partition</B></A>  Older term for the boot partition. You can <A HREF="../harddisks/2.htm#3">mark a primary partition as active</A> so that the next time you restart your computer, this partition will be used as the boot partition.
+</UL>
+<P>
+The system and boot partitions can be the same partition, or they can be different. If they are different, the computer reads the files from the system partition first when it starts up, then switches to the boot partition to load Windows XP.
+<P>
+You can see what partitions your hard disks contain, what types of partitions they are, and which are your system and boot partitions, by using the <A HREF="../harddisks/1.htm#10">Disk Management program</A>.
+<P>
+<TABLE><TR><TD VALIGN="TOP"><IMG SRC="../images/note.png" ALT="note" WIDTH=95 HEIGHT=29></TD>
+<TD VALIGN="TOP">Windows also refers to partitions as <A NAME="ddvolumes"><I>volumes</I></A>. Volumes can be disk partitions or they can be on storage media other than hard disks, such as tape drives.
+
+</TD></TR></TABLE>
+<A NAME="4">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squaregreen6x6.png" HEIGHT=6 WIDTH=6></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Partitions for Multiple Operating Systems</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+If you run more than one operating system on your computer, you can create a partition for each operating system and then <A HREF="../wininst/6.htm#4">start the computer from either of the partitions</A>, depending on which operating system you want to use. With Windows Me/9x, using multiple partitions to switch between different Windows versions was hard, because they all started from the primary partition. (<A HREF="../harddisks/1.htm#5">PartitionMagic</A>, a program you can purchase separately, enables you to install more than one version of Windows.) Windows NT and 2000 included the NT Boot manager, which made dual-boot systems easier to set up.
+<P>
+Windows XP has partitioning built in, and its installation program can create a separate partition for it, leaving other versions of Windows alone. However, PartitionMagic is still useful for moving and resizing partitions.
+<P><TABLE BORDER=2 CELLPADDING=10><TR>
+<TD BGCOLOR="#00ffff" WIDTH=2></TD><TD>
+<A NAME="5">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Installing Multiple Versions of Windows with PartitionMagic</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+PartitionMagic is a program from PowerQuest Corporation (<A HREF="http://www.powerquest.com/partitionmagic"><B>http://www.powerquest.com/partitionmagic</B></A>) that allows one hard disk to include more than one primary partition. Each primary partition can contain a different version of Windows--for example, you can have one partition for Windows 98SE, one for Windows 2000, and one for Windows XP. PartitionMagic, using a small utility called BootMagic, enables you to switch among the primary partitions, using one and optionally hiding the rest. You need version 7.0 or later to work with Windows XP's NTFS partitions.
+<P>
+The Windows XP installation program can set up a separate partition for Windows XP, and the Windows' <A HREF="../harddisks/2.htm#1">Disk Management</A> window can create and delete partitions, but it still can't do everything that we use PartitionMagic for, such as expanding, shrinking, copying, and moving partitions.
+<P>
+We like to use PartitionMagic to set up three partitions: one primary NTFS partition (which appears as drive C) for Windows XP, one extended partition (drive D) for data, and an extra, hidden primary NTFS partition for a duplicate copy of Windows XP. We use drive C for Windows and programs, and we use drive D for data--all documents, spreadsheets, e-mail, and other files that we create or edit. The hidden partition is a copy of drive C, made right after we install all the programs we usually use. Over the months, our working Windows partition (drive C) slowly fills up with junk, and Windows slows down and becomes less reliable. When Windows starts hanging, crashing, or acting funny, we copy the hidden partition to drive C using PartitionMagic, so we have a clean copy of Windows and our programs, without affecting our data. We developed this system over years of using earlier versions of Windows--we hope that Windows XP will prove to be so much more reliable that we rarely use the hidden copy of the primary partition.
+<P>
+Because all of our data is stored separately on drive D, backups can be smaller and faster, including only data and not programs.
+<P>
+Another way to keep a clean copy of your Windows partition is by using Drive Image, which can make a copy of an entire partition onto a Zip disk, Jaz disk, or writable CD-ROM. More information is available at <A HREF="http://www.powerquest.com/driveimage"><B>http://www.powerquest.com/driveimage</B></A>.
+</TD></TR></TABLE>
+<A NAME="6">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>What Is a File System?</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+A <A NAME="ddfilesystem"><I>file system</I></A> is the information that keeps track of which files and folders are stored where in a partition, and what disk space is free. The Windows file system includes a <A NAME="ddfat"><I>FAT</I></A> (<A NAME="ddfileallocationtable"><I>File Allocation Table</I></A>) or <A NAME="ddmasterfiletable"><I>Master File Table</I></A>, which stores information about each <A NAME="ddsector"><I>sector</I></A>, or physical block of storage space, on the disk.
+<P>
+Windows XP supports three different file systems: FAT, FAT32, and NTFS.
+<A NAME="7">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>What Are FAT, FAT32, and NTFS?</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+<A NAME="ddfat"><I>FAT</I></A> (or <A NAME="ddfat16"><I>FAT16</I></A>) dates back to DOS 3.0, and <A NAME="ddfat32"><I>FAT32</I></A> was introduced with the OSR2 update to Windows 95. <A NAME="ddntfs"><I>NTFS</I></A> (NT file system) is a more mature version of FAT32 that was originally designed for use with Windows NT and Windows 2000 for server applications. Each partition on a hard disk and each removable disk must be formatted with FAT, FAT32, or NTFS, but it's possible (and often desirable) to have some disks with one format and some with the other format on the same system.
+<P>
+Here are some facts about each of the file systems:
+<UL>
+<LI >
+<B>FAT</B>  Partitions are limited to 4GB. Files are limited to 2GB. Works on floppy disks. Readable by DOS, OS/2, and all versions of Windows. Does not work with <A HREF="../lans/2.htm#1">domains</A> (server-based network security). Not recommended unless you need to share data with a DOS, OS/2, or Windows 95 system.
+<LI >
+<B>FAT32</B>  Partitions can be from 512MB to 2 terabytes, although Windows XP can format a FAT32 only as large as 32GB. Files are limited to 4GB. Readable by Windows 95 OSR2, 98, Me, NT, 2000, and XP. Does not work with <A HREF="../lans/2.htm#1">domains</A>. Recommended for home systems with no security needs, and for systems that need to share data with a Windows 98 or Me system.
+<LI >
+<B>NTFS</B>  Partition size can be from 520MB to 2 terabytes (larger sizes are possible, but not recommended). Files are limited only to the size of the partition. Can't be used on floppy disks. Readable by Windows 2000 and XP, and by Windows NT 4.0 with Service Pack 4 or later. Required for domains. Enables encrypted folders and files, permissions for individual folders and files, and disk quotas by user. Windows XP uses NTFS 5.0 (it was called 5.1 during product testing), a very slight upgrade from the version used in Windows 2000. Recommended for systems with security needs, large hard disks, and LAN connections.
+</UL>
+<P>
+Both FAT32 and NTFS are designed for large partitions and disks and offer no significant benefits when used on smaller disks. However, with XP's rather significant system requirements it will be unlikely to see a system available with less than 10GB of hard drive space, making FAT16 largely useless.
+<P>
+<TABLE><TR><TD VALIGN="TOP"><IMG SRC="../images/note.png" ALT="note" WIDTH=95 HEIGHT=29></TD>
+<TD VALIGN="TOP">NTFS 5.0 was introduced with Windows 2000. The original NTFS that was used by Windows NT does not have the same features as NTFS 5.0. Partitions made with Windows NT need to be converted for Windows XP to use them. Windows XP automatically converts Windows 2000 to the slightly updated version of NTFS that it uses. Older versions of some partitioning utilities (like PartitionMagic version 6) don't work with Windows XP' NTFS partitions: be sure to get the latest versions.
+
+</TD></TR></TABLE>
+<P>
+NTFS 5.0 offers all of the advantages of FAT32 as well as the following:
+<UL>
+<LI >
+<B>More efficient use of space</B><B>  </B>NTFS can allocate as little as 2K of disk space to a file, reducing wasted disk space.
+<LI >
+<B>On-the-fly compression</B><B>  </B>Individual files can be compressed and decompressed as needed. Entire drives can be reduced in size without affecting overall performance.
+<LI >
+<B>Encryption  </B>Files and folders can be <A HREF="../exploring/3.htm#1">encrypted</A> with a user's password.
+</UL>
+<P>
+<TABLE><TR><TD VALIGN="TOP"><IMG SRC="../images/note.png" ALT="note" WIDTH=95 HEIGHT=29></TD>
+<TD VALIGN="TOP">NTFS offers one big benefit to Windows XP Home Edition users: it supports password-protection of files and folders. If you have a network administrator at your workplace, consult with her before deciding which file system to use for your partitions.
+
+</TD></TR></TABLE>
+<A NAME="8">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Why Divide Your Hard Disk into Partitions?</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+Most often, you allocate all the space on a hard disk to one partition, which Windows treats as a single logical disk drive using a single drive letter (drive C for the first hard disk). You can also allocate some of the space to the primary partition and some to an extended partition, which can, in turn, be subdivided into multiple logical disks.
+<P>
+As a general rule, a single partition is all you ever need. However, here are circumstances where more than one partition will be useful:
+<UL>
+<LI >
+<B>Compatibility with older operating systems  </B>If you want a disk to be usable from DOS, Windows 3.1, or Windows 95, you need to make a FAT16 partition that is less than 2GB. If you want a disk to be usable from Windows 98 or Me, make a FAT32 partition.
+<LI >
+<B>Scratch areas  </B>In some cases, it's useful to have a separate partition to use as a scratch area that you can quickly reformat to wipe out its contents and start fresh.
+<LI >
+<B>Multiboot systems  </B>The boot manager built into Windows (or <A HREF="../harddisks/1.htm#5">PartitionMagic</A>) can dynamically reassign active partitions so that you can effectively have more than one operating system on a large drive.
+<LI >
+<B>Data partitions  </B>We recommend creating a separate partition for your data--all your documents, spreadsheets, databases, and other files. You should <A HREF="../backup/index.htm">back up</A> your data partition regularly. You needn't back up your programs as often because you can restore them from your program CDs.
+<LI >
+<B>Quotas</B>  You can set <A HREF="../users/6.htm#4">quotas for each user</A>, limiting the amount of space that each user can use on a partition.
+</UL>
+<P>
+<TABLE><TR><TD VALIGN="TOP"><IMG SRC="../images/tip.png" ALT="tip" WIDTH=95 HEIGHT=29></TD>
+<TD VALIGN="TOP">Don't slice your disk into too many partitions--we rarely use more than three. Unlike folders, when you create a partition, you must decide in advance how much disk space to devote to that partition. You are bound to run out of space in one partition while you still have plenty of space in another.
+
+</TD></TR></TABLE>
+<A NAME="9">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>What Are Drive Letters?</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+Every partition, logical drive, and removable disk available to Windows has a <A NAME="dddriveletter"><I>drive letter</I></A>. Drive A is the floppy disk drive, and drive B is reserved for a second floppy disk. <A HREF="../harddisks/1.htm#1">Hard disk partitions</A> are assigned letters in order. Drive C is usually the primary partition on your first hard disk. If logical drives are in an extended partition, they are assigned letters next. Then,if you have more than one hard disk, the partitions on those disks are assigned letters. Finally, each <A NAME="ddremovabledisk"><I>removable disk</I></A>, such as a CD-ROM or Zip disk, is assigned a letter, with the order of the letters being arbitrary. Any remaining letters can be used for <A HREF="../sharehw/index.htm">network drives</A>.
+<P>
+On a typical system, the floppy disk is A<I>,</I> the hard disk is C<I>,</I> and the CD-ROM is D<I>.</I>
+<P>
+Windows XP has an annoying habit of reassigning drive letters, so that the drive that contains the Windows program itself may not be C, and hard disk drive letters may follow CD-ROM drive letters. You can <A HREF="../harddisks/3.htm#1">reassign drive letters</A> if necessary.
+<A NAME="10">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>What Are the Properties of Disk Drives and Partitions?</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+Windows stores a set of properties for each installed disk drive and partition and allows you to manage them from one program, Disk Management. Even though the option is not visible in the Windows XP Home Edition, the Disk Management utility is still there. To use the Disk Management program, you display the Computer Management window by right-clicking My Computer and selecting Manage. In the Computer Management window that appears, click the Disk Management item under the Storage heading. The Computer Management window with Disk Management selected, as shown in Figure 32-1, includes everything that you ever wanted to know about hard disks in an easy-to-read format.
+<TABLE BORDER=2><TR><TD ALIGN=CENTER>
+<IMG SRC="harddisks.compmgmt.png" WIDTH=720 HEIGHT=562 ALT="[figure]">
+</TD></TR><TR BGCOLOR="#00ffff"><TD><I>Figure 32-1:  Viewing information about drives and partitions</I></TD></TR></TABLE>
+<A NAME="11">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squaregreen6x6.png" HEIGHT=6 WIDTH=6></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Properties of Partitions (Volumes), Floppy Drives, CD-ROM Drives, and DVD Drives</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+The top part of the Disk Management pane (or the right half of the Computer Management window), lists the volumes (partitions and volumes stored on other devices) on your computer. It lists all disks, drives, and partitions that are loaded, mounted, and recognized by Windows XP. It doesn't include removable storage like floppies, CDs, or DVDs. The columns that run across the top of the volume list are:
+<UL>
+<LI >
+<B>Volume</B>  The label name applied to the volume.
+<LI >
+<B>Layout</B>  Generally a partition. For server computers that provide large-scale storage to networks of computers, other types of volumes may be listed: <A NAME="ddspannedvolumes"><I>spanned volumes</I></A> (which make many disks look like a single, large volume), <A NAME="ddstripedvolumes"><I>striped volumes</I></A> (which stores data on two or more disks in an alternating pattern), <A NAME="ddmirroredvolumes"><I>mirrored volumes</I></A> (which duplicates the data from the volume on other disks, to minimize the possibility of losing data(, and <A NAME="ddraid5volumes"><I>RAID-5 volumes</I></A> (a striped volume that uses three or more disks).
+<LI >
+<B>Type</B>  Identifies whether the volume is Basic or Dynamic. A <A NAME="dddynamicdisk"><I>dynamic disk</I></A> is formatted so that volumes can be changed on-the-fly (dynamically)--<A NAME="dddynamicvolumes"><I>dynamic volumes</I></A>. Dynamic disks are supported only by Windows XP and 2000. Disks on workstation computers are generally Basic.
+<LI >
+<B>File System</B>  Indicates whether the volume is FAT, FAT32, or NTFS. A blank entry indicates a file system <I>other</I> than one developed by Microsoft, such as EXT2 (Linux extended), NFS (Network File System, from Sun Microsystems), or HFS (Hierarchical File System, from Apple).
+<LI >
+<B>Status</B>  Shows the state of the volume and its relationship to the operating system. Typical states are Healthy, Healthy (At Risk), Initializing, and Failed. If you are using spanned volumes, you might also see Resynching, Regenerating, Failed Redundancy, or Failed Redundancy (At Risk).
+<LI >
+<B>Capacity</B>  Shows the overall capacity for the volume.
+<LI >
+<B>Free Space</B>  Shows the space that is free on the volume.
+<LI >
+<B>% Free</B>  Shows free space in percentage format.
+</UL>
+<P>
+The last items here are for the seriously nerdy, system administrator types among you:
+<UL>
+<LI >
+<B>Fault Tolerant</B>  Shows whether the drive is capable of protecting itself from its own errors or if the volume is a member of a fault tolerant <A NAME="ddraid"><I>RAID</I></A> (redundant array of independent disks).
+<LI >
+<B>Overhead</B>  Indicates the amount of space used by spanned disks. This space can only be used by the volume stripe and cannot store data.
+</UL>
+<P>
+Each item on your system with a drive letter--each hard disk partition, floppy disk, and removable disk--also has properties. You can display these properties from a Windows Explorer window (for example, open Start | My Computer); right-click the drive, and choose Properties from the menu that appears. From the Disk Management pane of the Computer Management window, right-click the partition and choose Properties. Figure 32-2 shows the Properties dialog box for a partition (the dialog boxes for floppy and removable disks look similar).
+<TABLE BORDER=2><TR><TD ALIGN=CENTER>
+<IMG SRC="harddisks.letterprop.png" WIDTH=367 HEIGHT=455 ALT="[figure]">
+</TD></TR><TR BGCOLOR="#00ffff"><TD><I>Figure 32-2:  Properties of a partition</I></TD></TR></TABLE>
+<P>
+Table 32-1 lists the settings on the General and Tools tabs of the Properties dialog box for a partition. The Tools tab doesn't appear for disks you can't write on, such as CD-ROM drives. If you use a local area network (LAN) and are using Windows XP Professional, the <A HREF="../sharehw/3.htm#1">Sharing tab</A> appears. If you have turned off <A HREF="../sharehw/3.htm#2">Simple File Sharing</A>, the Security and Quota tabs appear. The Hardware tab lists disk drives. If you have installed a hard-disk housekeeping program like Norton Utilities, additional tabs may appear.
+<BLOCKQUOTE><TABLE BORDER=2><TR><TD>
+<TABLE>
+<TR>
+<TD>
+<B>Tab</B>
+</TD>
+<TD>
+<B>Setting</B>
+</TD>
+<TD>
+<B>Description</B>
+</TD>
+</TR>
+<TR>
+<TD>
+General
+</TD>
+<TD>
+Label
+</TD>
+<TD>
+Specifies the name of the disk, which you can edit.
+</TD>
+</TR>
+<TR>
+<TD>
+General
+</TD>
+<TD>
+Type
+</TD>
+<TD>
+Specifies whether this disk is a <A NAME="ddlocaldisk"><I>local disk</I></A> (disk connected to your own computer), <A NAME="ddnetworkdisk"><I>network disk</I></A> (hard disk connected to a computer you can access over a network), floppy disk, CD-ROM drive, DVD drive, or removable disk drive.
+</TD>
+</TR>
+<TR>
+<TD>
+General
+</TD>
+<TD>
+File system
+</TD>
+<TD>
+Specifies the file system used on the disk. For hard disks, the types are FAT, FAT32, or NTFS. For CD-ROMs, the file system is CDFS.
+</TD>
+</TR>
+<TR>
+<TD>
+General
+</TD>
+<TD>
+Used space
+</TD>
+<TD>
+Specifies how much disk space is occupied by files (including files in the <A HREF="../files/4.htm#1">Recycle Bin</A>).
+</TD>
+</TR>
+<TR>
+<TD>
+General
+</TD>
+<TD>
+Free space
+</TD>
+<TD>
+Specifies how much disk space is available for use.
+</TD>
+</TR>
+<TR>
+<TD>
+General
+</TD>
+<TD>
+Capacity
+</TD>
+<TD>
+Specifies the total capacity of the disk drive; a pie chart shows how much is in use. Click the <A HREF="../disksafe/3.htm#1">Disk Cleanup</A> button to look for and delete unneeded files.
+</TD>
+</TR>
+<TR>
+<TD>
+Tools
+</TD>
+<TD>
+Error-checking
+</TD>
+<TD>
+Click the Check Now button to run <A HREF="../disksafe/1.htm#1">ChkDsk</A> on this disk drive.
+</TD>
+</TR>
+<TR>
+<TD>
+Tools
+</TD>
+<TD>
+Defragmentation
+</TD>
+<TD>
+Click the Defragment Now button to run <A HREF="../disksafe/2.htm#1">Disk Defragmenter</A> on this disk drive.
+</TD>
+</TR>
+<TR>
+<TD>
+Tools
+</TD>
+<TD>
+Backup
+</TD>
+<TD>
+Click Backup Now to run the <A HREF="../backup/index.htm">Microsoft Backup Utility</A>.
+</TD>
+</TR>
+<TR>
+<TD>
+Hardware
+</TD>
+<TD>
+All disk drives 
+</TD>
+<TD>
+Displays a list of all drives installed on the system, including hard disks, floppy disks, CD-ROMs, and DVDs.
+</TD>
+</TR>
+<TR>
+<TD>
+Hardware
+</TD>
+<TD>
+Device Properties 
+</TD>
+<TD>
+Shows the manufacturer, location, and status for the selected drive and offers the Troubleshoot button for device-specific troubleshooting, and the Properties button for the drive's properties.
+</TD>
+</TR>
+</TABLE></BLOCKQUOTE>
+<TR BGCOLOR="#00ffff"><TD>
+<I>Table 1:  Settings on the General, Tools, and Hardware Tabs of the Properties Dialog Box for Partitions</I>
+</TD></TR></TABLE></BLOCKQUOTE>
+<A NAME="12">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squaregreen6x6.png" HEIGHT=6 WIDTH=6></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Properties of Hard Disk Drives</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+The bottom half of the Disk Management pane lists the hard disk, CD-ROM, CD-R/RW, and DVD drives on your computer. To the right of each disk name is a diagram of the partitions that are stored on that drive. You see the same partitions that appear in the volume list, in the approximate positions where they are stored on the drives (the sizes of the partitions aren't accurately depicted, though). This diagram includes <A NAME="ddhiddenpartitions"><I>hidden partitions</I></A> (partitions with file systems that Windows XP can't read), even though you cannot access them or their files.
+<P>
+The Properties dialog box for a disk drive (shown in Figure 32-3) usually includes four tabs--General, Disk Policies, Volumes, and Driver. To display the dialog box from the Disk Management pane of the Computer Management window, right-click a disk drive from the list in the lower part of the window and choose Properties from the menu that appears. Or, choose Start | My Computer, right-click any drive or partition, select Properties from the menu that appears (you see the properties of that partition), click the Hardware tab, select the drive you are interested in, and click the Properties button. Table 32-2 lists the properties of a hard disk drive.
+<TABLE BORDER=2><TR><TD ALIGN=CENTER>
+<IMG SRC="harddisks.driveprops.png" WIDTH=404 HEIGHT=455 ALT="[figure]">
+</TD></TR><TR BGCOLOR="#00ffff"><TD><I>Figure 32-3:  The properties of a hard disk drive</I></TD></TR></TABLE>
+<BLOCKQUOTE><TABLE BORDER=2><TR><TD>
+<TABLE>
+<TR>
+<TD>
+<B>Tab</B>
+</TD>
+<TD>
+<B>Setting</B>
+</TD>
+<TD>
+<B>Description</B>
+</TD>
+</TR>
+<TR>
+<TD>
+General
+</TD>
+<TD>
+Device type
+</TD>
+<TD>
+Set to "Disk drives" by Windows.
+</TD>
+</TR>
+<TR>
+<TD>
+General
+</TD>
+<TD>
+Manufacturer
+</TD>
+<TD>
+Manufacturer of the disk drive, if known.
+</TD>
+</TR>
+<TR>
+<TD>
+General
+</TD>
+<TD>
+Location
+</TD>
+<TD>
+How the drive is physically connected to the computer.
+</TD>
+</TR>
+<TR>
+<TD>
+General
+</TD>
+<TD>
+Device status
+</TD>
+<TD>
+Current status of the disk drive. Click the Troubleshoot button to run the Troubleshooting Wizard.
+</TD>
+</TR>
+<TR>
+<TD>
+General
+</TD>
+<TD>
+Device usage
+</TD>
+<TD>
+Whether the drive is enabled.
+</TD>
+</TR>
+<TR>
+<TD>
+Policies
+</TD>
+<TD>
+Enable write caching on the disk
+</TD>
+<TD>
+When selected, enables the write cache, which on some drives improves performance.
+</TD>
+</TR>
+<TR>
+<TD>
+Volumes
+</TD>
+<TD>
+Disk
+</TD>
+<TD>
+Disk number Windows assigns to the drive. The first disk attached to the first disk controller is disk 0. Floppy disk, CD-ROM, and DVD drives don't have disk numbers.
+</TD>
+</TR>
+<TR>
+<TD>
+Volumes
+</TD>
+<TD>
+Type
+</TD>
+<TD>
+Drive's Type value, typically Basic. Other types are Dynamic, CDRom, Removable (for Zip, Jaz, and similar disks), and DVD.
+</TD>
+</TR>
+<TR>
+<TD>
+Volumes
+</TD>
+<TD>
+Status
+</TD>
+<TD>
+What the drive is doing now, usually Online (working. Other statuses are Offline (not working), Online (Errors) (something is wrong), Foreign, Unreadable, Unrecognized, and No Media (no disk in the drive).
+</TD>
+</TR>
+<TR>
+<TD>
+Volumes
+</TD>
+<TD>
+Partition Style
+</TD>
+<TD>
+How the disk is partitioned, usually MBR (Master Boot Record). Other styles are GPT (GUID Partition Table).
+</TD>
+</TR>
+<TR>
+<TD>
+Volumes
+</TD>
+<TD>
+Capacity
+</TD>
+<TD>
+Total space available.
+</TD>
+</TR>
+<TR>
+<TD>
+Volumes
+</TD>
+<TD>
+Unallocated Space
+</TD>
+<TD>
+Space not allocated to an existing volume partition.
+</TD>
+</TR>
+<TR>
+<TD>
+Volumes
+</TD>
+<TD>
+Reserved Space
+</TD>
+<TD>
+Amount of space allocated to other uses other than storing data.
+</TD>
+</TR>
+<TR>
+<TD>
+Volumes
+</TD>
+<TD>
+Volumes
+</TD>
+<TD>
+List of volumes stored on the drive (click the Populate button to tell Windows to gather and display the information). Click the Properties button to see the Properties dialog box for the selected volume.
+</TD>
+</TR>
+<TR>
+<TD>
+Driver
+</TD>
+<TD>
+Provider/Date/Version/Digital Signer
+</TD>
+<TD>
+Source and date of the driver used for this disk drive; many drivers come with Windows XP. Click the Driver Details to see details about the installed device driver. Click the Update driver to run the Update Device Driver Wizard to look for a more recent driver for your disk drive; the Wizard can look on the Windows CD (or floppies) or can connect to the Internet to look for a driver. Click the Roll Back Driver button to reinstall the previous version of the driver (if something fails after you update the driver, returning to the previous version can restore original functionality). Click the Uninstall button to remove the driver from the system, rendering the device unusable.
+</TD>
+</TR>
+</TABLE></BLOCKQUOTE>
+<TR BGCOLOR="#00ffff"><TD>
+<I>Table 2:  Properties of a Hard Disk Drive</I>
+</TD></TR></TABLE></BLOCKQUOTE>
+<P>
+<A HREF="0.htm"  OnMouseOver='whomp(prevb, "sprev");' OnMouseOut='whomp(prevb, "wprev");'
+ title="Previous Section"><IMG NAME=prevb SRC="../images/wprev.png" ALT="Previous" HEIGHT=20 WIDTH=82 BORDER=0></A><!--
+--><A HREF="index.htm" OnMouseOver='whomp(chapb, "schap");' OnMouseOut='whomp(chapb, "wchap");'
+title="Chapter Overview"><IMG SRC="../images/wchap.png" ALT="Chapter" NAME=chapb HEIGHT=20 WIDTH=100 BORDER=0></A><A
+HREF="../index.htm" OnMouseOver='whomp(tocb, "sbook");' OnMouseOut='whomp(tocb, "wbook");' 
+title="Table of Contents"><IMG SRC="../images/wbook.png" ALT="Contents" NAME=tocb HEIGHT=20 WIDTH=94 BORDER=0></A><A
+HREF="../glossary/index.htm" OnMouseOver='whomp(glosb, "sglos");' OnMouseOut='whomp(glosb, "wglos");' 
+title="Glossary"><IMG SRC="../images/wglos.png" ALT="Glossary" NAME=glosb HEIGHT=20 WIDTH=94 BORDER=0></A><!--
+--><A HREF="2.htm"  OnMouseOver='whomp(nextb, "snext");' OnMouseOut='whomp(nextb, "wnext");'
+ title="Next Section"><IMG NAME=nextb SRC="../images/wnext.png" ALT="Next" HEIGHT=20 WIDTH=82 BORDER=0></A>
+<BR>
+</BLOCKQUOTE>
+</BODY>
+</HTML>

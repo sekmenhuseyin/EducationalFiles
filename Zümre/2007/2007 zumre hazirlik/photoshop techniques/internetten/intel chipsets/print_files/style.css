@@ -1,0 +1,48 @@
+.flyspec {
+	FONT-SIZE: 10px
+}
+.xs {
+	FONT-SIZE: 11px
+}
+.sm {
+	FONT-SIZE: 12px
+}
+.xlabel {
+	FONT-SIZE: 11px; LINE-HEIGHT: 12px
+}
+.grouplabel {
+	FONT-SIZE: 12px; LINE-HEIGHT: 13px
+}
+.title {
+	COLOR: #000; FONT-SIZE: 16px; LINE-HEIGHT: 18px
+}
+.subtitle {
+	COLOR: #999; FONT-SIZE: 13px; LINE-HEIGHT: 18px
+}
+.barnote {
+	FONT-SIZE: 12px
+}
+.hide {
+	POSITION: relative; VISIBILITY: hidden
+}
+.chartheader {
+	COLOR: #000; FONT-SIZE: 11px; FONT-WEIGHT: bold
+}
+.chartsubhead {
+	COLOR: #666; FONT-SIZE: 11px
+}
+.bw {
+	COLOR: #666666; TEXT-DECORATION: none
+}
+.bw:hover {
+	COLOR: #000000
+}
+.pfcharttitle {
+	FONT-SIZE: 12px; FONT-WEIGHT: bold
+}
+.printhead {
+	FONT-SIZE: 16px
+}
+BODY {
+	BACKGROUND-COLOR: #fff
+}

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<hotpot-jquiz-file>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <rdf:Description rdf:about="">
+    <dc:creator>murat</dc:creator>
+    <dc:title>Grafik Ekleme</dc:title>
+  </rdf:Description>
+</rdf:RDF><version>6</version>
+
+<data>
+<title>Grafik Ekleme</title>
+
+<timer><seconds>60</seconds><include-timer>0</include-timer></timer>
+
+<reading>
+<include-reading>0</include-reading>
+<reading-title></reading-title>
+<reading-text></reading-text>
+
+</reading>
+
+<questions><question-record><question>Grafiklerin kullan&amp;#x0131;m amac&amp;#x0131; nedir?</question><clue></clue><category></category><weighting>100</weighting><fixed>0</fixed><question-type>1</question-type><answers><answer><text>Tablonun Resmini olu&amp;#x015F;turur.</text><feedback></feedback><correct>0</correct><percent-correct>0</percent-correct><include-in-mc-options>1</include-in-mc-options></answer><answer><text>&amp;#x00C7;ubuk ve pasta &amp;#x00E7;izmeye yarar</text><feedback></feedback><correct>0</correct><percent-correct>0</percent-correct><include-in-mc-options>1</include-in-mc-options></answer><answer><text>Haz&amp;#x0131;rlanan tabloyu grafi&amp;#x011F;e d&amp;#x00F6;kerek kar&amp;#x015F;&amp;#x0131;la&amp;#x015F;t&amp;#x0131;rabilmeyi sa&amp;#x011F;lar.</text><feedback></feedback><correct>1</correct><percent-correct>100</percent-correct><include-in-mc-options>1</include-in-mc-options></answer><answer><text>Tablo ile alakal&amp;#x0131; bilgileri resim &amp;#x015F;eklinde ifade eder.</text><feedback></feedback><correct>0</correct><percent-correct>0</percent-correct><include-in-mc-options>1</include-in-mc-options></answer><answer><text>Tablolar&amp;#x0131; ve resimleri birle&amp;#x015F;tirmeyi sa&amp;#x011F;lar.</text><feedback></feedback><correct>0</correct><percent-correct>0</percent-correct><include-in-mc-options>1</include-in-mc-options></answer></answers></question-record><question-record><question>G&amp;#x00FC;nl&amp;#x00FC;k hayatta kullan&amp;#x0131;ld&amp;#x0131;klar&amp;#x0131; yerlere &amp;#x00F6;rnekler veriniz</question><clue></clue><category></category><weighting>100</weighting><fixed>0</fixed><question-type>1</question-type><answers><answer><text>Borsa ini&amp;#x015F; &amp;#x00E7;&amp;#x0131;k&amp;#x0131;&amp;#x015F;lar&amp;#x0131;n&amp;#x0131;n ifadesinde</text><feedback>Do&amp;#x011F;ru</feedback><correct>1</correct><percent-correct>100</percent-correct><include-in-mc-options>1</include-in-mc-options></answer><answer><text>Kar/Zarar hesaplar&amp;#x0131; g&amp;#x00F6;steriminde</text><feedback>Do&amp;#x011F;ru</feedback><correct>1</correct><percent-correct>100</percent-correct><include-in-mc-options>1</include-in-mc-options></answer><answer><text>Se&amp;#x00E7;im sonu&amp;#x00E7;lar&amp;#x0131;n&amp;#x0131;n g&amp;#x00F6;steriminde</text><feedback>Do&amp;#x011F;ru</feedback><correct>1</correct><percent-correct>100</percent-correct><include-in-mc-options>1</include-in-mc-options></answer><answer><text>S&amp;#x0131;navlarda ba&amp;#x015F;ar&amp;#x0131;lar&amp;#x0131;n kar&amp;#x015F;&amp;#x0131;la&amp;#x015F;t&amp;#x0131;r&amp;#x0131;lmas&amp;#x0131;nda</text><feedback>Do&amp;#x011F;ru</feedback><correct>1</correct><percent-correct>100</percent-correct><include-in-mc-options>1</include-in-mc-options></answer><answer><text>Bir &amp;#x00F6;&amp;#x011F;rencinin deneme s&amp;#x0131;navlar&amp;#x0131;ndaki otlar&amp;#x0131;n&amp;#x0131;n kar&amp;#x015F;&amp;#x0131;la&amp;#x015F;t&amp;#x0131;r&amp;#x0131;lmas&amp;#x0131;nda</text><feedback>Do&amp;#x011F;ru</feedback><correct>1</correct><percent-correct>100</percent-correct><include-in-mc-options>1</include-in-mc-options></answer></answers></question-record><question-record><question>Hangi &amp;#x00F6;zellikteki alanlar&amp;#x0131;n grafikleri &amp;#x00E7;&amp;#x0131;kart&amp;#x0131;labilir.</question><clue></clue><category></category><weighting>100</weighting><fixed>0</fixed><question-type>1</question-type><answers><answer><text>Say&amp;#x0131;sal de&amp;#x011F;er i&amp;#x00E7;eren</text><feedback></feedback><correct>1</correct><percent-correct>100</percent-correct><include-in-mc-options>1</include-in-mc-options></answer><answer><text>D&amp;#x00FC;zenli karakter i&amp;#x00E7;eren</text><feedback></feedback><correct>0</correct><percent-correct>0</percent-correct><include-in-mc-options>1</include-in-mc-options></answer><answer><text>D&amp;#x00FC;zensiz say&amp;#x0131;sal de&amp;#x011F;er ve karakterler i&amp;#x00E7;eren</text><feedback></feedback><correct>0</correct><percent-correct>0</percent-correct><include-in-mc-options>1</include-in-mc-options></answer><answer><text>D&amp;#x00FC;zenli metin i&amp;#x00E7;eren</text><feedback></feedback><correct>0</correct><percent-correct>0</percent-correct><include-in-mc-options>1</include-in-mc-options></answer><answer><text>D&amp;#x00FC;zensiz formul ve metin i&amp;#x00E7;eren</text><feedback></feedback><correct>0</correct><percent-correct>0</percent-correct><include-in-mc-options>1</include-in-mc-options></answer></answers></question-record><question-record><question>&amp;#x003C;img src=&quot;grfik.jpg&quot; alt=&quot;grfik.jpg&quot; title=&quot;grfik&quot; width=&quot;351&quot; height=&quot;63&quot; style=&quot;margin: auto;&quot;&amp;#x003E;&amp;#x003C;/img&amp;#x003E;
+4.-5.-6.-7. sorular&amp;#x0131; &amp;#x015F;ekle g&amp;#x00F6;re cevaplay&amp;#x0131;n&amp;#x0131;z.
+&amp;#x015E;ekilde a ile g&amp;#x00F6;sterilen d&amp;#x00FC;&amp;#x011F;menin kullan&amp;#x0131;m amc&amp;#x0131; nedir?</question><clue></clue><category></category><weighting>100</weighting><fixed>0</fixed><question-type>1</question-type><answers><answer><text>&amp;#x015E;ekli de&amp;#x011F;i&amp;#x015F;tirmek i&amp;#x00E7;in kullan&amp;#x0131;l&amp;#x0131;r.</text><feedback></feedback><correct>1</correct><percent-correct>100</percent-correct><include-in-mc-options>1</include-in-mc-options></answer><answer><text>Yeni bir &amp;#x015F;ekil eklemek i&amp;#x00E7;in kullan&amp;#x0131;l&amp;#x0131;r.</text><feedback></feedback><correct>0</correct><percent-correct>0</percent-correct><include-in-mc-options>1</include-in-mc-options></answer><answer><text>Grafik &amp;#x00FC;zerinde de&amp;#x011F;i&amp;#x015F;iklik yap&amp;#x0131;lacak alan&amp;#x0131; se&amp;#x00E7;mek i&amp;#x00E7;in kullan&amp;#x0131;l&amp;#x0131;r.</text><feedback></feedback><correct>1</correct><percent-correct>100</percent-correct><include-in-mc-options>1</include-in-mc-options></answer><answer><text>Grafik &amp;#x00FC;zerinde bir alan&amp;#x0131; silmek i&amp;#x00E7;in kullan&amp;#x0131;l&amp;#x0131;r.</text><feedback></feedback><correct>0</correct><percent-correct>0</percent-correct><include-in-mc-options>1</include-in-mc-options></answer><answer><text>Nesnelerin yerlerini de&amp;#x011F;i&amp;#x015F;tirmeye yarar.</text><feedback></feedback><correct>0</correct><percent-correct>0</percent-correct><include-in-mc-options>1</include-in-mc-options></answer></answers></question-record><question-record><question>&amp;#x015E;ekilde c ile g&amp;#x00F6;sterilen d&amp;#x00FC;&amp;#x011F;menin kullan&amp;#x0131;m amac&amp;#x0131; nedir?</question><clue></clue><category></category><weighting>100</weighting><fixed>0</fixed><question-type>1</question-type><answers><answer><text>Grafik eklemeye yarar.</text><feedback></feedback><correct>0</correct><percent-correct>0</percent-correct><include-in-mc-options>1</include-in-mc-options></answer><answer><text>Garfik t&amp;#x00FC;r&amp;#x00FC;n&amp;#x00FC; de&amp;#x011F;i&amp;#x015F;tirmek i&amp;#x00E7;in kullan&amp;#x0131;l&amp;#x0131;r.</text><feedback></feedback><correct>1</correct><percent-correct>100</percent-correct><include-in-mc-options>1</include-in-mc-options></answer><answer><text>Grafi&amp;#x011F;i silmek i&amp;#x00E7;in kullan&amp;#x0131;l&amp;#x0131;r.</text><feedback></feedback><correct>0</correct><percent-correct>0</percent-correct><include-in-mc-options>1</include-in-mc-options></answer><answer><text>Grafi&amp;#x011F;i kaydetmek i&amp;#x00E7;in kullan&amp;#x0131;l&amp;#x0131;r.</text><feedback></feedback><correct>0</correct><percent-correct>0</percent-correct><include-in-mc-options>1</include-in-mc-options></answer><answer><text>Grafi&amp;#x011F;i farkl&amp;#x0131; programlara aktarmak i&amp;#x00E7;in kullan&amp;#x0131;l&amp;#x0131;r.</text><feedback></feedback><correct>0</correct><percent-correct>0</percent-correct><include-in-mc-options>1</include-in-mc-options></answer></answers></question-record><question-record><question>&amp;#x015E;ekilde e ile g&amp;#x00F6;sterilen d&amp;#x00FC;&amp;#x011F;menin kullan&amp;#x0131;m amac&amp;#x0131; nedir?</question><clue></clue><category></category><weighting>100</weighting><fixed>0</fixed><question-type>1</question-type><answers><answer><text>Grafi&amp;#x011F;in tablosunu de&amp;#x011F;i&amp;#x015F;tirmek i&amp;#x00E7;in kullan&amp;#x0131;l&amp;#x0131;r.</text><feedback></feedback><correct>0</correct><percent-correct>0</percent-correct><include-in-mc-options>1</include-in-mc-options></answer><answer><text>Tablo de&amp;#x011F;erlerini kald&amp;#x0131;rmak i&amp;#x00E7;in kullan&amp;#x0131;l&amp;#x0131;r.</text><feedback></feedback><correct>0</correct><percent-correct>0</percent-correct><include-in-mc-options>1</include-in-mc-options></answer><answer><text>Tabloyu silmek i&amp;#x00E7;in kullan&amp;#x0131;l&amp;#x0131;r?</text><feedback></feedback><correct>0</correct><percent-correct>0</percent-correct><include-in-mc-options>1</include-in-mc-options></answer><answer><text>Grafikteki verileri ayn&amp;#x0131; zamanda tablo halinde g&amp;#x00F6;stermek i&amp;#x00E7;in kullan&amp;#x0131;l&amp;#x0131;r.</text><feedback></feedback><correct>1</correct><percent-correct>100</percent-correct><include-in-mc-options>1</include-in-mc-options></answer><answer><text>Grafik ve tablo aras&amp;#x0131;nda veri transferi i&amp;#x00E7;in kullan&amp;#x0131;l&amp;#x0131;r.</text><feedback></feedback><correct>0</correct><percent-correct>0</percent-correct><include-in-mc-options>1</include-in-mc-options></answer></answers></question-record><question-record><question>&amp;#x015E;ekilde d ile g&amp;#x00F6;sterilen d&amp;#x00FC;&amp;#x011F;menin kullan&amp;#x0131;m amac&amp;#x0131; nedir?</question><clue></clue><category></category><weighting>100</weighting><fixed>0</fixed><question-type>1</question-type><answers><answer><text>Tabloyu renklendirir.</text><feedback></feedback><correct>0</correct><percent-correct>0</percent-correct><include-in-mc-options>1</include-in-mc-options></answer><answer><text>Grafi&amp;#x011F;i renklendirir.</text><feedback></feedback><correct>0</correct><percent-correct>0</percent-correct><include-in-mc-options>1</include-in-mc-options></answer><answer><text>Tabloya madde i&amp;#x015F;areti eklemek i&amp;#x00E7;in kullan&amp;#x0131;l&amp;#x0131;r.</text><feedback></feedback><correct>0</correct><percent-correct>0</percent-correct><include-in-mc-options>1</include-in-mc-options></answer><answer><text>Grafi&amp;#x011F;e madde i&amp;#x015F;areti eklemek i&amp;#x00E7;in kullan&amp;#x0131;l&amp;#x0131;r.</text><feedback></feedback><correct>0</correct><percent-correct>0</percent-correct><include-in-mc-options>1</include-in-mc-options></answer><answer><text>Grafi&amp;#x011F;e a&amp;#x00E7;&amp;#x0131;klay&amp;#x0131;c&amp;#x0131; g&amp;#x00F6;sterge eklemek i&amp;#x00E7;in kullan&amp;#x0131;l&amp;#x0131;r.</text><feedback></feedback><correct>1</correct><percent-correct>100</percent-correct><include-in-mc-options>1</include-in-mc-options></answer></answers></question-record></questions>
+</data>
+
+<hotpot-config-file>
+<jquiz>
+<exercise-subtitle>Quiz</exercise-subtitle>
+<instructions></instructions>
+<guess-correct>Do&amp;#x011F;ru!</guess-correct>
+<guess-incorrect>&amp;#x00DC;zg&amp;#x00FC;n&amp;#x00FC;m! Tekrar deneyiniz.</guess-incorrect>
+<partly-incorrect>Your answer is partly wrong: </partly-incorrect>
+<enter-a-guess>Please enter a guess.</enter-a-guess>
+<next-correct-letter>Next correct letter in the answer: </next-correct-letter>
+<correct-answers>Correct answers: </correct-answers>
+<show-answer-caption>Cevab&amp;#x0131; G&amp;#x00F6;ster</show-answer-caption>
+<include-hint>1</include-hint>
+<include-show-answer>1</include-show-answer>
+<next-ex-url>jcross1.htm</next-ex-url>
+<send-email>0</send-email>
+<continuous-scoring>1</continuous-scoring>
+<show-correct-first-time>1</show-correct-first-time>
+<shuffle-questions>0</shuffle-questions>
+<shuffle-answers>0</shuffle-answers>
+<show-limited-questions>0</show-limited-questions>
+<questions-to-show>2</questions-to-show>
+<short-answer-tries-on-hybrid-q>2</short-answer-tries-on-hybrid-q>
+<separate-javascript-file>0</separate-javascript-file>
+<case-sensitive>0</case-sensitive>
+<include-keypad>0</include-keypad>
+</jquiz>
+
+<global>
+<your-score-is>Senin Skorun</your-score-is>
+<correct-indicator>:-)</correct-indicator>
+<incorrect-indicator>X</incorrect-indicator>
+<correct-first-time>Questions answered correctly first time: </correct-first-time>
+<keypad-characters></keypad-characters>
+<times-up>Your time is over!</times-up>
+<next-ex-caption>=&amp;#x003E;</next-ex-caption>
+<back-caption>&amp;#x003C;=</back-caption>
+<contents-caption>Ana Sayfa</contents-caption>
+<include-next-ex>1</include-next-ex>
+<include-contents>1</include-contents>
+<include-back>0</include-back>
+<contents-url>contents.htm</contents-url>
+<graphic-url></graphic-url>
+<font-face>Geneva,Arial,sans-serif</font-face>
+<page-bg-color>#C0C0C0</page-bg-color>
+<title-color>#000000</title-color>
+<ex-bg-color>#FFFFFF</ex-bg-color>
+<text-color>#000000</text-color>
+<link-color>#0000FF</link-color>
+<vlink-color>#0000CC</vlink-color>
+<nav-bar-color>#000000</nav-bar-color>
+<formmail-url>http://yourserver.com/cgi-bin/FormMail.pl</formmail-url>
+<email>you@yourserver.com</email>
+<name-please>Please enter your name:</name-please>
+<user-string-1>one</user-string-1>
+<user-string-2>two</user-string-2>
+<user-string-3>three</user-string-3>
+<header-code></header-code>
+<correct-first-time>Questions answered correctly first time: </correct-first-time>
+<check-caption>Onay</check-caption>
+<ok-caption>OK</ok-caption>
+<next-q-caption>=&amp;#x003E;</next-q-caption>
+<last-q-caption>&amp;#x003C;=</last-q-caption>
+<hint-caption>&amp;#x0130;pucu</hint-caption>
+<show-all-questions-caption>T&amp;#x00FC;m Sorular&amp;#x0131; G&amp;#x00F6;ster</show-all-questions-caption>
+<show-one-by-one-caption>Show questions one by one</show-one-by-one-caption>
+<show-also-correct>1</show-also-correct>
+<process-for-rtl>0</process-for-rtl>
+</global>
+</hotpot-config-file>
+</hotpot-jquiz-file>

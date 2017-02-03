@@ -1,0 +1,78 @@
+BODY {
+	FONT-SIZE: 11px; COLOR: #333333; FONT-FAMILY: arial,sans-serif
+}
+TD {
+	FONT-SIZE: 11px; COLOR: #333333; FONT-FAMILY: arial,sans-serif
+}
+INPUT {
+	FONT-SIZE: 10px; FONT-FAMILY: arial,sans-serif
+}
+SELECT {
+	FONT-SIZE: 10px; FONT-FAMILY: arial,sans-serif
+}
+A {
+	COLOR: #275a99
+}
+A:active {
+	COLOR: #000000
+}
+A.nav {
+	COLOR: #0066cc; LINE-HEIGHT: 1.5; TEXT-DECORATION: none
+}
+A.nav:hover {
+	COLOR: #333333; TEXT-DECORATION: none
+}
+A.nav:active {
+	COLOR: #000000; TEXT-DECORATION: none
+}
+A.green {
+	COLOR: #339900; TEXT-DECORATION: none
+}
+A.green:active {
+	COLOR: #339900; TEXT-DECORATION: none
+}
+A.green:hover {
+	COLOR: #336600; TEXT-DECORATION: none
+}
+.header1 {
+	FONT-WEIGHT: bold; FONT-SIZE: 11px; TEXT-TRANSFORM: uppercase; COLOR: #333333; FONT-FAMILY: arial,sans-serif
+}
+.header2 {
+	FONT-WEIGHT: bold; FONT-SIZE: 11px; COLOR: #339900; FONT-FAMILY: arial,sans-serif
+}
+.red {
+	FONT-WEIGHT: bold; FONT-SIZE: 14px; COLOR: #ff3300; FONT-FAMILY: arial
+}
+.text12px {
+	FONT-SIZE: 11px; LINE-HEIGHT: 1.5
+}
+.quote {
+	FONT-WEIGHT: bold; FONT-SIZE: 10px; COLOR: #339900
+}
+.quote2 {
+	FONT-WEIGHT: bold; FONT-SIZE: 11px; COLOR: #339900
+}
+.tutorial {
+	FONT-SIZE: 11px; COLOR: #000000; FONT-FAMILY: verdana
+}
+IMG.thumb {
+	CLEAR: left; MARGIN-TOP: 2px; FLOAT: left; MARGIN-LEFT: 0px; WIDTH: 50px; HEIGHT: 50px
+}
+DIV.listing {
+	FONT-SIZE: 11px; MARGIN-BOTTOM: 30px; MARGIN-LEFT: 60px
+}
+.title {
+	FONT-WEIGHT: bold; FONT-SIZE: 12px; COLOR: #333333; FONT-FAMILY: verdana
+}
+.headsmall {
+	FONT-SIZE: 1px; COLOR: #ffffff
+}
+.menulink1 {
+	PADDING-RIGHT: 3px; PADDING-LEFT: 3px; FONT-SIZE: 11px; PADDING-BOTTOM: 3px; PADDING-TOP: 3px
+}
+.menulink2 {
+	PADDING-RIGHT: 3px; PADDING-LEFT: 3px; FONT-SIZE: 11px; BACKGROUND: #d6d6d6; PADDING-BOTTOM: 3px; PADDING-TOP: 3px
+}
+H1 {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FONT-SIZE: 2px; PADDING-BOTTOM: 0px; COLOR: #4892cc; PADDING-TOP: 0px; HEIGHT: 2px
+}

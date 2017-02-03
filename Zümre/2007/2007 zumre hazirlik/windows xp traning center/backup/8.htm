@@ -1,0 +1,117 @@
+<!doctype html public "-//IETF//DTD HTML//EN">
+<HTML>
+<HEAD>
+<TITLE>Windows XP: The Complete Reference: Backing Up Your Files with the Backup Utility</TITLE>
+<META NAME="GENERATOR" CONTENT="Web-O-Matic Deluxe 4.1">
+<META NAME="AUTHOR" CONTENT="John R. Levine, Margaret Levine Young">
+<META NAME="COPYRIGHT" CONTENTS="Copyright 2001 by The McGraw-Hill Companies. All rights reserved.">
+</HEAD>
+<BODY BACKGROUND="../images/background.png">
+<BLOCKQUOTE>
+<SCRIPT LANGUAGE="JavaScript">
+function whomp(i, file)
+{
+	i.src = "../images/" + file + ".png";
+}
+</SCRIPT>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarered3x3.png" HEIGHT=3 WIDTH=3></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=2>
+Chapter 9: Backing Up Your Files with the Backup Utility
+</FONT></TD>
+</TR>
+</TABLE>
+<BR>
+<A HREF="7.htm"  OnMouseOver='whomp(prev, "sprev");' OnMouseOut='whomp(prev, "wprev");'
+ title="Previous Section"><IMG NAME=prev SRC="../images/wprev.png" ALT="Previous" HEIGHT=20 WIDTH=82 BORDER=0></A><!--
+--><A HREF="index.htm" OnMouseOver='whomp(chap, "schap");' OnMouseOut='whomp(chap, "wchap");'
+title="Chapter Overview"><IMG SRC="../images/wchap.png" ALT="Chapter" NAME=chap HEIGHT=20 WIDTH=100 BORDER=0></A><A
+HREF="../index.htm" OnMouseOver='whomp(toc, "sbook");' OnMouseOut='whomp(toc, "wbook");' 
+title="Table of Contents"><IMG SRC="../images/wbook.png" ALT="Contents" NAME=toc HEIGHT=20 WIDTH=94 BORDER=0></A><A
+HREF="../glossary/index.htm" OnMouseOver='whomp(glos, "sglos");' OnMouseOut='whomp(glos, "wglos");' 
+title="Glossary"><IMG SRC="../images/wglos.png" ALT="Glossary" NAME=glos HEIGHT=20 WIDTH=94 BORDER=0></A><!--
+--><IMG SRC="../images/bnext.png" ALT="Next" HEIGHT=20 WIDTH=82 BORDER=0>
+<BR>
+<A NAME="1">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarered10x10.png" HEIGHT=10 WIDTH=10></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=4><B>Backing Up and Restoring System Information Using Automated System Recovery</B></FONT>
+</TD>
+</TR>
+</TABLE></A>
+<P>
+Automated System Recovery (ASR) is available in Windows XP Professional, but not in Windows XP Home Edition. ASR enables the Backup Utility to back up key system information--what partitions are on your hard disks, how to start up, and other information--onto a floppy disk. You can use this floppy disk to restart your computer in the event of a disaster.
+<P>
+<TABLE><TR><TD VALIGN="TOP"><IMG SRC="../images/caution.png" ALT="caution" WIDTH=95 HEIGHT=29></TD>
+<TD VALIGN="TOP">The ASR may appear to make a backup in Windows XP Home Edition, but restoring from it won't work, because Windows XP Home Edition doesn't support setups from ASR disks. You should be able to reinstall Windows XP manually, and then restore the rest of the files from your backup.
+
+</TD></TR></TABLE>
+<P>
+Automated System Recovery doesn't recover all your files--it doesn't include all your program files or any of your data files. You need to make regular backups to have up-to-date copies of your data files. You can restore your program files from the program installation CDs or floppies.
+<A NAME="2">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Making an ASR Disk</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+Follow these steps to create an ASR floppy disk. You'll need a blank floppy disk as well as your usual backup medium for backing up the rest of the files you choose. If you plan to back up your system files to a tape, choose a blank tape or one that can be erased: the backup can't be appended to a tape with existing backups.
+<OL>
+<LI  VALUE=1>
+Run the Backup Utility. If the Backup Or Restore Wizard runs, click the Advanced Mode link to display the Backup Utility window.
+<LI  VALUE=2>
+On the Welcome tab, click the Automated System Recovery Wizard button (or choose Tools | ASR Wizard from the menu bar). The Automated System Recovery Preparation Wizard starts.
+<LI  VALUE=3>
+Click Next to display the Backup Destination window.
+<LI  VALUE=4>
+<A HREF="../backup/5.htm#4">Set the Backup Media Type to File or another destination (such as a tape drive), and specify the filename or tape</A>.
+<LI  VALUE=5>
+Click Next and then Finish to start the backup. The Backup Utility backs your system files up on the destination that you chose. If the tape already contains backups, you see a message asking whether it's okay to overwrite the existing backups. Choosing No aborts the backup.
+<LI  VALUE=6>
+When Backup prompts for a blank, 1.44MB formatted floppy disk, insert it drive A and click OK.
+<LI  VALUE=7>
+When Backup is finished creating the ASR it suggests that you take the floppy out of the drive and label it. Click OK and then Close.
+</OL>
+<P>
+Keep the ASR floppy disk and backup tape (or disk with a file) in a safe place in case you need them to recover from a Windows boot failure. You can append other backups to the ASR tape.
+<A NAME="3">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Recovering Using an ASR Disk</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+If your Windows XP installation won't start up, you can use the ASR floppy disk to restart Windows and restore the system files you backed up. You also need the tape or disk on which the rest of the ASR backup was made, and the Windows XP CD-ROM. Follow these steps:
+<OL>
+<LI  VALUE=1>
+Put the Windows XP CD-ROM in the CD-ROM drive.
+<LI  VALUE=2>
+Set your computer's ROM BIOS setup to boot from a CD-ROM. Check your computer's documentation: this step usually requires pressing <TT>F2</TT> or some other key during system startup.
+<LI  VALUE=3>
+Restart the computer. To start from the CD, you may need to press a key or choose from a menu: consult your computer's documentation. The Windows XP installation program starts.
+<LI  VALUE=4>
+Watch for a prompt that tells you to press <TT>F2</TT>, and do so.
+<LI  VALUE=5>
+When you see a prompt to insert the ASR floppy disk into drive A, do so. Then follow the directions on the screen to restore your system files.
+</OL>
+<P>
+<A HREF="7.htm"  OnMouseOver='whomp(prevb, "sprev");' OnMouseOut='whomp(prevb, "wprev");'
+ title="Previous Section"><IMG NAME=prevb SRC="../images/wprev.png" ALT="Previous" HEIGHT=20 WIDTH=82 BORDER=0></A><!--
+--><A HREF="index.htm" OnMouseOver='whomp(chapb, "schap");' OnMouseOut='whomp(chapb, "wchap");'
+title="Chapter Overview"><IMG SRC="../images/wchap.png" ALT="Chapter" NAME=chapb HEIGHT=20 WIDTH=100 BORDER=0></A><A
+HREF="../index.htm" OnMouseOver='whomp(tocb, "sbook");' OnMouseOut='whomp(tocb, "wbook");' 
+title="Table of Contents"><IMG SRC="../images/wbook.png" ALT="Contents" NAME=tocb HEIGHT=20 WIDTH=94 BORDER=0></A><A
+HREF="../glossary/index.htm" OnMouseOver='whomp(glosb, "sglos");' OnMouseOut='whomp(glosb, "wglos");' 
+title="Glossary"><IMG SRC="../images/wglos.png" ALT="Glossary" NAME=glosb HEIGHT=20 WIDTH=94 BORDER=0></A><!--
+--><IMG SRC="../images/bnext.png" ALT="Next" HEIGHT=20 WIDTH=82 BORDER=0>
+<BR>
+</BLOCKQUOTE>
+</BODY>
+</HTML>

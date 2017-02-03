@@ -1,0 +1,83 @@
+<!doctype html public "-//IETF//DTD HTML//EN">
+<HTML>
+<HEAD>
+<TITLE>Windows XP: The Complete Reference: Running DOS Programs and Commands</TITLE>
+<META NAME="GENERATOR" CONTENT="Web-O-Matic Deluxe 4.1">
+<META NAME="AUTHOR" CONTENT="John R. Levine, Margaret Levine Young">
+<META NAME="COPYRIGHT" CONTENTS="Copyright 2001 by The McGraw-Hill Companies. All rights reserved.">
+</HEAD>
+<BODY BACKGROUND="../images/background.png">
+<BLOCKQUOTE>
+<SCRIPT LANGUAGE="JavaScript">
+function whomp(i, file)
+{
+	i.src = "../images/" + file + ".png";
+}
+</SCRIPT>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarered3x3.png" HEIGHT=3 WIDTH=3></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=2>
+Chapter 39: Running DOS Programs and Commands
+</FONT></TD>
+</TR>
+</TABLE>
+<BR>
+<A HREF="0.htm"  OnMouseOver='whomp(prev, "sprev");' OnMouseOut='whomp(prev, "wprev");'
+ title="Previous Section"><IMG NAME=prev SRC="../images/wprev.png" ALT="Previous" HEIGHT=20 WIDTH=82 BORDER=0></A><!--
+--><A HREF="index.htm" OnMouseOver='whomp(chap, "schap");' OnMouseOut='whomp(chap, "wchap");'
+title="Chapter Overview"><IMG SRC="../images/wchap.png" ALT="Chapter" NAME=chap HEIGHT=20 WIDTH=100 BORDER=0></A><A
+HREF="../index.htm" OnMouseOver='whomp(toc, "sbook");' OnMouseOut='whomp(toc, "wbook");' 
+title="Table of Contents"><IMG SRC="../images/wbook.png" ALT="Contents" NAME=toc HEIGHT=20 WIDTH=94 BORDER=0></A><A
+HREF="../glossary/index.htm" OnMouseOver='whomp(glos, "sglos");' OnMouseOut='whomp(glos, "wglos");' 
+title="Glossary"><IMG SRC="../images/wglos.png" ALT="Glossary" NAME=glos HEIGHT=20 WIDTH=94 BORDER=0></A><!--
+--><A HREF="2.htm"  OnMouseOver='whomp(next, "snext");' OnMouseOut='whomp(next, "wnext");'
+ title="Next Section"><IMG NAME=next SRC="../images/wnext.png" ALT="Next" HEIGHT=20 WIDTH=82 BORDER=0></A>
+<BR>
+<A NAME="1">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarered10x10.png" HEIGHT=10 WIDTH=10></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=4><B>What Is DOS?</B></FONT>
+</TD>
+</TR>
+</TABLE></A>
+<P>
+<A NAME="ddmsdos"><I>MS-DOS</I></A> (or <A NAME="dddos"><I>DOS</I></A>, Disk Operating System, for short) is a simple operating system that was the predecessor to Windows. DOS version 1.0 was created in about 1981, and later versions--through DOS 6.22--added features and supported more recent hardware. Early versions of Windows (through 3.11) were add-ons for DOS--first you installed DOS on your computer, then you installed Windows, and then you started Windows from the DOS command prompt. Windows 95, 98, 98SE, Me, and XP still have a version of DOS buried inside them, although Microsoft's engineers have integrated almost all of the DOS functions into Windows.
+<P>
+DOS provides only disk file management and the most rudimentary support for the screen, keyboard, mouse, timer, and other peripherals. As a result, interactive <A NAME="dddosprograms"><I>DOS programs</I></A> (programs written to work with DOS rather than Windows) need to create their own user interfaces, usually by directly operating the hardware controllers for the screen and sometimes other devices. DOS supports only 640KB of memory, and the base functions of all DOS applications must fit inside of this limited space. Subsequently, Microsoft and other companies developed a variety of add-on drivers to allow DOS to handle larger amounts of memory, including <A NAME="ddexpandedmemory"><I>expanded memory</I></A> (EMS memory) and <A NAME="ddextendedmemory"><I>extended memory</I></A> (XMS memory).
+<P>
+DOS doesn't have a graphical user interface (GUI) and usually doesn't display windows or work with a mouse. Instead, you type commands at the <A NAME="dddosprompt"><I>DOS prompt</I></A>, a symbol that indicates DOS is waiting for you to type a <A NAME="ddcommandline"><I>command line</I></A> (a command, optionally followed by additional information). The default DOS prompt is C:\&amp;ra;. This method of typing commands at a prompt is called a <A NAME="ddcommandlineinterface"><I>command-line interface</I></A> (CLI).
+<P>
+Windows, on the other hand, provides extensive facilities to handle the screen and keyboard, as well as sophisticated memory management, which all Windows applications use. These facilities make it difficult to run some DOS programs in Windows, because the DOS programs and Windows can't both control the same hardware at the same time. The DOS VM eliminates most of those hurdles and makes it easier to run pesky DOS programs.
+<P><TABLE BORDER=2 CELLPADDING=10><TR>
+<TD BGCOLOR="#00ffff" WIDTH=2></TD><TD>
+<A NAME="2">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>What Are DOS Names?</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+Each file and folder in Windows has a <A NAME="dddosname"><I>DOS name</I></A>, an eight-or-fewer-character name that resembles its real name, but that is legal under the pre-Windows 95 file-naming rules. The DOS name exists for the purpose of backward compatibility; programs written for DOS or older versions of Windows might crash if Windows hands them files with long names and previously illegal characters. So, when dealing with pre-Windows 95 application programs, Windows pretends nothing has changed and gives the application the DOS name of a file rather than its real name. The DOS name is usually the first six characters of the filename, followed by a tilde (~) and a number. The extension part of the DOS name is the first three characters of the extension.
+<P>
+DOS names are invisible in Windows, but you still may see them if you run an older application. If the file you named MySummerVacation.doc shows up later as MYSUMM~1.DOC, you'll know what happened.
+</TD></TR></TABLE>
+<P>
+<A HREF="0.htm"  OnMouseOver='whomp(prevb, "sprev");' OnMouseOut='whomp(prevb, "wprev");'
+ title="Previous Section"><IMG NAME=prevb SRC="../images/wprev.png" ALT="Previous" HEIGHT=20 WIDTH=82 BORDER=0></A><!--
+--><A HREF="index.htm" OnMouseOver='whomp(chapb, "schap");' OnMouseOut='whomp(chapb, "wchap");'
+title="Chapter Overview"><IMG SRC="../images/wchap.png" ALT="Chapter" NAME=chapb HEIGHT=20 WIDTH=100 BORDER=0></A><A
+HREF="../index.htm" OnMouseOver='whomp(tocb, "sbook");' OnMouseOut='whomp(tocb, "wbook");' 
+title="Table of Contents"><IMG SRC="../images/wbook.png" ALT="Contents" NAME=tocb HEIGHT=20 WIDTH=94 BORDER=0></A><A
+HREF="../glossary/index.htm" OnMouseOver='whomp(glosb, "sglos");' OnMouseOut='whomp(glosb, "wglos");' 
+title="Glossary"><IMG SRC="../images/wglos.png" ALT="Glossary" NAME=glosb HEIGHT=20 WIDTH=94 BORDER=0></A><!--
+--><A HREF="2.htm"  OnMouseOver='whomp(nextb, "snext");' OnMouseOut='whomp(nextb, "wnext");'
+ title="Next Section"><IMG NAME=nextb SRC="../images/wnext.png" ALT="Next" HEIGHT=20 WIDTH=82 BORDER=0></A>
+<BR>
+</BLOCKQUOTE>
+</BODY>
+</HTML>

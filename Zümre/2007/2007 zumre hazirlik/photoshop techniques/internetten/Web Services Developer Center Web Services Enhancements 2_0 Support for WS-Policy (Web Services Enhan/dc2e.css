@@ -1,0 +1,183 @@
+.text {
+	COLOR: #000000; FONT-FAMILY: verdana, arial, helvetica; FONT-SIZE: 80%; TEXT-INDENT: 8px
+}
+.link {
+	COLOR: #000000; FONT-FAMILY: verdana, arial, helvetica; FONT-SIZE: 80%; FONT-WEIGHT: bold; TEXT-DECORATION: none
+}
+.linktext {
+	COLOR: #000000; FONT-FAMILY: verdana, arial, helvetica; FONT-SIZE: 80%; TEXT-DECORATION: none
+}
+:link {
+	COLOR: #003399
+}
+A:visited {
+	COLOR: #660099
+}
+A:hover {
+	COLOR: #ff3300
+}
+A.small {
+	FONT-SIZE: 95%; FONT-STYLE: normal; FONT-VARIANT: normal; FONT-WEIGHT: normal; LINE-HEIGHT: normal; TEXT-DECORATION: underline
+}
+A.smallWhite {
+	COLOR: #ffffff; FONT-SIZE: 95%; FONT-STYLE: normal; FONT-VARIANT: normal; FONT-WEIGHT: normal; LINE-HEIGHT: normal; TEXT-DECORATION: underline
+}
+.storeUserData {
+	BEHAVIOR: url(#default#userData)
+}
+BODY {
+	BACKGROUND: #ffffff; COLOR: #000000; FONT-FAMILY: verdana,arial,helvetica
+}
+SPAN {
+	FONT-FAMILY: verdana,arial,helvetica
+}
+A {
+	FONT-FAMILY: verdana,arial,helvetica
+}
+H1 {
+	FONT-FAMILY: verdana,arial,helvetica; FONT-SIZE: 165%; MARGIN: 0px
+}
+H2 {
+	FONT-SIZE: 125%; MARGIN-TOP: 1em
+}
+H3 {
+	FONT-SIZE: 115%; MARGIN-BOTTOM: 1em; MARGIN-TOP: 0px
+}
+H4 {
+	FONT-SIZE: 100%; MARGIN-BOTTOM: 0px
+}
+H5 {
+	FONT-SIZE: 100%; MARGIN-BOTTOM: 0px
+}
+H6 {
+	FONT-SIZE: 100%; MARGIN-BOTTOM: 0px
+}
+DIV.clsDocBody {
+	PADDING-BOTTOM: 20px; PADDING-LEFT: 20px; PADDING-RIGHT: 20px; PADDING-TOP: 20px; WIDTH: 100%
+}
+TD {
+	FONT-SIZE: 68%
+}
+TH {
+	FONT-SIZE: 68%
+}
+P {
+	LINE-HEIGHT: 1.5em; MARGIN-BOTTOM: 1em; MARGIN-TOP: 0.5em
+}
+PRE {
+	BACKGROUND: #eeeeee; MARGIN-BOTTOM: 1em; MARGIN-LEFT: 0px; MARGIN-TOP: 1em; PADDING-BOTTOM: 5pt; PADDING-LEFT: 5pt; PADDING-RIGHT: 5pt; PADDING-TOP: 5pt
+}
+SPAN.db PRE {
+	BACKGROUND: #eeeeee; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt
+}
+SPAN.ci PRE {
+	BACKGROUND: #eeeeee; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt
+}
+SPAN.di PRE {
+	BACKGROUND: #eeeeee; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt
+}
+PRE.clsCode {
+	FONT-FAMILY: 'courier new',courier,serif; FONT-SIZE: 110%
+}
+CODE.clsText {
+	FONT-FAMILY: 'courier new',courier,serif; FONT-SIZE: 110%
+}
+PRE.clsCCCode {
+	BACKGROUND: none transparent scroll repeat 0% 0%; FONT-FAMILY: 'courier new',courier,serif; FONT-SIZE: 120%
+}
+PRE.clsSyntax {
+	FONT-FAMILY: verdana,arial,helvetica,sans-serif; FONT-SIZE: 100%
+}
+HR {
+	COLOR: #cccccc; HEIGHT: 1px
+}
+UL {
+	MARGIN-BOTTOM: 15px; MARGIN-LEFT: 25px; MARGIN-TOP: 5px
+}
+OL {
+	MARGIN-BOTTOM: 10px; MARGIN-LEFT: 30px; MARGIN-TOP: 10px
+}
+UL LI {
+	LIST-STYLE: disc; MARGIN-BOTTOM: 0.5em
+}
+UL LI.gray {
+	COLOR: #cccccc
+}
+UL LI LI {
+	LIST-STYLE: disc
+}
+OL LI {
+	MARGIN-BOTTOM: 0.7em
+}
+INPUT.clsButton {
+	BACKGROUND-COLOR: #6699cc; COLOR: #ffffff; FONT-WEIGHT: bold; MARGIN-LEFT: 5px; MARGIN-TOP: 10px
+}
+P.small {
+	FONT-SIZE: 95%; FONT-STYLE: normal; FONT-VARIANT: normal; FONT-WEIGHT: normal; LINE-HEIGHT: normal
+}
+P.smallWhite {
+	COLOR: #ffffff; FONT-SIZE: 95%; FONT-STYLE: normal; FONT-VARIANT: normal; FONT-WEIGHT: normal; LINE-HEIGHT: normal
+}
+P.author {
+	FONT-SIZE: 95%; FONT-STYLE: italic; FONT-VARIANT: normal; FONT-WEIGHT: normal; LINE-HEIGHT: normal
+}
+P.NoLeftMar {
+	MARGIN-LEFT: -15px
+}
+.PageOptionsMNPPart {
+	BACKGROUND-COLOR: #f1f1f1; BORDER-BOTTOM: #6699cc 3px solid; BORDER-LEFT: #cccccc 1px solid; BORDER-RIGHT: #cccccc 1px solid; BORDER-TOP: #6699cc 3px solid; COLOR: #000000; MARGIN-RIGHT: 15px; POSITION: relative; WIDTH: 155px
+}
+.PageOptionsMNPPart DIV {
+	BORDER-TOP: #cccccc 1px solid; MARGIN-TOP: 5px; PADDING-BOTTOM: 8px; PADDING-LEFT: 5px; PADDING-RIGHT: 5px; PADDING-TOP: 5px; WIDTH: 100%
+}
+.PageOptionsMNPPart IFRAME {
+	MARGIN-LEFT: 7px
+}
+.PageOptionsMNPPart H4 {
+	PADDING-BOTTOM: 5px; PADDING-LEFT: 8px; PADDING-TOP: 8px; WIDTH: 100%
+}
+.MNPPart {
+	BACKGROUND-COLOR: #f1f1f1; BORDER-BOTTOM: #6699cc 3px solid; BORDER-LEFT: #cccccc 1px solid; BORDER-RIGHT: #cccccc 1px solid; BORDER-TOP: #6699cc 3px solid; COLOR: #000000; MARGIN-RIGHT: 15px; PADDING-BOTTOM: 8px; PADDING-LEFT: 8px; PADDING-RIGHT: 8px; PADDING-TOP: 8px; POSITION: relative; WIDTH: 155px
+}
+.MNPPart UL {
+	MARGIN-BOTTOM: 5px; MARGIN-LEFT: 18px
+}
+.MNPPart SPAN {
+	COLOR: #000000
+}
+.MNPPart UL LI {
+	COLOR: #cccccc; LIST-STYLE: disc; MARGIN-BOTTOM: 0.5em
+}
+.introCopy {
+	COLOR: #000000; FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif; FONT-SIZE: 10pt; FONT-STYLE: normal; FONT-WEIGHT: normal; LINE-HEIGHT: normal
+}
+.tabFieldDN {
+	BACKGROUND-ATTACHMENT: fixed; BACKGROUND-IMAGE: url(/msdn-online/shared/graphics/tab_BG.gif); BACKGROUND-POSITION: left bottom; BACKGROUND-REPEAT: repeat-x; BORDER-BOTTOM: #999999 0px solid; BORDER-LEFT: #999999 1px solid; BORDER-RIGHT: #999999 1px solid; BORDER-TOP: #999999 1px solid; COLOR: #000000; FONT: bold 70% Verdana, Geneva, Arial, Helvetica, sans-serif; PADDING-BOTTOM: 5px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; PADDING-TOP: 5px; TEXT-ALIGN: center; TEXT-TRANSFORM: none; VERTICAL-ALIGN: baseline
+}
+.tabFieldUP {
+	BACKGROUND-COLOR: #ffffff; BACKGROUND-IMAGE: url(url((URL))); BORDER-BOTTOM: #999999 0px solid; BORDER-LEFT: #999999 1px solid; BORDER-RIGHT: #999999 1px solid; BORDER-TOP: #999999 1px solid; COLOR: #000000; FONT: bold 70% Verdana, Geneva, Arial, Helvetica, sans-serif; PADDING-BOTTOM: 5px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; PADDING-TOP: 5px; TEXT-ALIGN: center; TEXT-TRANSFORM: none; VERTICAL-ALIGN: baseline
+}
+.tabFieldBASE {
+	BACKGROUND-COLOR: #ffffff; BORDER-BOTTOM: #999999 1px solid; BORDER-LEFT: #999999 0px solid; BORDER-RIGHT: #999999 0px solid; BORDER-TOP: #999999 0px solid
+}
+.tabFieldACTIVE {
+	BACKGROUND-COLOR: #ffffff; BORDER-BOTTOM: #999999 0px solid; BORDER-LEFT: #999999 1px solid; BORDER-RIGHT: #999999 1px solid; BORDER-TOP: #999999 0px solid
+}
+TABLE.DATA {
+	BORDER-COLLAPSE: collapse; BORDER-LEFT: #cccccc 1px solid; BORDER-TOP: #cccccc 1px solid; PADDING-BOTTOM: 5px; PADDING-LEFT: 5px; PADDING-RIGHT: 5px; PADDING-TOP: 5px
+}
+TH.DATA {
+	BACKGROUND-COLOR: #eeeeee; BORDER-BOTTOM: #cccccc 1px solid; BORDER-RIGHT: #cccccc 1px solid
+}
+TD.DATA {
+	BORDER-BOTTOM: #cccccc 1px solid; BORDER-RIGHT: #cccccc 1px solid; FONT-WEIGHT: normal
+}
+.standardsButton:link {
+	BACKGROUND-COLOR: #ff6600; BORDER-BOTTOM: #3f1a01 1px solid; BORDER-LEFT: #ff9a57 1px solid; BORDER-RIGHT: #7d3302 1px solid; BORDER-TOP: #ffc8a4 1px solid; COLOR: #ffffff; FONT: bold 10px verdana,sans-serif; MARGIN: 0px; PADDING-BOTTOM: 0px; PADDING-LEFT: 3px; PADDING-RIGHT: 3px; PADDING-TOP: 0px; TEXT-DECORATION: none; VERTICAL-ALIGN: middle
+}
+.standardsButton:hover {
+	BACKGROUND-COLOR: #ff6600; BORDER-BOTTOM: #3f1a01 1px solid; BORDER-LEFT: #ff9a57 1px solid; BORDER-RIGHT: #7d3302 1px solid; BORDER-TOP: #ffc8a4 1px solid; COLOR: #ffffff; FONT: bold 10px verdana,sans-serif; MARGIN: 0px; PADDING-BOTTOM: 0px; PADDING-LEFT: 3px; PADDING-RIGHT: 3px; PADDING-TOP: 0px; TEXT-DECORATION: none; VERTICAL-ALIGN: middle
+}
+.standardsButton:visited {
+	BACKGROUND-COLOR: #ff6600; BORDER-BOTTOM: #3f1a01 1px solid; BORDER-LEFT: #ff9a57 1px solid; BORDER-RIGHT: #7d3302 1px solid; BORDER-TOP: #ffc8a4 1px solid; COLOR: #ffffff; FONT: bold 10px verdana,sans-serif; MARGIN: 0px; PADDING-BOTTOM: 0px; PADDING-LEFT: 3px; PADDING-RIGHT: 3px; PADDING-TOP: 0px; TEXT-DECORATION: none; VERTICAL-ALIGN: middle
+}

@@ -1,0 +1,91 @@
+<!doctype html public "-//IETF//DTD HTML//EN">
+<HTML>
+<HEAD>
+<TITLE>Windows XP: The Complete Reference: Troubleshooting Windows XP</TITLE>
+<META NAME="GENERATOR" CONTENT="Web-O-Matic Deluxe 4.1">
+<META NAME="AUTHOR" CONTENT="John R. Levine, Margaret Levine Young">
+<META NAME="COPYRIGHT" CONTENTS="Copyright 2001 by The McGraw-Hill Companies. All rights reserved.">
+</HEAD>
+<BODY BACKGROUND="../images/background.png">
+<BLOCKQUOTE>
+<SCRIPT LANGUAGE="JavaScript">
+function whomp(i, file)
+{
+	i.src = "../images/" + file + ".png";
+}
+</SCRIPT>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarered3x3.png" HEIGHT=3 WIDTH=3></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=2>
+Chapter 35: Troubleshooting Windows XP
+</FONT></TD>
+</TR>
+</TABLE>
+<BR>
+<A HREF="2.htm"  OnMouseOver='whomp(prev, "sprev");' OnMouseOut='whomp(prev, "wprev");'
+ title="Previous Section"><IMG NAME=prev SRC="../images/wprev.png" ALT="Previous" HEIGHT=20 WIDTH=82 BORDER=0></A><!--
+--><A HREF="index.htm" OnMouseOver='whomp(chap, "schap");' OnMouseOut='whomp(chap, "wchap");'
+title="Chapter Overview"><IMG SRC="../images/wchap.png" ALT="Chapter" NAME=chap HEIGHT=20 WIDTH=100 BORDER=0></A><A
+HREF="../index.htm" OnMouseOver='whomp(toc, "sbook");' OnMouseOut='whomp(toc, "wbook");' 
+title="Table of Contents"><IMG SRC="../images/wbook.png" ALT="Contents" NAME=toc HEIGHT=20 WIDTH=94 BORDER=0></A><A
+HREF="../glossary/index.htm" OnMouseOver='whomp(glos, "sglos");' OnMouseOut='whomp(glos, "wglos");' 
+title="Glossary"><IMG SRC="../images/wglos.png" ALT="Glossary" NAME=glos HEIGHT=20 WIDTH=94 BORDER=0></A><!--
+--><A HREF="4.htm"  OnMouseOver='whomp(next, "snext");' OnMouseOut='whomp(next, "wnext");'
+ title="Next Section"><IMG NAME=next SRC="../images/wnext.png" ALT="Next" HEIGHT=20 WIDTH=82 BORDER=0></A>
+<BR>
+<A NAME="1">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarered10x10.png" HEIGHT=10 WIDTH=10></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=4><B>Stopping Programs from Running at Startup</B></FONT>
+</TD>
+</TR>
+</TABLE></A>
+<P>
+When you start Windows, other programs may <A HREF="../running/2.htm#10">start up automatically</A>, which can be very convenient. It's not always easy, however, to <I>stop</I> a program from running automatically when you start Windows. Here are three places to look for the entry that causes Windows to run the program:
+<UL>
+<LI >
+<B>Startup folder</B>  Make sure that a shortcut for the program isn't in the StartUp folder (Start | All Programs | Startup). If a shortcut for the program is there, delete it. (Choose Start | All Programs | Startup, right-click the item for the program, and choose Delete from the menu that appears, or drag the program item out of the folder.)
+<LI >
+<B>Win.ini</B>  Look for a line in your <A HREF="../internals/1.htm#5">Win.ini file</A> that runs the program. The line would start with "run=" or "load=" in the windows section.
+<LI >
+<B>Registry</B>  Examine the <A HREF="../registry/1.htm#1">Registry</A> for an entry that runs the program. You can use the <A HREF="../registry/3.htm#1">Registry Editor</A> to remove the offending entry, after making a backup of the Registry. Look in the HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\RUN "hive" (group of Registry keys), which lists programs that are run automatically.
+</UL>
+<P>
+Alternatively, choose Start | Run, type <B>msconfig</B>, and press E<SMALL>NTER</SMALL> to see the <A HREF="../internals/2.htm#1">System Configuration Utility</A>. Click the Startup tab, shown in Figure 35-2, to see a list of the programs that run at startup. You can use this program to display and edit the Win.ini file (but make a backup first). On the General tab, you can choose Selective Startup to turn on Selective Startup mode, a startup mode in which Windows asks before running each startup program. Deselecting any item on the Startup tab automatically turns on Selective Startup. Selective Startup is particularly useful for temporarily disabling startup items.<TABLE BORDER=2><TR><TD ALIGN=CENTER>
+<IMG SRC="trouble.msconfig.png" WIDTH=575 HEIGHT=385 ALT="[figure]">
+</TD></TR><TR BGCOLOR="#00ffff"><TD><I>Figure 35-2:  The System Configuration Utility (Msconfig)</I></TD></TR></TABLE>
+<P><TABLE BORDER=2 CELLPADDING=10><TR>
+<TD BGCOLOR="#00ffff" WIDTH=2></TD><TD>
+<A NAME="2">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Two Handy Utilities</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+If you install many programs, two free utilities can come in handy. Startup and Startup Monitor were developed by 17-year-old wunderkind name Mike Lin. You can download these utilities from his Web site (<A HREF="http://www.mlin.net"><B>http://www.mlin.net</B></A>) and install them in a matter of moments. Note, however, that there are two versions of Startup; one is an add-in to Control Panel and the other is a stand-alone application. They both do the same thing: choose the one you prefer.
+<P>
+Startup gives you convenient access to all of the places Windows hides application startup data. Poke around the tabs until you find the offending application and uncheck it. You can also add your own programs to any tab, and deleting something only causes it to be stored in the Deleted tab, in case you want it back later. Startup Monitor works with Startup and it provides one function, to warn you when a new application is being added to one of the startup locations. You are offered a choice to allow the change or not, though you should know that not all applications will work properly without whatever program you might be disabling.
+<P>
+An example of a potentially annoying application is <A HREF="../chatting/1.htm#1">Windows Messenger</A>, which is included in Windows XP and constantly begs for your attention. Most people will simply give in, sign up for an account, and be done with its constant pestering, but this requires signing up for a Microsoft .NET Passport. Instead, you can turn Windows Messenger off with Startup by deselecting the MSMSGS item in the HKCU/Run tab.
+</TD></TR></TABLE>
+<P>
+<A HREF="2.htm"  OnMouseOver='whomp(prevb, "sprev");' OnMouseOut='whomp(prevb, "wprev");'
+ title="Previous Section"><IMG NAME=prevb SRC="../images/wprev.png" ALT="Previous" HEIGHT=20 WIDTH=82 BORDER=0></A><!--
+--><A HREF="index.htm" OnMouseOver='whomp(chapb, "schap");' OnMouseOut='whomp(chapb, "wchap");'
+title="Chapter Overview"><IMG SRC="../images/wchap.png" ALT="Chapter" NAME=chapb HEIGHT=20 WIDTH=100 BORDER=0></A><A
+HREF="../index.htm" OnMouseOver='whomp(tocb, "sbook");' OnMouseOut='whomp(tocb, "wbook");' 
+title="Table of Contents"><IMG SRC="../images/wbook.png" ALT="Contents" NAME=tocb HEIGHT=20 WIDTH=94 BORDER=0></A><A
+HREF="../glossary/index.htm" OnMouseOver='whomp(glosb, "sglos");' OnMouseOut='whomp(glosb, "wglos");' 
+title="Glossary"><IMG SRC="../images/wglos.png" ALT="Glossary" NAME=glosb HEIGHT=20 WIDTH=94 BORDER=0></A><!--
+--><A HREF="4.htm"  OnMouseOver='whomp(nextb, "snext");' OnMouseOut='whomp(nextb, "wnext");'
+ title="Next Section"><IMG NAME=nextb SRC="../images/wnext.png" ALT="Next" HEIGHT=20 WIDTH=82 BORDER=0></A>
+<BR>
+</BLOCKQUOTE>
+</BODY>
+</HTML>

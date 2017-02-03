@@ -1,0 +1,214 @@
+<!doctype html public "-//IETF//DTD HTML//EN">
+<HTML>
+<HEAD>
+<TITLE>Windows XP: The Complete Reference: Keeping Your Disk Safe</TITLE>
+<META NAME="GENERATOR" CONTENT="Web-O-Matic Deluxe 4.1">
+<META NAME="AUTHOR" CONTENT="John R. Levine, Margaret Levine Young">
+<META NAME="COPYRIGHT" CONTENTS="Copyright 2001 by The McGraw-Hill Companies. All rights reserved.">
+</HEAD>
+<BODY BACKGROUND="../images/background.png">
+<BLOCKQUOTE>
+<SCRIPT LANGUAGE="JavaScript">
+function whomp(i, file)
+{
+	i.src = "../images/" + file + ".png";
+}
+</SCRIPT>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarered3x3.png" HEIGHT=3 WIDTH=3></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=2>
+Chapter 33: Keeping Your Disk Safe
+</FONT></TD>
+</TR>
+</TABLE>
+<BR>
+<A HREF="0.htm"  OnMouseOver='whomp(prev, "sprev");' OnMouseOut='whomp(prev, "wprev");'
+ title="Previous Section"><IMG NAME=prev SRC="../images/wprev.png" ALT="Previous" HEIGHT=20 WIDTH=82 BORDER=0></A><!--
+--><A HREF="index.htm" OnMouseOver='whomp(chap, "schap");' OnMouseOut='whomp(chap, "wchap");'
+title="Chapter Overview"><IMG SRC="../images/wchap.png" ALT="Chapter" NAME=chap HEIGHT=20 WIDTH=100 BORDER=0></A><A
+HREF="../index.htm" OnMouseOver='whomp(toc, "sbook");' OnMouseOut='whomp(toc, "wbook");' 
+title="Table of Contents"><IMG SRC="../images/wbook.png" ALT="Contents" NAME=toc HEIGHT=20 WIDTH=94 BORDER=0></A><A
+HREF="../glossary/index.htm" OnMouseOver='whomp(glos, "sglos");' OnMouseOut='whomp(glos, "wglos");' 
+title="Glossary"><IMG SRC="../images/wglos.png" ALT="Glossary" NAME=glos HEIGHT=20 WIDTH=94 BORDER=0></A><!--
+--><A HREF="2.htm"  OnMouseOver='whomp(next, "snext");' OnMouseOut='whomp(next, "wnext");'
+ title="Next Section"><IMG NAME=next SRC="../images/wnext.png" ALT="Next" HEIGHT=20 WIDTH=82 BORDER=0></A>
+<BR>
+<A NAME="1">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarered10x10.png" HEIGHT=10 WIDTH=10></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=4><B>Testing Your Disk Structure with ChkDsk</B></FONT>
+</TD>
+</TR>
+</TABLE></A>
+<P>
+The ChkDsk (Check Disk) program can both diagnose and repair errors on a wide variety of devices, including hard disks, floppy disks, RAM drives, removable disks, and laptop memory cards. ChkDsk can check the physical surface of disk drivers for bad sectors and possibly recover lost data, and checks the <A HREF="../harddisks/1.htm#6">file allocation table (FAT)</A>, the directory structure, and the long filenames associated with many files.
+<P>
+<TABLE><TR><TD VALIGN="TOP"><IMG SRC="../images/note.png" ALT="note" WIDTH=95 HEIGHT=29></TD>
+<TD VALIGN="TOP">If Windows crashes or you turn off the computer without shutting down, Windows typically runs ChkDsk when you restart to check your hard disk for errors resulting from the unexpected termination. There are some occasions when ChkDsk will not run.
+
+</TD></TR></TABLE>
+<A NAME="2">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Running ChkDsk</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+Certain functions, like fixing disk errors and recovering lost sectors, are not accessible while Windows is running. This is because the repairs cannot be completed while there are open files on the disk to be fixed. When you try to run ChkDsk, Windows might need to schedule the program to run the next time you restart Windows instead.
+<P>
+To run ChkDsk, follow these steps:
+<OL>
+<LI  VALUE=1>
+Right-click the disk drive in an Explorer window and choose Properties.
+<LI  VALUE=2>
+On the Properties dialog box for the disk, click the Tools tab and click the Check Now button. You see the Check Disk dialog box:
+</OL>
+<BR><IMG ALIGN=TOP SRC="disksafe.checkdisk.png" WIDTH=284 HEIGHT=219 ALT="[image]">
+<OL>
+<LI  VALUE=3>
+Select both check boxes to perform a full disk check and click Start. You usually see a message saying that Windows can't run the program until the next time you start Windows.
+<LI  VALUE=4>
+Click Yes. The next time Windows starts, you see a message that the disk check has been scheduled, and displaying the results as the program runs, which can take several minutes (depending on the size of the disk). When ChkDsk runs, you see its results before Windows displays your logon screen or desktop.
+</OL>
+<P>
+<TABLE><TR><TD VALIGN="TOP"><IMG SRC="../images/tip.png" ALT="tip" WIDTH=95 HEIGHT=29></TD>
+<TD VALIGN="TOP">You can also run ChkDsk at the DOS <A HREF="../dos/2.htm#1">command prompt</A>. Choose Start | Run and type <B>chkdsk</B> at the command prompt. Then press E<SMALL>NTER</SMALL>. To tell ChkDsk to fix any errors it finds, type <B>chkdsk /f</B> instead.
+</TD></TR></TABLE>
+<A NAME="3">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Other ChkDsk Options</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+ChkDsk can do a number of other things if you run it at the command prompt. To see your options at the command line, type the following at the prompt in a Command Prompt window:
+<P><PRE>
+chkdsk /?
+</PRE>
+<P>
+or type <B>help chkdsk</B>. When you press E<SMALL>NTER</SMALL>, you see information about ChkDsk's options, which are also listed in Table 33-1. Some switches work only on NTFS partitions, and some work only on FAT32 partitions.<BLOCKQUOTE><TABLE BORDER=2><TR><TD>
+<TABLE>
+<TR>
+<TD>
+<B>Switch or Argument</B>
+</TD>
+<TD>
+<B>FAT32 Partitions</B>
+</TD>
+<TD>
+<B>NTFS Partitions</B>
+</TD>
+</TR>
+<TR>
+<TD>
+<I>Volume</I>
+</TD>
+<TD>
+Specifies the drive to be acted on. Enter the drive letter as the letter and a colon (i.e., c:, d:, x:) or as a volume name (i.e., CRUNCHY, DRV012).
+</TD>
+</TR>
+<TR>
+<TD>
+<I>Filename</I>
+</TD>
+<TD>
+Specifies specific files to be checked for fragmentation.
+</TD>
+<TD>
+Not used.
+</TD>
+</TR>
+<TR>
+<TD>
+/F
+</TD>
+<TD>
+Fixes errors on the specified disk. If no disk is specified, ChkDsk checks the boot disk and fixes it as needed.
+</TD>
+</TR>
+<TR>
+<TD>
+/V
+</TD>
+<TD>
+Displays the full filename and path of every file on the disk. This is not recommended, unless you have a lot of free time.
+</TD>
+<TD>
+Not used.
+</TD>
+</TR>
+<TR>
+<TD>
+/R
+</TD>
+<TD>
+Locates and attempts to recover the data in lost sectors. This command also implicitly applies an /F command. 
+</TD>
+</TR>
+<TR>
+<TD>
+/L:<I>size</I>
+</TD>
+<TD>
+Not used.
+</TD>
+<TD>
+Changes the file size of the operations log to the specified amount (in KB: 1MB = 1024KB). 
+</TD>
+</TR>
+<TR>
+<TD>
+/X
+</TD>
+<TD>
+Causes a mounted volume to be forcibly dismounted before performing the implicit /F command. This switch cannot be used on the boot volume.
+</TD>
+</TR>
+<TR>
+<TD>
+/I
+</TD>
+<TD>
+Not used.
+</TD>
+<TD>
+Performs a less complete index check.
+</TD>
+</TR>
+<TR>
+<TD>
+/C
+</TD>
+<TD>
+Not used.
+</TD>
+<TD>
+Skips checking directory structure cycles.
+</TD>
+</TR>
+</TABLE></BLOCKQUOTE>
+<TR BGCOLOR="#00ffff"><TD>
+<I>Table 1:  ChkDsk Command Switches</I>
+</TD></TR></TABLE></BLOCKQUOTE>
+<P>
+<A HREF="0.htm"  OnMouseOver='whomp(prevb, "sprev");' OnMouseOut='whomp(prevb, "wprev");'
+ title="Previous Section"><IMG NAME=prevb SRC="../images/wprev.png" ALT="Previous" HEIGHT=20 WIDTH=82 BORDER=0></A><!--
+--><A HREF="index.htm" OnMouseOver='whomp(chapb, "schap");' OnMouseOut='whomp(chapb, "wchap");'
+title="Chapter Overview"><IMG SRC="../images/wchap.png" ALT="Chapter" NAME=chapb HEIGHT=20 WIDTH=100 BORDER=0></A><A
+HREF="../index.htm" OnMouseOver='whomp(tocb, "sbook");' OnMouseOut='whomp(tocb, "wbook");' 
+title="Table of Contents"><IMG SRC="../images/wbook.png" ALT="Contents" NAME=tocb HEIGHT=20 WIDTH=94 BORDER=0></A><A
+HREF="../glossary/index.htm" OnMouseOver='whomp(glosb, "sglos");' OnMouseOut='whomp(glosb, "wglos");' 
+title="Glossary"><IMG SRC="../images/wglos.png" ALT="Glossary" NAME=glosb HEIGHT=20 WIDTH=94 BORDER=0></A><!--
+--><A HREF="2.htm"  OnMouseOver='whomp(nextb, "snext");' OnMouseOut='whomp(nextb, "wnext");'
+ title="Next Section"><IMG NAME=nextb SRC="../images/wnext.png" ALT="Next" HEIGHT=20 WIDTH=82 BORDER=0></A>
+<BR>
+</BLOCKQUOTE>
+</BODY>
+</HTML>

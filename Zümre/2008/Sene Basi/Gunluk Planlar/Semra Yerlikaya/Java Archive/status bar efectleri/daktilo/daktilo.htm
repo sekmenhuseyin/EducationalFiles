@@ -1,0 +1,40 @@
+<body onload="typew()">
+<script>
+<!-- START HIDE
+var curmes = 0
+var a = 0
+var counter = 0
+var message = new Array()
+message[0] = "mesaj yaz"
+var temp = ""
+function typew()
+{
+a = a + 1
+check()
+window.status = message[curmes].substring(0, a)
+if(a == message[curmes].length + 5)
+{
+curmes = curmes + 1
+a = 0
+}
+if(curmes > 0)
+{
+curmes = 0
+}
+counter = setTimeout("typew()", 100)
+}
+function check()
+{
+if(a <= message[curmes].length)
+{
+if(message[curmes].substring(a, a + 1) == "")
+{
+a = a + 1
+check()
+}
+}
+}
+// STOP HIDE -->
+</script>
+
+</body>

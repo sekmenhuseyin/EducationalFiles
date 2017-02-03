@@ -1,0 +1,859 @@
+<!doctype html public "-//IETF//DTD HTML//EN">
+<HTML>
+<HEAD>
+<TITLE>Windows XP: The Complete Reference: Sharing Your Computer with Multiple Users</TITLE>
+<META NAME="GENERATOR" CONTENT="Web-O-Matic Deluxe 4.1">
+<META NAME="AUTHOR" CONTENT="John R. Levine, Margaret Levine Young">
+<META NAME="COPYRIGHT" CONTENTS="Copyright 2001 by The McGraw-Hill Companies. All rights reserved.">
+</HEAD>
+<BODY BACKGROUND="../images/background.png">
+<BLOCKQUOTE>
+<SCRIPT LANGUAGE="JavaScript">
+function whomp(i, file)
+{
+	i.src = "../images/" + file + ".png";
+}
+</SCRIPT>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarered3x3.png" HEIGHT=3 WIDTH=3></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=2>
+Chapter 6: Sharing Your Computer with Multiple Users
+</FONT></TD>
+</TR>
+</TABLE>
+<BR>
+<A HREF="1.htm"  OnMouseOver='whomp(prev, "sprev");' OnMouseOut='whomp(prev, "wprev");'
+ title="Previous Section"><IMG NAME=prev SRC="../images/wprev.png" ALT="Previous" HEIGHT=20 WIDTH=82 BORDER=0></A><!--
+--><A HREF="index.htm" OnMouseOver='whomp(chap, "schap");' OnMouseOut='whomp(chap, "wchap");'
+title="Chapter Overview"><IMG SRC="../images/wchap.png" ALT="Chapter" NAME=chap HEIGHT=20 WIDTH=100 BORDER=0></A><A
+HREF="../index.htm" OnMouseOver='whomp(toc, "sbook");' OnMouseOut='whomp(toc, "wbook");' 
+title="Table of Contents"><IMG SRC="../images/wbook.png" ALT="Contents" NAME=toc HEIGHT=20 WIDTH=94 BORDER=0></A><A
+HREF="../glossary/index.htm" OnMouseOver='whomp(glos, "sglos");' OnMouseOut='whomp(glos, "wglos");' 
+title="Glossary"><IMG SRC="../images/wglos.png" ALT="Glossary" NAME=glos HEIGHT=20 WIDTH=94 BORDER=0></A><!--
+--><A HREF="3.htm"  OnMouseOver='whomp(next, "snext");' OnMouseOut='whomp(next, "wnext");'
+ title="Next Section"><IMG NAME=next SRC="../images/wnext.png" ALT="Next" HEIGHT=20 WIDTH=82 BORDER=0></A>
+<BR>
+<A NAME="1">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarered10x10.png" HEIGHT=10 WIDTH=10></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=4><B>What Is a User Account?</B></FONT>
+</TD>
+</TR>
+</TABLE></A>
+<P>
+When two or more users share a computer, they don't have to argue about what color the background should be, what programs should be on the Start menu, or whether to use single-click or double-click style. Instead, each user can have a <A NAME="dduseraccount"><I>user account</I></A> (called a <I>user profile</I> in previous versions of Windows). User accounts can be stored in one of two places:
+<UL>
+<LI >
+<B><A NAME="ddlocaluseraccounts">Local user accounts</A></B>  Information about a local user account is stored a folder in the C:\Documents And Settings folder that contains files that describe each user's preferences. Each time a user logs on, Windows finds the appropriate user account and makes the appropriate changes. If you change any of your preferences (for example, choosing a new wallpaper), that information is stored in your user account, so that the change will still be there the next time you log on, but not the next time someone else logs on. Whenever your computer acquires a new user, you should <A HREF="../users/3.htm#1">establish a new user account</A>. User accounts enable several people to share one computer, or to share folders and other resources on a LAN.
+<LI >
+<B><A NAME="dddomainaccounts">Domain accounts</A></B>  Information about domain accounts is stored by the Active Directory (AD) program running on a Windows NT, 2000, or .NET server. When you log in using a domain, your computer gets information from Active Directory about what your settings are and what you have permission to do. Domain accounts are used on larger networks where maintaining accounts stored in each individual computer would be impractical. Domain accounts can use <A NAME="ddroaminguserprofiles"><I>roaming user profiles</I></A>, which allow people to use their own user account from any computer on a LAN, and <A NAME="ddmandatoryuserprofiles"><I>mandatory user profiles</I></A>, in which only administrators can make changes.
+</UL>
+<P>
+A new feature in Windows XP (new to Windows Me/9x users, anyway) enables you to <A HREF="../users/5.htm#8">password-protect the files in your My Documents folder</A>, so that other people using the same computer later won't be able to read them. Each user's My Documents folder can be protected from view from the other users.
+<P>
+Another new feature protects your computer if you don't assign passwords to your user accounts. If your user account doesn't have a password, you can log on to your account only at your own computer: you can't use Run As (described in the section "<A HREF="../users/5.htm#10">Running a Program as Another User</A>" later in this chapter) or <A HREF="../mobile/3.htm#1">Remote Desktop</A> to use the computer with your user account.
+<P>
+If your computer is on a small LAN, you can set up local user accounts on all the computers on the LAN so that people can use any computer and see their own files and desktop. See <A HREF="../sharehw/index.htm">Chapter 29</A> for details.
+<P>
+<TABLE><TR><TD VALIGN="TOP"><IMG SRC="../images/tip.png" ALT="tip" WIDTH=95 HEIGHT=29></TD>
+<TD VALIGN="TOP">If you are wondering which user account you are logged on as, click the Start button. The user account name appears at the top of the menu.
+
+</TD></TR></TABLE>
+<A NAME="2">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>What Types of Users Can You Create?</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+Windows XP Home Edition and Professional enable you to set up local user accounts. If you are logged into a Windows .NET, 2000, or NT server with administrative privileges, you can create and maintain domain accounts on a domain-based LAN, but you should talk to your LAN administrator before doing so.
+<P>
+Windows provides three types of local user accounts:
+<UL>
+<LI >
+<A NAME="ddadministrator"><B>Administrator</B></A><B>  </B>Enables access to all accounts. Each computer needs at least one administrator account at all times. You can have more than one, if you like. When using an administrator account, you can give commands to create, edit, and delete all user accounts, and you can install software. Windows XP comes with one administrator account named Owner (in Windows XP Home Edition) or Administrator (in Windows XP Professional). Microsoft recommends that you use it only for installing programs and managing the system.<B></B>
+<LI >
+<A NAME="ddlimited"><B>Limited</B></A><B>  </B>Enables access to your own account. When using a limited account, you cannot install software, open files in other people's My Documents folders, change system settings, or change other people's user accounts. You can run programs that are already installed, and you can modify your own user account (except that you can't change it into an administrator account). You should log on with a limited account for day-to-day work, to avoid viruses and other programs that might try to install themselves when you aren't looking.
+<LI >
+<A NAME="ddguest"><B>Guest</B></A><B>  </B>Enables access only to programs that are installed on the computer. Each Windows XP has one guest account (named Guest). When using the guest account, you cannot change the any user accounts, open files in other people's My Documents folders, or install software.<B></B>
+</UL>
+<P>
+You can create as many administrator or limited accounts as you want. You can't create guest accounts. When you install Windows XP, there are at least two accounts:
+<UL>
+<LI >
+<B>Owner or Administrator</B>  An administrator account (in Windows XP Home Edition, it's called Owner, and in Windows XP Professional, it's called Administrator). In the rest of this chapter, we'll refer to this account as Administrator.<B></B>
+<LI >
+<B>Guest</B>  The guest account.
+</UL>
+<P>
+The installation program asks for the names of the people who will use the computer, and creates an administrator account for each name. You can create additional administrative or limited accounts for each person who uses the computer, and you can rename or delete the Administrator account. Until you create other accounts and passwords, you automatically log on as Administrator when you start Windows. For how to create new accounts, see "<A HREF="../users/4.htm#2">Creating New User Accounts</A>" later in this chapter.
+<P>
+<TABLE><TR><TD VALIGN="TOP"><IMG SRC="../images/caution.png" ALT="caution" WIDTH=95 HEIGHT=29></TD>
+<TD VALIGN="TOP">If you are concerned about security (as you should be, if your computer connects to the Internet), disable the Guest account (see the section "<A HREF="../users/4.htm#9">Enabling and Disabling the Guest Account</A>" later in this chapter). Also be sure to create passwords for each user account, as described in the section "<A HREF="../users/4.htm#8">Adding or Removing Passwords</A>" later in this chapter. Change all but one or two rarely used accounts from administrator to limited accounts, to reduce security holes.
+
+</TD></TR></TABLE>
+<A NAME="3">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>What Are Groups?</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+Each user account is a member of one or more <A NAME="ddgroups"><I>groups</I></A>, which define what the user can do. A user account can be a member of many groups. You can create new groups and you can add user accounts to groups. Groups can be <A NAME="ddlocalgroups"><I>local groups</I></A> (stored on your own computer) or <A NAME="dddomaingroups"><I>domain groups</I></A> (stored as part of a Microsoft Active Directory system on a Windows .NET Server).
+<P>
+(If you need to create and modify groups, you probably have a LAN with a large enough number of computers to warrant at least one computer running Windows .NET Server, with domain-based accounts--see <I>Windows .NET Server: The Complete Reference</I> for information.)
+<P>
+Each group comes with <A NAME="ddrights"><I>rights</I></A> that allow members of that group to perform system-wide tasks, like installing or running programs. A user account has all the rights of all the groups to which it belongs. Groups also have <A HREF="../users/2.htm#8">permissions</A> to use certain files and folders.
+<P>
+Windows XP Professional comes with nine built-in groups, but for user accounts on a single computer, you usually use only three of them (see the preceding section for descriptions of what each type of user account can do). User accounts belong to these groups:
+<BLOCKQUOTE><TABLE BORDER=2><TR><TD>
+<TABLE>
+<TR>
+<TD>
+<B>Group Name</B>
+</TD>
+<TD>
+<B>User Accounts</B>
+</TD>
+</TR>
+<TR>
+<TD>
+Administrators
+</TD>
+<TD>
+Administrator user accounts<B></B>
+</TD>
+</TR>
+<TR>
+<TD>
+Users
+</TD>
+<TD>
+Limited user accounts<B></B>
+</TD>
+</TR>
+<TR>
+<TD>
+Guest
+</TD>
+<TD>
+The Guest account<B></B>
+</TD>
+</TR>
+</TABLE></BLOCKQUOTE>
+</TABLE></BLOCKQUOTE>
+<P>
+<TABLE><TR><TD VALIGN="TOP"><IMG SRC="../images/note.png" ALT="note" WIDTH=95 HEIGHT=29></TD>
+<TD VALIGN="TOP">Windows XP Home Edition comes with the same groups as Professional, but with no way to create additional groups or to change settings for a group.
+
+</TD></TR></TABLE>
+<A NAME="4">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>What Is a User Profile?</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+Table 6-1 lists the some of the files and folders that are stored separately for each local user account. These items are stored in the user account's <A NAME="dduserprofile"><I>user profile</I></A>--the folder that contains all the settings for the user. A user profile is usually in the C:\Documents And Settings\<I>username</I> folder, where <I>username</I> is replaced by the name of the user account. (If Windows is installed on a partition other than C:, so is this folder.) You need to <A HREF="../exploring/5.htm#1">configure Windows Explorer to display hidden files and folders</A> to see them.
+<BLOCKQUOTE><TABLE BORDER=2><TR><TD>
+<TABLE>
+<TR>
+<TD>
+<B>Item</B>
+</TD>
+<TD>
+<B>Contents</B>
+</TD>
+</TR>
+<TR>
+<TD>
+Ntuser.dat, Ntuser.dat.log, and Ntuser.tmp files
+</TD>
+<TD>
+This user's configuration settings and other information.
+</TD>
+</TR>
+<TR>
+<TD>
+Application Data folder
+</TD>
+<TD>
+This user's application program configuration settings.
+</TD>
+</TR>
+<TR>
+<TD>
+Cookies folder
+</TD>
+<TD>
+The <A HREF="../browsing/10.htm#3">cookies</A> stored by Internet Explorer while run by this user.
+</TD>
+</TR>
+<TR>
+<TD>
+Desktop folder
+</TD>
+<TD>
+The items that appear on this user's desktop.
+</TD>
+</TR>
+<TR>
+<TD>
+Favorites folder
+</TD>
+<TD>
+Items this user has added to the Favorites folder.
+</TD>
+</TR>
+<TR>
+<TD>
+Local Settings\History folder
+</TD>
+<TD>
+Shortcuts to Web sites this user has viewed recently.
+</TD>
+</TR>
+<TR>
+<TD>
+Local Settings\Temporary Internet Files folder
+</TD>
+<TD>
+Recently-viewed Web pages.
+</TD>
+</TR>
+<TR>
+<TD>
+My Documents folder
+</TD>
+<TD>
+The files and folders that appear in this user's My Documents folder when the user is logged on. You can tell Windows to look in a different location for your My Documents folder: see "<A HREF="../users/4.htm#3">Modifying User Accounts</A>" later in this chapter.
+</TD>
+</TR>
+<TR>
+<TD>
+NetHood folder
+</TD>
+<TD>
+This user's <A HREF="../peer2peer/2.htm#3">network shortcuts</A>, which appear in the My Network Places folder when the user is logged on.
+</TD>
+</TR>
+<TR>
+<TD>
+PrintHood folder
+</TD>
+<TD>
+This user's <A HREF="../sharehw/index.htm">shared printers</A>.
+</TD>
+</TR>
+<TR>
+<TD>
+Recent Documents folder
+</TD>
+<TD>
+Shortcuts to files this user has opened recently.
+</TD>
+</TR>
+<TR>
+<TD>
+Send To folder
+</TD>
+<TD>
+Shortcuts to folders and devices that appear on the Send To menu when the user right-clicks a file or folder.
+</TD>
+</TR>
+<TR>
+<TD>
+Start Menu folder
+</TD>
+<TD>
+The shortcuts and folders that Windows uses to display the Start and More Programs menus for this user.
+</TD>
+</TR>
+<TR>
+<TD>
+Templates folder
+</TD>
+<TD>
+Template files for word processors and other programs, used when this user creates a new document.
+</TD>
+</TR>
+</TABLE></BLOCKQUOTE>
+<TR BGCOLOR="#00ffff"><TD>
+<I>Table 1:  Information Stored in Local User Account Profiles</I>
+</TD></TR></TABLE></BLOCKQUOTE>
+<P>
+Domain-based LANs (that is, networks on which a Windows .NET Server stores all user information) offer roaming profiles that are stored on the server rather than on the user's computer. With roaming profiles, you can log on to any computer on the network and see your desktop and your files in My Documents. (See <I>Windows .NET Server: The Complete Reference </I>for more information.)
+<P>
+<TABLE><TR><TD VALIGN="TOP"><IMG SRC="../images/note.png" ALT="note" WIDTH=95 HEIGHT=29></TD>
+<TD VALIGN="TOP">If you upgrade to Windows XP from Windows NT and already had user profiles, they may still be where NT stores them, which is usually in C:\WinNT\Profiles.
+
+</TD></TR></TABLE>
+<A NAME="5">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>What Configuration Settings Do Local User Accounts Have?</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+Local user accounts have a number of configuration options, as listed in Table 6-2. See "<A HREF="../users/4.htm#3">Modifying User Accounts</A>" later in this chapter for how to change them.
+<BLOCKQUOTE><TABLE BORDER=2><TR><TD>
+<TABLE>
+<TR>
+<TD>
+<B>Setting</B>
+</TD>
+<TD>
+<B>Description</B>
+</TD>
+</TR>
+<TR>
+<TD>
+Name
+</TD>
+<TD>
+User name that appears at the top of the Start menu and on the Welcome screen.
+</TD>
+</TR>
+<TR>
+<TD>
+Picture
+</TD>
+<TD>
+Graphic file that appears on the Start menu and welcome screen next to the user's name.
+</TD>
+</TR>
+<TR>
+<TD>
+Account type
+</TD>
+<TD>
+<A HREF="../users/2.htm#2">Administrator limited, or guest</A>.
+</TD>
+</TR>
+<TR>
+<TD>
+Password
+</TD>
+<TD>
+The password should be at least seven characters, and ideally longer. You can include lowercase letters, uppercase letters, numbers, and punctuation. Don't use names or words that appear in the dictionary.
+</TD>
+</TR>
+<TR>
+<TD>
+Full Name
+</TD>
+<TD>
+Full name of the user.
+</TD>
+</TR>
+<TR>
+<TD>
+Description
+</TD>
+<TD>
+Other text about the user.
+</TD>
+</TR>
+<TR>
+<TD>
+User must change password at next logon
+</TD>
+<TD>
+When selected, forces the person to change the password when he next logs on. Changing passwords regularly protects the user account from being used by someone who discovered an old password.
+</TD>
+</TR>
+<TR>
+<TD>
+User cannot change password
+</TD>
+<TD>
+When selected, prevents the person from changing the password. This option is useful for user accounts that are used by more than one person.
+</TD>
+</TR>
+<TR>
+<TD>
+Password never expires
+</TD>
+<TD>
+When selected, allows the user to continue using the same password indefinitely. 
+</TD>
+</TR>
+<TR>
+<TD>
+Account is disabled
+</TD>
+<TD>
+When selected, no one can log on using this account. When someone won't use the computer for a while, disable the person's account. Don't delete it and make a new one later, because you'll need to redo all the user account's settings.
+</TD>
+</TR>
+<TR>
+<TD>
+Account is locked out
+</TD>
+<TD>
+When someone has tried to log on with the wrong password too many times, this check box is selected. Clear the check box to enable the user to use this account again (and assign the person a new password!). See the section "<A HREF="../users/3.htm#6">Other Security Options</A>" later in this chapter for how to configure account lockouts.
+</TD>
+</TR>
+<TR>
+<TD>
+Member of
+</TD>
+<TD>
+Group(s) of which this user account is a member.
+</TD>
+</TR>
+<TR>
+<TD>
+Profile path
+</TD>
+<TD>
+Pathname of the user account's profile. When blank, the path is C:\Document And Settings\<I>username</I>\.
+</TD>
+</TR>
+<TR>
+<TD>
+Logon script
+</TD>
+<TD>
+Script (usually a batch file or Windows Script Hosting script) that Windows runs each time the user logs on. It also runs when Fast User Switching switches back to the user account. See <A HREF="../dos/index.htm">Chapter 39</A> for how to write batch files and <A HREF="../scripting/index.htm">Chapter 40</A> for how to run other scripts..
+</TD>
+</TR>
+<TR>
+<TD>
+Local path
+</TD>
+<TD>
+Pathname of the user account's <A HREF="../users/2.htm#6">home folder</A>, if it is stored on the local computer (rather than on a network drive).
+</TD>
+</TR>
+<TR>
+<TD>
+Connect <I>xx</I> to <I>xx</I>
+</TD>
+<TD>
+<A HREF="../sharehw/3.htm#1">Shared folder</A> name to use as the user account's home folder. In the first box, choose a drive letter, and in the second box, type a <A HREF="../files/2.htm#4">UNC network path</A> (such as \\server\users\fred).
+</TD>
+</TR>
+</TABLE></BLOCKQUOTE>
+<TR BGCOLOR="#00ffff"><TD>
+<I>Table 2:  Local User Account Settings</I>
+</TD></TR></TABLE></BLOCKQUOTE>
+<A NAME="6">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Can Windows XP Keep Files Private?</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+Windows Me/9x had no provision for users keeping files private from each other. Like Windows NT and 2000, Windows XP does, as long as three things are true:
+<UL>
+<LI >
+The disk on which the files are stored is formatted using <A HREF="../harddisks/1.htm#6">NTFS</A>. If your disk is formatted as FAT32 instead of NTFS, you can set up local user accounts and groups, but you can't make files or folders private.
+<LI >
+<A HREF="../users/2.htm#7">Simple File Sharing</A> is disabled, as described in the next section.
+<LI >
+You have Windows XP Professional rather than Windows XP Home Edition.
+</UL>
+<P>
+Each user account has its own My Documents folder in which the user can store files. Other users can't open the folder to see the files. Choose Start | My Documents to see the contents of your My Documents folder.
+<P>
+Windows usually stores the My Documents folders for all local user accounts in the C:\Documents And Settings folder. When you <A HREF="../users/4.htm#8">create a password</A> for your account, Windows asks if you want a private documents folder. If you click Yes, your My Documents folder can only be opened by you, and by administrative users. If you click No, anyone can open your My Documents folder. (If an administrator creates a new user account, Windows creates the private My Documents folder right away.)
+<P>
+When you are logged on, the C:\Documents And Settings\<I>username</I>\My Documents folder appears as the My Documents folder. Other user's folders also appear, with names like Zac's Documents and Jordan's Documents. If you try to open a private My Documents folder, Windows displays an error message instead.
+<P>
+You can change the location of your My Document's folder; see the section "<A HREF="../users/4.htm#3">Modifying User Accounts</A>" later in this chapter. To control who has permission to use your My Documents folder--or other folders--see the section "<A HREF="../users/5.htm#8">Keeping Your Files Private</A>" later in this chapter.
+<P>
+<TABLE><TR><TD VALIGN="TOP"><IMG SRC="../images/note.png" ALT="note" WIDTH=95 HEIGHT=29></TD>
+<TD VALIGN="TOP">In Windows 2000 and NT, each user had a <A NAME="ddhomefolder"><I>home folder</I></A>, which was similar to the My Documents folder. Windows XP provides each user with both a My Documents folder and a home folder, and you can control the location of both. Microsoft recommends using the My Documents folder rather than the home folder.
+
+</TD></TR></TABLE>
+<A NAME="7">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>What Is Simple File Sharing?</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+<A NAME="ddsimplefilesharing"><I>Simple File Sharing</I></A> is a new feature of Windows XP. When Simple File Sharing is enabled (which it is when you first install Windows) and when you share a drive or folder, you share that drive or folder with all user accounts on your computer. If you want to control who has access to drives and folders, you have to disable Simple File Sharing.
+<P>
+<TABLE><TR><TD VALIGN="TOP"><IMG SRC="../images/note.png" ALT="note" WIDTH=95 HEIGHT=29></TD>
+<TD VALIGN="TOP">You can't disable Simple File Sharing in Windows XP Home Edition, only in Windows XP Professional.
+
+</TD></TR></TABLE>
+<P>
+The advantage of leaving Simple File Sharing turned on is that you don't have to make a lot of choices when you decide to share files with other users of your computer, or with other people on your network (if your computer is connected to a local area network). However, if you want to be able to give access to some people but not to others, you need to turn Simple File Sharing off.
+<P>
+Follow these steps to change the Simple File Sharing setting on your computer:
+<OL>
+<LI  VALUE=1>
+Run Windows Explorer (choose Start | My Computer, for example).
+<LI  VALUE=2>
+Choose Tools | Folder Options to see the <A HREF="../exploring/7.htm#2">Folder Options dialog box</A>.
+<LI  VALUE=3>
+Click the View tab.
+<LI  VALUE=4>
+Scroll to the bottom of the Advanced Settings box to find the Use Simple File Sharing check box, and select or deselect the check box.
+<LI  VALUE=5>
+Click OK to close the dialog box.
+</OL>
+<P>
+The other requirement for granting permissions for files or folders to individual users is that the files or folders be stored on an NTFS disk or partition. When Simple File Sharing is disabled you see security options when you share a drive or folder, and the Properties dialog box for drives and folders includes a Security tab. However, the options you see depend on whether the drive that you are sharing is formatted with NTFS or FAT32.
+<A NAME="8">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>What Are Permissions?</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+<A NAME="ddpermissions"><I>Permissions</I></A> control what a user or group of users can do with a file, folder, printer, shared folder, or registry key. (See <A HREF="../printing/index.htm">Chapter 14</A> for how to control who can use a printer; see <A HREF="../sharehw/index.htm">Chapter 29</A> for how to share folders and printers on a network; and see <A HREF="../registry/index.htm">Chapter 38</A> for information about the Registry.)
+<P>
+Windows supports permissions only if Simple File Sharing (described in the previous section) is disabled and if you files are stored on an <A HREF="../harddisks/1.htm#6">NTFS drive</A>. Table 6-3 lists the permissions you can set for folders, and Table 6-4 lists permissions for files. There are other permissions that are not frequently used except in domain-based networks. Each permission either allows or prevents users from performing the operation. To change the permissions for files and folders (assuming that you have permission yourself to do so), see the section "<A HREF="../users/5.htm#8">Keeping Your Files Private</A>" later in this chapter.
+<BLOCKQUOTE><TABLE BORDER=2><TR><TD>
+<TABLE>
+<TR>
+<TD>
+<B>Folder Permission</B>
+</TD>
+<TD>
+<B>Allows or Prevents This Operation</B>
+</TD>
+</TR>
+<TR>
+<TD>
+Change Permissions
+</TD>
+<TD>
+Modifying the permissions of the folder.
+</TD>
+</TR>
+<TR>
+<TD>
+Create Files
+</TD>
+<TD>
+Creating new files in the folder.
+</TD>
+</TR>
+<TR>
+<TD>
+Create Folders
+</TD>
+<TD>
+Creating subfolders within the folder.
+</TD>
+</TR>
+<TR>
+<TD>
+Delete
+</TD>
+<TD>
+Deleting the folder.
+</TD>
+</TR>
+<TR>
+<TD>
+Delete Subfolders and Files
+</TD>
+<TD>
+Deleting folders and files stored in the folder, even if you don't have permissions for the individual subfolders and files.
+</TD>
+</TR>
+<TR>
+<TD>
+List Folder
+</TD>
+<TD>
+Viewing the names of the files and folders that the folder contains.
+</TD>
+</TR>
+<TR>
+<TD>
+Read Attributes
+</TD>
+<TD>
+Viewing the attributes of the folder.
+</TD>
+</TR>
+<TR>
+<TD>
+Read Permissions
+</TD>
+<TD>
+Reading the permissions of the folder.
+</TD>
+</TR>
+<TR>
+<TD>
+Take Ownership
+</TD>
+<TD>
+Taking ownership of the folder away from its current owner.
+</TD>
+</TR>
+<TR>
+<TD>
+Traverse Folder
+</TD>
+<TD>
+Opening the folder to navigate to its subfolders or parent folders.
+</TD>
+</TR>
+<TR>
+<TD>
+Write Attributes
+</TD>
+<TD>
+Changing the attributes of the folder.
+</TD>
+</TR>
+</TABLE></BLOCKQUOTE>
+<TR BGCOLOR="#00ffff"><TD>
+<I>Table 3:  Permissions for Folders</I>
+</TD></TR></TABLE></BLOCKQUOTE>
+<BLOCKQUOTE><TABLE BORDER=2><TR><TD>
+<TABLE>
+<TR>
+<TD>
+<B>File Permission</B>
+</TD>
+<TD>
+<B>Allows or Prevents This Operation</B>
+</TD>
+</TR>
+<TR>
+<TD>
+Append Data
+</TD>
+<TD>
+Adding information to the end of the file, without changing the existing information.
+</TD>
+</TR>
+<TR>
+<TD>
+Change Permissions
+</TD>
+<TD>
+Modifying the permissions of the file.
+</TD>
+</TR>
+<TR>
+<TD>
+Delete
+</TD>
+<TD>
+Deleting the file.
+</TD>
+</TR>
+<TR>
+<TD>
+Execute File
+</TD>
+<TD>
+Running the program contained in the file.
+</TD>
+</TR>
+<TR>
+<TD>
+Read Attributes
+</TD>
+<TD>
+Viewing the attributes of the file.
+</TD>
+</TR>
+<TR>
+<TD>
+Read Data
+</TD>
+<TD>
+Viewing the contents of the file.
+</TD>
+</TR>
+<TR>
+<TD>
+Read Permissions
+</TD>
+<TD>
+Reading the permissions of the file.
+</TD>
+</TR>
+<TR>
+<TD>
+Take Ownership
+</TD>
+<TD>
+Taking ownership of the file away from its current owner.
+</TD>
+</TR>
+<TR>
+<TD>
+Write Attributes
+</TD>
+<TD>
+Changing the attributes of the file.
+</TD>
+</TR>
+<TR>
+<TD>
+Write Data
+</TD>
+<TD>
+Modifying the contents of the file.
+</TD>
+</TR>
+</TABLE></BLOCKQUOTE>
+<TR BGCOLOR="#00ffff"><TD>
+<I>Table 4:  Permissions for Files</I>
+</TD></TR></TABLE></BLOCKQUOTE>
+<P>
+If a file or folder is stored on an NTFS drive or partition, and if you have <A HREF="../users/2.htm#7">Simple File Sharing</A> disabled, then the Properties dialog box for the file or folder includes a Security tab (as described in the section "<A HREF="../sharehw/3.htm#7">Setting User Permissions for NTFS Drives</A>" in Chapter 29). When you look at the Security tab of the Properties dialog box for a file or folder, you see the short list of permissions shown in Table 6-5. Each entry on the list represents a group of the permissions listed in Tables 6-3 and 6-4.
+<BLOCKQUOTE><TABLE BORDER=2><TR><TD>
+<TABLE>
+<TR>
+<TD>
+Permission
+</TD>
+<TD>
+<B>Allows for Folders</B>
+</TD>
+<TD>
+<B>Allows for Files</B>
+</TD>
+</TR>
+<TR>
+<TD>
+<B>Full Control</B>
+</TD>
+<TD>
+All operations
+</TD>
+<TD>
+All operations
+</TD>
+</TR>
+<TR>
+<TD>
+<B>Modify</B>
+</TD>
+<TD>
+Traverse and List Folder<BR>
+Read and Write Attributes<BR>
+Create Files and Folders<BR>
+Read Permissions<BR>
+Delete
+</TD>
+<TD>
+Execute File<BR>
+Read, Write, and Append Data<BR>
+Read and Write Attributes<BR>
+Read Permissions<BR>
+Delete
+</TD>
+</TR>
+<TR>
+<TD>
+<B>Read &amp; Execute</B>
+</TD>
+<TD>
+Traverse and List Folder<BR>
+Read Attributes and Permissions
+</TD>
+<TD>
+Execute File<BR>
+Read Data<BR>
+Read Attributes and Permissions
+</TD>
+</TR>
+<TR>
+<TD>
+<B>Read</B>
+</TD>
+<TD>
+List Folder <BR>
+Read Attributes and Permissions
+</TD>
+<TD>
+Read Data<BR>
+Read Attributes and Permissions
+</TD>
+</TR>
+<TR>
+<TD>
+<B>Write</B>
+</TD>
+<TD>
+Create Files and Folders<BR>
+Write Attributes<BR>
+Read Permissions
+</TD>
+<TD>
+Write and Append Data<BR>
+Write Attributes<BR>
+Read Permissions
+</TD>
+</TR>
+<TR>
+<TD>
+<B>List Folder Contents</B>
+</TD>
+<TD>
+Traverse and List Folder<BR>
+Read Attributes<BR>
+Read Permissions
+</TD>
+<TD>
+(Not applicable)
+</TD>
+</TR>
+</TABLE></BLOCKQUOTE>
+<TR BGCOLOR="#00ffff"><TD>
+<I>Table 5:  Permissions Shown in Folder and File Properties Dialog Boxes</I>
+</TD></TR></TABLE></BLOCKQUOTE>
+<A NAME="9">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>What Is Fast User Switching?</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+<A NAME="ddfastuserswitching"><I>Fast User Switching</I></A> is a new feature of Windows XP that allows you to switch from one user account to another without the first user logging off. For example, a user named Jordan might be running Outlook Express and Microsoft Access. Another user named Meg needs to check her mail and asks to use the computer. Fast User Switching lets Jordan step aside and Meg switch the computer to her user account. Jordan's programs are on hold until Meg is done using the computer. When Jordan switches back to his account, his programs are just where he left them.
+<P>
+Fast User Switching is enabled by default if your Windows system has at least 64MB of RAM. With less RAM, the system doesn't have enough space to store one user's environment, including its running programs and open files, while another user is active.
+<P>
+<TABLE><TR><TD VALIGN="TOP"><IMG SRC="../images/note.png" ALT="note" WIDTH=95 HEIGHT=29></TD>
+<TD VALIGN="TOP">You can't use Fast User Switching if your computer is part of a domain (that is, connected to a domain-based LAN). You also can't use it if you use the <A HREF="../users/3.htm#4">Classic logon screen</A> instead of the Welcome screen for logging on.
+
+</TD></TR></TABLE>
+<P>
+<A HREF="1.htm"  OnMouseOver='whomp(prevb, "sprev");' OnMouseOut='whomp(prevb, "wprev");'
+ title="Previous Section"><IMG NAME=prevb SRC="../images/wprev.png" ALT="Previous" HEIGHT=20 WIDTH=82 BORDER=0></A><!--
+--><A HREF="index.htm" OnMouseOver='whomp(chapb, "schap");' OnMouseOut='whomp(chapb, "wchap");'
+title="Chapter Overview"><IMG SRC="../images/wchap.png" ALT="Chapter" NAME=chapb HEIGHT=20 WIDTH=100 BORDER=0></A><A
+HREF="../index.htm" OnMouseOver='whomp(tocb, "sbook");' OnMouseOut='whomp(tocb, "wbook");' 
+title="Table of Contents"><IMG SRC="../images/wbook.png" ALT="Contents" NAME=tocb HEIGHT=20 WIDTH=94 BORDER=0></A><A
+HREF="../glossary/index.htm" OnMouseOver='whomp(glosb, "sglos");' OnMouseOut='whomp(glosb, "wglos");' 
+title="Glossary"><IMG SRC="../images/wglos.png" ALT="Glossary" NAME=glosb HEIGHT=20 WIDTH=94 BORDER=0></A><!--
+--><A HREF="3.htm"  OnMouseOver='whomp(nextb, "snext");' OnMouseOut='whomp(nextb, "wnext");'
+ title="Next Section"><IMG NAME=nextb SRC="../images/wnext.png" ALT="Next" HEIGHT=20 WIDTH=82 BORDER=0></A>
+<BR>
+</BLOCKQUOTE>
+</BODY>
+</HTML>

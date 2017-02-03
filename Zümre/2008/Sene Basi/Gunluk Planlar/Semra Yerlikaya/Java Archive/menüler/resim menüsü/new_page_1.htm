@@ -1,0 +1,64 @@
+<html>
+
+<head>
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1254">
+<title>New Page 1</title>
+
+<script language="javascript">
+<!--
+
+/*Combo Box Image Selector:
+By Website Abstraction (www.wsabstract.com)
+Bu JavaScript, http://www.javasayfasi.com adresinden temin edilmistir.
+Türçe JavaScript Arsiviniz ::: JavaSayfasi.com
+*/
+
+function linkrotate(which){
+var mylinks=new Array()
+//add in more links if you want (ie:mylinks[3]=...)
+mylinks[0]="resim1.jpg"
+mylinks[1]="resim2.jpg"
+mylinks[2]="resim3.jpg"
+mylinks[3]="resim4.jpg"
+mylinks[4]="resim5.jpg"
+
+window.location=mylinks[which]
+}
+
+
+function showimage()
+{
+if (!document.images)
+return
+document.images.pictures.src=
+document.mygallery.picture.options[document.mygallery.picture.selectedIndex].value
+}
+//-->
+</script>
+
+</head>
+
+<body>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="100%"><form name="mygallery"><p>
+<select name="picture" size="1" onChange="showimage()">
+<option selected value="kucukresim1.jpg">Resim 1</option>
+<option value="kucukresim2.jpg">Resim #2</option>
+<option value="kucukresim3.jpg">Resim #3</option>
+<option value="kucukresim4.jpg">Resim #4</option>
+<option value="kucukresim5.jpg">Resim #5</option>
+</select></p>
+</form>
+</td>
+</tr>
+<tr>
+<td width="100%"><p align="center"><a href="javascript:linkrotate(document.mygallery.picture.selectedIndex)" onMouseover="window.status='';return true"><img src="me.gif" name="pictures" width="99"
+height="100" border=0></a></td>
+</tr>
+</table>
+</body>
+
+</html>

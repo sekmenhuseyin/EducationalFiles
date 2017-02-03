@@ -1,0 +1,239 @@
+<!doctype html public "-//IETF//DTD HTML//EN">
+<HTML>
+<HEAD>
+<TITLE>Windows XP: The Complete Reference: Internet Conferencing with Windows Messenger and NetMeeting</TITLE>
+<META NAME="GENERATOR" CONTENT="Web-O-Matic Deluxe 4.1">
+<META NAME="AUTHOR" CONTENT="John R. Levine, Margaret Levine Young">
+<META NAME="COPYRIGHT" CONTENTS="Copyright 2001 by The McGraw-Hill Companies. All rights reserved.">
+</HEAD>
+<BODY BACKGROUND="../images/background.png">
+<BLOCKQUOTE>
+<SCRIPT LANGUAGE="JavaScript">
+function whomp(i, file)
+{
+	i.src = "../images/" + file + ".png";
+}
+</SCRIPT>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarered3x3.png" HEIGHT=3 WIDTH=3></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=2>
+Chapter 25: Internet Conferencing with Windows Messenger and NetMeeting
+</FONT></TD>
+</TR>
+</TABLE>
+<BR>
+<A HREF="1.htm"  OnMouseOver='whomp(prev, "sprev");' OnMouseOut='whomp(prev, "wprev");'
+ title="Previous Section"><IMG NAME=prev SRC="../images/wprev.png" ALT="Previous" HEIGHT=20 WIDTH=82 BORDER=0></A><!--
+--><A HREF="index.htm" OnMouseOver='whomp(chap, "schap");' OnMouseOut='whomp(chap, "wchap");'
+title="Chapter Overview"><IMG SRC="../images/wchap.png" ALT="Chapter" NAME=chap HEIGHT=20 WIDTH=100 BORDER=0></A><A
+HREF="../index.htm" OnMouseOver='whomp(toc, "sbook");' OnMouseOut='whomp(toc, "wbook");' 
+title="Table of Contents"><IMG SRC="../images/wbook.png" ALT="Contents" NAME=toc HEIGHT=20 WIDTH=94 BORDER=0></A><A
+HREF="../glossary/index.htm" OnMouseOver='whomp(glos, "sglos");' OnMouseOut='whomp(glos, "wglos");' 
+title="Glossary"><IMG SRC="../images/wglos.png" ALT="Glossary" NAME=glos HEIGHT=20 WIDTH=94 BORDER=0></A><!--
+--><IMG SRC="../images/bnext.png" ALT="Next" HEIGHT=20 WIDTH=82 BORDER=0>
+<BR>
+<A NAME="1">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarered10x10.png" HEIGHT=10 WIDTH=10></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=4><B>Conferencing with Microsoft NetMeeting</B></FONT>
+</TD>
+</TR>
+</TABLE></A>
+<P>
+The newest version of Windows Messenger has all of NetMeeting's features, but if you are working with someone who is not using Windows XP and Windows Messenger 4.0 you may want to use NetMeeting to chat, talk, videoconference, or share applications or a Whiteboard.
+<P>
+In order to connect to the other people with whom you want to meet, you have to provide a way for NetMeeting to find the person. NetMeeting uses several ways:
+<UL>
+<LI >
+<B>Windows Address Book</B>  If you use the <A HREF="../email/6.htm#1">Windows Address Book</A> to store e-mail addresses and other information, NetMeeting can search it for the person you want to talk to.
+<LI >
+<A NAME="dddirectoryserver"><B>Directory server</B></A>  A <I>directory server</I> stores the addresses of people who use NetMeeting. When you are logged on to a directory server, your name appears on its lists, so that anyone else can "call" you. Once you have connected to a directory server, you can <A HREF="../chatting/2.htm#4">call another person</A> or several other people. Large organizations may have their own directory servers for their employees, and Microsoft maintains a public directory server called the Microsoft Internet Directory, the same server that Windows Messenger uses. You must have a <A HREF="../chatting/1.htm#2">Microsoft .NET Passport</A> to connect to the Microsoft Internet Directory.
+<LI >
+<B>IP address</B>  If you know the person's <A HREF="../connecting/5.htm#2">IP address</A> (numeric Internet address, in the format <I>xxx.xxx.xxx.xxx</I>), you can type it directly. However, most Internet users have a different address each time they connect to the Internet or restart Windows, and if you are on a LAN that connects to the Internet, you can use IP addresses only for other people on the LAN. To find out your IP address, choose Help | About Windows NetMeeting from the menu bar in the NetMeeting window, and look at the bottom of the About Windows NetMeeting dialog box that appears.
+</UL>
+<P>
+<TABLE><TR><TD VALIGN="TOP"><IMG SRC="../images/note.png" ALT="note" WIDTH=95 HEIGHT=29></TD>
+<TD VALIGN="TOP">If there is a firewall (like the Internet Connection Firewall) between you and the Internet, you will not be able to use many of NetMeeting's features.
+
+</TD></TR></TABLE>
+<P>
+NetMeeting lets you connect only with other people who use NetMeeting: it doesn't conform to any Internet conferencing standards. For example, you can't join a meeting with people who use Internet Relay Chat (IRC), CU-SeeMe, PowWow, Internet Phone, or other online chat programs.
+<P>
+<TABLE><TR><TD VALIGN="TOP"><IMG SRC="../images/note.png" ALT="note" WIDTH=95 HEIGHT=29></TD>
+<TD VALIGN="TOP">This section describes NetMeeting version 3.01, the same version that shipped with Windows Me. Microsoft is no longer developing NetMeeting, because Windows Messenger replaces it.
+
+</TD></TR></TABLE>
+<A NAME="2">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Running and Configuring NetMeeting</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+NetMeeting used to be on the Start menu, and we expected to see it at Start | All Programs | Accessories | Communications | NetMeeting. However, it doesn't appear on this menu as part of the regular Windows installation--you may want to <A HREF="../starttask/5.htm#2">add it</A> if you plan to use NetMeeting often. Otherwise, choose Start | Run, type <B>conf</B> (for "conferencing"), and press E<SMALL>NTER</SMALL>. If you haven't already configured NetMeeting, you see a series of windows that tell you about the program and ask for the following information:<UL>
+<LI >
+<B>Your name, e-mail address, location, and comments  </B>You have to type your name and e-mail address, as you can see next, but you can leave the rest of the information blank.
+<LI >
+<B>Which directory server to use  </B>The default is Microsoft Internet Directory, which is the same directory you see when you use Windows Messenger. A number of other public directory servers are also available. You can find a list of them at the DevX NetMeeting Zone Web site at <A HREF="http://www.netmeet.net/bestservers.asp"><B>http://www.netmeet.net/bestservers.asp</B></A>. If your organization uses NetMeeting, you may use a private directory server. You can choose the Log On To A Directory Server When NetMeeting Starts check box (the alternative is to log on manually by choosing Call | Log On from the NetMeeting menu bar). You can also choose whether you want to be listed in the directory on the server you choose--we recommend leaving the Do Not List My Name In The Directory check box unless you are using a private directory. If you choose a public server, you may prefer not to be listed, so that strangers don't contact you.
+<LI >
+<B>Connection speed  </B>Choose the speed of your modem or specify that you are connected via a <A HREF="../lans/index.htm">LAN</A>. NetMeeting uses this information when sending audio or video data to you.
+<LI >
+<B>Shortcuts  </B>If you use NetMeeting often, you might want to add a shortcut to the desktop or to the Quick Launch toolbar on your taskbar.
+</UL>
+<P>
+NetMeeting runs the Audio And Video Tuning Wizard to make sure that your speakers are working, for use in audio chats (don't worry if you don't have a microphone--NetMeeting is still useful). When it finishes, the configuration program displays the NetMeeting window, as shown in Figure 25-5.
+<P>
+Callouts (see last edition for placement: Windows ME TCR (751), page 612, Figure 25-3.):
+<P>
+Place call
+<P>
+End call
+<P>
+Find someone
+<P>
+Share program
+<P>
+Chat
+<P>
+Whiteboard
+<P>
+Transfer files
+<TABLE BORDER=2><TR><TD ALIGN=CENTER>
+<IMG SRC="chatting.netmeeting.png" WIDTH=250 HEIGHT=487 ALT="[figure]">
+</TD></TR><TR BGCOLOR="#00ffff"><TD><I>Figure 25-5:  The NetMeeting window</I></TD></TR></TABLE>
+<P>
+You may want to make some other changes to your configuration by choosing Tools | Options. On the Options dialog box that appears, shown next, you can set these types of options:
+<BR><IMG ALIGN=TOP SRC="chatting.meetopt.png" WIDTH=412 HEIGHT=476 ALT="[image]">
+<UL>
+<LI >
+<B>General tab  </B>Make changes to the configuration information you typed when you first ran NetMeeting.
+<LI >
+<B>Security tab  </B>Specify whether to accept incoming calls automatically, whether to make secure outgoing calls, and other security options.
+<LI >
+<B>Audio tab  </B>Configure NetMeeting to work with your microphone and speakers.
+<LI >
+<B>Video tab  </B>Specify the size and quality of video images to display.
+</UL>
+<A NAME="3">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Connecting to a Directory Server</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+Once you see the NetMeeting window (as shown in Figure 25-5), you can start a meeting by clicking the Place Call button (the yellow telephone) if you know the e-mail address of the person you want to talk to. However, unless you know the person's IP address or have called them before, you usually need to start the call by selecting the person from a directory.
+<P>
+When you click the Find Someone In A Directory button (the little open book) when you are connected to a directory server, you see the Find Someone window (if your computer isn't connected to the Internet, you see a message first: click Connect). Set the Select A Directory to the directory to which you want to connect. If you want to use the Microsoft Internet Directory, you may need to click a link to log in using your Microsoft .NET Passport name and password. Then you see a list of the people who are on your contacts list (this is the same list that appears in Windows Messenger), as in Figure 25-6.
+<TABLE BORDER=2><TR><TD ALIGN=CENTER>
+<IMG SRC="chatting.wmsdir.png" WIDTH=648 HEIGHT=516 ALT="[figure]">
+</TD></TR><TR BGCOLOR="#00ffff"><TD><I>Figure 25-6:  You can use the Microsoft Internet Directory to see your Windows Messenger contacts.</I></TD></TR></TABLE>
+<P>
+If you want to talk to someone who isn't on your Windows Messenger contact list, you and the other person need to connect to the same directory server. See the DevX NetMeeting Zone Web site at <A HREF="http://www.netmeet.net/bestservers.asp"><B>http://www.netmeet.net/bestservers.asp</B></A> for a list of servers to us. Choose Tools | Options from the NetMeeting window's menu bar and type the server name (usually ils.<I>domainname</I>) into the Directory box and click OK. Now, when you click the Find Someone In A Directory button, a list of people on the server appears, with a little PC icon to the left of each person's e-mail address (as shown in Figure 25-7). An icon with a blue screen and red twinkle means that the person is currently in a call, whereas a gray icon means that the person is not in a call. A little yellow speaker icon indicates that the person can communicate via audio. A little gray camera icon means that the person can communicate via video. On the listing of people, click the column headings to sort by that column; sorting by last name or e-mail address makes finding the person you want easier.
+<TABLE BORDER=2><TR><TD ALIGN=CENTER>
+<IMG SRC="chatting.directory.png" WIDTH=559 HEIGHT=400 ALT="[figure]">
+</TD></TR><TR BGCOLOR="#00ffff"><TD><I>Figure 25-7:  Clicking the Directory icon displays a listing of people connected to your directory server</I></TD></TR></TABLE>
+<P>
+<TABLE><TR><TD VALIGN="TOP"><IMG SRC="../images/caution.png" ALT="caution" WIDTH=95 HEIGHT=29></TD>
+<TD VALIGN="TOP">When you are connected to a public server and your name is listed, you are likely to get unwanted calls.
+
+</TD></TR></TABLE>
+<A NAME="4">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Making or Receiving a Call</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+To call someone, double-click the person's name on the contact or directory list, or type the name in the box and click the Call button. If you are using Microsoft Internet Directory, then the person is contacted through Windows Messenger: if they accept your invitation, Windows Messenger takes over on your computer, too. If you use another directory server, NetMeeting contacts the directory server to make the connection and displays a dialog box on that person's computer screen, asking them whether they want to connect with you. If the person accepts your call, the NetMeeting window lists the people who are in your current call, as shown in Figure 25-8.
+<TABLE BORDER=2><TR><TD ALIGN=CENTER>
+<IMG SRC="chatting.meetcall.png" WIDTH=250 HEIGHT=487 ALT="[figure]">
+</TD></TR><TR BGCOLOR="#00ffff"><TD><I>Figure 25-8:  Participants in the call appear in the lower part of the NetMeeting window.</I></TD></TR></TABLE>
+<P>
+When someone calls you, you see a dialog box asking whether you want to take the call or a message in Windows Messenger inviting you to join the meeting; click Accept in either case if you do. You see the NetMeeting window with the callers listed.
+<P>
+Another way to make a call is to click the Place Call button, choose Call | New Call, or press C<SMALL>TRL</SMALL>-N. You see the Place A Call dialog box, as in Figure 25-9. In the Address box, type the name of the directory server to which the person is connected, followed by a slash (/) and the e-mail address of the person you want to call. If the person you are calling uses a computer with its own computer name or IP address, you can type that instead. Then click the Call button.<TABLE BORDER=2><TR><TD ALIGN=CENTER>
+<IMG SRC="chatting.meetnew.png" WIDTH=312 HEIGHT=204 ALT="[figure]">
+</TD></TR><TR BGCOLOR="#00ffff"><TD><I>Figure 25-9:  The Place A Call dialog box</I></TD></TR></TABLE>
+<P>
+When you are done with the call, click the Hang Up button. NetMeeting maintains its connection with the directory server but disconnects from the call.
+<A NAME="5">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Once You Are Connected</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+Once you are connected to at least one other person, you can communicate using most of the same features that Windows Messenger offers:
+<UL>
+<LI >
+<B>Text chat</B>  Click the Chat button to display a window in which you can type messages to the other people in the chat.
+<LI >
+<B>Voice chat</B>  If both of you have microphones and speakers, you can just begin talking. Speak slowly, one at a time (as though you were using a walkie-talkie--over!). Unless you have a very fast connection, you may experience "breaking up"--the sound may be interrupted and "staticky." Keep your microphone away from the speakers, or use headphones, to avoid feedback.
+<LI >
+<B>Videoconferencing</B>  If other people in your call have video cameras (even if you don't have one), you can see video from one of their cameras (one at a time) in your NetMeeting window. The video appears in the Remote Video window, a small box on the right side of the window when the Current Call icon is selected. If you don't see the video, click the button at the bottom of the Remote Video window. To set your video options, choose Tools | Options and click the Video tab. You can tell NetMeeting to enable your video camera automatically when you make a call; set the size of the video image; choose between faster, low-quality video and slower, high-quality video; and specify the properties of your camera. If you have a camera, be sure to light your face (or whatever the camera points at) from the front. You can't see more than one person at a time; to switch the person in the call you can see, choose Tools | Switch Audio And Video and choose the name of the person whom you want to see.
+<LI >
+<B>Sharing a whiteboard</B>  If you and the other participants in your call want to draw diagrams or pictures that are visible by everyone in the call, use the Whiteboard feature. When you click the Whiteboard button near the bottom of the NetMeeting window, you see a window that works similarly to <A HREF="../graphics/5.htm#1">Microsoft Paint</A>. When anyone in the call makes a change to the Whiteboard window, everyone in the call sees the change.
+<LI >
+<B>Sending and receiving files</B>  Choose Tools | File Transfer or click the File Transfer button at the bottom of the NetMeeting window to open the File Transfer window. Click the Add Files button and specify which file you want to send. Alternatively, drag the name of the file from Windows Explorer onto the File Transfer window. Click the Send All button to send the files. To send a file to one caller, rather than to everyone in the call, select the person from the drop-down list at the top right of the File Transfer window. If someone sends you a file, NetMeeting automatically receives the file, storing it in the C:\Program Files\NetMeeting\Received Files folder (assuming that Windows is installed on C:). You see a window telling you about the arrival of the file. To open the file with the default application for the type of file you received, click the Open button.
+</UL>
+<P>
+<TABLE><TR><TD VALIGN="TOP"><IMG SRC="../images/caution.png" ALT="caution" WIDTH=95 HEIGHT=29></TD>
+<TD VALIGN="TOP">Beware of viruses in executable files and of generally offensive material when receiving files from people you don't know.
+
+</TD></TR></TABLE>
+<UL>
+<LI >
+<B>Sharing programs</B>  You and the other people in your meeting can share the windows of a running program that one member has on his or her screens. For example, you could show a group around your Web site by running a browser on your machine and sharing the browser window so that the other callers can see the contents of the browser window on their screens, too. This feature works like <A HREF="../chatting/1.htm#10">Windows Messenger's application-sharing</A>.
+</UL>
+<P>
+<TABLE><TR><TD VALIGN="TOP"><IMG SRC="../images/note.png" ALT="note" WIDTH=95 HEIGHT=29></TD>
+<TD VALIGN="TOP">Firewalls, including the Internet Connection Firewall that comes with Windows XP, can prevent video and voice from working.
+
+</TD></TR></TABLE>
+<A NAME="6">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Hosting a Meeting or Joining an Existing Meeting</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+In addition to calls, you can communicate in <A NAME="ddmeetings"><I>meetings</I></A>, calls that are scheduled in advance. Hosting a meeting allows you to define some properties for the meeting. To host a meeting, let everyone invited to the meeting know when the meeting will take place and how to call you using NetMeeting. At the time the meeting is scheduled to begin, choose Call | Host Meeting, and choose the options you want from the Host A Meeting dialog box, shown in Figure 25-10. When you click OK, you return to the NetMeeting window, with only you listed as a caller. When the other callers connect, you see a dialog box asking whether they can join; click Accept or Ignore.
+<TABLE BORDER=2><TR><TD ALIGN=CENTER>
+<IMG SRC="chatting.host.png" WIDTH=348 HEIGHT=411 ALT="[figure]">
+</TD></TR><TR BGCOLOR="#00ffff"><TD><I>Figure 25-10:  The Host A Meeting dialog box</I></TD></TR></TABLE>
+<P>
+Because you are the host of the meeting, the meeting ends when you hang up. Other participants can come and go without ending the meeting. As the host, you can also throw people out of your meeting: right-click the person's name on the list of callers and choose Remove from the menu that appears.
+<P>
+To join an existing meeting, call someone who is in the meeting. You see a message that the person is currently in a meeting, asking whether you want to try to join the meeting; click Yes. When the person you called leaves the meeting, you leave too, so it's best to call the person who is hosting the meeting.
+<P>
+<TABLE><TR><TD VALIGN="TOP"><IMG SRC="../images/tip.png" ALT="tip" WIDTH=95 HEIGHT=29></TD>
+<TD VALIGN="TOP">If you don't want anyone else to join the meeting (or any NetMeeting call), choose Call | Do Not Disturb. Remember to choose the same command again when you want to re-enable receiving calls.
+
+</TD></TR></TABLE>
+<P>
+<A HREF="1.htm"  OnMouseOver='whomp(prevb, "sprev");' OnMouseOut='whomp(prevb, "wprev");'
+ title="Previous Section"><IMG NAME=prevb SRC="../images/wprev.png" ALT="Previous" HEIGHT=20 WIDTH=82 BORDER=0></A><!--
+--><A HREF="index.htm" OnMouseOver='whomp(chapb, "schap");' OnMouseOut='whomp(chapb, "wchap");'
+title="Chapter Overview"><IMG SRC="../images/wchap.png" ALT="Chapter" NAME=chapb HEIGHT=20 WIDTH=100 BORDER=0></A><A
+HREF="../index.htm" OnMouseOver='whomp(tocb, "sbook");' OnMouseOut='whomp(tocb, "wbook");' 
+title="Table of Contents"><IMG SRC="../images/wbook.png" ALT="Contents" NAME=tocb HEIGHT=20 WIDTH=94 BORDER=0></A><A
+HREF="../glossary/index.htm" OnMouseOver='whomp(glosb, "sglos");' OnMouseOut='whomp(glosb, "wglos");' 
+title="Glossary"><IMG SRC="../images/wglos.png" ALT="Glossary" NAME=glosb HEIGHT=20 WIDTH=94 BORDER=0></A><!--
+--><IMG SRC="../images/bnext.png" ALT="Next" HEIGHT=20 WIDTH=82 BORDER=0>
+<BR>
+</BLOCKQUOTE>
+</BODY>
+</HTML>

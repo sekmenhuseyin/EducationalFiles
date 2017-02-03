@@ -1,0 +1,114 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>carVector</title>
+</head>
+<body bgcolor="#cccccc">
+<!--url's used in the movie-->
+<!--text used in the movie-->
+<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,0,0" width="550" height="400" id="carVector" align="middle">
+<param name="allowScriptAccess" value="sameDomain" />
+<param name="movie" value="carVector.swf" />
+<param name="quality" value="high" />
+<param name="bgcolor" value="#ffffff" />
+<embed src="carVector.swf" quality="high" bgcolor="#ffffff" width="550" height="400" name="carVector" align="middle" allowScriptAccess="sameDomain" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" />
+</object>
+<h3>Code in frame 1 layer 1</h3>
+<pre>
+//carVector
+//use vector projection to go any speed, any direction
+
+init();
+function init(){
+  car.speed = 0;
+  //direction is now in degrees
+  car.dir = 33;
+}
+
+car.onEnterFrame = function(){
+  checkKeys();
+  turn(car);
+  move(car);
+} // end enterFrame
+
+function turn(sprite){
+  //use vector projection to get DX and DY
+
+  //offset the angle
+  degrees = sprite.dir -90;
+
+  //convert to radians
+  radians = degrees / 180 * Math.PI;
+
+  //get DX and DY (normalized: length is one)
+  sprite.dx = Math.cos(radians);
+  sprite.dy = Math.sin(radians);
+
+  //compensate for speed
+  sprite.dx *= sprite.speed;
+  sprite.dy *= sprite.speed;
+} // end turn;
+
+function move(sprite){
+  //moves any sprite, wrapping around boundaries
+
+  //move
+  sprite._x += sprite.dx;
+  sprite._y += sprite.dy;
+
+  //rotate changed slightly.
+  sprite._rotation = sprite.dir;
+  
+  //check boundaries - wrap all directions
+  if (sprite._x > Stage.width){
+    sprite._x = 0;
+  } // end if
+
+  if (sprite._x < 0){
+    sprite._x = Stage.width;
+  } // end if
+
+  if (sprite._y > Stage.height){
+    sprite._y = 0;
+  } // end if
+
+  if (sprite._y < 0){
+    sprite._y = Stage.height;
+  } // end if
+} // end move
+ 
+function checkKeys(){
+  //check keyboard to move car
+  if (Key.isDown(Key.UP)){
+    car.speed++;
+    if (car.speed > 8){
+      car.speed = 8;
+    } // end if
+  } // end if
+
+  if (Key.isDown(Key.DOWN)){
+    car.speed--;
+    if (car.speed < -3){
+      car.speed = -3;
+    } // end if
+  } // end if
+
+  if (Key.isDown(Key.RIGHT)){
+    car.dir += 5;
+    if (car.dir > 360){
+      car.dir = 0;
+    } // end if
+  } // end if
+
+  if (Key.isDown(Key.LEFT)){
+    car.dir -= 5;
+    if (car.dir < 0){
+      car.dir = 360;
+    } // end if
+  } // end if
+
+} // end checkKeys
+</pre>
+</body>
+</html>

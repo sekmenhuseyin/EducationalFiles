@@ -1,0 +1,127 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>invaders</title>
+</head>
+<body bgcolor="#cccccc">
+<!--url's used in the movie-->
+<!--text used in the movie-->
+<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,0,0" width="550" height="400" id="invaders" align="middle">
+<param name="allowScriptAccess" value="sameDomain" />
+<param name="movie" value="invaders.swf" />
+<param name="quality" value="high" />
+<param name="bgcolor" value="#000000" />
+<embed src="invaders.swf" quality="high" bgcolor="#000000" width="550" height="400" name="invaders" align="middle" allowScriptAccess="sameDomain" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" />
+</object>
+<h3>Code in frame 1 layer 1</h3>
+<pre>
+//space invaders
+//invaders.fla
+//By Andy Harris, Dummies Guide to Game Programming in Flash
+
+init();
+
+function init(){
+  globalDX = 5;
+  globalDY = 0;
+
+  row = 1;
+  colOffset = 10;
+  rowOffset = 10;
+
+  setupAliens();
+  setupShip();
+  setupBullet();
+
+} // end init
+
+
+function setupShip(){
+  ship.onEnterFrame = function(){
+
+    //left and right arrow key motion
+    //ship only moves if an arrow key is down
+    //ship only moves in x axis
+
+    if (Key.isDown(Key.LEFT)){
+      ship._x += -5;
+    } // end if
+
+    if (Key.isDown(Key.RIGHT)){
+      ship._x += 5;
+    } // end if
+
+    if (Key.isDown(Key.SPACE)){
+      bullet._x = ship._x;
+      bullet._y = ship._y;
+      bullet.dy = -10;
+    } // end if
+
+  } // end enterFrame
+} // end setupShip
+
+function setupBullet(){
+  bullet.dy = 0;
+  bullet.onEnterFrame = function(){
+    bullet._y += bullet.dy;
+  } // end enterFrame
+} // end setupBullet
+
+function setupAliens(){
+  
+  for (row = 1; row <= 3; row++){
+    for (col = 1; col <= 5; col++){
+    
+      _root.attachMovie("alien", "alien_" + row + "_" + col, (row * 1000) + (col * 100));
+      theAlien = eval("alien_" + row + "_" + col);
+      theAlien._x = (col * (theAlien._width + 5) + colOffset);
+      theAlien._y = (row * (theAlien._height + 5) + rowOffset);
+      theAlien.onEnterFrame = function(){
+  
+        //move by global dx and dy values
+        nextX = this._x + globalDX;
+        nextY = this._y + globalDY;
+
+        //check boundaries
+
+        if (nextX > Stage.width){
+          globalDX *= -1;
+          //move down
+          moveDown();
+        } // end if
+  
+        if (nextX < 0){
+          globalDX *= -1;
+        } // end if
+  
+        this._x = nextX;
+        this._Y = nextY;
+  
+        if (this.hitTest(bullet)){
+          this.removeMovieClip(this);
+          //reset bullet
+          bullet._x = -100;
+          byllet.dy = 0;
+        } // end if
+      } // end enterFrame
+    } // end col loop
+
+  } // end row loop
+
+ 
+} // end setupAliens
+
+function moveDown(){
+  //move aliens down by some value
+  for (row = 1; row <= 3; row++){
+    for (col = 1; col <= 5; col++){
+   
+      theAlien = eval("alien_" + row + "_" + col);
+      theAlien._y += 20;
+    } // end for loop
+  } // end for loop
+} // end moveDown
+</pre>
+</body>
+</html>

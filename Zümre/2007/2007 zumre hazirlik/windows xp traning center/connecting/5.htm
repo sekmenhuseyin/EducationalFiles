@@ -1,0 +1,502 @@
+<!doctype html public "-//IETF//DTD HTML//EN">
+<HTML>
+<HEAD>
+<TITLE>Windows XP: The Complete Reference: Connecting to the Internet</TITLE>
+<META NAME="GENERATOR" CONTENT="Web-O-Matic Deluxe 4.1">
+<META NAME="AUTHOR" CONTENT="John R. Levine, Margaret Levine Young">
+<META NAME="COPYRIGHT" CONTENTS="Copyright 2001 by The McGraw-Hill Companies. All rights reserved.">
+</HEAD>
+<BODY BACKGROUND="../images/background.png">
+<BLOCKQUOTE>
+<SCRIPT LANGUAGE="JavaScript">
+function whomp(i, file)
+{
+	i.src = "../images/" + file + ".png";
+}
+</SCRIPT>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarered3x3.png" HEIGHT=3 WIDTH=3></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=2>
+Chapter 22: Connecting to the Internet
+</FONT></TD>
+</TR>
+</TABLE>
+<BR>
+<A HREF="4.htm"  OnMouseOver='whomp(prev, "sprev");' OnMouseOut='whomp(prev, "wprev");'
+ title="Previous Section"><IMG NAME=prev SRC="../images/wprev.png" ALT="Previous" HEIGHT=20 WIDTH=82 BORDER=0></A><!--
+--><A HREF="index.htm" OnMouseOver='whomp(chap, "schap");' OnMouseOut='whomp(chap, "wchap");'
+title="Chapter Overview"><IMG SRC="../images/wchap.png" ALT="Chapter" NAME=chap HEIGHT=20 WIDTH=100 BORDER=0></A><A
+HREF="../index.htm" OnMouseOver='whomp(toc, "sbook");' OnMouseOut='whomp(toc, "wbook");' 
+title="Table of Contents"><IMG SRC="../images/wbook.png" ALT="Contents" NAME=toc HEIGHT=20 WIDTH=94 BORDER=0></A><A
+HREF="../glossary/index.htm" OnMouseOver='whomp(glos, "sglos");' OnMouseOut='whomp(glos, "wglos");' 
+title="Glossary"><IMG SRC="../images/wglos.png" ALT="Glossary" NAME=glos HEIGHT=20 WIDTH=94 BORDER=0></A><!--
+--><A HREF="6.htm"  OnMouseOver='whomp(next, "snext");' OnMouseOut='whomp(next, "wnext");'
+ title="Next Section"><IMG NAME=next SRC="../images/wnext.png" ALT="Next" HEIGHT=20 WIDTH=82 BORDER=0></A>
+<BR>
+<A NAME="1">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarered10x10.png" HEIGHT=10 WIDTH=10></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=4><B>Changing Your Dial-Up Connection Settings</B></FONT>
+</TD>
+</TR>
+</TABLE></A>
+<P>
+Once you have used the New Connection Wizard to create a network connection, you can change its settings, copy it, rename it, or delete it. You can also choose which network connection is the default for connecting to the Internet.
+<P>
+<TABLE><TR><TD VALIGN="TOP"><IMG SRC="../images/note.png" ALT="note" WIDTH=95 HEIGHT=29></TD>
+<TD VALIGN="TOP">Previous versions of Windows didn't come with <A HREF="../connecting/0.htm#1">TCP/IP</A> (the communications protocol used on the Internet) pre-installed. Instead, you chose it from a list of popular network protocols. Windows XP comes with TCP/IP installed, and you can't uninstall it. (It's unlikely that you'd want to do so, since TCP/IP is used for both the Internet and LANs!)
+
+</TD></TR></TABLE>
+<P>
+To configure a network connection or to change an existing connection's configuration, open the <A HREF="../connecting/2.htm#1">Network Connections window</A> by choosing Start | Connect To | Show All Connections (if Connect To appears on the Start menu), choosing Start | Network Connections (if Network Connections appears on the Start menu), clicking View Network Connections from the Task pane of the My Network Places window, or choosing Start | Control Panel | Network And Internet Connections | Network Connections. Right-click the icon for the connection and choose Properties from the menu that appears, or select the connection icon and choose File | Properties. Either way, you see the Properties dialog box for the network connection. Different types of connections display different properties dialog boxes. Figure 22-4 shows one for a dial-up connection, and Table 22-1 lists dial-up connection properties. For the properties of LAN connections (including DSL and cable Internet connections), see section "<A HREF="../peer2peer/3.htm#1">Installing and Configuring Network Components</A>" in Chapter28.
+<TABLE BORDER=2><TR><TD ALIGN=CENTER>
+<IMG SRC="connecting.props.png" WIDTH=367 HEIGHT=450 ALT="[figure]">
+</TD></TR><TR BGCOLOR="#00ffff"><TD><I>Figure 22-4:  The Properties dialog box for a dial-up connection</I></TD></TR></TABLE>
+<BLOCKQUOTE><TABLE BORDER=2><TR><TD>
+<TABLE>
+<TR>
+<TD>
+<B>Tab in Properties Dialog Box</B>
+</TD>
+<TD>
+<B>Setting</B>
+</TD>
+<TD>
+<B>Description</B>
+</TD>
+</TR>
+<TR>
+<TD>
+General
+</TD>
+<TD>
+Connecting using
+</TD>
+<TD>
+Specifies which modem to use to connect. Click the Configure button to check or change the configuration of the modem (see <A HREF="../prepnet/index.htm">Chapter21</A>).
+</TD>
+</TR>
+<TR>
+<TD>
+General
+</TD>
+<TD>
+Phone number
+</TD>
+<TD>
+Specifies the phone number your computer dials to connect to the account. Composed of the area code, telephone number, and country code (you choose from a list of countries). Click the Alternates button to enter additional phone numbers. Select the Use Dialing Rules check box to use <A HREF="../prepnet/3.htm#1">area code dialing rules</A> and <A HREF="../prepnet/4.htm#1">calling cards</A>.
+</TD>
+</TR>
+<TR>
+<TD>
+General
+</TD>
+<TD>
+Show icon in notification area when connected
+</TD>
+<TD>
+Specifies whether to display an icon at the right end of the taskbar. You can click the icon to see the status of the connection.
+</TD>
+</TR>
+<TR>
+<TD>
+General
+</TD>
+<TD>
+All devices dial the same number
+</TD>
+<TD>
+Appears only for multilink connections (which use multiple phone lines for the connection). Specifies whether the same phone number is dialed when additional phone lines are used for this connection.
+</TD>
+</TR>
+<TR>
+<TD>
+Options
+</TD>
+<TD>
+Display progress while connecting
+</TD>
+<TD>
+Specifies whether to display the Connection dialog box, which shows whether Windows is dialing or verifying your user name and password before the connection is made.
+</TD>
+</TR>
+<TR>
+<TD>
+Options
+</TD>
+<TD>
+Prompt for name and password, certificate, etc.
+</TD>
+<TD>
+Specifies whether to display a dialog box that prompts for your user name and password (or other security information if your account requires it) before connecting.
+</TD>
+</TR>
+<TR>
+<TD>
+Options
+</TD>
+<TD>
+Include Windows logon domain
+</TD>
+<TD>
+Specifies that if the preceding check box is selected, Windows also prompt for your logon domain. This setting isn't used by most ISPs.
+</TD>
+</TR>
+<TR>
+<TD>
+Options
+</TD>
+<TD>
+Prompt for phone number
+</TD>
+<TD>
+Specifies whether to include the phone number in the Connect dialog box displayed before connecting to the account. This setting allows you to check or change the phone number each time you dial the account.
+</TD>
+</TR>
+<TR>
+<TD>
+Options
+</TD>
+<TD>
+Redial attempts
+</TD>
+<TD>
+Specifies how many times Windows redials the connection if it can't connect.
+</TD>
+</TR>
+<TR>
+<TD>
+Options
+</TD>
+<TD>
+Time between redial attempts
+</TD>
+<TD>
+Specifies how long Windows waits before dialing again.
+</TD>
+</TR>
+<TR>
+<TD>
+Options
+</TD>
+<TD>
+Idle time before hanging up
+</TD>
+<TD>
+Specifies whether Windows disconnects if the connection is idle for a specified length of time. Choose Never to disable auto-disconnect.
+</TD>
+</TR>
+<TR>
+<TD>
+Options
+</TD>
+<TD>
+Redial if line is dropped
+</TD>
+<TD>
+Specifies whether Windows reconnects if the connection is lost (for example, if the ISP hangs up).
+</TD>
+</TR>
+<TR>
+<TD>
+Options
+</TD>
+<TD>
+X.25
+</TD>
+<TD>
+Displays the X.25 Logon Settings dialog box, in which you specify the X.25 network provider and the X.121 address of the server to which you are connecting.
+</TD>
+</TR>
+<TR>
+<TD>
+Security
+</TD>
+<TD>
+Validate my identity as follows
+</TD>
+<TD>
+Specifies how your ISP determines who you are. For most ISPs, choose Allow Unsecured Password (that is, passwords are sent unencrypted). For corporate networks, you may need to choose Require Secured Password or Use Smart Card.
+</TD>
+</TR>
+<TR>
+<TD>
+Security
+</TD>
+<TD>
+Automatically use my Windows logon name and password (and domain if any)
+</TD>
+<TD>
+Specifies what user name and password to use (available only if you set the preceding setting to Require Selected Password or Use Smart Card). Usually not selected for Internet accounts.
+</TD>
+</TR>
+<TR>
+<TD>
+Security
+</TD>
+<TD>
+Require data encryption (disconnect if none)
+</TD>
+<TD>
+Specifies that the computer to which you are connecting must support encryption for all information transmitted, and to disconnect otherwise (available only if you set the preceding setting to Require Selected Password or Use Smart Card). 'This setting is rarely used.
+</TD>
+</TR>
+<TR>
+<TD>
+Security
+</TD>
+<TD>
+Advanced (custom settings)
+</TD>
+<TD>
+Click the Settings button to display the Advanced Security Settings dialog box, on which you can specify EAP (Extensible Authentication Protocol) or other advanced protocols, if your ISP supports them.
+</TD>
+</TR>
+<TR>
+<TD>
+Security
+</TD>
+<TD>
+Show terminal window
+</TD>
+<TD>
+Specifies whether to display a terminal window that shows the interaction between the network connection and the account while the <A HREF="../connecting/5.htm#3">logon script</A> is running. During debugging, select this setting so you can see the terminal window.
+</TD>
+</TR>
+<TR>
+<TD>
+Security
+</TD>
+<TD>
+Run script
+</TD>
+<TD>
+Specifies the name of the file containing the <A HREF="../connecting/5.htm#3">logon script</A> for this connection. Click Edit to edit a script file or Browse to select an existing file.
+</TD>
+</TR>
+<TR>
+<TD>
+Networking
+</TD>
+<TD>
+Type of dial-up server I am calling
+</TD>
+<TD>
+Specifies the type of account; all ISPs now provide PPP. Your other choice is SLIP. Click Settings to display the PPP Settings dialog box, in which you can choose: whether to use LCP (Link Control Protocol) extensions, which are not supported by older PPP accounts; whether to enable software compression, which enable most PPP accounts to speed up throughput; and whether to use <A NAME="ddmultilink"><I>multilink</I></A> negotiation (that is, use multiple phone lines for the connection if they are available).
+</TD>
+</TR>
+<TR>
+<TD>
+Networking
+</TD>
+<TD>
+Components checked are used by this connection
+</TD>
+<TD>
+Specifies how to communicate over the network. Most connections use <A HREF="../connecting/0.htm#1">TCP/IP</A> and QoS Packet Scheduler. See <A HREF="../peer2peer/index.htm">Chapter 28</A> for information about other protocols.
+</TD>
+</TR>
+<TR>
+<TD>
+Advanced
+</TD>
+<TD>
+Protect my computer and network by limiting or preventing access to this computer from the Internet
+</TD>
+<TD>
+Specifies whether to use the <A HREF="../security/4.htm#1">Internet Connection Firewall</A> when connected. We recommend that you select this option if it has been disabled.
+</TD>
+</TR>
+<TR>
+<TD>
+Advanced
+</TD>
+<TD>
+Allow other network users to connect through this computer's Internet connection
+</TD>
+<TD>
+Specifies whether to run <A HREF="../ics/index.htm">Internet Connection Sharing</A> on this PC, allowing other computers on the LAN to access the Internet through your connection.
+</TD>
+</TR>
+</TABLE></BLOCKQUOTE>
+<TR BGCOLOR="#00ffff"><TD>
+<I>Table 1:  Settings for a Dial-Up Connection</I>
+</TD></TR></TABLE></BLOCKQUOTE>
+<P>
+You can set a few more items by clicking the Configure button on the General tab of the Properties dialog box for the connection: you see the Modem Configuration dialog box. Most of the settings on this dialog box are the same as the settings in the <A HREF="../prepnet/1.htm#2">modem's Properties dialog box</A>. One is not: the Show Terminal Window setting specifies whether Windows displays a terminal window before dialing, to enable you to type modem commands.
+<P>
+<TABLE><TR><TD VALIGN="TOP"><IMG SRC="../images/caution.png" ALT="caution" WIDTH=95 HEIGHT=29></TD>
+<TD VALIGN="TOP">Make sure that file and printer sharing are not enabled for your Internet connection, unless you want to allow everyone on the Internet to access the files on your computer. On the Networking tab of the Properties dialog box for your Internet connection, make sure that the check boxes are <I>not</I> selected for these two components:
+
+</TD></TR></TABLE>
+<UL>
+<LI >
+File And Printer Sharing For Microsoft Networks
+<LI >
+Client For Microsoft Networks
+</UL>
+<A NAME="2">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Configuring a TCP/IP Connection</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+For a connection to an Internet account, you may also need to configure the TCP/IP protocol. On the Properties dialog box for the connection, click the Networking tab, select Internet Protocol (TCP/IP) in the list of components, and then click the Properties button. You see the Internet Protocol (TCP/IP) Properties dialog box, shown in Figure 22-5.
+<TABLE BORDER=2><TR><TD ALIGN=CENTER>
+<IMG SRC="connecting.ippdb.png" WIDTH=404 HEIGHT=455 ALT="[figure]">
+</TD></TR><TR BGCOLOR="#00ffff"><TD><I>Figure 22-5:  Configuring the TCP/IP settings for a connection</I></TD></TR></TABLE>
+<P>
+When your computer is connected to the Internet using TCP/IP, it has its own <A NAME="ddipaddress"><I>IP address</I></A> (<I>IP</I> is the acronym for Internet Protocol). An IP address is in the form of <I>xxx.xxx.xxx.xxx</I>, where each <I>xxx</I> is a number from 0 to 255. (That is, an IP address consists of four eight-bit numbers.) An example of an IP address might be 204.71.16.253.
+<P>
+In addition to IP addresses, computers on the Internet have <A NAME="dddomainnames"><I>domain names</I></A>, alphanumeric names like <B>www.microsoft.com</B> or <B>net.gurus.com</B>. A <A NAME="dddomainnameserver"><I>domain name server</I></A> or <A NAME="dddns"><I>DNS</I></A> is a computer on the Internet that translates between domain names and numeric IP addresses. Your ISP usually provides two DNS servers (one is in case the other one breaks down).
+<P>
+On the Internet Protocol (TCP/IP) Properties dialog box, make these entries:
+<UL>
+<LI >
+<B>Your IP address</B>  Ten years ago, when you signed up for an Internet account, your ISP assigned you a <A HREF="../peer2peer/1.htm#3">static IP address</A>--an IP address that never changed. Now, almost all ISPs assign you a temporary IP address when you connect, so choose Obtain An IP Address Automatically unless your ISP has given you a static IP address (unlikely).
+<LI >
+<B>DNS Server Address</B>  Until a few years ago, you needed to choose Use The Following DNS Server Addresses and type the addresses in. Now most ISPs can tell Windows the DNS addresses when you connect, so choose Obtain DNS Server Address Automatically unless your ISP tells you otherwise.
+</UL>
+<P>
+<TABLE><TR><TD VALIGN="TOP"><IMG SRC="../images/note.png" ALT="note" WIDTH=95 HEIGHT=29></TD>
+<TD VALIGN="TOP">For more settings, click the Advanced button to see the Advanced TCP/IP Settings dialog box. Few ISPs require you to change these settings.
+
+</TD></TR></TABLE>
+<A NAME="3">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Creating and Using Logon Scripts</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+Windows tries to log on to your dial-up account automatically. Most accounts follow a standard series of steps: they transmit your user name and your account' password, and then receive confirmation that you are logged in so that communications can begin.
+<P>
+If your account uses a nonstandard dialog box for logging in, Windows can't log in automatically. You can automate logging in by creating a <A NAME="ddlogonscript"><I>logon script</I></A>, a text file containing a small program that tells Windows what prompts to wait for and what to type in response. For example, if your ISP's computer uses a nonstandard prompt to ask for your password, or requires you to type a command to begin a PPP session, you can write a script to log on for you. If your ISP uses the standard series of transmissions, you don't need a logon script. Logon scripts have the file extension .scp.
+<P>
+To use a logon script, follow these steps:
+<OL>
+<LI  VALUE=1>
+Log on manually, making notes about which prompts you see and what you must type in response to those prompts. To log in manually, you can use your network connection with a <A NAME="ddterminalwindow"><I>terminal window</I></A>, which enables you to see the session and type commands to your ISP. To tell Windows to open a terminal window while connecting, click the Security tab of the Properties dialog box for the connection and select the Show Terminal Window check box. Another way to log in manually is by using <A HREF="../winsock/1.htm#1">HyperTerminal</A> to connect to your ISP.
+<LI  VALUE=2>
+Create a logon script by using a text editor, such as <A HREF="../docs/1.htm#1">Notepad</A>. Windows comes with a short manual about writing logon scripts in the file C:\Windows\Script.doc. (This file, and the scripting language you use in logon scripts, have remained unchanged since Windows 95.)
+<LI  VALUE=3>
+Tell Windows about the logon script by selecting the Run Script check box on the Security tab of the Properties dialog box for the connection and typing the filename in the box to its right.
+<LI  VALUE=4>
+Test the script, editing it with your text editor and viewing the results in a terminal window.
+<LI  VALUE=5>
+You can deselect the Show Terminal Windows check box when your script works, if you are tired of seeing the terminal window each time you connect.
+</OL>
+<P>
+<TABLE><TR><TD VALIGN="TOP"><IMG SRC="../images/tip.png" ALT="tip" WIDTH=95 HEIGHT=29></TD>
+<TD VALIGN="TOP">Windows comes with a set of well-commented sample scripts. Customizing one of the sample scripts is usually easier than writing your own from scratch. These sample scripts are stored in C:\Program Files\Accessories with the extension .scp.
+
+</TD></TR></TABLE>
+<A NAME="4">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Setting Additional Dial-Up Options</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+You might think all the properties of a dial-up connection would appear on the connection's Properties dialog box (shown earlier in the chapter in Figure 22-4), but they don't. Most of the settings on the (ill-named) Internet Properties dialog box pertain to your Web browser, rather than to your Internet connection, but a few additional settings appear on its Connections tab. (This dialog box is called Internet Options when you display it by choosing Tools | Internet Options from Internet Explorer.)
+<P>
+To display the Internet Properties dialog box, choose Start | Control Panel | Network And Internet Connections and run the Internet Options program. Figure 22-6 shows the Connections tab of the Internet Properties (or Internet Options) dialog box. The other tabs of this dialog box apply to using a Web browser, and are covered in <A HREF="../browsing/index.htm">Chapter24</A>. Most of the settings on the Connections tab control your Internet connection:
+<TABLE BORDER=2><TR><TD ALIGN=CENTER>
+<IMG SRC="connecting.ipdb.png" WIDTH=406 HEIGHT=459 ALT="[figure]">
+</TD></TR><TR BGCOLOR="#00ffff"><TD><I>Figure 22-6:  The Connections tab of the Internet Properties (or Internet Options) dialog box</I></TD></TR></TABLE>
+<UL>
+<LI >
+<B>Dial-up settings</B>  Lists your dial-up connections, so you can enable those to use, disable those not to use, configure them, and set the default connection.
+<LI >
+<B>Never dial a connection, Dial whenever a network connection is not present, and Always dial my default connection</B>  Specify what Windows does when a program tries to connect to the Internet (for example, an e-mail program tries to connect to a mail server, or a Web browser tries to retrieve a Web page).
+<LI >
+<B>Current default</B>  Displays the name of the connection Windows uses unless you specify another connection. To change the default, select a connection from the Dial-Up Settings list and click the Set Default button.
+</UL>
+<P>
+Click the Setup or Add button to create a new connection: both buttons run the New Connection Wizard, but you see a different series of screen (it looks like two slightly different Wizards with the same name!). The Settings button displays a Settings dialog box (shown in Figure 22-7) that contains settings for the selected connection: you see the same settings that appear on the Properties dialog box for the connection, but arranged differently. A few items on the Settings dialog box pertain to connecting to the Internet over a LAN. The LAN Settings button displays the LAN Settings dialog box, which also contains <A HREF="../ics/3.htm#5">LAN-related settings</A>.
+<TABLE BORDER=2><TR><TD ALIGN=CENTER>
+<IMG SRC="connecting.settings.png" WIDTH=384 HEIGHT=451 ALT="[figure]">
+</TD></TR><TR BGCOLOR="#00ffff"><TD><I>Figure 22-7:  Settings dialog box for a dial-up connection</I></TD></TR></TABLE>
+<A NAME="5">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Renaming, Copying, or Deleting a Network Connection</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+You can rename a network connection by right-clicking the connection and choosing Rename from the menu that appears. This action changes the name that appears on your computer for the connection; it doesn't change any of the information sent to the ISP.
+<P>
+Sometimes you want two or more versions of the same dial-up connection. For example, you might dial into your ISP from different numbers depending on where you take your laptop. To copy a connection, right-click its icon in the Network Connections window and choose Create Copy. A new icon appears. Rename the new copy and change its settings by right-clicking it and choosing Properties.
+<P>
+If you don't expect to connect to a particular account in the future, delete its connection from the Network Connections window by selecting the icon for the connection and pressing the D<SMALL>ELETE</SMALL> key (or right-click the connection icon and choose Delete). Be sure you also delete any shortcuts to the connection.<A NAME="6">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Other Dial-Up Connection Settings</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+Two other settings are available for dial-up connections, although not usually used for regular Internet accounts:
+<UL>
+<LI >
+<B>Autodial</B>  Windows automatically dials an Internet connection if you are not connected to the Internet and you ask for Internet information (for example, you run your browser or e-mail program, or click a Web address in a document). You can turn autodial off, or control which dialing locations it works from, by choosing Advanced | Dial-Up Preferences from the Network Connections window menu bar. Click the Autodial tab if it's not already selected, and choose which <A HREF="../prepnet/2.htm#1">dialing locations</A> from which you want Windows to autodial.
+<LI >
+<B>Callback</B>  Some Internet hosts offer to call you back to continue the connection. Callbacks ensure that you are who you say you are (or at least that you are at the phone number that you're supposed to be at). If an Internet host offers to call you back, Windows usually displays a dialog box that asks whether you want to do so, but you can configure how Windows responds to the offer. Choose Advanced | Dial-Up Preferences from the Network Connections window menu bar and click the Callback tab.
+</UL>
+<P><TABLE BORDER=2 CELLPADDING=10><TR>
+<TD BGCOLOR="#00ffff" WIDTH=2></TD><TD>
+<A NAME="7">
+<P>
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><IMG SRC="../images/squarepurple8x8.png" HEIGHT=8 WIDTH=8></TD>
+<TD ALIGN=LEFT VALIGN=MIDDLE><FONT FACE="Arial, Helvetica" SIZE=3><B>Streamlining Your Internet Connection</B></FONT></TD>
+</TR>
+</TABLE></A>
+<P>
+Your Internet connection uses TCP/IP, not NetBEUI (Microsoft's file- and printer-sharing protocol) or IPX/SPX (Netware's protocol). You can speed up the process of connecting to your ISP, and make sure that your computer isn't open to intruders, by following these steps:
+<OL>
+<LI  VALUE=1>
+Display the Network Connections window.
+<LI  VALUE=2>
+Right-click the connection you use to connect to your ISP. Choose Properties from the shortcut menu that appears. You see the Properties dialog box for the connection.
+<LI  VALUE=3>
+Click the Networking tab. If NetBEUI or IPX/SPX appear among the installed components, make sure that their check boxes are cleared.
+<LI  VALUE=4>
+On the Networking tab, deselect the File And Printer Sharing For Microsoft Networks check box and the Client For Microsoft Networks check box. These are not needed (or wanted!) on dial-up Internet connections.
+<LI  VALUE=5>
+Click the Options tab. Deselect the Include Windows Logon Domain check box, unless your computer is on a domain-based LAN (check with your LAN administrator).
+<LI  VALUE=6>
+Click OK.
+<LI  VALUE=7>
+Connect to your ISP to make sure that changing these settings doesn't prevent you from connecting. (If so, repeat the steps and reverse your changes.)
+</OL>
+</TD></TR></TABLE>
+<P>
+<A HREF="4.htm"  OnMouseOver='whomp(prevb, "sprev");' OnMouseOut='whomp(prevb, "wprev");'
+ title="Previous Section"><IMG NAME=prevb SRC="../images/wprev.png" ALT="Previous" HEIGHT=20 WIDTH=82 BORDER=0></A><!--
+--><A HREF="index.htm" OnMouseOver='whomp(chapb, "schap");' OnMouseOut='whomp(chapb, "wchap");'
+title="Chapter Overview"><IMG SRC="../images/wchap.png" ALT="Chapter" NAME=chapb HEIGHT=20 WIDTH=100 BORDER=0></A><A
+HREF="../index.htm" OnMouseOver='whomp(tocb, "sbook");' OnMouseOut='whomp(tocb, "wbook");' 
+title="Table of Contents"><IMG SRC="../images/wbook.png" ALT="Contents" NAME=tocb HEIGHT=20 WIDTH=94 BORDER=0></A><A
+HREF="../glossary/index.htm" OnMouseOver='whomp(glosb, "sglos");' OnMouseOut='whomp(glosb, "wglos");' 
+title="Glossary"><IMG SRC="../images/wglos.png" ALT="Glossary" NAME=glosb HEIGHT=20 WIDTH=94 BORDER=0></A><!--
+--><A HREF="6.htm"  OnMouseOver='whomp(nextb, "snext");' OnMouseOut='whomp(nextb, "wnext");'
+ title="Next Section"><IMG NAME=nextb SRC="../images/wnext.png" ALT="Next" HEIGHT=20 WIDTH=82 BORDER=0></A>
+<BR>
+</BLOCKQUOTE>
+</BODY>
+</HTML>

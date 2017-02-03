@@ -1,0 +1,106 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>followMouse</title>
+</head>
+<body bgcolor="#cccccc">
+<!--url's used in the movie-->
+<!--text used in the movie-->
+<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,0,0" width="550" height="400" id="followMouse" align="middle">
+<param name="allowScriptAccess" value="sameDomain" />
+<param name="movie" value="followMouse.swf" />
+<param name="quality" value="high" />
+<param name="bgcolor" value="#ffffff" />
+<embed src="followMouse.swf" quality="high" bgcolor="#ffffff" width="550" height="400" name="followMouse" align="middle" allowScriptAccess="sameDomain" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" />
+</object>
+<h3>Code in frame 1 layer 1</h3>
+<pre>
+init();
+
+function init(){
+  gun.dir = 0;
+  gun.charge = 0;
+  bullet.dir = 0;
+  bullet.speed = 0;
+  gravity = 1;
+
+}
+
+_root.onEnterFrame = function(){
+  followMouse();
+  move(bullet);
+} // end enterFrame
+
+function followMouse(){
+  //calculate gun's direction based on it's relationship to
+  //the mouse
+  
+  dx = _root._xmouse - gun._x;
+  dy = _root._ymouse - gun._y;
+  radians = Math.atan(dy/dx);
+  degrees = radians * 180 / Math.PI;
+  degrees += 90;
+  if (dx &lt;0) {
+    degrees -=180;
+  } // end if
+  gun.dir = degrees;
+  gun._rotation = degrees;
+  
+
+  //charge is distance from gun to mouse divided by 10
+  distance = Math.sqrt(dx*dx + dy*dy);
+  gun.charge = distance / 10;
+
+} // end followMouse
+
+_root.onMouseUp = function(){
+    //move the bullet
+    bullet._x = gun._x;
+    bullet._y = gun._y;
+
+    bullet.dir = gun.dir;
+    bullet.speed = gun.charge;
+    turn(bullet);
+} // end mouseUp
+
+function turn(sprite){
+  //use vector projection to get DX and DY
+
+  //offset the angle
+  degrees = sprite.dir -90;
+
+  //convert to radians
+  radians = degrees / 180 * Math.PI;
+
+  //get DX and DY (normalized: length is one)
+  sprite.dx = Math.cos(radians);
+  sprite.dy = Math.sin(radians);
+
+  //compensate for speed
+  sprite.dx *= sprite.speed;
+  sprite.dy *= sprite.speed;
+} // end turn;  
+
+function move(sprite){
+  //moves an object.  Kills it if it moves off stage
+
+  sprite._x += sprite.dx;
+  sprite._y += sprite.dy;
+
+  if ((sprite._x > Stage.width) ||
+      (sprite._x &lt; 0) ||
+      (sprite._y > Stage.height) ||
+      (sprite._y &lt; 0)){
+    //stop sprite and move it off stage
+    sprite._x = -100;
+    sprite._y = -100;
+    sprite._speed = 0;
+  } //end if
+
+  //incorporate gravity
+  sprite.dy += gravity;
+} // end move
+</pre>
+</body>
+</html>
